@@ -1,0 +1,168 @@
+name: Ingest device submission
+
+# Fires when a "device-submission" issue is opened (the label is already on
+# the issue at creation time — the card's pre-filled GitHub link includes
+# it), or if the label gets added manually to an older issue. Parses the
+# JSON out of the issue body, merges it into data/{manufacturer}/{model}.json,
+# and opens a PR for review — it never commits straight to main. Submissions
+# come from anyone who can open an issue on a public repo, so a human still
+# has to look at the diff and click merge; this just removes every bit of
+# the copy/paste/create-file/commit busywork before that point.
+on:
+  issues:
+    types: [opened, labeled]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  ingest:
+    if: contains(github.event.issue.labels.*.name, 'device-submission')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Parse issue, write data file, open PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require("fs");
+            const path = require("path");
+
+            const issue = context.payload.issue;
+            const body = issue.body || "";
+
+            // The card always copies/pre-fills the JSON inside a fenced
+            // ```json block (both the direct-link and copy+paste paths use
+            // the same body text) — if that's missing, this isn't a
+            // submission this workflow knows how to read.
+            const match = body.match(/```json\s*([\s\S]*?)```/);
+            if (!match) {
+              await github.rest.issues.createComment({
+                ...context.repo,
+                issue_number: issue.number,
+                body:
+                  "Couldn't find a ```json code block in this issue, so nothing was imported. " +
+                  "If you pasted the copied text, make sure the fenced block came through intact.",
+              });
+              return;
+            }
+
+            let record;
+            try {
+              record = JSON.parse(match[1]);
+            } catch (e) {
+              await github.rest.issues.createComment({
+                ...context.repo,
+                issue_number: issue.number,
+                body: `The JSON in this issue didn't parse (${e.message}), so nothing was imported.`,
+              });
+              return;
+            }
+
+            // Same sanitizing the README's naming convention describes —
+            // collapsing every run of non a-z0-9 characters to a single
+            // hyphen also happens to strip "/", ".", and ".." entirely, so
+            // a crafted manufacturer/model string can't be used to write
+            // outside data/ (verified: "../../x" -> "-x", no path
+            // separators survive).
+            const slugify = (s) =>
+              (s || "unknown")
+                .toString()
+                .toLowerCase()
+                .trim()
+                .replace(/[^a-z0-9]+/g, "-")
+                .replace(/^-+|-+$/g, "") || "unknown";
+
+            const manufacturer = slugify(record.manufacturer);
+            const model = slugify(record.model);
+            const filePath = `data/${manufacturer}/${model}.json`;
+
+            let existing = [];
+            if (fs.existsSync(filePath)) {
+              try {
+                existing = JSON.parse(fs.readFileSync(filePath, "utf8"));
+                if (!Array.isArray(existing)) existing = [existing];
+              } catch (e) {
+                existing = [];
+              }
+            }
+
+            // Re-submitting the same endpoint/firmware (e.g. after a
+            // firmware update, or just re-running the scan) replaces that
+            // entry instead of piling up duplicates.
+            const sameEntry = (a, b) =>
+              a &&
+              b &&
+              a.endpoint &&
+              b.endpoint &&
+              a.endpoint.id === b.endpoint.id &&
+              (a.identity || {}).sw_build_id === (b.identity || {}).sw_build_id;
+            const idx = existing.findIndex((e) => sameEntry(e, record));
+            if (idx >= 0) existing[idx] = record;
+            else existing.push(record);
+
+            fs.mkdirSync(path.dirname(filePath), { recursive: true });
+            fs.writeFileSync(filePath, JSON.stringify(existing, null, 2) + "\n");
+
+            const branch = `submission/issue-${issue.number}`;
+            await exec.exec("git", ["config", "user.name", "github-actions[bot]"]);
+            await exec.exec("git", [
+              "config",
+              "user.email",
+              "github-actions[bot]@users.noreply.github.com",
+            ]);
+            await exec.exec("git", ["checkout", "-B", branch]);
+            await exec.exec("git", ["add", filePath]);
+
+            // -B above means a re-run (opened then labeled firing back to
+            // back, or someone re-labeling later) resets the branch rather
+            // than failing on "branch already exists" — and this catches
+            // the case where the computed file content is identical to
+            // what's already there, so there's nothing to commit.
+            const diffExit = await exec.exec("git", ["diff", "--cached", "--quiet"], {
+              ignoreReturnCode: true,
+            });
+            if (diffExit === 0) {
+              await github.rest.issues.createComment({
+                ...context.repo,
+                issue_number: issue.number,
+                body: `No changes — \`${filePath}\` already matches this submission.`,
+              });
+              return;
+            }
+
+            await exec.exec("git", [
+              "commit",
+              "-m",
+              `Add/update ${record.manufacturer || manufacturer} ${record.model || model} from #${issue.number}`,
+            ]);
+            await exec.exec("git", ["push", "--force", "origin", branch]);
+
+            const existingPrs = await github.rest.pulls.list({
+              ...context.repo,
+              head: `${context.repo.owner}:${branch}`,
+              state: "open",
+            });
+
+            let prNumber;
+            if (existingPrs.data.length) {
+              prNumber = existingPrs.data[0].number;
+            } else {
+              const pr = await github.rest.pulls.create({
+                ...context.repo,
+                title: `Add/update ${record.manufacturer || manufacturer} ${record.model || model}`,
+                head: branch,
+                base: "main",
+                body: `Auto-generated from #${issue.number}.\n\nCloses #${issue.number}`,
+              });
+              prNumber = pr.data.number;
+            }
+
+            await github.rest.issues.createComment({
+              ...context.repo,
+              issue_number: issue.number,
+              body: `Opened/updated #${prNumber} with this data — review and merge to add it, or close the PR to reject it. Merging will close this issue automatically.`,
+            });
