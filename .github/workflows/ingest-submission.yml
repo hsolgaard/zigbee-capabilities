@@ -1,13 +1,23 @@
 name: Ingest device submission
 
-# Fires when a "device-submission" issue is opened (the label is already on
-# the issue at creation time — the card's pre-filled GitHub link includes
-# it), or if the label gets added manually to an older issue. Parses the
-# JSON out of the issue body, merges it into data/{manufacturer}/{model}.json,
-# and opens a PR for review — it never commits straight to main. Submissions
-# come from anyone who can open an issue on a public repo, so a human still
-# has to look at the diff and click merge; this just removes every bit of
-# the copy/paste/create-file/commit busywork before that point.
+# Fires on every new (or re-labeled) issue and decides for itself, from the
+# issue's own title/body, whether it's a device submission — see the
+# looksLikeSubmission logic below. Originally gated at the job level via
+# `if: contains(github.event.issue.labels.*.name, 'device-submission')`,
+# which turned out unreliable in practice: a real batch of ~40 submissions
+# came in with that label demonstrably present in the repo, yet most of the
+# runs still evaluated the condition false and skipped silently (confirmed
+# by inspecting individual run pages, not just the misleading total-duration
+# figure in the run list). Content-based detection sidesteps whatever
+# label-timing issue caused that, at the cost of the job always running (a
+# few seconds of checkout + script) rather than short-circuiting before
+# checkout — a fine trade for a repo that's entirely submissions anyway.
+# Parses the JSON out of the issue body, merges it into
+# data/{manufacturer}/{model}.json, and opens a PR for review — it never
+# commits straight to main. Submissions come from anyone who can open an
+# issue on a public repo, so a human still has to look at the diff and click
+# merge; this just removes every bit of the copy/paste/create-file/commit
+# busywork before that point.
 on:
   issues:
     types: [opened, labeled]
@@ -19,7 +29,6 @@ permissions:
 
 jobs:
   ingest:
-    if: contains(github.event.issue.labels.*.name, 'device-submission')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -32,21 +41,32 @@ jobs:
             const path = require("path");
 
             const issue = context.payload.issue;
+            const title = issue.title || "";
             const body = issue.body || "";
 
             // The card always copies/pre-fills the JSON inside a fenced
             // ```json block (both the direct-link and copy+paste paths use
-            // the same body text) — if that's missing, this isn't a
-            // submission this workflow knows how to read.
+            // the same body text). looksLikeSubmission is only used to
+            // decide whether a *missing* json block is worth commenting
+            // about — an issue that neither has the card's title format nor
+            // any json fence at all almost certainly isn't a submission
+            // attempt (e.g. a plain bug report, or a maintainer leaving
+            // notes), so it's left alone rather than getting a confusing
+            // bot comment. If a json fence is present at all, it's treated
+            // as a genuine attempt regardless of title.
+            const looksLikeSubmission = title.startsWith("[Device Submission]");
             const match = body.match(/```json\s*([\s\S]*?)```/);
+
             if (!match) {
-              await github.rest.issues.createComment({
-                ...context.repo,
-                issue_number: issue.number,
-                body:
-                  "Couldn't find a ```json code block in this issue, so nothing was imported. " +
-                  "If you pasted the copied text, make sure the fenced block came through intact.",
-              });
+              if (looksLikeSubmission) {
+                await github.rest.issues.createComment({
+                  ...context.repo,
+                  issue_number: issue.number,
+                  body:
+                    "Couldn't find a ```json code block in this issue, so nothing was imported. " +
+                    "If you pasted the copied text, make sure the fenced block came through intact.",
+                });
+              }
               return;
             }
 
