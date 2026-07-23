@@ -1,0 +1,110 @@
+name: Rebuild capability index
+
+# Rebuilds data/index.json from whatever's currently in data/ and commits it
+# straight to main — no PR, unlike ingest-submission.yml, because this file
+# is 100% derived from the capabilities already merged into data/*/*.json
+# (recomputed fresh every run, never hand-patched), so there's nothing here
+# for a human to actually review. Two triggers:
+#   - workflow_dispatch: a manual "Run workflow" button in the Actions tab
+#     (or `gh workflow run rebuild-capability-index.yml`), for one-off
+#     rebuilds — most importantly, backfilling data/index.json for every
+#     device already merged into data/ before this workflow existed, rather
+#     than waiting for the next new submission to trigger it.
+#   - push to main touching data/** (except index.json itself, to avoid
+#     triggering on its own commits): a safety net in case two submission
+#     PRs merge in quick succession and the index.json baked into the first
+#     PR's branch is already stale by the time it lands.
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "!data/index.json"
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild data/index.json
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require("fs");
+            const path = require("path");
+
+            const walkDataFiles = (dir) => {
+              let out = [];
+              for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+                const full = path.join(dir, entry.name);
+                if (entry.isDirectory()) {
+                  out = out.concat(walkDataFiles(full));
+                } else if (
+                  entry.isFile() &&
+                  entry.name.endsWith(".json") &&
+                  full !== path.join("data", "index.json")
+                ) {
+                  out.push(full);
+                }
+              }
+              return out;
+            };
+
+            const index = [];
+            if (fs.existsSync("data")) {
+              for (const file of walkDataFiles("data")) {
+                let parsed;
+                try {
+                  parsed = JSON.parse(fs.readFileSync(file, "utf8"));
+                } catch (e) {
+                  continue;
+                }
+                const caps = Array.isArray(parsed) ? {} : parsed.capabilities || {};
+                const parts = file.split(path.sep); // ["data", manufacturerSlug, "model.json"]
+                const manufacturerSlug = parts[1];
+                const modelSlug = (parts[2] || "").replace(/\.json$/, "");
+                Object.values(caps).forEach((entry) => {
+                  index.push({
+                    manufacturer_slug: manufacturerSlug,
+                    model_slug: modelSlug,
+                    ...entry,
+                  });
+                });
+              }
+            }
+            index.sort((a, b) =>
+              `${a.manufacturer}${a.model}${a.firmware}`.localeCompare(
+                `${b.manufacturer}${b.model}${b.firmware}`
+              )
+            );
+            const next = JSON.stringify(index, null, 2) + "\n";
+            const prev = fs.existsSync("data/index.json")
+              ? fs.readFileSync("data/index.json", "utf8")
+              : null;
+
+            if (prev === next) {
+              console.log(`data/index.json already up to date (${index.length} records) — nothing to commit.`);
+              return;
+            }
+
+            fs.writeFileSync("data/index.json", next);
+
+            await exec.exec("git", ["config", "user.name", "github-actions[bot]"]);
+            await exec.exec("git", [
+              "config",
+              "user.email",
+              "github-actions[bot]@users.noreply.github.com",
+            ]);
+            await exec.exec("git", ["add", "data/index.json"]);
+            await exec.exec("git", [
+              "commit",
+              "-m",
+              `Rebuild data/index.json (${index.length} records)`,
+            ]);
+            await exec.exec("git", ["push", "origin", "HEAD:main"]);
+            console.log(`Committed data/index.json with ${index.length} records.`);
