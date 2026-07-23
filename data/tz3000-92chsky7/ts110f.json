@@ -216,6 +216,136 @@
         "card_version": "0.20.1",
         "source_issue": 39
       }
+    },
+    {
+      "manufacturer": "_TZ3000_92chsky7",
+      "model": "TS110F",
+      "identity": {
+        "sw_build_id": null,
+        "hw_version": null,
+        "date_code": null
+      },
+      "endpoint": {
+        "id": 2,
+        "profile": "0x0104",
+        "device_type": "0x0101",
+        "in_clusters": [
+          "0x0004",
+          "0x0005",
+          "0x0006",
+          "0x0008"
+        ],
+        "out_clusters": []
+      },
+      "clusters": {
+        "0x0004": {
+          "name": "Groups",
+          "commands_received": [],
+          "commands_received_confirmed": false,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "name_support",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0005": {
+          "name": "Scenes",
+          "commands_received": [],
+          "commands_received_confirmed": false,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "count",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "current_scene",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "current_group",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "scene_valid",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "name_support",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0006": {
+          "name": "On/Off",
+          "commands_received": [],
+          "commands_received_confirmed": false,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "on_off",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0008": {
+          "name": "Level Control",
+          "commands_received": [],
+          "commands_received_confirmed": false,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "current_level",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 64512,
+              "name": "64512",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 64768,
+              "name": "64768",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        }
+      },
+      "provenance": {
+        "submitted_at": "2026-07-22T15:46:50.734Z",
+        "card_version": "0.20.1",
+        "source_issue": 40
+      }
     }
   ],
   "capabilities": {
@@ -319,6 +449,120 @@
             }
           ]
         },
+        "0x0004": {
+          "name": "Groups",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "name_support",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0005": {
+          "name": "Scenes",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "count",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "current_scene",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "current_group",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "scene_valid",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "name_support",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0006": {
+          "name": "On/Off",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "on_off",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0008": {
+          "name": "Level Control",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "current_level",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 64512,
+              "name": "64512",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 64768,
+              "name": "64768",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        }
+      }
+    },
+    "2|unknown": {
+      "endpoint": 2,
+      "firmware": null,
+      "scan_count": 1,
+      "manufacturer": "_TZ3000_92chsky7",
+      "model": "TS110F",
+      "in_clusters": [
+        "0x0004",
+        "0x0005",
+        "0x0006",
+        "0x0008"
+      ],
+      "out_clusters": [],
+      "clusters": {
         "0x0004": {
           "name": "Groups",
           "commands_received": [],
