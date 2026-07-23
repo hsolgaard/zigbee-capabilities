@@ -1,0 +1,421 @@
+{
+  "observations": [
+    {
+      "manufacturer": "IKEA of Sweden",
+      "model": "PARASOLL Door/Window Sensor",
+      "identity": {
+        "sw_build_id": "1.0.19",
+        "hw_version": 1,
+        "date_code": "20230516"
+      },
+      "endpoint": {
+        "id": 2,
+        "profile": "0x0104",
+        "device_type": "0x0402",
+        "in_clusters": [
+          "0x0000",
+          "0x0003",
+          "0x0500"
+        ],
+        "out_clusters": [
+          "0x0003"
+        ]
+      },
+      "clusters": {
+        "0x0000": {
+          "name": "Basic",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "reset_fact_default",
+              "present": true
+            }
+          ],
+          "commands_received_confirmed": true,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zcl_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "app_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "stack_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "hw_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "manufacturer",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 5,
+              "name": "model",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 6,
+              "name": "date_code",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 7,
+              "name": "power_source",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 8,
+              "name": "generic_device_class",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 9,
+              "name": "generic_device_type",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 10,
+              "name": "product_code",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 11,
+              "name": "product_url",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16384,
+              "name": "sw_build_id",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0003": {
+          "name": "Identify",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "identify",
+              "present": true
+            },
+            {
+              "id": 1,
+              "name": "identify_query",
+              "present": true
+            },
+            {
+              "id": 64,
+              "name": "trigger_effect",
+              "present": true
+            }
+          ],
+          "commands_received_confirmed": true,
+          "commands_generated": [
+            {
+              "id": 0,
+              "name": "identify_query_response"
+            }
+          ],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "identify_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0500": {
+          "name": "IAS Zone",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Enroll response",
+              "present": true
+            },
+            {
+              "id": 1,
+              "name": "Initiate normal operation mode",
+              "present": false
+            },
+            {
+              "id": 2,
+              "name": "Initiate test mode",
+              "present": false
+            }
+          ],
+          "commands_received_confirmed": true,
+          "commands_generated": [
+            {
+              "id": 0,
+              "name": "status_change_notification"
+            },
+            {
+              "id": 1,
+              "name": "enroll"
+            }
+          ],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zone_state",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "zone_type",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "zone_status",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16,
+              "name": "cie_addr",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 17,
+              "name": "zone_id",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "65533",
+              "access": "READ|REPORT"
+            }
+          ]
+        }
+      },
+      "provenance": {
+        "submitted_at": "2026-07-22T14:48:06.967Z",
+        "card_version": "0.20.1",
+        "source_issue": 23
+      }
+    }
+  ],
+  "capabilities": {
+    "2|1.0.19": {
+      "endpoint": 2,
+      "firmware": "1.0.19",
+      "scan_count": 1,
+      "manufacturer": "IKEA of Sweden",
+      "model": "PARASOLL Door/Window Sensor",
+      "in_clusters": [
+        "0x0000",
+        "0x0003",
+        "0x0500"
+      ],
+      "out_clusters": [
+        "0x0003"
+      ],
+      "clusters": {
+        "0x0000": {
+          "name": "Basic",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "reset_fact_default",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zcl_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "app_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "stack_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "hw_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "manufacturer",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 5,
+              "name": "model",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 6,
+              "name": "date_code",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 7,
+              "name": "power_source",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 8,
+              "name": "generic_device_class",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 9,
+              "name": "generic_device_type",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 10,
+              "name": "product_code",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 11,
+              "name": "product_url",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16384,
+              "name": "sw_build_id",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0003": {
+          "name": "Identify",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "identify",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "identify_query",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 64,
+              "name": "trigger_effect",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "identify_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0500": {
+          "name": "IAS Zone",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Enroll response",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "Initiate normal operation mode",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 2,
+              "name": "Initiate test mode",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zone_state",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "zone_type",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "zone_status",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16,
+              "name": "cie_addr",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 17,
+              "name": "zone_id",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "65533",
+              "access": "READ|REPORT"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
