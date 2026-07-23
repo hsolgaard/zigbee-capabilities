@@ -568,6 +568,117 @@
         "card_version": "0.20.1",
         "source_issue": 53
       }
+    },
+    {
+      "manufacturer": "_TZ3000_3n2minvf",
+      "model": "TS0004",
+      "identity": {
+        "sw_build_id": null,
+        "hw_version": null,
+        "date_code": null
+      },
+      "endpoint": {
+        "id": 4,
+        "profile": "0x0104",
+        "device_type": "0x0100",
+        "in_clusters": [
+          "0x0004",
+          "0x0005",
+          "0x0006"
+        ],
+        "out_clusters": []
+      },
+      "clusters": {
+        "0x0004": {
+          "name": "Groups",
+          "commands_received": [],
+          "commands_received_confirmed": false,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "name_support",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0005": {
+          "name": "Scenes",
+          "commands_received": [],
+          "commands_received_confirmed": false,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "count",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "current_scene",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "current_group",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "scene_valid",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "name_support",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0006": {
+          "name": "On/Off",
+          "commands_received": [],
+          "commands_received_confirmed": false,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "on_off",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16385,
+              "name": "on_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 16386,
+              "name": "off_wait_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        }
+      },
+      "provenance": {
+        "submitted_at": "2026-07-22T16:19:56.099Z",
+        "card_version": "0.20.1",
+        "source_issue": 54
+      }
     }
   ],
   "capabilities": {
@@ -995,6 +1106,102 @@
     },
     "3|unknown": {
       "endpoint": 3,
+      "firmware": null,
+      "scan_count": 1,
+      "manufacturer": "_TZ3000_3n2minvf",
+      "model": "TS0004",
+      "in_clusters": [
+        "0x0004",
+        "0x0005",
+        "0x0006"
+      ],
+      "out_clusters": [],
+      "clusters": {
+        "0x0004": {
+          "name": "Groups",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "name_support",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0005": {
+          "name": "Scenes",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "count",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "current_scene",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "current_group",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "scene_valid",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "name_support",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0006": {
+          "name": "On/Off",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "on_off",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16385,
+              "name": "on_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 16386,
+              "name": "off_wait_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        }
+      }
+    },
+    "4|unknown": {
+      "endpoint": 4,
       "firmware": null,
       "scan_count": 1,
       "manufacturer": "_TZ3000_3n2minvf",
