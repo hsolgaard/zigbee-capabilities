@@ -1,0 +1,839 @@
+{
+  "observations": [
+    {
+      "manufacturer": "AwoX",
+      "model": "TLSR82xx",
+      "identity": {
+        "sw_build_id": null,
+        "hw_version": null,
+        "date_code": null
+      },
+      "endpoint": {
+        "id": 1,
+        "profile": "0x0104",
+        "device_type": "0x010c",
+        "in_clusters": [
+          "0x0000",
+          "0x0003",
+          "0x0004",
+          "0x0005",
+          "0x0006",
+          "0x0008",
+          "0x0300",
+          "0x1000",
+          "0xfc57"
+        ],
+        "out_clusters": [
+          "0x0006"
+        ]
+      },
+      "clusters": {
+        "0x0000": {
+          "name": "Basic",
+          "commands_received": [],
+          "commands_received_confirmed": false,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zcl_version",
+              "access": "READ"
+            },
+            {
+              "id": 1,
+              "name": "app_version",
+              "access": "READ"
+            },
+            {
+              "id": 2,
+              "name": "stack_version",
+              "access": "READ"
+            },
+            {
+              "id": 3,
+              "name": "hw_version",
+              "access": "READ"
+            },
+            {
+              "id": 4,
+              "name": "manufacturer",
+              "access": "READ"
+            },
+            {
+              "id": 5,
+              "name": "model",
+              "access": "READ"
+            },
+            {
+              "id": 7,
+              "name": "power_source",
+              "access": "READ"
+            },
+            {
+              "id": 8,
+              "name": "generic_device_class",
+              "access": "READ"
+            },
+            {
+              "id": 9,
+              "name": "generic_device_type",
+              "access": "READ"
+            },
+            {
+              "id": 10,
+              "name": "product_code",
+              "access": "READ"
+            },
+            {
+              "id": 18,
+              "name": "device_enabled",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 16384,
+              "name": "sw_build_id",
+              "access": "READ"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        },
+        "0x0003": {
+          "name": "Identify",
+          "commands_received": [],
+          "commands_received_confirmed": false,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "identify_time",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        },
+        "0x0004": {
+          "name": "Groups",
+          "commands_received": [],
+          "commands_received_confirmed": false,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "name_support",
+              "access": "READ"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        },
+        "0x0005": {
+          "name": "Scenes",
+          "commands_received": [],
+          "commands_received_confirmed": false,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "count",
+              "access": "READ"
+            },
+            {
+              "id": 1,
+              "name": "current_scene",
+              "access": "READ"
+            },
+            {
+              "id": 2,
+              "name": "current_group",
+              "access": "READ"
+            },
+            {
+              "id": 3,
+              "name": "scene_valid",
+              "access": "READ"
+            },
+            {
+              "id": 4,
+              "name": "name_support",
+              "access": "READ"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        },
+        "0x0006": {
+          "name": "On/Off",
+          "commands_received": [],
+          "commands_received_confirmed": false,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "on_off",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16384,
+              "name": "global_scene_control",
+              "access": "READ"
+            },
+            {
+              "id": 16385,
+              "name": "on_time",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 16386,
+              "name": "off_wait_time",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 16387,
+              "name": "start_up_on_off",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        },
+        "0x0008": {
+          "name": "Level Control",
+          "commands_received": [],
+          "commands_received_confirmed": false,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "current_level",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "remaining_time",
+              "access": "READ"
+            },
+            {
+              "id": 15,
+              "name": "options",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 16384,
+              "name": "start_up_current_level",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        },
+        "0x0300": {
+          "name": "Color Control",
+          "commands_received": [],
+          "commands_received_confirmed": false,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 2,
+              "name": "remaining_time",
+              "access": "READ"
+            },
+            {
+              "id": 3,
+              "name": "current_x",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "current_y",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 7,
+              "name": "color_temperature",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 8,
+              "name": "color_mode",
+              "access": "READ"
+            },
+            {
+              "id": 15,
+              "name": "options",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 16,
+              "name": "num_primaries",
+              "access": "READ"
+            },
+            {
+              "id": 16384,
+              "name": "enhanced_current_hue",
+              "access": "READ"
+            },
+            {
+              "id": 16385,
+              "name": "enhanced_color_mode",
+              "access": "READ"
+            },
+            {
+              "id": 16394,
+              "name": "color_capabilities",
+              "access": "READ"
+            },
+            {
+              "id": 16395,
+              "name": "color_temp_physical_min",
+              "access": "READ"
+            },
+            {
+              "id": 16396,
+              "name": "color_temp_physical_max",
+              "access": "READ"
+            },
+            {
+              "id": 16397,
+              "name": "couple_color_temp_to_level_min",
+              "access": "READ"
+            },
+            {
+              "id": 16400,
+              "name": "start_up_color_temperature",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        },
+        "0x1000": {
+          "name": "Touchlink Commissioning",
+          "commands_received": [],
+          "commands_received_confirmed": false,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 65533,
+              "name": "65533",
+              "access": "READ"
+            }
+          ]
+        },
+        "0xfc57": {
+          "name": "Cluster 0xfc57",
+          "commands_received": [],
+          "commands_received_confirmed": false,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 2,
+              "name": "disable_ota_downgrades",
+              "access": "READ"
+            },
+            {
+              "id": 3,
+              "name": "mgmt_leave_without_rejoin_enabled",
+              "access": "READ"
+            },
+            {
+              "id": 4,
+              "name": "nwk_retry_count",
+              "access": "READ"
+            },
+            {
+              "id": 5,
+              "name": "mac_retry_count",
+              "access": "READ"
+            },
+            {
+              "id": 6,
+              "name": "router_checkin_enabled",
+              "access": "READ"
+            },
+            {
+              "id": 7,
+              "name": "touchlink_interpan_enabled",
+              "access": "READ"
+            },
+            {
+              "id": 8,
+              "name": "wwah_parent_classification_enabled",
+              "access": "READ"
+            },
+            {
+              "id": 13,
+              "name": "configuration_mode_enabled",
+              "access": "READ"
+            },
+            {
+              "id": 14,
+              "name": "current_debug_report_id",
+              "access": "READ"
+            },
+            {
+              "id": 15,
+              "name": "tc_security_on_ntwk_key_rotation_enabled",
+              "access": "READ"
+            },
+            {
+              "id": 17,
+              "name": "pending_network_update_channel",
+              "access": "READ"
+            },
+            {
+              "id": 18,
+              "name": "pending_network_update_panid",
+              "access": "READ"
+            },
+            {
+              "id": 19,
+              "name": "ota_max_offline_duration",
+              "access": "READ"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        }
+      },
+      "provenance": {
+        "submitted_at": "2026-07-22T16:22:07.065Z",
+        "card_version": "0.20.1",
+        "source_issue": 55
+      }
+    }
+  ],
+  "capabilities": {
+    "1|unknown": {
+      "endpoint": 1,
+      "firmware": null,
+      "scan_count": 1,
+      "manufacturer": "AwoX",
+      "model": "TLSR82xx",
+      "in_clusters": [
+        "0x0000",
+        "0x0003",
+        "0x0004",
+        "0x0005",
+        "0x0006",
+        "0x0008",
+        "0x0300",
+        "0x1000",
+        "0xfc57"
+      ],
+      "out_clusters": [
+        "0x0006"
+      ],
+      "clusters": {
+        "0x0000": {
+          "name": "Basic",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zcl_version",
+              "access": "READ"
+            },
+            {
+              "id": 1,
+              "name": "app_version",
+              "access": "READ"
+            },
+            {
+              "id": 2,
+              "name": "stack_version",
+              "access": "READ"
+            },
+            {
+              "id": 3,
+              "name": "hw_version",
+              "access": "READ"
+            },
+            {
+              "id": 4,
+              "name": "manufacturer",
+              "access": "READ"
+            },
+            {
+              "id": 5,
+              "name": "model",
+              "access": "READ"
+            },
+            {
+              "id": 7,
+              "name": "power_source",
+              "access": "READ"
+            },
+            {
+              "id": 8,
+              "name": "generic_device_class",
+              "access": "READ"
+            },
+            {
+              "id": 9,
+              "name": "generic_device_type",
+              "access": "READ"
+            },
+            {
+              "id": 10,
+              "name": "product_code",
+              "access": "READ"
+            },
+            {
+              "id": 18,
+              "name": "device_enabled",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 16384,
+              "name": "sw_build_id",
+              "access": "READ"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        },
+        "0x0003": {
+          "name": "Identify",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "identify_time",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        },
+        "0x0004": {
+          "name": "Groups",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "name_support",
+              "access": "READ"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        },
+        "0x0005": {
+          "name": "Scenes",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "count",
+              "access": "READ"
+            },
+            {
+              "id": 1,
+              "name": "current_scene",
+              "access": "READ"
+            },
+            {
+              "id": 2,
+              "name": "current_group",
+              "access": "READ"
+            },
+            {
+              "id": 3,
+              "name": "scene_valid",
+              "access": "READ"
+            },
+            {
+              "id": 4,
+              "name": "name_support",
+              "access": "READ"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        },
+        "0x0006": {
+          "name": "On/Off",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "on_off",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16384,
+              "name": "global_scene_control",
+              "access": "READ"
+            },
+            {
+              "id": 16385,
+              "name": "on_time",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 16386,
+              "name": "off_wait_time",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 16387,
+              "name": "start_up_on_off",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        },
+        "0x0008": {
+          "name": "Level Control",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "current_level",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "remaining_time",
+              "access": "READ"
+            },
+            {
+              "id": 15,
+              "name": "options",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 16384,
+              "name": "start_up_current_level",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        },
+        "0x0300": {
+          "name": "Color Control",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 2,
+              "name": "remaining_time",
+              "access": "READ"
+            },
+            {
+              "id": 3,
+              "name": "current_x",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "current_y",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 7,
+              "name": "color_temperature",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 8,
+              "name": "color_mode",
+              "access": "READ"
+            },
+            {
+              "id": 15,
+              "name": "options",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 16,
+              "name": "num_primaries",
+              "access": "READ"
+            },
+            {
+              "id": 16384,
+              "name": "enhanced_current_hue",
+              "access": "READ"
+            },
+            {
+              "id": 16385,
+              "name": "enhanced_color_mode",
+              "access": "READ"
+            },
+            {
+              "id": 16394,
+              "name": "color_capabilities",
+              "access": "READ"
+            },
+            {
+              "id": 16395,
+              "name": "color_temp_physical_min",
+              "access": "READ"
+            },
+            {
+              "id": 16396,
+              "name": "color_temp_physical_max",
+              "access": "READ"
+            },
+            {
+              "id": 16397,
+              "name": "couple_color_temp_to_level_min",
+              "access": "READ"
+            },
+            {
+              "id": 16400,
+              "name": "start_up_color_temperature",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        },
+        "0x1000": {
+          "name": "Touchlink Commissioning",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 65533,
+              "name": "65533",
+              "access": "READ"
+            }
+          ]
+        },
+        "0xfc57": {
+          "name": "Cluster 0xfc57",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 2,
+              "name": "disable_ota_downgrades",
+              "access": "READ"
+            },
+            {
+              "id": 3,
+              "name": "mgmt_leave_without_rejoin_enabled",
+              "access": "READ"
+            },
+            {
+              "id": 4,
+              "name": "nwk_retry_count",
+              "access": "READ"
+            },
+            {
+              "id": 5,
+              "name": "mac_retry_count",
+              "access": "READ"
+            },
+            {
+              "id": 6,
+              "name": "router_checkin_enabled",
+              "access": "READ"
+            },
+            {
+              "id": 7,
+              "name": "touchlink_interpan_enabled",
+              "access": "READ"
+            },
+            {
+              "id": 8,
+              "name": "wwah_parent_classification_enabled",
+              "access": "READ"
+            },
+            {
+              "id": 13,
+              "name": "configuration_mode_enabled",
+              "access": "READ"
+            },
+            {
+              "id": 14,
+              "name": "current_debug_report_id",
+              "access": "READ"
+            },
+            {
+              "id": 15,
+              "name": "tc_security_on_ntwk_key_rotation_enabled",
+              "access": "READ"
+            },
+            {
+              "id": 17,
+              "name": "pending_network_update_channel",
+              "access": "READ"
+            },
+            {
+              "id": 18,
+              "name": "pending_network_update_panid",
+              "access": "READ"
+            },
+            {
+              "id": 19,
+              "name": "ota_max_offline_duration",
+              "access": "READ"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
