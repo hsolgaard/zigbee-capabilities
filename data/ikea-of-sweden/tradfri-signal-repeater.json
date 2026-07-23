@@ -1,0 +1,573 @@
+{
+  "observations": [
+    {
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI Signal Repeater",
+      "identity": {
+        "sw_build_id": "2.3.086",
+        "hw_version": 1,
+        "date_code": "20190311"
+      },
+      "endpoint": {
+        "id": 1,
+        "profile": "0x0104",
+        "device_type": "0x0008",
+        "in_clusters": [
+          "0x0000",
+          "0x0003",
+          "0x0009",
+          "0x0b05",
+          "0x1000",
+          "0xfc7c"
+        ],
+        "out_clusters": [
+          "0x0019",
+          "0x0020",
+          "0x1000"
+        ]
+      },
+      "clusters": {
+        "0x0000": {
+          "name": "Basic",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "reset_fact_default",
+              "present": true
+            }
+          ],
+          "commands_received_confirmed": true,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zcl_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "app_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "stack_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "hw_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "manufacturer",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 5,
+              "name": "model",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 6,
+              "name": "date_code",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 7,
+              "name": "power_source",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 8,
+              "name": "generic_device_class",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 9,
+              "name": "generic_device_type",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 10,
+              "name": "product_code",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 11,
+              "name": "product_url",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16384,
+              "name": "sw_build_id",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0003": {
+          "name": "Identify",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "identify",
+              "present": true
+            },
+            {
+              "id": 1,
+              "name": "identify_query",
+              "present": true
+            },
+            {
+              "id": 64,
+              "name": "trigger_effect",
+              "present": true
+            }
+          ],
+          "commands_received_confirmed": true,
+          "commands_generated": [
+            {
+              "id": 0,
+              "name": "identify_query_response"
+            }
+          ],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "identify_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0009": {
+          "name": "Alarms",
+          "commands_received": [],
+          "commands_received_confirmed": false,
+          "commands_generated": [
+            {
+              "id": 0,
+              "name": "alarm"
+            }
+          ],
+          "attributes_confirmed": [
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0b05": {
+          "name": "Diagnostics",
+          "commands_received": [],
+          "commands_received_confirmed": false,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "number_of_resets",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 256,
+              "name": "mac_rx_bcast",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 257,
+              "name": "mac_tx_bcast",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 262,
+              "name": "aps_rx_bcast",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 263,
+              "name": "aps_tx_bcast",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 274,
+              "name": "nwk_fc_failure",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 279,
+              "name": "packet_buffer_allocate_failures",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 283,
+              "name": "average_mac_retry_per_aps_message_sent",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 284,
+              "name": "last_message_lqi",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 285,
+              "name": "last_message_rssi",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x1000": {
+          "name": "Touchlink Commissioning",
+          "commands_received": [
+            {
+              "id": 65,
+              "name": "get_group_identifiers",
+              "present": true
+            },
+            {
+              "id": 66,
+              "name": "get_endpoint_list",
+              "present": true
+            }
+          ],
+          "commands_received_confirmed": true,
+          "commands_generated": [
+            {
+              "id": 1,
+              "name": "scan_rsp"
+            },
+            {
+              "id": 3,
+              "name": "device_info_rsp"
+            },
+            {
+              "id": 17,
+              "name": "network_start_rsp"
+            },
+            {
+              "id": 19,
+              "name": "network_join_router_rsp"
+            },
+            {
+              "id": 21,
+              "name": "network_join_end_device_rsp"
+            },
+            {
+              "id": 64,
+              "name": "endpoint_info"
+            },
+            {
+              "id": 65,
+              "name": "get_group_identifiers_rsp"
+            },
+            {
+              "id": 66,
+              "name": "get_endpoint_list_rsp"
+            }
+          ],
+          "attributes_confirmed": [
+            {
+              "id": 65533,
+              "name": "65533",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0xfc7c": {
+          "name": "Cluster 0xfc7c",
+          "commands_received": [],
+          "commands_received_confirmed": false,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 65533,
+              "name": "65533",
+              "access": "READ|REPORT"
+            }
+          ]
+        }
+      },
+      "provenance": {
+        "submitted_at": "2026-07-22T15:00:54.348Z",
+        "card_version": "0.20.1",
+        "source_issue": 26
+      }
+    }
+  ],
+  "capabilities": {
+    "1|2.3.086": {
+      "endpoint": 1,
+      "firmware": "2.3.086",
+      "scan_count": 1,
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI Signal Repeater",
+      "in_clusters": [
+        "0x0000",
+        "0x0003",
+        "0x0009",
+        "0x0b05",
+        "0x1000",
+        "0xfc7c"
+      ],
+      "out_clusters": [
+        "0x0019",
+        "0x0020",
+        "0x1000"
+      ],
+      "clusters": {
+        "0x0000": {
+          "name": "Basic",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "reset_fact_default",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zcl_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "app_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "stack_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "hw_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "manufacturer",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 5,
+              "name": "model",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 6,
+              "name": "date_code",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 7,
+              "name": "power_source",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 8,
+              "name": "generic_device_class",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 9,
+              "name": "generic_device_type",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 10,
+              "name": "product_code",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 11,
+              "name": "product_url",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16384,
+              "name": "sw_build_id",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0003": {
+          "name": "Identify",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "identify",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "identify_query",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 64,
+              "name": "trigger_effect",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "identify_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0009": {
+          "name": "Alarms",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0b05": {
+          "name": "Diagnostics",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "number_of_resets",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 256,
+              "name": "mac_rx_bcast",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 257,
+              "name": "mac_tx_bcast",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 262,
+              "name": "aps_rx_bcast",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 263,
+              "name": "aps_tx_bcast",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 274,
+              "name": "nwk_fc_failure",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 279,
+              "name": "packet_buffer_allocate_failures",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 283,
+              "name": "average_mac_retry_per_aps_message_sent",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 284,
+              "name": "last_message_lqi",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 285,
+              "name": "last_message_rssi",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x1000": {
+          "name": "Touchlink Commissioning",
+          "commands_received": [
+            {
+              "id": 65,
+              "name": "get_group_identifiers",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 66,
+              "name": "get_endpoint_list",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 65533,
+              "name": "65533",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0xfc7c": {
+          "name": "Cluster 0xfc7c",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 65533,
+              "name": "65533",
+              "access": "READ|REPORT"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
