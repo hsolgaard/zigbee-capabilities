@@ -12,12 +12,26 @@ name: Ingest device submission
 # label-timing issue caused that, at the cost of the job always running (a
 # few seconds of checkout + script) rather than short-circuiting before
 # checkout — a fine trade for a repo that's entirely submissions anyway.
-# Parses the JSON out of the issue body, merges it into
-# data/{manufacturer}/{model}.json, and opens a PR for review — it never
-# commits straight to main. Submissions come from anyone who can open an
-# issue on a public repo, so a human still has to look at the diff and click
-# merge; this just removes every bit of the copy/paste/create-file/commit
-# busywork before that point.
+#
+# Data model: each data/{manufacturer}/{model}.json holds
+#   { observations: [...], capabilities: {...} }
+# observations is an append-only raw evidence log — every individual
+# submission, kept forever, never overwritten. Two submissions only collapse
+# into one entry if they're a byte-for-byte content match (ignoring the
+# submission timestamp/issue number); anything that differs even slightly
+# — including different firmware for the same device/endpoint — is kept as
+# its own observation. capabilities is a *derived cache*, grouped by
+# endpoint+firmware and always fully recomputed from observations on every
+# write (never hand-patched), so it can't drift out of sync with the raw
+# evidence. Where multiple observations for the same endpoint+firmware
+# disagree on whether a command is present, that command is flagged
+# conflicting instead of silently picking one answer.
+#
+# Parses the JSON out of the issue body, merges it into the data file, and
+# opens a PR for review — it never commits straight to main. Submissions
+# come from anyone who can open an issue on a public repo, so a human still
+# has to look at the diff and click merge; this just removes every bit of
+# the copy/paste/create-file/commit busywork before that point.
 on:
   issues:
     types: [opened, labeled]
@@ -100,29 +114,137 @@ jobs:
             const model = slugify(record.model);
             const filePath = `data/${manufacturer}/${model}.json`;
 
-            let existing = [];
+            // Script-side provenance — never something the card itself
+            // claims to know — so any future question about an observation
+            // is traceable back to exactly which issue introduced it.
+            record.provenance = { ...(record.provenance || {}), source_issue: issue.number };
+
+            // Load existing file. Older files written before this data
+            // model existed are a bare array of entries; treat that as the
+            // observations log and let the recompute below build a fresh
+            // capabilities cache for them the first time they're touched
+            // again.
+            let existing = { observations: [], capabilities: {} };
             if (fs.existsSync(filePath)) {
               try {
-                existing = JSON.parse(fs.readFileSync(filePath, "utf8"));
-                if (!Array.isArray(existing)) existing = [existing];
+                const parsed = JSON.parse(fs.readFileSync(filePath, "utf8"));
+                existing = Array.isArray(parsed)
+                  ? { observations: parsed, capabilities: {} }
+                  : parsed;
+                if (!Array.isArray(existing.observations)) existing.observations = [];
+                if (!existing.capabilities || typeof existing.capabilities !== "object") {
+                  existing.capabilities = {};
+                }
               } catch (e) {
-                existing = [];
+                existing = { observations: [], capabilities: {} };
               }
             }
 
-            // Re-submitting the same endpoint/firmware (e.g. after a
-            // firmware update, or just re-running the scan) replaces that
-            // entry instead of piling up duplicates.
-            const sameEntry = (a, b) =>
-              a &&
-              b &&
-              a.endpoint &&
-              b.endpoint &&
-              a.endpoint.id === b.endpoint.id &&
-              (a.identity || {}).sw_build_id === (b.identity || {}).sw_build_id;
-            const idx = existing.findIndex((e) => sameEntry(e, record));
-            if (idx >= 0) existing[idx] = record;
-            else existing.push(record);
+            // Only collapse a submission when it's a provable exact
+            // duplicate of one already on file (same content, ignoring the
+            // submission timestamp/issue number) — anything that differs
+            // at all, even by a single command or a different firmware
+            // build, is kept as its own observation rather than guessed
+            // away or overwritten.
+            const canonical = (o) => {
+              const clone = JSON.parse(JSON.stringify(o));
+              if (clone.provenance) {
+                delete clone.provenance.submitted_at;
+                delete clone.provenance.source_issue;
+              }
+              return JSON.stringify(clone);
+            };
+            const incomingCanonical = canonical(record);
+            const isDuplicate = existing.observations.some(
+              (o) => canonical(o) === incomingCanonical
+            );
+            if (!isDuplicate) existing.observations.push(record);
+
+            // capabilities is always fully recomputed from observations
+            // below (never incrementally patched), so it's a pure derived
+            // cache that can never drift out of sync with the raw log.
+            const obsKey = (o) =>
+              `${(o.endpoint || {}).id}|${(o.identity || {}).sw_build_id || "unknown"}`;
+            const keys = [...new Set(existing.observations.map(obsKey))];
+            const capabilities = {};
+
+            keys.forEach((key) => {
+              const matching = existing.observations.filter((o) => obsKey(o) === key);
+              const first = matching[0];
+
+              const clusterIds = new Set();
+              matching.forEach((o) =>
+                Object.keys(o.clusters || {}).forEach((k) => clusterIds.add(k))
+              );
+
+              const clusters = {};
+              clusterIds.forEach((hexKey) => {
+                const perObs = matching.map((o) => (o.clusters || {})[hexKey]).filter(Boolean);
+                if (!perObs.length) return;
+
+                // commands_received: only counted from observations that
+                // actually confirmed this cluster via a live scan. If every
+                // confirming observation agrees, present/absent is
+                // reported outright; if they disagree (e.g. differs across
+                // firmware that got merged under the same key by mistake,
+                // or a flaky scan), it's flagged conflicting instead of
+                // silently picking one answer.
+                const confirmedObs = perObs.filter((c) => c.commands_received_confirmed);
+                const rowsById = new Map();
+                confirmedObs.forEach((c) => {
+                  (c.commands_received || []).forEach((row) => {
+                    if (!rowsById.has(row.id)) {
+                      rowsById.set(row.id, { id: row.id, name: row.name, votes: [] });
+                    }
+                    rowsById.get(row.id).votes.push(row.present);
+                  });
+                });
+                const commands_received = [...rowsById.values()].map((r) => {
+                  const allTrue = r.votes.every((v) => v === true);
+                  const allFalse = r.votes.every((v) => v === false);
+                  return {
+                    id: r.id,
+                    name: r.name,
+                    present: allTrue ? true : allFalse ? false : null,
+                    conflicting: !allTrue && !allFalse,
+                    scan_count: r.votes.length,
+                  };
+                });
+
+                // attributes_confirmed is positive-only evidence (an
+                // attribute either showed up in a discovery scan or it
+                // wasn't looked at) — no absence claim, so a simple union
+                // across observations is enough, no conflict concept
+                // needed.
+                const attrById = new Map();
+                perObs.forEach((c) =>
+                  (c.attributes_confirmed || []).forEach((a) => attrById.set(a.id, a))
+                );
+
+                clusters[hexKey] = {
+                  name: perObs[0].name,
+                  commands_received,
+                  commands_received_scan_count: confirmedObs.length,
+                  attributes_confirmed: [...attrById.values()],
+                };
+              });
+
+              capabilities[key] = {
+                endpoint: (first.endpoint || {}).id,
+                firmware: (first.identity || {}).sw_build_id || null,
+                scan_count: matching.length,
+                manufacturer: first.manufacturer,
+                model: first.model,
+                in_clusters: [
+                  ...new Set(matching.flatMap((o) => (o.endpoint || {}).in_clusters || [])),
+                ],
+                out_clusters: [
+                  ...new Set(matching.flatMap((o) => (o.endpoint || {}).out_clusters || [])),
+                ],
+                clusters,
+              };
+            });
+            existing.capabilities = capabilities;
 
             fs.mkdirSync(path.dirname(filePath), { recursive: true });
             fs.writeFileSync(filePath, JSON.stringify(existing, null, 2) + "\n");
@@ -141,7 +263,8 @@ jobs:
             // back, or someone re-labeling later) resets the branch rather
             // than failing on "branch already exists" — and this catches
             // the case where the computed file content is identical to
-            // what's already there, so there's nothing to commit.
+            // what's already there (a true duplicate submission, or a
+            // re-run that changes nothing), so there's nothing to commit.
             const diffExit = await exec.exec("git", ["diff", "--cached", "--quiet"], {
               ignoreReturnCode: true,
             });
@@ -149,7 +272,7 @@ jobs:
               await github.rest.issues.createComment({
                 ...context.repo,
                 issue_number: issue.number,
-                body: `No changes — \`${filePath}\` already matches this submission.`,
+                body: `No changes — \`${filePath}\` already reflects this submission.`,
               });
               return;
             }
