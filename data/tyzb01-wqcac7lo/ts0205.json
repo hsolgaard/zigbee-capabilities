@@ -1,0 +1,491 @@
+{
+  "observations": [
+    {
+      "manufacturer": "_TYZB01_wqcac7lo",
+      "model": "TS0205",
+      "identity": {
+        "sw_build_id": null,
+        "hw_version": 1,
+        "date_code": "20180531"
+      },
+      "endpoint": {
+        "id": 1,
+        "profile": "0x0104",
+        "device_type": "0x0402",
+        "in_clusters": [
+          "0x0000",
+          "0x0001",
+          "0x0003",
+          "0x0500",
+          "0x0502"
+        ],
+        "out_clusters": [
+          "0x0003",
+          "0x0019"
+        ]
+      },
+      "clusters": {
+        "0x0000": {
+          "name": "Basic",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "reset_fact_default",
+              "present": true
+            }
+          ],
+          "commands_received_confirmed": true,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zcl_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "app_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "stack_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "hw_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "manufacturer",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 5,
+              "name": "model",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 6,
+              "name": "date_code",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 7,
+              "name": "power_source",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 17,
+              "name": "physical_env",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0001": {
+          "name": "Power Configuration",
+          "commands_received": [],
+          "commands_received_confirmed": false,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "mains_voltage",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 32,
+              "name": "battery_voltage",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 33,
+              "name": "battery_percentage_remaining",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0003": {
+          "name": "Identify",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "identify",
+              "present": true
+            },
+            {
+              "id": 1,
+              "name": "identify_query",
+              "present": true
+            }
+          ],
+          "commands_received_confirmed": true,
+          "commands_generated": [
+            {
+              "id": 0,
+              "name": "identify_query_response"
+            }
+          ],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "identify_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0500": {
+          "name": "IAS Zone",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Enroll response",
+              "present": true
+            },
+            {
+              "id": 1,
+              "name": "Initiate normal operation mode",
+              "present": false
+            },
+            {
+              "id": 2,
+              "name": "Initiate test mode",
+              "present": false
+            }
+          ],
+          "commands_received_confirmed": true,
+          "commands_generated": [
+            {
+              "id": 0,
+              "name": "status_change_notification"
+            },
+            {
+              "id": 1,
+              "name": "enroll"
+            }
+          ],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zone_state",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "zone_type",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "zone_status",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16,
+              "name": "cie_addr",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 17,
+              "name": "zone_id",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "65533",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0502": {
+          "name": "IAS WD (Siren)",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Start warning",
+              "present": true
+            },
+            {
+              "id": 1,
+              "name": "Squawk",
+              "present": true
+            }
+          ],
+          "commands_received_confirmed": true,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "max_duration",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        }
+      },
+      "provenance": {
+        "submitted_at": "2026-07-22T15:33:36.607Z",
+        "card_version": "0.20.1",
+        "source_issue": 38
+      }
+    }
+  ],
+  "capabilities": {
+    "1|unknown": {
+      "endpoint": 1,
+      "firmware": null,
+      "scan_count": 1,
+      "manufacturer": "_TYZB01_wqcac7lo",
+      "model": "TS0205",
+      "in_clusters": [
+        "0x0000",
+        "0x0001",
+        "0x0003",
+        "0x0500",
+        "0x0502"
+      ],
+      "out_clusters": [
+        "0x0003",
+        "0x0019"
+      ],
+      "clusters": {
+        "0x0000": {
+          "name": "Basic",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "reset_fact_default",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zcl_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "app_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "stack_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "hw_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "manufacturer",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 5,
+              "name": "model",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 6,
+              "name": "date_code",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 7,
+              "name": "power_source",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 17,
+              "name": "physical_env",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0001": {
+          "name": "Power Configuration",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "mains_voltage",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 32,
+              "name": "battery_voltage",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 33,
+              "name": "battery_percentage_remaining",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0003": {
+          "name": "Identify",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "identify",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "identify_query",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "identify_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0500": {
+          "name": "IAS Zone",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Enroll response",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "Initiate normal operation mode",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 2,
+              "name": "Initiate test mode",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zone_state",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "zone_type",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "zone_status",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16,
+              "name": "cie_addr",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 17,
+              "name": "zone_id",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "65533",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0502": {
+          "name": "IAS WD (Siren)",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Start warning",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "Squawk",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "max_duration",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
