@@ -1,19 +1,30 @@
 name: Rebuild capability index
 
-# Rebuilds data/index.json from whatever's currently in data/ and commits it
-# straight to main — no PR, unlike ingest-submission.yml, because this file
-# is 100% derived from the capabilities already merged into data/*/*.json
-# (recomputed fresh every run, never hand-patched), so there's nothing here
-# for a human to actually review. Two triggers:
+# Recomputes every data file's `capabilities` cache fresh from its
+# `observations` log, then rebuilds data/index.json from the result — and
+# commits straight to main, no PR, since both are 100% derived and never
+# hand-patched, so there's nothing here for a human to actually review.
+#
+# Recomputing capabilities here (not just re-aggregating whatever's already
+# stored) matters because that's the only recompute path that runs against
+# *every* file on disk. ingest-submission.yml only recomputes the one file
+# tied to the issue that triggered it — so any file written before the
+# observations/capabilities data model existed (a bare array of raw
+# observations, no `capabilities` at all) or any file that hasn't had a new
+# submission since a bugfix to the recompute logic itself stays stuck with a
+# stale or missing `capabilities` cache forever, even though its raw
+# observations are perfectly good evidence. This workflow's recompute step
+# is copied verbatim from ingest-submission.yml's, applied to every file, so
+# nothing gets left behind.
+#
+# Two triggers:
 #   - workflow_dispatch: a manual "Run workflow" button in the Actions tab
-#     (or `gh workflow run rebuild-capability-index.yml`), for one-off
-#     rebuilds — most importantly, backfilling data/index.json for every
-#     device already merged into data/ before this workflow existed, rather
-#     than waiting for the next new submission to trigger it.
+#     (or `gh workflow run rebuild-capability-index.yml`) — use this any
+#     time you suspect data/index.json is stale or missing entries, or right
+#     after adding this workflow for the first time to backfill everything
+#     already on disk.
 #   - push to main touching data/** (except index.json itself, to avoid
-#     triggering on its own commits): a safety net in case two submission
-#     PRs merge in quick succession and the index.json baked into the first
-#     PR's branch is already stale by the time it lands.
+#     triggering on its own commits): keeps things in sync automatically.
 on:
   workflow_dispatch: {}
   push:
@@ -31,7 +42,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Rebuild data/index.json
+      - name: Recompute capabilities + rebuild data/index.json
         uses: actions/github-script@v7
         with:
           script: |
@@ -55,20 +66,120 @@ jobs:
               return out;
             };
 
+            // Identical to ingest-submission.yml's recompute logic — kept
+            // in lockstep deliberately (see header comment) so an
+            // already-correct file produces byte-identical output here and
+            // never gets needlessly rewritten.
+            const recomputeCapabilities = (observations) => {
+              const obsKey = (o) =>
+                `${(o.endpoint || {}).id}|${(o.identity || {}).sw_build_id || "unknown"}`;
+              const keys = [...new Set(observations.map(obsKey))];
+              const capabilities = {};
+
+              keys.forEach((key) => {
+                const matching = observations.filter((o) => obsKey(o) === key);
+                const first = matching[0];
+
+                const clusterIds = new Set();
+                matching.forEach((o) =>
+                  Object.keys(o.clusters || {}).forEach((k) => clusterIds.add(k))
+                );
+
+                const clusters = {};
+                clusterIds.forEach((hexKey) => {
+                  const perObs = matching.map((o) => (o.clusters || {})[hexKey]).filter(Boolean);
+                  if (!perObs.length) return;
+
+                  const confirmedObs = perObs.filter((c) => c.commands_received_confirmed);
+                  const rowsById = new Map();
+                  confirmedObs.forEach((c) => {
+                    (c.commands_received || []).forEach((row) => {
+                      if (!rowsById.has(row.id)) {
+                        rowsById.set(row.id, { id: row.id, name: row.name, votes: [] });
+                      }
+                      rowsById.get(row.id).votes.push(row.present);
+                    });
+                  });
+                  const commands_received = [...rowsById.values()].map((r) => {
+                    const allTrue = r.votes.every((v) => v === true);
+                    const allFalse = r.votes.every((v) => v === false);
+                    return {
+                      id: r.id,
+                      name: r.name,
+                      present: allTrue ? true : allFalse ? false : null,
+                      conflicting: !allTrue && !allFalse,
+                      scan_count: r.votes.length,
+                    };
+                  });
+
+                  const attrById = new Map();
+                  perObs.forEach((c) =>
+                    (c.attributes_confirmed || []).forEach((a) => attrById.set(a.id, a))
+                  );
+
+                  clusters[hexKey] = {
+                    name: perObs[0].name,
+                    commands_received,
+                    commands_received_scan_count: confirmedObs.length,
+                    attributes_confirmed: [...attrById.values()],
+                  };
+                });
+
+                capabilities[key] = {
+                  endpoint: (first.endpoint || {}).id,
+                  firmware: (first.identity || {}).sw_build_id || null,
+                  scan_count: matching.length,
+                  manufacturer: first.manufacturer,
+                  model: first.model,
+                  in_clusters: [
+                    ...new Set(matching.flatMap((o) => (o.endpoint || {}).in_clusters || [])),
+                  ],
+                  out_clusters: [
+                    ...new Set(matching.flatMap((o) => (o.endpoint || {}).out_clusters || [])),
+                  ],
+                  clusters,
+                };
+              });
+
+              return capabilities;
+            };
+
+            let changedFiles = 0;
             const index = [];
+
             if (fs.existsSync("data")) {
               for (const file of walkDataFiles("data")) {
                 let parsed;
                 try {
                   parsed = JSON.parse(fs.readFileSync(file, "utf8"));
                 } catch (e) {
+                  console.log(`Skipping ${file} — not valid JSON.`);
                   continue;
                 }
-                const caps = Array.isArray(parsed) ? {} : parsed.capabilities || {};
+
+                const wasBareArray = Array.isArray(parsed);
+                const existing = wasBareArray ? { observations: parsed, capabilities: {} } : parsed;
+                if (!Array.isArray(existing.observations)) existing.observations = [];
+
+                const recomputed = recomputeCapabilities(existing.observations);
+                const before = JSON.stringify(existing.capabilities || {});
+                const after = JSON.stringify(recomputed);
+                existing.capabilities = recomputed;
+
+                if (before !== after || wasBareArray) {
+                  fs.writeFileSync(file, JSON.stringify(existing, null, 2) + "\n");
+                  changedFiles++;
+                  console.log(
+                    wasBareArray
+                      ? `Migrated ${file} from the old bare-array schema and computed its capabilities cache.`
+                      : `Recomputed ${file} — capabilities cache was out of date.`
+                  );
+                }
+
                 const parts = file.split(path.sep); // ["data", manufacturerSlug, "model.json"]
                 const manufacturerSlug = parts[1];
                 const modelSlug = (parts[2] || "").replace(/\.json$/, "");
-                Object.values(caps).forEach((entry) => {
+                Object.values(existing.capabilities).forEach((entry) => {
                   index.push({
                     manufacturer_slug: manufacturerSlug,
                     model_slug: modelSlug,
@@ -77,22 +188,23 @@ jobs:
                 });
               }
             }
+
             index.sort((a, b) =>
               `${a.manufacturer}${a.model}${a.firmware}`.localeCompare(
                 `${b.manufacturer}${b.model}${b.firmware}`
               )
             );
-            const next = JSON.stringify(index, null, 2) + "\n";
-            const prev = fs.existsSync("data/index.json")
+            const nextIndex = JSON.stringify(index, null, 2) + "\n";
+            const prevIndex = fs.existsSync("data/index.json")
               ? fs.readFileSync("data/index.json", "utf8")
               : null;
+            const indexChanged = prevIndex !== nextIndex;
+            if (indexChanged) fs.writeFileSync("data/index.json", nextIndex);
 
-            if (prev === next) {
-              console.log(`data/index.json already up to date (${index.length} records) — nothing to commit.`);
+            if (changedFiles === 0 && !indexChanged) {
+              console.log(`Nothing to rebuild — every file's capabilities cache and data/index.json were already up to date (${index.length} records).`);
               return;
             }
-
-            fs.writeFileSync("data/index.json", next);
 
             await exec.exec("git", ["config", "user.name", "github-actions[bot]"]);
             await exec.exec("git", [
@@ -100,11 +212,11 @@ jobs:
               "user.email",
               "github-actions[bot]@users.noreply.github.com",
             ]);
-            await exec.exec("git", ["add", "data/index.json"]);
+            await exec.exec("git", ["add", "data/"]);
             await exec.exec("git", [
               "commit",
               "-m",
-              `Rebuild data/index.json (${index.length} records)`,
+              `Rebuild capability index (${index.length} records, ${changedFiles} file(s) recomputed)`,
             ]);
             await exec.exec("git", ["push", "origin", "HEAD:main"]);
-            console.log(`Committed data/index.json with ${index.length} records.`);
+            console.log(`Committed: ${index.length} records in data/index.json, ${changedFiles} file(s) recomputed.`);
