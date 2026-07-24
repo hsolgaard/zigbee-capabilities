@@ -166,6 +166,11 @@ jobs:
             const obsKey = (o) =>
               `${(o.endpoint || {}).id}|${(o.identity || {}).sw_build_id || "unknown"}`;
             const keys = [...new Set(existing.observations.map(obsKey))];
+
+            // Snapshot before the recompute so the contributor can be told
+            // what their submission actually added, below — a plain diff
+            // against this, never a subjective judgement of the submission.
+            const oldCapabilities = JSON.parse(JSON.stringify(existing.capabilities || {}));
             const capabilities = {};
 
             keys.forEach((key) => {
@@ -259,6 +264,59 @@ jobs:
               };
             });
             existing.capabilities = capabilities;
+
+            // Plain diff of oldCapabilities -> capabilities, worded as
+            // what the submission itself contributed — never a value
+            // judgement, just "here's what's new because you scanned and
+            // shared this". Reported back to the contributor in the issue
+            // comment below so the async, fire-and-forget act of filing a
+            // submission still gets some visible payoff.
+            const summarizeContribution = (oldCaps, newCaps) => {
+              const lines = [];
+              const oldKeys = new Set(Object.keys(oldCaps));
+              Object.keys(newCaps).forEach((key) => {
+                const after = newCaps[key];
+                const fwLabel = after.firmware || "unknown";
+                if (!oldKeys.has(key)) {
+                  lines.push(`New firmware observation: ${fwLabel} (endpoint ${after.endpoint})`);
+                  return;
+                }
+                const before = oldCaps[key];
+                if ((before.scan_count || 0) < (after.scan_count || 0)) {
+                  lines.push(
+                    `Improved confidence on firmware ${fwLabel}: ${before.scan_count || 0} → ${after.scan_count} scans`
+                  );
+                }
+
+                const confirmedNames = (caps) =>
+                  new Set(
+                    Object.values(caps.clusters || {}).flatMap((c) =>
+                      (c.commands_received || []).filter((r) => r.present === true).map((r) => r.name)
+                    )
+                  );
+                const newCommands = [...confirmedNames(after)].filter((n) => !confirmedNames(before).has(n));
+                if (newCommands.length) {
+                  lines.push(
+                    `Newly confirmed command${newCommands.length === 1 ? "" : "s"} on firmware ${fwLabel}: ${newCommands.join(", ")}`
+                  );
+                }
+
+                const attrNames = (caps) =>
+                  new Set(
+                    Object.values(caps.clusters || {}).flatMap((c) =>
+                      (c.attributes_confirmed || []).map((a) => a.name)
+                    )
+                  );
+                const newAttrs = [...attrNames(after)].filter((n) => !attrNames(before).has(n));
+                if (newAttrs.length) {
+                  lines.push(
+                    `Newly seen attribute${newAttrs.length === 1 ? "" : "s"} on firmware ${fwLabel}: ${newAttrs.join(", ")}`
+                  );
+                }
+              });
+              return lines;
+            };
+            const contributionLines = summarizeContribution(oldCapabilities, capabilities);
 
             fs.mkdirSync(path.dirname(filePath), { recursive: true });
             fs.writeFileSync(filePath, JSON.stringify(existing, null, 2) + "\n");
@@ -372,8 +430,12 @@ jobs:
               prNumber = pr.data.number;
             }
 
+            const contributionSummary = contributionLines.length
+              ? `\n\nWhat this submission adds:\n${contributionLines.map((l) => `- ${l}`).join("\n")}`
+              : "";
+
             await github.rest.issues.createComment({
               ...context.repo,
               issue_number: issue.number,
-              body: `Opened/updated #${prNumber} with this data — review and merge to add it, or close the PR to reject it. Merging will close this issue automatically.`,
+              body: `Opened/updated #${prNumber} with this data — review and merge to add it, or close the PR to reject it. Merging will close this issue automatically.${contributionSummary}`,
             });
