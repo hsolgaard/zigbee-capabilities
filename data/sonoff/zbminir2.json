@@ -1,16 +1,343 @@
-[
-  {
-    "manufacturer": "SONOFF",
-    "model": "ZBMINIR2",
-    "identity": {
-      "sw_build_id": "1.0.8",
-      "hw_version": 16,
-      "date_code": "20251127"
-    },
-    "endpoint": {
-      "id": 1,
-      "profile": "0x0104",
-      "device_type": "0x0002",
+{
+  "observations": [
+    {
+      "manufacturer": "SONOFF",
+      "model": "ZBMINIR2",
+      "identity": {
+        "sw_build_id": "1.0.8",
+        "hw_version": 16,
+        "date_code": "20251127"
+      },
+      "endpoint": {
+        "id": 1,
+        "profile": "0x0104",
+        "device_type": "0x0002",
+        "in_clusters": [
+          "0x0000",
+          "0x0003",
+          "0x0004",
+          "0x0006",
+          "0x0b05",
+          "0xfc11",
+          "0xfc57"
+        ],
+        "out_clusters": [
+          "0x0003",
+          "0x0006",
+          "0x0019"
+        ]
+      },
+      "clusters": {
+        "0x0000": {
+          "name": "Basic",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "reset_fact_default",
+              "present": true
+            }
+          ],
+          "commands_received_confirmed": true,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zcl_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "app_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "hw_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "manufacturer",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 5,
+              "name": "model",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 6,
+              "name": "date_code",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 7,
+              "name": "power_source",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 17,
+              "name": "physical_env",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 16384,
+              "name": "sw_build_id",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0003": {
+          "name": "Identify",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "identify",
+              "present": true
+            },
+            {
+              "id": 1,
+              "name": "identify_query",
+              "present": true
+            }
+          ],
+          "commands_received_confirmed": true,
+          "commands_generated": [
+            {
+              "id": 0,
+              "name": "identify_query_response"
+            }
+          ],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "identify_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0004": {
+          "name": "Groups",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "add",
+              "present": true
+            },
+            {
+              "id": 1,
+              "name": "view",
+              "present": true
+            },
+            {
+              "id": 2,
+              "name": "get_membership",
+              "present": true
+            },
+            {
+              "id": 3,
+              "name": "remove",
+              "present": true
+            },
+            {
+              "id": 4,
+              "name": "remove_all",
+              "present": true
+            },
+            {
+              "id": 5,
+              "name": "add_if_identifying",
+              "present": true
+            }
+          ],
+          "commands_received_confirmed": true,
+          "commands_generated": [
+            {
+              "id": 0,
+              "name": "add_response"
+            },
+            {
+              "id": 1,
+              "name": "view_response"
+            },
+            {
+              "id": 2,
+              "name": "get_membership_response"
+            },
+            {
+              "id": 3,
+              "name": "remove_response"
+            }
+          ],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "name_support",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0006": {
+          "name": "On/Off",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Off",
+              "present": true
+            },
+            {
+              "id": 1,
+              "name": "On",
+              "present": true
+            },
+            {
+              "id": 2,
+              "name": "Toggle",
+              "present": true
+            },
+            {
+              "id": 64,
+              "name": "Off with effect",
+              "present": true
+            },
+            {
+              "id": 65,
+              "name": "On with recall global scene",
+              "present": false
+            },
+            {
+              "id": 66,
+              "name": "On with timed off",
+              "present": false
+            }
+          ],
+          "commands_received_confirmed": true,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "on_off",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16387,
+              "name": "start_up_on_off",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0b05": {
+          "name": "Diagnostics",
+          "commands_received": [],
+          "commands_received_confirmed": false,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0xfc11": {
+          "name": "Cluster 0xfc11",
+          "commands_received": [],
+          "commands_received_confirmed": false,
+          "commands_generated": [],
+          "attributes_confirmed": [
+            {
+              "id": 1,
+              "name": "network_led",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 18,
+              "name": "turbo_mode",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 20,
+              "name": "20",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 21,
+              "name": "21",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 22,
+              "name": "external_trigger_mode",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 23,
+              "name": "detach_relay",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 26,
+              "name": "26",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 27,
+              "name": "27",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 28,
+              "name": "28",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "65533",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0xfc57": {
+          "name": "Cluster 0xfc57",
+          "commands_received": [],
+          "commands_received_confirmed": false,
+          "commands_generated": [],
+          "attributes_confirmed": []
+        }
+      },
+      "provenance": {
+        "submitted_at": "2026-07-21T22:33:17.039Z",
+        "card_version": "0.20.1"
+      }
+    }
+  ],
+  "capabilities": {
+    "1|1.0.8": {
+      "endpoint": 1,
+      "firmware": "1.0.8",
+      "scan_count": 1,
+      "manufacturer": "SONOFF",
+      "model": "ZBMINIR2",
       "in_clusters": [
         "0x0000",
         "0x0003",
@@ -24,309 +351,306 @@
         "0x0003",
         "0x0006",
         "0x0019"
-      ]
-    },
-    "clusters": {
-      "0x0000": {
-        "name": "Basic",
-        "commands_received": [
-          {
-            "id": 0,
-            "name": "reset_fact_default",
-            "present": true
-          }
-        ],
-        "commands_received_confirmed": true,
-        "commands_generated": [],
-        "attributes_confirmed": [
-          {
-            "id": 0,
-            "name": "zcl_version",
-            "access": "READ|REPORT"
-          },
-          {
-            "id": 1,
-            "name": "app_version",
-            "access": "READ|REPORT"
-          },
-          {
-            "id": 3,
-            "name": "hw_version",
-            "access": "READ|REPORT"
-          },
-          {
-            "id": 4,
-            "name": "manufacturer",
-            "access": "READ|REPORT"
-          },
-          {
-            "id": 5,
-            "name": "model",
-            "access": "READ|REPORT"
-          },
-          {
-            "id": 6,
-            "name": "date_code",
-            "access": "READ|REPORT"
-          },
-          {
-            "id": 7,
-            "name": "power_source",
-            "access": "READ|REPORT"
-          },
-          {
-            "id": 17,
-            "name": "physical_env",
-            "access": "READ|WRITE|REPORT"
-          },
-          {
-            "id": 16384,
-            "name": "sw_build_id",
-            "access": "READ|REPORT"
-          },
-          {
-            "id": 65533,
-            "name": "cluster_revision",
-            "access": "READ|REPORT"
-          }
-        ]
-      },
-      "0x0003": {
-        "name": "Identify",
-        "commands_received": [
-          {
-            "id": 0,
-            "name": "identify",
-            "present": true
-          },
-          {
-            "id": 1,
-            "name": "identify_query",
-            "present": true
-          }
-        ],
-        "commands_received_confirmed": true,
-        "commands_generated": [
-          {
-            "id": 0,
-            "name": "identify_query_response"
-          }
-        ],
-        "attributes_confirmed": [
-          {
-            "id": 0,
-            "name": "identify_time",
-            "access": "READ|WRITE|REPORT"
-          },
-          {
-            "id": 65533,
-            "name": "cluster_revision",
-            "access": "READ|REPORT"
-          }
-        ]
-      },
-      "0x0004": {
-        "name": "Groups",
-        "commands_received": [
-          {
-            "id": 0,
-            "name": "add",
-            "present": true
-          },
-          {
-            "id": 1,
-            "name": "view",
-            "present": true
-          },
-          {
-            "id": 2,
-            "name": "get_membership",
-            "present": true
-          },
-          {
-            "id": 3,
-            "name": "remove",
-            "present": true
-          },
-          {
-            "id": 4,
-            "name": "remove_all",
-            "present": true
-          },
-          {
-            "id": 5,
-            "name": "add_if_identifying",
-            "present": true
-          }
-        ],
-        "commands_received_confirmed": true,
-        "commands_generated": [
-          {
-            "id": 0,
-            "name": "add_response"
-          },
-          {
-            "id": 1,
-            "name": "view_response"
-          },
-          {
-            "id": 2,
-            "name": "get_membership_response"
-          },
-          {
-            "id": 3,
-            "name": "remove_response"
-          }
-        ],
-        "attributes_confirmed": [
-          {
-            "id": 0,
-            "name": "name_support",
-            "access": "READ|REPORT"
-          },
-          {
-            "id": 65533,
-            "name": "cluster_revision",
-            "access": "READ|REPORT"
-          }
-        ]
-      },
-      "0x0006": {
-        "name": "On/Off",
-        "commands_received": [
-          {
-            "id": 0,
-            "name": "Off",
-            "present": true
-          },
-          {
-            "id": 1,
-            "name": "On",
-            "present": true
-          },
-          {
-            "id": 2,
-            "name": "Toggle",
-            "present": true
-          },
-          {
-            "id": 64,
-            "name": "Off with effect",
-            "present": true
-          },
-          {
-            "id": 65,
-            "name": "On with recall global scene",
-            "present": false
-          },
-          {
-            "id": 66,
-            "name": "On with timed off",
-            "present": false
-          }
-        ],
-        "commands_received_confirmed": true,
-        "commands_generated": [],
-        "attributes_confirmed": [
-          {
-            "id": 0,
-            "name": "on_off",
-            "access": "READ|REPORT"
-          },
-          {
-            "id": 16387,
-            "name": "start_up_on_off",
-            "access": "READ|WRITE|REPORT"
-          },
-          {
-            "id": 65533,
-            "name": "cluster_revision",
-            "access": "READ|REPORT"
-          }
-        ]
-      },
-      "0x0b05": {
-        "name": "Diagnostics",
-        "commands_received": [],
-        "commands_received_confirmed": false,
-        "commands_generated": [],
-        "attributes_confirmed": [
-          {
-            "id": 65533,
-            "name": "cluster_revision",
-            "access": "READ|REPORT"
-          }
-        ]
-      },
-      "0xfc11": {
-        "name": "Cluster 0xfc11",
-        "commands_received": [],
-        "commands_received_confirmed": false,
-        "commands_generated": [],
-        "attributes_confirmed": [
-          {
-            "id": 1,
-            "name": "network_led",
-            "access": "READ|WRITE|REPORT"
-          },
-          {
-            "id": 18,
-            "name": "turbo_mode",
-            "access": "READ|WRITE|REPORT"
-          },
-          {
-            "id": 20,
-            "name": "20",
-            "access": "READ|WRITE|REPORT"
-          },
-          {
-            "id": 21,
-            "name": "21",
-            "access": "READ|WRITE|REPORT"
-          },
-          {
-            "id": 22,
-            "name": "external_trigger_mode",
-            "access": "READ|WRITE|REPORT"
-          },
-          {
-            "id": 23,
-            "name": "detach_relay",
-            "access": "READ|WRITE|REPORT"
-          },
-          {
-            "id": 26,
-            "name": "26",
-            "access": "READ|WRITE|REPORT"
-          },
-          {
-            "id": 27,
-            "name": "27",
-            "access": "READ|WRITE|REPORT"
-          },
-          {
-            "id": 28,
-            "name": "28",
-            "access": "READ|REPORT"
-          },
-          {
-            "id": 65533,
-            "name": "65533",
-            "access": "READ|REPORT"
-          }
-        ]
-      },
-      "0xfc57": {
-        "name": "Cluster 0xfc57",
-        "commands_received": [],
-        "commands_received_confirmed": false,
-        "commands_generated": [],
-        "attributes_confirmed": []
+      ],
+      "clusters": {
+        "0x0000": {
+          "name": "Basic",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "reset_fact_default",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zcl_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "app_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "hw_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "manufacturer",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 5,
+              "name": "model",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 6,
+              "name": "date_code",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 7,
+              "name": "power_source",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 17,
+              "name": "physical_env",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 16384,
+              "name": "sw_build_id",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0003": {
+          "name": "Identify",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "identify",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "identify_query",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "identify_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0004": {
+          "name": "Groups",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "add",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "view",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 2,
+              "name": "get_membership",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 3,
+              "name": "remove",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 4,
+              "name": "remove_all",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 5,
+              "name": "add_if_identifying",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "name_support",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0006": {
+          "name": "On/Off",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Off",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "On",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 2,
+              "name": "Toggle",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 64,
+              "name": "Off with effect",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 65,
+              "name": "On with recall global scene",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 66,
+              "name": "On with timed off",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "on_off",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16387,
+              "name": "start_up_on_off",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0b05": {
+          "name": "Diagnostics",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0xfc11": {
+          "name": "Cluster 0xfc11",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 1,
+              "name": "network_led",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 18,
+              "name": "turbo_mode",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 20,
+              "name": "20",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 21,
+              "name": "21",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 22,
+              "name": "external_trigger_mode",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 23,
+              "name": "detach_relay",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 26,
+              "name": "26",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 27,
+              "name": "27",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 28,
+              "name": "28",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "65533",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0xfc57": {
+          "name": "Cluster 0xfc57",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": []
+        }
       }
-    },
-    "provenance": {
-      "submitted_at": "2026-07-21T22:33:17.039Z",
-      "card_version": "0.20.1"
     }
   }
-]
+}
