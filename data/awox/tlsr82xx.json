@@ -433,6 +433,7 @@
       "endpoint": 1,
       "firmware": null,
       "scan_count": 1,
+      "last_seen": "2026-07-22T16:22:07.065Z",
       "manufacturer": "AwoX",
       "model": "TLSR82xx",
       "in_clusters": [

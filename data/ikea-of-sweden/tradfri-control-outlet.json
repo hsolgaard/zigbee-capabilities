@@ -475,6 +475,7 @@
       "endpoint": 1,
       "firmware": "2.3.089",
       "scan_count": 1,
+      "last_seen": "2026-07-22T15:09:29.283Z",
       "manufacturer": "IKEA of Sweden",
       "model": "TRADFRI control outlet",
       "in_clusters": [

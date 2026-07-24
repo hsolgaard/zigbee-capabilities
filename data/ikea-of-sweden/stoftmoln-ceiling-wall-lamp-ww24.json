@@ -605,6 +605,7 @@
       "endpoint": 1,
       "firmware": "1.1.7",
       "scan_count": 1,
+      "last_seen": "2026-07-22T15:04:00.311Z",
       "manufacturer": "IKEA of Sweden",
       "model": "STOFTMOLN ceiling/wall lamp WW24",
       "in_clusters": [

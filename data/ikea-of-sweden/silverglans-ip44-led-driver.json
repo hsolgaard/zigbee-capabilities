@@ -570,6 +570,7 @@
       "endpoint": 1,
       "firmware": "1.0.021",
       "scan_count": 1,
+      "last_seen": "2026-07-22T15:07:15.746Z",
       "manufacturer": "IKEA of Sweden",
       "model": "SILVERGLANS IP44 LED driver",
       "in_clusters": [

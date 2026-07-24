@@ -686,6 +686,7 @@
       "endpoint": 1,
       "firmware": null,
       "scan_count": 1,
+      "last_seen": "2026-07-22T16:16:49.506Z",
       "manufacturer": "_TZ3000_3n2minvf",
       "model": "TS0004",
       "in_clusters": [
@@ -1012,6 +1013,7 @@
       "endpoint": 2,
       "firmware": null,
       "scan_count": 1,
+      "last_seen": "2026-07-22T16:17:40.378Z",
       "manufacturer": "_TZ3000_3n2minvf",
       "model": "TS0004",
       "in_clusters": [
@@ -1108,6 +1110,7 @@
       "endpoint": 3,
       "firmware": null,
       "scan_count": 1,
+      "last_seen": "2026-07-22T16:18:53.391Z",
       "manufacturer": "_TZ3000_3n2minvf",
       "model": "TS0004",
       "in_clusters": [
@@ -1204,6 +1207,7 @@
       "endpoint": 4,
       "firmware": null,
       "scan_count": 1,
+      "last_seen": "2026-07-22T16:19:56.099Z",
       "manufacturer": "_TZ3000_3n2minvf",
       "model": "TS0004",
       "in_clusters": [

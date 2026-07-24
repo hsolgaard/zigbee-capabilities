@@ -1097,6 +1097,7 @@
       "endpoint": 1,
       "firmware": "1.0.021",
       "scan_count": 1,
+      "last_seen": "2026-07-22T15:14:58.467Z",
       "manufacturer": "IKEA of Sweden",
       "model": "TRADFRI bulb E14 CWS 470lm",
       "in_clusters": [

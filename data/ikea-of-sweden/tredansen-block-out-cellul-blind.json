@@ -602,6 +602,7 @@
       "endpoint": 1,
       "firmware": "24.4.13",
       "scan_count": 1,
+      "last_seen": "2026-07-22T15:57:49.812Z",
       "manufacturer": "IKEA of Sweden",
       "model": "TREDANSEN block-out cellul blind",
       "in_clusters": [

@@ -752,6 +752,7 @@
       "endpoint": 1,
       "firmware": "2.3.095",
       "scan_count": 1,
+      "last_seen": "2026-07-22T14:59:23.493Z",
       "manufacturer": "IKEA of Sweden",
       "model": "TRADFRI bulb GU10 WS 400lm",
       "in_clusters": [

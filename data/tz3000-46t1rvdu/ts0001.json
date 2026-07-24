@@ -353,6 +353,7 @@
       "endpoint": 1,
       "firmware": null,
       "scan_count": 1,
+      "last_seen": "2026-07-22T16:25:59.228Z",
       "manufacturer": "_TZ3000_46t1rvdu",
       "model": "TS0001",
       "in_clusters": [

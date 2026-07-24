@@ -886,6 +886,7 @@
       "endpoint": 1,
       "firmware": "1.0.34",
       "scan_count": 1,
+      "last_seen": "2026-07-22T15:54:02.683Z",
       "manufacturer": "IKEA of Sweden",
       "model": "JETSTROM 3030 wall",
       "in_clusters": [

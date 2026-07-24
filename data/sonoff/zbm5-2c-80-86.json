@@ -463,6 +463,7 @@
       "endpoint": 1,
       "firmware": "1.0.6",
       "scan_count": 1,
+      "last_seen": "2026-07-21T22:29:56.889Z",
       "manufacturer": "SONOFF",
       "model": "ZBM5-2C-80/86",
       "in_clusters": [

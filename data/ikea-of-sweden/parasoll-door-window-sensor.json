@@ -221,6 +221,7 @@
       "endpoint": 2,
       "firmware": "1.0.19",
       "scan_count": 1,
+      "last_seen": "2026-07-22T14:48:06.967Z",
       "manufacturer": "IKEA of Sweden",
       "model": "PARASOLL Door/Window Sensor",
       "in_clusters": [

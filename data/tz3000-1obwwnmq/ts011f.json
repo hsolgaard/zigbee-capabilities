@@ -286,6 +286,7 @@
       "endpoint": 2,
       "firmware": null,
       "scan_count": 1,
+      "last_seen": "2026-07-22T15:24:36.815Z",
       "manufacturer": "_TZ3000_1obwwnmq",
       "model": "TS011F",
       "in_clusters": [
@@ -410,6 +411,7 @@
       "endpoint": 3,
       "firmware": null,
       "scan_count": 1,
+      "last_seen": "2026-07-22T15:26:03.980Z",
       "manufacturer": "_TZ3000_1obwwnmq",
       "model": "TS011F",
       "in_clusters": [

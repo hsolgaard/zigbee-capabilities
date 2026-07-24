@@ -668,6 +668,7 @@
       "endpoint": 1,
       "firmware": "2.4.45",
       "scan_count": 1,
+      "last_seen": "2026-07-22T14:46:06.622Z",
       "manufacturer": "IKEA of Sweden",
       "model": "INSPELNING Smart plug",
       "in_clusters": [

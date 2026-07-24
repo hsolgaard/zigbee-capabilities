@@ -353,6 +353,7 @@
       "endpoint": 1,
       "firmware": null,
       "scan_count": 1,
+      "last_seen": "2026-07-22T15:45:04.039Z",
       "manufacturer": "_TZ3000_92chsky7",
       "model": "TS110F",
       "in_clusters": [
@@ -553,6 +554,7 @@
       "endpoint": 2,
       "firmware": null,
       "scan_count": 1,
+      "last_seen": "2026-07-22T15:46:50.734Z",
       "manufacturer": "_TZ3000_92chsky7",
       "model": "TS110F",
       "in_clusters": [

@@ -256,6 +256,7 @@
       "endpoint": 1,
       "firmware": null,
       "scan_count": 1,
+      "last_seen": "2026-07-22T15:33:36.607Z",
       "manufacturer": "_TYZB01_wqcac7lo",
       "model": "TS0205",
       "in_clusters": [

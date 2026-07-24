@@ -336,6 +336,7 @@
       "endpoint": 1,
       "firmware": "1.0.8",
       "scan_count": 1,
+      "last_seen": "2026-07-21T22:33:17.039Z",
       "manufacturer": "SONOFF",
       "model": "ZBMINIR2",
       "in_clusters": [

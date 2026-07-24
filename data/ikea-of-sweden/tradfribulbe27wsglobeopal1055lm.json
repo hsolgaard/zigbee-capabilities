@@ -745,6 +745,7 @@
       "endpoint": 1,
       "firmware": "1.0.012",
       "scan_count": 1,
+      "last_seen": "2026-07-22T14:34:50.720Z",
       "manufacturer": "IKEA of Sweden",
       "model": "TRADFRIbulbE27WSglobeopal1055lm",
       "in_clusters": [

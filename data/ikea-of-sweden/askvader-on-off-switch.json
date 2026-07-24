@@ -565,6 +565,7 @@
       "endpoint": 1,
       "firmware": "1.0.002",
       "scan_count": 1,
+      "last_seen": "2026-07-22T15:02:38.502Z",
       "manufacturer": "IKEA of Sweden",
       "model": "ASKVADER on/off switch",
       "in_clusters": [

@@ -471,6 +471,7 @@
       "endpoint": 1,
       "firmware": "1.0.4",
       "scan_count": 1,
+      "last_seen": "2026-07-21T22:37:03.821Z",
       "manufacturer": "SONOFF",
       "model": "MINI-ZB2GS-L",
       "in_clusters": [

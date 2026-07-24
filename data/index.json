@@ -5,6 +5,7 @@
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
+    "last_seen": "2026-07-22T15:33:36.607Z",
     "manufacturer": "_TYZB01_wqcac7lo",
     "model": "TS0205",
     "in_clusters": [
@@ -242,6 +243,7 @@
     "endpoint": 2,
     "firmware": null,
     "scan_count": 1,
+    "last_seen": "2026-07-22T15:24:36.815Z",
     "manufacturer": "_TZ3000_1obwwnmq",
     "model": "TS011F",
     "in_clusters": [
@@ -368,6 +370,7 @@
     "endpoint": 3,
     "firmware": null,
     "scan_count": 1,
+    "last_seen": "2026-07-22T15:26:03.980Z",
     "manufacturer": "_TZ3000_1obwwnmq",
     "model": "TS011F",
     "in_clusters": [
@@ -494,6 +497,7 @@
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
+    "last_seen": "2026-07-22T16:16:49.506Z",
     "manufacturer": "_TZ3000_3n2minvf",
     "model": "TS0004",
     "in_clusters": [
@@ -822,6 +826,7 @@
     "endpoint": 2,
     "firmware": null,
     "scan_count": 1,
+    "last_seen": "2026-07-22T16:17:40.378Z",
     "manufacturer": "_TZ3000_3n2minvf",
     "model": "TS0004",
     "in_clusters": [
@@ -920,6 +925,7 @@
     "endpoint": 3,
     "firmware": null,
     "scan_count": 1,
+    "last_seen": "2026-07-22T16:18:53.391Z",
     "manufacturer": "_TZ3000_3n2minvf",
     "model": "TS0004",
     "in_clusters": [
@@ -1018,6 +1024,7 @@
     "endpoint": 4,
     "firmware": null,
     "scan_count": 1,
+    "last_seen": "2026-07-22T16:19:56.099Z",
     "manufacturer": "_TZ3000_3n2minvf",
     "model": "TS0004",
     "in_clusters": [
@@ -1116,6 +1123,7 @@
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
+    "last_seen": "2026-07-22T16:25:59.228Z",
     "manufacturer": "_TZ3000_46t1rvdu",
     "model": "TS0001",
     "in_clusters": [
@@ -1444,6 +1452,7 @@
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
+    "last_seen": "2026-07-22T15:45:04.039Z",
     "manufacturer": "_TZ3000_92chsky7",
     "model": "TS110F",
     "in_clusters": [
@@ -1646,6 +1655,7 @@
     "endpoint": 2,
     "firmware": null,
     "scan_count": 1,
+    "last_seen": "2026-07-22T15:46:50.734Z",
     "manufacturer": "_TZ3000_92chsky7",
     "model": "TS110F",
     "in_clusters": [
@@ -1762,6 +1772,7 @@
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
+    "last_seen": "2026-07-22T16:11:41.234Z",
     "manufacturer": "_TZ3000_ltt60asa",
     "model": "TS0004",
     "in_clusters": [
@@ -2014,6 +2025,7 @@
     "endpoint": 2,
     "firmware": null,
     "scan_count": 1,
+    "last_seen": "2026-07-22T16:13:22.004Z",
     "manufacturer": "_TZ3000_ltt60asa",
     "model": "TS0004",
     "in_clusters": [
@@ -2125,6 +2137,7 @@
     "endpoint": 3,
     "firmware": null,
     "scan_count": 1,
+    "last_seen": "2026-07-22T16:14:14.159Z",
     "manufacturer": "_TZ3000_ltt60asa",
     "model": "TS0004",
     "in_clusters": [
@@ -2236,6 +2249,7 @@
     "endpoint": 4,
     "firmware": null,
     "scan_count": 1,
+    "last_seen": "2026-07-22T16:15:18.073Z",
     "manufacturer": "_TZ3000_ltt60asa",
     "model": "TS0004",
     "in_clusters": [
@@ -2347,6 +2361,7 @@
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
+    "last_seen": "2026-07-22T16:22:07.065Z",
     "manufacturer": "AwoX",
     "model": "TLSR82xx",
     "in_clusters": [
@@ -2755,6 +2770,7 @@
     "endpoint": 1,
     "firmware": "1.0.002",
     "scan_count": 1,
+    "last_seen": "2026-07-22T15:02:38.502Z",
     "manufacturer": "IKEA of Sweden",
     "model": "ASKVADER on/off switch",
     "in_clusters": [
@@ -3288,6 +3304,7 @@
     "endpoint": 1,
     "firmware": "1.0.7",
     "scan_count": 1,
+    "last_seen": "2026-07-22T14:43:17.828Z",
     "manufacturer": "IKEA of Sweden",
     "model": "BADRING Water Leakage Sensor",
     "in_clusters": [
@@ -3631,6 +3648,7 @@
     "endpoint": 1,
     "firmware": "2.4.45",
     "scan_count": 1,
+    "last_seen": "2026-07-22T14:46:06.622Z",
     "manufacturer": "IKEA of Sweden",
     "model": "INSPELNING Smart plug",
     "in_clusters": [
@@ -4265,6 +4283,7 @@
     "endpoint": 1,
     "firmware": "1.0.34",
     "scan_count": 1,
+    "last_seen": "2026-07-22T15:54:02.683Z",
     "manufacturer": "IKEA of Sweden",
     "model": "JETSTROM 3030 wall",
     "in_clusters": [
@@ -5172,6 +5191,7 @@
     "endpoint": 1,
     "firmware": "2.3.087",
     "scan_count": 1,
+    "last_seen": "2026-07-22T16:10:05.256Z",
     "manufacturer": "IKEA of Sweden",
     "model": "LEPTITER Recessed spot light",
     "in_clusters": [
@@ -5931,6 +5951,7 @@
     "endpoint": 1,
     "firmware": "1.1.10",
     "scan_count": 1,
+    "last_seen": "2026-07-22T14:39:36.460Z",
     "manufacturer": "IKEA of Sweden",
     "model": "ORMANAS LED Strip",
     "in_clusters": [
@@ -6776,6 +6797,7 @@
     "endpoint": 2,
     "firmware": "1.0.19",
     "scan_count": 1,
+    "last_seen": "2026-07-22T14:48:06.967Z",
     "manufacturer": "IKEA of Sweden",
     "model": "PARASOLL Door/Window Sensor",
     "in_clusters": [
@@ -6978,6 +7000,7 @@
     "endpoint": 1,
     "firmware": "1.0.021",
     "scan_count": 1,
+    "last_seen": "2026-07-22T15:07:15.746Z",
     "manufacturer": "IKEA of Sweden",
     "model": "SILVERGLANS IP44 LED driver",
     "in_clusters": [
@@ -7516,6 +7539,7 @@
     "endpoint": 1,
     "firmware": "1.1.001",
     "scan_count": 1,
+    "last_seen": "2026-07-22T15:16:44.546Z",
     "manufacturer": "IKEA of Sweden",
     "model": "STARKVIND Air purifier",
     "in_clusters": [
@@ -7924,6 +7948,7 @@
     "endpoint": 1,
     "firmware": "1.1.7",
     "scan_count": 1,
+    "last_seen": "2026-07-22T15:04:00.311Z",
     "manufacturer": "IKEA of Sweden",
     "model": "STOFTMOLN ceiling/wall lamp WW24",
     "in_clusters": [
@@ -8511,6 +8536,7 @@
     "endpoint": 1,
     "firmware": "1.0.021",
     "scan_count": 1,
+    "last_seen": "2026-07-22T15:14:58.467Z",
     "manufacturer": "IKEA of Sweden",
     "model": "TRADFRI bulb E14 CWS 470lm",
     "in_clusters": [
@@ -9614,6 +9640,7 @@
     "endpoint": 1,
     "firmware": "2.3.087",
     "scan_count": 1,
+    "last_seen": "2026-07-22T16:03:20.780Z",
     "manufacturer": "IKEA of Sweden",
     "model": "TRADFRI bulb E14 WS 470lm",
     "in_clusters": [
@@ -10360,6 +10387,7 @@
     "endpoint": 1,
     "firmware": "1.0.021",
     "scan_count": 1,
+    "last_seen": "2026-07-22T15:18:41.795Z",
     "manufacturer": "IKEA of Sweden",
     "model": "TRADFRI bulb E27 CWS 806lm",
     "in_clusters": [
@@ -11463,6 +11491,7 @@
     "endpoint": 1,
     "firmware": "2.3.093",
     "scan_count": 1,
+    "last_seen": "2026-07-22T14:57:30.739Z",
     "manufacturer": "IKEA of Sweden",
     "model": "TRADFRI bulb E27 CWS opal 600lm",
     "in_clusters": [
@@ -12250,6 +12279,7 @@
     "endpoint": 1,
     "firmware": "1.0.021",
     "scan_count": 1,
+    "last_seen": "2026-07-22T15:12:25.609Z",
     "manufacturer": "IKEA of Sweden",
     "model": "TRADFRI bulb GU10 CWS 345lm",
     "in_clusters": [
@@ -13353,6 +13383,7 @@
     "endpoint": 1,
     "firmware": "2.3.095",
     "scan_count": 1,
+    "last_seen": "2026-07-22T14:59:23.493Z",
     "manufacturer": "IKEA of Sweden",
     "model": "TRADFRI bulb GU10 WS 400lm",
     "in_clusters": [
@@ -14110,6 +14141,7 @@
     "endpoint": 1,
     "firmware": "1.0.42",
     "scan_count": 1,
+    "last_seen": "2026-07-22T16:01:35.014Z",
     "manufacturer": "IKEA of Sweden",
     "model": "\u001aTRADFRI bulb GU10 WW 345lm8",
     "in_clusters": [
@@ -14703,6 +14735,7 @@
     "endpoint": 1,
     "firmware": "2.3.089",
     "scan_count": 1,
+    "last_seen": "2026-07-22T15:09:29.283Z",
     "manufacturer": "IKEA of Sweden",
     "model": "TRADFRI control outlet",
     "in_clusters": [
@@ -15132,6 +15165,7 @@
     "endpoint": 1,
     "firmware": "2.3.086",
     "scan_count": 1,
+    "last_seen": "2026-07-22T15:00:54.348Z",
     "manufacturer": "IKEA of Sweden",
     "model": "TRADFRI Signal Repeater",
     "in_clusters": [
@@ -15393,6 +15427,7 @@
     "endpoint": 1,
     "firmware": "1.0.012",
     "scan_count": 1,
+    "last_seen": "2026-07-22T14:34:50.720Z",
     "manufacturer": "IKEA of Sweden",
     "model": "TRADFRIbulbE27WSglobeopal1055lm",
     "in_clusters": [
@@ -16143,6 +16178,7 @@
     "endpoint": 1,
     "firmware": "24.4.13",
     "scan_count": 1,
+    "last_seen": "2026-07-22T15:57:49.812Z",
     "manufacturer": "IKEA of Sweden",
     "model": "TREDANSEN block-out cellul blind",
     "in_clusters": [
@@ -16701,6 +16737,7 @@
     "endpoint": 1,
     "firmware": "2.4.25",
     "scan_count": 1,
+    "last_seen": "2026-07-22T16:04:53.339Z",
     "manufacturer": "IKEA of Sweden",
     "model": "TRETAKT Smart plug",
     "in_clusters": [
@@ -17987,6 +18024,7 @@
     "endpoint": 1,
     "firmware": "1.0.4",
     "scan_count": 1,
+    "last_seen": "2026-07-21T22:37:03.821Z",
     "manufacturer": "SONOFF",
     "model": "MINI-ZB2GS-L",
     "in_clusters": [
@@ -18446,6 +18484,7 @@
     "endpoint": 1,
     "firmware": "1.0.7",
     "scan_count": 1,
+    "last_seen": "2026-07-21T22:35:00.986Z",
     "manufacturer": "SONOFF",
     "model": "MINI-ZB2GS",
     "in_clusters": [
@@ -18801,6 +18840,7 @@
     "endpoint": 1,
     "firmware": "1.0.5",
     "scan_count": 1,
+    "last_seen": "2026-07-21T21:45:21.008Z",
     "manufacturer": "SONOFF",
     "model": "MINI-ZBDIM",
     "in_clusters": [
@@ -19413,6 +19453,7 @@
     "endpoint": 1,
     "firmware": "1.0.6",
     "scan_count": 1,
+    "last_seen": "2026-07-21T22:28:24.652Z",
     "manufacturer": "SONOFF",
     "model": "ZBM5-1C-80/86",
     "in_clusters": [
@@ -19855,6 +19896,7 @@
     "endpoint": 1,
     "firmware": "1.0.6",
     "scan_count": 1,
+    "last_seen": "2026-07-21T22:29:56.889Z",
     "manufacturer": "SONOFF",
     "model": "ZBM5-2C-80/86",
     "in_clusters": [
@@ -20297,6 +20339,7 @@
     "endpoint": 1,
     "firmware": "1.0.6",
     "scan_count": 1,
+    "last_seen": "2026-07-21T22:31:41.940Z",
     "manufacturer": "SONOFF",
     "model": "ZBM5-3C-80/86",
     "in_clusters": [
@@ -20739,6 +20782,7 @@
     "endpoint": 1,
     "firmware": "1.0.14",
     "scan_count": 1,
+    "last_seen": "2026-07-21T22:26:27.019Z",
     "manufacturer": "SONOFF",
     "model": "ZBMINIL2",
     "in_clusters": [
@@ -20961,6 +21005,7 @@
     "endpoint": 1,
     "firmware": "1.0.8",
     "scan_count": 1,
+    "last_seen": "2026-07-21T22:33:17.039Z",
     "manufacturer": "SONOFF",
     "model": "ZBMINIR2",
     "in_clusters": [

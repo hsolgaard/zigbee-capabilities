@@ -555,6 +555,7 @@
       "endpoint": 1,
       "firmware": "2.4.25",
       "scan_count": 1,
+      "last_seen": "2026-07-22T16:04:53.339Z",
       "manufacturer": "IKEA of Sweden",
       "model": "TRETAKT Smart plug",
       "in_clusters": [

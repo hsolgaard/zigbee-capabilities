@@ -650,6 +650,7 @@
       "endpoint": 1,
       "firmware": null,
       "scan_count": 1,
+      "last_seen": "2026-07-22T16:11:41.234Z",
       "manufacturer": "_TZ3000_ltt60asa",
       "model": "TS0004",
       "in_clusters": [
@@ -900,6 +901,7 @@
       "endpoint": 2,
       "firmware": null,
       "scan_count": 1,
+      "last_seen": "2026-07-22T16:13:22.004Z",
       "manufacturer": "_TZ3000_ltt60asa",
       "model": "TS0004",
       "in_clusters": [
@@ -1009,6 +1011,7 @@
       "endpoint": 3,
       "firmware": null,
       "scan_count": 1,
+      "last_seen": "2026-07-22T16:14:14.159Z",
       "manufacturer": "_TZ3000_ltt60asa",
       "model": "TS0004",
       "in_clusters": [
@@ -1118,6 +1121,7 @@
       "endpoint": 4,
       "firmware": null,
       "scan_count": 1,
+      "last_seen": "2026-07-22T16:15:18.073Z",
       "manufacturer": "_TZ3000_ltt60asa",
       "model": "TS0004",
       "in_clusters": [

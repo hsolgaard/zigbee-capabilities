@@ -840,6 +840,7 @@
       "endpoint": 1,
       "firmware": "1.1.10",
       "scan_count": 1,
+      "last_seen": "2026-07-22T14:39:36.460Z",
       "manufacturer": "IKEA of Sweden",
       "model": "ORMANAS LED Strip",
       "in_clusters": [

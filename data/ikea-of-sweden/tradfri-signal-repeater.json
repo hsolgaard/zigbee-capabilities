@@ -314,6 +314,7 @@
       "endpoint": 1,
       "firmware": "2.3.086",
       "scan_count": 1,
+      "last_seen": "2026-07-22T15:00:54.348Z",
       "manufacturer": "IKEA of Sweden",
       "model": "TRADFRI Signal Repeater",
       "in_clusters": [

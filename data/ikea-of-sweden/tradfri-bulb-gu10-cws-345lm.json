@@ -1097,6 +1097,7 @@
       "endpoint": 1,
       "firmware": "1.0.021",
       "scan_count": 1,
+      "last_seen": "2026-07-22T15:12:25.609Z",
       "manufacturer": "IKEA of Sweden",
       "model": "TRADFRI bulb GU10 CWS 345lm",
       "in_clusters": [
