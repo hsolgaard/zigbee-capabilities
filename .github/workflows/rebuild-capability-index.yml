@@ -125,10 +125,17 @@ jobs:
                   };
                 });
 
+                const lastSeen = matching
+                  .map((o) => (o.provenance || {}).submitted_at)
+                  .filter(Boolean)
+                  .sort()
+                  .pop() || null;
+
                 capabilities[key] = {
                   endpoint: (first.endpoint || {}).id,
                   firmware: (first.identity || {}).sw_build_id || null,
                   scan_count: matching.length,
+                  last_seen: lastSeen,
                   manufacturer: first.manufacturer,
                   model: first.model,
                   in_clusters: [
