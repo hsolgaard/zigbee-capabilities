@@ -229,10 +229,24 @@ jobs:
                 };
               });
 
+              // Most recent submission timestamp across every observation
+              // backing this endpoint+firmware — the Capability Explorer
+              // tab's "last seen" evidence line. Sorts fine as plain ISO
+              // 8601 strings; missing timestamps (shouldn't happen for
+              // anything submitted through the card, but older
+              // hand-written entries might lack one) are just excluded
+              // rather than treated as "never".
+              const lastSeen = matching
+                .map((o) => (o.provenance || {}).submitted_at)
+                .filter(Boolean)
+                .sort()
+                .pop() || null;
+
               capabilities[key] = {
                 endpoint: (first.endpoint || {}).id,
                 firmware: (first.identity || {}).sw_build_id || null,
                 scan_count: matching.length,
+                last_seen: lastSeen,
                 manufacturer: first.manufacturer,
                 model: first.model,
                 in_clusters: [
