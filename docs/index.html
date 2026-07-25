@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zigbee Capabilities — community device capability database</title>
+<meta name="description" content="Find out what a Zigbee device can actually do, confirmed by real scans shared by real users — not manufacturer marketing or trial and error.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <h1>Zigbee Capabilities</h1>
+    <p class="tagline">Find out what a Zigbee device can actually do — confirmed by real scans shared by real users, not manufacturer marketing or trial and error.</p>
+    <p class="stats" id="stats">Loading the community database&hellip;</p>
+    <nav class="site-nav">
+      <a href="https://github.com/hsolgaard/zigbee-capabilities" target="_blank" rel="noopener">Database on GitHub</a>
+      <a href="https://github.com/hsolgaard/zha-bindings-manager" target="_blank" rel="noopener">ZHA Bindings Manager (Home Assistant card)</a>
+      <a href="#contribute">Contribute a scan</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="discoveries-section">
+    <div id="discoveries"></div>
+  </section>
+
+  <section id="search-section">
+    <h2>Search the database</h2>
+    <p class="hint">Try one of these, or filter by exact manufacturer, model, cluster, command, attribute, or firmware — options are populated from what's actually in the database.</p>
+    <div class="chip-row" id="search-examples"></div>
+    <form class="filter-form" id="search-form">
+      <select id="f-manufacturer" data-field="manufacturer"></select>
+      <select id="f-model" data-field="model"></select>
+      <select id="f-cluster" data-field="cluster"></select>
+      <select id="f-command" data-field="command"></select>
+      <select id="f-attribute" data-field="attribute"></select>
+      <select id="f-firmware" data-field="firmware"></select>
+    </form>
+    <p class="hint" id="search-count"></p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Manufacturer</th>
+            <th>Model</th>
+            <th>Firmware</th>
+            <th>Endpoint</th>
+            <th>Confirmed commands</th>
+            <th>Not reported</th>
+            <th>Scans</th>
+            <th>Confidence</th>
+          </tr>
+        </thead>
+        <tbody id="results-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="compare-section">
+    <h2>Compare firmware</h2>
+    <p class="hint">See exactly what changed between two firmware versions of the same device, command by command.</p>
+    <div class="compare-form">
+      <label>Manufacturer <select id="c-manufacturer"></select></label>
+      <label>Model <select id="c-model"></select></label>
+      <label>Firmware A <select id="c-fwa"></select></label>
+      <label>Firmware B <select id="c-fwb"></select></label>
+    </div>
+    <div id="compare-result"></div>
+  </section>
+
+  <section id="contribute">
+    <h2>Contribute a scan</h2>
+    <p>This database only grows through real scans shared by real Home Assistant/ZHA users — there's no other way to add data to it.</p>
+    <p>The easiest way to contribute is the <a href="https://github.com/hsolgaard/zha-bindings-manager" target="_blank" rel="noopener">ZHA Bindings Manager</a> Lovelace card: open a device's exploded view, select <strong>Check supported commands</strong>, then <strong>Share this scan</strong>. The card prepares a pre-filled GitHub issue for you to review and submit under your own GitHub account — nothing is sent automatically, and the shared record never includes your IEEE address, entity IDs, Home Assistant areas, or binding data.</p>
+    <p>Prefer not to use the card? See the <a href="https://github.com/hsolgaard/zigbee-capabilities#readme" target="_blank" rel="noopener">database repo's own README</a> for the raw submission format and schema.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Data is community-submitted and openly licensed — see the <a href="https://github.com/hsolgaard/zigbee-capabilities" target="_blank" rel="noopener">zigbee-capabilities</a> repository for the full dataset, schema, and license.</p>
+    <p>Coverage is limited to devices someone has scanned and shared. A missing or empty result means nobody has confirmed it yet, not that a device is incapable of something.</p>
+    <p>Not affiliated with the Connectivity Standards Alliance (Zigbee), Home Assistant, or any device manufacturer.</p>
+  </div>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
