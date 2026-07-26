@@ -53,10 +53,45 @@ export const CAPABILITY_OUTCOME_PHRASE = {
   0x0702: "Energy metering",
   0x0b01: "Meter identification",
   0x0b04: "Electrical measurement",
+  // 0xFC00-0xFFFF is the manufacturer-specific cluster range, so IDs in it
+  // are normally NOT safe to map by number alone — the same numeric ID gets
+  // reused by unrelated vendors for unrelated purposes (see
+  // MANUFACTURER_SPECIFIC_CLUSTER_NAMES below for those). 0xFC57 is the one
+  // documented exception: it's the semi-standardized "Works with all Hubs"
+  // (WWAH) cluster, used consistently across multiple vendors (confirmed on
+  // IKEA devices and referenced generally for hub-compatibility signaling,
+  // e.g. when a device connects to Amazon Alexa/Echo) rather than being
+  // vendor-private — verified via zigpy/zigpy#823 and community device
+  // handler sources, not guessed from the hex ID alone.
+  0xfc57: "Works with all hubs (WWAH)",
 };
-export function capabilityOutcomePhrase(id, fallbackName) {
+
+// Manufacturer-specific cluster names, keyed by a lowercased/trimmed
+// manufacturer string then by cluster ID — deliberately separate from
+// CAPABILITY_OUTCOME_PHRASE above because clusters in the 0xFC00-0xFFFF
+// range are vendor-private by convention: the same numeric ID can mean
+// completely unrelated things depending on which manufacturer implemented
+// it, so a global id-only map risks confidently mislabeling one vendor's
+// cluster with another's meaning — worse than the honest "unidentified"
+// fallback it would replace. Each entry here is sourced from that vendor's
+// actual quirk implementation, not inferred from the hex ID.
+// 0xFC11 verified against zigpy/zha-device-handlers'
+// zhaquirks/sonoff/zbminir2.py (SonoffCluster): attribute-only, no
+// commands — external_trigger_mode, detach_relay, turbo_mode, network_led.
+export const MANUFACTURER_SPECIFIC_CLUSTER_NAMES = {
+  sonoff: {
+    0xfc11: "Device settings (Sonoff)",
+  },
+};
+
+export function capabilityOutcomePhrase(id, fallbackName, manufacturer) {
   const n = Number(id);
+  const vendorKey = (manufacturer || "").toString().trim().toLowerCase();
+  const vendorMap = MANUFACTURER_SPECIFIC_CLUSTER_NAMES[vendorKey];
   return (
-    CAPABILITY_OUTCOME_PHRASE[n] || fallbackName || `Cluster 0x${n.toString(16).padStart(4, "0")}`
+    (vendorMap && vendorMap[n]) ||
+    CAPABILITY_OUTCOME_PHRASE[n] ||
+    fallbackName ||
+    `Cluster 0x${n.toString(16).padStart(4, "0")}`
   );
 }

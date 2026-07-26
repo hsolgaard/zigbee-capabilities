@@ -12,13 +12,12 @@
 import {
   fetchCapabilityIndex,
   searchIndex,
-  confirmedCommands,
-  notReportedCommands,
-  confidenceLabel,
+  groupSearchResultsByDevice,
   groupCapabilitiesByOutcome,
   firmwareVersions,
   diffFirmware,
   interestingDiscoveries,
+  confidenceStars,
 } from "./capexplorer.js";
 
 function escapeHtml(s) {
@@ -31,13 +30,15 @@ function escapeHtml(s) {
   }[c]));
 }
 
-function confidenceClass(label) {
-  return label.toLowerCase().replace(/[^a-z]+/g, "-").replace(/^-+|-+$/g, "");
+function formatDate(iso) {
+  const d = new Date(iso);
+  if (isNaN(d.getTime())) return iso;
+  return d.toLocaleDateString(undefined, { month: "short", year: "numeric" });
 }
 
 let INDEX = [];
 const search = { manufacturer: "", model: "", cluster: "", command: "", attribute: "", firmware: "" };
-const expandedRows = new Set(); // keys are `${manufacturer}|${model}|${firmware}|${endpoint}`
+const expandedDevices = new Set(); // keys are `${manufacturer_slug}|${model_slug}`
 const compare = { manufacturer: "", model: "", firmwareA: "", firmwareB: "" };
 
 async function init() {
@@ -52,23 +53,31 @@ async function init() {
   const uniqueDevices = new Set(INDEX.map((e) => `${e.manufacturer_slug}|${e.model_slug}`));
   statsEl.textContent = `${uniqueDevices.size} device${uniqueDevices.size === 1 ? "" : "s"} confirmed across ${
     INDEX.length
-  } endpoint/firmware record${INDEX.length === 1 ? "" : "s"} — built entirely from scans shared by the community.`;
+  } firmware observation${INDEX.length === 1 ? "" : "s"} — built entirely from scans shared by the community.`;
 
   renderDiscoveries();
   buildSearch();
   buildCompare();
 }
 
-// ---- Interesting Discoveries ----
+// ---- Community heartbeat (formerly "Interesting so far") ----
+// Real feedback on the card's identical panel: leading with a fact like
+// "newest contribution: X on firmware Y" doesn't read as interesting to
+// someone researching a specific device — it's an artifact of how the
+// highlight was computed, not a message aimed at the reader. The lead
+// sentence always renders (frames this as a living, community-built
+// resource); the conservatively-gated specific highlights (see
+// interestingDiscoveries' own doc comment) still follow underneath when
+// there are any worth showing.
 function renderDiscoveries() {
   const el = document.getElementById("discoveries");
   const discoveries = interestingDiscoveries(INDEX);
-  el.innerHTML = discoveries.length
-    ? `<div class="discoveries">
-        <div class="discoveries-label">Interesting so far</div>
-        <ul>${discoveries.map((d) => `<li>${escapeHtml(d.text)}</li>`).join("")}</ul>
-      </div>`
-    : "";
+  el.innerHTML = `<div class="discoveries">
+      <div class="discoveries-label">Community heartbeat</div>
+      <p class="discoveries-lead">This dataset is entirely community-built. Every scan shared by the community
+        adds real evidence for others deciding whether to buy or configure a device.</p>
+      ${discoveries.length ? `<ul>${discoveries.map((d) => `<li>${escapeHtml(d.text)}</li>`).join("")}</ul>` : ""}
+    </div>`;
 }
 
 // ---- Search ----
@@ -101,28 +110,71 @@ function facetValues(field) {
   return [...set].sort((a, b) => a.localeCompare(b));
 }
 
-function searchExamples() {
+// Grouped Quick Search chips (Lighting / Sensors / Networking) — mirrors
+// the card's own _capExpSearchExampleGroups(), including its two
+// deliberate deviations from a literally-requested example list: "Motion
+// detection" and "Occupancy sensing" are combined into one chip (both
+// would otherwise resolve to the identical Occupancy Sensing cluster
+// filter, which would read as broken, not helpful), and "Attribute
+// reporting" isn't included (no single facet value means "reports
+// something" in general — every reporting cluster reports its own
+// specific attribute — so a chip for it would need a new kind of search
+// facet, out of scope for a wording/UX pass).
+function searchExampleGroups() {
   const resolve = (needle) => {
     const opts = facetValues("cluster");
     return opts.find((v) => v.toLowerCase().includes(needle)) || "";
   };
-  return [
-    { label: "Reports occupancy", field: "cluster", value: resolve("occupancy") },
-    { label: "Reports illuminance", field: "cluster", value: resolve("illuminance") },
-    { label: "Supports on/off control", field: "cluster", value: resolve("on/off") },
-    { label: "Supports dimming", field: "cluster", value: resolve("level") },
-    { label: "Supports color control", field: "cluster", value: resolve("color") },
-  ].filter((ex) => ex.value);
+  const groups = [
+    {
+      category: "Lighting",
+      examples: [
+        { label: "Switch things on/off", field: "cluster", value: resolve("on/off") },
+        { label: "Direct dimming", field: "cluster", value: resolve("level") },
+        { label: "Scene control", field: "cluster", value: resolve("scene") },
+        { label: "Color control", field: "cluster", value: resolve("color") },
+      ],
+    },
+    {
+      category: "Sensors",
+      examples: [
+        { label: "Motion / occupancy sensing", field: "cluster", value: resolve("occupancy") },
+        { label: "Reports illuminance", field: "cluster", value: resolve("illuminance") },
+        { label: "Security / contact sensing (IAS Zone)", field: "cluster", value: resolve("ias zone") },
+        { label: "Temperature monitoring", field: "cluster", value: resolve("temperature") },
+        { label: "Humidity monitoring", field: "cluster", value: resolve("humidity") },
+        { label: "Energy monitoring", field: "cluster", value: resolve("metering") },
+      ],
+    },
+    {
+      category: "Networking",
+      examples: [
+        { label: "Group control", field: "cluster", value: resolve("groups") },
+        { label: "OTA support", field: "cluster", value: resolve("ota") },
+      ],
+    },
+  ];
+  return groups.map((g) => ({ ...g, examples: g.examples.filter((ex) => ex.value) })).filter((g) => g.examples.length);
 }
 
 function buildSearch() {
   const examplesEl = document.getElementById("search-examples");
-  examplesEl.innerHTML = searchExamples()
+  examplesEl.innerHTML = searchExampleGroups()
     .map(
-      (ex) =>
-        `<button type="button" class="chip" data-field="${escapeHtml(ex.field)}" data-value="${escapeHtml(
-          ex.value
-        )}">${escapeHtml(ex.label)}</button>`
+      (g) => `
+      <div class="search-example-group">
+        <div class="search-example-category">${escapeHtml(g.category)}</div>
+        <div class="chip-row">
+          ${g.examples
+            .map(
+              (ex) =>
+                `<button type="button" class="chip" data-field="${escapeHtml(ex.field)}" data-value="${escapeHtml(
+                  ex.value
+                )}">${escapeHtml(ex.label)}</button>`
+            )
+            .join("")}
+        </div>
+      </div>`
     )
     .join("");
   examplesEl.querySelectorAll(".chip").forEach((btn) => {
@@ -130,6 +182,7 @@ function buildSearch() {
       SEARCH_FIELDS.forEach((f) => (search[f] = ""));
       search[btn.dataset.field] = btn.dataset.value;
       syncSearchSelects();
+      document.querySelector(".advanced-filters").open = true;
       runSearch();
     });
   });
@@ -149,11 +202,11 @@ function buildSearch() {
   });
 
   document.getElementById("results-body").addEventListener("click", (e) => {
-    const row = e.target.closest("tr.result-row");
-    if (!row) return;
-    const key = row.dataset.key;
-    if (expandedRows.has(key)) expandedRows.delete(key);
-    else expandedRows.add(key);
+    const toggle = e.target.closest(".techtoggle");
+    if (!toggle) return;
+    const key = toggle.dataset.key;
+    if (expandedDevices.has(key)) expandedDevices.delete(key);
+    else expandedDevices.add(key);
     runSearch();
   });
 
@@ -167,58 +220,102 @@ function syncSearchSelects() {
   });
 }
 
-function entryKey(entry) {
-  return `${entry.manufacturer}|${entry.model}|${entry.firmware}|${entry.endpoint}`;
+// Renders confidenceStars()' rating as a filled/empty star string, or a
+// distinct "Conflicting" callout when the community's own scans disagree
+// with each other — see confidenceStars' own doc comment (mirrors the
+// card's _capExpStarsHtml).
+function starsHtml(rating) {
+  if (rating.conflicting) {
+    return `<span class="trust-stars trust-conflict" title="Community confidence: the community's own scans disagree with each other for this device — see the technical detail below">⚠ Conflicting</span>`;
+  }
+  const filled = "★".repeat(rating.stars);
+  const empty = "☆".repeat(5 - rating.stars);
+  return `<span class="trust-stars" title="Community confidence: ${rating.stars}/5, based on ${rating.totalScans} scan${
+    rating.totalScans === 1 ? "" : "s"
+  }">${filled}${empty}</span>`;
 }
 
+// Find a Device — one result card per matched manufacturer+model instead
+// of one row per firmware entry (see groupSearchResultsByDevice's own doc
+// comment for why Community confidence/Good for reflect the whole device,
+// not just the entries that happened to match this particular search).
 function runSearch() {
-  const tbody = document.getElementById("results-body");
+  const resultsEl = document.getElementById("results-body");
   const countEl = document.getElementById("search-count");
-  const all = searchIndex(INDEX, search);
-  const results = all.slice(0, 200);
+  const matched = searchIndex(INDEX, search);
+  const devices = groupSearchResultsByDevice(matched, INDEX);
+  const shown = devices.slice(0, 100);
 
-  countEl.textContent =
-    all.length > 200
-      ? `Showing first 200 of ${all.length} matching records — narrow your search to see more.`
-      : `${all.length} matching record${all.length === 1 ? "" : "s"}`;
-
-  if (!results.length) {
-    tbody.innerHTML = `<tr><td colspan="9" class="muted">No matching records — that's likely a coverage gap, not proof this device can't do it. Nobody's scanned and shared it yet.</td></tr>`;
+  if (!devices.length) {
+    countEl.textContent = "";
+    resultsEl.innerHTML = `<div class="empty-search">
+      <p>No community observations currently match this search.</p>
+      <p class="muted">This does not necessarily mean the capability is unsupported — it simply means nobody
+        has submitted evidence for it yet.</p>
+      <a class="btn" href="#contribute">Contribute a scan</a>
+    </div>`;
     return;
   }
 
-  tbody.innerHTML = results
-    .map((entry) => {
-      const key = entryKey(entry);
-      const cmds = confirmedCommands(entry).map((c) => c.name);
-      const notReported = notReportedCommands(entry).map((c) => c.name);
-      const confidence = confidenceLabel(entry);
-      const expanded = expandedRows.has(key);
-      const row = `<tr class="result-row" data-key="${escapeHtml(key)}">
-        <td>${expanded ? "▾" : "▸"}</td>
-        <td>${escapeHtml(entry.manufacturer || "—")}</td>
-        <td>${escapeHtml(entry.model || "—")}</td>
-        <td>${escapeHtml(entry.firmware || "unknown")}</td>
-        <td>${entry.endpoint ?? "—"}</td>
-        <td>${cmds.length ? escapeHtml(cmds.join(", ")) : `<span class="muted">none confirmed</span>`}</td>
-        <td>${notReported.length ? escapeHtml(notReported.join(", ")) : `<span class="muted">—</span>`}</td>
-        <td>${entry.scan_count || 0}</td>
-        <td><span class="badge badge-${confidenceClass(confidence)}">${escapeHtml(confidence)}</span></td>
-      </tr>`;
-      const detail = expanded
-        ? `<tr class="detail-row" data-key="${escapeHtml(key)}"><td colspan="9">${capabilityOutcomesHtml(
-            entry
-          )}</td></tr>`
-        : "";
-      return row + detail;
+  countEl.textContent =
+    devices.length > 100
+      ? `Showing the top 100 of ${devices.length} matching devices, ranked by community confidence — narrow your search to see more.`
+      : `${devices.length} matching device${devices.length === 1 ? "" : "s"}, ranked by community confidence`;
+
+  resultsEl.innerHTML = shown
+    .map((r) => {
+      const key = `${r.manufacturerSlug}|${r.modelSlug}`;
+      const expanded = expandedDevices.has(key);
+      return `
+        <div class="device-card">
+          <div class="device-card-header">${escapeHtml(r.manufacturer || "—")} ${escapeHtml(r.model || "—")}</div>
+          <div class="trust-panel">
+            ${starsHtml(r.rating)}
+            <div class="trust-text">
+              <span class="trust-label">Community confidence</span>
+              <div class="trust-detail muted">
+                ${r.firmwareCount} firmware version${r.firmwareCount === 1 ? "" : "s"} ·
+                ${r.totalScans} observation${r.totalScans === 1 ? "" : "s"}${
+        r.lastSeen ? ` · last confirmed ${escapeHtml(formatDate(r.lastSeen))}` : ""
+      }
+              </div>
+            </div>
+          </div>
+          ${goodForHtml(r.goodFor)}
+          <div class="techtoggle" data-key="${escapeHtml(key)}">
+            ${expanded ? "Hide capabilities ▾" : "View capabilities →"}
+          </div>
+          ${expanded ? `<div class="tech-panel">${capabilitiesGroupsHtml(r.entries)}</div>` : ""}
+        </div>`;
     })
     .join("");
 }
 
-function capabilityOutcomesHtml(entry) {
-  const groups = groupCapabilitiesByOutcome([entry]);
-  if (!groups.length) return `<p class="muted">No confirmed commands or reporting clusters recorded for this record.</p>`;
-  return `<div class="cap-groups">${groups
+function goodForHtml(goodFor) {
+  if (!goodFor.length) return "";
+  return `<div class="cap-goodfor">
+       <span class="cap-group-label">Good for</span>
+       <div class="cap-tags">${goodFor
+         .map(
+           (t) =>
+             `<span class="tag"${
+               t.exactFirmware ? "" : ` title="Confirmed on a different firmware than this device's most recent record — likely still applies, but not verified on that exact version."`
+             }>${escapeHtml(t.label)}${t.exactFirmware ? "" : " *"}</span>`
+         )
+         .join("")}</div>
+     </div>`;
+}
+
+function capabilitiesGroupsHtml(entries) {
+  const groups = groupCapabilitiesByOutcome(entries);
+  if (!groups.length) return `<p class="muted">No confirmed commands or reporting clusters recorded yet.</p>`;
+  // Same split as the card: a reports-only cluster this card/site can't
+  // put a real name to (raw "Cluster 0xNNNN" fallback) gets combined into
+  // one summary line instead of its own bold heading with nothing under
+  // it, which reads as broken rather than as "reports data."
+  const shown = groups.filter((g) => g.identified || !g.reportsOnly);
+  const unidentifiedEmpty = groups.filter((g) => !g.identified && g.reportsOnly);
+  const groupsHtml = shown
     .map(
       (g) => `
       <div class="cap-group">
@@ -233,11 +330,21 @@ function capabilityOutcomesHtml(entry) {
                     }</span>`
                 )
                 .join("")}</div>`
-            : ""
+            : `<div class="cap-reportsonly muted">Reports data on this cluster — no commands to send.</div>`
         }
       </div>`
     )
-    .join("")}</div>`;
+    .join("");
+  const unidentifiedHtml = unidentifiedEmpty.length
+    ? `<div class="cap-group cap-group-unidentified">
+         <span class="cap-group-label">Other reported clusters</span>
+         <div class="cap-reportsonly muted">Also reports on ${unidentifiedEmpty.length} manufacturer-specific
+           cluster${unidentifiedEmpty.length === 1 ? "" : "s"} this site can't yet put a name to (${unidentifiedEmpty
+        .map((g) => escapeHtml(g.clusterId))
+        .join(", ")}) — no commands confirmed on any of them.</div>
+       </div>`
+    : "";
+  return `<div class="cap-groups">${groupsHtml}${unidentifiedHtml}</div>`;
 }
 
 // ---- Compare firmware ----
