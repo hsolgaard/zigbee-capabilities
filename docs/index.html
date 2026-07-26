@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Zigbee Capabilities — community device capability database</title>
-<meta name="description" content="Find out what a Zigbee device can actually do, confirmed by real scans shared by real users — not manufacturer marketing or trial and error.">
+<meta name="description" content="Discover what Zigbee devices really support — verified from real community scans, not manufacturer claims.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="site-header">
   <div class="wrap">
     <h1>Zigbee Capabilities</h1>
-    <p class="tagline">Find out what a Zigbee device can actually do — confirmed by real scans shared by real users, not manufacturer marketing or trial and error.</p>
+    <p class="tagline">Discover what Zigbee devices really support — verified from real community scans, not manufacturer claims.</p>
     <p class="stats" id="stats">Loading the community database&hellip;</p>
     <nav class="site-nav">
       <a href="https://github.com/hsolgaard/zigbee-capabilities" target="_blank" rel="noopener">Database on GitHub</a>
@@ -27,36 +27,23 @@
   </section>
 
   <section id="search-section">
-    <h2>Search the database</h2>
-    <p class="hint">Try one of these, or filter by exact manufacturer, model, cluster, command, attribute, or firmware — options are populated from what's actually in the database.</p>
-    <div class="chip-row" id="search-examples"></div>
-    <form class="filter-form" id="search-form">
-      <select id="f-manufacturer" data-field="manufacturer"></select>
-      <select id="f-model" data-field="model"></select>
-      <select id="f-cluster" data-field="cluster"></select>
-      <select id="f-command" data-field="command"></select>
-      <select id="f-attribute" data-field="attribute"></select>
-      <select id="f-firmware" data-field="firmware"></select>
-    </form>
+    <h2>Find a device</h2>
+    <p class="hint">Which device should I buy or use for X? Try one of these, or use Advanced filters for exact
+      manufacturer, model, cluster, command, attribute, or firmware matches.</p>
+    <div id="search-examples"></div>
+    <details class="advanced-filters">
+      <summary>Advanced filters</summary>
+      <form class="filter-form" id="search-form">
+        <select id="f-manufacturer" data-field="manufacturer"></select>
+        <select id="f-model" data-field="model"></select>
+        <select id="f-cluster" data-field="cluster"></select>
+        <select id="f-command" data-field="command"></select>
+        <select id="f-attribute" data-field="attribute"></select>
+        <select id="f-firmware" data-field="firmware"></select>
+      </form>
+    </details>
     <p class="hint" id="search-count"></p>
-    <div class="table-scroll">
-      <table>
-        <thead>
-          <tr>
-            <th></th>
-            <th>Manufacturer</th>
-            <th>Model</th>
-            <th>Firmware</th>
-            <th>Endpoint</th>
-            <th>Confirmed commands</th>
-            <th>Not reported</th>
-            <th>Scans</th>
-            <th>Confidence</th>
-          </tr>
-        </thead>
-        <tbody id="results-body"></tbody>
-      </table>
-    </div>
+    <div id="results-body" class="device-list"></div>
   </section>
 
   <section id="compare-section">
