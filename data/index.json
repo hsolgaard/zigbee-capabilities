@@ -20778,6 +20778,18 @@
   },
   {
     "manufacturer_slug": "sonoff",
+    "model_slug": "zbm5-3c-80-86",
+    "firmware": "1.0.6",
+    "scan_count": 1,
+    "last_seen": "2026-07-26T14:39:30.759Z",
+    "manufacturer": "SONOFF",
+    "model": "ZBM5-3C-80/86",
+    "in_clusters": [],
+    "out_clusters": [],
+    "clusters": {}
+  },
+  {
+    "manufacturer_slug": "sonoff",
     "model_slug": "zbminil2",
     "endpoint": 1,
     "firmware": "1.0.14",
