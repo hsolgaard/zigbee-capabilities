@@ -18031,6 +18031,18 @@
     }
   },
   {
+    "manufacturer_slug": "smartwings",
+    "model_slug": "wm25-l-z",
+    "firmware": null,
+    "scan_count": 1,
+    "last_seen": "2026-07-29T05:05:11.365Z",
+    "manufacturer": "Smartwings",
+    "model": "WM25/L-Z",
+    "in_clusters": [],
+    "out_clusters": [],
+    "clusters": {}
+  },
+  {
     "manufacturer_slug": "sonoff",
     "model_slug": "mini-zb2gs-l",
     "endpoint": 1,
