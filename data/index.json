@@ -17256,6 +17256,18 @@
     }
   },
   {
+    "manufacturer_slug": "innr",
+    "model_slug": "sp-224",
+    "firmware": "2.7",
+    "scan_count": 1,
+    "last_seen": "2026-07-29T14:42:56.549Z",
+    "manufacturer": "innr",
+    "model": "SP 224",
+    "in_clusters": [],
+    "out_clusters": [],
+    "clusters": {}
+  },
+  {
     "manufacturer_slug": "unknown",
     "model_slug": "unknown",
     "endpoint": 1,
