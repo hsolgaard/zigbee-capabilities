@@ -17256,14 +17256,6 @@
     }
   },
   {
-
-    "manufacturer_slug": "inovelli",
-    "model_slug": "vzm32-sn",
-    "firmware": "1.02",
-    "scan_count": 1,
-    "last_seen": "2026-07-29T05:11:29.656Z",
-    "manufacturer": "Inovelli",
-    "model": "VZM32-SN",
     "manufacturer_slug": "innr",
     "model_slug": "sp-224",
     "firmware": "2.7",
@@ -17283,6 +17275,18 @@
     "last_seen": "2026-07-29T04:59:52.598Z",
     "manufacturer": "Inovelli",
     "model": "VZM31-SN",
+    "in_clusters": [],
+    "out_clusters": [],
+    "clusters": {}
+  },
+  {
+    "manufacturer_slug": "inovelli",
+    "model_slug": "vzm32-sn",
+    "firmware": "1.02",
+    "scan_count": 1,
+    "last_seen": "2026-07-29T05:11:29.656Z",
+    "manufacturer": "Inovelli",
+    "model": "VZM32-SN",
     "in_clusters": [],
     "out_clusters": [],
     "clusters": {}
