@@ -17256,6 +17256,7 @@
     }
   },
   {
+
     "manufacturer_slug": "inovelli",
     "model_slug": "vzm31-sn",
     "firmware": "3.04",
@@ -17263,6 +17264,13 @@
     "last_seen": "2026-07-29T04:59:52.598Z",
     "manufacturer": "Inovelli",
     "model": "VZM31-SN",
+    "manufacturer_slug": "innr",
+    "model_slug": "sp-224",
+    "firmware": "2.7",
+    "scan_count": 1,
+    "last_seen": "2026-07-29T14:42:56.549Z",
+    "manufacturer": "innr",
+    "model": "SP 224",
     "in_clusters": [],
     "out_clusters": [],
     "clusters": {}
@@ -18029,6 +18037,18 @@
         ]
       }
     }
+  },
+  {
+    "manufacturer_slug": "smartwings",
+    "model_slug": "wm25-l-z",
+    "firmware": null,
+    "scan_count": 1,
+    "last_seen": "2026-07-29T05:05:11.365Z",
+    "manufacturer": "Smartwings",
+    "model": "WM25/L-Z",
+    "in_clusters": [],
+    "out_clusters": [],
+    "clusters": {}
   },
   {
     "manufacturer_slug": "sonoff",
@@ -19458,6 +19478,18 @@
         "attributes_confirmed": []
       }
     }
+  },
+  {
+    "manufacturer_slug": "sonoff",
+    "model_slug": "snzb-06p",
+    "firmware": "1.0.6",
+    "scan_count": 1,
+    "last_seen": "2026-07-29T05:09:58.754Z",
+    "manufacturer": "SONOFF",
+    "model": "SNZB-06P",
+    "in_clusters": [],
+    "out_clusters": [],
+    "clusters": {}
   },
   {
     "manufacturer_slug": "sonoff",
