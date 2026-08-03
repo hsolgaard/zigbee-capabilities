@@ -2765,6 +2765,18 @@
     }
   },
   {
+    "manufacturer_slug": "ewelink",
+    "model_slug": "snzb-04p",
+    "firmware": "2.2.0",
+    "scan_count": 1,
+    "last_seen": "2026-08-03T18:56:41.574Z",
+    "manufacturer": "eWeLink",
+    "model": "SNZB-04P",
+    "in_clusters": [],
+    "out_clusters": [],
+    "clusters": {}
+  },
+  {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "askvader-on-off-switch",
     "endpoint": 1,
