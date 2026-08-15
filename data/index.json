@@ -7020,6 +7020,18 @@
   },
   {
     "manufacturer_slug": "ikea-of-sweden",
+    "model_slug": "rodret-wireless-dimmer",
+    "firmware": "1.0.57",
+    "scan_count": 1,
+    "last_seen": "2026-08-15T20:57:57.899Z",
+    "manufacturer": "IKEA of Sweden",
+    "model": "RODRET wireless dimmer",
+    "in_clusters": [],
+    "out_clusters": [],
+    "clusters": {}
+  },
+  {
+    "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "silverglans-ip44-led-driver",
     "endpoint": 1,
     "firmware": "1.0.021",
