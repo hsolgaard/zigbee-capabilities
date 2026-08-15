@@ -2356,6 +2356,8 @@
     }
   },
   {
+
+  
     "manufacturer_slug": "tz3210-fgwhjm9j",
     "model_slug": "ts011f",
     "firmware": null,
@@ -2367,6 +2369,20 @@
     "out_clusters": [],
     "clusters": {}
   },
+  {
+    "manufacturer_slug": "tz3290-gnl5a6a5xvql7c2a",
+    "model_slug": "ts1201",
+    "firmware": null,
+    "scan_count": 1,
+    "last_seen": "2026-08-15T07:21:14.644Z",
+    "manufacturer": "_TZ3290_gnl5a6a5xvql7c2a",
+    "model": "TS1201",
+    "in_clusters": [],
+    "out_clusters": [],
+    "clusters": {}
+  },
+
+
   {
     "manufacturer_slug": "awox",
     "model_slug": "tlsr82xx",
@@ -7017,6 +7033,18 @@
         ]
       }
     }
+  },
+  {
+    "manufacturer_slug": "ikea-of-sweden",
+    "model_slug": "rodret-wireless-dimmer",
+    "firmware": "1.0.57",
+    "scan_count": 1,
+    "last_seen": "2026-08-15T20:57:57.899Z",
+    "manufacturer": "IKEA of Sweden",
+    "model": "RODRET wireless dimmer",
+    "in_clusters": [],
+    "out_clusters": [],
+    "clusters": {}
   },
   {
     "manufacturer_slug": "ikea-of-sweden",
