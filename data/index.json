@@ -2356,8 +2356,6 @@
     }
   },
   {
-
-  
     "manufacturer_slug": "tz3210-fgwhjm9j",
     "model_slug": "ts011f",
     "firmware": null,
@@ -2381,8 +2379,6 @@
     "out_clusters": [],
     "clusters": {}
   },
-
-
   {
     "manufacturer_slug": "awox",
     "model_slug": "tlsr82xx",
