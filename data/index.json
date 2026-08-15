@@ -2356,6 +2356,20 @@
     }
   },
   {
+
+  
+    "manufacturer_slug": "tz3210-fgwhjm9j",
+    "model_slug": "ts011f",
+    "firmware": null,
+    "scan_count": 1,
+    "last_seen": "2026-08-15T07:23:29.857Z",
+    "manufacturer": "_TZ3210_fgwhjm9j",
+    "model": "TS011F",
+    "in_clusters": [],
+    "out_clusters": [],
+    "clusters": {}
+  },
+  {
     "manufacturer_slug": "tz3290-gnl5a6a5xvql7c2a",
     "model_slug": "ts1201",
     "firmware": null,
@@ -2367,6 +2381,8 @@
     "out_clusters": [],
     "clusters": {}
   },
+
+
   {
     "manufacturer_slug": "awox",
     "model_slug": "tlsr82xx",
