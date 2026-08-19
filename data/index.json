@@ -1767,6 +1767,18 @@
     }
   },
   {
+    "manufacturer_slug": "tz3000-famkxci2",
+    "model_slug": "ts0043",
+    "firmware": null,
+    "scan_count": 1,
+    "last_seen": "2026-08-19T20:53:10.070Z",
+    "manufacturer": "_TZ3000_famkxci2",
+    "model": "TS0043",
+    "in_clusters": [],
+    "out_clusters": [],
+    "clusters": {}
+  },
+  {
     "manufacturer_slug": "tz3000-ltt60asa",
     "model_slug": "ts0004",
     "endpoint": 1,
