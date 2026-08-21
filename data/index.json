@@ -17340,6 +17340,18 @@
     "clusters": {}
   },
   {
+    "manufacturer_slug": "ledvance",
+    "model_slug": "par16-tw-z3",
+    "firmware": "01056400",
+    "scan_count": 1,
+    "last_seen": "2026-08-20T09:08:04.378Z",
+    "manufacturer": "LEDVANCE",
+    "model": "PAR16 TW Z3",
+    "in_clusters": [],
+    "out_clusters": [],
+    "clusters": {}
+  },
+  {
     "manufacturer_slug": "unknown",
     "model_slug": "unknown",
     "endpoint": 1,
