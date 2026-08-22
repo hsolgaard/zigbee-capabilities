@@ -163,9 +163,58 @@ jobs:
             // capabilities is always fully recomputed from observations
             // below (never incrementally patched), so it's a pure derived
             // cache that can never drift out of sync with the raw log.
+            //
+            // The card submits one record per DEVICE, not per endpoint: it
+            // bundles every endpoint it knows about into an `endpoints[]`
+            // array (see zha-bindings-manager's _buildDeviceCapabilityRecord),
+            // e.g. { manufacturer, model, identity, endpoints: [{ endpoint,
+            // scanned, clusters }, ...] }. This derivation used to assume a
+            // single top-level `endpoint`/`clusters` pair per observation —
+            // a shape the card has never actually produced — so every
+            // multi-endpoint submission silently computed `endpoint:
+            // undefined` and `clusters: {}` here, even though the raw
+            // observation appended above was always complete. Confirmed
+            // against already-merged data: TS0043's stored observation has
+            // full per-endpoint detail, but the capabilities entry built by
+            // the old version of this logic came out with endpoint: null
+            // and no clusters. flattenObservation() below fixes that by
+            // expanding each observation into one item per endpoint before
+            // grouping, while still accepting older files whose entries
+            // already used the single-endpoint shape directly (no
+            // `endpoints` array) so nothing already on disk needs migrating
+            // by hand.
+            const flattenObservation = (o) => {
+              if (Array.isArray(o.endpoints)) {
+                return o.endpoints.map((ep) => ({
+                  manufacturer: o.manufacturer,
+                  model: o.model,
+                  identity: o.identity,
+                  endpoint: ep.endpoint,
+                  clusters: ep.scanned ? ep.clusters || {} : {},
+                  provenance: o.provenance,
+                }));
+              }
+              if (o.endpoint) {
+                // Legacy shape: the observation already represents a single
+                // endpoint directly.
+                return [
+                  {
+                    manufacturer: o.manufacturer,
+                    model: o.model,
+                    identity: o.identity,
+                    endpoint: o.endpoint,
+                    clusters: o.clusters || {},
+                    provenance: o.provenance,
+                  },
+                ];
+              }
+              return [];
+            };
+            const flatObservations = existing.observations.flatMap(flattenObservation);
+
             const obsKey = (o) =>
               `${(o.endpoint || {}).id}|${(o.identity || {}).sw_build_id || "unknown"}`;
-            const keys = [...new Set(existing.observations.map(obsKey))];
+            const keys = [...new Set(flatObservations.map(obsKey))];
 
             // Snapshot before the recompute so the contributor can be told
             // what their submission actually added, below — a plain diff
@@ -174,7 +223,7 @@ jobs:
             const capabilities = {};
 
             keys.forEach((key) => {
-              const matching = existing.observations.filter((o) => obsKey(o) === key);
+              const matching = flatObservations.filter((o) => obsKey(o) === key);
               const first = matching[0];
 
               const clusterIds = new Set();
