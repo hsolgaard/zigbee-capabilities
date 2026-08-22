@@ -19569,6 +19569,18 @@
   },
   {
     "manufacturer_slug": "sonoff",
+    "model_slug": "snzb-01m",
+    "firmware": null,
+    "scan_count": 1,
+    "last_seen": "2026-08-22T18:42:45.414Z",
+    "manufacturer": "SONOFF",
+    "model": "SNZB-01M",
+    "in_clusters": [],
+    "out_clusters": [],
+    "clusters": {}
+  },
+  {
+    "manufacturer_slug": "sonoff",
     "model_slug": "snzb-06p",
     "firmware": "1.0.6",
     "scan_count": 1,
