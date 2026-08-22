@@ -70,14 +70,52 @@ jobs:
             // in lockstep deliberately (see header comment) so an
             // already-correct file produces byte-identical output here and
             // never gets needlessly rewritten.
+            //
+            // flattenObservation() expands the card's per-device submission
+            // shape ({ endpoints: [{ endpoint, scanned, clusters }, ...] })
+            // into one item per endpoint before grouping — see the matching
+            // comment in ingest-submission.yml for why this exists: the
+            // previous version of this function assumed a single top-level
+            // `endpoint`/`clusters` pair per observation, a shape the card
+            // has never actually produced, so it silently computed
+            // endpoint: undefined and clusters: {} for every multi-endpoint
+            // submission already on disk. Older files whose observations
+            // already use the single-endpoint shape directly still work
+            // unchanged via the second branch.
+            const flattenObservation = (o) => {
+              if (Array.isArray(o.endpoints)) {
+                return o.endpoints.map((ep) => ({
+                  manufacturer: o.manufacturer,
+                  model: o.model,
+                  identity: o.identity,
+                  endpoint: ep.endpoint,
+                  clusters: ep.scanned ? ep.clusters || {} : {},
+                  provenance: o.provenance,
+                }));
+              }
+              if (o.endpoint) {
+                return [
+                  {
+                    manufacturer: o.manufacturer,
+                    model: o.model,
+                    identity: o.identity,
+                    endpoint: o.endpoint,
+                    clusters: o.clusters || {},
+                    provenance: o.provenance,
+                  },
+                ];
+              }
+              return [];
+            };
             const recomputeCapabilities = (observations) => {
+              const flatObservations = observations.flatMap(flattenObservation);
               const obsKey = (o) =>
                 `${(o.endpoint || {}).id}|${(o.identity || {}).sw_build_id || "unknown"}`;
-              const keys = [...new Set(observations.map(obsKey))];
+              const keys = [...new Set(flatObservations.map(obsKey))];
               const capabilities = {};
 
               keys.forEach((key) => {
-                const matching = observations.filter((o) => obsKey(o) === key);
+                const matching = flatObservations.filter((o) => obsKey(o) === key);
                 const first = matching[0];
 
                 const clusterIds = new Set();
