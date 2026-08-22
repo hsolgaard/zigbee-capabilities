@@ -1197,14 +1197,1197 @@
     }
   ],
   "capabilities": {
-    "undefined|3.04": {
+    "1|3.04": {
+      "endpoint": 1,
+      "firmware": "3.04",
+      "scan_count": 1,
+      "last_seen": "2026-07-29T04:59:52.598Z",
+      "manufacturer": "Inovelli",
+      "model": "VZM31-SN",
+      "in_clusters": [
+        "0x0000",
+        "0x0003",
+        "0x0004",
+        "0x0005",
+        "0x0006",
+        "0x0008",
+        "0x0702",
+        "0x0b04",
+        "0x0b05",
+        "0xfc31",
+        "0xfc57"
+      ],
+      "out_clusters": [
+        "0x0019"
+      ],
+      "clusters": {
+        "0x0000": {
+          "name": "Basic",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Reset to factory defaults",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zcl_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "app_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "stack_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "hw_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "manufacturer",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 5,
+              "name": "model",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 6,
+              "name": "date_code",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 7,
+              "name": "power_source",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 8,
+              "name": "generic_device_class",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 9,
+              "name": "generic_device_type",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 10,
+              "name": "product_code",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 11,
+              "name": "product_url",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16384,
+              "name": "sw_build_id",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0003": {
+          "name": "Identify",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Identify",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "Identify query",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 64,
+              "name": "Trigger identify effect",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "identify_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0004": {
+          "name": "Groups",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Add to group",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "View group",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 2,
+              "name": "Get group membership",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 3,
+              "name": "Remove from group",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 4,
+              "name": "Remove from all groups",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 5,
+              "name": "Add to group if identifying",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "name_support",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0005": {
+          "name": "Scenes",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Add",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "View",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 2,
+              "name": "Remove",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 3,
+              "name": "Remove all",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 4,
+              "name": "Store",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 5,
+              "name": "Recall",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 6,
+              "name": "Get scene membership",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 64,
+              "name": "Enhanced add",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 65,
+              "name": "Enhanced view",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 66,
+              "name": "Copy",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "count",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "current_scene",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "current_group",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "scene_valid",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "name_support",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0006": {
+          "name": "On/Off",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Off",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "On",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 2,
+              "name": "Toggle",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 64,
+              "name": "Off with effect",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 65,
+              "name": "On with recall global scene",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 66,
+              "name": "On with timed off",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "on_off",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16384,
+              "name": "global_scene_control",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16385,
+              "name": "on_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 16386,
+              "name": "off_wait_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 16387,
+              "name": "start_up_on_off",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0008": {
+          "name": "Level control",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Move to level",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "Move",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 2,
+              "name": "Step",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 3,
+              "name": "Stop",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 4,
+              "name": "Move to level (with on/off)",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 5,
+              "name": "Move (with on/off)",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 6,
+              "name": "Step (with on/off)",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 7,
+              "name": "Stop (with on/off)",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "current_level",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "remaining_time",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "min_level",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "max_level",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 15,
+              "name": "options",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 16,
+              "name": "on_off_transition_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 17,
+              "name": "on_level",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 20,
+              "name": "default_move_rate",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 16384,
+              "name": "start_up_current_level",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0702": {
+          "name": "Metering",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "current_summ_delivered",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 512,
+              "name": "status",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 768,
+              "name": "unit_of_measure",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 769,
+              "name": "multiplier",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 770,
+              "name": "divisor",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 771,
+              "name": "summation_formatting",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 774,
+              "name": "metering_device_type",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "65533",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0b04": {
+          "name": "Electrical Measurement",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 1291,
+              "name": "active_power",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1540,
+              "name": "ac_power_multiplier",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1541,
+              "name": "ac_power_divisor",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0b05": {
+          "name": "Diagnostic",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 284,
+              "name": "last_message_lqi",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 285,
+              "name": "last_message_rssi",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0xfc31": {
+          "name": "InovelliVZM31SNCluster",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "0",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "dimming_speed_up_remote",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "dimming_speed_up_local",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "ramp_rate_off_to_on_remote",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "ramp_rate_off_to_on_local",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 5,
+              "name": "dimming_speed_down_remote",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 6,
+              "name": "dimming_speed_down_local",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 7,
+              "name": "ramp_rate_on_to_off_remote",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 8,
+              "name": "ramp_rate_on_to_off_local",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 9,
+              "name": "minimum_level",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 10,
+              "name": "maximum_level",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 11,
+              "name": "invert_switch",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 12,
+              "name": "auto_off_timer",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 13,
+              "name": "default_level_local",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 14,
+              "name": "default_level_remote",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 15,
+              "name": "state_after_power_restored",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 17,
+              "name": "load_level_indicator_timeout",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 18,
+              "name": "active_power_reports",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 19,
+              "name": "periodic_power_and_energy_reports",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 20,
+              "name": "active_energy_reports",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 21,
+              "name": "power_type",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 22,
+              "name": "switch_type",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 23,
+              "name": "quick_start_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 24,
+              "name": "quick_start_level",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 25,
+              "name": "increased_non_neutral_output",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 26,
+              "name": "leading_or_trailing_edge",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 32,
+              "name": "internal_temp_monitor",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 33,
+              "name": "overheated",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 50,
+              "name": "button_delay",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 51,
+              "name": "device_bind_number",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 52,
+              "name": "smart_bulb_mode",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 53,
+              "name": "double_tap_up_enabled",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 54,
+              "name": "double_tap_down_enabled",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 55,
+              "name": "double_tap_up_level",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 56,
+              "name": "double_tap_down_level",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 60,
+              "name": "default_led1_strip_color_when_on",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 61,
+              "name": "default_led1_strip_color_when_off",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 62,
+              "name": "default_led1_strip_intensity_when_on",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 63,
+              "name": "default_led1_strip_intensity_when_off",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65,
+              "name": "default_led2_strip_color_when_on",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 66,
+              "name": "default_led2_strip_color_when_off",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 67,
+              "name": "default_led2_strip_intensity_when_on",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 68,
+              "name": "default_led2_strip_intensity_when_off",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 70,
+              "name": "default_led3_strip_color_when_on",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 71,
+              "name": "default_led3_strip_color_when_off",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 72,
+              "name": "default_led3_strip_intensity_when_on",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 73,
+              "name": "default_led3_strip_intensity_when_off",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 75,
+              "name": "default_led4_strip_color_when_on",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 76,
+              "name": "default_led4_strip_color_when_off",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 77,
+              "name": "default_led4_strip_intensity_when_on",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 78,
+              "name": "default_led4_strip_intensity_when_off",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 80,
+              "name": "default_led5_strip_color_when_on",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 81,
+              "name": "default_led5_strip_color_when_off",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 82,
+              "name": "default_led5_strip_intensity_when_on",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 83,
+              "name": "default_led5_strip_intensity_when_off",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 85,
+              "name": "default_led6_strip_color_when_on",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 86,
+              "name": "default_led6_strip_color_when_off",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 87,
+              "name": "default_led6_strip_intensity_when_on",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 88,
+              "name": "default_led6_strip_intensity_when_off",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 90,
+              "name": "default_led7_strip_color_when_on",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 91,
+              "name": "default_led7_strip_color_when_off",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 92,
+              "name": "default_led7_strip_intensity_when_on",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 93,
+              "name": "default_led7_strip_intensity_when_off",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 95,
+              "name": "led_color_when_on",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 96,
+              "name": "led_color_when_off",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 97,
+              "name": "led_intensity_when_on",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 98,
+              "name": "led_intensity_when_off",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 100,
+              "name": "led_scaling_mode",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 120,
+              "name": "fan_single_tap_behavior",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 121,
+              "name": "fan_timer_display",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 123,
+              "name": "aux_switch_scenes",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 125,
+              "name": "binding_off_to_on_sync_level",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 130,
+              "name": "fan_module_binding_control",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 131,
+              "name": "low_for_bound_control",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 132,
+              "name": "medium_for_bound_control",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 133,
+              "name": "high_for_bound_control",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 134,
+              "name": "led_color_for_bound_control",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 256,
+              "name": "local_protection",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 257,
+              "name": "remote_protection",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 258,
+              "name": "output_mode",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 259,
+              "name": "on_off_led_mode",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 260,
+              "name": "firmware_progress_led",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 261,
+              "name": "relay_click_in_on_off_mode",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 262,
+              "name": "disable_clear_notifications_double_tap",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 263,
+              "name": "263",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "65533",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65534,
+              "name": "65534",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0xfc57": {
+          "name": "WorksWithAllHubs",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": []
+        }
+      }
+    },
+    "2|3.04": {
+      "endpoint": 2,
+      "firmware": "3.04",
+      "scan_count": 1,
+      "last_seen": "2026-07-29T04:59:52.598Z",
+      "manufacturer": "Inovelli",
+      "model": "VZM31-SN",
+      "in_clusters": [
+        "0x0000",
+        "0x0003"
+      ],
+      "out_clusters": [
+        "0x0003",
+        "0x0006",
+        "0x0008",
+        "0xfc31"
+      ],
+      "clusters": {
+        "0x0000": {
+          "name": "Basic",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Reset to factory defaults",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zcl_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "app_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "stack_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "hw_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "manufacturer",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 5,
+              "name": "model",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 6,
+              "name": "date_code",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 7,
+              "name": "power_source",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 8,
+              "name": "generic_device_class",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 9,
+              "name": "generic_device_type",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0003": {
+          "name": "Identify",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Identify",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "Identify query",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 64,
+              "name": "Trigger identify effect",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "identify_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        }
+      }
+    },
+    "242|3.04": {
+      "endpoint": 242,
       "firmware": "3.04",
       "scan_count": 1,
       "last_seen": "2026-07-29T04:59:52.598Z",
       "manufacturer": "Inovelli",
       "model": "VZM31-SN",
       "in_clusters": [],
-      "out_clusters": [],
+      "out_clusters": [
+        "0x0021"
+      ],
       "clusters": {}
     }
   }
