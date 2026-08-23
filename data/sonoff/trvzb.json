@@ -1,0 +1,1125 @@
+{
+  "observations": [
+    {
+      "manufacturer": "SONOFF",
+      "model": "TRVZB",
+      "identity": {
+        "sw_build_id": "1.4.4",
+        "hw_version": null,
+        "date_code": "20251229"
+      },
+      "endpoints": [
+        {
+          "endpoint": {
+            "id": 1,
+            "profile": "0x0104",
+            "device_type": "0x0301",
+            "in_clusters": [
+              "0x0000",
+              "0x0001",
+              "0x0003",
+              "0x0006",
+              "0x0020",
+              "0x0201",
+              "0xfc11",
+              "0xfc57"
+            ],
+            "out_clusters": [
+              "0x000a",
+              "0x0019"
+            ]
+          },
+          "scanned": true,
+          "clusters": {
+            "0x0000": {
+              "name": "Basic",
+              "commands_received": [
+                {
+                  "id": 0,
+                  "name": "Reset to factory defaults",
+                  "present": true
+                }
+              ],
+              "commands_received_confirmed": true,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "zcl_version",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 1,
+                  "name": "app_version",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 4,
+                  "name": "manufacturer",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 5,
+                  "name": "model",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 6,
+                  "name": "date_code",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 7,
+                  "name": "power_source",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 16384,
+                  "name": "sw_build_id",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ|REPORT"
+                }
+              ]
+            },
+            "0x0001": {
+              "name": "Power Configuration",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 33,
+                  "name": "battery_percentage_remaining",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ|REPORT"
+                }
+              ]
+            },
+            "0x0003": {
+              "name": "Identify",
+              "commands_received": [
+                {
+                  "id": 0,
+                  "name": "Identify",
+                  "present": true
+                },
+                {
+                  "id": 1,
+                  "name": "Identify query",
+                  "present": true
+                },
+                {
+                  "id": 64,
+                  "name": "Trigger identify effect",
+                  "present": false
+                }
+              ],
+              "commands_received_confirmed": true,
+              "commands_generated": [
+                {
+                  "id": 0,
+                  "name": "identify_query_response"
+                }
+              ],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "identify_time",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ|REPORT"
+                }
+              ]
+            },
+            "0x0006": {
+              "name": "On/Off",
+              "commands_received": [
+                {
+                  "id": 0,
+                  "name": "Off",
+                  "present": true
+                },
+                {
+                  "id": 1,
+                  "name": "On",
+                  "present": true
+                },
+                {
+                  "id": 2,
+                  "name": "Toggle",
+                  "present": true
+                },
+                {
+                  "id": 64,
+                  "name": "Off with effect",
+                  "present": false
+                },
+                {
+                  "id": 65,
+                  "name": "On with recall global scene",
+                  "present": false
+                },
+                {
+                  "id": 66,
+                  "name": "On with timed off",
+                  "present": false
+                }
+              ],
+              "commands_received_confirmed": true,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "on_off",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ|REPORT"
+                }
+              ]
+            },
+            "0x0020": {
+              "name": "Poll Control",
+              "commands_received": [
+                {
+                  "id": 0,
+                  "name": "checkin_response",
+                  "present": true
+                },
+                {
+                  "id": 1,
+                  "name": "fast_poll_stop",
+                  "present": true
+                },
+                {
+                  "id": 2,
+                  "name": "set_long_poll_interval",
+                  "present": true
+                },
+                {
+                  "id": 3,
+                  "name": "set_short_poll_interval",
+                  "present": true
+                }
+              ],
+              "commands_received_confirmed": true,
+              "commands_generated": [
+                {
+                  "id": 0,
+                  "name": "checkin"
+                }
+              ],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "checkin_interval",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 1,
+                  "name": "long_poll_interval",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 2,
+                  "name": "short_poll_interval",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 3,
+                  "name": "fast_poll_timeout",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 4,
+                  "name": "checkin_interval_min",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ|REPORT"
+                }
+              ]
+            },
+            "0x0201": {
+              "name": "Thermostat",
+              "commands_received": [
+                {
+                  "id": 0,
+                  "name": "Setpoint raise/lower",
+                  "present": true
+                },
+                {
+                  "id": 1,
+                  "name": "Set weekly schedule",
+                  "present": true
+                },
+                {
+                  "id": 2,
+                  "name": "Get weekly schedule",
+                  "present": false
+                },
+                {
+                  "id": 3,
+                  "name": "Clear weekly schedule",
+                  "present": true
+                },
+                {
+                  "id": 4,
+                  "name": "Get relay status log",
+                  "present": false
+                }
+              ],
+              "commands_received_confirmed": true,
+              "commands_generated": [
+                {
+                  "id": 0,
+                  "name": "get_weekly_schedule_response"
+                },
+                {
+                  "id": 1,
+                  "name": "get_relay_status_log_response"
+                }
+              ],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "local_temperature",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 2,
+                  "name": "occupancy",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 3,
+                  "name": "abs_min_heat_setpoint_limit",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 4,
+                  "name": "abs_max_heat_setpoint_limit",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 16,
+                  "name": "local_temperature_calibration",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 17,
+                  "name": "occupied_cooling_setpoint",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 18,
+                  "name": "occupied_heating_setpoint",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 21,
+                  "name": "min_heat_setpoint_limit",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 22,
+                  "name": "max_heat_setpoint_limit",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 26,
+                  "name": "remote_sensing",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 27,
+                  "name": "ctrl_sequence_of_oper",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 28,
+                  "name": "system_mode",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 30,
+                  "name": "running_mode",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 32,
+                  "name": "start_of_week",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 33,
+                  "name": "number_of_weekly_transitions",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 34,
+                  "name": "number_of_daily_transitions",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 37,
+                  "name": "programing_oper_mode",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 41,
+                  "name": "running_state",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "65533",
+                  "access": "READ|REPORT"
+                }
+              ]
+            },
+            "0xfc11": {
+              "name": "CustomSonoffCluster",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "child_lock",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 16,
+                  "name": "16",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 17,
+                  "name": "17",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 28,
+                  "name": "28",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 33,
+                  "name": "33",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 24576,
+                  "name": "open_window",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 24577,
+                  "name": "24577",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 24578,
+                  "name": "frost_protection_temperature",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 24579,
+                  "name": "idle_steps",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 24580,
+                  "name": "closing_steps",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 24581,
+                  "name": "valve_opening_limit_voltage",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 24582,
+                  "name": "valve_closing_limit_voltage",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 24583,
+                  "name": "valve_motor_running_voltage",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 24584,
+                  "name": "24584",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 24585,
+                  "name": "24585",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 24586,
+                  "name": "24586",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 24587,
+                  "name": "valve_opening_degree",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 24588,
+                  "name": "valve_closing_degree",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 24589,
+                  "name": "external_temperature_sensor_value",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 24590,
+                  "name": "external_temperature_sensor_enable",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 24591,
+                  "name": "24591",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 24592,
+                  "name": "24592",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 24593,
+                  "name": "temperature_control_accuracy",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 24594,
+                  "name": "24594",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 24595,
+                  "name": "24595",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 24596,
+                  "name": "temporary_mode",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 24597,
+                  "name": "temporary_mode_duration",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 24598,
+                  "name": "timer_mode_target_temperature",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 24599,
+                  "name": "smart_temperature_control",
+                  "access": "READ|WRITE|REPORT"
+                }
+              ]
+            },
+            "0xfc57": {
+              "name": "WorksWithAllHubs",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": []
+            }
+          }
+        }
+      ],
+      "provenance": {
+        "submitted_at": "2026-08-23T12:18:04.006Z",
+        "card_version": "0.32.4",
+        "source_issue": 150
+      }
+    }
+  ],
+  "capabilities": {
+    "1|1.4.4": {
+      "endpoint": 1,
+      "firmware": "1.4.4",
+      "scan_count": 1,
+      "last_seen": "2026-08-23T12:18:04.006Z",
+      "manufacturer": "SONOFF",
+      "model": "TRVZB",
+      "in_clusters": [
+        "0x0000",
+        "0x0001",
+        "0x0003",
+        "0x0006",
+        "0x0020",
+        "0x0201",
+        "0xfc11",
+        "0xfc57"
+      ],
+      "out_clusters": [
+        "0x000a",
+        "0x0019"
+      ],
+      "clusters": {
+        "0x0000": {
+          "name": "Basic",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Reset to factory defaults",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zcl_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "app_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "manufacturer",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 5,
+              "name": "model",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 6,
+              "name": "date_code",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 7,
+              "name": "power_source",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16384,
+              "name": "sw_build_id",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0001": {
+          "name": "Power Configuration",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 33,
+              "name": "battery_percentage_remaining",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0003": {
+          "name": "Identify",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Identify",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "Identify query",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 64,
+              "name": "Trigger identify effect",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "identify_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0006": {
+          "name": "On/Off",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Off",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "On",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 2,
+              "name": "Toggle",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 64,
+              "name": "Off with effect",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 65,
+              "name": "On with recall global scene",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 66,
+              "name": "On with timed off",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "on_off",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0020": {
+          "name": "Poll Control",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "checkin_response",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "fast_poll_stop",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 2,
+              "name": "set_long_poll_interval",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 3,
+              "name": "set_short_poll_interval",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "checkin_interval",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "long_poll_interval",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "short_poll_interval",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "fast_poll_timeout",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "checkin_interval_min",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0201": {
+          "name": "Thermostat",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Setpoint raise/lower",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "Set weekly schedule",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 2,
+              "name": "Get weekly schedule",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 3,
+              "name": "Clear weekly schedule",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 4,
+              "name": "Get relay status log",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "local_temperature",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "occupancy",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "abs_min_heat_setpoint_limit",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "abs_max_heat_setpoint_limit",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16,
+              "name": "local_temperature_calibration",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 17,
+              "name": "occupied_cooling_setpoint",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 18,
+              "name": "occupied_heating_setpoint",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 21,
+              "name": "min_heat_setpoint_limit",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 22,
+              "name": "max_heat_setpoint_limit",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 26,
+              "name": "remote_sensing",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 27,
+              "name": "ctrl_sequence_of_oper",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 28,
+              "name": "system_mode",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 30,
+              "name": "running_mode",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 32,
+              "name": "start_of_week",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 33,
+              "name": "number_of_weekly_transitions",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 34,
+              "name": "number_of_daily_transitions",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 37,
+              "name": "programing_oper_mode",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 41,
+              "name": "running_state",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "65533",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0xfc11": {
+          "name": "CustomSonoffCluster",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "child_lock",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 16,
+              "name": "16",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 17,
+              "name": "17",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 28,
+              "name": "28",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 33,
+              "name": "33",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 24576,
+              "name": "open_window",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 24577,
+              "name": "24577",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 24578,
+              "name": "frost_protection_temperature",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 24579,
+              "name": "idle_steps",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 24580,
+              "name": "closing_steps",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 24581,
+              "name": "valve_opening_limit_voltage",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 24582,
+              "name": "valve_closing_limit_voltage",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 24583,
+              "name": "valve_motor_running_voltage",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 24584,
+              "name": "24584",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 24585,
+              "name": "24585",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 24586,
+              "name": "24586",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 24587,
+              "name": "valve_opening_degree",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 24588,
+              "name": "valve_closing_degree",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 24589,
+              "name": "external_temperature_sensor_value",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 24590,
+              "name": "external_temperature_sensor_enable",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 24591,
+              "name": "24591",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 24592,
+              "name": "24592",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 24593,
+              "name": "temperature_control_accuracy",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 24594,
+              "name": "24594",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 24595,
+              "name": "24595",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 24596,
+              "name": "temporary_mode",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 24597,
+              "name": "temporary_mode_duration",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 24598,
+              "name": "timer_mode_target_temperature",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 24599,
+              "name": "smart_temperature_control",
+              "access": "READ|WRITE|REPORT"
+            }
+          ]
+        },
+        "0xfc57": {
+          "name": "WorksWithAllHubs",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": []
+        }
+      }
+    }
+  }
+}
