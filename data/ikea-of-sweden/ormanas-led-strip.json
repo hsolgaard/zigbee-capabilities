@@ -1676,7 +1676,9 @@
           "name": "Cluster 0xfc57",
           "commands_received": [],
           "commands_received_scan_count": 0,
-          "attributes_confirmed": []
+          "attributes_confirmed": [],
+          "resolved_name": "WorksWithAllHubs (WWAH)",
+          "resolved_source": "zigpy"
         }
       }
     }
