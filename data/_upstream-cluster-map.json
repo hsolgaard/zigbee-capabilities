@@ -1,0 +1,184 @@
+{
+  "_readme": [
+    "Manually curated lookup of manufacturer-specific (0xFC00-0xFFFF) Zigbee",
+    "clusters/attributes, sourced from inspecting zha-device-handlers and",
+    "zigpy source directly (never guessed from a numeric ID alone — see the",
+    "PRD 'Unknown Capability Labeling and Device Photos'). Consumed by",
+    "rebuild-capability-index.yml's enrichment step, which annotates",
+    "data/**/*.json's capabilities cache with resolved_name/resolved_source",
+    "fields wherever a match is found here, and records everything else as",
+    "'unknown' in data/unknown-capabilities.json.",
+    "",
+    "Matching rule (see rebuild-capability-index.yml's findClusterMapping):",
+    "an entry with both 'manufacturer' and 'model' set only ever matches",
+    "that exact device; an entry with 'manufacturer' but no 'model' matches",
+    "any device from that vendor; an entry with neither matches globally.",
+    "This exists because the SAME numeric cluster ID is routinely reused by",
+    "different vendors (and even by different product lines from the SAME",
+    "vendor) for completely unrelated purposes — confirmed firsthand: Sonoff",
+    "alone uses 0xFC11 for at least four different attribute sets across its",
+    "TRVZB, ZBMINIR2, MINI-ZB2GS and ZBM5 product families, and 0xFC0F means",
+    "one thing for OSRAM/LEDVANCE lighting and something entirely unrelated",
+    "for a Centralite IAS device. Applying a mapping outside the scope it",
+    "was actually sourced for would be worse than leaving it unresolved.",
+    "",
+    "This file is currently maintained by hand as new devices are added to",
+    "the database — there is no automated job that refreshes it from",
+    "upstream yet (see the PRD's open questions). Treat every entry here as",
+    "traceable to a specific upstream source file, not inferred."
+  ],
+  "global_attributes": {
+    "65533": { "name": "cluster_revision", "source": "zcl-spec" },
+    "65534": { "name": "attribute_reporting_status", "source": "zcl-spec" }
+  },
+  "clusters": [
+    {
+      "id_hex": "0xfc57",
+      "manufacturer": null,
+      "name": "WorksWithAllHubs (WWAH)",
+      "source": "zigpy",
+      "source_ref": "zigpy/zcl/clusters/general.py (Ezsp WWAH cluster) + zigpy/zigpy#823",
+      "note": "The one manufacturer-specific ID treated as safe across vendors — semi-standardized hub-compatibility signaling, not vendor-private in practice.",
+      "attributes": {
+        "2": "disable_ota_downgrades",
+        "3": "mgmt_leave_without_rejoin_enabled",
+        "4": "nwk_retry_count",
+        "5": "mac_retry_count",
+        "6": "router_checkin_enabled",
+        "7": "touchlink_interpan_enabled",
+        "8": "wwah_parent_classification_enabled",
+        "13": "configuration_mode_enabled",
+        "14": "current_debug_report_id",
+        "15": "tc_security_on_ntwk_key_rotation_enabled",
+        "17": "pending_network_update_channel",
+        "18": "pending_network_update_panid",
+        "19": "ota_max_offline_duration"
+      }
+    },
+    {
+      "id_hex": "0xfc12",
+      "manufacturer": "sonoff",
+      "name": "SonoffButtonCluster",
+      "source": "zha-device-handlers",
+      "source_ref": "zhaquirks/sonoff/snzb01m.py",
+      "attributes": { "0": "key_action_event" }
+    },
+    {
+      "id_hex": "0xfc11",
+      "manufacturer": "sonoff",
+      "model": "TRVZB",
+      "name": "CustomSonoffCluster",
+      "source": "zha-device-handlers",
+      "source_ref": "zhaquirks/sonoff/trvzb.py",
+      "attributes": {
+        "0": "child_lock",
+        "24576": "open_window",
+        "24578": "frost_protection_temperature",
+        "24579": "idle_steps",
+        "24580": "closing_steps",
+        "24581": "valve_opening_limit_voltage",
+        "24582": "valve_closing_limit_voltage",
+        "24583": "valve_motor_running_voltage",
+        "24587": "valve_opening_degree",
+        "24588": "valve_closing_degree",
+        "24589": "external_temperature_sensor_value",
+        "24590": "external_temperature_sensor_enable",
+        "24593": "temperature_control_accuracy",
+        "24596": "temporary_mode",
+        "24597": "temporary_mode_duration",
+        "24598": "timer_mode_target_temperature",
+        "24599": "smart_temperature_control"
+      }
+    },
+    {
+      "id_hex": "0xfc11",
+      "manufacturer": "sonoff",
+      "model": "ZBMINIR2",
+      "name": "SonoffCluster",
+      "source": "zha-device-handlers",
+      "source_ref": "zhaquirks/sonoff/zbminir2.py",
+      "attributes": {
+        "1": "network_led",
+        "18": "turbo_mode",
+        "22": "external_trigger_mode",
+        "23": "detach_relay"
+      }
+    },
+    {
+      "id_hex": "0xfc11",
+      "manufacturer": "sonoff",
+      "model": "MINI-ZB2GS",
+      "name": "SonoffCluster",
+      "source": "zha-device-handlers",
+      "source_ref": "zhaquirks/sonoff/mini_zb2gs.py",
+      "attributes": {
+        "1": "network_led",
+        "18": "turbo_mode",
+        "22": "external_trigger_mode",
+        "25": "detach_relay"
+      }
+    },
+    {
+      "id_hex": "0xfc7d",
+      "manufacturer": "ikea of sweden",
+      "name": "IkeaAirpurifier",
+      "source": "zha-device-handlers",
+      "source_ref": "zhaquirks/ikea/starkvind.py",
+      "attributes": {
+        "0": "filter_run_time",
+        "1": "replace_filter",
+        "2": "filter_life_time",
+        "3": "disable_led",
+        "4": "air_quality_25pm",
+        "5": "child_lock",
+        "6": "fan_mode",
+        "7": "fan_speed",
+        "8": "device_run_time"
+      }
+    },
+    {
+      "id_hex": "0xfc85",
+      "manufacturer": "ikea of sweden",
+      "name": "IkeaSmartPlugCluster",
+      "source": "zha-device-handlers",
+      "source_ref": "zhaquirks/ikea/plug_g2.py",
+      "attributes": { "0": "child_lock", "1": "enable_led" }
+    },
+    {
+      "id_hex": "0xfc7e",
+      "manufacturer": "ikea of sweden",
+      "name": "IKEA VOC Index",
+      "source": "zha-device-handlers",
+      "source_ref": "zhaquirks (IKEA VOC Index cluster)",
+      "attributes": { "0": "measured_value", "1": "min_measured_value", "2": "max_measured_value" }
+    },
+    {
+      "id_hex": "0xfc81",
+      "manufacturer": "ikea of sweden",
+      "model": "VALLHORN Wireless Motion Sensor",
+      "name": "IKEA manufacturer specific config",
+      "source": "zha-device-handlers",
+      "source_ref": "zhaquirks/ikea/vallhorn.py",
+      "caution": "0xFC81 is reused by other vendors (e.g. Linkind, zhaquirks/linkind/motion.py) for an unrelated purpose — this mapping is intentionally scoped to this exact model, not IKEA generally.",
+      "attributes": { "0": "on_only_when_dark", "2": "on_time" }
+    },
+    {
+      "id_hex": "0xfc0f",
+      "manufacturer": "osram",
+      "name": "OsramLight",
+      "source": "zha-device-handlers",
+      "source_ref": "zhaquirks/osram/__init__.py",
+      "caution": "0xFC0F is reused by Centralite (zhaquirks/centralite/ias.py, cl_3321S.py) for an unrelated purpose — do not apply this mapping outside OSRAM/LEDVANCE.",
+      "attributes": {}
+    },
+    {
+      "id_hex": "0xfc0f",
+      "manufacturer": "ledvance",
+      "name": "OsramLight",
+      "source": "zha-device-handlers",
+      "source_ref": "zhaquirks/osram/__init__.py",
+      "note": "LEDVANCE devices commonly reuse OSRAM's own quirk implementation — LEDVANCE acquired OSRAM's lighting business and several product lines share firmware/cluster behavior.",
+      "attributes": {}
+    }
+  ]
+}
