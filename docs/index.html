@@ -17,6 +17,9 @@
       <a href="https://github.com/hsolgaard/zigbee-capabilities" target="_blank" rel="noopener">Database on GitHub</a>
       <a href="https://github.com/hsolgaard/zha-bindings-manager" target="_blank" rel="noopener">ZHA Bindings Manager (Home Assistant card)</a>
       <a href="#contribute">Contribute a scan</a>
+      <label class="photo-toggle" title="Photos are fetched from zigbee2mqtt.io — the same source the ZHA Bindings Manager card's Exploded view uses">
+        <input type="checkbox" id="show-photos-toggle"> Show device photos
+      </label>
     </nav>
   </div>
 </header>
@@ -56,6 +59,12 @@
       <label>Firmware B <select id="c-fwb"></select></label>
     </div>
     <div id="compare-result"></div>
+  </section>
+
+  <section id="unknowns-section">
+    <h2>Unidentified capabilities</h2>
+    <p class="hint">Manufacturer-specific clusters and attributes the community scans have seen but nobody has put a name to yet, cross-referenced against Zigbee2MQTT and ZHA's own source where possible. If you recognize one of these, a PR to either upstream project (or a note in this database's own issues) helps everyone who scans a similar device next.</p>
+    <div id="unknowns-body">Loading&hellip;</div>
   </section>
 
   <section id="contribute">
