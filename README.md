@@ -1,5 +1,7 @@
 # ZHA Device Capabilities
 
+[Zigbee Capabilities website](https://hsolgaard.github.io/zigbee-capabilities/)
+
 A community-contributed, openly-licensed dataset of confirmed Zigbee device
 capabilities — which clusters, commands, and attributes a specific
 device/firmware combination actually supports, gathered from real live
