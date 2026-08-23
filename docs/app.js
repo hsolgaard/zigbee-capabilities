@@ -11,6 +11,7 @@
 // Interesting Discoveries panel) are the whole product.
 import {
   fetchCapabilityIndex,
+  fetchUnknownCapabilities,
   searchIndex,
   groupSearchResultsByDevice,
   groupCapabilitiesByOutcome,
@@ -19,6 +20,7 @@ import {
   interestingDiscoveries,
   confidenceStars,
 } from "./capexplorer.js";
+import { deviceImageUrl } from "./capexplorer-constants.js";
 
 function escapeHtml(s) {
   return String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({
@@ -41,6 +43,41 @@ const search = { manufacturer: "", model: "", cluster: "", command: "", attribut
 const expandedDevices = new Set(); // keys are `${manufacturer_slug}|${model_slug}`
 const compare = { manufacturer: "", model: "", firmwareA: "", firmwareB: "" };
 
+// ---- Device photos ----
+// Persisted opt-out, matching the ZHA Bindings Manager card's own "Show
+// device photo" toggle (same key naming convention as capexplorer.js's
+// index cache) — the photos themselves come from zigbee2mqtt.io, so this
+// is both a bandwidth and a privacy-posture choice, not just cosmetic.
+const SHOW_PHOTOS_KEY = "zha-capability-explorer:show-photos";
+function loadShowPhotos() {
+  try {
+    const raw = localStorage.getItem(SHOW_PHOTOS_KEY);
+    return raw === null ? true : raw === "1";
+  } catch (e) {
+    return true;
+  }
+}
+function saveShowPhotos(value) {
+  try {
+    localStorage.setItem(SHOW_PHOTOS_KEY, value ? "1" : "0");
+  } catch (e) {
+    /* ignore quota/availability errors — this is a nice-to-have, not required */
+  }
+}
+let showPhotos = loadShowPhotos();
+
+// Renders either the device's photo or a generic fallback shape — never a
+// broken-image glyph. Failed loads are caught by a single delegated
+// 'error' listener (see buildSearch) rather than an inline onerror
+// attribute, so this stays plain string templating like the rest of the
+// file.
+function devicePhotoHtml(model) {
+  if (!showPhotos) return "";
+  const url = deviceImageUrl(model);
+  if (!url) return `<div class="device-photo-fallback" aria-hidden="true"></div>`;
+  return `<img class="device-photo" src="${escapeHtml(url)}" alt="" loading="lazy">`;
+}
+
 async function init() {
   const statsEl = document.getElementById("stats");
   try {
@@ -55,9 +92,64 @@ async function init() {
     INDEX.length
   } firmware observation${INDEX.length === 1 ? "" : "s"} — built entirely from scans shared by the community.`;
 
+  const photoToggle = document.getElementById("show-photos-toggle");
+  if (photoToggle) {
+    photoToggle.checked = showPhotos;
+    photoToggle.addEventListener("change", () => {
+      showPhotos = photoToggle.checked;
+      saveShowPhotos(showPhotos);
+      runSearch();
+    });
+  }
+
   renderDiscoveries();
   buildSearch();
   buildCompare();
+  renderUnknowns(); // fire-and-forget — its own small section, shouldn't block the rest of the page
+}
+
+// ---- Unidentified capabilities (the "known unknowns" tracker) ----
+function totalSeen(row) {
+  return (row.seen_on || []).reduce((sum, s) => sum + (s.count || 0), 0);
+}
+
+function unknownsTableHtml(rows, kind) {
+  return `<div class="table-scroll"><table>
+    <thead><tr><th>${kind === "cluster" ? "Cluster" : "Cluster / Attribute"}</th><th>Seen on</th><th>Times seen</th></tr></thead>
+    <tbody>${rows
+      .map((r) => {
+        const idLabel =
+          kind === "cluster" ? escapeHtml(r.id_hex) : `${escapeHtml(r.cluster_id_hex)} / ${escapeHtml(r.id_hex)}`;
+        const seenOn = (r.seen_on || [])
+          .map((s) => escapeHtml(`${s.manufacturer || "unknown"} ${s.model || "unknown"}`))
+          .join(", ");
+        return `<tr><td>${idLabel}</td><td>${seenOn}</td><td>${totalSeen(r)}</td></tr>`;
+      })
+      .join("")}</tbody>
+  </table></div>`;
+}
+
+async function renderUnknowns() {
+  const el = document.getElementById("unknowns-body");
+  if (!el) return;
+  let data;
+  try {
+    data = await fetchUnknownCapabilities();
+  } catch (err) {
+    el.innerHTML = `<p class="muted">Couldn't load this list right now (${escapeHtml(err.message || String(err))}).</p>`;
+    return;
+  }
+  const clusters = data.unresolved_clusters || [];
+  const attrs = data.unresolved_attributes || [];
+  if (!clusters.length && !attrs.length) {
+    el.innerHTML = `<p class="muted">Nothing unidentified right now — every manufacturer-specific cluster and attribute seen so far has a name.</p>`;
+    return;
+  }
+  el.innerHTML = `
+    ${clusters.length ? `<h3 class="unknowns-subhead">Clusters (${clusters.length})</h3>${unknownsTableHtml(clusters, "cluster")}` : ""}
+    ${attrs.length ? `<h3 class="unknowns-subhead">Attributes (${attrs.length})</h3>${unknownsTableHtml(attrs, "attribute")}` : ""}
+    ${data.generated_at ? `<p class="hint muted">Generated ${escapeHtml(formatDate(data.generated_at))} from the current database.</p>` : ""}
+  `;
 }
 
 // ---- Community heartbeat (formerly "Interesting so far") ----
@@ -210,6 +302,24 @@ function buildSearch() {
     runSearch();
   });
 
+  // A failed device photo (zigbee2mqtt.io doesn't have an image for this
+  // exact model, network hiccup, etc.) swaps in the same generic fallback
+  // shape used when no photo was attempted at all — never a broken-image
+  // glyph. 'error' doesn't bubble, so this listens in the capture phase
+  // instead of delegating normally.
+  document.getElementById("results-body").addEventListener(
+    "error",
+    (e) => {
+      const img = e.target.closest("img.device-photo");
+      if (!img) return;
+      const fallback = document.createElement("div");
+      fallback.className = "device-photo-fallback";
+      fallback.setAttribute("aria-hidden", "true");
+      img.replaceWith(fallback);
+    },
+    true
+  );
+
   runSearch();
 }
 
@@ -268,16 +378,21 @@ function runSearch() {
       const expanded = expandedDevices.has(key);
       return `
         <div class="device-card">
-          <div class="device-card-header">${escapeHtml(r.manufacturer || "—")} ${escapeHtml(r.model || "—")}</div>
-          <div class="trust-panel">
-            ${starsHtml(r.rating)}
-            <div class="trust-text">
-              <span class="trust-label">Community confidence</span>
-              <div class="trust-detail muted">
-                ${r.firmwareCount} firmware version${r.firmwareCount === 1 ? "" : "s"} ·
-                ${r.totalScans} observation${r.totalScans === 1 ? "" : "s"}${
+          <div class="device-card-top">
+            ${devicePhotoHtml(r.model)}
+            <div class="device-card-main">
+              <div class="device-card-header">${escapeHtml(r.manufacturer || "—")} ${escapeHtml(r.model || "—")}</div>
+              <div class="trust-panel">
+                ${starsHtml(r.rating)}
+                <div class="trust-text">
+                  <span class="trust-label">Community confidence</span>
+                  <div class="trust-detail muted">
+                    ${r.firmwareCount} firmware version${r.firmwareCount === 1 ? "" : "s"} ·
+                    ${r.totalScans} observation${r.totalScans === 1 ? "" : "s"}${
         r.lastSeen ? ` · last confirmed ${escapeHtml(formatDate(r.lastSeen))}` : ""
       }
+                  </div>
+                </div>
               </div>
             </div>
           </div>

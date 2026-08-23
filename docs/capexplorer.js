@@ -29,6 +29,7 @@ export function slugify(s) {
 }
 
 const INDEX_URL = `https://raw.githubusercontent.com/${CAPABILITY_DB_REPO}/main/data/index.json`;
+const UNKNOWN_CAPABILITIES_URL = `https://raw.githubusercontent.com/${CAPABILITY_DB_REPO}/main/data/unknown-capabilities.json`;
 const CACHE_KEY = "zha-capability-explorer:index-cache";
 // A community dataset like this changes by the hour at busiest, not by the
 // minute — no reason to refetch a few-hundred-KB file on every card reload.
@@ -81,6 +82,22 @@ export async function fetchCapabilityIndex({ force = false } = {}) {
   _memoryCache = index;
   saveToLocalStorage(index);
   return index;
+}
+
+// Fetches data/unknown-capabilities.json — the "known unknowns" tracker
+// (see the PRD "Unknown Capability Labeling and Device Photos"): every
+// manufacturer-specific cluster/attribute the rebuild workflow's
+// enrichment step couldn't resolve against zha-device-handlers/zigpy
+// source, aggregated with how many devices/scans have seen each one. Not
+// cached the way fetchCapabilityIndex is — this is a much smaller file
+// fetched far less often (only when the Unidentified capabilities section
+// is actually rendered), so a plain no-store fetch is enough.
+export async function fetchUnknownCapabilities() {
+  const res = await fetch(UNKNOWN_CAPABILITIES_URL, { cache: "no-store" });
+  if (!res.ok) {
+    throw new Error(`Failed to fetch the unknown-capabilities list (HTTP ${res.status})`);
+  }
+  return res.json();
 }
 
 // Groups the flat index by manufacturer_slug+model_slug — most of the UI
@@ -400,11 +417,18 @@ export function groupCapabilitiesByOutcome(entries) {
 
   entries.forEach((entry) => {
     Object.entries(entry.clusters || {}).forEach(([clusterId, cluster]) => {
+      // resolved_name (see the PRD's upstream-enrichment automation) wins
+      // over the raw name the scanning device happened to record —
+      // resolved_name only ever gets set when that raw name was a generic
+      // "Cluster 0xNNNN"/"Manufacturer Specific" fallback in the first
+      // place, so preferring it here can only make a label more specific,
+      // never override a real name a local ZHA install already knew.
+      const bestName = cluster.resolved_name || cluster.name;
       if (!groups.has(clusterId)) {
-        groups.set(clusterId, { clusterName: cluster.name || clusterId, items: new Set() });
+        groups.set(clusterId, { clusterName: bestName || clusterId, items: new Set() });
       }
       const g = groups.get(clusterId);
-      if (cluster.name) g.clusterName = cluster.name;
+      if (bestName) g.clusterName = bestName;
       (cluster.commands_received || [])
         .filter((r) => r.present === true)
         .forEach((r) => g.items.add(r.name));

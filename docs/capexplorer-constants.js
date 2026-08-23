@@ -95,3 +95,33 @@ export function capabilityOutcomePhrase(id, fallbackName, manufacturer) {
     `Cluster 0x${n.toString(16).padStart(4, "0")}`
   );
 }
+
+// -----------------------------------------------------------------------
+// Device photos — ported verbatim from the ZHA Bindings Manager card
+// -----------------------------------------------------------------------
+// This is deliberately the exact same list and URL derivation as the
+// card's own Exploded view (src/zha-binding-map-card.js,
+// AMBIGUOUS_TUYA_MODELS / _deviceImageUrl), not a new/separate image
+// system for the website — see the PRD "Unknown Capability Labeling and
+// Device Photos". There is no shared build step between this repo and the
+// card's yet, so if either list/URL scheme ever changes, the other must
+// be updated by hand to match (flagged as a follow-up in the PRD).
+//
+// Tuya modules get reused verbatim across dozens of unrelated rebrands
+// (the "_TZxxxx_xxxxxxxx" manufacturer prefix sits on top of a shared
+// TS0xxx model number), so zigbee2mqtt.io's one image per model number is
+// frequently wrong for the specific product in someone's hand. These are
+// excluded rather than shown-and-often-wrong — callers should render a
+// generic fallback instead, never a broken-image glyph.
+export const AMBIGUOUS_TUYA_MODELS = [
+  "TS0601", "TS011F", "TS0201", "TS0203", "TS0041", "TS0042", "TS0043", "TS0044", "TS0121",
+];
+
+// Returns null when there's no safe photo to show (missing model, or one
+// of the excluded Tuya models above) — callers render a fallback shape in
+// that case, matching the card's own behavior.
+export function deviceImageUrl(model) {
+  if (!model) return null;
+  if (AMBIGUOUS_TUYA_MODELS.includes(model)) return null;
+  return `https://www.zigbee2mqtt.io/images/devices/${encodeURIComponent(model.replace(/\//g, "-"))}.png`;
+}
