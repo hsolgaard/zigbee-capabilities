@@ -3610,7 +3610,9 @@
             "name": "cluster_revision",
             "access": "READ"
           }
-        ]
+        ],
+        "resolved_name": "WorksWithAllHubs (WWAH)",
+        "resolved_source": "zigpy"
       }
     }
   },
@@ -4454,7 +4456,9 @@
         "name": "Cluster 0xfc57",
         "commands_received": [],
         "commands_received_scan_count": 0,
-        "attributes_confirmed": []
+        "attributes_confirmed": [],
+        "resolved_name": "WorksWithAllHubs (WWAH)",
+        "resolved_source": "zigpy"
       }
     }
   },
@@ -4784,7 +4788,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       },
@@ -4796,7 +4802,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       }
@@ -5409,7 +5417,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       },
@@ -5431,9 +5441,13 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
-        ]
+        ],
+        "resolved_name": "IkeaSmartPlugCluster",
+        "resolved_source": "zha-device-handlers"
       }
     }
   },
@@ -6339,7 +6353,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       }
@@ -7099,7 +7115,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       }
@@ -7947,7 +7965,9 @@
         "name": "Cluster 0xfc57",
         "commands_received": [],
         "commands_received_scan_count": 0,
-        "attributes_confirmed": []
+        "attributes_confirmed": [],
+        "resolved_name": "WorksWithAllHubs (WWAH)",
+        "resolved_source": "zigpy"
       }
     }
   },
@@ -8478,7 +8498,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       }
@@ -9019,7 +9041,9 @@
         "name": "Cluster 0xfc57",
         "commands_received": [],
         "commands_received_scan_count": 0,
-        "attributes_confirmed": []
+        "attributes_confirmed": [],
+        "resolved_name": "WorksWithAllHubs (WWAH)",
+        "resolved_source": "zigpy"
       }
     }
   },
@@ -9354,7 +9378,9 @@
         "name": "Cluster 0xfc57",
         "commands_received": [],
         "commands_received_scan_count": 0,
-        "attributes_confirmed": []
+        "attributes_confirmed": [],
+        "resolved_name": "WorksWithAllHubs (WWAH)",
+        "resolved_source": "zigpy"
       },
       "0xfc7c": {
         "name": "Cluster 0xfc7c",
@@ -9364,7 +9390,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       },
@@ -9428,7 +9456,9 @@
             "name": "10",
             "access": "READ|REPORT"
           }
-        ]
+        ],
+        "resolved_name": "IkeaAirpurifier",
+        "resolved_source": "zha-device-handlers"
       }
     }
   },
@@ -10016,7 +10046,9 @@
         "name": "Cluster 0xfc57",
         "commands_received": [],
         "commands_received_scan_count": 0,
-        "attributes_confirmed": []
+        "attributes_confirmed": [],
+        "resolved_name": "WorksWithAllHubs (WWAH)",
+        "resolved_source": "zigpy"
       }
     }
   },
@@ -11118,7 +11150,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       }
@@ -13991,7 +14025,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       }
@@ -15112,7 +15148,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       }
@@ -15900,7 +15938,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       }
@@ -16715,7 +16755,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       }
@@ -17490,7 +17532,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       }
@@ -18060,7 +18104,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       }
@@ -18630,7 +18676,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       }
@@ -19246,7 +19294,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       }
@@ -20367,7 +20417,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       }
@@ -21125,7 +21177,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       }
@@ -21719,7 +21773,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       }
@@ -23578,7 +23634,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       }
@@ -24331,7 +24389,9 @@
         "name": "Cluster 0xfc57",
         "commands_received": [],
         "commands_received_scan_count": 0,
-        "attributes_confirmed": []
+        "attributes_confirmed": [],
+        "resolved_name": "WorksWithAllHubs (WWAH)",
+        "resolved_source": "zigpy"
       }
     }
   },
@@ -24888,7 +24948,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       }
@@ -25390,7 +25452,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       },
@@ -25412,9 +25476,13 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
-        ]
+        ],
+        "resolved_name": "IkeaSmartPlugCluster",
+        "resolved_source": "zha-device-handlers"
       }
     }
   },
@@ -25719,7 +25787,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       },
@@ -26410,7 +26480,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       }
@@ -27472,12 +27544,16 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|WRITE|REPORT"
+            "access": "READ|WRITE|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           },
           {
             "id": 65534,
             "name": "65534",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "attribute_reporting_status",
+            "resolved_source": "zcl-spec"
           }
         ]
       },
@@ -28773,7 +28849,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|WRITE|REPORT"
+            "access": "READ|WRITE|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       },
@@ -28845,12 +28923,16 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           },
           {
             "id": 65534,
             "name": "65534",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "attribute_reporting_status",
+            "resolved_source": "zcl-spec"
           }
         ]
       },
@@ -30348,7 +30430,9 @@
         "name": "Manufacturer Specific",
         "commands_received": [],
         "commands_received_scan_count": 0,
-        "attributes_confirmed": []
+        "attributes_confirmed": [],
+        "resolved_name": "OsramLight",
+        "resolved_source": "zha-device-handlers"
       }
     }
   },
@@ -31829,7 +31913,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       },
@@ -31837,7 +31923,9 @@
         "name": "Cluster 0xfc57",
         "commands_received": [],
         "commands_received_scan_count": 0,
-        "attributes_confirmed": []
+        "attributes_confirmed": [],
+        "resolved_name": "WorksWithAllHubs (WWAH)",
+        "resolved_source": "zigpy"
       }
     }
   },
@@ -32185,15 +32273,21 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
-        ]
+        ],
+        "resolved_name": "SonoffCluster",
+        "resolved_source": "zha-device-handlers"
       },
       "0xfc57": {
         "name": "Cluster 0xfc57",
         "commands_received": [],
         "commands_received_scan_count": 0,
-        "attributes_confirmed": []
+        "attributes_confirmed": [],
+        "resolved_name": "WorksWithAllHubs (WWAH)",
+        "resolved_source": "zigpy"
       }
     }
   },
@@ -32798,7 +32892,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       },
@@ -32806,7 +32902,9 @@
         "name": "Cluster 0xfc57",
         "commands_received": [],
         "commands_received_scan_count": 0,
-        "attributes_confirmed": []
+        "attributes_confirmed": [],
+        "resolved_name": "WorksWithAllHubs (WWAH)",
+        "resolved_source": "zigpy"
       }
     }
   },
@@ -34264,7 +34362,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       },
@@ -34272,7 +34372,9 @@
         "name": "Cluster 0xfc57",
         "commands_received": [],
         "commands_received_scan_count": 0,
-        "attributes_confirmed": []
+        "attributes_confirmed": [],
+        "resolved_name": "WorksWithAllHubs (WWAH)",
+        "resolved_source": "zigpy"
       }
     }
   },
@@ -34714,7 +34816,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       },
@@ -34722,7 +34826,9 @@
         "name": "Cluster 0xfc57",
         "commands_received": [],
         "commands_received_scan_count": 0,
-        "attributes_confirmed": []
+        "attributes_confirmed": [],
+        "resolved_name": "WorksWithAllHubs (WWAH)",
+        "resolved_source": "zigpy"
       }
     }
   },
@@ -35545,7 +35651,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       },
@@ -35553,7 +35661,9 @@
         "name": "Cluster 0xfc57",
         "commands_received": [],
         "commands_received_scan_count": 0,
-        "attributes_confirmed": []
+        "attributes_confirmed": [],
+        "resolved_name": "WorksWithAllHubs (WWAH)",
+        "resolved_source": "zigpy"
       }
     }
   },
@@ -36536,7 +36646,9 @@
         "name": "Cluster 0xfc57",
         "commands_received": [],
         "commands_received_scan_count": 0,
-        "attributes_confirmed": []
+        "attributes_confirmed": [],
+        "resolved_name": "WorksWithAllHubs (WWAH)",
+        "resolved_source": "zigpy"
       }
     }
   },
@@ -36851,15 +36963,21 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
-        ]
+        ],
+        "resolved_name": "SonoffCluster",
+        "resolved_source": "zha-device-handlers"
       },
       "0xfc57": {
         "name": "Cluster 0xfc57",
         "commands_received": [],
         "commands_received_scan_count": 0,
-        "attributes_confirmed": []
+        "attributes_confirmed": [],
+        "resolved_name": "WorksWithAllHubs (WWAH)",
+        "resolved_source": "zigpy"
       }
     }
   }

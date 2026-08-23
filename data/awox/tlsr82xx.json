@@ -832,7 +832,9 @@
               "name": "cluster_revision",
               "access": "READ"
             }
-          ]
+          ],
+          "resolved_name": "WorksWithAllHubs (WWAH)",
+          "resolved_source": "zigpy"
         }
       }
     }

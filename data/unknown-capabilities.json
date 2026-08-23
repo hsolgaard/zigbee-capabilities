@@ -1,0 +1,938 @@
+{
+  "generated_at": "2026-08-23T17:04:34.456Z",
+  "unresolved_clusters": [
+    {
+      "id_hex": "0xfc7c",
+      "seen_on": [
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "BADRING Water Leakage Sensor",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "INSPELNING Smart plug",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "JETSTROM 3030 wall",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "LEPTITER Recessed spot light",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "RODRET wireless dimmer",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "STARKVIND Air purifier",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E14 CWS 470lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E14 WS opal 600lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E27 CWS 806lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E27 CWS opal 600lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E27 WS globe 1055lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E27 WS opal 1000lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E27 WW 806lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E27 WW clear 250lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E27 WW G95 CL 470lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb GU10 CWS 345lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb GU10 WS 400lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "\u001aTRADFRI bulb GU10 WW 345lm8",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI Signal Repeater",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TREDANSEN block-out cellul blind",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRETAKT Smart plug",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "VINDSTYRKA",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id_hex": "0xfc11",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZB2GS-L",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-1C-80/86",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-2C-80/86",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-3C-80/86",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id_hex": "0xfc81",
+      "seen_on": [
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "BADRING Water Leakage Sensor",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id_hex": "0xfc82",
+      "seen_on": [
+        {
+          "manufacturer": "innr",
+          "model": "SP 224",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "unresolved_attributes": [
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x0010",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZB2GS-L",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZB2GS",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "TRVZB",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-1C-80/86",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-2C-80/86",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-3C-80/86",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x001c",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZB2GS",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "TRVZB",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-1C-80/86",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-2C-80/86",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-3C-80/86",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBMINIR2",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc7c",
+      "id_hex": "0x0010",
+      "seen_on": [
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E27 CWS opal 600lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E27 WW 806lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E27 WW clear 250lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TREDANSEN block-out cellul blind",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x0014",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZB2GS-L",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZB2GS",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBMINIR2",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x0015",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZB2GS-L",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZB2GS",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBMINIR2",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x0001",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-1C-80/86",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-2C-80/86",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-3C-80/86",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x001a",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-1C-80/86",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-2C-80/86",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-3C-80/86",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBMINIR2",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x001b",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-1C-80/86",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-2C-80/86",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-3C-80/86",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBMINIR2",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc7c",
+      "id_hex": "0x0001",
+      "seen_on": [
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E14 CWS 470lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E27 CWS 806lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb GU10 CWS 345lm",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc7c",
+      "id_hex": "0x0002",
+      "seen_on": [
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E14 CWS 470lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E27 CWS 806lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb GU10 CWS 345lm",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc7c",
+      "id_hex": "0x0003",
+      "seen_on": [
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E14 CWS 470lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E27 CWS 806lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb GU10 CWS 345lm",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x0011",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "SNZB-06P",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "TRVZB",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc31",
+      "id_hex": "0x0000",
+      "seen_on": [
+        {
+          "manufacturer": "Inovelli",
+          "model": "VZM31-SN",
+          "count": 1
+        },
+        {
+          "manufacturer": "Inovelli",
+          "model": "VZM32-SN",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc31",
+      "id_hex": "0x0107",
+      "seen_on": [
+        {
+          "manufacturer": "Inovelli",
+          "model": "VZM31-SN",
+          "count": 1
+        },
+        {
+          "manufacturer": "Inovelli",
+          "model": "VZM32-SN",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x0021",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "TRVZB",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc7d",
+      "id_hex": "0x0009",
+      "seen_on": [
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "STARKVIND Air purifier",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc7d",
+      "id_hex": "0x000a",
+      "seen_on": [
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "STARKVIND Air purifier",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc82",
+      "id_hex": "0x0010",
+      "seen_on": [
+        {
+          "manufacturer": "innr",
+          "model": "SP 224",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc82",
+      "id_hex": "0x0011",
+      "seen_on": [
+        {
+          "manufacturer": "innr",
+          "model": "SP 224",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc82",
+      "id_hex": "0x0012",
+      "seen_on": [
+        {
+          "manufacturer": "innr",
+          "model": "SP 224",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc82",
+      "id_hex": "0x0013",
+      "seen_on": [
+        {
+          "manufacturer": "innr",
+          "model": "SP 224",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc82",
+      "id_hex": "0x0014",
+      "seen_on": [
+        {
+          "manufacturer": "innr",
+          "model": "SP 224",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc82",
+      "id_hex": "0x0015",
+      "seen_on": [
+        {
+          "manufacturer": "innr",
+          "model": "SP 224",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc31",
+      "id_hex": "0x0017",
+      "seen_on": [
+        {
+          "manufacturer": "Inovelli",
+          "model": "VZM32-SN",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc31",
+      "id_hex": "0x0018",
+      "seen_on": [
+        {
+          "manufacturer": "Inovelli",
+          "model": "VZM32-SN",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc31",
+      "id_hex": "0x0022",
+      "seen_on": [
+        {
+          "manufacturer": "Inovelli",
+          "model": "VZM32-SN",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x0022",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZB2GS",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x0012",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x0016",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x001d",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x001e",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x001f",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x0020",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x4001",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x4002",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x4003",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x4004",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x4005",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x4006",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x7004",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x7005",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x7006",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x2002",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "SNZB-06P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x6001",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "TRVZB",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x6008",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "TRVZB",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x6009",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "TRVZB",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x600a",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "TRVZB",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x600f",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "TRVZB",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x6010",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "TRVZB",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x6012",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "TRVZB",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x6013",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "TRVZB",
+          "count": 1
+        }
+      ]
+    }
+  ]
+}
