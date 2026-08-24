@@ -1300,5 +1300,11 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "_TZ3000_3n2minvf",
+    "checked_model": "TS0004",
+    "blakadder_declined": true
   }
 }
