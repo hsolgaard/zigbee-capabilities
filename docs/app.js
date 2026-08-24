@@ -126,9 +126,36 @@ async function init() {
   }
 
   renderDiscoveries();
+  const deepLinked = applyDeepLinkFromQueryString();
   buildSearch();
+  if (deepLinked) {
+    syncSearchSelects();
+    const advanced = document.querySelector(".advanced-filters");
+    if (advanced) advanced.open = true;
+  }
   buildCompare();
   renderUnknowns(); // fire-and-forget — its own small section, shouldn't block the rest of the page
+}
+
+// Lets an external caller (currently: the ZHA Bindings Manager card's
+// Capability Explorer tab — see zha-binding-map-card.js's
+// _capExpWebsiteUrl()) deep-link straight to one device's search result
+// instead of just the site root, via ?manufacturer=&model=. Sets the raw
+// values into `search` before buildSearch()'s own runSearch() call picks
+// them up, so the very first render already shows the right device — no
+// exact-option match required, since searchIndex()'s manufacturer/model
+// facets are substring matches, not select-option equality (this also
+// means a raw Tuya manufacturer string like "_TZ3000_xxxx" still filters
+// correctly even though the dropdown itself only ever offers "Generic
+// Tuya" as an option for that family — see facetValues()/runSearch()).
+function applyDeepLinkFromQueryString() {
+  const params = new URLSearchParams(window.location.search);
+  const manufacturer = params.get("manufacturer");
+  const model = params.get("model");
+  if (!manufacturer && !model) return false;
+  if (manufacturer) search.manufacturer = manufacturer;
+  if (model) search.model = model;
+  return true;
 }
 
 // ---- Unidentified capabilities (the "known unknowns" tracker) ----
