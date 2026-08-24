@@ -3963,7 +3963,12 @@
   {
     "manufacturer_slug": "awox",
     "model_slug": "tlsr82xx",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "AwoX",
+      "checked_model": "TLSR82xx",
+      "blakadder_declined": true
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
