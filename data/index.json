@@ -3662,7 +3662,12 @@
   {
     "manufacturer_slug": "tz3290-gnl5a6a5xvql7c2a",
     "model_slug": "ts1201",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "_TZ3290_gnl5a6a5xvql7c2a",
+      "checked_model": "TS1201",
+      "blakadder_declined": true
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -3882,7 +3887,12 @@
   {
     "manufacturer_slug": "tz3290-gnl5a6a5xvql7c2a",
     "model_slug": "ts1201",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "_TZ3290_gnl5a6a5xvql7c2a",
+      "checked_model": "TS1201",
+      "blakadder_declined": true
+    },
     "endpoint": 242,
     "firmware": null,
     "scan_count": 1,
