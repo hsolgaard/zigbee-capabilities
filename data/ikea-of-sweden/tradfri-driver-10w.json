@@ -1268,5 +1268,14 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Ikea_ICPSHC24-10EU-IL-1.html",
+      "match_method": "manual",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "IKEA of Sweden",
+    "checked_model": "TRADFRI Driver 10W"
   }
 }
