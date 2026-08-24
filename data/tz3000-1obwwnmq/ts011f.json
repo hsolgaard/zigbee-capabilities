@@ -540,10 +540,6 @@
       "confidence": "high"
     },
     "checked_manufacturer": "_TZ3000_1obwwnmq",
-    "checked_model": "TS011F",
-    "manufacturer": {
-      "url": "https://www.lidl.com/",
-      "confidence": "high"
-    }
+    "checked_model": "TS011F"
   }
 }

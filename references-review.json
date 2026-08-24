@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-24T08:06:58.342Z",
+  "generated_at": "2026-08-24T09:42:48.448Z",
   "processed": 69,
   "blakadderMatches": 34,
-  "manufacturerLinks": 31,
-  "manualReview": 16,
+  "manufacturerLinks": 29,
+  "manualReview": 18,
   "noMatch": 20,
   "ambiguous": [
     {
@@ -236,6 +236,13 @@
       ]
     },
     {
+      "file": "/home/claude/zc-repo-final/data/smartwings/wm25-l-z.json",
+      "manufacturer": "Smartwings",
+      "model": "WM25/L-Z",
+      "kind": "manufacturer_link_only",
+      "reason": "Blakadder match is high-confidence (https://zigbee.blakadder.com/Smartwings_WM25LZ.html), but its manufacturer link isn't clean/populated. Best guess from its other links: https://www.smartwingshome.com/"
+    },
+    {
       "file": "/home/claude/zc-repo-final/data/sonoff/snzb-01m.json",
       "manufacturer": "SONOFF",
       "model": "SNZB-01M",
@@ -285,6 +292,13 @@
           ]
         }
       ]
+    },
+    {
+      "file": "/home/claude/zc-repo-final/data/tz3000-1obwwnmq/ts011f.json",
+      "manufacturer": "_TZ3000_1obwwnmq",
+      "model": "TS011F",
+      "kind": "manufacturer_link_only",
+      "reason": "Blakadder match is high-confidence (https://zigbee.blakadder.com/Lidl_HG06338.html), but its manufacturer link isn't clean/populated. Best guess from its other links: https://www.lidl.com/"
     },
     {
       "file": "/home/claude/zc-repo-final/data/tz3000-3n2minvf/ts0004.json",
