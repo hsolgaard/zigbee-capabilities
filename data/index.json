@@ -20755,7 +20755,15 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-ww-clear-250lm",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ikea_LED1934G3.html",
+        "match_method": "manual",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "IKEA of Sweden",
+      "checked_model": "TRADFRI bulb E27 WW clear 250lm"
+    },
     "endpoint": 1,
     "firmware": "2.3.093",
     "scan_count": 1,
@@ -21311,7 +21319,15 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-ww-clear-250lm",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ikea_LED1934G3.html",
+        "match_method": "manual",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "IKEA of Sweden",
+      "checked_model": "TRADFRI bulb E27 WW clear 250lm"
+    },
     "endpoint": 242,
     "firmware": "2.3.093",
     "scan_count": 1,
