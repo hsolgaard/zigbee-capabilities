@@ -482,5 +482,11 @@
       ],
       "clusters": {}
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "_TZ3290_gnl5a6a5xvql7c2a",
+    "checked_model": "TS1201",
+    "blakadder_declined": true
   }
 }
