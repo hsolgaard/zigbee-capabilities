@@ -4704,9 +4704,17 @@
     "manufacturer_slug": "frient-a-s",
     "model_slug": "smszb-120",
     "references": {
-      "blakadder": null,
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Develco_SMSZB-120.html",
+        "match_method": "vendor_alias_model_exact",
+        "confidence": "high"
+      },
       "checked_manufacturer": "frient A/S",
-      "checked_model": "SMSZB-120"
+      "checked_model": "SMSZB-120",
+      "manufacturer": {
+        "url": "https://frient.com/products/intelligent-smoke-alarm/",
+        "confidence": "high"
+      }
     },
     "endpoint": 1,
     "firmware": null,
@@ -4745,9 +4753,17 @@
     "manufacturer_slug": "frient-a-s",
     "model_slug": "smszb-120",
     "references": {
-      "blakadder": null,
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Develco_SMSZB-120.html",
+        "match_method": "vendor_alias_model_exact",
+        "confidence": "high"
+      },
       "checked_manufacturer": "frient A/S",
-      "checked_model": "SMSZB-120"
+      "checked_model": "SMSZB-120",
+      "manufacturer": {
+        "url": "https://frient.com/products/intelligent-smoke-alarm/",
+        "confidence": "high"
+      }
     },
     "endpoint": 35,
     "firmware": null,
@@ -5112,9 +5128,17 @@
     "manufacturer_slug": "frient-a-s",
     "model_slug": "smszb-120",
     "references": {
-      "blakadder": null,
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Develco_SMSZB-120.html",
+        "match_method": "vendor_alias_model_exact",
+        "confidence": "high"
+      },
       "checked_manufacturer": "frient A/S",
-      "checked_model": "SMSZB-120"
+      "checked_model": "SMSZB-120",
+      "manufacturer": {
+        "url": "https://frient.com/products/intelligent-smoke-alarm/",
+        "confidence": "high"
+      }
     },
     "endpoint": 38,
     "firmware": null,
