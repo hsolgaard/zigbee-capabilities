@@ -3307,7 +3307,12 @@
   {
     "manufacturer_slug": "tz3210-fgwhjm9j",
     "model_slug": "ts011f",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "_TZ3210_fgwhjm9j",
+      "checked_model": "TS011F",
+      "blakadder_declined": true
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
