@@ -38,6 +38,29 @@ function formatDate(iso) {
   return d.toLocaleDateString(undefined, { month: "short", year: "numeric" });
 }
 
+// ---- Generic Tuya grouping (website-only display/filter convenience) ----
+// Tuya modules get reused verbatim across dozens of unrelated rebrands: the
+// underscore-prefixed manufacturer string ZHA/Z2M actually see (e.g.
+// "_TZ3000_46t1rvdu") is an internal Tuya production code, not a name
+// anyone recognizes as their own device. This is display/filter-layer
+// only — deliberately does NOT touch capexplorer.js (the card's own
+// shared, copied-verbatim source of truth) or the underlying manufacturer
+// data anywhere: matching, dedup, and submissions all still need the raw
+// string exactly as scanned. See AMBIGUOUS_TUYA_MODELS in
+// capexplorer-constants.js for the same "same numbers, different real
+// products" problem already accepted for device photos.
+const GENERIC_TUYA_LABEL = "Generic Tuya";
+const TUYA_MANUFACTURER_PATTERN = /^_T[A-Z0-9]+_/i;
+function isGenericTuyaManufacturer(m) {
+  return TUYA_MANUFACTURER_PATTERN.test(String(m || ""));
+}
+// For headings/labels — keeps the raw code visible (still searchable,
+// still unambiguous) while giving casual readers context.
+function manufacturerDisplayLabel(m) {
+  if (!m) return "—";
+  return isGenericTuyaManufacturer(m) ? `${GENERIC_TUYA_LABEL} (${m})` : m;
+}
+
 let INDEX = [];
 const search = { manufacturer: "", model: "", cluster: "", command: "", attribute: "", firmware: "" };
 const expandedDevices = new Set(); // keys are `${manufacturer_slug}|${model_slug}`
@@ -177,8 +200,18 @@ const SEARCH_FIELDS = ["manufacturer", "model", "cluster", "command", "attribute
 
 function facetValues(field) {
   const set = new Set();
-  if (field === "manufacturer") INDEX.forEach((e) => e.manufacturer && set.add(e.manufacturer));
-  else if (field === "model") INDEX.forEach((e) => e.model && set.add(e.model));
+  if (field === "manufacturer") {
+    let hasGenericTuya = false;
+    INDEX.forEach((e) => {
+      if (!e.manufacturer) return;
+      if (isGenericTuyaManufacturer(e.manufacturer)) hasGenericTuya = true;
+      else set.add(e.manufacturer);
+    });
+    // One "Generic Tuya" entry stands in for every _TZ.../_TY... code so
+    // the dropdown isn't dominated by strings nobody recognizes — see
+    // runSearch() for how selecting it expands back to all of them.
+    if (hasGenericTuya) set.add(GENERIC_TUYA_LABEL);
+  } else if (field === "model") INDEX.forEach((e) => e.model && set.add(e.model));
   else if (field === "firmware") INDEX.forEach((e) => set.add(e.firmware || "unknown"));
   else if (field === "cluster") {
     INDEX.forEach((e) => Object.values(e.clusters || {}).forEach((c) => c.name && set.add(c.name)));
@@ -352,7 +385,14 @@ function starsHtml(rating) {
 function runSearch() {
   const resultsEl = document.getElementById("results-body");
   const countEl = document.getElementById("search-count");
-  const matched = searchIndex(INDEX, search);
+  // "Generic Tuya" isn't a real manufacturer string any entry actually
+  // has, so it can't go through capexplorer.js's own (shared, untouched)
+  // substring match — ask it for everything else, then expand the
+  // sentinel back out to every _TZ/_TY entry here instead.
+  const isGenericTuyaFilter = search.manufacturer === GENERIC_TUYA_LABEL;
+  const matched = searchIndex(INDEX, isGenericTuyaFilter ? { ...search, manufacturer: "" } : search).filter(
+    (e) => !isGenericTuyaFilter || isGenericTuyaManufacturer(e.manufacturer)
+  );
   const devices = groupSearchResultsByDevice(matched, INDEX);
   const shown = devices.slice(0, 100);
 
@@ -381,7 +421,7 @@ function runSearch() {
           <div class="device-card-top">
             ${devicePhotoHtml(r.model)}
             <div class="device-card-main">
-              <div class="device-card-header">${escapeHtml(r.manufacturer || "—")} ${escapeHtml(r.model || "—")}</div>
+              <div class="device-card-header">${escapeHtml(manufacturerDisplayLabel(r.manufacturer))} ${escapeHtml(r.model || "—")}</div>
               <div class="trust-panel">
                 ${starsHtml(r.rating)}
                 <div class="trust-text">
@@ -431,8 +471,13 @@ function externalReferencesHtml(references, manufacturer) {
   }
   if (references.manufacturer && references.manufacturer.url && references.manufacturer.confidence === "high") {
     // Prefer the device's own recognizable manufacturer name (e.g.
-    // "SONOFF") over the generic word "Manufacturer" per the PRD's UX spec.
-    links.push({ label: manufacturer ? manufacturer : "Manufacturer", url: references.manufacturer.url });
+    // "SONOFF") over the generic word "Manufacturer" per the PRD's UX spec
+    // — "Generic Tuya" counts as recognizable here, an internal Tuya
+    // production code does not.
+    const mfrLabel = manufacturer
+      ? (isGenericTuyaManufacturer(manufacturer) ? GENERIC_TUYA_LABEL : manufacturer)
+      : "Manufacturer";
+    links.push({ label: mfrLabel, url: references.manufacturer.url });
   }
   if (!links.length) return "";
   const linksHtml = links

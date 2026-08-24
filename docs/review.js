@@ -13,6 +13,18 @@ const REVIEW_URL = `https://raw.githubusercontent.com/${CAPABILITY_DB_REPO}/${RE
 const PR_SEARCH_URL = `https://github.com/${CAPABILITY_DB_REPO}/pulls?q=${encodeURIComponent(`is:pr is:open head:${REVIEW_BRANCH}`)}`;
 const RAW_MAIN_URL = (file) => `https://raw.githubusercontent.com/${CAPABILITY_DB_REPO}/main/${file}`;
 
+// Same pattern/label as app.js's manufacturerDisplayLabel — intentionally
+// duplicated rather than imported (this page and the main site don't
+// otherwise share code, and it's 3 lines) rather than pulled from
+// capexplorer-constants.js, which is the card's own copied-verbatim
+// source of truth and shouldn't gain website-only concepts.
+const GENERIC_TUYA_LABEL = "Generic Tuya";
+const TUYA_MANUFACTURER_PATTERN = /^_T[A-Z0-9]+_/i;
+function manufacturerDisplayLabel(m) {
+  if (!m) return "—";
+  return TUYA_MANUFACTURER_PATTERN.test(m) ? `${GENERIC_TUYA_LABEL} (${m})` : m;
+}
+
 function escapeHtml(s) {
   return String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({
     "&": "&amp;",
@@ -129,7 +141,7 @@ function cardShell(manufacturer, model, reason) {
   card.className = "device-card review-card";
   const head = document.createElement("div");
   head.className = "device-card-header";
-  head.textContent = `${manufacturer} ${model}`;
+  head.textContent = `${manufacturerDisplayLabel(manufacturer)} ${model}`;
   card.appendChild(head);
   if (reason) {
     const r = document.createElement("p");
