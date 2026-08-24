@@ -1,13 +1,14 @@
 {
-  "generated_at": "2026-08-24T09:42:48.448Z",
-  "processed": 69,
-  "blakadderMatches": 34,
-  "manufacturerLinks": 29,
+  "generated_at": "2026-08-24T09:58:15.398Z",
+  "processed": 15,
+  "blakadderMatches": 0,
+  "manufacturerLinks": 0,
   "manualReview": 18,
-  "noMatch": 20,
+  "noMatch": 0,
+  "deadLinksCleared": 0,
   "ambiguous": [
     {
-      "file": "/home/claude/zc-repo-final/data/awox/tlsr82xx.json",
+      "file": "data/awox/tlsr82xx.json",
       "manufacturer": "AwoX",
       "model": "TLSR82xx",
       "kind": "blakadder_ambiguous",
@@ -64,7 +65,7 @@
       ]
     },
     {
-      "file": "/home/claude/zc-repo-final/data/ewelink/snzb-04p.json",
+      "file": "data/ewelink/snzb-04p.json",
       "manufacturer": "eWeLink",
       "model": "SNZB-04P",
       "kind": "blakadder_ambiguous",
@@ -79,7 +80,7 @@
       ]
     },
     {
-      "file": "/home/claude/zc-repo-final/data/ikea-of-sweden/remote-control-n2.json",
+      "file": "data/ikea-of-sweden/remote-control-n2.json",
       "manufacturer": "IKEA of Sweden",
       "model": "Remote Control N2",
       "kind": "blakadder_ambiguous",
@@ -104,7 +105,7 @@
       ]
     },
     {
-      "file": "/home/claude/zc-repo-final/data/ikea-of-sweden/tradfri-bulb-e14-ws-470lm.json",
+      "file": "data/ikea-of-sweden/tradfri-bulb-e14-ws-470lm.json",
       "manufacturer": "IKEA of Sweden",
       "model": "TRADFRI bulb E14 WS 470lm",
       "kind": "blakadder_ambiguous",
@@ -131,7 +132,7 @@
       ]
     },
     {
-      "file": "/home/claude/zc-repo-final/data/ikea-of-sweden/tradfri-bulb-e27-ww-clear-250lm.json",
+      "file": "data/ikea-of-sweden/tradfri-bulb-e27-ww-clear-250lm.json",
       "manufacturer": "IKEA of Sweden",
       "model": "TRADFRI bulb E27 WW clear 250lm",
       "kind": "blakadder_ambiguous",
@@ -157,7 +158,7 @@
       ]
     },
     {
-      "file": "/home/claude/zc-repo-final/data/ikea-of-sweden/tradfri-bulb-gu10-ws-400lm.json",
+      "file": "data/ikea-of-sweden/tradfri-bulb-gu10-ws-400lm.json",
       "manufacturer": "IKEA of Sweden",
       "model": "TRADFRI bulb GU10 WS 400lm",
       "kind": "blakadder_ambiguous",
@@ -182,7 +183,7 @@
       ]
     },
     {
-      "file": "/home/claude/zc-repo-final/data/ikea-of-sweden/tradfri-driver-10w.json",
+      "file": "data/ikea-of-sweden/tradfri-driver-10w.json",
       "manufacturer": "IKEA of Sweden",
       "model": "TRADFRI Driver 10W",
       "kind": "blakadder_ambiguous",
@@ -209,7 +210,7 @@
       ]
     },
     {
-      "file": "/home/claude/zc-repo-final/data/ikea-of-sweden/tradfri-driver-30w.json",
+      "file": "data/ikea-of-sweden/tradfri-driver-30w.json",
       "manufacturer": "IKEA of Sweden",
       "model": "TRADFRI Driver 30W",
       "kind": "blakadder_ambiguous",
@@ -236,14 +237,7 @@
       ]
     },
     {
-      "file": "/home/claude/zc-repo-final/data/smartwings/wm25-l-z.json",
-      "manufacturer": "Smartwings",
-      "model": "WM25/L-Z",
-      "kind": "manufacturer_link_only",
-      "reason": "Blakadder match is high-confidence (https://zigbee.blakadder.com/Smartwings_WM25LZ.html), but its manufacturer link isn't clean/populated. Best guess from its other links: https://www.smartwingshome.com/"
-    },
-    {
-      "file": "/home/claude/zc-repo-final/data/sonoff/snzb-01m.json",
+      "file": "data/sonoff/snzb-01m.json",
       "manufacturer": "SONOFF",
       "model": "SNZB-01M",
       "kind": "blakadder_ambiguous",
@@ -261,14 +255,7 @@
       ]
     },
     {
-      "file": "/home/claude/zc-repo-final/data/sonoff/trvzb.json",
-      "manufacturer": "SONOFF",
-      "model": "TRVZB",
-      "kind": "manufacturer_link_only",
-      "reason": "Blakadder match is high-confidence (https://zigbee.blakadder.com/Sonoff_TRVZB.html), but its manufacturer link isn't clean/populated. Best guess from its other links: https://sonoff.tech/products/sonoff-zigbee-thermostatic-radiator-valve"
-    },
-    {
-      "file": "/home/claude/zc-repo-final/data/tyzb01-wqcac7lo/ts0205.json",
+      "file": "data/tyzb01-wqcac7lo/ts0205.json",
       "manufacturer": "_TYZB01_wqcac7lo",
       "model": "TS0205",
       "kind": "blakadder_ambiguous",
@@ -294,14 +281,7 @@
       ]
     },
     {
-      "file": "/home/claude/zc-repo-final/data/tz3000-1obwwnmq/ts011f.json",
-      "manufacturer": "_TZ3000_1obwwnmq",
-      "model": "TS011F",
-      "kind": "manufacturer_link_only",
-      "reason": "Blakadder match is high-confidence (https://zigbee.blakadder.com/Lidl_HG06338.html), but its manufacturer link isn't clean/populated. Best guess from its other links: https://www.lidl.com/"
-    },
-    {
-      "file": "/home/claude/zc-repo-final/data/tz3000-3n2minvf/ts0004.json",
+      "file": "data/tz3000-3n2minvf/ts0004.json",
       "manufacturer": "_TZ3000_3n2minvf",
       "model": "TS0004",
       "kind": "blakadder_ambiguous",
@@ -336,7 +316,7 @@
       ]
     },
     {
-      "file": "/home/claude/zc-repo-final/data/tz3000-46t1rvdu/ts0001.json",
+      "file": "data/tz3000-46t1rvdu/ts0001.json",
       "manufacturer": "_TZ3000_46t1rvdu",
       "model": "TS0001",
       "kind": "blakadder_ambiguous",
@@ -553,7 +533,7 @@
       ]
     },
     {
-      "file": "/home/claude/zc-repo-final/data/tz3000-pf7swkqp/ts0003.json",
+      "file": "data/tz3000-pf7swkqp/ts0003.json",
       "manufacturer": "_TZ3000_pf7swkqp",
       "model": "TS0003",
       "kind": "blakadder_ambiguous",
@@ -667,7 +647,7 @@
       ]
     },
     {
-      "file": "/home/claude/zc-repo-final/data/tz3210-fgwhjm9j/ts011f.json",
+      "file": "data/tz3210-fgwhjm9j/ts011f.json",
       "manufacturer": "_TZ3210_fgwhjm9j",
       "model": "TS011F",
       "kind": "blakadder_ambiguous",
@@ -1319,7 +1299,7 @@
       ]
     },
     {
-      "file": "/home/claude/zc-repo-final/data/tz3290-gnl5a6a5xvql7c2a/ts1201.json",
+      "file": "data/tz3290-gnl5a6a5xvql7c2a/ts1201.json",
       "manufacturer": "_TZ3290_gnl5a6a5xvql7c2a",
       "model": "TS1201",
       "kind": "blakadder_ambiguous",
@@ -1337,6 +1317,27 @@
           ]
         }
       ]
+    },
+    {
+      "file": "data/smartwings/wm25-l-z.json",
+      "manufacturer": "Smartwings",
+      "model": "WM25/L-Z",
+      "kind": "manufacturer_link_only",
+      "reason": "Blakadder match is high-confidence (https://zigbee.blakadder.com/Smartwings_WM25LZ.html); pre-filled manufacturer link \"https://www.smartwingshome.com/\" on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
+    },
+    {
+      "file": "data/sonoff/trvzb.json",
+      "manufacturer": "SONOFF",
+      "model": "TRVZB",
+      "kind": "manufacturer_link_only",
+      "reason": "Blakadder match is high-confidence (https://zigbee.blakadder.com/Sonoff_TRVZB.html); pre-filled manufacturer link \"https://sonoff.tech/products/sonoff-zigbee-thermostatic-radiator-valve\" on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
+    },
+    {
+      "file": "data/tz3000-1obwwnmq/ts011f.json",
+      "manufacturer": "_TZ3000_1obwwnmq",
+      "model": "TS011F",
+      "kind": "manufacturer_link_only",
+      "reason": "Blakadder match is high-confidence (https://zigbee.blakadder.com/Lidl_HG06338.html); pre-filled manufacturer link \"https://www.lidl.com/\" on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
     }
   ]
 }
