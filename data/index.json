@@ -2,7 +2,12 @@
   {
     "manufacturer_slug": "tyzb01-wqcac7lo",
     "model_slug": "ts0205",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "_TYZB01_wqcac7lo",
+      "checked_model": "TS0205",
+      "blakadder_declined": true
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
