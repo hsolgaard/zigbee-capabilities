@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T05:45:34.842Z",
+  "generated_at": "2026-08-24T05:45:57.163Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -37,6 +37,11 @@
         {
           "manufacturer": "IKEA of Sweden",
           "model": "TRADFRI bulb E14 CWS 470lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E14 WS candle 470lm",
           "count": 1
         },
         {
