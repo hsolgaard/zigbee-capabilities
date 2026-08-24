@@ -838,5 +838,11 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "AwoX",
+    "checked_model": "TLSR82xx",
+    "blakadder_declined": true
   }
 }
