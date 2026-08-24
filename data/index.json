@@ -248,7 +248,11 @@
         "confidence": "high"
       },
       "checked_manufacturer": "_TZ3000_1obwwnmq",
-      "checked_model": "TS011F"
+      "checked_model": "TS011F",
+      "manufacturer": {
+        "url": "https://www.lidl.com/",
+        "confidence": "high"
+      }
     },
     "endpoint": 2,
     "firmware": null,
@@ -384,7 +388,11 @@
         "confidence": "high"
       },
       "checked_manufacturer": "_TZ3000_1obwwnmq",
-      "checked_model": "TS011F"
+      "checked_model": "TS011F",
+      "manufacturer": {
+        "url": "https://www.lidl.com/",
+        "confidence": "high"
+      }
     },
     "endpoint": 3,
     "firmware": null,
@@ -35021,7 +35029,11 @@
         "confidence": "high"
       },
       "checked_manufacturer": "Smartwings",
-      "checked_model": "WM25/L-Z"
+      "checked_model": "WM25/L-Z",
+      "manufacturer": {
+        "url": "https://www.smartwingshome.com/",
+        "confidence": "high"
+      }
     },
     "endpoint": 1,
     "firmware": null,
@@ -37220,7 +37232,11 @@
         "confidence": "high"
       },
       "checked_manufacturer": "SONOFF",
-      "checked_model": "TRVZB"
+      "checked_model": "TRVZB",
+      "manufacturer": {
+        "url": "https://sonoff.tech/products/sonoff-zigbee-thermostatic-radiator-valve",
+        "confidence": "high"
+      }
     },
     "endpoint": 1,
     "firmware": "1.4.4",
