@@ -603,6 +603,23 @@ jobs:
                   fs.writeFileSync(file, JSON.stringify(parsed, null, 2) + "\n");
                   changedFiles++;
                 } else if (result.status === "ambiguous") {
+                  // A device that already has a resolved Blakadder reference
+                  // (hand-applied via the review page, or an earlier
+                  // high-confidence auto-match) isn't re-flagged just
+                  // because a forced recheck's fresh algorithmic pass can't
+                  // independently reach the same answer on its own —
+                  // "ambiguous" here just means the matcher can't tell two
+                  // near-identical Blakadder pages apart (e.g. regional
+                  // variants), not that the existing, already-confirmed
+                  // answer is wrong. Bug found 2026-08-24: without this
+                  // guard, every forced recheck (monthly schedule, or a
+                  // manual "Run workflow") silently re-added already-fixed
+                  // devices back into references-review.json forever, even
+                  // though their data file was correct and untouched.
+                  if (currentRefs && currentRefs.blakadder && currentRefs.blakadder.url) {
+                    skipped++;
+                    continue;
+                  }
                   manualReview++;
                   ambiguousReport.push({
                     file, manufacturer, model, kind: "blakadder_ambiguous",
@@ -614,6 +631,20 @@ jobs:
                   // every run) until a human looks at references-review.json
                   // and hand-edits this device's `references` block.
                 } else {
+                  // Same idea as the ambiguous case just above: don't
+                  // silently erase an already-resolved reference just
+                  // because this run's fresh pass can't independently
+                  // re-derive it (Blakadder's own data can shift under us).
+                  // Surface it for a human to confirm instead of wiping it.
+                  if (currentRefs && currentRefs.blakadder && currentRefs.blakadder.url) {
+                    manualReview++;
+                    ambiguousReport.push({
+                      file, manufacturer, model, kind: "match_changed",
+                      previousUrl: currentRefs.blakadder.url, newUrl: null,
+                      reason: `Currently references ${currentRefs.blakadder.url}; a fresh recheck no longer finds any match for it. Confirm whether this reference is still correct.`,
+                    });
+                    continue;
+                  }
                   noMatch++;
                   parsed.references = { blakadder: null, checked_manufacturer: manufacturer, checked_model: model };
                   fs.writeFileSync(file, JSON.stringify(parsed, null, 2) + "\n");
