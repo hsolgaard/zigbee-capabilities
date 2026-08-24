@@ -638,5 +638,18 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Sonoff_SNZB-04P.html",
+      "match_method": "vendor_alias_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "eWeLink",
+    "checked_model": "SNZB-04P",
+    "manufacturer": {
+      "url": "https://itead.cc/product/sonoff-zigbee-door-window-sensor-snzb-04p/",
+      "confidence": "high"
+    }
   }
 }
