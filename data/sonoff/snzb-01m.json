@@ -593,5 +593,15 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "SONOFF",
+    "checked_model": "SNZB-01M",
+    "blakadder_declined": true,
+    "manufacturer": {
+      "url": "https://sonoff.tech/en-uk/products/sonoff-orb-4-in-1-zigbee-smart-scene-button-snzb-01m",
+      "confidence": "high"
+    }
   }
 }
