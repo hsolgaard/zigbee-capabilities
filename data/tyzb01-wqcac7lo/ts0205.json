@@ -488,5 +488,11 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "_TYZB01_wqcac7lo",
+    "checked_model": "TS0205",
+    "blakadder_declined": true
   }
 }
