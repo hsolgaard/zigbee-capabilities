@@ -4380,7 +4380,19 @@
   {
     "manufacturer_slug": "ewelink",
     "model_slug": "snzb-04p",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Sonoff_SNZB-04P.html",
+        "match_method": "vendor_alias_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "eWeLink",
+      "checked_model": "SNZB-04P",
+      "manufacturer": {
+        "url": "https://itead.cc/product/sonoff-zigbee-door-window-sensor-snzb-04p/",
+        "confidence": "high"
+      }
+    },
     "endpoint": 1,
     "firmware": "2.2.0",
     "scan_count": 1,
@@ -36870,7 +36882,16 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "snzb-01m",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "SONOFF",
+      "checked_model": "SNZB-01M",
+      "blakadder_declined": true,
+      "manufacturer": {
+        "url": "https://sonoff.tech/en-uk/products/sonoff-orb-4-in-1-zigbee-smart-scene-button-snzb-01m",
+        "confidence": "high"
+      }
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -36898,7 +36919,16 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "snzb-01m",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "SONOFF",
+      "checked_model": "SNZB-01M",
+      "blakadder_declined": true,
+      "manufacturer": {
+        "url": "https://sonoff.tech/en-uk/products/sonoff-orb-4-in-1-zigbee-smart-scene-button-snzb-01m",
+        "confidence": "high"
+      }
+    },
     "endpoint": 2,
     "firmware": null,
     "scan_count": 1,
@@ -36988,7 +37018,16 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "snzb-01m",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "SONOFF",
+      "checked_model": "SNZB-01M",
+      "blakadder_declined": true,
+      "manufacturer": {
+        "url": "https://sonoff.tech/en-uk/products/sonoff-orb-4-in-1-zigbee-smart-scene-button-snzb-01m",
+        "confidence": "high"
+      }
+    },
     "endpoint": 3,
     "firmware": null,
     "scan_count": 1,
@@ -37078,7 +37117,16 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "snzb-01m",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "SONOFF",
+      "checked_model": "SNZB-01M",
+      "blakadder_declined": true,
+      "manufacturer": {
+        "url": "https://sonoff.tech/en-uk/products/sonoff-orb-4-in-1-zigbee-smart-scene-button-snzb-01m",
+        "confidence": "high"
+      }
+    },
     "endpoint": 4,
     "firmware": null,
     "scan_count": 1,
