@@ -55,6 +55,20 @@ name: Enrich external references
 #       not guessing. Resolving one of these still means hand-editing the
 #       device file yourself in a normal commit.
 #
+# docs/review.html is a read-only browsing aid over references-review.json
+# (fetched client-side straight from this branch on raw.githubusercontent.com
+# — nothing server-side) that turns each entry into a card with the actual
+# links and a "Copy fix" button producing the exact JSON to paste when
+# hand-editing a device file. It cannot commit anything itself (this repo
+# has no backend besides GitHub itself), so approving/declining still means
+# either merging the standing PR (manufacturer_link_only) or editing the
+# device file on GitHub (everything else) — the page just removes the need
+# to hand-write the references JSON from scratch. Setting
+# `references.blakadder_declined: true` (or `.manufacturer_declined: true`
+# for just the manufacturer-link half) on a device permanently excludes it
+# from future review reports — that's what the page's "Not any of these"
+# button's copied snippet sets.
+#
 # Idempotency: on a push-triggered run, a device already carrying
 # references.checked_manufacturer/checked_model equal to its current
 # manufacturer/model is skipped entirely — that's what makes "runs
@@ -438,6 +452,19 @@ jobs:
                 if (!manufacturer || !model) continue;
 
                 const existingRefs = parsed.references;
+
+                // A human can permanently decline a blakadder_ambiguous
+                // device from the review page (docs/review.html) — none of
+                // the candidates were right, and re-proposing the same
+                // ambiguous set every run forever would just be noise.
+                // Declined devices are skipped entirely, same as an
+                // up-to-date match; the flag is only ever cleared by a
+                // human editing the file directly.
+                if (existingRefs && existingRefs.blakadder_declined === true) {
+                  skipped++;
+                  continue;
+                }
+
                 const alreadyChecked = !!(existingRefs && existingRefs.checked_manufacturer === manufacturer && existingRefs.checked_model === model);
 
                 // Live link validation runs on every already-established
@@ -448,13 +475,13 @@ jobs:
                 if (CHECK_LIVENESS && existingRefs) {
                   let localChanged = false;
                   if (existingRefs.blakadder && existingRefs.blakadder.url && !(await urlOkToApply(existingRefs.blakadder.url))) {
-                    ambiguousReport.push({ file, manufacturer, model, kind: "dead_link", reason: `Blakadder link ${existingRefs.blakadder.url} appears to be dead (checked ${today}).` });
+                    ambiguousReport.push({ file, manufacturer, model, kind: "dead_link", url: existingRefs.blakadder.url, reason: `Blakadder link ${existingRefs.blakadder.url} appears to be dead (checked ${today}).` });
                     manualReview++;
                     existingRefs.blakadder = null;
                     localChanged = true;
                   }
                   if (existingRefs.manufacturer && existingRefs.manufacturer.url && !(await urlOkToApply(existingRefs.manufacturer.url))) {
-                    ambiguousReport.push({ file, manufacturer, model, kind: "dead_link", reason: `Manufacturer link ${existingRefs.manufacturer.url} appears to be dead (checked ${today}).` });
+                    ambiguousReport.push({ file, manufacturer, model, kind: "dead_link", url: existingRefs.manufacturer.url, reason: `Manufacturer link ${existingRefs.manufacturer.url} appears to be dead (checked ${today}).` });
                     manualReview++;
                     delete existingRefs.manufacturer;
                     localChanged = true;
@@ -486,6 +513,7 @@ jobs:
                     manualReview++;
                     ambiguousReport.push({
                       file, manufacturer, model, kind: "match_changed",
+                      previousUrl: currentRefs.blakadder.url, newUrl: result.entry.url,
                       reason: `Currently references ${currentRefs.blakadder.url}; a fresh recheck now finds ${result.entry.url} instead. Confirm which is correct before changing it.`,
                     });
                     continue;
@@ -503,6 +531,7 @@ jobs:
                     manualReview++;
                     ambiguousReport.push({
                       file, manufacturer, model, kind: "dead_link",
+                      url: result.entry.url,
                       reason: `Blakadder match found (${result.entry.url}) but that page is unreachable (checked ${today}) — not applied this run.`,
                     });
                     noMatch++;
@@ -529,6 +558,7 @@ jobs:
                     manualReview++;
                     ambiguousReport.push({
                       file, manufacturer, model, kind: "dead_link",
+                      url: mfrLink.url,
                       reason: `Manufacturer link found (${mfrLink.url}) but that page is unreachable (checked ${today}) — not applied this run.`,
                     });
                   } else if (currentRefs && currentRefs.manufacturer) {
@@ -537,6 +567,15 @@ jobs:
                     // independently re-derive "high" for it shouldn't
                     // discard a human's prior approval.
                     references.manufacturer = currentRefs.manufacturer;
+                  }
+                  // Same idea for a human's prior *decline* of just the
+                  // manufacturer-link half (docs/review.html's "Not this
+                  // link" button) — `references` was just rebuilt from
+                  // scratch above, so without this a forced recheck
+                  // (monthly schedule) would silently un-decline it and
+                  // Phase 2 would start proposing the same link again.
+                  if (currentRefs && currentRefs.manufacturer_declined === true) {
+                    references.manufacturer_declined = true;
                   }
                   // A needs_review manufacturer-link candidate is
                   // deliberately NOT reported here — see Phase 2 below,
@@ -588,6 +627,10 @@ jobs:
                 }
                 const refs = parsed.references;
                 if (!refs || !refs.blakadder || refs.blakadder.confidence !== "high" || refs.manufacturer) continue;
+                // A human can decline just the manufacturer-link guess from
+                // the review page without touching the (separately correct)
+                // Blakadder match — same idea as blakadder_declined above.
+                if (refs.manufacturer_declined === true) continue;
                 const entry = blakadderByUrl.get(refs.blakadder.url);
                 if (!entry) continue; // Blakadder page moved/renamed since the match was made — nothing to re-derive from here
                 const mfrLink = pickManufacturerLink(entry);
@@ -600,6 +643,7 @@ jobs:
             ambiguousReport.push(
               ...mfrLinkCandidates.map((c) => ({
                 file: c.file, manufacturer: c.manufacturer, model: c.model, kind: "manufacturer_link_only",
+                blakadderUrl: c.blakadderUrl, guessedUrl: c.guessedUrl,
                 reason: `Blakadder match is high-confidence (${c.blakadderUrl}); pre-filled manufacturer link "${c.guessedUrl}" on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline.`,
               }))
             );
