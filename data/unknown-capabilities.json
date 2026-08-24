@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T05:44:00.206Z",
+  "generated_at": "2026-08-24T05:45:34.842Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -77,6 +77,11 @@
         {
           "manufacturer": "IKEA of Sweden",
           "model": "TRADFRI bulb E27 WW G95 CL 470lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E27 WW globe 806lm",
           "count": 1
         },
         {
