@@ -731,5 +731,11 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "_TZ3210_fgwhjm9j",
+    "checked_model": "TS011F",
+    "blakadder_declined": true
   }
 }
