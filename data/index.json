@@ -2761,7 +2761,12 @@
   {
     "manufacturer_slug": "tz3000-pf7swkqp",
     "model_slug": "ts0003",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "_TZ3000_pf7swkqp",
+      "checked_model": "TS0003",
+      "blakadder_declined": true
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -3091,7 +3096,12 @@
   {
     "manufacturer_slug": "tz3000-pf7swkqp",
     "model_slug": "ts0003",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "_TZ3000_pf7swkqp",
+      "checked_model": "TS0003",
+      "blakadder_declined": true
+    },
     "endpoint": 2,
     "firmware": null,
     "scan_count": 1,
@@ -3191,7 +3201,12 @@
   {
     "manufacturer_slug": "tz3000-pf7swkqp",
     "model_slug": "ts0003",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "_TZ3000_pf7swkqp",
+      "checked_model": "TS0003",
+      "blakadder_declined": true
+    },
     "endpoint": 3,
     "firmware": null,
     "scan_count": 1,
@@ -3291,7 +3306,12 @@
   {
     "manufacturer_slug": "tz3000-pf7swkqp",
     "model_slug": "ts0003",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "_TZ3000_pf7swkqp",
+      "checked_model": "TS0003",
+      "blakadder_declined": true
+    },
     "endpoint": 242,
     "firmware": null,
     "scan_count": 1,
