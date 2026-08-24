@@ -9481,7 +9481,15 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "remote-control-n2",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ikea_E2001.html",
+        "match_method": "manual",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "IKEA of Sweden",
+      "checked_model": "Remote Control N2"
+    },
     "endpoint": 1,
     "firmware": "2.4.16",
     "scan_count": 1,
