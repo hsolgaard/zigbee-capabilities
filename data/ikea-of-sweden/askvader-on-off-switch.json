@@ -1095,5 +1095,18 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Ikea_E1836.html",
+      "match_method": "vendor_alias_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "IKEA of Sweden",
+    "checked_model": "ASKVADER on/off switch",
+    "manufacturer": {
+      "url": "https://www.ikea.com/dk/da/p/askvaeder-taend-slukkontakt-50463880/",
+      "confidence": "high"
+    }
   }
 }
