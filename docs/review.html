@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>External reference review — Zigbee Capabilities</title>
+<meta name="description" content="Review external Blakadder and manufacturer links proposed by the automated matcher before they go live.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <h1>External reference review</h1>
+    <p class="tagline">Blakadder and manufacturer links the automated matcher couldn't apply on its own. Browse them here, then approve or decline on GitHub — this page can't change anything by itself, it just saves you writing the JSON by hand.</p>
+    <p class="stats" id="review-stats">Loading the current review queue&hellip;</p>
+    <nav class="site-nav">
+      <a href="index.html">&larr; Back to device explorer</a>
+      <a href="https://github.com/hsolgaard/zigbee-capabilities" target="_blank" rel="noopener">Database on GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="mfr-only-section" hidden>
+    <h2>Ready to approve</h2>
+    <p class="hint">The Blakadder match is already solid; only the manufacturer link needs a nod. These are pre-filled on the standing review PR — approving means merging it, declining means excluding that file from the merge (or using the "Not this link" button below to rule it out permanently).</p>
+    <div class="review-toolbar" id="mfr-only-toolbar"></div>
+    <div class="device-list" id="mfr-only-list"></div>
+  </section>
+
+  <section id="ambiguous-section" hidden>
+    <h2>Needs a decision</h2>
+    <p class="hint">Several Blakadder pages matched equally well and the matcher won't guess between them. Open the candidates, compare against the actual device, then copy the fix for whichever one is right — or copy the decline snippet if none of them are.</p>
+    <div class="device-list" id="ambiguous-list"></div>
+  </section>
+
+  <section id="match-changed-section" hidden>
+    <h2>Match changed</h2>
+    <p class="hint">A previously-established Blakadder match no longer agrees with a fresh recheck. The old reference is left untouched until a human confirms which one is right.</p>
+    <div class="device-list" id="match-changed-list"></div>
+  </section>
+
+  <section id="dead-link-section" hidden>
+    <h2>Dead links found</h2>
+    <p class="hint">Found unreachable during the last monthly check and already cleared from the device's page — nothing to approve, just a record of what was removed and why.</p>
+    <div class="device-list" id="dead-link-list"></div>
+  </section>
+
+  <section id="empty-state" hidden>
+    <p class="empty-search">Nothing is currently awaiting review — either every device has a confident match already, or the automated matcher hasn't run since the last one was resolved.</p>
+  </section>
+
+  <section id="error-state" hidden>
+    <p class="empty-search" id="error-message"></p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>This page reads <code>references-review.json</code> straight from the <code>automation/external-references-review</code> branch — the same data behind the standing "External references: awaiting manual validation" PR. Nothing here is written back automatically; every fix still needs a human commit on GitHub.</p>
+  </div>
+</footer>
+
+<script type="module" src="review.js"></script>
+</body>
+</html>
