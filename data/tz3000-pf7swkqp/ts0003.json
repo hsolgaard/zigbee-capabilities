@@ -1098,5 +1098,11 @@
       ],
       "clusters": {}
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "_TZ3000_pf7swkqp",
+    "checked_model": "TS0003",
+    "blakadder_declined": true
   }
 }
