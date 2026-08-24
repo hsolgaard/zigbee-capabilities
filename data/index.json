@@ -521,7 +521,12 @@
   {
     "manufacturer_slug": "tz3000-3n2minvf",
     "model_slug": "ts0004",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "_TZ3000_3n2minvf",
+      "checked_model": "TS0004",
+      "blakadder_declined": true
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -851,7 +856,12 @@
   {
     "manufacturer_slug": "tz3000-3n2minvf",
     "model_slug": "ts0004",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "_TZ3000_3n2minvf",
+      "checked_model": "TS0004",
+      "blakadder_declined": true
+    },
     "endpoint": 2,
     "firmware": null,
     "scan_count": 1,
@@ -951,7 +961,12 @@
   {
     "manufacturer_slug": "tz3000-3n2minvf",
     "model_slug": "ts0004",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "_TZ3000_3n2minvf",
+      "checked_model": "TS0004",
+      "blakadder_declined": true
+    },
     "endpoint": 3,
     "firmware": null,
     "scan_count": 1,
@@ -1051,7 +1066,12 @@
   {
     "manufacturer_slug": "tz3000-3n2minvf",
     "model_slug": "ts0004",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "_TZ3000_3n2minvf",
+      "checked_model": "TS0004",
+      "blakadder_declined": true
+    },
     "endpoint": 4,
     "firmware": null,
     "scan_count": 1,
