@@ -26169,7 +26169,15 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-driver-30w",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ikea_ICPSHC24-30EU-IL-1.html",
+        "match_method": "manual",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "IKEA of Sweden",
+      "checked_model": "TRADFRI Driver 30W"
+    },
     "endpoint": 1,
     "firmware": "2.3.086",
     "scan_count": 1,
