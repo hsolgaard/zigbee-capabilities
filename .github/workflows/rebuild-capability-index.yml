@@ -17,14 +17,28 @@ name: Rebuild capability index
 # is copied verbatim from ingest-submission.yml's, applied to every file, so
 # nothing gets left behind.
 #
-# Two triggers:
+# Three triggers:
 #   - workflow_dispatch: a manual "Run workflow" button in the Actions tab
 #     (or `gh workflow run rebuild-capability-index.yml`) — use this any
 #     time you suspect data/index.json is stale or missing entries, or right
 #     after adding this workflow for the first time to backfill everything
 #     already on disk.
 #   - push to main touching data/** (except index.json itself, to avoid
-#     triggering on its own commits): keeps things in sync automatically.
+#     triggering on its own commits): keeps things in sync automatically
+#     for anything a *human* commits (a merged PR, a review-page fix
+#     pasted straight into GitHub's editor, etc).
+#   - workflow_run on "Enrich external references" completing: needed
+#     because GitHub deliberately does not let a workflow's own
+#     GITHUB_TOKEN-authored commits re-trigger other `push`-triggered
+#     workflows (it's the anti-infinite-loop guard). enrich-external-
+#     references.yml's Phase 1 sometimes commits a high-confidence match
+#     straight to main on its own — a fully automated push with no human
+#     push in the loop at all — and without this trigger that commit
+#     would never cause data/index.json to be rebuilt, so the live site
+#     would keep showing the device as unresolved indefinitely, even
+#     though the device's own file already has the correct reference.
+#     Bug found 2026-08-24: exactly this happened to the frient A/S ->
+#     Develco alias match.
 on:
   workflow_dispatch: {}
   push:
@@ -32,12 +46,16 @@ on:
     paths:
       - "data/**"
       - "!data/index.json"
+  workflow_run:
+    workflows: ["Enrich external references"]
+    types: [completed]
 
 permissions:
   contents: write
 
 jobs:
   rebuild:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
