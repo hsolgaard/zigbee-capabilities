@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-23T17:04:34.456Z",
+  "generated_at": "2026-08-24T05:44:00.206Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -162,6 +162,16 @@
         {
           "manufacturer": "innr",
           "model": "SP 224",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id_hex": "0xfc02",
+      "seen_on": [
+        {
+          "manufacturer": "Philips",
+          "model": "LWV001",
           "count": 1
         }
       ]
