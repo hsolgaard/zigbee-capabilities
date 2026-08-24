@@ -23722,7 +23722,15 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-gu10-ws-400lm",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ikea_LED1537R6.html",
+        "match_method": "manual",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "IKEA of Sweden",
+      "checked_model": "TRADFRI bulb GU10 WS 400lm"
+    },
     "endpoint": 1,
     "firmware": "2.3.095",
     "scan_count": 1,
