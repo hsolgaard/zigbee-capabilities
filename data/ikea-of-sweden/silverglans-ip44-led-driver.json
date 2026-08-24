@@ -1105,5 +1105,18 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Ikea_ICPSHC24-30-IL44-1.html",
+      "match_method": "vendor_alias_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "IKEA of Sweden",
+    "checked_model": "SILVERGLANS IP44 LED driver",
+    "manufacturer": {
+      "url": "https://www.ikea.com/nl/en/p/silverglans-driver-for-wireless-control-dimmable-white-10474772/",
+      "confidence": "high"
+    }
   }
 }

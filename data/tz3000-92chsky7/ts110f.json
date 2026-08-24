@@ -665,5 +665,14 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Lonsonho_QS-Zigbee-D02-TRIAC-2C-L.html",
+      "match_method": "manufacturer_string_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "_TZ3000_92chsky7",
+    "checked_model": "TS110F"
   }
 }

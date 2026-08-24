@@ -906,5 +906,18 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Sonoff_ZBM5-1C-80-86.html",
+      "match_method": "vendor_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "SONOFF",
+    "checked_model": "ZBM5-1C-80/86",
+    "manufacturer": {
+      "url": "https://sonoff.tech/en-eu/products/sonoff-switchman-zigbee-smart-wall-switch-zbm5-80-86-type",
+      "confidence": "high"
+    }
   }
 }

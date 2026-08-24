@@ -1492,5 +1492,18 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Ikea_LED2003G10.html",
+      "match_method": "vendor_alias_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "IKEA of Sweden",
+    "checked_model": "TRADFRIbulbE27WSglobeopal1055lm",
+    "manufacturer": {
+      "url": "https://www.ikea.com/cz/en/p/tradfri-remote-control-kit-white-spectrum-80513416/",
+      "confidence": "high"
+    }
   }
 }

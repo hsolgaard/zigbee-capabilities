@@ -538,5 +538,18 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/LoraTap_SS600ZB.html",
+      "match_method": "manufacturer_string_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "_TZ3000_famkxci2",
+    "checked_model": "TS0043",
+    "manufacturer": {
+      "url": "https://www.loratap.com/products/ss600zb",
+      "confidence": "high"
+    }
   }
 }

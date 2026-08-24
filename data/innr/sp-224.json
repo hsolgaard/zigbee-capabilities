@@ -1366,5 +1366,18 @@
       ],
       "clusters": {}
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Innr_SP_224.html",
+      "match_method": "vendor_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "innr",
+    "checked_model": "SP 224",
+    "manufacturer": {
+      "url": "https://www.innr.com/en/product/smart-plug-us-version/",
+      "confidence": "high"
+    }
   }
 }

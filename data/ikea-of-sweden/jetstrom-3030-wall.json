@@ -1792,5 +1792,10 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "IKEA of Sweden",
+    "checked_model": "JETSTROM 3030 wall"
   }
 }

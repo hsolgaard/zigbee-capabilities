@@ -1227,5 +1227,18 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Tuya_SML-04Z.html",
+      "match_method": "manufacturer_string_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "_TZ3000_ltt60asa",
+    "checked_model": "TS0004",
+    "manufacturer": {
+      "url": "https://expo.tuya.com/product/907020",
+      "confidence": "high"
+    }
   }
 }

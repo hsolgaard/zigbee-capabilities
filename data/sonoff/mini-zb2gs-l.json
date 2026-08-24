@@ -931,5 +931,10 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "SONOFF",
+    "checked_model": "MINI-ZB2GS-L"
   }
 }

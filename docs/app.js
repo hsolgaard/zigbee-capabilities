@@ -396,6 +396,7 @@ function runSearch() {
               </div>
             </div>
           </div>
+          ${externalReferencesHtml(r.references, r.manufacturer)}
           ${goodForHtml(r.goodFor)}
           <div class="techtoggle" data-key="${escapeHtml(key)}">
             ${expanded ? "Hide capabilities ▾" : "View capabilities →"}
@@ -404,6 +405,43 @@ function runSearch() {
         </div>`;
     })
     .join("");
+}
+
+// "External references" line (PRD: "External Device References") — a
+// Blakadder page and/or an official manufacturer/product page for this
+// device, shown as supplementary context only. Deliberately reads nothing
+// but `references.blakadder.url`/`references.manufacturer.url`: this
+// function has no access to, and must never gain access to, capability or
+// confidence data, since external references are never allowed to
+// contribute to either (see the PRD's data-boundary rule). Renders nothing
+// at all when neither link is present, and only ever the links that
+// actually exist — never a placeholder for a missing one.
+function externalReferencesHtml(references, manufacturer) {
+  if (!references) return "";
+  const links = [];
+  // confidence === "high" is a deliberate belt-and-suspenders check: the
+  // enrichment workflow only ever writes "high" into a device's committed
+  // `references` block in the first place (anything less certain goes to
+  // references-review.json for a human instead — see that workflow's
+  // header comment), so this should never actually filter anything out in
+  // practice. It's here anyway as the last line of defense against a
+  // future manual edit accidentally publishing an unreviewed suggestion.
+  if (references.blakadder && references.blakadder.url && references.blakadder.confidence === "high") {
+    links.push({ label: "Blakadder", url: references.blakadder.url });
+  }
+  if (references.manufacturer && references.manufacturer.url && references.manufacturer.confidence === "high") {
+    // Prefer the device's own recognizable manufacturer name (e.g.
+    // "SONOFF") over the generic word "Manufacturer" per the PRD's UX spec.
+    links.push({ label: manufacturer ? manufacturer : "Manufacturer", url: references.manufacturer.url });
+  }
+  if (!links.length) return "";
+  const linksHtml = links
+    .map(
+      (l) =>
+        `<a href="${escapeHtml(l.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(l.label)} ↗</a>`
+    )
+    .join(" · ");
+  return `<div class="device-external-refs muted">External references: ${linksHtml}</div>`;
 }
 
 function goodForHtml(goodFor) {
