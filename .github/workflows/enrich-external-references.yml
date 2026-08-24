@@ -223,6 +223,13 @@ jobs:
             const VENDOR_ALIASES = {
               ikeaofsweden: ["ikea"], // our schema's raw Zigbee manufacturer string vs Blakadder's brand name
               lumi: ["aqara", "xiaomi"], // LUMI is Xiaomi/Aqara's internal Zigbee manufacturer code
+              // eWeLink is the app/cloud platform Sonoff devices report as
+              // their Zigbee manufacturer string on some product lines —
+              // Blakadder files these under the "Sonoff" brand instead.
+              // Verified 2026-08-24 against zigbee.blakadder.com/
+              // Sonoff_SNZB-04P.html (vendor: Sonoff, model: SNZB-04P,
+              // an exact model match once the vendor alias applies).
+              ewelink: ["sonoff"],
             };
             function vendorNamesMatch(a, b) {
               const na = norm(a);

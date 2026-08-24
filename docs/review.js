@@ -11,6 +11,7 @@ import { CAPABILITY_DB_REPO } from "./capexplorer-constants.js";
 const REVIEW_BRANCH = "automation/external-references-review";
 const REVIEW_URL = `https://raw.githubusercontent.com/${CAPABILITY_DB_REPO}/${REVIEW_BRANCH}/references-review.json`;
 const PR_SEARCH_URL = `https://github.com/${CAPABILITY_DB_REPO}/pulls?q=${encodeURIComponent(`is:pr is:open head:${REVIEW_BRANCH}`)}`;
+const RAW_MAIN_URL = (file) => `https://raw.githubusercontent.com/${CAPABILITY_DB_REPO}/main/${file}`;
 
 function escapeHtml(s) {
   return String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({
@@ -30,8 +31,8 @@ function githubBlobUrl(file) {
   return `https://github.com/${CAPABILITY_DB_REPO}/blob/main/${file}`;
 }
 
-async function copyText(text, btn) {
-  const original = btn.textContent;
+async function copyText(text, btn, successMessage, revertTo) {
+  const original = revertTo || btn.textContent;
   try {
     if (navigator.clipboard && window.isSecureContext) {
       await navigator.clipboard.writeText(text);
@@ -45,25 +46,59 @@ async function copyText(text, btn) {
       document.execCommand("copy");
       document.body.removeChild(ta);
     }
-    btn.textContent = "Copied ✓";
+    btn.textContent = successMessage || "Copied ✓";
   } catch (e) {
     btn.textContent = "Copy failed — select & copy manually";
   }
-  setTimeout(() => { btn.textContent = original; }, 2200);
+  setTimeout(() => { btn.textContent = original; }, 2500);
 }
 
-function referencesSnippet(obj) {
-  return JSON.stringify(obj, null, 2);
+// Fetches the device's CURRENT file content fresh (not whatever was true
+// when the report was generated — another fix could have landed on `main`
+// since), splices in the new "references" value, and returns the complete
+// file as pretty-printed text ready to paste over the whole file. This is
+// the difference between "here's a JSON fragment, go find where it goes"
+// and "select all, paste, done" — GitHub's own editor UI has no way to
+// pre-fill an *edit* of an existing file via URL (only brand-new files
+// support that), so a full-file clipboard copy is the closest this
+// no-backend page can get to a one-click fix.
+async function buildFullFileFix(file, mode, patch) {
+  const res = await fetch(RAW_MAIN_URL(file), { cache: "no-store" });
+  if (!res.ok) throw new Error(`couldn't fetch current file (HTTP ${res.status})`);
+  const parsed = await res.json();
+  parsed.references = mode === "merge" ? Object.assign({}, parsed.references || {}, patch) : patch;
+  return JSON.stringify(parsed, null, 2) + "\n";
 }
 
-function copyRow(label, snippet, hint) {
+// mode: "replace" sets the device's whole "references" key to `patch`;
+// "merge" keeps whatever's already there and adds/overwrites just the
+// keys in `patch` (used for the decline flags, which shouldn't disturb an
+// already-correct blakadder/manufacturer value sitting alongside them).
+function attachCopyFullFileHandler(btn, file, mode, patch) {
+  btn.addEventListener("click", async () => {
+    const original = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = "Fetching current file…";
+    try {
+      const fullText = await buildFullFileFix(file, mode, patch);
+      await copyText(fullText, btn, "Copied whole file ✓", original);
+    } catch (e) {
+      btn.textContent = "Couldn't fetch — use Edit on GitHub instead";
+      setTimeout(() => { btn.textContent = original; }, 3000);
+    } finally {
+      btn.disabled = false;
+    }
+  });
+}
+
+function copyFullFileRow(label, file, mode, patch, hint) {
   const wrap = document.createElement("div");
   wrap.className = "review-copy-row";
   const btn = document.createElement("button");
   btn.type = "button";
   btn.className = "btn btn-copy";
   btn.textContent = label;
-  btn.addEventListener("click", () => copyText(snippet, btn));
+  attachCopyFullFileHandler(btn, file, mode, patch);
   wrap.appendChild(btn);
   if (hint) {
     const p = document.createElement("p");
@@ -122,13 +157,14 @@ function renderMfrOnly(items, listEl, toolbarEl) {
     card.appendChild(
       linkRow([
         { label: "View this device on GitHub →", url: githubBlobUrl(item.file) },
+        { label: `Edit ${item.file} on GitHub →`, url: githubEditUrl(item.file) },
       ])
     );
     card.appendChild(
-      copyRow(
+      copyFullFileRow(
         "Copy “not this link” fix",
-        referencesSnippet({ manufacturer_declined: true }),
-        `To decline just this manufacturer link (keeping the Blakadder match): open ${item.file} on GitHub, and inside the existing "references" object add the copied line. Approving is simpler — just merge the PR above.`
+        item.file, "merge", { manufacturer_declined: true },
+        `Copies the whole file with just that flag added (the Blakadder match is left exactly as-is). Click "Edit" above, select all (Ctrl/Cmd+A), paste, commit. Approving is simpler — just merge the PR above.`
       )
     );
     listEl.appendChild(card);
@@ -140,6 +176,10 @@ function renderAmbiguous(items, listEl) {
   document.getElementById("ambiguous-section").hidden = false;
   for (const item of items) {
     const card = cardShell(item.manufacturer, item.model, item.reason);
+    const instructions = document.createElement("p");
+    instructions.className = "hint";
+    instructions.textContent = `Recognize the device? Click that candidate's "Copy fix for this one", then "Edit ${item.file} on GitHub" below, select all (Ctrl/Cmd+A), paste, commit.`;
+    card.appendChild(instructions);
     const candList = document.createElement("div");
     candList.className = "review-candidates";
     for (const cand of item.candidates || []) {
@@ -159,16 +199,11 @@ function renderAmbiguous(items, listEl) {
       btn.type = "button";
       btn.className = "btn btn-copy btn-small";
       btn.textContent = "Copy fix for this one";
-      btn.addEventListener("click", () =>
-        copyText(
-          referencesSnippet({
-            blakadder: { url: cand.url, match_method: "manual", confidence: "high" },
-            checked_manufacturer: item.manufacturer,
-            checked_model: item.model,
-          }),
-          btn
-        )
-      );
+      attachCopyFullFileHandler(btn, item.file, "replace", {
+        blakadder: { url: cand.url, match_method: "manual", confidence: "high" },
+        checked_manufacturer: item.manufacturer,
+        checked_model: item.model,
+      });
       row.appendChild(btn);
       candList.appendChild(row);
     }
@@ -177,15 +212,16 @@ function renderAmbiguous(items, listEl) {
       linkRow([{ label: `Edit ${item.file} on GitHub →`, url: githubEditUrl(item.file) }])
     );
     card.appendChild(
-      copyRow(
+      copyFullFileRow(
         "Copy “none of these” fix",
-        referencesSnippet({
+        item.file, "replace",
+        {
           blakadder: null,
           checked_manufacturer: item.manufacturer,
           checked_model: item.model,
           blakadder_declined: true,
-        }),
-        `Set the device's "references" key to the copied value to permanently stop suggesting a Blakadder match for this device.`
+        },
+        `Copies the whole file with this permanently applied — click "Edit" above, select all (Ctrl/Cmd+A), paste, commit.`
       )
     );
     listEl.appendChild(card);
@@ -201,21 +237,22 @@ function renderMatchChanged(items, listEl) {
       linkRow([{ label: `Edit ${item.file} on GitHub →`, url: githubEditUrl(item.file) }])
     );
     card.appendChild(
-      copyRow(
+      copyFullFileRow(
         "Copy “accept new match” fix",
-        referencesSnippet({
+        item.file, "replace",
+        {
           blakadder: { url: item.newUrl, match_method: "manual", confidence: "high" },
           checked_manufacturer: item.manufacturer,
           checked_model: item.model,
-        }),
-        "Replaces the device's \"references\" value with the newly-found match."
+        },
+        "Copies the whole file with the newly-found match applied — click \"Edit\" above, select all (Ctrl/Cmd+A), paste, commit."
       )
     );
     card.appendChild(
-      copyRow(
+      copyFullFileRow(
         "Copy “keep current, stop asking” fix",
-        referencesSnippet({ blakadder_declined: true }),
-        `Keeps ${item.previousUrl} and stops future rechecks — add the copied line inside the device's existing "references" object.`
+        item.file, "merge", { blakadder_declined: true },
+        `Copies the whole file, keeping ${item.previousUrl} exactly as it is and stopping future rechecks — same paste-and-commit steps as above.`
       )
     );
     listEl.appendChild(card);
