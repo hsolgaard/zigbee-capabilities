@@ -13354,7 +13354,15 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e14-ws-470lm",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ikea_LED1903C5.html",
+        "match_method": "manual",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "IKEA of Sweden",
+      "checked_model": "TRADFRI bulb E14 WS 470lm"
+    },
     "endpoint": 1,
     "firmware": "2.3.087",
     "scan_count": 1,
