@@ -248,18 +248,23 @@ function renderMatchChanged(items, listEl) {
     card.appendChild(
       linkRow([{ label: `Edit ${item.file} on GitHub →`, url: githubEditUrl(item.file) }])
     );
-    card.appendChild(
-      copyFullFileRow(
-        "Copy “accept new match” fix",
-        item.file, "replace",
-        {
-          blakadder: { url: item.newUrl, match_method: "manual", confidence: "high" },
-          checked_manufacturer: item.manufacturer,
-          checked_model: item.model,
-        },
-        "Copies the whole file with the newly-found match applied — click \"Edit\" above, select all (Ctrl/Cmd+A), paste, commit."
-      )
-    );
+    if (item.newUrl) {
+      card.appendChild(
+        copyFullFileRow(
+          "Copy “accept new match” fix",
+          item.file, "replace",
+          {
+            blakadder: { url: item.newUrl, match_method: "manual", confidence: "high" },
+            checked_manufacturer: item.manufacturer,
+            checked_model: item.model,
+          },
+          "Copies the whole file with the newly-found match applied — click \"Edit\" above, select all (Ctrl/Cmd+A), paste, commit."
+        )
+      );
+    }
+    // No newUrl means a recheck stopped finding any match at all for a
+    // device that already had one (Blakadder's own data likely shifted) —
+    // there's nothing to "accept", just the choice to keep what's there.
     card.appendChild(
       copyFullFileRow(
         "Copy “keep current, stop asking” fix",
