@@ -230,6 +230,15 @@ jobs:
               // Sonoff_SNZB-04P.html (vendor: Sonoff, model: SNZB-04P,
               // an exact model match once the vendor alias applies).
               ewelink: ["sonoff"],
+              // frient A/S is Develco Products' current brand name (Develco
+              // was acquired/rebranded as frient) — devices still report
+              // "frient A/S" as their Zigbee manufacturer string, but
+              // Blakadder still files these pages under the old "Develco"
+              // vendor name. Verified 2026-08-24 against zigbee.blakadder.com/
+              // Develco_SMSZB-120.html (vendor: Develco, model: SMSZB-120,
+              // an exact model match once the vendor alias applies; mlink
+              // already points at frient.com, the current brand's own site).
+              frientas: ["develco"],
             };
             function vendorNamesMatch(a, b) {
               const na = norm(a);
