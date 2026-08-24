@@ -316,5 +316,14 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Xiaomi_LLKZMK11LM.html",
+      "match_method": "vendor_alias_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "LUMI",
+    "checked_model": "lumi.relay.c2acn01"
   }
 }

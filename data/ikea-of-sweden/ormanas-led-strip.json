@@ -1682,5 +1682,10 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "IKEA of Sweden",
+    "checked_model": "ORMANAS LED Strip"
   }
 }

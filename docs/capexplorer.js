@@ -246,6 +246,15 @@ export function groupSearchResultsByDevice(matchingEntries, fullIndex) {
       firmwareCount: fw.length,
       totalScans,
       lastSeen: lastSeenTimes.length ? lastSeenTimes[lastSeenTimes.length - 1] : null,
+      // External references (Blakadder / manufacturer product page — see
+      // PRD: "External Device References"). Same value on every firmware
+      // entry for this device (it's per manufacturer+model, stored once in
+      // the source file), so `first`'s copy is as good as any. Purely a
+      // passthrough for the UI to render as supplementary context — nothing
+      // above this (rating, goodFor, groupCapabilitiesByOutcome, etc.) ever
+      // reads it, and it must stay that way: external references describe
+      // what other sites document, never what a scan actually confirmed.
+      references: first.references || null,
     });
   });
 

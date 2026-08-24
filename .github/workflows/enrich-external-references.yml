@@ -1,0 +1,516 @@
+name: Enrich external references
+
+# Implements the PRD "External Device References": for each device record,
+# tries to find (a) the matching Blakadder device page and (b) an official
+# manufacturer/product page, and stores them in a new `references` block
+# alongside — never inside — `observations`/`capabilities`.
+#
+# Hard rule, enforced by construction here: external references are
+# supplementary context only. Nothing in this workflow ever writes into
+# `capabilities`, nothing here ever reads `observations` to decide anything
+# about capability/confidence, and nothing on the read side
+# (docs/capexplorer.js's confidenceStars/confidenceLabel/
+# groupCapabilitiesByOutcome) ever reads `references`. A Blakadder or
+# manufacturer page saying a device supports something is never evidence
+# that it does — only a real scan is.
+#
+# Matching is 100% deterministic (frontmatter-field comparison against a
+# shallow clone of github.com/blakadder/zigbee's own _zigbee/ directory) —
+# no scraping, no LLM calls, same category of automation as
+# rebuild-capability-index.yml and ingest-submission.yml.
+#
+# - High-confidence Blakadder match, and a high-confidence manufacturer
+#   link when one is found: written straight into the device's
+#   `references` block and committed to main directly — mirrors
+#   rebuild-capability-index.yml (fully-derived, deterministic output noI
+#   human needs to hand-review) rather than ingest-submission.yml (which
+#   always needs a human because its input is a stranger's issue).
+# - Ambiguous Blakadder matches, and high-confidence Blakadder matches
+#   whose manufacturer link isn't clean, are written to references-review.
+#   json instead, and that file is proposed via a single standing PR — main
+#   is never touched for these, and nothing is added to a device's
+#   `references` block until a human reviews the suggestion and hand-edits
+#   the device file themselves (same "report file for a human to act on"
+#   shape as data/unknown-capabilities.json already uses in this repo).
+# - A device with no credible Blakadder match gets `blakadder: null` plus a
+#   checked_manufacturer/checked_model fingerprint, so it's not endlessly
+#   reprocessed.
+#
+# Idempotency: a device already carrying references.checked_manufacturer/
+# checked_model equal to its current manufacturer/model is skipped
+# entirely. That's what makes "runs automatically only for new/changed
+# devices" (PRD section 3) true after the one-off backfill, without any
+# separate "have we done the backfill yet" flag — the backfill is simply
+# the first run, before which nothing has a checked_* fingerprint yet.
+# Devices left ambiguous deliberately get no fingerprint, so they're
+# retried on every run until a human resolves them.
+#
+# Triggers:
+#   - workflow_dispatch: manual run — use this for the one-off full
+#     backfill across every existing device (PRD section 3), or to re-check
+#     everything after a change to the matching logic below.
+#   - push to main touching data/** (excluding the generated/derived files
+#     below): fires automatically once a device-submission PR merges,
+#     which is what satisfies "new device submissions automatically
+#     trigger external-reference discovery" — no separate trigger path is
+#     needed since ingest-submission.yml already only ever lands new/
+#     changed device data on main via a merged PR.
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "!data/index.json"
+      - "!data/unknown-capabilities.json"
+      - "!references-review.json"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Shallow-clone Blakadder's device pages
+        run: |
+          git clone --depth 1 --filter=blob:none --sparse https://github.com/blakadder/zigbee.git /tmp/blakadder-zigbee
+          git -C /tmp/blakadder-zigbee sparse-checkout set _zigbee
+
+      - name: Match devices against Blakadder, apply high-confidence results directly, propose the rest for review
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require("fs");
+            const path = require("path");
+
+            // --- tiny frontmatter parser (Blakadder's _zigbee/*.md files) ----
+            function parseFrontmatter(raw) {
+              const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+              if (!m) return null;
+              const lines = m[1].split(/\r?\n/);
+              const out = {};
+              for (const line of lines) {
+                const kv = line.match(/^([A-Za-z0-9_]+):\s*(.*)$/);
+                if (!kv) continue;
+                const key = kv[1];
+                let val = kv[2].trim();
+                if (val.startsWith("[")) {
+                  const inner = val.replace(/^\[|\]$/g, "");
+                  out[key] = inner.split(",").map((s) => s.trim().replace(/^['"]|['"]$/g, "")).filter(Boolean);
+                } else {
+                  out[key] = val.replace(/^['"]|['"]$/g, "");
+                }
+              }
+              return out;
+            }
+
+            function loadBlakadderIndex(dir) {
+              const files = fs.readdirSync(dir).filter((f) => f.endsWith(".md"));
+              const entries = [];
+              for (const f of files) {
+                const raw = fs.readFileSync(path.join(dir, f), "utf8");
+                const fm = parseFrontmatter(raw);
+                if (!fm) continue;
+                const slug = f.replace(/\.md$/, "");
+                entries.push({
+                  slug,
+                  vendor: fm.vendor || "",
+                  model: fm.model || "",
+                  zigbeemodel: Array.isArray(fm.zigbeemodel) ? fm.zigbeemodel : fm.zigbeemodel ? [fm.zigbeemodel] : [],
+                  mlink: fm.mlink || "",
+                  links: [fm.link, fm.link2, fm.link3, fm.link4, fm.link5].filter(Boolean),
+                  url: `https://zigbee.blakadder.com/${slug}.html`,
+                });
+              }
+              return entries;
+            }
+
+            // Same normalization the repo's own ingest workflow already uses
+            // for manufacturer/model slugs, reused here so "IKEA of Sweden"
+            // and "IKEA" compare sensibly.
+            function norm(s) {
+              return (s || "").toString().toLowerCase().trim().replace(/[^a-z0-9]+/g, "");
+            }
+
+            // Tuya-style manufacturer strings: "_TZ3000_famkxci2", etc.
+            function looksLikeTuyaManufacturerString(s) {
+              return /^_[A-Z0-9]+_[a-z0-9]+$/i.test((s || "").trim());
+            }
+
+            // Known cases where our devices' vendor string differs from the
+            // string Blakadder records in its `vendor` frontmatter field,
+            // even though both unambiguously name the same manufacturer (a
+            // legal-name suffix, or an internal Zigbee manufacturer code
+            // used by a rebranded/OEM'd line). Deliberately a short,
+            // auditable, hand-verified list, not a fuzzy heuristic — each
+            // entry was confirmed against Blakadder's actual data before
+            // being added. Extend with the same care: verify on real
+            // Blakadder pages first, don't guess. This is what lets "model
+            // plus manufacturer alias resolves uniquely" (a PRD
+            // high-confidence example) actually fire instead of every
+            // aliased vendor falling to no-match.
+            const VENDOR_ALIASES = {
+              ikeaofsweden: ["ikea"], // our schema's raw Zigbee manufacturer string vs Blakadder's brand name
+              lumi: ["aqara", "xiaomi"], // LUMI is Xiaomi/Aqara's internal Zigbee manufacturer code
+            };
+            function vendorNamesMatch(a, b) {
+              const na = norm(a);
+              const nb = norm(b);
+              if (!na || !nb) return { matched: false, aliased: false };
+              if (na === nb) return { matched: true, aliased: false };
+              if ((VENDOR_ALIASES[na] || []).includes(nb) || (VENDOR_ALIASES[nb] || []).includes(na)) {
+                return { matched: true, aliased: true };
+              }
+              return { matched: false, aliased: false };
+            }
+
+            const RETAILER_DOMAINS = [
+              "amazon.", "aliexpress.", "alibaba.", "ebay.", "banggood.", "domadoo.",
+              "idealo.", "walmart.", "homedepot.", "leroymerlin.", "castorama.",
+              "conrad.", "bol.com", "bricodepot.", "manomano.", "otto.de", "kaufland.",
+              "temu.", "wish.com", "newegg.", "bestbuy.", "target.com", "argos.",
+            ];
+            function domainOf(url) {
+              try {
+                return new URL(url).hostname.replace(/^www\./, "").toLowerCase();
+              } catch (e) {
+                return "";
+              }
+            }
+            function isRetailerUrl(url) {
+              const d = domainOf(url);
+              if (!d) return true; // unparseable -> unusable, not a manufacturer link
+              return RETAILER_DOMAINS.some((r) => d.includes(r));
+            }
+
+            // Best-effort "does this link's domain look like it belongs to
+            // the vendor" check, used only to decide whether a non-mlink
+            // candidate is worth surfacing in the review file at all (never
+            // to auto-add it).
+            function domainLooksLikeVendor(url, vendor) {
+              const d = domainOf(url);
+              const v = norm(vendor);
+              if (!d || !v) return false;
+              const host = d.replace(/\./g, "");
+              return host.includes(v) || v.includes(host); // conservative substring check
+            }
+
+            function matchBlakadder(manufacturer, model, blakadderIndex) {
+              const modelNorm = norm(model);
+
+              // Tier A: exact manufacturer-code match inside zigbeemodel[]
+              // (handles Tuya-style devices where `manufacturer` in our
+              // schema IS the vendor-string, e.g. "_TZ3000_famkxci2" — the
+              // strongest possible signal, since that string is unique per
+              // rebrand/batch).
+              if (looksLikeTuyaManufacturerString(manufacturer)) {
+                const hits = blakadderIndex.filter((b) =>
+                  b.zigbeemodel.some((z) => z.toLowerCase() === manufacturer.toLowerCase())
+                );
+                if (hits.length === 1) {
+                  return { status: "high", entry: hits[0], match_method: "manufacturer_string_exact" };
+                }
+                if (hits.length > 1) {
+                  return { status: "ambiguous", candidates: hits, reason: `Manufacturer string ${manufacturer} matched ${hits.length} Blakadder pages.` };
+                }
+                // No exact manufacturer-string hit — fall through to a
+                // model-only signal, but that's exactly the ambiguous
+                // "generic Tuya model" case the PRD calls out, never
+                // auto-added.
+                const modelHits = blakadderIndex.filter((b) =>
+                  b.zigbeemodel.some((z) => norm(z) === modelNorm) || norm(b.model) === modelNorm
+                );
+                if (modelHits.length) {
+                  return {
+                    status: "ambiguous",
+                    candidates: modelHits,
+                    reason: `Generic Tuya model "${model}" matches ${modelHits.length} Blakadder page(s), but manufacturer string ${manufacturer} isn't listed on any of them.`,
+                  };
+                }
+                return { status: "none" };
+              }
+
+              // Tier B: normal vendor + model exact match (vendor comparison
+              // allows the small, verified VENDOR_ALIASES equivalences above).
+              const vendorModelHits = blakadderIndex
+                .map((b) => ({ b, vendor: vendorNamesMatch(b.vendor, manufacturer) }))
+                .filter(({ vendor }) => vendor.matched)
+                .filter(({ b }) => norm(b.model) === modelNorm || b.zigbeemodel.some((z) => norm(z) === modelNorm));
+              if (vendorModelHits.length === 1) {
+                const { b, vendor } = vendorModelHits[0];
+                return { status: "high", entry: b, match_method: vendor.aliased ? "vendor_alias_model_exact" : "vendor_model_exact" };
+              }
+              if (vendorModelHits.length > 1) {
+                return { status: "ambiguous", candidates: vendorModelHits.map(({ b }) => b), reason: `Vendor "${manufacturer}" + model "${model}" matched ${vendorModelHits.length} Blakadder pages.` };
+              }
+
+              // Vendor matches but model doesn't — a same-vendor near-miss
+              // is worth a human glance (could be a naming variant) but
+              // never auto-added.
+              const vendorOnlyHits = blakadderIndex.filter((b) => vendorNamesMatch(b.vendor, manufacturer).matched);
+              if (vendorOnlyHits.length) {
+                const close = vendorOnlyHits.filter((b) => norm(b.model).includes(modelNorm) || modelNorm.includes(norm(b.model)));
+                if (close.length) {
+                  return { status: "ambiguous", candidates: close, reason: `Vendor "${manufacturer}" matches, but model "${model}" only loosely resembles Blakadder's model string for these page(s).` };
+                }
+              }
+              return { status: "none" };
+            }
+
+            function pickManufacturerLink(blakadderEntry) {
+              if (blakadderEntry.mlink && !isRetailerUrl(blakadderEntry.mlink)) {
+                return { url: blakadderEntry.mlink, confidence: "high" };
+              }
+              // No usable mlink — look for a non-retailer link among
+              // link/link2-5 whose domain plausibly matches the vendor
+              // name. Never auto-added (that's exactly the "unclear
+              // corporate relationship" case the PRD wants reviewed by a
+              // human), just surfaced as a suggestion.
+              const candidate = blakadderEntry.links.find((l) => !isRetailerUrl(l) && domainLooksLikeVendor(l, blakadderEntry.vendor));
+              if (candidate) return { url: candidate, confidence: "needs_review" };
+              return null;
+            }
+
+            function walkDataFiles(dir) {
+              let out = [];
+              for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+                const full = path.join(dir, entry.name);
+                if (entry.isDirectory()) out = out.concat(walkDataFiles(full));
+                else if (
+                  entry.isFile() &&
+                  entry.name.endsWith(".json") &&
+                  !full.endsWith("index.json") &&
+                  !full.includes("_upstream-cluster-map") &&
+                  !full.includes("unknown-capabilities")
+                )
+                  out.push(full);
+              }
+              return out;
+            }
+
+            const blakadderIndex = loadBlakadderIndex("/tmp/blakadder-zigbee/_zigbee");
+            console.log(`Loaded ${blakadderIndex.length} Blakadder device pages.`);
+
+            let processed = 0, blakadderMatches = 0, manufacturerLinks = 0, manualReview = 0, noMatch = 0, skipped = 0;
+            const ambiguousReport = [];
+            let changedFiles = 0;
+
+            if (fs.existsSync("data")) {
+              for (const file of walkDataFiles("data")) {
+                let parsed;
+                try {
+                  parsed = JSON.parse(fs.readFileSync(file, "utf8"));
+                } catch (e) {
+                  continue;
+                }
+                const caps = Object.values(parsed.capabilities || {});
+                if (!caps.length) continue;
+                const manufacturer = caps[0].manufacturer;
+                const model = caps[0].model;
+                if (!manufacturer || !model) continue;
+
+                // Idempotency: skip anything already checked against this
+                // exact manufacturer/model fingerprint (see header comment).
+                const existingRefs = parsed.references;
+                if (existingRefs && existingRefs.checked_manufacturer === manufacturer && existingRefs.checked_model === model) {
+                  skipped++;
+                  continue;
+                }
+
+                processed++;
+                const result = matchBlakadder(manufacturer, model, blakadderIndex);
+
+                if (result.status === "high") {
+                  blakadderMatches++;
+                  const mfrLink = pickManufacturerLink(result.entry);
+                  const references = {
+                    blakadder: { url: result.entry.url, match_method: result.match_method, confidence: "high" },
+                    checked_manufacturer: manufacturer,
+                    checked_model: model,
+                  };
+                  if (mfrLink && mfrLink.confidence === "high") {
+                    references.manufacturer = { url: mfrLink.url, confidence: "high" };
+                    manufacturerLinks++;
+                  }
+                  // A needs_review manufacturer-link candidate is deliberately
+                  // NOT reported here — see the dedicated pass below. Reporting
+                  // it only on the run that first discovers it would mean it
+                  // silently disappears from every later review report once
+                  // this device's checked_* fingerprint makes it get skipped
+                  // above, even though the link is still unresolved.
+                  parsed.references = references;
+                  fs.writeFileSync(file, JSON.stringify(parsed, null, 2) + "\n");
+                  changedFiles++;
+                } else if (result.status === "ambiguous") {
+                  manualReview++;
+                  ambiguousReport.push({
+                    file, manufacturer, model, kind: "blakadder_ambiguous",
+                    reason: result.reason,
+                    candidates: result.candidates.map((c) => ({ url: c.url, vendor: c.vendor, model: c.model, zigbeemodel: c.zigbeemodel })),
+                  });
+                  // Deliberately no checked_* fingerprint written here — an
+                  // ambiguous device stays unresolved (and gets retried
+                  // every run) until a human looks at references-review.json
+                  // and hand-edits this device's `references` block.
+                } else {
+                  noMatch++;
+                  parsed.references = { blakadder: null, checked_manufacturer: manufacturer, checked_model: model };
+                  fs.writeFileSync(file, JSON.stringify(parsed, null, 2) + "\n");
+                  changedFiles++;
+                }
+              }
+            }
+
+            // Dedicated pass, independent of the skip logic above: any
+            // device with an already-high-confidence Blakadder match but
+            // still no `references.manufacturer` link gets its manufacturer
+            // link candidacy re-evaluated on *every* run and, if there's a
+            // plausible-but-unclear candidate, re-surfaced in the review
+            // report every time — not just on the one run that happened to
+            // discover it. Runs over every device file again (cheap; these
+            // are small JSON files), not just the ones touched above, since
+            // most such devices were matched in a previous run and are
+            // otherwise skipped entirely by the fingerprint check.
+            const blakadderByUrl = new Map(blakadderIndex.map((b) => [b.url, b]));
+            if (fs.existsSync("data")) {
+              for (const file of walkDataFiles("data")) {
+                let parsed;
+                try {
+                  parsed = JSON.parse(fs.readFileSync(file, "utf8"));
+                } catch (e) {
+                  continue;
+                }
+                const refs = parsed.references;
+                if (!refs || !refs.blakadder || refs.blakadder.confidence !== "high" || refs.manufacturer) continue;
+                const entry = blakadderByUrl.get(refs.blakadder.url);
+                if (!entry) continue; // Blakadder page moved/renamed since the match was made — nothing to re-derive from here
+                const mfrLink = pickManufacturerLink(entry);
+                if (mfrLink && mfrLink.confidence === "needs_review") {
+                  manualReview++;
+                  ambiguousReport.push({
+                    file, manufacturer: refs.checked_manufacturer, model: refs.checked_model, kind: "manufacturer_link_only",
+                    reason: `Blakadder match is high-confidence (${refs.blakadder.url}), but its manufacturer link isn't clean/populated. Best guess from its other links: ${mfrLink.url}`,
+                  });
+                }
+              }
+            }
+
+            console.log(`Processed ${processed} device(s) (${skipped} already up to date and skipped): ${blakadderMatches} Blakadder matches (${manufacturerLinks} with a manufacturer link), ${manualReview} needing manual review, ${noMatch} with no credible match.`);
+
+            await exec.exec("git", ["config", "user.name", "github-actions[bot]"]);
+            await exec.exec("git", ["config", "user.email", "github-actions[bot]@users.noreply.github.com"]);
+
+            // --- Part 1: high-confidence results, committed straight to main ---
+            if (changedFiles > 0) {
+              await exec.exec("git", ["add", "data/"]);
+              const diffExit = await exec.exec("git", ["diff", "--cached", "--quiet"], { ignoreReturnCode: true });
+              if (diffExit !== 0) {
+                await exec.exec("git", [
+                  "commit",
+                  "-m",
+                  `Enrich external references (${blakadderMatches} Blakadder match(es), ${manufacturerLinks} manufacturer link(s), ${noMatch} confirmed no-match)`,
+                ]);
+                await exec.exec("git", ["push", "origin", "HEAD:main"]);
+                console.log(`Committed references for ${changedFiles} device file(s) directly to main.`);
+              }
+            }
+
+            // --- Part 2: everything ambiguous goes into a standing review PR ---
+            // (never written to main directly — see header comment).
+            const reviewDoc = {
+              generated_at: new Date().toISOString(),
+              processed, blakadderMatches, manufacturerLinks, manualReview, noMatch,
+              ambiguous: ambiguousReport,
+            };
+            const nextReview = JSON.stringify(reviewDoc, null, 2) + "\n";
+
+            // The previous report only ever lives on the review branch
+            // (references-review.json is deliberately never merged to
+            // main — see header comment), so the "did anything actually
+            // change" comparison has to read it from there, not from the
+            // working tree's current checkout (which is main, right after
+            // Part 1, and never had this file at all). git show against a
+            // branch that may not exist yet (first-ever run) is expected to
+            // fail — that just means there's no previous report to compare
+            // against.
+            const stripTimestamp = (s) => (s ? s.replace(/"generated_at": ".*?"/, '"generated_at": ""') : s);
+            const branch = "automation/external-references-review";
+            await exec.exec("git", ["fetch", "origin", branch], { ignoreReturnCode: true });
+            let prevReview = null;
+            try {
+              const show = await exec.getExecOutput("git", ["show", `origin/${branch}:references-review.json`], {
+                ignoreReturnCode: true,
+                silent: true,
+              });
+              if (show.exitCode === 0) prevReview = show.stdout;
+            } catch (e) {
+              prevReview = null;
+            }
+            const reviewChanged = stripTimestamp(prevReview) !== stripTimestamp(nextReview);
+
+            if (!reviewChanged) {
+              console.log("No change to the ambiguous-match review report — nothing to propose.");
+              return;
+            }
+
+            // Branch from the current tip of main (which may just have
+            // gained the Part 1 commit above) so the review PR's diff is
+            // purely references-review.json, never entangled with the
+            // auto-applied high-confidence changes.
+            await exec.exec("git", ["fetch", "origin", "main"]);
+            await exec.exec("git", ["reset", "--hard", "origin/main"]);
+            fs.writeFileSync("references-review.json", nextReview);
+
+            await exec.exec("git", ["checkout", "-B", branch]);
+            await exec.exec("git", ["add", "references-review.json"]);
+            const reviewDiffExit = await exec.exec("git", ["diff", "--cached", "--quiet"], { ignoreReturnCode: true });
+            if (reviewDiffExit === 0) {
+              console.log("references-review.json diff is empty after branching — nothing to propose.");
+              return;
+            }
+
+            await exec.exec("git", [
+              "commit",
+              "-m",
+              `Update external-reference review report (${ambiguousReport.length} item(s) awaiting manual validation)`,
+            ]);
+            await exec.exec("git", ["push", "--force", "origin", branch]);
+
+            const existingPrs = await github.rest.pulls.list({
+              ...context.repo,
+              head: `${context.repo.owner}:${branch}`,
+              state: "open",
+            });
+
+            const body = [
+              "**Automated — needs manual validation before any of these are added to a device's `references` block.**",
+              "",
+              "None of this is on `main` and none of it is visible on the live site. Each entry below is a *suggested* external reference that this workflow's deterministic Blakadder matching couldn't resolve with confidence — review `references-review.json`, and for anything you're confident about, hand-add the corresponding `references` block (see README/PRD for the shape) to that device's `data/**/*.json` file in a normal commit.",
+              "",
+              `- Devices processed this run: ${processed}`,
+              `- Blakadder matches (already applied to main): ${blakadderMatches}`,
+              `- Manufacturer links (already applied to main): ${manufacturerLinks}`,
+              `- **Awaiting manual review: ${ambiguousReport.length}**`,
+              `- No credible match (already recorded on main): ${noMatch}`,
+              "",
+              "This PR never needs to be merged for the workflow to keep functioning — it's just re-generated on the next run with whatever's still unresolved at that time. Merging it only updates the tracking file; it does not by itself add any reference to a device page.",
+            ].join("\n");
+
+            if (existingPrs.data.length) {
+              const prNumber = existingPrs.data[0].number;
+              await github.rest.pulls.update({ ...context.repo, pull_number: prNumber, body });
+              console.log(`Updated existing review PR #${prNumber}.`);
+            } else {
+              const pr = await github.rest.pulls.create({
+                ...context.repo,
+                title: "External references: devices needing manual validation",
+                head: branch,
+                base: "main",
+                body,
+              });
+              console.log(`Opened review PR #${pr.data.number}.`);
+            }

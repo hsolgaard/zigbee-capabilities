@@ -1121,5 +1121,14 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Sonoff_TRVZB.html",
+      "match_method": "vendor_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "SONOFF",
+    "checked_model": "TRVZB"
   }
 }
