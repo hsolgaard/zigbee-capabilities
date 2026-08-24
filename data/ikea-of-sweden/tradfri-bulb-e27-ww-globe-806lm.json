@@ -1247,5 +1247,10 @@
       ],
       "clusters": {}
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "IKEA of Sweden",
+    "checked_model": "TRADFRI bulb E27 WW globe 806lm"
   }
 }

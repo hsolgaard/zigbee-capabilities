@@ -1189,5 +1189,18 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Ikea_T2035.html",
+      "match_method": "vendor_alias_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "IKEA of Sweden",
+    "checked_model": "STOFTMOLN ceiling/wall lamp WW24",
+    "manufacturer": {
+      "url": "https://www.ikea.com/nl/en/p/stoftmoln-led-ceiling-wall-lamp-wireless-dimmable-warm-white-white-30497490/",
+      "confidence": "high"
+    }
   }
 }

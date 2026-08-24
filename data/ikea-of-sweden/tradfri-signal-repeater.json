@@ -574,5 +574,18 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Ikea_E1746.html",
+      "match_method": "vendor_alias_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "IKEA of Sweden",
+    "checked_model": "TRADFRI Signal Repeater",
+    "manufacturer": {
+      "url": "https://www.ikea.com/us/en/p/tradfri-signal-repeater-30400407/",
+      "confidence": "high"
+    }
   }
 }

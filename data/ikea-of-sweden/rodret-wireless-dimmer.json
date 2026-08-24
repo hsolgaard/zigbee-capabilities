@@ -691,5 +691,10 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "IKEA of Sweden",
+    "checked_model": "RODRET wireless dimmer"
   }
 }

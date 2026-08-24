@@ -418,5 +418,10 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "IKEA of Sweden",
+    "checked_model": "PARASOLL Door/Window Sensor"
   }
 }

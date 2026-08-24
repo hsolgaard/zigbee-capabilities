@@ -397,10 +397,21 @@ jobs:
                 const parts = file.split(path.sep); // ["data", manufacturerSlug, "model.json"]
                 const manufacturerSlug = parts[1];
                 const modelSlug = (parts[2] || "").replace(/\.json$/, "");
+                // `references` (Blakadder/manufacturer external links — see
+                // PRD: "External Device References") lives at the top level
+                // of the device file, one per manufacturer+model, not per
+                // endpoint/firmware like `capabilities`. It's carried
+                // through unchanged into every index entry for this device
+                // purely so the website can render it without a second
+                // fetch; it's never read by, or allowed to influence,
+                // anything in recomputeCapabilities()/enrichCapabilities()
+                // above — those only ever look at `existing.observations`.
+                const references = existing.references || null;
                 Object.values(existing.capabilities).forEach((entry) => {
                   index.push({
                     manufacturer_slug: manufacturerSlug,
                     model_slug: modelSlug,
+                    references,
                     ...entry,
                   });
                 });
