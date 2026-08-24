@@ -563,6 +563,10 @@
       "confidence": "high"
     },
     "checked_manufacturer": "Smartwings",
-    "checked_model": "WM25/L-Z"
+    "checked_model": "WM25/L-Z",
+    "manufacturer": {
+      "url": "https://www.smartwingshome.com/",
+      "confidence": "high"
+    }
   }
 }
