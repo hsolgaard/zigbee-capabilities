@@ -1129,6 +1129,10 @@
       "confidence": "high"
     },
     "checked_manufacturer": "SONOFF",
-    "checked_model": "TRVZB"
+    "checked_model": "TRVZB",
+    "manufacturer": {
+      "url": "https://sonoff.tech/products/sonoff-zigbee-thermostatic-radiator-valve",
+      "confidence": "high"
+    }
   }
 }
