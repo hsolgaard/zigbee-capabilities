@@ -740,5 +740,10 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "pf7swkqp",
+    "checked_model": "TS0003-SB"
   }
 }

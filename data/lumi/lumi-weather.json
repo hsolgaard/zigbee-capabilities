@@ -157,5 +157,18 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Aqara_WSDCGQ11LM.html",
+      "match_method": "vendor_alias_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "LUMI",
+    "checked_model": "lumi.weather",
+    "manufacturer": {
+      "url": "https://www.aqara.com/en/temperature_humidity_sensor.html",
+      "confidence": "high"
+    }
   }
 }
