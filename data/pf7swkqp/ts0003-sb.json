@@ -1,0 +1,744 @@
+{
+  "observations": [
+    {
+      "manufacturer": "pf7swkqp",
+      "model": "TS0003-SB",
+      "identity": {
+        "sw_build_id": null,
+        "hw_version": null,
+        "date_code": null
+      },
+      "endpoints": [
+        {
+          "endpoint": {
+            "id": 1,
+            "profile": "0x0104",
+            "device_type": "0xffff",
+            "in_clusters": [
+              "0x0000",
+              "0x0007",
+              "0x0012"
+            ],
+            "out_clusters": [
+              "0x0006",
+              "0x0008",
+              "0x0019"
+            ]
+          },
+          "scanned": true,
+          "clusters": {
+            "0x0000": {
+              "name": "CustomBasicCluster",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "0",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 1,
+                  "name": "1",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 2,
+                  "name": "2",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 3,
+                  "name": "3",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 4,
+                  "name": "4",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 5,
+                  "name": "5",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 6,
+                  "name": "6",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 7,
+                  "name": "7",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 18,
+                  "name": "18",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 16384,
+                  "name": "16384",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 65280,
+                  "name": "65280",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 65281,
+                  "name": "networkIndicator",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 65282,
+                  "name": "multi_press_reset_count",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "65533",
+                  "access": "READ|REPORT"
+                }
+              ]
+            },
+            "0x0007": {
+              "name": "On/Off Switch Configuration",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "switch_type",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 16,
+                  "name": "switch_actions",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 65280,
+                  "name": "switch_mode",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 65281,
+                  "name": "relay_mode",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 65282,
+                  "name": "relay_index",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 65283,
+                  "name": "long_press_duration",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 65284,
+                  "name": "level_move_rate",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 65285,
+                  "name": "binded_mode",
+                  "access": "READ|WRITE|REPORT"
+                }
+              ]
+            },
+            "0x0012": {
+              "name": "CustomMultistateInputCluster",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 74,
+                  "name": "74",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 81,
+                  "name": "81",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 85,
+                  "name": "present_value",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 111,
+                  "name": "111",
+                  "access": "READ|REPORT"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "endpoint": {
+            "id": 2,
+            "in_clusters": [
+              "0x0007",
+              "0x0012"
+            ],
+            "out_clusters": [
+              "0x0006",
+              "0x0008"
+            ]
+          },
+          "scanned": false
+        },
+        {
+          "endpoint": {
+            "id": 3,
+            "in_clusters": [
+              "0x0007",
+              "0x0012"
+            ],
+            "out_clusters": [
+              "0x0006",
+              "0x0008"
+            ]
+          },
+          "scanned": false
+        },
+        {
+          "endpoint": {
+            "id": 4,
+            "profile": "0x0104",
+            "device_type": "0xffff",
+            "in_clusters": [
+              "0x0004",
+              "0x0006",
+              "0x0008"
+            ],
+            "out_clusters": []
+          },
+          "scanned": true,
+          "clusters": {
+            "0x0004": {
+              "name": "Groups",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "name_support",
+                  "access": "READ|REPORT"
+                }
+              ]
+            },
+            "0x0006": {
+              "name": "On/Off",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "on_off",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 16387,
+                  "name": "start_up_on_off",
+                  "access": "READ|WRITE|REPORT"
+                }
+              ]
+            },
+            "0x0008": {
+              "name": "Level control",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": []
+            }
+          }
+        },
+        {
+          "endpoint": {
+            "id": 5,
+            "profile": "0x0104",
+            "device_type": "0xffff",
+            "in_clusters": [
+              "0x0004",
+              "0x0006",
+              "0x0008"
+            ],
+            "out_clusters": []
+          },
+          "scanned": true,
+          "clusters": {
+            "0x0004": {
+              "name": "Groups",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "name_support",
+                  "access": "READ|REPORT"
+                }
+              ]
+            },
+            "0x0006": {
+              "name": "On/Off",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "on_off",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 16387,
+                  "name": "start_up_on_off",
+                  "access": "READ|WRITE|REPORT"
+                }
+              ]
+            },
+            "0x0008": {
+              "name": "Level control",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": []
+            }
+          }
+        },
+        {
+          "endpoint": {
+            "id": 6,
+            "profile": "0x0104",
+            "device_type": "0xffff",
+            "in_clusters": [
+              "0x0004",
+              "0x0006",
+              "0x0008"
+            ],
+            "out_clusters": []
+          },
+          "scanned": true,
+          "clusters": {
+            "0x0004": {
+              "name": "Groups",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "name_support",
+                  "access": "READ|REPORT"
+                }
+              ]
+            },
+            "0x0006": {
+              "name": "On/Off",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "on_off",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 16387,
+                  "name": "start_up_on_off",
+                  "access": "READ|WRITE|REPORT"
+                }
+              ]
+            },
+            "0x0008": {
+              "name": "Level control",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": []
+            }
+          }
+        }
+      ],
+      "provenance": {
+        "submitted_at": "2026-08-25T01:46:27.914Z",
+        "card_version": "0.32.4",
+        "source_issue": 183
+      }
+    }
+  ],
+  "capabilities": {
+    "1|unknown": {
+      "endpoint": 1,
+      "firmware": null,
+      "scan_count": 1,
+      "last_seen": "2026-08-25T01:46:27.914Z",
+      "manufacturer": "pf7swkqp",
+      "model": "TS0003-SB",
+      "in_clusters": [
+        "0x0000",
+        "0x0007",
+        "0x0012"
+      ],
+      "out_clusters": [
+        "0x0006",
+        "0x0008",
+        "0x0019"
+      ],
+      "clusters": {
+        "0x0000": {
+          "name": "CustomBasicCluster",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "0",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "1",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "2",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "3",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "4",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 5,
+              "name": "5",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 6,
+              "name": "6",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 7,
+              "name": "7",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 18,
+              "name": "18",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 16384,
+              "name": "16384",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65280,
+              "name": "65280",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65281,
+              "name": "networkIndicator",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65282,
+              "name": "multi_press_reset_count",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "65533",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0007": {
+          "name": "On/Off Switch Configuration",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "switch_type",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16,
+              "name": "switch_actions",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65280,
+              "name": "switch_mode",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65281,
+              "name": "relay_mode",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65282,
+              "name": "relay_index",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65283,
+              "name": "long_press_duration",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65284,
+              "name": "level_move_rate",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65285,
+              "name": "binded_mode",
+              "access": "READ|WRITE|REPORT"
+            }
+          ]
+        },
+        "0x0012": {
+          "name": "CustomMultistateInputCluster",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 74,
+              "name": "74",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 81,
+              "name": "81",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 85,
+              "name": "present_value",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 111,
+              "name": "111",
+              "access": "READ|REPORT"
+            }
+          ]
+        }
+      }
+    },
+    "2|unknown": {
+      "endpoint": 2,
+      "firmware": null,
+      "scan_count": 1,
+      "last_seen": "2026-08-25T01:46:27.914Z",
+      "manufacturer": "pf7swkqp",
+      "model": "TS0003-SB",
+      "in_clusters": [
+        "0x0007",
+        "0x0012"
+      ],
+      "out_clusters": [
+        "0x0006",
+        "0x0008"
+      ],
+      "clusters": {}
+    },
+    "3|unknown": {
+      "endpoint": 3,
+      "firmware": null,
+      "scan_count": 1,
+      "last_seen": "2026-08-25T01:46:27.914Z",
+      "manufacturer": "pf7swkqp",
+      "model": "TS0003-SB",
+      "in_clusters": [
+        "0x0007",
+        "0x0012"
+      ],
+      "out_clusters": [
+        "0x0006",
+        "0x0008"
+      ],
+      "clusters": {}
+    },
+    "4|unknown": {
+      "endpoint": 4,
+      "firmware": null,
+      "scan_count": 1,
+      "last_seen": "2026-08-25T01:46:27.914Z",
+      "manufacturer": "pf7swkqp",
+      "model": "TS0003-SB",
+      "in_clusters": [
+        "0x0004",
+        "0x0006",
+        "0x0008"
+      ],
+      "out_clusters": [],
+      "clusters": {
+        "0x0004": {
+          "name": "Groups",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "name_support",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0006": {
+          "name": "On/Off",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "on_off",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16387,
+              "name": "start_up_on_off",
+              "access": "READ|WRITE|REPORT"
+            }
+          ]
+        },
+        "0x0008": {
+          "name": "Level control",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": []
+        }
+      }
+    },
+    "5|unknown": {
+      "endpoint": 5,
+      "firmware": null,
+      "scan_count": 1,
+      "last_seen": "2026-08-25T01:46:27.914Z",
+      "manufacturer": "pf7swkqp",
+      "model": "TS0003-SB",
+      "in_clusters": [
+        "0x0004",
+        "0x0006",
+        "0x0008"
+      ],
+      "out_clusters": [],
+      "clusters": {
+        "0x0004": {
+          "name": "Groups",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "name_support",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0006": {
+          "name": "On/Off",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "on_off",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16387,
+              "name": "start_up_on_off",
+              "access": "READ|WRITE|REPORT"
+            }
+          ]
+        },
+        "0x0008": {
+          "name": "Level control",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": []
+        }
+      }
+    },
+    "6|unknown": {
+      "endpoint": 6,
+      "firmware": null,
+      "scan_count": 1,
+      "last_seen": "2026-08-25T01:46:27.914Z",
+      "manufacturer": "pf7swkqp",
+      "model": "TS0003-SB",
+      "in_clusters": [
+        "0x0004",
+        "0x0006",
+        "0x0008"
+      ],
+      "out_clusters": [],
+      "clusters": {
+        "0x0004": {
+          "name": "Groups",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "name_support",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0006": {
+          "name": "On/Off",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "on_off",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16387,
+              "name": "start_up_on_off",
+              "access": "READ|WRITE|REPORT"
+            }
+          ]
+        },
+        "0x0008": {
+          "name": "Level control",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": []
+        }
+      }
+    }
+  }
+}
