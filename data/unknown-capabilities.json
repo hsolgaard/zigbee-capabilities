@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T05:45:57.163Z",
+  "generated_at": "2026-08-25T06:00:51.090Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -172,6 +172,16 @@
         {
           "manufacturer": "innr",
           "model": "SP 224",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id_hex": "0xffff",
+      "seen_on": [
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.weather",
           "count": 1
         }
       ]
