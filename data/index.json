@@ -34064,7 +34064,19 @@
   {
     "manufacturer_slug": "lumi",
     "model_slug": "lumi-plug-maeu01",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Aqara_SP-EUC01.html",
+        "match_method": "vendor_alias_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "LUMI",
+      "checked_model": "lumi.plug.maeu01",
+      "manufacturer": {
+        "url": "https://www.aqara.com/eu/smart_outlet.html",
+        "confidence": "high"
+      }
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -34765,7 +34777,19 @@
   {
     "manufacturer_slug": "lumi",
     "model_slug": "lumi-plug-maeu01",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Aqara_SP-EUC01.html",
+        "match_method": "vendor_alias_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "LUMI",
+      "checked_model": "lumi.plug.maeu01",
+      "manufacturer": {
+        "url": "https://www.aqara.com/eu/smart_outlet.html",
+        "confidence": "high"
+      }
+    },
     "endpoint": 21,
     "firmware": null,
     "scan_count": 1,
@@ -34781,7 +34805,19 @@
   {
     "manufacturer_slug": "lumi",
     "model_slug": "lumi-plug-maeu01",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Aqara_SP-EUC01.html",
+        "match_method": "vendor_alias_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "LUMI",
+      "checked_model": "lumi.plug.maeu01",
+      "manufacturer": {
+        "url": "https://www.aqara.com/eu/smart_outlet.html",
+        "confidence": "high"
+      }
+    },
     "endpoint": 242,
     "firmware": null,
     "scan_count": 1,
@@ -35039,7 +35075,19 @@
   {
     "manufacturer_slug": "lumi",
     "model_slug": "lumi-weather",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Aqara_WSDCGQ11LM.html",
+        "match_method": "vendor_alias_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "LUMI",
+      "checked_model": "lumi.weather",
+      "manufacturer": {
+        "url": "https://www.aqara.com/en/temperature_humidity_sensor.html",
+        "confidence": "high"
+      }
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -35872,7 +35920,11 @@
   {
     "manufacturer_slug": "pf7swkqp",
     "model_slug": "ts0003-sb",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "pf7swkqp",
+      "checked_model": "TS0003-SB"
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -36046,7 +36098,11 @@
   {
     "manufacturer_slug": "pf7swkqp",
     "model_slug": "ts0003-sb",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "pf7swkqp",
+      "checked_model": "TS0003-SB"
+    },
     "endpoint": 2,
     "firmware": null,
     "scan_count": 1,
@@ -36066,7 +36122,11 @@
   {
     "manufacturer_slug": "pf7swkqp",
     "model_slug": "ts0003-sb",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "pf7swkqp",
+      "checked_model": "TS0003-SB"
+    },
     "endpoint": 3,
     "firmware": null,
     "scan_count": 1,
@@ -36086,7 +36146,11 @@
   {
     "manufacturer_slug": "pf7swkqp",
     "model_slug": "ts0003-sb",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "pf7swkqp",
+      "checked_model": "TS0003-SB"
+    },
     "endpoint": 4,
     "firmware": null,
     "scan_count": 1,
@@ -36140,7 +36204,11 @@
   {
     "manufacturer_slug": "pf7swkqp",
     "model_slug": "ts0003-sb",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "pf7swkqp",
+      "checked_model": "TS0003-SB"
+    },
     "endpoint": 5,
     "firmware": null,
     "scan_count": 1,
@@ -36194,7 +36262,11 @@
   {
     "manufacturer_slug": "pf7swkqp",
     "model_slug": "ts0003-sb",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "pf7swkqp",
+      "checked_model": "TS0003-SB"
+    },
     "endpoint": 6,
     "firmware": null,
     "scan_count": 1,
