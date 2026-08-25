@@ -1483,5 +1483,18 @@
       ],
       "clusters": {}
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Aqara_SP-EUC01.html",
+      "match_method": "vendor_alias_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "LUMI",
+    "checked_model": "lumi.plug.maeu01",
+    "manufacturer": {
+      "url": "https://www.aqara.com/eu/smart_outlet.html",
+      "confidence": "high"
+    }
   }
 }
