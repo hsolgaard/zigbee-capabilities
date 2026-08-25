@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T06:00:51.090Z",
+  "generated_at": "2026-08-25T06:01:22.566Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -685,6 +685,237 @@
         {
           "manufacturer": "Inovelli",
           "model": "VZM32-SN",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0002",
+      "seen_on": [
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0003",
+      "seen_on": [
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0006",
+      "seen_on": [
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0007",
+      "seen_on": [
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0008",
+      "seen_on": [
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x00f3",
+      "seen_on": [
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x00f5",
+      "seen_on": [
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x00f6",
+      "seen_on": [
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x00fa",
+      "seen_on": [
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x00fc",
+      "seen_on": [
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x00fe",
+      "seen_on": [
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x00ff",
+      "seen_on": [
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0100",
+      "seen_on": [
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0200",
+      "seen_on": [
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0202",
+      "seen_on": [
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0203",
+      "seen_on": [
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0204",
+      "seen_on": [
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0205",
+      "seen_on": [
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0206",
+      "seen_on": [
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x020b",
+      "seen_on": [
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0xf000",
+      "seen_on": [
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
           "count": 1
         }
       ]
