@@ -1,0 +1,161 @@
+{
+  "observations": [
+    {
+      "manufacturer": "LUMI",
+      "model": "lumi.weather",
+      "identity": {
+        "sw_build_id": null,
+        "hw_version": null,
+        "date_code": null
+      },
+      "endpoints": [
+        {
+          "endpoint": {
+            "id": 1,
+            "profile": "0x0104",
+            "device_type": "0x5f01",
+            "in_clusters": [
+              "0x0000",
+              "0x0001",
+              "0x0003",
+              "0x0402",
+              "0x0403",
+              "0x0405",
+              "0xffff"
+            ],
+            "out_clusters": [
+              "0x0000",
+              "0x0004",
+              "0xffff"
+            ]
+          },
+          "scanned": true,
+          "clusters": {
+            "0x0000": {
+              "name": "BasicCluster",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": []
+            },
+            "0x0001": {
+              "name": "Power Configuration",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": []
+            },
+            "0x0003": {
+              "name": "Identify",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": []
+            },
+            "0x0402": {
+              "name": "Temperature Measurement",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": []
+            },
+            "0x0403": {
+              "name": "Pressure Measurement",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": []
+            },
+            "0x0405": {
+              "name": "Relative Humidity Measurement",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": []
+            },
+            "0xffff": {
+              "name": "Manufacturer Specific",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": []
+            }
+          }
+        }
+      ],
+      "provenance": {
+        "submitted_at": "2026-08-25T03:26:35.464Z",
+        "card_version": "0.32.4",
+        "source_issue": 187
+      }
+    }
+  ],
+  "capabilities": {
+    "1|unknown": {
+      "endpoint": 1,
+      "firmware": null,
+      "scan_count": 1,
+      "last_seen": "2026-08-25T03:26:35.464Z",
+      "manufacturer": "LUMI",
+      "model": "lumi.weather",
+      "in_clusters": [
+        "0x0000",
+        "0x0001",
+        "0x0003",
+        "0x0402",
+        "0x0403",
+        "0x0405",
+        "0xffff"
+      ],
+      "out_clusters": [
+        "0x0000",
+        "0x0004",
+        "0xffff"
+      ],
+      "clusters": {
+        "0x0000": {
+          "name": "BasicCluster",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": []
+        },
+        "0x0001": {
+          "name": "Power Configuration",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": []
+        },
+        "0x0003": {
+          "name": "Identify",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": []
+        },
+        "0x0402": {
+          "name": "Temperature Measurement",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": []
+        },
+        "0x0403": {
+          "name": "Pressure Measurement",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": []
+        },
+        "0x0405": {
+          "name": "Relative Humidity Measurement",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": []
+        },
+        "0xffff": {
+          "name": "Manufacturer Specific",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": []
+        }
+      }
+    }
+  }
+}
