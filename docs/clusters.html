@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cluster glossary — Zigbee Capabilities</title>
+<meta name="description" content="What each Zigbee cluster does, and what Input vs Output means for it — plain-English reference for choosing the right device for a job.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <h1>Cluster glossary</h1>
+    <p class="tagline">What each Zigbee cluster actually does, and what it means for a device to declare it as Input or Output.</p>
+    <nav class="site-nav">
+      <a href="index.html">&larr; Back to device explorer</a>
+      <a href="https://github.com/hsolgaard/zigbee-capabilities" target="_blank" rel="noopener">Database on GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="intro-section">
+    <div class="discoveries">
+      <p class="discoveries-lead">
+        Every device on this site declares, per Zigbee cluster, whether it's <strong>Input</strong>, <strong>Output</strong>,
+        or both — and that distinction decides what the device can actually do for a specific job.
+      </p>
+      <p>
+        <strong>Input</strong> means the device can be commanded with that cluster — by Home Assistant, or by another
+        Zigbee device bound directly to it — or reports data over it. It cannot use that cluster to control anything
+        else itself.
+      </p>
+      <p>
+        <strong>Output</strong> means the device can itself send that cluster's commands directly to another device,
+        over a Zigbee bind, without a hub involved. This is what makes a device a genuine controller for that
+        function — e.g. a wall switch or remote that can operate a separate light or relay on its own.
+      </p>
+      <p class="hint" style="margin-top: 10px;">
+        Most switches and dimmers — even ones with a physical button — are Input only: the button operates the
+        device's own load, it doesn't send Zigbee commands to anything else. Declaring Output for a cluster is the
+        much rarer, more specific fact that actually answers "can I use this to directly control a separate device."
+      </p>
+    </div>
+  </section>
+
+  <section id="jump-section">
+    <p class="hint" id="clusters-jump">Loading&hellip;</p>
+  </section>
+
+  <section id="clusters-section">
+    <div id="clusters-body">Loading the community database&hellip;</div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Cluster counts and roles reflect what this community database has actually observed — see the
+      <a href="https://github.com/hsolgaard/zigbee-capabilities" target="_blank" rel="noopener">zigbee-capabilities</a>
+      repository for the full dataset.</p>
+    <p>Not affiliated with the Connectivity Standards Alliance (Zigbee), Home Assistant, or any device manufacturer.</p>
+  </div>
+</footer>
+
+<script type="module" src="clusters.js"></script>
+</body>
+</html>
