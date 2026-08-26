@@ -567,33 +567,133 @@ export const CAPABILITY_ROLE_EXPLANATION = {
 // closer match requested wording where that's a safe 1:1 (Scene control,
 // Energy monitoring, Temperature sensing, Color control) without changing
 // what evidence backs each one.
+// `label` is the imperative-mood chip wording shown as a tag (unchanged,
+// still used by useCaseTags/goodForHtml).
+//
+// `attribute` (command-kind rules only) is the noun form of what gets
+// controlled — e.g. "on/off state", not "switch things on/off". This
+// exists specifically to avoid a real ambiguity a first version of this
+// sentence got wrong: "this device can switch things on and off" reads as
+// "this device controls other things," which is only true if it has an
+// OUTPUT declaration for that cluster (a separate, much rarer fact — see
+// controlUseCases/directControlSummary). What a plain Input declaration
+// actually means is that the device's OWN on/off state (its own relay or
+// load) can be switched, and by two possible sources: Home Assistant, or
+// another Zigbee device bound directly to it — e.g. a second switch using
+// this device as a relay. deviceOverview() below always phrases these as
+// "this device's <attribute> can be controlled by Home Assistant, or by
+// another Zigbee device bound directly to it" for exactly that reason —
+// never as an active verb with the device as the one doing the switching.
+// Deliberately says nothing about what the on/off state is physically
+// wired to (a hardwired lamp, a wired appliance, or nothing at all) —
+// that's real-world context no scan can confirm and belongs in the
+// per-cluster glossary explanation, not a claim this template makes up.
+//
+// `fragment` (presence-kind rules only) is the same idea for sensor
+// clusters, which don't have this ambiguity — a temperature sensor
+// reporting "the temperature it senses" is unambiguous regardless of
+// what's nearby, so these stay as simple sentence fragments.
 const USE_CASE_RULES = [
-  { id: "switch-onoff", clusterId: "0x0006", kind: "command", label: "Switch things on/off" },
-  { id: "dimmer", clusterId: "0x0008", kind: "command", label: "Dim brightness / adjust level" },
-  { id: "color", clusterId: "0x0300", kind: "command", label: "Color control" },
-  { id: "lock", clusterId: "0x0101", kind: "command", label: "Lock / unlock" },
-  { id: "cover", clusterId: "0x0102", kind: "command", label: "Open / close covers" },
-  { id: "thermostat", clusterId: "0x0201", kind: "command", label: "Control heating / cooling" },
-  { id: "scenes", clusterId: "0x0005", kind: "command", label: "Scene control" },
-  { id: "temperature", clusterId: "0x0402", kind: "presence", label: "Temperature sensing" },
-  { id: "humidity", clusterId: "0x0405", kind: "presence", label: "Monitor humidity" },
-  { id: "occupancy", clusterId: "0x0406", kind: "presence", label: "Detect motion / occupancy" },
-  { id: "illuminance", clusterId: "0x0400", kind: "presence", label: "Monitor light level" },
-  { id: "pressure", clusterId: "0x0403", kind: "presence", label: "Monitor air pressure" },
-  { id: "flow", clusterId: "0x0404", kind: "presence", label: "Monitor water / air flow" },
-  { id: "metering", clusterId: "0x0702", kind: "presence", label: "Energy monitoring" },
-  { id: "electrical", clusterId: "0x0b04", kind: "presence", label: "Track power draw" },
-  { id: "ias-zone", clusterId: "0x0500", kind: "presence", label: "Raise security / contact alerts" },
+  { id: "switch-onoff", clusterId: "0x0006", kind: "command", label: "Switch things on/off", attribute: "on/off state" },
+  { id: "dimmer", clusterId: "0x0008", kind: "command", label: "Dim brightness / adjust level", attribute: "brightness" },
+  { id: "color", clusterId: "0x0300", kind: "command", label: "Color control", attribute: "color" },
+  { id: "lock", clusterId: "0x0101", kind: "command", label: "Lock / unlock", attribute: "lock state" },
+  { id: "cover", clusterId: "0x0102", kind: "command", label: "Open / close covers", attribute: "open/close position" },
+  { id: "thermostat", clusterId: "0x0201", kind: "command", label: "Control heating / cooling", attribute: "heating/cooling setpoint" },
+  { id: "scenes", clusterId: "0x0005", kind: "command", label: "Scene control", attribute: "scene recall" },
+  { id: "temperature", clusterId: "0x0402", kind: "presence", label: "Temperature sensing", fragment: "sense temperature" },
+  { id: "humidity", clusterId: "0x0405", kind: "presence", label: "Monitor humidity", fragment: "sense humidity" },
+  { id: "occupancy", clusterId: "0x0406", kind: "presence", label: "Detect motion / occupancy", fragment: "detect motion or occupancy" },
+  { id: "illuminance", clusterId: "0x0400", kind: "presence", label: "Monitor light level", fragment: "sense ambient light level" },
+  { id: "pressure", clusterId: "0x0403", kind: "presence", label: "Monitor air pressure", fragment: "sense air pressure" },
+  { id: "flow", clusterId: "0x0404", kind: "presence", label: "Monitor water / air flow", fragment: "sense water or air flow" },
+  { id: "metering", clusterId: "0x0702", kind: "presence", label: "Energy monitoring", fragment: "monitor energy use" },
+  { id: "electrical", clusterId: "0x0b04", kind: "presence", label: "Track power draw", fragment: "track power draw" },
+  { id: "ias-zone", clusterId: "0x0500", kind: "presence", label: "Raise security / contact alerts", fragment: "raise security or contact alerts" },
 ];
+const USE_CASE_RULE_BY_ID = Object.fromEntries(USE_CASE_RULES.map((r) => [r.id, r]));
 
-// Control-type clusters worth flagging as "acts as a remote" when they only
-// ever show up as an *output* cluster across every entry on file — the same
-// controller/receiver distinction _commandsSectionHtml already draws for a
-// single local scan (the exact "no real controllers is not possible
-// scanning" gap MattWestb raised, zigbee-capabilities#57), generalized here
-// across the whole community record for a model instead of one device's
-// scan.
+// Control-type clusters worth calling out specifically when a device
+// declares them as *output* — i.e. clusters common enough on real
+// controllers/remotes that a plain-English phrase is worth curating, same
+// spirit as USE_CASE_RULES' curation for the input side. Not every possible
+// output cluster gets one; groupCapabilitiesByOutcome's unscanned-cluster
+// fallback already covers the general "declared some other output cluster"
+// case with an honest generic label.
+//
+// Historical note: this list used to gate a single blunt "Act as a remote /
+// controller" tag that was suppressed entirely if *any* of these four
+// clusters was *ever* confirmed as input on *any* entry — meant to avoid
+// mislabeling an ordinary switch/light as a remote, but it actually hid
+// genuine dual-role devices (e.g. a device that is both commandable via
+// On/Off *and* separately declares Level Control as output) and, worse,
+// tied unrelated clusters together (input evidence on On/Off could hide an
+// output tag that was really about Scene control). controlUseCases() below
+// replaces that with a per-cluster check instead, sourced directly from
+// groupCapabilitiesByOutcome's role field (the same role/badge logic the
+// per-device capability panel already shows) — a cluster only needs to be
+// declared output somewhere in the record to be listed here, independent
+// of whether it (or any other cluster) is also input somewhere else. A
+// cluster genuinely used both ways (role "both") is exactly the case the
+// old logic couldn't represent at all.
 const CONTROLLER_CLUSTER_IDS = ["0x0006", "0x0008", "0x0300", "0x0005"];
+
+// Plain-English phrases for the same curated cluster list, used to build
+// natural sentences (deviceSummary) rather than badge/tag labels. Kept
+// separate from USE_CASE_RULES' labels because the grammar differs: those
+// describe what the device itself does ("Switch things on/off"), these
+// describe what it can do *to another device* over a direct bind.
+const CONTROL_PHRASES_BY_CLUSTER = {
+  "0x0006": "switch another device on or off",
+  "0x0008": "dim another device",
+  "0x0300": "change another device's color",
+  "0x0005": "trigger scenes on another device",
+};
+
+// Per-cluster version of the old CONTROLLER_CLUSTER_IDS check: which of the
+// curated control-relevant clusters does this device declare as *output*
+// (role "output" or "both") anywhere in its community record, with a
+// human phrase available for it. Deliberately reuses
+// groupCapabilitiesByOutcome's already-computed role — the exact same
+// signal behind each device's Input/Output badges — so this can never
+// disagree with what a reader sees after clicking "View capabilities".
+export function controlUseCases(entries) {
+  if (!entries || !entries.length) return [];
+  return groupCapabilitiesByOutcome(entries)
+    .filter((g) => (g.role === "output" || g.role === "both") && CONTROL_PHRASES_BY_CLUSTER[g.clusterId])
+    .map((g) => ({ clusterId: g.clusterId, label: g.label, phrase: CONTROL_PHRASES_BY_CLUSTER[g.clusterId] }));
+}
+
+// The other half of the answer controlUseCases() gives: which of the
+// curated control-relevant clusters this device is confirmed commandable
+// on (input) but has NO output declaration for anywhere in its community
+// record. This exists specifically for the buyer's question this feature
+// was built to answer — "I like this device, but before I buy it I want
+// to know whether it'll let me directly bind it to control a separate
+// relay" — where silence (the earlier version of this feature) isn't good
+// enough; a shopper needs an explicit no, not just the absence of a yes.
+//
+// Deliberately scoped to only the clusters this device is *already*
+// commandable on, same reasoning as directControlSummary's positive case:
+// for a device with no on/off/dimming/color/scene evidence at all (a plain
+// sensor), a user isn't likely to be asking "can this control a relay" in
+// the first place, so nothing is asserted either way — silence stays
+// correct there. It's specifically the devices that look like they might
+// be a switch/controller (commandable on one of these clusters) where the
+// missing output declaration is the exact fact worth surfacing, because
+// that's the exact ambiguity a real support case spent over an hour on.
+export function notControllableUseCases(entries) {
+  if (!entries || !entries.length) return [];
+  const controllableIds = new Set(controlUseCases(entries).map((c) => c.clusterId));
+  const commandableIds = new Set(
+    useCaseTags(entries)
+      .filter((t) => USE_CASE_RULE_BY_ID[t.id] && CONTROLLER_CLUSTER_IDS.includes(USE_CASE_RULE_BY_ID[t.id].clusterId))
+      .map((t) => USE_CASE_RULE_BY_ID[t.id].clusterId)
+  );
+  return [...commandableIds]
+    .filter((clusterId) => !controllableIds.has(clusterId))
+    .map((clusterId) => ({ clusterId, phrase: CONTROL_PHRASES_BY_CLUSTER[clusterId] }));
+}
 
 // entries: every community entry for one manufacturer+model (any firmware —
 // see groupByDevice). localFirmware, if supplied, is the asking device's own
@@ -623,24 +723,151 @@ export function useCaseTags(entries, localFirmware = null) {
     }
   });
 
-  let controllerFirmwares = new Set();
-  let everConfirmedAsInput = false;
-  entries.forEach((entry) => {
-    CONTROLLER_CLUSTER_IDS.forEach((clusterId) => {
-      if ((entry.out_clusters || []).includes(clusterId)) controllerFirmwares.add(entry.firmware || null);
-      const cluster = (entry.clusters || {})[clusterId];
-      if (cluster && (cluster.commands_received || []).some((r) => r.present === true)) everConfirmedAsInput = true;
+  // One tag per curated control-relevant cluster this device declares as
+  // output — independent per cluster (see controlUseCases' doc comment for
+  // why the old all-or-nothing version was wrong), so a device that's both
+  // commandable on one cluster and a genuine controller on another (or even
+  // the same) cluster gets both tags rather than the output one vanishing.
+  controlUseCases(entries).forEach((c) => {
+    const confirmingFirmwares = new Set();
+    entries.forEach((entry) => {
+      if ((entry.out_clusters || []).includes(c.clusterId)) confirmingFirmwares.add(entry.firmware || null);
+    });
+    tags.push({
+      id: `control-${c.clusterId}`,
+      label: `Directly ${c.phrase} (bind)`,
+      exactFirmware: !localFirmware || confirmingFirmwares.has(localFirmware),
     });
   });
-  if (controllerFirmwares.size && !everConfirmedAsInput) {
-    tags.push({
-      id: "controller",
-      label: "Act as a remote / controller",
-      exactFirmware: !localFirmware || controllerFirmwares.has(localFirmware),
-    });
-  }
 
   return tags;
+}
+
+function joinPhrases(list, conj = "and") {
+  if (!list.length) return "";
+  if (list.length === 1) return list[0];
+  if (list.length === 2) return `${list[0]} ${conj} ${list[1]}`;
+  return `${list.slice(0, -1).join(", ")}, ${conj} ${list[list.length - 1]}`;
+}
+
+// The "voice-over" this whole Input/Output effort was for: a single plain-
+// English sentence answering "can I use this device to directly control
+// another Zigbee device, without a hub in the loop" — the exact question a
+// support case spent over an hour on (see CAPABILITY_ROLE_EXPLANATION)
+// before landing on the Input/Output distinction that makes this answerable
+// at all. Deliberately its own function rather than folded into
+// useCaseTags' chip labels: those are imperative-mood UI labels ("Switch
+// things on/off") that don't reuse cleanly as sentence fragments, and this
+// is specifically the one fact worth a full sentence rather than a chip,
+// since it's the one most likely to be exactly what a reader came here to
+// find out. Returns "" when the device declares no control-relevant output
+// cluster, so the caller can render nothing rather than a hedge-filled "no"
+// on every ordinary light bulb and sensor.
+//
+// The trailing disclaimer is deliberate and specific: it is NOT about how
+// much community evidence backs this observation (the trust-panel/star
+// rating shown right above already covers that) — it's that a device
+// *declaring* an output cluster in its Zigbee signature is real, confirmed
+// evidence it CAN issue that cluster's commands, but doesn't by itself
+// guarantee a specific bind to a specific target device will succeed
+// (binding table capacity, coordinator/router behavior, and the target
+// device's own support all still matter).
+// Deliberately says nothing about "Input"/"Output" (the ZCL terms the
+// capability panel below uses) — this sentence is the first thing a
+// visitor reads, with no legend or hover tooltip nearby to teach the
+// jargon first, so it's phrased in terms anyone can follow: what the
+// device can send, versus what it can only receive. Same underlying fact,
+// plainer words. See notDirectControlSummary for the negative case.
+export function directControlSummary(entries) {
+  const control = controlUseCases(entries);
+  if (!control.length) return "";
+  const phrases = joinPhrases(control.map((c) => c.phrase));
+  return `Can likely ${phrases} directly over a Zigbee bind, without Home Assistant in the loop — based on what this device's Zigbee signature declares it capable of sending, though not a guarantee any specific bind will succeed on every network.`;
+}
+
+// The explicit "no" counterpart to directControlSummary — for exactly the
+// buyer's question this whole feature exists to answer: "I like this
+// device, but before I buy it I want to know whether it'll let me
+// directly bind it to control a separate relay." A missing positive
+// sentence isn't a clear enough answer to that; this states the negative
+// outright, for the same reason a spec sheet says "no" rather than just
+// omitting a row. See notControllableUseCases' doc comment for why this
+// only fires for a device that's already commandable on one of these
+// clusters (so the question is a live one) rather than every device with
+// no output cluster at all.
+export function notDirectControlSummary(entries) {
+  const notControl = notControllableUseCases(entries);
+  if (!notControl.length) return "";
+  const phrases = joinPhrases(
+    notControl.map((c) => c.phrase),
+    "or"
+  );
+  return `Cannot ${phrases} directly over a Zigbee bind — its Zigbee signature only lets it receive ${
+    notControl.length > 1 ? "those commands" : "that command"
+  }, not send ${notControl.length > 1 ? "them" : "it"} to another device.`;
+}
+
+// deviceOverview: the "quick overview" a reader wants at a glance — 2-3
+// plain sentences instead of scanning a row of tags. Built entirely from
+// facts useCaseTags() and directControlSummary() already compute (nothing
+// here infers anything new), and with no live AI/LLM call: this site is
+// static (no backend to call one from securely), and more importantly, an
+// LLM asked to "describe what this device is good for" would be free to
+// state something the actual scan never confirmed — exactly what this
+// project's whole Confidence Model (confidenceLabel, the never-overclaim
+// comments throughout groupCapabilitiesByOutcome/useCaseTags) exists to
+// prevent. Every clause below traces back to one specific confirmed
+// command, declared cluster, or reporting attribute. If richer, more
+// varied prose is wanted later, the safer place for an LLM is at
+// ingest/review time — drafting a blurb from the submitted scan for a
+// human to approve before it's committed — never generated live from
+// whatever a page visitor happens to load.
+// Order is deliberate: what it can be commanded to do, then what it
+// senses/reports, then — the newest and most decision-relevant clause —
+// whether it can directly control something else.
+export function deviceOverview(entries) {
+  if (!entries || !entries.length) return [];
+  const tags = useCaseTags(entries).filter((t) => USE_CASE_RULE_BY_ID[t.id]);
+  const commandAttrs = tags
+    .filter((t) => USE_CASE_RULE_BY_ID[t.id].kind === "command")
+    .map((t) => USE_CASE_RULE_BY_ID[t.id].attribute);
+  const presenceFrags = tags
+    .filter((t) => USE_CASE_RULE_BY_ID[t.id].kind === "presence")
+    .map((t) => USE_CASE_RULE_BY_ID[t.id].fragment);
+
+  // Returned as one {kind, text} entry per sentence, not a single joined
+  // string, so the renderer can attach the Output badge to exactly the
+  // control sentence (always last, when present) instead of the whole
+  // paragraph — see deviceOverviewHtml in app.js.
+  //
+  // The command sentence is always phrased as "<attribute> can be
+  // controlled by X, or by Y" — never "this device can <verb> things" —
+  // specifically because a real device's on/off Input cluster was once
+  // misread from a sentence phrased the second way as "this device
+  // controls other devices," which is only true for a declared Output
+  // cluster (a separate fact this function reports as its own "control"
+  // sentence below). See the USE_CASE_RULES doc comment for the full
+  // reasoning. "another Zigbee device bound directly to it" is the input
+  // side's exact real-world equivalent of "using this device as a relay."
+  const sentences = [];
+  if (commandAttrs.length) {
+    sentences.push({
+      kind: "command",
+      text: `This device's ${joinPhrases(commandAttrs)} can be controlled by Home Assistant, or by another Zigbee device bound directly to it.`,
+    });
+  }
+  if (presenceFrags.length) {
+    sentences.push({
+      kind: "presence",
+      text: `${commandAttrs.length ? "It can also" : "This device can"} ${joinPhrases(presenceFrags)}.`,
+    });
+  }
+  const control = directControlSummary(entries);
+  if (control) sentences.push({ kind: "control", text: control });
+  const notControl = notDirectControlSummary(entries);
+  if (notControl) sentences.push({ kind: "not-control", text: notControl });
+
+  return sentences;
 }
 
 // Interesting Discoveries (PRD v2, Phase 2): a small set of factual,
