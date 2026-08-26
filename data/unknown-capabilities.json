@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T05:19:11.597Z",
+  "generated_at": "2026-08-26T11:07:19.063Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -162,6 +162,11 @@
         {
           "manufacturer": "LUMI",
           "model": "lumi.sensor_magnet",
+          "count": 1
+        },
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.sensor_motion.aq2",
           "count": 1
         },
         {
