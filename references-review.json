@@ -1,1343 +1,1649 @@
 {
-  "generated_at": "2026-08-24T09:58:15.398Z",
-  "processed": 15,
-  "blakadderMatches": 0,
-  "manufacturerLinks": 0,
-  "manualReview": 18,
+  "generated_at": "2026-08-26T11:07:07.106Z",
+  "processed": 3,
+  "blakadderMatches": 2,
+  "manufacturerLinks": 2,
+  "manualReview": 1,
   "noMatch": 0,
   "deadLinksCleared": 0,
   "ambiguous": [
     {
-      "file": "data/awox/tlsr82xx.json",
-      "manufacturer": "AwoX",
-      "model": "TLSR82xx",
+      "file": "data/tze200-4utwozi2/ts0601.json",
+      "manufacturer": "_TZE200_4utwozi2",
+      "model": "TS0601",
       "kind": "blakadder_ambiguous",
-      "reason": "Vendor \"AwoX\" + model \"TLSR82xx\" matched 6 Blakadder pages.",
+      "reason": "Generic Tuya model \"TS0601\" matches 171 Blakadder page(s), but manufacturer string _TZE200_4utwozi2 isn't listed on any of them.",
       "candidates": [
         {
-          "url": "https://zigbee.blakadder.com/AwoX_33943.html",
-          "vendor": "AwoX",
-          "model": "33943",
+          "url": "https://zigbee.blakadder.com/A-OK_AM25.html",
+          "vendor": "A-OK",
+          "model": "AM25",
           "zigbeemodel": [
-            "TLSR82xx"
+            "TS0601",
+            "_TZE200_zuz7f94z"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/AwoX_33944.html",
-          "vendor": "AwoX",
-          "model": "33944",
+          "url": "https://zigbee.blakadder.com/Avatto_TRV06.html",
+          "vendor": "Avatto",
+          "model": "TRV06",
           "zigbeemodel": [
-            "TLSR82xx"
+            "TS0601",
+            "_TZE200_bvu2wnxz",
+            "TS0601",
+            "_TZE200_hvaxb2tc"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/AwoX_33946.html",
-          "vendor": "AwoX",
-          "model": "33946",
-          "zigbeemodel": [
-            "TLSR82xx"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/AwoX_33948.html",
-          "vendor": "AwoX",
-          "model": "33948",
-          "zigbeemodel": [
-            "TLSR82xx"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/AwoX_33951.html",
-          "vendor": "AwoX",
-          "model": "33951",
-          "zigbeemodel": [
-            "TLSR82xx"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/AwoX_33957.html",
-          "vendor": "AwoX",
-          "model": "33957",
-          "zigbeemodel": [
-            "TLSR82xx"
-          ]
-        }
-      ]
-    },
-    {
-      "file": "data/ewelink/snzb-04p.json",
-      "manufacturer": "eWeLink",
-      "model": "SNZB-04P",
-      "kind": "blakadder_ambiguous",
-      "reason": "Vendor \"eWeLink\" matches, but model \"SNZB-04P\" only loosely resembles Blakadder's model string for these page(s).",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/eWeLink_ZB-GW03.html",
-          "vendor": "eWeLink",
-          "model": "",
-          "zigbeemodel": []
-        }
-      ]
-    },
-    {
-      "file": "data/ikea-of-sweden/remote-control-n2.json",
-      "manufacturer": "IKEA of Sweden",
-      "model": "Remote Control N2",
-      "kind": "blakadder_ambiguous",
-      "reason": "Vendor \"IKEA of Sweden\" + model \"Remote Control N2\" matched 2 Blakadder pages.",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/Ikea_E2001.html",
-          "vendor": "IKEA",
-          "model": "E2001",
-          "zigbeemodel": [
-            "Remote Control N2"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Ikea_E2002.html",
-          "vendor": "IKEA",
-          "model": "E2001",
-          "zigbeemodel": [
-            "Remote Control N2"
-          ]
-        }
-      ]
-    },
-    {
-      "file": "data/ikea-of-sweden/tradfri-bulb-e14-ws-470lm.json",
-      "manufacturer": "IKEA of Sweden",
-      "model": "TRADFRI bulb E14 WS 470lm",
-      "kind": "blakadder_ambiguous",
-      "reason": "Vendor \"IKEA of Sweden\" + model \"TRADFRI bulb E14 WS 470lm\" matched 2 Blakadder pages.",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/Ikea_LED1835C6.html",
-          "vendor": "IKEA",
-          "model": "LED1835C6",
-          "zigbeemodel": [
-            "TRADFRI bulb E14 WS 470lm"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Ikea_LED1903C5.html",
-          "vendor": "IKEA",
-          "model": "LED1903C5",
-          "zigbeemodel": [
-            "TRADFRI bulb E14 WS 470lm",
-            "TRADFRI bulb E12 WS 450lm",
-            "TRADFRI bulb E17 WS 440lm"
-          ]
-        }
-      ]
-    },
-    {
-      "file": "data/ikea-of-sweden/tradfri-bulb-e27-ww-clear-250lm.json",
-      "manufacturer": "IKEA of Sweden",
-      "model": "TRADFRI bulb E27 WW clear 250lm",
-      "kind": "blakadder_ambiguous",
-      "reason": "Vendor \"IKEA of Sweden\" + model \"TRADFRI bulb E27 WW clear 250lm\" matched 2 Blakadder pages.",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/Ikea_LED1842G3.html",
-          "vendor": "IKEA",
-          "model": "LED1842G3",
-          "zigbeemodel": [
-            "TRADFRI bulb E27 WW clear 250lm",
-            "TRADFRI bulb E26 WW clear 250lm"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Ikea_LED1934G3.html",
-          "vendor": "IKEA",
-          "model": "LED1934G3",
-          "zigbeemodel": [
-            "TRADFRIbulbE27WWclear250lm"
-          ]
-        }
-      ]
-    },
-    {
-      "file": "data/ikea-of-sweden/tradfri-bulb-gu10-ws-400lm.json",
-      "manufacturer": "IKEA of Sweden",
-      "model": "TRADFRI bulb GU10 WS 400lm",
-      "kind": "blakadder_ambiguous",
-      "reason": "Vendor \"IKEA of Sweden\" + model \"TRADFRI bulb GU10 WS 400lm\" matched 2 Blakadder pages.",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/Ikea_LED1537R6.html",
-          "vendor": "IKEA",
-          "model": "LED1537R6",
-          "zigbeemodel": [
-            "TRADFRI bulb GU10 WS 400lm"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Ikea_LED1739R5.html",
-          "vendor": "IKEA",
-          "model": "LED1739R5",
-          "zigbeemodel": [
-            "TRADFRI bulb GU10 WS 400lm"
-          ]
-        }
-      ]
-    },
-    {
-      "file": "data/ikea-of-sweden/tradfri-driver-10w.json",
-      "manufacturer": "IKEA of Sweden",
-      "model": "TRADFRI Driver 10W",
-      "kind": "blakadder_ambiguous",
-      "reason": "Vendor \"IKEA of Sweden\" + model \"TRADFRI Driver 10W\" matched 2 Blakadder pages.",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/Ikea_ICPSHC24-10EU-IL-1.html",
-          "vendor": "IKEA",
-          "model": "ICPSHC24-10EU-IL-1",
-          "zigbeemodel": [
-            "TRADFRI transformer 10W",
-            "TRADFRI Driver 10W"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Ikea_ICPSHC24-10NA-IL-1.html",
-          "vendor": "IKEA",
-          "model": "ICPSHC24-10NA-IL-1",
-          "zigbeemodel": [
-            "TRADFRI transformer 10W",
-            "TRADFRI Driver 10W"
-          ]
-        }
-      ]
-    },
-    {
-      "file": "data/ikea-of-sweden/tradfri-driver-30w.json",
-      "manufacturer": "IKEA of Sweden",
-      "model": "TRADFRI Driver 30W",
-      "kind": "blakadder_ambiguous",
-      "reason": "Vendor \"IKEA of Sweden\" + model \"TRADFRI Driver 30W\" matched 2 Blakadder pages.",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/Ikea_ICPSHC24-30EU-IL-1.html",
-          "vendor": "IKEA",
-          "model": "ICPSHC24-10EU-IL-1",
-          "zigbeemodel": [
-            "TRADFRI transformer 30W",
-            "TRADFRI Driver 30W"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Ikea_ICPSHC24-30NA-IL-1.html",
-          "vendor": "IKEA",
-          "model": "ICPSHC24-10NA-IL-1",
-          "zigbeemodel": [
-            "TRADFRI transformer 30W",
-            "TRADFRI Driver 30W"
-          ]
-        }
-      ]
-    },
-    {
-      "file": "data/sonoff/snzb-01m.json",
-      "manufacturer": "SONOFF",
-      "model": "SNZB-01M",
-      "kind": "blakadder_ambiguous",
-      "reason": "Vendor \"SONOFF\" matches, but model \"SNZB-01M\" only loosely resembles Blakadder's model string for these page(s).",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/Sonoff_SNZB-01.html",
-          "vendor": "Sonoff",
-          "model": "SNZB-01",
-          "zigbeemodel": [
-            "WB01",
-            "WB-01"
-          ]
-        }
-      ]
-    },
-    {
-      "file": "data/tyzb01-wqcac7lo/ts0205.json",
-      "manufacturer": "_TYZB01_wqcac7lo",
-      "model": "TS0205",
-      "kind": "blakadder_ambiguous",
-      "reason": "Generic Tuya model \"TS0205\" matches 2 Blakadder page(s), but manufacturer string _TYZB01_wqcac7lo isn't listed on any of them.",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/Tesla_Smart_TSL-SEN-SMOKE.html",
-          "vendor": "Tesla Smart",
-          "model": "TSL-SEN-SMOKE",
-          "zigbeemodel": [
-            "TS0205",
-            "_TYZB01_qiplt4jq"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Tuya_TS0205.html",
-          "vendor": "Tuya",
-          "model": "TS0205",
-          "zigbeemodel": [
-            "TS0205"
-          ]
-        }
-      ]
-    },
-    {
-      "file": "data/tz3000-3n2minvf/ts0004.json",
-      "manufacturer": "_TZ3000_3n2minvf",
-      "model": "TS0004",
-      "kind": "blakadder_ambiguous",
-      "reason": "Generic Tuya model \"TS0004\" matches 3 Blakadder page(s), but manufacturer string _TZ3000_3n2minvf isn't listed on any of them.",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/AllbeAI_TY4CH.html",
-          "vendor": "AllbeAI",
-          "model": "TY4CH",
-          "zigbeemodel": [
-            "TS0004",
-            "_TZ3000_excgg5kb"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Tuya_SML-04Z.html",
-          "vendor": "Tuya",
-          "model": "SML-04Z",
-          "zigbeemodel": [
-            "TS0004",
-            "_TZ3000_ltt60asa"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Tuya_TS0004.html",
-          "vendor": "Tuya",
-          "model": "TS0004",
-          "zigbeemodel": [
-            "TS0004"
-          ]
-        }
-      ]
-    },
-    {
-      "file": "data/tz3000-46t1rvdu/ts0001.json",
-      "manufacturer": "_TZ3000_46t1rvdu",
-      "model": "TS0001",
-      "kind": "blakadder_ambiguous",
-      "reason": "Generic Tuya model \"TS0001\" matches 22 Blakadder page(s), but manufacturer string _TZ3000_46t1rvdu isn't listed on any of them.",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/Aldi_141L100RC.html",
-          "vendor": "Aldi",
-          "model": "141L100RC",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_ztrfrcsu"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Aubess_AP-SMT-Breaker02-1CH.html",
-          "vendor": "Aubess",
-          "model": "AP-SMT-Breaker02-1CH",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_xkap8wtb"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/ClickSmart_CMA30651.html",
-          "vendor": "Clicksmart",
-          "model": "CMA30651",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3210_fhx7lk3d"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Cloud_Even_ZBS05-LN.html",
-          "vendor": "Cloud Even",
-          "model": "ZBS05-LN",
-          "zigbeemodel": [
-            "_TZ3000_yl3zuyaw",
-            "TS0001"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/EARU_RDCBC.html",
-          "vendor": "EARU",
-          "model": "RDCBC/Z-1P/2P",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_bezfthwc"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Girier_JR-ZDS01.html",
-          "vendor": "Girier",
-          "model": "JR-ZDS01",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_majwnphg",
-            "_TZ3000_6axxqqi2",
-            "_TZ3000_zw7yf6yk",
-            "_TZ3000_prits6g4"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Lerlink_X701A.html",
-          "vendor": "Lerlink",
-          "model": "X701A",
-          "zigbeemodel": [
-            "TS0001"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Lonsonho_X702A.html",
-          "vendor": "Lonsonho",
-          "model": "X702A",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_svoqrno4"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Moes_ZS-EU1-PNW.html",
-          "vendor": "Moes",
-          "model": "ZS-EU1-PNW",
-          "zigbeemodel": [
-            "TS0001"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Nous_LZ3.html",
-          "vendor": "Nous",
-          "model": "LZ3",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_h8ngtlxy"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/OXT_SWTZ21.html",
-          "vendor": "OXT",
-          "model": "SWTZ21",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_tqlv4ug4"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/QS-Zigbee-S05-EC.html",
-          "vendor": "Tuya",
-          "model": "QS-Zigbee-S05-EC",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_qnejhcsu",
-            "_TZ3000_x3ewpzyr"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Tuya_ADFB.html",
-          "vendor": "Tuya",
-          "model": "ADFB",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3210_dse8ogfy",
-            "_TZ3210_j4pdtz9v"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Tuya_DS-102BZN.html",
-          "vendor": "Tuya",
-          "model": "DS-102BZN",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_mantufyr"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Tuya_QS-Zigbee-CP01.html",
-          "vendor": "Tuya",
-          "model": "QS-Zigbee-CP01",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_tygpxwqa"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Tuya_SML-01Z-ES-16A.html",
-          "vendor": "Tuya",
-          "model": "SML-01Z-ES-16A",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_mkhkxx1p"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Tuya_TMZ02L.html",
-          "vendor": "Tuya",
-          "model": "TMZ02L",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_v7sopte0",
-            "_TZ3000_3a9beq8a"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Tuya_WHD02.html",
-          "vendor": "Tuya",
-          "model": "WHD02",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_hktqahrq",
-            "TS000F",
-            "_TZ3000_m9af2l6g",
-            "_TZ3000_xkap8wtb"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Tuya_valve.html",
-          "vendor": "Tuya",
-          "model": "valve",
-          "zigbeemodel": [
-            "TS011F",
-            "TS0001",
-            "_TZ3000_rk2yzt0u",
-            "_TZ3000_o4cjetlm",
-            "_TZ3000_h3noz0a5",
-            "_TYZB01_4tlksk8a"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Weten_1GNNTS.html",
-          "vendor": "Weten",
-          "model": "1GNNTS",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_wrhhi5h2"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Zemismart_ZN-LRL1E.html",
-          "vendor": "Zemismart",
-          "model": "ZN-LRL1E",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_ubrvwoxv"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/eMylo_XL9251ZB.html",
-          "vendor": "eMylo",
-          "model": "XL9251ZB",
-          "zigbeemodel": [
-            "TS0001"
-          ]
-        }
-      ]
-    },
-    {
-      "file": "data/tz3000-pf7swkqp/ts0003.json",
-      "manufacturer": "_TZ3000_pf7swkqp",
-      "model": "TS0003",
-      "kind": "blakadder_ambiguous",
-      "reason": "Generic Tuya model \"TS0003\" matches 12 Blakadder page(s), but manufacturer string _TZ3000_pf7swkqp isn't listed on any of them.",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/BSEED_TS0003.html",
+          "url": "https://zigbee.blakadder.com/BSEED_GL86HTBZ1.html",
           "vendor": "BSEED",
-          "model": "TS0003",
+          "model": "GL86HTBZ1",
           "zigbeemodel": [
-            "TS0042",
-            "_TZ3000_adkvzooy"
+            "TS0601",
+            "_TZE204_5toc8efa"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/BlitzWolf_BW-SS7.html",
-          "vendor": "BlitzWolf",
-          "model": "BW-SS7",
+          "url": "https://zigbee.blakadder.com/BSEED_GL86ZTCS31.html",
+          "vendor": "BSEED",
+          "model": "GL86ZTCS31",
           "zigbeemodel": [
-            "TS0003"
+            "TS0601",
+            "_TZE200_yenbr4om"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/BlitzWolf_BW-SS7_1.html",
-          "vendor": "BlitzWolf",
-          "model": "BW-SS7_1",
+          "url": "https://zigbee.blakadder.com/BSEED_GL86ZTD11.html",
+          "vendor": "BSEED",
+          "model": "GL86ZTD11",
           "zigbeemodel": [
-            "TS0003",
-            "_TYZB01_aneiicmq"
+            "TS0601",
+            "_TZE200_3p5ydos3"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Eardatek_ESW-3ZAB-EU.html",
+          "url": "https://zigbee.blakadder.com/Beca_BHT-003.html",
+          "vendor": "Beca",
+          "model": "BHT-003",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_u9bfwha0"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Beca_BHT-6000.html",
+          "vendor": "Beca",
+          "model": "BHT-6000",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_aoclfnxz"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Beca_BRT-100.html",
+          "vendor": "Beca",
+          "model": "BRT-100",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_b6wax7g0"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Beok_TGR85-ZB.html",
+          "vendor": "Beok",
+          "model": "TGR85-ZB",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_2ekuz3dz"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Binthen_BCM100D.html",
+          "vendor": "Binthen",
+          "model": "BCM100D",
+          "zigbeemodel": [
+            "TS0601"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Brennestuhl_HT_CZ_01.html",
+          "vendor": "Brennenstuhl",
+          "model": "HT CZ 01",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_2cs6g9i7"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/DAC2161C.html",
+          "vendor": "Tuya",
+          "model": "DAC2161C",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_eaac7dkw",
+            "_TZE200_lsanae15"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/ETOP_HT-08.html",
+          "vendor": "E-Top",
+          "model": "HT-08",
+          "zigbeemodel": [
+            "v90ladg",
+            "TS0601",
+            "_TZE200_wv90ladg"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/ETOP_HT-10.html",
+          "vendor": "E-Top",
+          "model": "HT-10",
+          "zigbeemodel": [
+            "dpplnsn",
+            "TS0601",
+            "_TZE200_2dpplnsn",
+            "_TZE200_0hg58wyk"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Eardatek_EDM-1ZAA-EU.html",
           "vendor": "Eardatek",
-          "model": "ESW-3ZAB-EU",
+          "model": "EDM-1ZAA-EU",
           "zigbeemodel": [
-            "TS0003",
-            "_TZ3000_v4l4b0lp"
+            "TS0601",
+            "_TZE200_0nauxa0p",
+            "_TZE200_dfxkcots"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Larkkey_ZSTY-SM-1SRZG-EU.html",
-          "vendor": "Larkkey",
-          "model": "ZSTY-SM-1SRZG-EU",
+          "url": "https://zigbee.blakadder.com/Eardatek_EDM-1ZAB-EU.html",
+          "vendor": "Eardatek",
+          "model": "EDM-1ZBA-EU",
           "zigbeemodel": [
-            "TS0003",
-            "_TZE200_sbordckq"
+            "TS0601",
+            "_TZE200_9i9dt8is",
+            "_TZE200_dfxkcots",
+            "_TZE200_p0gzbqct"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Lerlink_X703A.html",
-          "vendor": "Lerlink",
-          "model": "X703A",
+          "url": "https://zigbee.blakadder.com/Eardatek_EDM-1ZBB-EU.html",
+          "vendor": "Eardatek",
+          "model": "EDM-1ZBB-EU",
           "zigbeemodel": [
-            "TS0003"
+            "TS0601",
+            "_TZE200_9i9dt8is",
+            "_TZE200_w4cryh2i"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Lonsonho_QS-Zigbee-S04-2C-LN.html",
-          "vendor": "Lonsonho",
-          "model": "QS-Zigbee-S04-2C-LN",
+          "url": "https://zigbee.blakadder.com/Evanell_EZ200.html",
+          "vendor": "Evanell",
+          "model": "EZ200",
           "zigbeemodel": [
-            "TS0003",
-            "_TYZB01_zsl6z0pw"
+            "TS0601",
+            "_TZE200_dmfguuli"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Lonsonho_QS-Zigbee-S05-LN.html",
-          "vendor": "Lonsonho",
-          "model": "QS-Zigbee-S05-LN",
+          "url": "https://zigbee.blakadder.com/Evolveo_Heat_M30.html",
+          "vendor": "Evolveo",
+          "model": "Heat M30",
           "zigbeemodel": [
-            "TS0003",
-            "_TYZB01_ncutbjdi"
+            "TS0601",
+            "_TZE200_pvvbommb"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Moes_MS-104CZ.html",
-          "vendor": "Moes",
-          "model": "MS-104CZ",
-          "zigbeemodel": [
-            "TS0003",
-            "_TZE3000_pfc7i3kt"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Tuya_SML-03Z.html",
+          "url": "https://zigbee.blakadder.com/FrankEver_FK-V02.html",
           "vendor": "Tuya",
-          "model": "SML-03Z",
+          "model": "FK-V02",
           "zigbeemodel": [
-            "TS0003",
-            "_TZ3000_vsasbzkf",
-            "_TZ3000_odzoiovu"
+            "TS0601",
+            "_TZE200_wt9agwf3"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Weelite_LS300Z.html",
-          "vendor": "Weelite",
-          "model": "LS-300Z",
+          "url": "https://zigbee.blakadder.com/GiEX_QT06.html",
+          "vendor": "GiEX",
+          "model": "QT06",
           "zigbeemodel": [
-            "TS0003"
+            "TS0601",
+            "_TZE200_sh1btabb",
+            "_TZE200_a7sghmms"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Zemismart_LXZB-41-AJ-3.html",
-          "vendor": "Zemismart",
-          "model": "LXZB-41-AJ-3",
+          "url": "https://zigbee.blakadder.com/HKGK_BAC-002-ALZB.html",
+          "vendor": "HKGK",
+          "model": "BAC-002-ALZB",
           "zigbeemodel": [
-            "TS0003"
-          ]
-        }
-      ]
-    },
-    {
-      "file": "data/tz3210-fgwhjm9j/ts011f.json",
-      "manufacturer": "_TZ3210_fgwhjm9j",
-      "model": "TS011F",
-      "kind": "blakadder_ambiguous",
-      "reason": "Generic Tuya model \"TS011F\" matches 68 Blakadder page(s), but manufacturer string _TZ3210_fgwhjm9j isn't listed on any of them.",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/Ajax_Online_AJ_ZIG_PLUG.html",
-          "vendor": "Ajax Online",
-          "model": "AJ_ZIG_PLUG",
-          "zigbeemodel": [
-            "TS011F"
+            "TS0601",
+            "_TZE200_dzuqwsyg"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Avatto_CLY8101U-GE.html",
-          "vendor": "Avatto",
-          "model": "CLY8101U-GE",
+          "url": "https://zigbee.blakadder.com/Hama_00176592.html",
+          "vendor": "Hama",
+          "model": "00176592",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_idrffznf"
+            "TS0601",
+            "_TZE200_yw7cahqs",
+            "w7cahqs",
+            "_TYST11_yw7cahqs",
+            "_TZE200_h4cgnbzg"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Avatto_N-OT10.html",
-          "vendor": "Avatto",
-          "model": "TS011F",
+          "url": "https://zigbee.blakadder.com/Haozee_TRV601.html",
+          "vendor": "Haozee",
+          "model": "TRV601",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_9vo5icau"
+            "TS0601",
+            "_TZE200_a4bpgplm",
+            "_TZE200_z1tyspqw"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/BSEED_GL86FRSK1.html",
-          "vendor": "BSEED",
-          "model": "GL86FRSK1",
+          "url": "https://zigbee.blakadder.com/HiLADUO_blinds.html",
+          "vendor": "HiLADUO",
+          "model": " ",
           "zigbeemodel": [
-            "TS011F",
-            "TZ3000_b28wrpvx"
+            "TS0601",
+            "_TZE200_9p5xmj5r"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/BSEED_GL86ZEUSK1.html",
-          "vendor": "BSEED",
-          "model": "GL86ZEUSK1",
+          "url": "https://zigbee.blakadder.com/Hiking_DDS238-2.html",
+          "vendor": "Hiking",
+          "model": "DDS238-2",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_o1jzcxou"
+            "TS0601",
+            "_TZE200_byzdayie",
+            "_TZE200_ewxhg6o9",
+            "_TZE200_bkkmqmyo"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/BingoElec_Z1-034.html",
-          "vendor": "BingoElec",
-          "model": "Z1-034",
+          "url": "https://zigbee.blakadder.com/Hoch_ZJSBL7.html",
+          "vendor": "Hoch",
+          "model": "ZJSBL7",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_o1jzcxou"
+            "TS0601",
+            "_TZE200_hkdl5fmv"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/BlitzWolf_BW-SHP13.html",
-          "vendor": "BlitzWolf",
-          "model": "BW-SHP13",
+          "url": "https://zigbee.blakadder.com/HomCloud_XH-TVZ.html",
+          "vendor": "HomCloud",
+          "model": "XH-TVZ",
           "zigbeemodel": [
-            "TS0121",
-            "_TZ3000_g5xawfcq",
-            "_TZ3000_3ooaz3ng",
-            "_TZ3000_amdymr7l",
-            "TS011F"
+            "TS0601",
+            "_TZE200_9sfg7gm0"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/BlitzWolf_BW-SHP15.html",
-          "vendor": "BlitzWolf",
-          "model": "BW-SHP15",
+          "url": "https://zigbee.blakadder.com/Hysen_HY368.html",
+          "vendor": "Hysen",
+          "model": "HY368",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_mraovvmm",
-            "_TZ3000_u5u4cakc"
+            "TS0601",
+            "_TZE200_ywdxldoj",
+            "_TZE200_fhn3negr",
+            "_TZE200_8whxpsiw"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/ClickSmart_CMA30035.html",
-          "vendor": "ClickSmart",
-          "model": "CMA30035",
+          "url": "https://zigbee.blakadder.com/Hysen_HY369.html",
+          "vendor": "Hysen",
+          "model": "HY369-ZB",
           "zigbeemodel": [
-            "TS011F",
-            "_TYZB01_mtunwanm"
+            "kud7u2l",
+            "TS0601",
+            "_TZE200_ckud7u2l",
+            "_TYST11_ckud7u2l"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/ClickSmart_CMA30036.html",
-          "vendor": "ClickSmart",
-          "model": "SM-SO306EZ-10",
+          "url": "https://zigbee.blakadder.com/IOTPerfect_PF-PM02D-TYZ.html",
+          "vendor": "IOTPerfect",
+          "model": "PF-PM02D-TYZ",
           "zigbeemodel": [
-            "TS011F",
-            "_TYZB01_hlla45kx"
+            "TS0601",
+            "_TZE200_vrjkcam9"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Coswall_CS-AJ-DE2U-ZG-11.html",
-          "vendor": "Coswall",
-          "model": "CS-AJ-DE2U-ZG-11",
-          "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_rul9yxcc"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Coswall_QC-ZG-PC-D5H2USB-11.html",
-          "vendor": "Coswall",
-          "model": "QC-ZG-PC-D5H2USB-11",
-          "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_mlswgkc3"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/EARU_EAKCB-T-M.html",
-          "vendor": "EARU",
-          "model": "EAKCB-T-M",
-          "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_lepzuhto"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Immax_07752L.html",
+          "url": "https://zigbee.blakadder.com/Immax_07505L.html",
           "vendor": "Immax",
-          "model": "TS011F",
+          "model": "07505L",
           "zigbeemodel": [
-            "_TZ3000_jak16dll"
+            "TS0601",
+            "_TZE200_n9clpsht"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/LELLKI_CM001.html",
-          "vendor": "LELLKI",
-          "model": "CM001",
+          "url": "https://zigbee.blakadder.com/Immax_07732L.html",
+          "vendor": "Immax",
+          "model": "07732L",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_twqctvna"
+            "TS0601",
+            "_TZE200_4eeyebrt"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/LELLKI_CM004.html",
-          "vendor": "LELLKI",
-          "model": "CM004",
+          "url": "https://zigbee.blakadder.com/Javis_JS-ZB-SA1.html",
+          "vendor": "Javis",
+          "model": "JS-ZB-SA1",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_7dndcnnb"
+            "JAVISSENSOR",
+            "TS0601",
+            "_TZE200_lgstepha",
+            "_TZE200_kagkgk0i",
+            "_TZE200_i0b1dbqu"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/LELLKI_WK33.html",
-          "vendor": "LELLKI",
-          "model": "WK33",
+          "url": "https://zigbee.blakadder.com/LSC_3012732.html",
+          "vendor": "LSC Smart Connect",
+          "model": "3012732",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_0yxeawjt"
+            "TS0601",
+            "_TZE200_sur6q7ko"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/LELLKI_WK34.html",
-          "vendor": "LELLKI",
-          "model": "WK34",
+          "url": "https://zigbee.blakadder.com/Larkkey_ZSTY-SM-1DMZG-EU.html",
+          "vendor": "Larkkey",
+          "model": "ZSTY-SM-1DMZG-EU",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_0yxeawjt"
+            "TS0601",
+            "_TZE200_ebwgzdqq"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/LELLKI_WK36.html",
-          "vendor": "TramSmart",
-          "model": "WK36",
+          "url": "https://zigbee.blakadder.com/Lerlink_T2-Z67.html",
+          "vendor": "Lerlink",
+          "model": "T2-Z67",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_ps3dmato"
+            "TS0601",
+            "_TZE200_r32ctezx"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/LELLKI_WP30.html",
-          "vendor": "LELLKI",
-          "model": "WP30",
+          "url": "https://zigbee.blakadder.com/Lerlink_X706U.html",
+          "vendor": "Lerlink",
+          "model": "X706U",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_c7nc9w3c"
+            "TS0601",
+            "_TZE200_579lguh2"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/LELLKI_WP33.html",
-          "vendor": "LELLKI",
-          "model": "WP33",
-          "zigbeemodel": [
-            "E220-KR4N0Z0-HA",
-            "JZ-ZB-004",
-            "TS011F",
-            "_TZ3000_air9m6af",
-            "_TZ3000_9djocypn",
-            "JZ-ZB-005"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/LELLKI_WP34.html",
-          "vendor": "LELLKI",
-          "model": "WP34",
-          "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_bppxj3sf"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/LELLKI_XF-EU-S100-1.html",
-          "vendor": "LELLKI",
-          "model": "XF-EU-S100-1",
-          "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_z6fgd73r"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Lidl_HG06337-BS.html",
+          "url": "https://zigbee.blakadder.com/Lidl_HG06467.html",
           "vendor": "Lidl",
-          "model": "HG06337-SB",
+          "model": "HG06467",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_00mk2xzy"
+            "TS0601",
+            "_TZE200_s8gkrkxk"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Lidl_HG06337-CH.html",
+          "url": "https://zigbee.blakadder.com/Lidl_HG08675.html",
           "vendor": "Lidl",
-          "model": "HG06337-CH",
+          "model": "HG06875",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_plyvnuf5"
+            "TS0601",
+            "_TZE200_htnnfasr"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Lidl_HG06337-DK.html",
+          "url": "https://zigbee.blakadder.com/Lidl_TVR01.html",
           "vendor": "Lidl",
-          "model": "HG06337-DK",
+          "model": "TVR01",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_upjrsxh1"
+            "TS0601",
+            "_TZE200_chyvmhay"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Lidl_HG06337-FR.html",
-          "vendor": "Lidl",
-          "model": "HG06337-FR",
+          "url": "https://zigbee.blakadder.com/Lonsonho_X703A.html",
+          "vendor": "Lonsonho",
+          "model": "X713A",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_wamqdr3f"
+            "TS0601",
+            "_TZE200_kyfqmmyl"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Lidl_HG06337.html",
-          "vendor": "Lidl",
-          "model": "HG06337",
+          "url": "https://zigbee.blakadder.com/Lonsonho_X712A.html",
+          "vendor": "Lonsonho",
+          "model": "X712A",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_kdi2o9m6"
+            "TS0601",
+            "_TZE200_wunufsil"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Lidl_HG06338.html",
-          "vendor": "Lidl",
-          "model": "HG06338",
-          "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_1obwwnmq",
-            "_TZ3000_vzopcetz"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Lidl_HG08673-EU.html",
-          "vendor": "Lidl",
-          "model": "HG08673-EU",
-          "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_j1v25l17"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Lidl_HG08673-FR.html",
-          "vendor": "Lidl",
-          "model": "HG08673-FR",
-          "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_ynmowqk2"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/LoraTap_RR400ZB.html",
+          "url": "https://zigbee.blakadder.com/LoraTap_GDC311ZBQ1.html",
           "vendor": "LoraTap",
-          "model": "RR400ZB",
+          "model": "GDC311ZBQ1",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_oiymh3qu"
+            "TS0601",
+            "_TZE200_wfxuhoea"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/LoraTap_WH100.html",
+          "url": "https://zigbee.blakadder.com/LoraTap_TGM100W.html",
           "vendor": "LoraTap",
-          "model": "WH100",
+          "model": "TGM100W",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_aim0ztek"
+            "TS0601",
+            "_TZE200_vucankjx"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/MakeGood_MG-AUZG01.html",
+          "url": "https://zigbee.blakadder.com/MakeGood_MG-ZG01W.html",
           "vendor": "MakeGood",
-          "model": "MG-AUZG01",
+          "model": "MG-ZG01W",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_dd8wwzcy"
+            "TS0601",
+            "_TZE200_gbagoilo"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Mercator_SPP01G.html",
+          "url": "https://zigbee.blakadder.com/MakeGood_MG-ZG02W.html",
+          "vendor": "MakeGood",
+          "model": "MG-ZG02W",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_nh9m9emk"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/MakeGood_MG-ZG03W.html",
+          "vendor": "MakeGood",
+          "model": "MG-ZG03W",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_go3tvswy"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/MakeGood_MG-ZG04W.html",
+          "vendor": "MakeGood",
+          "model": "MG-ZG04W",
+          "zigbeemodel": [
+            "TS0014",
+            "_TYZB01_bagt1e4o",
+            "TS0601",
+            "_TZE200_mexisfik"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/MakeGood_MG-ZGD01W.html",
+          "vendor": "MakeGood",
+          "model": "MG-ZG04W",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_1agwnems"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Mercator_SISWD01.html",
           "vendor": "Mercator Ikuü",
-          "model": "SPP01G",
+          "model": "SISWD01",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3210_q7oryllx"
+            "TS0601",
+            "_TZE200_ojzhk75b"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Mercator_SPP02.html",
+          "url": "https://zigbee.blakadder.com/Mercator_SSWD01.html",
           "vendor": "Mercator Ikuü",
-          "model": "SPP02",
+          "model": "SSWD01",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3210_raqjcxo5"
+            "TS0601",
+            "_TZE200_swaamsoy"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Mercator_SPP02GIP.html",
+          "url": "https://zigbee.blakadder.com/Mercator_SSWM-DIMZ.html",
           "vendor": "Mercator Ikuü",
-          "model": "SPP02GIP",
+          "model": "SSWM-DIMZ",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3210_7jnk7l3k"
+            "TS0601",
+            "_TZE200_9cxuhakf"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Mercator_SPPUSB02.html",
+          "url": "https://zigbee.blakadder.com/Mercator_SSWRM-ZB.html",
           "vendor": "Mercator Ikuü",
-          "model": "SPPUSB02",
+          "model": "SSWRM-ZB",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3210_pfbzs1an"
+            "TS0601",
+            "_TZE200_a0syesf5"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Moes_MS-104BZ.html",
+          "url": "https://zigbee.blakadder.com/Moes_AM43-0_45_40-ES-EB.html",
           "vendor": "Moes",
-          "model": "MS-104BZ",
+          "model": "AM43-0.45/40-ES-EB",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_pmz6mjyu",
-            "_TZ3000_zmy1waw6"
+            "TS0601",
+            "_TZE200_zah67ekd",
+            "_TZE200_rddyvrci "
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Moes_MS-104Z-1.html",
+          "url": "https://zigbee.blakadder.com/Moes_BHT-002.html",
           "vendor": "Moes",
-          "model": "MS-104Z-1",
+          "model": "BHT-002",
           "zigbeemodel": [
-            "TS0121",
-            "TS011F",
-            "_TYZB01_iuepbmpv"
+            "TS0601",
+            "_TZE200_aoclfnxz",
+            "_TZE200_ztvwu4nk",
+            "_TZE200_u9bfwha0"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Moes_MS-104ZN-1.html",
+          "url": "https://zigbee.blakadder.com/Moes_MS-105B.html",
           "vendor": "Moes",
-          "model": "MS-104ZN-1",
+          "model": "MS-105B",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_bkfe0bab"
+            "TS0601",
+            "_TZE200_e3oitdyu"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Moes_ZK-EU16M.html",
+          "url": "https://zigbee.blakadder.com/Moes_MS-105Z.html",
           "vendor": "Moes",
-          "model": "ZK-EU16M",
+          "model": "MS-105Z",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_ss98ec5d"
+            "TS0601",
+            "_TZE200_la2c2uo9"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Moes_ZP-LZ-FR2U.html",
+          "url": "https://zigbee.blakadder.com/Moes_SH4-ZB.html",
           "vendor": "Moes",
-          "model": "ZP-LZ-FR2U",
+          "model": "SH4-ZB",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_cymsnfvf"
+            "TS0601",
+            "_TZE200_zion52ef"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Neo_NAS-WR01B.html",
+          "url": "https://zigbee.blakadder.com/Moes_ZHT-006.html",
+          "vendor": "Moes",
+          "model": "ZHT-006",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_aoclfnxz"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Moes_ZS-EUUSD1.html",
+          "vendor": "Moes",
+          "model": "ZS-EU(US)D1",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_ip2akl4w"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Moes_ZS-EUUSD2.html",
+          "vendor": "Moes",
+          "model": "ZS-EU(US)D2",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_fjjbhx9d"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Moes_ZS-EUUSD3.html",
+          "vendor": "Moes",
+          "model": "ZS-EU(US)D3",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_vm1gyrso"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Moes_ZS-US1.html",
+          "vendor": "Moes",
+          "model": "ZS-US1",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_tviaymwx"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Moes_ZSS-HM-CO.html",
+          "vendor": "Moes",
+          "model": "ZSS-HM-CO",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_rjxqso4a"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Moes_ZSS-HM-SSD01.html",
+          "vendor": "Moes",
+          "model": "ZSS-HM-SSD01",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE204_vawy74yh"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Moes_ZSS-QY-HP.html",
+          "vendor": "Moes",
+          "model": "ZSS-QY-HP",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_ikvncluo",
+            "_TZE200_wukb7rhc",
+            "_TZE200_holel4dk"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Moes_ZTRV-ZX-TV01-MS.html",
+          "vendor": "Moes",
+          "model": "ZTRV-ZX-TV01-MS",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_e9ba97vf",
+            "_TZE200_7yoranx2",
+            "_TZE200_lllliz3p"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Moes_ZTRV-ZX-TV02-EN.html",
+          "vendor": "Moes",
+          "model": "ZTRV-ZX-TV02-MS",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_kds0pmmv"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Moes_ZTS-EU1-W.html",
+          "vendor": "Moes",
+          "model": "ZTS-EU1-W",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_amp6tsvy"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Moes_ZTS-EU2-W.html",
+          "vendor": "Moes",
+          "model": "ZTS-EU2-W",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_g1ib5ldv"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Moes_ZTS-EU3-W.html",
+          "vendor": "Moes",
+          "model": "ZTS-EU3-W",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_tz32mtza"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Moes_ZTS-EUR-C.html",
+          "vendor": "Moes",
+          "model": "ZTS-EUR-C",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_nhyj64w2"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Moes_ZTS-US4-W.html",
+          "vendor": "Moes",
+          "model": "ZTS-US4-W",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_1ozguk6x"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Nedis_ZBHTR10WT.html",
+          "vendor": "Nedis",
+          "model": "ZBHTR10WT",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_hhrtiq0x"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Neo_NAS-AB02B0.html",
           "vendor": "Neo",
-          "model": "NAS-WR01B",
+          "model": "NAS-AB02B0",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_w0qqde0g",
-            "_TZ3000_gjnozsaz",
-            "_TZ3000_zloso4jk",
-            "_TZ3000_fgwhjm9j",
-            "_TZ3000_rdfh8cfs"
+            "TS0601",
+            "_TZE200_d0yu2xgi",
+            "d0yu2xgi",
+            "_TYST11_d0yu2xgi"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Nous_A1Z.html",
+          "url": "https://zigbee.blakadder.com/Neo_NAS-AB02B2.html",
+          "vendor": "Neo",
+          "model": "NAS-AB02B2",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_t1blo2bj",
+            "_TZE204_t1blo2bj"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Neo_NAS-AB06B2.html",
+          "vendor": "Neo",
+          "model": "NAS-AB06B2",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_nlrfgpny",
+            "_TZE204_nlrfgpny"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Neo_NAS-PD07.html",
+          "vendor": "Neo",
+          "model": "NAS-PD07",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_7hfcudw5",
+            "TS0202",
+            "_TZ3000_kmh5qpmb"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Neo_NAS-WS02B0.html",
+          "vendor": "Neo",
+          "model": "NAS-WS02B0",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_qq9mpfhw"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/NorkImes_MKS-CM-W5.html",
+          "vendor": "NorkImes",
+          "model": "MKS-CM-W5",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_nkjintbl",
+            "_TZE200_kyfqmmyl"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Nous_E6.html",
           "vendor": "Nous",
-          "model": "A1Z",
+          "model": "E6",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_ksw8qtmt",
-            "_TZ3000_2putqrmw"
+            "TS0601",
+            "_TZE200_nnrfa68v"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/RTX_ZP2.html",
+          "url": "https://zigbee.blakadder.com/Owon_PC321-TY.html",
+          "vendor": "Owon",
+          "model": "PC321-TY",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_nslr42tt"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/QOTO_QT-05M.html",
+          "vendor": "QOTO",
+          "model": "QT-05M",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_sh1btabb"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/RTX_ZCB16-2P.html",
           "vendor": "RTX",
-          "model": "ZP2",
+          "model": "ZCB16-2P",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_waho4jtj"
+            "TS0601",
+            "_TZE200_fsb6zw01"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/SIXWGH_WH025.html",
-          "vendor": "SIXWGH",
-          "model": "WH025",
+          "url": "https://zigbee.blakadder.com/RTX_ZVG1.html",
+          "vendor": "RTX",
+          "model": "ZVG1",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_typdpbpg"
+            "TS0601",
+            "_TZE200_akjefhj5",
+            "_TZE200_81isopgh"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Teekar_SWP86-01OG.html",
-          "vendor": "Teekar",
-          "model": "SWP86-01OG",
+          "url": "https://zigbee.blakadder.com/Royal_Gardineer_ZX-7155-919.html",
+          "vendor": "Royal Gardineer",
+          "model": "ZX-7155-919",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_wxtp7c5y"
+            "TS0601",
+            "_TZE200_2wg5qrjy"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Tongou_TO-Q-SY1-JZT.html",
-          "vendor": "Tongou",
-          "model": "TO-Q-SY1-JZT",
+          "url": "https://zigbee.blakadder.com/Shawader_WSS401_3.html",
+          "vendor": "Shawader",
+          "model": "WSS401",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_qeuvnohg"
+            "TS0601",
+            "_TZE200_oisqyl4o"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Tongou_TO-Q-SY1-ZT.html",
-          "vendor": "Tongou",
-          "model": "TO-Q-SY1-ZT",
+          "url": "https://zigbee.blakadder.com/Shojzj_378RT.html",
+          "vendor": "Shojzj",
+          "model": "378RT",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_qeuvnohg"
+            "TS0601"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Tongou_TO-Q-SY2-JZT.html",
-          "vendor": "Tongou",
-          "model": "TO-Q-SY2-JZT",
+          "url": "https://zigbee.blakadder.com/Smart9_S9ZB-SA02.html",
+          "vendor": "Smart9",
+          "model": "S9ZB-SA02",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_cayepv1a"
+            "TS0601",
+            "_TZE200_t5p1vj8r",
+            "5p1vj8r",
+            "_TZE200_uebojraa"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/TramSmart_PF161.html",
-          "vendor": "TramSmart",
-          "model": "PF161",
+          "url": "https://zigbee.blakadder.com/Sparkelec_SWS5TZ.html",
+          "vendor": "Sparkelec",
+          "model": "SWS5TZ",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_jvzvulen"
+            "TS0601",
+            "_TZE200_jwsjbxjs"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Tuya_ATMS1602Z.html",
+          "url": "https://zigbee.blakadder.com/TCP_Smart_TBUWTRV.html",
+          "vendor": "TCP Smart",
+          "model": "TBUWTRV",
+          "zigbeemodel": [
+            "zk78ptr",
+            "_TYST11_czk78ptr",
+            "_TZE200_czk78ptr",
+            "TS0601"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tesla_Smart_TSL-TRV-GS361A.html",
+          "vendor": "Tesla Smart",
+          "model": "TSL-TRV-GS361A",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_owwdxjbx"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tesla_Smart_TSL-TRV-TV01ZG.html",
+          "vendor": "Tesla Smart",
+          "model": "TSL-TRV-TV01ZG",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_husqqvux",
+            "_TZE200_lnbfnyxd"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Treatlife_Motion_Sensor.html",
+          "vendor": "Treatlife",
+          "model": "MS",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_ppuj1vem"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_AirBox.html",
           "vendor": "Tuya",
-          "model": "ATMS1602Z",
+          "model": "Air Box",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_8bxrzyxz"
+            "TS0601",
+            "_TZE200_c2fmom5z",
+            "_TZE204_c2fmom5z"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Tuya_TS011F.html",
+          "url": "https://zigbee.blakadder.com/Tuya_DCR-CO2.html",
           "vendor": "Tuya",
-          "model": "TS011F",
+          "model": "DCR-CO2",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_cphmq0q7",
-            "_TZ3000_ew3ldmgx",
-            "_TZ3000_dpo1ysak",
-            "_TZ3000_gjnozsaz",
-            "_TZ3000_ksw8qtmt",
-            "_TZ3000_hdopuwv6",
-            "_TZ3000_typdpbpg",
-            "_TZ3000_bfn1w0mm",
-            "_TZ3000_0zfrhq4i",
-            "_TZ3000_gznh2xla",
-            "_TZ3000_ss98ec5d"
+            "TS0601",
+            "_TZE200_ogkdpgy2",
+            "TS0601",
+            "_TZE204_ogkdpgy2"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Tuya_TS011F_20A.html",
+          "url": "https://zigbee.blakadder.com/Tuya_DCR-KQG.html",
           "vendor": "Tuya",
-          "model": "TS011F",
+          "model": "DCR-KQG",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_gvn91tmx",
-            "_TZ3000_dksbtrzs"
+            "TS0601",
+            "_TZE200_dwcarsat"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Tuya_XH-002P.html",
+          "url": "https://zigbee.blakadder.com/Tuya_DCR-LCD.html",
           "vendor": "Tuya",
-          "model": "XH-002P",
+          "model": "DCR-LCD",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_nfnmi125"
+            "TS0601",
+            "_TZE200_ogkdpgy2"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Tuya_YX-DZ005.html",
+          "url": "https://zigbee.blakadder.com/Tuya_DS82.html",
           "vendor": "Tuya",
-          "model": "YX-DZ005",
+          "model": "DS82",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_5f43h46b"
+            "TS0601",
+            "_TZE200_zpzndjez",
+            "_TZE200_68nvbio9",
+            "_TZE200_r0jdjrvi"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Tuya_ZG-V01.html",
+          "url": "https://zigbee.blakadder.com/Tuya_ES63-D5Z.html",
           "vendor": "Tuya",
-          "model": "ZG-V01",
+          "model": "ES63-D5Z",
           "zigbeemodel": [
-            "TS011F",
-            "_TYZB01_ymcdbl3u"
+            "TS0601",
+            "_TZE200_dq1mfjug"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Tuya_ZJSB9-80Z.html",
+          "url": "https://zigbee.blakadder.com/Tuya_HY08WE.html",
           "vendor": "Tuya",
-          "model": "ZJSB9-80Z",
+          "model": "HY08WE",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_1hwjutgo",
-            "_TZ3000_lnggrqqi"
+            "TS0601",
+            "_TZE200_znzs7yaw"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Tuya_valve.html",
+          "url": "https://zigbee.blakadder.com/Tuya_HY366.html",
           "vendor": "Tuya",
-          "model": "valve",
+          "model": "HY366",
           "zigbeemodel": [
-            "TS011F",
-            "TS0001",
-            "_TZ3000_rk2yzt0u",
-            "_TZ3000_o4cjetlm",
-            "_TZ3000_h3noz0a5",
-            "_TYZB01_4tlksk8a"
+            "TS0601",
+            "_TZE200_cwnjrr72"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/UseeLink_SM-AZ713.html",
-          "vendor": "UseeLink",
-          "model": "SM-AZ713",
+          "url": "https://zigbee.blakadder.com/Tuya_HY367.html",
+          "vendor": "Tuya",
+          "model": "HY367",
           "zigbeemodel": [
-            "TS011F"
+            "TS0601",
+            "_TZE200_2atgpdho"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/UseeLink_SM-SO306EZ-10.html",
-          "vendor": "UseeLink",
-          "model": "SM-SO306EZ-10",
+          "url": "https://zigbee.blakadder.com/Tuya_JM-TRH-ZGB-V1.html",
+          "vendor": "Tuya",
+          "model": "JM-TRH-ZGB-V1",
           "zigbeemodel": [
-            "TS011F"
+            "_TZE200_whkgqxse",
+            "TS0601"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Xenon_SM-SO306.html",
-          "vendor": "Xenon",
-          "model": "SM-SO306",
+          "url": "https://zigbee.blakadder.com/Tuya_LQ-CG01-RDR.html",
+          "vendor": "Tuya",
+          "model": "LQ-CG01-RDR",
           "zigbeemodel": [
-            "TS0115",
-            "TS011F",
-            "_TZ3000_o005nuxx",
-            "_TZ3000_cfnprab5"
+            "TS0601",
+            "_TZE200_9qayzqa8"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Zemismart_B90.html",
+          "url": "https://zigbee.blakadder.com/Tuya_LY-TAD-K616S-ZB.html",
+          "vendor": "Tuya",
+          "model": "LY-TAD-K616S-ZB",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_auin8mzr"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_M515EGZT.html",
+          "vendor": "Tuya",
+          "model": "M515EGZT",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_nueqqe6k"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_MIR-HE200.html",
+          "vendor": "Tuya",
+          "model": "MIR-HE200-ZB",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_vrfecyku",
+            "_TZE200_lu01t0zl"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_MTG275-ZB-RL.html",
+          "vendor": "Tuya",
+          "model": "MTG275-ZB-RL",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE204_dtzziy1e",
+            "_TZE204_sbyx0lm6"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_PJ-ZGD01.html",
+          "vendor": "Tuya",
+          "model": "PJ-ZGD01",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_nklqjk62",
+            "_TZE204_nklqjk62"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_PS-HPS.html",
+          "vendor": "Tuya",
+          "model": "PS-HPS",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_0u3bj3rc",
+            "_TZE200_v6ossqfy",
+            "_TZE200_v6ossqfy",
+            "_TZE200_mx6u6l4y"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_QWS-001.html",
+          "vendor": "Tuya",
+          "model": "QWS-001",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_bq5c8xfe"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_Qaynn.html",
+          "vendor": "Tuya",
+          "model": "Qaynn",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_vzekyi4c"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_RSH-AirBox01.html",
+          "vendor": "Tuya",
+          "model": "RSH-AirBox01",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_8ygsuhe1",
+            "_TZE200_yvx5lh6k",
+            "_TZE200_ryfmq5rl"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_RSH-AirBox02.html",
+          "vendor": "Tuya",
+          "model": "RSH-AirBox02",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_ryfmq5rl"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_RSH_ZigBee-GS01.html",
+          "vendor": "Tuya",
+          "model": "RSH_ZigBee-GS01",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_ggev5fsl"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_SA12IZL.html",
+          "vendor": "Tuya",
+          "model": "SA12IZL",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_5d3vhjro"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_TM616EGBZTN.html",
+          "vendor": "Tuya",
+          "model": "TM616EGBZTN",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_gubdgai2"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_TM616EGZT.html",
+          "vendor": "Tuya",
+          "model": "TM616EGZT",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_hsgrhjpf"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_TS0601_switch_3_gang.html",
+          "vendor": "Tuya",
+          "model": "TS0601_switch_3_gang",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_oisqyl4o",
+            "_TZE200_atpwqgml"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_TS0601_switch_4_gang.html",
+          "vendor": "Tuya",
+          "model": "TS0601_switch_4_gang",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_aqnazj70",
+            "TZE200_k6jhsr0q"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_TV02.html",
+          "vendor": "Tuya",
+          "model": "TV02",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_hue3yfsn"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_TY16-V7030.html",
+          "vendor": "Tuya",
+          "model": "TY16-V7030",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE204_vmcgja59"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_WLS-100z.html",
+          "vendor": "Tuya",
+          "model": "WLS-100z",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_jthf7vb6"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_WWS023-Zigbee.html",
+          "vendor": "Tuya",
+          "model": "WWS023-Zigbee",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_wktrysab"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_XFY.html",
+          "vendor": "Tuya",
+          "model": "XFY",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_yi4jtqq1",
+            "_TZE200_khx7nnka"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_YG400A.html",
+          "vendor": "Tuya",
+          "model": "YG400A",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_ntcy3xu1",
+            "_TZE204_ntcy3xu1"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_YXZBRB58.html",
+          "vendor": "Tuya",
+          "model": "YXZBRB58",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE204_sooucan5"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_ZC-QY.html",
+          "vendor": "Tuya",
+          "model": "ZC-QY",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_jva8ink8"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_ZG-102ZL.html",
+          "vendor": "Tuya",
+          "model": "ZG-102ZL",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_n8dljorx",
+            "_TZE200_pay2byax"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_ZG-204ZL.html",
+          "vendor": "Tuya",
+          "model": "ZG-204ZL",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_3towulqd",
+            "_TZE200_1ibpyhdc",
+            "_TZE200_bh3n6gk8"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_ZG-227ZL.html",
+          "vendor": "Tuya",
+          "model": "ZG-227ZL",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_qoy0ekbd",
+            "_TZE200_znbl8dj5",
+            "_TZE200_a8sdabtg"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_ZG227C.html",
+          "vendor": "Tuya",
+          "model": "ZG227C",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_bjawzodf",
+            "_TZE200_qoy0ekbd",
+            "_TZE200_bq5c8xfe",
+            "_TZE200_znbl8dj5",
+            "_TZE200_zl1kmjqx"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_ZGB-QG.html",
+          "vendor": "Tuya",
+          "model": "ZGB-QG",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_yojqa8xn"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_ZTH01.html",
+          "vendor": "Tuya",
+          "model": "ZTH01",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_yjjdcqsq",
+            "_TZE200_9yapgbuv",
+            "_TZE200_utkemkbs",
+            "_TZE204_yjjdcqsq"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_ZXZZD-01.html",
+          "vendor": "Tuya",
+          "model": "ZXZZD-01",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_kzm5w4iz"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_ZY-M100-24G.html",
+          "vendor": "Tuya",
+          "model": "ZY-M100-24G",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE204_ijxvkhd0"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_ZY-M100-L.html",
+          "vendor": "Tuya",
+          "model": "ZY-M100-L",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_ztc6ggyl"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_ZY-M100-S.html",
+          "vendor": "Tuya",
+          "model": "ZY-M100-S",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE204_ztc6ggyl",
+            "_TZE204_sxm7l9xa"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_ZY-US_2.html",
+          "vendor": "Tuya",
+          "model": "ZY-US 2",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_7deq70b8"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_ZY-US_3.html",
+          "vendor": "Tuya",
+          "model": "ZY-US 3",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_2hf7x9n3"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_smoke.html",
+          "vendor": "Tuya",
+          "model": "TS0601",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_m9skfctm"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Unitec_30946.html",
+          "vendor": "Unitec",
+          "model": "30946",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_ps5v5jor",
+            "s5v5jor",
+            "_TYST11_ps5v5jor"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Woox_R7049.html",
+          "vendor": "Woox",
+          "model": "R7049",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_aycxwiau"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Woox_R7067.html",
+          "vendor": "Woox",
+          "model": "R7067",
+          "zigbeemodel": [
+            "TS0601",
+            "TZE200_wnvhlcgl"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Yieryi_THE01840.html",
+          "vendor": "Qoto",
+          "model": "QT-07S",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_myd45weu",
+            "_TZE200_ga1maeof"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Yushun_YS-MT750.html",
+          "vendor": "Yushun",
+          "model": "YS-MT750",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_bqcqqjpb",
+            "_TZE200_fdtjuw7u",
+            "_TZE200_gaj531w3"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Zemismart_AM02.html",
           "vendor": "Zemismart",
-          "model": "B90",
+          "model": "AM02",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_zigisuyh"
+            "TS0601",
+            "_TZE200_iossyxra"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Zemismart_LC-011.html",
+          "url": "https://zigbee.blakadder.com/Zemismart_AM15.html",
           "vendor": "Zemismart",
-          "model": "LC-011",
+          "model": "AM15",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_rdtixbnu"
+            "TS0601",
+            "_TZE200_iossyxra"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Zemismart_TB242.html",
-          "vendor": "Zemismart",
-          "model": "TB242",
+          "url": "https://zigbee.blakadder.com/Zemismart_AM43.html",
+          "vendor": "Tuya",
+          "model": "AM43",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_3zofvcaa"
+            "TS0601",
+            "_TZE200_zah67ekd"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Zemismart_ZM-KSZB.html",
+          "url": "https://zigbee.blakadder.com/Zemismart_BCM500DS-TYZ.html",
           "vendor": "Zemismart",
-          "model": "ZM-KSZB",
+          "model": "BCM500DS-TYZ",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_92qd4sqa"
+            "TS0601",
+            "_TZE200_xaabybja",
+            "_TZE200_rmymn92d"
           ]
         },
         {
-          "url": "https://zigbee.blakadder.com/Zemismart_ZM-ZBCZ-EU.html",
+          "url": "https://zigbee.blakadder.com/Zemismart_M2805EGBZTN.html",
           "vendor": "Zemismart",
-          "model": "ZM-ZBCZ-EU",
+          "model": "M2805EGBZTN",
           "zigbeemodel": [
-            "TS011F",
-            "_TZ3000_hyfvrar3",
-            "_TZ3000_cymsnfvf"
+            "TS0601",
+            "_TZE200_5sbebbzs"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Zemismart_M515EGB.html",
+          "vendor": "Zemismart",
+          "model": "M515EGB",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_xuzcvlku",
+            "_TZE200_gubdgai2"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Zemismart_SPM01-D2TZ.html",
+          "vendor": "Zemismart",
+          "model": "SPM01-D2TZ",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_bcusnqt8"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Zemismart_SPM02-D2TZ.html",
+          "vendor": "Zemismart",
+          "model": "SPM02-D2TZ",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE204_ves1ycwx",
+            "_TZE200_ves1ycwx",
+            "_TZE200_v9hkz2yn"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Zemismart_TB26-4.html",
+          "vendor": "Zemismart",
+          "model": "TB26-4",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_1n2kyphz"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Zemismart_TB26-6.html",
+          "vendor": "Zemismart",
+          "model": "TB26-6",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_9mahtqtg",
+            "_TZE200_r731zlxk"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Zemismart_ZM-RM02.html",
+          "vendor": "Zemismart",
+          "model": "ZM-RM02",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_zqtiam4u"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Zemismart_ZM16EL.html",
+          "vendor": "Zemismart",
+          "model": "ZM16EL-03/33",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_68nvbio9"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Zemismart_ZM25RX-08_30.html",
+          "vendor": "Zemismart",
+          "model": "ZM25RX-0.8/30",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_7eue9vhc"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Zemismart_ZM25RZ01.html",
+          "vendor": "Zemismart",
+          "model": "ZM25RZ01",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_bv1jcqqu"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Zemismart_ZM25TQ.html",
+          "vendor": "Zemismart",
+          "model": "ZM25TQ",
+          "zigbeemodel": [
+            "mcdj3aq",
+            "_TYST11_wmcdj3aq",
+            "_TZE200_fzo2pocs",
+            "TS0601"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Zemismart_ZM79E-DT.html",
+          "vendor": "Zemismart",
+          "model": "ZM79E-DT",
+          "zigbeemodel": [
+            "owvfni3\\u0000",
+            "TS0601",
+            "_TZE200_cowvfni3",
+            "_TZE200_3i3exuay"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Zemismart_ZM85EL-1Z.html",
+          "vendor": "Zemismart",
+          "model": "ZM85EL-1x",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_pw7mji0l"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Zemismart_ZM85EL-2Z.html",
+          "vendor": "Zemismart",
+          "model": "ZM85EL-2Z",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_cf1sl3tj",
+            "_TZE200_nw1r9hp6"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Zonnsmart_TV01-ZG.html",
+          "vendor": "Zonnsmart",
+          "model": "TV01-ZG",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_e9ba97vf"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Zonnsmart_TV05-ZG.html",
+          "vendor": "Zonnsmart",
+          "model": "TV05-ZG",
+          "zigbeemodel": [
+            "_TZE200_kly8gjlz",
+            "TS0601",
+            "_TZE200_mudxchsu"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/houseiq_GTZ02.html",
+          "vendor": "houseiq",
+          "model": "GTZ02",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_zivfvd7h"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/houseiq_GTZ06.html",
+          "vendor": "houseiq",
+          "model": "GTZ06",
+          "zigbeemodel": [
+            "TS0601",
+            "_TZE200_dv8abrrz"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/merrytek_MSA201_Z.html",
+          "vendor": "Merrytek",
+          "model": "MSA201 Z",
+          "zigbeemodel": [
+            "_TZE200_9xejegcy",
+            "TS0601"
           ]
         }
       ]
-    },
-    {
-      "file": "data/tz3290-gnl5a6a5xvql7c2a/ts1201.json",
-      "manufacturer": "_TZ3290_gnl5a6a5xvql7c2a",
-      "model": "TS1201",
-      "kind": "blakadder_ambiguous",
-      "reason": "Generic Tuya model \"TS1201\" matches 1 Blakadder page(s), but manufacturer string _TZ3290_gnl5a6a5xvql7c2a isn't listed on any of them.",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/Moes_UFO-R11.html",
-          "vendor": "Moes",
-          "model": "UFO-R11",
-          "zigbeemodel": [
-            "TS1201",
-            "_TZ3290_j37rooaxrcdcqo5n",
-            "_TZ3290_ot6ewjvmejq5ekhl",
-            "_TZ3290_7v1k4vufotpowp9z"
-          ]
-        }
-      ]
-    },
-    {
-      "file": "data/smartwings/wm25-l-z.json",
-      "manufacturer": "Smartwings",
-      "model": "WM25/L-Z",
-      "kind": "manufacturer_link_only",
-      "reason": "Blakadder match is high-confidence (https://zigbee.blakadder.com/Smartwings_WM25LZ.html); pre-filled manufacturer link \"https://www.smartwingshome.com/\" on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
-    },
-    {
-      "file": "data/sonoff/trvzb.json",
-      "manufacturer": "SONOFF",
-      "model": "TRVZB",
-      "kind": "manufacturer_link_only",
-      "reason": "Blakadder match is high-confidence (https://zigbee.blakadder.com/Sonoff_TRVZB.html); pre-filled manufacturer link \"https://sonoff.tech/products/sonoff-zigbee-thermostatic-radiator-valve\" on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
-    },
-    {
-      "file": "data/tz3000-1obwwnmq/ts011f.json",
-      "manufacturer": "_TZ3000_1obwwnmq",
-      "model": "TS011F",
-      "kind": "manufacturer_link_only",
-      "reason": "Blakadder match is high-confidence (https://zigbee.blakadder.com/Lidl_HG06338.html); pre-filled manufacturer link \"https://www.lidl.com/\" on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
     }
   ]
 }
