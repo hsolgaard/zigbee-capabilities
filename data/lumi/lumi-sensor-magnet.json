@@ -150,5 +150,18 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Xiaomi_MCCGQ01LM.html",
+      "match_method": "vendor_alias_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "LUMI",
+    "checked_model": "lumi.sensor_magnet",
+    "manufacturer": {
+      "url": "https://item.mi.com/product/5010.html",
+      "confidence": "high"
+    }
   }
 }

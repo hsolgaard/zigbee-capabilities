@@ -170,5 +170,18 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Aqara_RTCGQ11LM.html",
+      "match_method": "vendor_alias_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "LUMI",
+    "checked_model": "lumi.sensor_motion.aq2",
+    "manufacturer": {
+      "url": "https://www.aqara.com/en/human_motion_sensor.html",
+      "confidence": "high"
+    }
   }
 }
