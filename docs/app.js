@@ -19,6 +19,8 @@ import {
   diffFirmware,
   interestingDiscoveries,
   confidenceStars,
+  CAPABILITY_ROLE_LABEL,
+  CAPABILITY_ROLE_EXPLANATION,
 } from "./capexplorer.js";
 import { deviceImageUrl } from "./capexplorer-constants.js";
 
@@ -531,20 +533,53 @@ function goodForHtml(goodFor) {
      </div>`;
 }
 
+function roleBadgeHtml(role) {
+  const label = CAPABILITY_ROLE_LABEL[role] || CAPABILITY_ROLE_LABEL.unknown;
+  const explanation = CAPABILITY_ROLE_EXPLANATION[role] || CAPABILITY_ROLE_EXPLANATION.unknown;
+  // Reuses the site's existing .badge idiom (see the badge-strong-evidence/
+  // badge-well-confirmed/etc. rules in style.css) rather than a one-off
+  // style — same pill shape and sizing, just a role-specific color class.
+  return `<span class="badge badge-${escapeHtml(role)}" title="${escapeHtml(explanation)}">${escapeHtml(
+    label
+  )}</span>`;
+}
+
+// Shown once above the first capability group, not repeated per group —
+// the badges themselves are self-explanatory once you know the rule once.
+// This is the exact distinction a real support case spent over an hour
+// chasing before landing here: a device having existing bindings that use
+// a cluster does NOT mean it can control another device with that cluster
+// — an Input-only device can be commanded and can report its own state
+// over a binding, but has no way to issue that cluster's commands outward.
+// Reuses .hint, the site's existing small-print explanatory-text style
+// (see the search page's own hints), rather than introducing a new class.
+const CAPABILITY_ROLE_LEGEND = `
+  <div class="hint">
+    <strong>Input</strong> = this device can be commanded with that cluster (by Home Assistant, or by another
+    device bound to it). <strong>Output</strong> = this device can itself control another device using that
+    cluster, via a direct Zigbee bind. Most switches and dimmers — even ones with a physical button — are
+    Input only: the button operates the device's own load, it doesn't send Zigbee commands to anything else.
+  </div>`;
+
 function capabilitiesGroupsHtml(entries) {
   const groups = groupCapabilitiesByOutcome(entries);
   if (!groups.length) return `<p class="muted">No confirmed commands or reporting clusters recorded yet.</p>`;
   // Same split as the card: a reports-only cluster this card/site can't
   // put a real name to (raw "Cluster 0xNNNN" fallback) gets combined into
   // one summary line instead of its own bold heading with nothing under
-  // it, which reads as broken rather than as "reports data."
-  const shown = groups.filter((g) => g.identified || !g.reportsOnly);
-  const unidentifiedEmpty = groups.filter((g) => !g.identified && g.reportsOnly);
+  // it, which reads as broken rather than as "reports data." An unscanned
+  // output-only cluster is exempt from that merge even when unidentified —
+  // "this device might control something over an undocumented cluster" is
+  // worth its own line, not folded into a "reports on N clusters" summary
+  // that would be describing the wrong thing entirely.
+  const shown = groups.filter((g) => g.identified || !g.reportsOnly || g.unscanned);
+  const unidentifiedEmpty = groups.filter((g) => !g.identified && g.reportsOnly && !g.unscanned);
   const groupsHtml = shown
     .map(
       (g) => `
       <div class="cap-group">
         <span class="cap-group-label">${escapeHtml(g.label)}</span>
+        ${roleBadgeHtml(g.role)}
         ${
           g.items.length
             ? `<div class="cap-tags">${g.items
@@ -555,6 +590,8 @@ function capabilitiesGroupsHtml(entries) {
                     }</span>`
                 )
                 .join("")}</div>`
+            : g.unscanned
+            ? `<div class="cap-reportsonly muted">Declared as an output cluster — this device can potentially control another device with it, but this project's scans don't discover specific output-side commands.</div>`
             : `<div class="cap-reportsonly muted">Reports data on this cluster — no commands to send.</div>`
         }
       </div>`
@@ -569,7 +606,7 @@ function capabilitiesGroupsHtml(entries) {
         .join(", ")}) — no commands confirmed on any of them.</div>
        </div>`
     : "";
-  return `<div class="cap-groups">${groupsHtml}${unidentifiedHtml}</div>`;
+  return `<div class="cap-groups">${CAPABILITY_ROLE_LEGEND}${groupsHtml}${unidentifiedHtml}</div>`;
 }
 
 // ---- Compare firmware ----
