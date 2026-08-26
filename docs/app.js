@@ -581,6 +581,7 @@ function overviewRoleHintHtml(sentences) {
     <strong>Output</strong> means this device can send that command directly to another device over a Zigbee
     bind — a genuine controller for it, working without Home Assistant. <strong>Input only</strong> means this
     device can only receive the command itself; it has no way to send it onward to control something else.
+    <a href="clusters.html">What does this mean for each specific cluster? &rarr;</a>
   </div>`;
 }
 

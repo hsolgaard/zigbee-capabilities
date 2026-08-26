@@ -228,6 +228,24 @@ tr.detail-row td { background: var(--card-bg); padding-top: 10px; padding-bottom
 .unknowns-subhead { font-size: 0.95em; margin: 16px 0 6px; }
 #unknowns-section .table-scroll { margin-bottom: 4px; }
 
+/* Cluster glossary page (docs/clusters.html/.js) — reuses .discoveries,
+   .hint, .badge, .muted from above for the intro/legend; these are just
+   the per-cluster entry cards. */
+#clusters-jump { margin: 0 0 8px; }
+#clusters-section h2 { margin-top: 28px; margin-bottom: 10px; }
+#clusters-section section:first-of-type h2 { margin-top: 0; }
+.cluster-entry {
+  border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px;
+  background: var(--card-bg); margin-bottom: 10px;
+}
+.cluster-entry-header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; margin-bottom: 6px; }
+.cluster-entry-name { font-weight: 600; }
+.cluster-entry-id { font-size: 0.85em; }
+.cluster-entry-count { font-size: 0.8em; }
+.cluster-entry-what { margin: 4px 0 8px; }
+.cluster-entry-role { margin: 4px 0; font-size: 0.92em; display: flex; gap: 8px; align-items: baseline; }
+.cluster-entry-role .badge { flex: 0 0 auto; }
+
 footer.site-footer {
   border-top: 1px solid var(--border); margin-top: 40px; padding: 20px 0 40px;
   color: var(--muted); font-size: 0.85em;
