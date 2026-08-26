@@ -422,9 +422,18 @@ export function groupCapabilitiesByOutcome(entries) {
   // unrelated things for different vendors, so this can't be looked up by
   // ID alone).
   const manufacturer = (entries[0] || {}).manufacturer;
-  const groups = new Map(); // clusterId -> { clusterName, items: Set<name> }
+  const groups = new Map(); // clusterId -> { clusterName, items: Set<name>, isInput, isOutput }
 
   entries.forEach((entry) => {
+    // Every capabilities-cache entry already carries its own endpoint's
+    // declared in_clusters/out_clusters (see rebuild-capability-index.yml's
+    // recomputeCapabilities — this has been captured on every submission
+    // all along, just never surfaced in the UI until now). A cluster only
+    // ever appearing in in_clusters is one this device can be commanded
+    // with, not one it can use to command something else — see the role
+    // note rendered alongside CAPABILITY_ROLE_EXPLANATIONS below.
+    const inSet = new Set(entry.in_clusters || []);
+    const outSet = new Set(entry.out_clusters || []);
     Object.entries(entry.clusters || {}).forEach(([clusterId, cluster]) => {
       // resolved_name (see the PRD's upstream-enrichment automation) wins
       // over the raw name the scanning device happened to record —
@@ -434,13 +443,32 @@ export function groupCapabilitiesByOutcome(entries) {
       // never override a real name a local ZHA install already knew.
       const bestName = cluster.resolved_name || cluster.name;
       if (!groups.has(clusterId)) {
-        groups.set(clusterId, { clusterName: bestName || clusterId, items: new Set() });
+        groups.set(clusterId, { clusterName: bestName || clusterId, items: new Set(), isInput: false, isOutput: false });
       }
       const g = groups.get(clusterId);
       if (bestName) g.clusterName = bestName;
+      if (inSet.has(clusterId)) g.isInput = true;
+      if (outSet.has(clusterId)) g.isOutput = true;
       (cluster.commands_received || [])
         .filter((r) => r.present === true)
         .forEach((r) => g.items.add(r.name));
+    });
+    // A cluster declared ONLY as output (a genuine remote's On/Off or
+    // Level Control, say) never gets a clusters[hexKey] entry above at
+    // all — the card's per-cluster command detail is only ever built from
+    // in_clusters, since output-side commands aren't something this
+    // project's scanning pipeline discovers. Without this pass, that
+    // cluster would silently vanish from the whole capability listing
+    // instead of showing up as an Output group — confirmed missing
+    // against a fixture shaped like an IKEA TRADFRI remote (On/Off and
+    // Level Control both declared output-only, neither showed up at all)
+    // while chasing the exact bug report that motivated this feature.
+    outSet.forEach((clusterId) => {
+      if (groups.has(clusterId)) return;
+      // clusterName left unset (not clusterId) so capabilityOutcomePhrase
+      // falls all the way through to its own "Cluster 0xNNNN" formatting
+      // instead of surfacing the bare "0x0019" hex string unstyled.
+      groups.set(clusterId, { clusterName: null, items: new Set(), isInput: false, isOutput: true, unscanned: true });
     });
   });
 
@@ -454,6 +482,22 @@ export function groupCapabilitiesByOutcome(entries) {
         clusterId,
         label,
         reportsOnly: items.length === 0,
+        // True only for a synthesized output-only group with no scanned
+        // command detail at all — distinct from an ordinary reports-only
+        // input cluster (Electrical Measurement, say), which genuinely has
+        // no commands to send. This one might have plenty; the scanning
+        // pipeline just doesn't capture output-side command discovery, so
+        // "no items" here means "not tracked," not "confirmed none."
+        unscanned: !!g.unscanned,
+        // "input" = this device can be commanded/read via this cluster
+        // (declared as a server); "output" = this device can itself issue
+        // this cluster's commands to another device via a direct Zigbee
+        // bind (declared as a client); "both" = it has a genuine
+        // controller role for this cluster on top of being controllable;
+        // "unknown" only for pre-existing submissions from before
+        // in_clusters/out_clusters were captured (none currently on file,
+        // but new schema fields should never assume 100% coverage).
+        role: g.isInput && g.isOutput ? "both" : g.isOutput ? "output" : g.isInput ? "input" : "unknown",
         // Whether this label actually tells a user anything, or is just
         // the generic "Cluster 0xNNNN" fallback (no plain-English phrase
         // mapped, and no real cluster name was ever resolved either).
@@ -469,6 +513,30 @@ export function groupCapabilitiesByOutcome(entries) {
     })
     .sort((a, b) => a.label.localeCompare(b.label));
 }
+
+// Plain-English explanations for the Input/Output role badge shown next to
+// every capability group (see groupCapabilitiesByOutcome's `role` field and
+// capabilitiesGroupsHtml in app.js). This is the exact distinction that a
+// real support thread got stuck on for over an hour: a device's own
+// existing bindings using a cluster don't prove it can control another
+// device with that cluster, because Home Assistant reporting its state
+// (an attribute report) and issuing that cluster's commands to a peer are
+// two different mechanisms — only the second one requires this "output"
+// declaration, and no amount of binding-table evidence substitutes for it.
+export const CAPABILITY_ROLE_LABEL = {
+  input: "Input",
+  output: "Output",
+  both: "Input & Output",
+  unknown: "Role unknown",
+};
+export const CAPABILITY_ROLE_EXPLANATION = {
+  input:
+    "This device can be commanded with this cluster — by Home Assistant, or by another device bound to it. It cannot use this cluster to control anything else.",
+  output:
+    "This device can control another device using this cluster, via a direct Zigbee bind — this is what lets one device operate another without Home Assistant in between.",
+  both: "This device can both be commanded with this cluster and use it to control another device — a controller role on top of being controllable.",
+  unknown: "This submission predates input/output tracking, so this cluster's role isn't recorded.",
+};
 
 // "Good for" buying guidance (PRD v2, Phase 3 — the single most-requested
 // item from real user feedback on the Capability Explorer page: "which
