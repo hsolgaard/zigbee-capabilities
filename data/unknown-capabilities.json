@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T06:01:22.566Z",
+  "generated_at": "2026-08-26T05:19:11.597Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -157,6 +157,21 @@
       ]
     },
     {
+      "id_hex": "0xffff",
+      "seen_on": [
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.sensor_magnet",
+          "count": 1
+        },
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.weather",
+          "count": 1
+        }
+      ]
+    },
+    {
       "id_hex": "0xfc81",
       "seen_on": [
         {
@@ -172,16 +187,6 @@
         {
           "manufacturer": "innr",
           "model": "SP 224",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "id_hex": "0xffff",
-      "seen_on": [
-        {
-          "manufacturer": "LUMI",
-          "model": "lumi.weather",
           "count": 1
         }
       ]
