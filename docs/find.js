@@ -218,8 +218,13 @@ function evidenceListHtml(clusterEvidence) {
     .map((c) => {
       const name = CLUSTER_NAMES[c.req.id] || c.req.id;
       const wantLabel = c.req.direction === "output" ? `${name} — Output` : name;
+      // "declared", not "confirmed" — an Output match here reflects what
+      // the device's own Zigbee signature declares, not an independently
+      // tested behavior (see CAPABILITY_ROLE_EXPLANATION.output's doc
+      // comment in capexplorer.js for the real case — a Xiaomi/Aqara
+      // contact sensor — that makes this more than a theoretical caveat).
       return `<li>${c.met ? "✓" : "✗"} ${escapeHtml(wantLabel)} <span class="muted">— ${
-        c.met ? `confirmed (${escapeHtml(c.group.label)})` : "not observed in community scans"
+        c.met ? `declared (${escapeHtml(c.group.label)})` : "not observed in community scans"
       }</span></li>`;
     })
     .join("")}</ul>`;
@@ -280,6 +285,13 @@ function runMatch(req) {
   countEl.textContent = `${full.length} full match${full.length === 1 ? "" : "es"}${
     partial.length ? `, ${partial.length} partial match${partial.length === 1 ? "" : "es"}` : ""
   }`;
+  const outputCaveatEl = document.getElementById("find-output-caveat");
+  const hasOutputReq = (req.clusters || []).some((c) => c.direction === "output") || req.anyOutput;
+  outputCaveatEl.innerHTML = hasOutputReq
+    ? `"Output" below reflects what each device's own Zigbee signature declares, not an independently tested
+       behavior — accurate for the large majority of devices, but occasionally a device declares a capability its
+       hardware doesn't actually use. <a href="clusters.html">More on Input vs Output &rarr;</a>`
+    : "";
   fullEl.innerHTML = full.map(resultCardHtml).join("");
   if (partial.length) {
     partialWrap.hidden = false;

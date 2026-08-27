@@ -33,9 +33,12 @@
         else itself.
       </p>
       <p>
-        <strong>Output</strong> means the device can itself send that cluster's commands directly to another device,
-        over a Zigbee bind, without a hub involved. This is what makes a device a genuine controller for that
-        function — e.g. a wall switch or remote that can operate a separate light or relay on its own.
+        <strong>Output</strong> means the device declares, in its own Zigbee signature, that it can send that
+        cluster's commands directly to another device over a Zigbee bind, without a hub involved. This is what makes
+        a device a genuine controller for that function — e.g. a wall switch or remote that can operate a separate
+        light or relay on its own. This comes from the device's own declaration rather than an independent test:
+        accurate for the large majority of devices, but occasionally a device's firmware declares a capability its
+        physical hardware doesn't actually use.
       </p>
       <p class="hint" style="margin-top: 10px;">
         Most switches and dimmers — even ones with a physical button — are Input only: the button operates the
