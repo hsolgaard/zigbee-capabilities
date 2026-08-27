@@ -35329,7 +35329,19 @@
   {
     "manufacturer_slug": "lumi",
     "model_slug": "lumi-sensor-motion",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Xiaomi_RTCGQ01LM.html",
+        "match_method": "vendor_alias_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "LUMI",
+      "checked_model": "lumi.sensor_motion",
+      "manufacturer": {
+        "url": "https://item.mi.com/product/5005.html",
+        "confidence": "high"
+      }
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -36831,7 +36843,11 @@
   {
     "manufacturer_slug": "repenic-ltd",
     "model_slug": "rd-250zg",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "Repenic Ltd.",
+      "checked_model": "RD-250ZG"
+    },
     "endpoint": 1,
     "firmware": "1.07",
     "scan_count": 1,
@@ -37640,7 +37656,11 @@
   {
     "manufacturer_slug": "repenic-ltd",
     "model_slug": "rd-250zg",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "Repenic Ltd.",
+      "checked_model": "RD-250ZG"
+    },
     "endpoint": 242,
     "firmware": "1.07",
     "scan_count": 1,
