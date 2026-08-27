@@ -870,6 +870,271 @@ export function deviceOverview(entries) {
   return sentences;
 }
 
+// -----------------------------------------------------------------------
+// Find the Right Device — Guided Search + deterministic NL interpretation
+// -----------------------------------------------------------------------
+// Everything below answers "what device should I buy/use for X" from a
+// structured query, entirely deterministically — no AI/LLM call anywhere
+// in this file. See the PRD ("Find the Right Device") and the Feasibility
+// Review for the full design; this is Phase 1 (Guided Search) + Phase 2
+// (the rules-first natural-language interpreter) only. Phase 3 (an LLM
+// fallback for queries these rules can't confidently resolve) is a
+// separate, not-yet-built piece that would call into matchGuidedSearch()
+// with the exact same requirements shape — this file has zero dependency
+// on whether that ever ships.
+//
+// Query shape (deliberately reuses vocabulary this file already teaches —
+// cluster IDs, and the input/output/both role language from
+// groupCapabilitiesByOutcome's `role` field — rather than inventing a
+// second vocabulary):
+//   {
+//     clusters: [{ id: "0x0006", direction: "input"|"output"|"either" }],
+//     anyOutput: boolean,       // "can control something, don't care what"
+//     measuresPower: boolean,   // Electrical Measurement and/or Metering
+//     powerSource: "battery"|"mains"|null,
+//     minChannels: number|null,
+//     manufacturer: string|null,
+//   }
+
+// Curated "what are you trying to do" goals for Guided Search Step 1.
+// clusterId is null for goals that don't map to a single command cluster
+// (measuring power needs an OR across two clusters — handled specially in
+// matchGuidedSearch via measuresPower rather than forcing a fake single
+// clusterId here). Color temperature and RGB/color both map to the same
+// Color Control cluster (0x0300) — ZCL doesn't distinguish them at the
+// cluster level, so this file doesn't invent a distinction the data can't
+// back up; kept as two separate goal chips anyway since that's how a
+// buyer actually thinks about the choice.
+export const FIND_GOAL_OPTIONS = [
+  { id: "control-directly", label: "Control another Zigbee device directly", clusterId: null, anyOutput: true },
+  { id: "control-light", label: "Control a light (on/off)", clusterId: "0x0006" },
+  { id: "dim-light", label: "Dim a light", clusterId: "0x0008" },
+  { id: "color-temp", label: "Control colour temperature", clusterId: "0x0300" },
+  { id: "color-rgb", label: "Control colour / RGB", clusterId: "0x0300" },
+  { id: "measure-power", label: "Measure electrical power", clusterId: null, measuresPower: true },
+];
+// These two goals don't produce a structured query at all — they route to
+// tools that already exist on the site rather than reimplementing them.
+// "Find a device with a particular capability" -> the Advanced filters on
+// the main search page; "Compare firmware" -> the Compare firmware
+// section. Kept as data here (not hardcoded in find.js) so the goal list
+// stays one source of truth for the wizard's Step 1 options.
+export const FIND_GOAL_REDIRECTS = [
+  { id: "find-capability", label: "Find a device with a particular capability", href: "index.html#search-section" },
+  { id: "compare-firmware", label: "Compare firmware", href: "index.html#compare-section" },
+  { id: "other-advanced", label: "Other / advanced search", href: "index.html#search-section" },
+];
+
+const POWER_CLUSTER_IDS = ["0x0b04", "0x0702"]; // Electrical Measurement, Metering
+
+// Battery/mains evidence, derived only from which Power Configuration
+// (0x0001) attributes a real scan actually confirmed — never from a
+// manufacturer's product-page claim, same "only state what the scan
+// shows" rule as everything else in this database. Returns "unknown"
+// (not a guessed default) when there's no Power Configuration evidence
+// either way, since coverage for this is sparse today — an "unknown"
+// device should never be silently treated as "not battery" or vice
+// versa. Verified against real data: battery_* attribute names (e.g.
+// battery_voltage, battery_percentage_remaining) confirm battery power;
+// mains_voltage confirms mains.
+export function powerSourceEvidence(entries) {
+  let battery = false;
+  let mains = false;
+  entries.forEach((e) => {
+    const pc = (e.clusters || {})["0x0001"];
+    if (!pc) return;
+    (pc.attributes_confirmed || []).forEach((a) => {
+      if (/^battery_/.test(a.name)) battery = true;
+      if (a.name === "mains_voltage") mains = true;
+    });
+  });
+  if (battery && mains) return "both";
+  if (battery) return "battery";
+  if (mains) return "mains";
+  return "unknown";
+}
+
+// How many independently-controllable channels/gangs a device has for a
+// given control cluster — deliberately NOT a count of distinct `endpoint`
+// values in the raw index, which is wrong: verified against a real 3-gang
+// Tuya switch (_TZ3000_pf7swkqp TS0003), which reports endpoints 1, 2, 3
+// (each declaring On/Off as input — the actual 3 gangs) plus endpoint
+// 242, a Green Power proxy endpoint that is not a 4th gang. This counts
+// only endpoints that themselves declare the given cluster as input —
+// the actual definition of "one more independently-controllable channel"
+// for that cluster.
+export function channelCount(entries, clusterId = "0x0006") {
+  const endpointsWithControl = new Set();
+  entries.forEach((e) => {
+    if ((e.in_clusters || []).includes(clusterId)) endpointsWithControl.add(e.endpoint);
+  });
+  return endpointsWithControl.size;
+}
+
+function clusterRequirementEvidence(groups, req) {
+  const g = groups.find((x) => x.clusterId === req.id);
+  if (req.direction === "output") return { met: !!g && (g.role === "output" || g.role === "both"), group: g || null };
+  if (req.direction === "input") return { met: !!g && (g.role === "input" || g.role === "both"), group: g || null };
+  return { met: !!g, group: g || null }; // "either" — just needs the cluster to appear at all
+}
+
+// The Guided Search matcher: takes the same flat community index every
+// other function here uses, plus a requirements object built by Step 4's
+// "generated requirements" (or, in future, Phase 3's LLM translation —
+// this function is exactly the deterministic boundary the PRD's whole
+// "AI interprets the question, community evidence answers it" principle
+// depends on), and returns per-device matches with full evidence for why
+// each one did or didn't qualify. Never invents a match: every field
+// checked traces back to a confirmed cluster/attribute exactly like the
+// rest of this file.
+//
+// Returns { full: [...], partial: [...] } — partial matches satisfy every
+// *other* requirement but are missing at least one cluster requirement,
+// mirroring the PRD's explicit "show partial matches, don't just say no
+// results" behavior (see notDirectControlSummary's doc comment for the
+// same underlying "silence isn't a good enough answer" principle).
+export function matchGuidedSearch(index, requirements) {
+  const req = requirements || {};
+  const clusterReqs = req.clusters || [];
+  const grouped = groupByDevice(index);
+
+  const full = [];
+  const partial = [];
+
+  grouped.forEach((entries) => {
+    const first = entries[0];
+    const groups = groupCapabilitiesByOutcome(entries);
+
+    const clusterEvidence = clusterReqs.map((r) => ({ req: r, ...clusterRequirementEvidence(groups, r) }));
+    const clusterReqsMet = clusterEvidence.filter((c) => c.met).length;
+    const allClusterReqsMet = clusterReqs.length === clusterReqsMet;
+
+    // Deliberately reuses controlUseCases() rather than a raw "does any
+    // cluster have role output/both" check: a naive check like that treats
+    // infrastructure clusters a device declares output for (OTA 0x0019,
+    // Poll Control 0x0020/0x0021, etc. — verified against real TRADFRI bulb
+    // records, which all declare these) as if they made the device a
+    // controller. controlUseCases() already filters to CONTROLLER_CLUSTER_IDS
+    // (On/Off, Level, Color, Scenes) — the same curated "can genuinely
+    // control a separate device over a direct bind" signal the device
+    // overview panel shows — so "control another device directly" here
+    // means exactly what it says, not "declares some output cluster."
+    const anyOutputMet = !req.anyOutput || controlUseCases(entries).length > 0;
+    const measuresPowerMet =
+      !req.measuresPower || groups.some((g) => POWER_CLUSTER_IDS.includes(g.clusterId));
+
+    const power = req.powerSource ? powerSourceEvidence(entries) : null;
+    const powerMet = !req.powerSource || power === req.powerSource || power === "both";
+
+    const channels = req.minChannels ? channelCount(entries, clusterReqs[0] ? clusterReqs[0].id : "0x0006") : null;
+    const channelsMet = !req.minChannels || channels >= req.minChannels;
+
+    const manufacturerMet =
+      !req.manufacturer || String(first.manufacturer || "").toLowerCase().includes(String(req.manufacturer).toLowerCase());
+
+    // Requirements outside the cluster list (anyOutput, measuresPower,
+    // powerSource, minChannels, manufacturer) are treated as hard filters,
+    // not partial-match material — the PRD's partial-match example is
+    // specifically about a missing *capability* cluster (e.g. "meets
+    // On/Off but not confirmed for Level Control"), not "wrong
+    // manufacturer" or "no battery evidence." Softening those too would
+    // make "partial match" mean nothing.
+    if (!anyOutputMet || !measuresPowerMet || !powerMet || !channelsMet || !manufacturerMet) return;
+    if (!clusterReqs.length && !req.anyOutput && !req.measuresPower) return; // an empty query matches nothing
+
+    const match = {
+      manufacturerSlug: first.manufacturer_slug,
+      modelSlug: first.model_slug,
+      manufacturer: first.manufacturer,
+      model: first.model,
+      entries,
+      rating: confidenceStars(entries),
+      clusterEvidence,
+      powerSource: power,
+      channelCount: channels,
+      references: first.references || null,
+    };
+
+    if (allClusterReqsMet) full.push(match);
+    else if (clusterReqsMet > 0) partial.push(match);
+  });
+
+  const starRank = (m) => (m.rating.conflicting ? -1 : m.rating.stars || 0);
+  const sorter = (a, b) => starRank(b) - starRank(a) || `${a.manufacturer} ${a.model}`.localeCompare(`${b.manufacturer} ${b.model}`);
+  full.sort(sorter);
+  partial.sort(sorter);
+  return { full, partial };
+}
+
+// ---- Phase 2: deterministic, rules-first natural-language interpreter ----
+// Maps common phrases straight to the same requirements shape
+// matchGuidedSearch() consumes — no AI/LLM call. This is deliberately a
+// short, curated table (PRD §6), not an attempt at general NLU: if a
+// phrase isn't recognized, the relevant requirement is simply left
+// unresolved and surfaced back to the person so they can pick it via
+// Guided Search instead of the interpreter silently guessing wrong.
+const NL_RULES = [
+  { pattern: /\bdirectly\b|\bwithout (home assistant|ha)\b|\bno home assistant\b/i, apply: (r) => (r.anyOutputHint = true) },
+  { pattern: /\bswitch(es|ing)?\b|\bon\/?off\b|\bturn on\b|\bturn off\b/i, clusterId: "0x0006" },
+  { pattern: /\bdim(mer|ming|s)?\b|\bbrightness\b/i, clusterId: "0x0008" },
+  { pattern: /\bcolou?r temp(erature)?\b|\bwarm.?white\b/i, clusterId: "0x0300" },
+  { pattern: /\brgb\b|\bcolou?r\b/i, clusterId: "0x0300" },
+  { pattern: /\bpower monitor(ing)?\b|\bmeasure(s)? power\b|\bwatt(age)?\b|\bvoltage\b|\bcurrent\b|\benergy\b/i, apply: (r) => (r.measuresPower = true) },
+  { pattern: /\bbattery\b|\bbattery.?powered\b/i, apply: (r) => (r.powerSource = "battery") },
+  { pattern: /\bmains\b|\bmains.?powered\b|\bhardwired\b/i, apply: (r) => (r.powerSource = "mains") },
+];
+// Words this interpreter recognizes but that only make sense once at
+// least one cluster requirement is already implied — e.g. "3-gang"/"3
+// button" is meaningless without knowing which cluster's channels to
+// count, so it's resolved as a second pass after the cluster rules run.
+const CHANNEL_COUNT_PATTERN = /\b(\d+)[\s-]?(gang|button|channel)s?\b/i;
+
+// Returns { requirements, resolved: [ruleDescriptions], unresolved:
+// [wordsOrPhrasesNotRecognized] } — `unresolved` is what makes this
+// safely "fall through to Phase 3" rather than overclaiming a confident
+// interpretation it doesn't actually have. A query this can't resolve at
+// all (no rule matched anything) comes back with an empty `requirements`
+// object and the full original text in `unresolved`, so the caller can
+// decide whether to hand it to Guided Search or (once it exists) Phase 3.
+export function parseNaturalLanguageQuery(text) {
+  const q = String(text || "").trim();
+  const requirements = { clusters: [] };
+  const resolved = [];
+  const clusterDirectionHint = { anyOutputHint: false, measuresPower: false, powerSource: null };
+  const matchedClusterIds = new Set();
+
+  NL_RULES.forEach((rule) => {
+    if (!rule.pattern.test(q)) return;
+    if (rule.clusterId) matchedClusterIds.add(rule.clusterId);
+    if (rule.apply) rule.apply(clusterDirectionHint);
+    resolved.push(rule.pattern.source);
+  });
+
+  const direction = clusterDirectionHint.anyOutputHint ? "output" : "either";
+  matchedClusterIds.forEach((id) => requirements.clusters.push({ id, direction }));
+  if (clusterDirectionHint.anyOutputHint && !matchedClusterIds.size) requirements.anyOutput = true;
+  if (clusterDirectionHint.measuresPower) requirements.measuresPower = true;
+  if (clusterDirectionHint.powerSource) requirements.powerSource = clusterDirectionHint.powerSource;
+
+  const channelMatch = q.match(CHANNEL_COUNT_PATTERN);
+  if (channelMatch && matchedClusterIds.size) {
+    requirements.minChannels = parseInt(channelMatch[1], 10);
+    resolved.push(CHANNEL_COUNT_PATTERN.source);
+  }
+
+  const recognizedSomething = resolved.length > 0;
+  return {
+    requirements,
+    resolved,
+    // A best-effort "did we actually get enough to search with" flag —
+    // distinct from `resolved.length` because a query could match e.g.
+    // only "battery" (a real signal) without any cluster/goal at all,
+    // which isn't really enough to run a useful search on its own.
+    confident: matchedClusterIds.size > 0 || !!requirements.measuresPower || !!requirements.anyOutput,
+    unresolved: recognizedSomething ? [] : [q],
+  };
+}
+
 // Interesting Discoveries (PRD v2, Phase 2): a small set of factual,
 // conservatively-gated highlights computed from the whole community index
 // — deliberately NOT percentage or cross-manufacturer comparisons (e.g.

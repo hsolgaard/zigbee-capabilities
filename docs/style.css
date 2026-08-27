@@ -251,3 +251,76 @@ footer.site-footer {
   color: var(--muted); font-size: 0.85em;
 }
 footer.site-footer p { margin: 4px 0; }
+
+/* Find the right device (docs/find.html/.js) — reuses .chip/.chip-row,
+   .btn/.btn-small, .device-card/.device-list, .hint/.muted, .empty-search
+   from above; these are just the wizard/NL-mode-specific bits. */
+.find-mode-toggle { display: flex; gap: 8px; }
+.find-mode-btn {
+  flex: 1 1 0; padding: 10px 16px; border-radius: 8px; font-size: 0.95em; font-weight: 600;
+  border: 1px solid var(--border); background: var(--card-bg); color: var(--fg); cursor: pointer;
+}
+.find-mode-btn:hover { border-color: var(--accent); }
+.find-mode-btn.selected { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+.find-nl-form { display: flex; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+.find-nl-form input[type="text"] {
+  flex: 1 1 320px; padding: 9px 12px; border-radius: 6px; border: 1px solid var(--border);
+  background: var(--bg); color: var(--fg); font-size: 0.95em;
+}
+.find-linklike {
+  background: none; border: none; padding: 0; color: var(--accent); text-decoration: underline;
+  cursor: pointer; font-size: inherit; font-family: inherit;
+}
+
+.find-step { margin: 18px 0 24px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+.find-step:last-of-type { border-bottom: none; }
+.find-step-label { font-weight: 600; margin: 0 0 4px; }
+
+.find-goal-grid { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 10px; }
+.find-goal-btn {
+  padding: 8px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--card-bg);
+  color: var(--fg); font-size: 0.88em; cursor: pointer;
+}
+.find-goal-btn:hover { border-color: var(--accent); }
+.find-goal-btn.selected { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); font-weight: 600; }
+
+.find-radio-row { display: flex; flex-wrap: wrap; gap: 16px; font-size: 0.9em; margin: 8px 0; }
+.find-radio-row label { display: inline-flex; align-items: center; gap: 5px; cursor: pointer; }
+
+.find-pref-row { display: flex; flex-wrap: wrap; gap: 16px; margin: 8px 0; }
+.find-pref-label {
+  display: flex; flex-direction: column; gap: 4px; font-size: 0.85em; color: var(--muted); flex: 1 1 160px;
+}
+.find-pref-label select, .find-pref-label input[type="text"] {
+  padding: 7px 8px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg);
+  color: var(--fg); font-size: 0.95em;
+}
+
+.find-req-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 14px; }
+.find-chip {
+  display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--accent); background: var(--accent-bg);
+  color: var(--accent); border-radius: 999px; padding: 5px 8px 5px 12px; font-size: 0.85em; font-weight: 600;
+}
+.find-chip-remove {
+  background: none; border: none; color: var(--accent); font-size: 1.1em; line-height: 1; cursor: pointer;
+  padding: 0 4px; font-weight: 700;
+}
+.find-chip-remove:hover { opacity: 0.7; }
+
+.find-evidence-list { list-style: none; padding: 0; margin: 8px 0; font-size: 0.88em; display: flex; flex-direction: column; gap: 3px; }
+.find-result-power { margin: 4px 0; font-size: 0.85em; }
+.find-partial-heading { font-weight: 600; margin: 24px 0 10px; color: var(--muted); }
+
+/* Prominent "Find the right device" entry point on the index page (PRD
+   §3) — deliberately louder than a plain nav link or search-example chip:
+   this is the primary on-ramp for someone who doesn't know Zigbee
+   terminology at all and would otherwise not know Advanced filters or the
+   Quick Search chips exist. */
+.find-callout {
+  display: block; text-decoration: none; color: inherit; border: 1px solid var(--accent);
+  background: var(--accent-bg); border-radius: 10px; padding: 14px 18px; margin-bottom: 4px;
+}
+.find-callout:hover { border-color: var(--accent); opacity: 0.92; }
+.find-callout-title { font-weight: 700; font-size: 1.05em; color: var(--accent); margin-bottom: 3px; }
+.find-callout-body { font-size: 0.88em; color: var(--fg); }

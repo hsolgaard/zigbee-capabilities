@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find the right device — Zigbee Capabilities</title>
+<meta name="description" content="Tell us what you want your Zigbee device to do — get a shortlist backed by real community capability evidence, no cluster/endpoint/binding knowledge required.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <h1>Find the right device</h1>
+    <p class="tagline">Tell us what you want your Zigbee device to do — we'll match it against real community capability evidence, not manufacturer claims.</p>
+    <nav class="site-nav">
+      <a href="index.html">&larr; Back to device explorer</a>
+      <a href="clusters.html">Cluster glossary</a>
+      <a href="https://github.com/hsolgaard/zigbee-capabilities" target="_blank" rel="noopener">Database on GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="find-mode-section">
+    <div class="find-mode-toggle" role="tablist">
+      <button type="button" class="find-mode-btn" id="find-mode-nl" data-mode="nl">Ask in plain English</button>
+      <button type="button" class="find-mode-btn" id="find-mode-guided" data-mode="guided">Build your search</button>
+    </div>
+  </section>
+
+  <section id="find-nl-section" hidden>
+    <h2>Ask in plain English</h2>
+    <p class="hint">Describe what you want the device to do. This is matched with simple rules, not AI — no data ever leaves your browser.</p>
+    <form id="find-nl-form" class="find-nl-form">
+      <input type="text" id="find-nl-input" placeholder="e.g. a battery remote that can directly dim lights" autocomplete="off">
+      <button type="submit" class="btn">Find devices</button>
+    </form>
+    <p class="hint">Try one of these:</p>
+    <div class="chip-row" id="find-nl-examples"></div>
+    <div id="find-nl-feedback"></div>
+  </section>
+
+  <section id="find-wizard-section" hidden>
+    <h2>Build your search</h2>
+
+    <div class="find-step" id="find-step-1">
+      <p class="find-step-label">Step 1 — What are you trying to do?</p>
+      <p class="hint">Pick as many as apply.</p>
+      <div class="find-goal-grid" id="find-goal-grid"></div>
+      <p class="hint">Looking for something more specific?</p>
+      <div class="chip-row" id="find-goal-redirects"></div>
+    </div>
+
+    <div class="find-step" id="find-step-2">
+      <p class="find-step-label">Step 2 — Does it need to work without Home Assistant?</p>
+      <p class="hint">Choosing "Yes" requires the device to control the other device directly over a Zigbee bind, without a hub involved.</p>
+      <div class="find-radio-row" id="find-direct-binding">
+        <label><input type="radio" name="find-direct" value="yes"> Yes — direct binding</label>
+        <label><input type="radio" name="find-direct" value="no"> No — Home Assistant can handle it</label>
+        <label><input type="radio" name="find-direct" value="dontcare" checked> Don't care</label>
+      </div>
+    </div>
+
+    <div class="find-step" id="find-step-3">
+      <p class="find-step-label">Step 3 — Device preferences <span class="muted">(optional)</span></p>
+      <div class="find-pref-row">
+        <label class="find-pref-label">Power source
+          <select id="find-power-pref">
+            <option value="dontcare">Don't care</option>
+            <option value="battery">Battery powered</option>
+            <option value="mains">Mains powered</option>
+          </select>
+        </label>
+        <label class="find-pref-label" id="find-channels-wrap" hidden>Minimum buttons / channels
+          <select id="find-channels-pref">
+            <option value="">Don't care</option>
+            <option value="2">2 or more</option>
+            <option value="3">3 or more</option>
+            <option value="4">4 or more</option>
+            <option value="6">6 or more</option>
+          </select>
+        </label>
+        <label class="find-pref-label">Manufacturer
+          <input type="text" id="find-manufacturer-pref" placeholder="Any manufacturer" autocomplete="off">
+        </label>
+      </div>
+      <p class="hint">Only preferences the community dataset can actually support are offered here — device type (e.g. "light" vs "switch") isn't reliably derivable yet, so it isn't included.</p>
+    </div>
+  </section>
+
+  <section id="find-requirements-section" hidden>
+    <p class="find-step-label">We're looking for devices with:</p>
+    <div class="find-req-chips" id="find-req-chips"></div>
+    <button type="button" class="btn" id="find-show-matches">Show matches</button>
+  </section>
+
+  <section id="find-results-section" hidden>
+    <h2>Matches</h2>
+    <p class="hint" id="find-results-count"></p>
+    <div id="find-results-full" class="device-list"></div>
+    <div id="find-results-partial-wrap" hidden>
+      <p class="find-partial-heading">Partial matches — meet some, not all, requirements</p>
+      <div id="find-results-partial" class="device-list"></div>
+    </div>
+    <div id="find-no-results" hidden></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Matches are generated entirely from confirmed community scan evidence — nothing here is inferred by AI or manufacturer marketing copy.</p>
+    <p>An empty or partial result means nobody has submitted confirming evidence yet, not that no device supports it — see the
+      <a href="index.html#contribute">contribution instructions</a>.</p>
+    <p>Not affiliated with the Connectivity Standards Alliance (Zigbee), Home Assistant, or any device manufacturer.</p>
+  </div>
+</footer>
+
+<script type="module" src="find.js"></script>
+</body>
+</html>
