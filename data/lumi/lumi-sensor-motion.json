@@ -146,5 +146,18 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Xiaomi_RTCGQ01LM.html",
+      "match_method": "vendor_alias_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "LUMI",
+    "checked_model": "lumi.sensor_motion",
+    "manufacturer": {
+      "url": "https://item.mi.com/product/5005.html",
+      "confidence": "high"
+    }
   }
 }
