@@ -30001,6 +30001,7 @@
   {
     "manufacturer_slug": "innr",
     "model_slug": "rb-287-c",
+    "references": null,
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -30463,6 +30464,22 @@
         "attributes_confirmed": []
       }
     }
+  },
+  {
+    "manufacturer_slug": "innr",
+    "model_slug": "rb-287-c",
+    "references": null,
+    "endpoint": 242,
+    "firmware": null,
+    "scan_count": 1,
+    "last_seen": "2026-08-28T08:42:57.874Z",
+    "manufacturer": "innr",
+    "model": "RB 287 C",
+    "in_clusters": [],
+    "out_clusters": [
+      "0x0021"
+    ],
+    "clusters": {}
   },
   {
     "manufacturer_slug": "innr",
