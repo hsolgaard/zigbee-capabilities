@@ -2,12 +2,6 @@
   {
     "manufacturer_slug": "tyzb01-wqcac7lo",
     "model_slug": "ts0205",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "_TYZB01_wqcac7lo",
-      "checked_model": "TS0205",
-      "blakadder_declined": true
-    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -246,19 +240,6 @@
   {
     "manufacturer_slug": "tz3000-1obwwnmq",
     "model_slug": "ts011f",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Lidl_HG06338.html",
-        "match_method": "manufacturer_string_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "_TZ3000_1obwwnmq",
-      "checked_model": "TS011F",
-      "manufacturer": {
-        "url": "https://www.lidl.com/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 2,
     "firmware": null,
     "scan_count": 1,
@@ -386,19 +367,6 @@
   {
     "manufacturer_slug": "tz3000-1obwwnmq",
     "model_slug": "ts011f",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Lidl_HG06338.html",
-        "match_method": "manufacturer_string_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "_TZ3000_1obwwnmq",
-      "checked_model": "TS011F",
-      "manufacturer": {
-        "url": "https://www.lidl.com/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 3,
     "firmware": null,
     "scan_count": 1,
@@ -526,12 +494,6 @@
   {
     "manufacturer_slug": "tz3000-3n2minvf",
     "model_slug": "ts0004",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "_TZ3000_3n2minvf",
-      "checked_model": "TS0004",
-      "blakadder_declined": true
-    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -861,12 +823,6 @@
   {
     "manufacturer_slug": "tz3000-3n2minvf",
     "model_slug": "ts0004",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "_TZ3000_3n2minvf",
-      "checked_model": "TS0004",
-      "blakadder_declined": true
-    },
     "endpoint": 2,
     "firmware": null,
     "scan_count": 1,
@@ -966,12 +922,6 @@
   {
     "manufacturer_slug": "tz3000-3n2minvf",
     "model_slug": "ts0004",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "_TZ3000_3n2minvf",
-      "checked_model": "TS0004",
-      "blakadder_declined": true
-    },
     "endpoint": 3,
     "firmware": null,
     "scan_count": 1,
@@ -1071,12 +1021,6 @@
   {
     "manufacturer_slug": "tz3000-3n2minvf",
     "model_slug": "ts0004",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "_TZ3000_3n2minvf",
-      "checked_model": "TS0004",
-      "blakadder_declined": true
-    },
     "endpoint": 4,
     "firmware": null,
     "scan_count": 1,
@@ -1176,12 +1120,6 @@
   {
     "manufacturer_slug": "tz3000-46t1rvdu",
     "model_slug": "ts0001",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "_TZ3000_46t1rvdu",
-      "checked_model": "TS0001",
-      "blakadder_declined": true
-    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -1511,15 +1449,6 @@
   {
     "manufacturer_slug": "tz3000-92chsky7",
     "model_slug": "ts110f",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Lonsonho_QS-Zigbee-D02-TRIAC-2C-L.html",
-        "match_method": "manufacturer_string_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "_TZ3000_92chsky7",
-      "checked_model": "TS110F"
-    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -1723,15 +1652,6 @@
   {
     "manufacturer_slug": "tz3000-92chsky7",
     "model_slug": "ts110f",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Lonsonho_QS-Zigbee-D02-TRIAC-2C-L.html",
-        "match_method": "manufacturer_string_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "_TZ3000_92chsky7",
-      "checked_model": "TS110F"
-    },
     "endpoint": 2,
     "firmware": null,
     "scan_count": 1,
@@ -1849,19 +1769,6 @@
   {
     "manufacturer_slug": "tz3000-famkxci2",
     "model_slug": "ts0043",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/LoraTap_SS600ZB.html",
-        "match_method": "manufacturer_string_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "_TZ3000_famkxci2",
-      "checked_model": "TS0043",
-      "manufacturer": {
-        "url": "https://www.loratap.com/products/ss600zb",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -2012,19 +1919,6 @@
   {
     "manufacturer_slug": "tz3000-famkxci2",
     "model_slug": "ts0043",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/LoraTap_SS600ZB.html",
-        "match_method": "manufacturer_string_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "_TZ3000_famkxci2",
-      "checked_model": "TS0043",
-      "manufacturer": {
-        "url": "https://www.loratap.com/products/ss600zb",
-        "confidence": "high"
-      }
-    },
     "endpoint": 2,
     "firmware": null,
     "scan_count": 1,
@@ -2081,19 +1975,6 @@
   {
     "manufacturer_slug": "tz3000-famkxci2",
     "model_slug": "ts0043",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/LoraTap_SS600ZB.html",
-        "match_method": "manufacturer_string_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "_TZ3000_famkxci2",
-      "checked_model": "TS0043",
-      "manufacturer": {
-        "url": "https://www.loratap.com/products/ss600zb",
-        "confidence": "high"
-      }
-    },
     "endpoint": 3,
     "firmware": null,
     "scan_count": 1,
@@ -2150,19 +2031,6 @@
   {
     "manufacturer_slug": "tz3000-ltt60asa",
     "model_slug": "ts0004",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Tuya_SML-04Z.html",
-        "match_method": "manufacturer_string_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "_TZ3000_ltt60asa",
-      "checked_model": "TS0004",
-      "manufacturer": {
-        "url": "https://expo.tuya.com/product/907020",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -2416,19 +2284,6 @@
   {
     "manufacturer_slug": "tz3000-ltt60asa",
     "model_slug": "ts0004",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Tuya_SML-04Z.html",
-        "match_method": "manufacturer_string_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "_TZ3000_ltt60asa",
-      "checked_model": "TS0004",
-      "manufacturer": {
-        "url": "https://expo.tuya.com/product/907020",
-        "confidence": "high"
-      }
-    },
     "endpoint": 2,
     "firmware": null,
     "scan_count": 1,
@@ -2541,19 +2396,6 @@
   {
     "manufacturer_slug": "tz3000-ltt60asa",
     "model_slug": "ts0004",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Tuya_SML-04Z.html",
-        "match_method": "manufacturer_string_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "_TZ3000_ltt60asa",
-      "checked_model": "TS0004",
-      "manufacturer": {
-        "url": "https://expo.tuya.com/product/907020",
-        "confidence": "high"
-      }
-    },
     "endpoint": 3,
     "firmware": null,
     "scan_count": 1,
@@ -2666,19 +2508,6 @@
   {
     "manufacturer_slug": "tz3000-ltt60asa",
     "model_slug": "ts0004",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Tuya_SML-04Z.html",
-        "match_method": "manufacturer_string_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "_TZ3000_ltt60asa",
-      "checked_model": "TS0004",
-      "manufacturer": {
-        "url": "https://expo.tuya.com/product/907020",
-        "confidence": "high"
-      }
-    },
     "endpoint": 4,
     "firmware": null,
     "scan_count": 1,
@@ -2791,12 +2620,6 @@
   {
     "manufacturer_slug": "tz3000-pf7swkqp",
     "model_slug": "ts0003",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "_TZ3000_pf7swkqp",
-      "checked_model": "TS0003",
-      "blakadder_declined": true
-    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -3126,12 +2949,6 @@
   {
     "manufacturer_slug": "tz3000-pf7swkqp",
     "model_slug": "ts0003",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "_TZ3000_pf7swkqp",
-      "checked_model": "TS0003",
-      "blakadder_declined": true
-    },
     "endpoint": 2,
     "firmware": null,
     "scan_count": 1,
@@ -3231,12 +3048,6 @@
   {
     "manufacturer_slug": "tz3000-pf7swkqp",
     "model_slug": "ts0003",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "_TZ3000_pf7swkqp",
-      "checked_model": "TS0003",
-      "blakadder_declined": true
-    },
     "endpoint": 3,
     "firmware": null,
     "scan_count": 1,
@@ -3336,12 +3147,6 @@
   {
     "manufacturer_slug": "tz3000-pf7swkqp",
     "model_slug": "ts0003",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "_TZ3000_pf7swkqp",
-      "checked_model": "TS0003",
-      "blakadder_declined": true
-    },
     "endpoint": 242,
     "firmware": null,
     "scan_count": 1,
@@ -3357,12 +3162,6 @@
   {
     "manufacturer_slug": "tz3210-fgwhjm9j",
     "model_slug": "ts011f",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "_TZ3210_fgwhjm9j",
-      "checked_model": "TS011F",
-      "blakadder_declined": true
-    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -3717,12 +3516,6 @@
   {
     "manufacturer_slug": "tz3290-gnl5a6a5xvql7c2a",
     "model_slug": "ts1201",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "_TZ3290_gnl5a6a5xvql7c2a",
-      "checked_model": "TS1201",
-      "blakadder_declined": true
-    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -3942,12 +3735,6 @@
   {
     "manufacturer_slug": "tz3290-gnl5a6a5xvql7c2a",
     "model_slug": "ts1201",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "_TZ3290_gnl5a6a5xvql7c2a",
-      "checked_model": "TS1201",
-      "blakadder_declined": true
-    },
     "endpoint": 242,
     "firmware": null,
     "scan_count": 1,
@@ -3963,7 +3750,6 @@
   {
     "manufacturer_slug": "tze200-4utwozi2",
     "model_slug": "ts0601",
-    "references": null,
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -4131,12 +3917,6 @@
   {
     "manufacturer_slug": "awox",
     "model_slug": "tlsr82xx",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "AwoX",
-      "checked_model": "TLSR82xx",
-      "blakadder_declined": true
-    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -4548,19 +4328,6 @@
   {
     "manufacturer_slug": "ewelink",
     "model_slug": "snzb-04p",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Sonoff_SNZB-04P.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "eWeLink",
-      "checked_model": "SNZB-04P",
-      "manufacturer": {
-        "url": "https://itead.cc/product/sonoff-zigbee-door-window-sensor-snzb-04p/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "2.2.0",
     "scan_count": 1,
@@ -4871,19 +4638,6 @@
   {
     "manufacturer_slug": "frient-a-s",
     "model_slug": "smszb-120",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Develco_SMSZB-120.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "frient A/S",
-      "checked_model": "SMSZB-120",
-      "manufacturer": {
-        "url": "https://frient.com/products/intelligent-smoke-alarm/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -4920,19 +4674,6 @@
   {
     "manufacturer_slug": "frient-a-s",
     "model_slug": "smszb-120",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Develco_SMSZB-120.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "frient A/S",
-      "checked_model": "SMSZB-120",
-      "manufacturer": {
-        "url": "https://frient.com/products/intelligent-smoke-alarm/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 35,
     "firmware": null,
     "scan_count": 1,
@@ -5295,19 +5036,6 @@
   {
     "manufacturer_slug": "frient-a-s",
     "model_slug": "smszb-120",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Develco_SMSZB-120.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "frient A/S",
-      "checked_model": "SMSZB-120",
-      "manufacturer": {
-        "url": "https://frient.com/products/intelligent-smoke-alarm/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 38,
     "firmware": null,
     "scan_count": 1,
@@ -5456,19 +5184,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "askvader-on-off-switch",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_E1836.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "ASKVADER on/off switch",
-      "manufacturer": {
-        "url": "https://www.ikea.com/dk/da/p/askvaeder-taend-slukkontakt-50463880/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "1.0.002",
     "scan_count": 1,
@@ -6005,11 +5720,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "badring-water-leakage-sensor",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "BADRING Water Leakage Sensor"
-    },
     "endpoint": 1,
     "firmware": "1.0.7",
     "scan_count": 1,
@@ -6358,11 +6068,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "inspelning-smart-plug",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "INSPELNING Smart plug"
-    },
     "endpoint": 1,
     "firmware": "2.4.45",
     "scan_count": 1,
@@ -7004,11 +6709,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "jetstrom-3030-wall",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "JETSTROM 3030 wall"
-    },
     "endpoint": 1,
     "firmware": "1.0.34",
     "scan_count": 1,
@@ -7919,19 +7619,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "leptiter-recessed-spot-light",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_T1820.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "LEPTITER Recessed spot light",
-      "manufacturer": {
-        "url": "https://www.ikea.com/nl/en/p/leptiter-led-recessed-spotlight-dimmable-white-spectrum-50353513/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "2.3.087",
     "scan_count": 1,
@@ -8694,11 +8381,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "ormanas-led-strip",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "ORMANAS LED Strip"
-    },
     "endpoint": 1,
     "firmware": "1.1.10",
     "scan_count": 1,
@@ -9547,11 +9229,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "parasoll-door-window-sensor",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "PARASOLL Door/Window Sensor"
-    },
     "endpoint": 2,
     "firmware": "1.0.19",
     "scan_count": 1,
@@ -9755,15 +9432,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "remote-control-n2",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_E2001.html",
-        "match_method": "manual",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "Remote Control N2"
-    },
     "endpoint": 1,
     "firmware": "2.4.16",
     "scan_count": 1,
@@ -10032,11 +9700,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "rodret-wireless-dimmer",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "RODRET wireless dimmer"
-    },
     "endpoint": 1,
     "firmware": "1.0.57",
     "scan_count": 1,
@@ -10369,19 +10032,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "silverglans-ip44-led-driver",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_ICPSHC24-30-IL44-1.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "SILVERGLANS IP44 LED driver",
-      "manufacturer": {
-        "url": "https://www.ikea.com/nl/en/p/silverglans-driver-for-wireless-control-dimmable-white-10474772/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "1.0.021",
     "scan_count": 1,
@@ -10923,19 +10573,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "starkvind-air-purifier",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_E2007.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "STARKVIND Air purifier",
-      "manufacturer": {
-        "url": "https://www.ikea.com/nl/en/p/starkvind-air-purifier-white-50461942/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "1.1.001",
     "scan_count": 1,
@@ -11351,19 +10988,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "stoftmoln-ceiling-wall-lamp-ww24",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_T2035.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "STOFTMOLN ceiling/wall lamp WW24",
-      "manufacturer": {
-        "url": "https://www.ikea.com/nl/en/p/stoftmoln-led-ceiling-wall-lamp-wireless-dimmable-warm-white-white-30497490/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "1.1.7",
     "scan_count": 1,
@@ -11954,19 +11578,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e14-cws-470lm",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_LED1925G6.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E14 CWS 470lm",
-      "manufacturer": {
-        "url": "https://www.ikea.com/gb/en/p/tradfri-led-bulb-e14-470-lumen-wireless-dimmable-colour-and-white-spectrum-globe-opal-white-70517636/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "1.0.021",
     "scan_count": 1,
@@ -13073,19 +12684,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e14-w-op-ch-400lm",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_LED1649C5-E14.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E14 W op/ch 400lm",
-      "manufacturer": {
-        "url": "https://www.ikea.com/nl/en/p/tradfri-led-bulb-e14-400-lumen-wireless-dimmable-warm-white-chandelier-opal-white-60365271/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "2.3.094",
     "scan_count": 1,
@@ -13628,15 +13226,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e14-ws-470lm",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_LED1903C5.html",
-        "match_method": "manual",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E14 WS 470lm"
-    },
     "endpoint": 1,
     "firmware": "2.3.087",
     "scan_count": 1,
@@ -14384,11 +13973,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e14-ws-candle-470lm",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E14 WS candle 470lm"
-    },
     "endpoint": 1,
     "firmware": "3.0.21",
     "scan_count": 1,
@@ -15211,11 +14795,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e14-ws-candle-470lm",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E14 WS candle 470lm"
-    },
     "endpoint": 242,
     "firmware": "3.0.21",
     "scan_count": 1,
@@ -15231,11 +14810,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e14-ws-globe-470lm",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E14 WS globe 470lm"
-    },
     "endpoint": 1,
     "firmware": "1.1.20",
     "scan_count": 1,
@@ -16043,11 +15617,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e14-ws-globe-470lm",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E14 WS globe 470lm"
-    },
     "endpoint": 242,
     "firmware": "1.1.20",
     "scan_count": 1,
@@ -16065,19 +15634,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e14-ws-opal-600lm",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_LED1733G7.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E14 WS opal 600lm",
-      "manufacturer": {
-        "url": "https://www.ikea.com/gb/en/p/tradfri-led-bulb-e14-600-lumen-wireless-dimmable-white-spectrum-opal-white-80408585/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "2.3.095",
     "scan_count": 1,
@@ -16840,19 +16396,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e14-ws-opal-600lm",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_LED1733G7.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E14 WS opal 600lm",
-      "manufacturer": {
-        "url": "https://www.ikea.com/gb/en/p/tradfri-led-bulb-e14-600-lumen-wireless-dimmable-white-spectrum-opal-white-80408585/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 242,
     "firmware": "2.3.095",
     "scan_count": 1,
@@ -16870,11 +16413,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-cws-806lm",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 CWS 806lm"
-    },
     "endpoint": 1,
     "firmware": "1.0.021",
     "scan_count": 1,
@@ -17981,19 +17519,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-cws-opal-600lm",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_LED1624G9-E27.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 CWS opal 600lm",
-      "manufacturer": {
-        "url": "https://www.ikea.com/nl/en/p/tradfri-led-bulb-e27-600-lumen-wireless-dimmable-colour-and-white-spectrum-opal-white-00408612/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "2.3.093",
     "scan_count": 1,
@@ -18784,11 +18309,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-ws-globe-1055lm",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 WS globe 1055lm"
-    },
     "endpoint": 1,
     "firmware": "3.0.23",
     "scan_count": 1,
@@ -19606,11 +19126,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-ws-globe-1055lm",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 WS globe 1055lm"
-    },
     "endpoint": 242,
     "firmware": "3.0.23",
     "scan_count": 1,
@@ -19626,19 +19141,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-ws-opal-1000lm",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_LED1732G11-E27.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 WS opal 1000lm",
-      "manufacturer": {
-        "url": "https://www.ikea.com/pt/en/p/tradfri-led-bulb-e27-1000-lumen-wireless-dimmable-white-spectrum-opal-white-60408483/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "2.3.095",
     "scan_count": 1,
@@ -20401,19 +19903,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-ws-opal-1000lm",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_LED1732G11-E27.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 WS opal 1000lm",
-      "manufacturer": {
-        "url": "https://www.ikea.com/pt/en/p/tradfri-led-bulb-e27-1000-lumen-wireless-dimmable-white-spectrum-opal-white-60408483/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 242,
     "firmware": "2.3.095",
     "scan_count": 1,
@@ -20431,19 +19920,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-ww-806lm",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_LED1836G9-E27.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 WW 806lm",
-      "manufacturer": {
-        "url": "https://www.ikea.com/nl/en/p/tradfri-led-bulb-e27-806-lumen-wireless-dimmable-warm-white-opal-white-90408797/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "2.3.093",
     "scan_count": 1,
@@ -20999,19 +20475,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-ww-806lm",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_LED1836G9-E27.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 WW 806lm",
-      "manufacturer": {
-        "url": "https://www.ikea.com/nl/en/p/tradfri-led-bulb-e27-806-lumen-wireless-dimmable-warm-white-opal-white-90408797/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 242,
     "firmware": "2.3.093",
     "scan_count": 1,
@@ -21029,15 +20492,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-ww-clear-250lm",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_LED1934G3.html",
-        "match_method": "manual",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 WW clear 250lm"
-    },
     "endpoint": 1,
     "firmware": "2.3.093",
     "scan_count": 1,
@@ -21593,15 +21047,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-ww-clear-250lm",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_LED1934G3.html",
-        "match_method": "manual",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 WW clear 250lm"
-    },
     "endpoint": 242,
     "firmware": "2.3.093",
     "scan_count": 1,
@@ -21617,11 +21062,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-ww-g95-cl-470lm",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 WW G95 CL 470lm"
-    },
     "endpoint": 1,
     "firmware": "1.1.4",
     "scan_count": 1,
@@ -22225,11 +21665,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-ww-g95-cl-470lm",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 WW G95 CL 470lm"
-    },
     "endpoint": 242,
     "firmware": "1.1.4",
     "scan_count": 1,
@@ -22247,11 +21682,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-ww-globe-806lm",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 WW globe 806lm"
-    },
     "endpoint": 1,
     "firmware": "1.0.42",
     "scan_count": 1,
@@ -22855,11 +22285,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-ww-globe-806lm",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 WW globe 806lm"
-    },
     "endpoint": 242,
     "firmware": "1.0.42",
     "scan_count": 1,
@@ -22877,19 +22302,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-gu10-cws-345lm",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_LED1923R5.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb GU10 CWS 345lm",
-      "manufacturer": {
-        "url": "https://www.ikea.lv/en/products////tradfri-led-bulb-gu10-345-lumen-colour-and-white-spectrum-art-80439228",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "1.0.021",
     "scan_count": 1,
@@ -23996,15 +23408,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-gu10-ws-400lm",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_LED1537R6.html",
-        "match_method": "manual",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb GU10 WS 400lm"
-    },
     "endpoint": 1,
     "firmware": "2.3.095",
     "scan_count": 1,
@@ -24765,11 +24168,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-gu10-ww-345lm8",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "\u001aTRADFRI bulb GU10 WW 345lm8"
-    },
     "endpoint": 1,
     "firmware": "1.0.42",
     "scan_count": 1,
@@ -25366,19 +24764,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-control-outlet",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_E1603.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI control outlet",
-      "manufacturer": {
-        "url": "https://www.ikea.com/nl/en/p/tradfri-wireless-control-outlet-90356166/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "2.3.089",
     "scan_count": 1,
@@ -25809,15 +25194,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-driver-10w",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_ICPSHC24-10EU-IL-1.html",
-        "match_method": "manual",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI Driver 10W"
-    },
     "endpoint": 1,
     "firmware": "1.2.245",
     "scan_count": 1,
@@ -26443,15 +25819,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-driver-30w",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_ICPSHC24-30EU-IL-1.html",
-        "match_method": "manual",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI Driver 30W"
-    },
     "endpoint": 1,
     "firmware": "2.3.086",
     "scan_count": 1,
@@ -26994,19 +26361,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-signal-repeater",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_E1746.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI Signal Repeater",
-      "manufacturer": {
-        "url": "https://www.ikea.com/us/en/p/tradfri-signal-repeater-30400407/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "2.3.086",
     "scan_count": 1,
@@ -27271,19 +26625,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfribulbe27wsglobeopal1055lm",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_LED2003G10.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRIbulbE27WSglobeopal1055lm",
-      "manufacturer": {
-        "url": "https://www.ikea.com/cz/en/p/tradfri-remote-control-kit-white-spectrum-80513416/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "1.0.012",
     "scan_count": 1,
@@ -28037,19 +27378,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tredansen-block-out-cellul-blind",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_E2103.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TREDANSEN block-out cellul blind",
-      "manufacturer": {
-        "url": "https://www.ikea.com/us/en/p/tredansen-black-out-cellular-blind-smart-wireless-battery-operated-white-90512464/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "24.4.13",
     "scan_count": 1,
@@ -28611,11 +27939,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tretakt-smart-plug",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRETAKT Smart plug"
-    },
     "endpoint": 1,
     "firmware": "2.4.25",
     "scan_count": 1,
@@ -29146,19 +28469,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "vindstyrka",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_E2112.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "VINDSTYRKA",
-      "manufacturer": {
-        "url": "https://www.ikea.com/us/en/p/vindstyrka-air-quality-sensor-smart-30498239/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "1.0.11",
     "scan_count": 1,
@@ -29490,19 +28800,6 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "vindstyrka",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Ikea_E2112.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "VINDSTYRKA",
-      "manufacturer": {
-        "url": "https://www.ikea.com/us/en/p/vindstyrka-air-quality-sensor-smart-30498239/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 242,
     "firmware": "1.0.11",
     "scan_count": 1,
@@ -29518,19 +28815,6 @@
   {
     "manufacturer_slug": "innr",
     "model_slug": "sp-224",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Innr_SP_224.html",
-        "match_method": "vendor_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "innr",
-      "checked_model": "SP 224",
-      "manufacturer": {
-        "url": "https://www.innr.com/en/product/smart-plug-us-version/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "2.7",
     "scan_count": 1,
@@ -30187,19 +29471,6 @@
   {
     "manufacturer_slug": "innr",
     "model_slug": "sp-224",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Innr_SP_224.html",
-        "match_method": "vendor_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "innr",
-      "checked_model": "SP 224",
-      "manufacturer": {
-        "url": "https://www.innr.com/en/product/smart-plug-us-version/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 242,
     "firmware": "2.7",
     "scan_count": 1,
@@ -30215,19 +29486,6 @@
   {
     "manufacturer_slug": "inovelli",
     "model_slug": "vzm31-sn",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Inovelli_VZM31-SN.html",
-        "match_method": "vendor_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "Inovelli",
-      "checked_model": "VZM31-SN",
-      "manufacturer": {
-        "url": "https://inovelli.com/products/blue-series-smart-2-1-switch-on-off-or-dimmer",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "3.04",
     "scan_count": 1,
@@ -31290,19 +30548,6 @@
   {
     "manufacturer_slug": "inovelli",
     "model_slug": "vzm31-sn",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Inovelli_VZM31-SN.html",
-        "match_method": "vendor_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "Inovelli",
-      "checked_model": "VZM31-SN",
-      "manufacturer": {
-        "url": "https://inovelli.com/products/blue-series-smart-2-1-switch-on-off-or-dimmer",
-        "confidence": "high"
-      }
-    },
     "endpoint": 2,
     "firmware": "3.04",
     "scan_count": 1,
@@ -31429,19 +30674,6 @@
   {
     "manufacturer_slug": "inovelli",
     "model_slug": "vzm31-sn",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Inovelli_VZM31-SN.html",
-        "match_method": "vendor_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "Inovelli",
-      "checked_model": "VZM31-SN",
-      "manufacturer": {
-        "url": "https://inovelli.com/products/blue-series-smart-2-1-switch-on-off-or-dimmer",
-        "confidence": "high"
-      }
-    },
     "endpoint": 242,
     "firmware": "3.04",
     "scan_count": 1,
@@ -31457,11 +30689,6 @@
   {
     "manufacturer_slug": "inovelli",
     "model_slug": "vzm32-sn",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "Inovelli",
-      "checked_model": "VZM32-SN"
-    },
     "endpoint": 1,
     "firmware": "1.02",
     "scan_count": 1,
@@ -32700,11 +31927,6 @@
   {
     "manufacturer_slug": "inovelli",
     "model_slug": "vzm32-sn",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "Inovelli",
-      "checked_model": "VZM32-SN"
-    },
     "endpoint": 2,
     "firmware": "1.02",
     "scan_count": 1,
@@ -33021,11 +32243,6 @@
   {
     "manufacturer_slug": "inovelli",
     "model_slug": "vzm32-sn",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "Inovelli",
-      "checked_model": "VZM32-SN"
-    },
     "endpoint": 3,
     "firmware": "1.02",
     "scan_count": 1,
@@ -33341,11 +32558,6 @@
   {
     "manufacturer_slug": "inovelli",
     "model_slug": "vzm32-sn",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "Inovelli",
-      "checked_model": "VZM32-SN"
-    },
     "endpoint": 242,
     "firmware": "1.02",
     "scan_count": 1,
@@ -33361,11 +32573,6 @@
   {
     "manufacturer_slug": "ledvance",
     "model_slug": "par16-tw-z3",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "LEDVANCE",
-      "checked_model": "PAR16 TW Z3"
-    },
     "endpoint": 1,
     "firmware": "01056400",
     "scan_count": 1,
@@ -34212,11 +33419,6 @@
   {
     "manufacturer_slug": "ledvance",
     "model_slug": "par16-tw-z3",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "LEDVANCE",
-      "checked_model": "PAR16 TW Z3"
-    },
     "endpoint": 242,
     "firmware": "01056400",
     "scan_count": 1,
@@ -34232,19 +33434,6 @@
   {
     "manufacturer_slug": "lumi",
     "model_slug": "lumi-plug-maeu01",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Aqara_SP-EUC01.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "LUMI",
-      "checked_model": "lumi.plug.maeu01",
-      "manufacturer": {
-        "url": "https://www.aqara.com/eu/smart_outlet.html",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -34945,19 +34134,6 @@
   {
     "manufacturer_slug": "lumi",
     "model_slug": "lumi-plug-maeu01",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Aqara_SP-EUC01.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "LUMI",
-      "checked_model": "lumi.plug.maeu01",
-      "manufacturer": {
-        "url": "https://www.aqara.com/eu/smart_outlet.html",
-        "confidence": "high"
-      }
-    },
     "endpoint": 21,
     "firmware": null,
     "scan_count": 1,
@@ -34973,19 +34149,6 @@
   {
     "manufacturer_slug": "lumi",
     "model_slug": "lumi-plug-maeu01",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Aqara_SP-EUC01.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "LUMI",
-      "checked_model": "lumi.plug.maeu01",
-      "manufacturer": {
-        "url": "https://www.aqara.com/eu/smart_outlet.html",
-        "confidence": "high"
-      }
-    },
     "endpoint": 242,
     "firmware": null,
     "scan_count": 1,
@@ -35001,15 +34164,6 @@
   {
     "manufacturer_slug": "lumi",
     "model_slug": "lumi-relay-c2acn01",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Xiaomi_LLKZMK11LM.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "LUMI",
-      "checked_model": "lumi.relay.c2acn01"
-    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -35112,15 +34266,6 @@
   {
     "manufacturer_slug": "lumi",
     "model_slug": "lumi-relay-c2acn01",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Xiaomi_LLKZMK11LM.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "LUMI",
-      "checked_model": "lumi.relay.c2acn01"
-    },
     "endpoint": 2,
     "firmware": null,
     "scan_count": 1,
@@ -35164,19 +34309,6 @@
   {
     "manufacturer_slug": "lumi",
     "model_slug": "lumi-sensor-magnet",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Xiaomi_MCCGQ01LM.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "LUMI",
-      "checked_model": "lumi.sensor_magnet",
-      "manufacturer": {
-        "url": "https://item.mi.com/product/5010.html",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -35242,19 +34374,6 @@
   {
     "manufacturer_slug": "lumi",
     "model_slug": "lumi-sensor-motion-aq2",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Aqara_RTCGQ11LM.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "LUMI",
-      "checked_model": "lumi.sensor_motion.aq2",
-      "manufacturer": {
-        "url": "https://www.aqara.com/en/human_motion_sensor.html",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -35329,19 +34448,6 @@
   {
     "manufacturer_slug": "lumi",
     "model_slug": "lumi-sensor-motion",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Xiaomi_RTCGQ01LM.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "LUMI",
-      "checked_model": "lumi.sensor_motion",
-      "manufacturer": {
-        "url": "https://item.mi.com/product/5005.html",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -35405,19 +34511,6 @@
   {
     "manufacturer_slug": "lumi",
     "model_slug": "lumi-sensor-smoke",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Xiaomi_JTYJ-GD-01LM_BW.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "LUMI",
-      "checked_model": "lumi.sensor_smoke",
-      "manufacturer": {
-        "url": "http://files.xiaomi-mi.co.uk/files/MiJia_Honeywell/MiJia_Honeywell_Smoke_Detector_EN.pdf",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -35484,19 +34577,6 @@
   {
     "manufacturer_slug": "lumi",
     "model_slug": "lumi-weather",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Aqara_WSDCGQ11LM.html",
-        "match_method": "vendor_alias_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "LUMI",
-      "checked_model": "lumi.weather",
-      "manufacturer": {
-        "url": "https://www.aqara.com/en/temperature_humidity_sensor.html",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -35565,7 +34645,6 @@
   {
     "manufacturer_slug": "unknown",
     "model_slug": "unknown",
-    "references": null,
     "endpoint": 1,
     "firmware": "1.0.7",
     "scan_count": 1,
@@ -36329,11 +35408,6 @@
   {
     "manufacturer_slug": "pf7swkqp",
     "model_slug": "ts0003-sb",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "pf7swkqp",
-      "checked_model": "TS0003-SB"
-    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -36507,11 +35581,6 @@
   {
     "manufacturer_slug": "pf7swkqp",
     "model_slug": "ts0003-sb",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "pf7swkqp",
-      "checked_model": "TS0003-SB"
-    },
     "endpoint": 2,
     "firmware": null,
     "scan_count": 1,
@@ -36531,11 +35600,6 @@
   {
     "manufacturer_slug": "pf7swkqp",
     "model_slug": "ts0003-sb",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "pf7swkqp",
-      "checked_model": "TS0003-SB"
-    },
     "endpoint": 3,
     "firmware": null,
     "scan_count": 1,
@@ -36555,11 +35619,6 @@
   {
     "manufacturer_slug": "pf7swkqp",
     "model_slug": "ts0003-sb",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "pf7swkqp",
-      "checked_model": "TS0003-SB"
-    },
     "endpoint": 4,
     "firmware": null,
     "scan_count": 1,
@@ -36613,11 +35672,6 @@
   {
     "manufacturer_slug": "pf7swkqp",
     "model_slug": "ts0003-sb",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "pf7swkqp",
-      "checked_model": "TS0003-SB"
-    },
     "endpoint": 5,
     "firmware": null,
     "scan_count": 1,
@@ -36671,11 +35725,6 @@
   {
     "manufacturer_slug": "pf7swkqp",
     "model_slug": "ts0003-sb",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "pf7swkqp",
-      "checked_model": "TS0003-SB"
-    },
     "endpoint": 6,
     "firmware": null,
     "scan_count": 1,
@@ -36729,19 +35778,6 @@
   {
     "manufacturer_slug": "philips",
     "model_slug": "lwv001",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Philips_LWV001.html",
-        "match_method": "vendor_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "Philips",
-      "checked_model": "LWV001",
-      "manufacturer": {
-        "url": "https://www2.meethue.com/en-gb/p/hue-white-1-pack-st64-e27-filament-edison/8718699688868",
-        "confidence": "high"
-      }
-    },
     "endpoint": 11,
     "firmware": null,
     "scan_count": 1,
@@ -36815,19 +35851,6 @@
   {
     "manufacturer_slug": "philips",
     "model_slug": "lwv001",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Philips_LWV001.html",
-        "match_method": "vendor_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "Philips",
-      "checked_model": "LWV001",
-      "manufacturer": {
-        "url": "https://www2.meethue.com/en-gb/p/hue-white-1-pack-st64-e27-filament-edison/8718699688868",
-        "confidence": "high"
-      }
-    },
     "endpoint": 242,
     "firmware": null,
     "scan_count": 1,
@@ -36843,11 +35866,6 @@
   {
     "manufacturer_slug": "repenic-ltd",
     "model_slug": "rd-250zg",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "Repenic Ltd.",
-      "checked_model": "RD-250ZG"
-    },
     "endpoint": 1,
     "firmware": "1.07",
     "scan_count": 1,
@@ -37656,11 +36674,6 @@
   {
     "manufacturer_slug": "repenic-ltd",
     "model_slug": "rd-250zg",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "Repenic Ltd.",
-      "checked_model": "RD-250ZG"
-    },
     "endpoint": 242,
     "firmware": "1.07",
     "scan_count": 1,
@@ -37676,19 +36689,6 @@
   {
     "manufacturer_slug": "smartwings",
     "model_slug": "wm25-l-z",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Smartwings_WM25LZ.html",
-        "match_method": "vendor_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "Smartwings",
-      "checked_model": "WM25/L-Z",
-      "manufacturer": {
-        "url": "https://www.smartwingshome.com/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -37940,11 +36940,6 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "mini-zb2gs-l",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "SONOFF",
-      "checked_model": "MINI-ZB2GS-L"
-    },
     "endpoint": 1,
     "firmware": "1.0.4",
     "scan_count": 1,
@@ -38409,11 +37404,6 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "mini-zb2gs",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "SONOFF",
-      "checked_model": "MINI-ZB2GS"
-    },
     "endpoint": 1,
     "firmware": "1.0.7",
     "scan_count": 1,
@@ -38776,11 +37766,6 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "mini-zbdim",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "SONOFF",
-      "checked_model": "MINI-ZBDIM"
-    },
     "endpoint": 1,
     "firmware": "1.0.5",
     "scan_count": 1,
@@ -39398,16 +38383,6 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "snzb-01m",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "SONOFF",
-      "checked_model": "SNZB-01M",
-      "blakadder_declined": true,
-      "manufacturer": {
-        "url": "https://sonoff.tech/en-uk/products/sonoff-orb-4-in-1-zigbee-smart-scene-button-snzb-01m",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -39435,16 +38410,6 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "snzb-01m",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "SONOFF",
-      "checked_model": "SNZB-01M",
-      "blakadder_declined": true,
-      "manufacturer": {
-        "url": "https://sonoff.tech/en-uk/products/sonoff-orb-4-in-1-zigbee-smart-scene-button-snzb-01m",
-        "confidence": "high"
-      }
-    },
     "endpoint": 2,
     "firmware": null,
     "scan_count": 1,
@@ -39534,16 +38499,6 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "snzb-01m",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "SONOFF",
-      "checked_model": "SNZB-01M",
-      "blakadder_declined": true,
-      "manufacturer": {
-        "url": "https://sonoff.tech/en-uk/products/sonoff-orb-4-in-1-zigbee-smart-scene-button-snzb-01m",
-        "confidence": "high"
-      }
-    },
     "endpoint": 3,
     "firmware": null,
     "scan_count": 1,
@@ -39633,16 +38588,6 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "snzb-01m",
-    "references": {
-      "blakadder": null,
-      "checked_manufacturer": "SONOFF",
-      "checked_model": "SNZB-01M",
-      "blakadder_declined": true,
-      "manufacturer": {
-        "url": "https://sonoff.tech/en-uk/products/sonoff-orb-4-in-1-zigbee-smart-scene-button-snzb-01m",
-        "confidence": "high"
-      }
-    },
     "endpoint": 4,
     "firmware": null,
     "scan_count": 1,
@@ -39732,19 +38677,6 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "snzb-06p",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Sonoff_SNZB-06P.html",
-        "match_method": "vendor_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "SONOFF",
-      "checked_model": "SNZB-06P",
-      "manufacturer": {
-        "url": "https://itead.cc/product/sonoff-zigbee-human-presence-sensor",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "1.0.6",
     "scan_count": 1,
@@ -39915,19 +38847,6 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "trvzb",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Sonoff_TRVZB.html",
-        "match_method": "vendor_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "SONOFF",
-      "checked_model": "TRVZB",
-      "manufacturer": {
-        "url": "https://sonoff.tech/products/sonoff-zigbee-thermostatic-radiator-valve",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "1.4.4",
     "scan_count": 1,
@@ -40487,19 +39406,6 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "zbm5-1c-80-86",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Sonoff_ZBM5-1C-80-86.html",
-        "match_method": "vendor_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "SONOFF",
-      "checked_model": "ZBM5-1C-80/86",
-      "manufacturer": {
-        "url": "https://sonoff.tech/en-eu/products/sonoff-switchman-zigbee-smart-wall-switch-zbm5-80-86-type",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "1.0.6",
     "scan_count": 2,
@@ -40954,19 +39860,6 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "zbm5-1c-80-86",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Sonoff_ZBM5-1C-80-86.html",
-        "match_method": "vendor_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "SONOFF",
-      "checked_model": "ZBM5-1C-80/86",
-      "manufacturer": {
-        "url": "https://sonoff.tech/en-eu/products/sonoff-switchman-zigbee-smart-wall-switch-zbm5-80-86-type",
-        "confidence": "high"
-      }
-    },
     "endpoint": 242,
     "firmware": "1.0.6",
     "scan_count": 1,
@@ -40982,19 +39875,6 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "zbm5-2c-80-86",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Sonoff_ZBM5-2C-80-86.html",
-        "match_method": "vendor_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "SONOFF",
-      "checked_model": "ZBM5-2C-80/86",
-      "manufacturer": {
-        "url": "https://sonoff.tech/en-eu/products/sonoff-switchman-zigbee-smart-wall-switch-zbm5-80-86-type",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "1.0.6",
     "scan_count": 2,
@@ -41449,19 +40329,6 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "zbm5-2c-80-86",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Sonoff_ZBM5-2C-80-86.html",
-        "match_method": "vendor_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "SONOFF",
-      "checked_model": "ZBM5-2C-80/86",
-      "manufacturer": {
-        "url": "https://sonoff.tech/en-eu/products/sonoff-switchman-zigbee-smart-wall-switch-zbm5-80-86-type",
-        "confidence": "high"
-      }
-    },
     "endpoint": 2,
     "firmware": "1.0.6",
     "scan_count": 1,
@@ -41828,19 +40695,6 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "zbm5-2c-80-86",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Sonoff_ZBM5-2C-80-86.html",
-        "match_method": "vendor_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "SONOFF",
-      "checked_model": "ZBM5-2C-80/86",
-      "manufacturer": {
-        "url": "https://sonoff.tech/en-eu/products/sonoff-switchman-zigbee-smart-wall-switch-zbm5-80-86-type",
-        "confidence": "high"
-      }
-    },
     "endpoint": 242,
     "firmware": "1.0.6",
     "scan_count": 1,
@@ -41856,19 +40710,6 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "zbm5-3c-80-86",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Sonoff_ZBM5-3C-80-86.html",
-        "match_method": "vendor_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "SONOFF",
-      "checked_model": "ZBM5-3C-80/86",
-      "manufacturer": {
-        "url": "https://sonoff.tech/en-eu/products/sonoff-switchman-zigbee-smart-wall-switch-zbm5-80-86-type",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "1.0.6",
     "scan_count": 3,
@@ -42323,19 +41164,6 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "zbm5-3c-80-86",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Sonoff_ZBM5-3C-80-86.html",
-        "match_method": "vendor_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "SONOFF",
-      "checked_model": "ZBM5-3C-80/86",
-      "manufacturer": {
-        "url": "https://sonoff.tech/en-eu/products/sonoff-switchman-zigbee-smart-wall-switch-zbm5-80-86-type",
-        "confidence": "high"
-      }
-    },
     "endpoint": 2,
     "firmware": "1.0.6",
     "scan_count": 2,
@@ -42702,19 +41530,6 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "zbm5-3c-80-86",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Sonoff_ZBM5-3C-80-86.html",
-        "match_method": "vendor_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "SONOFF",
-      "checked_model": "ZBM5-3C-80/86",
-      "manufacturer": {
-        "url": "https://sonoff.tech/en-eu/products/sonoff-switchman-zigbee-smart-wall-switch-zbm5-80-86-type",
-        "confidence": "high"
-      }
-    },
     "endpoint": 3,
     "firmware": "1.0.6",
     "scan_count": 2,
@@ -43094,19 +41909,6 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "zbm5-3c-80-86",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Sonoff_ZBM5-3C-80-86.html",
-        "match_method": "vendor_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "SONOFF",
-      "checked_model": "ZBM5-3C-80/86",
-      "manufacturer": {
-        "url": "https://sonoff.tech/en-eu/products/sonoff-switchman-zigbee-smart-wall-switch-zbm5-80-86-type",
-        "confidence": "high"
-      }
-    },
     "endpoint": 242,
     "firmware": "1.0.6",
     "scan_count": 2,
@@ -43122,19 +41924,6 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "zbminil2",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Sonoff_ZBMINIL2.html",
-        "match_method": "vendor_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "SONOFF",
-      "checked_model": "ZBMINIL2",
-      "manufacturer": {
-        "url": "https://itead.cc/product/sonoff-zbminil2-extreme-zigbee-smart-switch-no-neutral-required/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "1.0.14",
     "scan_count": 1,
@@ -43360,19 +42149,6 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "zbminir2",
-    "references": {
-      "blakadder": {
-        "url": "https://zigbee.blakadder.com/Sonoff_ZBMINIR2.html",
-        "match_method": "vendor_model_exact",
-        "confidence": "high"
-      },
-      "checked_manufacturer": "SONOFF",
-      "checked_model": "ZBMINIR2",
-      "manufacturer": {
-        "url": "https://itead.cc/product/sonoff-zbmini-zigbee-smart-switch/",
-        "confidence": "high"
-      }
-    },
     "endpoint": 1,
     "firmware": "1.0.8",
     "scan_count": 1,
@@ -43696,6 +42472,53 @@
         "attributes_confirmed": [],
         "resolved_name": "WorksWithAllHubs (WWAH)",
         "resolved_source": "zigpy"
+      }
+    }
+  },
+  {
+    "manufacturer_slug": "texas-instruments",
+    "model_slug": "cc2652",
+    "endpoint": 1,
+    "firmware": null,
+    "scan_count": 1,
+    "last_seen": "2026-08-28T08:55:12.865Z",
+    "manufacturer": "Texas Instruments",
+    "model": "CC2652",
+    "in_clusters": [
+      "0x0000",
+      "0x0006",
+      "0x000a",
+      "0x0019",
+      "0x0025",
+      "0x0501"
+    ],
+    "out_clusters": [
+      "0x0001",
+      "0x0020",
+      "0x0500",
+      "0x0502"
+    ],
+    "clusters": {}
+  },
+  {
+    "manufacturer_slug": "texas-instruments",
+    "model_slug": "cc2652",
+    "endpoint": 2,
+    "firmware": null,
+    "scan_count": 1,
+    "last_seen": "2026-08-28T08:55:12.865Z",
+    "manufacturer": "Texas Instruments",
+    "model": "CC2652",
+    "in_clusters": [
+      "0x0000"
+    ],
+    "out_clusters": [],
+    "clusters": {
+      "0x0000": {
+        "name": "Basic",
+        "commands_received": [],
+        "commands_received_scan_count": 0,
+        "attributes_confirmed": []
       }
     }
   }
