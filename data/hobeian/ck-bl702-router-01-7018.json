@@ -1,0 +1,322 @@
+{
+  "observations": [
+    {
+      "manufacturer": "HOBEIAN",
+      "model": "CK-BL702-ROUTER-01(7018)",
+      "identity": {
+        "sw_build_id": null,
+        "hw_version": null,
+        "date_code": null
+      },
+      "endpoints": [
+        {
+          "endpoint": {
+            "id": 1,
+            "profile": "0x0104",
+            "device_type": "0x0051",
+            "in_clusters": [
+              "0x0000",
+              "0x0003",
+              "0xe000",
+              "0xe002",
+              "0xee00",
+              "0xef00"
+            ],
+            "out_clusters": [
+              "0x000a",
+              "0x0019"
+            ]
+          },
+          "scanned": true,
+          "clusters": {
+            "0x0000": {
+              "name": "Basic",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "zcl_version",
+                  "access": "READ"
+                },
+                {
+                  "id": 1,
+                  "name": "app_version",
+                  "access": "READ"
+                },
+                {
+                  "id": 2,
+                  "name": "stack_version",
+                  "access": "READ"
+                },
+                {
+                  "id": 3,
+                  "name": "hw_version",
+                  "access": "READ"
+                },
+                {
+                  "id": 4,
+                  "name": "manufacturer",
+                  "access": "READ"
+                },
+                {
+                  "id": 5,
+                  "name": "model",
+                  "access": "READ"
+                },
+                {
+                  "id": 7,
+                  "name": "power_source",
+                  "access": "READ"
+                },
+                {
+                  "id": 18,
+                  "name": "device_enabled",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 16384,
+                  "name": "sw_build_id",
+                  "access": "READ"
+                },
+                {
+                  "id": 65502,
+                  "name": "65502",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ"
+                }
+              ]
+            },
+            "0x0003": {
+              "name": "Identify",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "identify_time",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ"
+                }
+              ]
+            },
+            "0xe000": {
+              "name": "Cluster",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "0",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 65533,
+                  "name": "65533",
+                  "access": "READ"
+                }
+              ]
+            },
+            "0xe002": {
+              "name": "Cluster",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": []
+            },
+            "0xee00": {
+              "name": "Cluster",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": []
+            },
+            "0xef00": {
+              "name": "Cluster",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "0",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 65533,
+                  "name": "65533",
+                  "access": "READ"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "provenance": {
+        "submitted_at": "2026-08-31T21:24:44.951Z",
+        "card_version": "0.32.4",
+        "source_issue": 218
+      }
+    }
+  ],
+  "capabilities": {
+    "1|unknown": {
+      "endpoint": 1,
+      "firmware": null,
+      "scan_count": 1,
+      "last_seen": "2026-08-31T21:24:44.951Z",
+      "manufacturer": "HOBEIAN",
+      "model": "CK-BL702-ROUTER-01(7018)",
+      "in_clusters": [
+        "0x0000",
+        "0x0003",
+        "0xe000",
+        "0xe002",
+        "0xee00",
+        "0xef00"
+      ],
+      "out_clusters": [
+        "0x000a",
+        "0x0019"
+      ],
+      "clusters": {
+        "0x0000": {
+          "name": "Basic",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zcl_version",
+              "access": "READ"
+            },
+            {
+              "id": 1,
+              "name": "app_version",
+              "access": "READ"
+            },
+            {
+              "id": 2,
+              "name": "stack_version",
+              "access": "READ"
+            },
+            {
+              "id": 3,
+              "name": "hw_version",
+              "access": "READ"
+            },
+            {
+              "id": 4,
+              "name": "manufacturer",
+              "access": "READ"
+            },
+            {
+              "id": 5,
+              "name": "model",
+              "access": "READ"
+            },
+            {
+              "id": 7,
+              "name": "power_source",
+              "access": "READ"
+            },
+            {
+              "id": 18,
+              "name": "device_enabled",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 16384,
+              "name": "sw_build_id",
+              "access": "READ"
+            },
+            {
+              "id": 65502,
+              "name": "65502",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        },
+        "0x0003": {
+          "name": "Identify",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "identify_time",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        },
+        "0xe000": {
+          "name": "Cluster",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "0",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 65533,
+              "name": "65533",
+              "access": "READ"
+            }
+          ]
+        },
+        "0xe002": {
+          "name": "Cluster",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": []
+        },
+        "0xee00": {
+          "name": "Cluster",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": []
+        },
+        "0xef00": {
+          "name": "Cluster",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "0",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 65533,
+              "name": "65533",
+              "access": "READ"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
