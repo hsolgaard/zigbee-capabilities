@@ -2157,11 +2157,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "_TZ3000_ltt60asa",
-      "checked_model": "TS0004",
-      "manufacturer": {
-        "url": "https://expo.tuya.com/product/907020",
-        "confidence": "high"
-      }
+      "checked_model": "TS0004"
     },
     "endpoint": 1,
     "firmware": null,
@@ -2423,11 +2419,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "_TZ3000_ltt60asa",
-      "checked_model": "TS0004",
-      "manufacturer": {
-        "url": "https://expo.tuya.com/product/907020",
-        "confidence": "high"
-      }
+      "checked_model": "TS0004"
     },
     "endpoint": 2,
     "firmware": null,
@@ -2548,11 +2540,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "_TZ3000_ltt60asa",
-      "checked_model": "TS0004",
-      "manufacturer": {
-        "url": "https://expo.tuya.com/product/907020",
-        "confidence": "high"
-      }
+      "checked_model": "TS0004"
     },
     "endpoint": 3,
     "firmware": null,
@@ -2673,11 +2661,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "_TZ3000_ltt60asa",
-      "checked_model": "TS0004",
-      "manufacturer": {
-        "url": "https://expo.tuya.com/product/907020",
-        "confidence": "high"
-      }
+      "checked_model": "TS0004"
     },
     "endpoint": 4,
     "firmware": null,
@@ -5509,7 +5493,11 @@
   {
     "manufacturer_slug": "hobeian",
     "model_slug": "ck-bl702-router-01-7018",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "HOBEIAN",
+      "checked_model": "CK-BL702-ROUTER-01(7018)"
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -5666,11 +5654,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "ASKVADER on/off switch",
-      "manufacturer": {
-        "url": "https://www.ikea.com/dk/da/p/askvaeder-taend-slukkontakt-50463880/",
-        "confidence": "high"
-      }
+      "checked_model": "ASKVADER on/off switch"
     },
     "endpoint": 1,
     "firmware": "1.0.002",
@@ -8129,11 +8113,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "LEPTITER Recessed spot light",
-      "manufacturer": {
-        "url": "https://www.ikea.com/nl/en/p/leptiter-led-recessed-spotlight-dimmable-white-spectrum-50353513/",
-        "confidence": "high"
-      }
+      "checked_model": "LEPTITER Recessed spot light"
     },
     "endpoint": 1,
     "firmware": "2.3.087",
@@ -12164,11 +12144,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E14 CWS 470lm",
-      "manufacturer": {
-        "url": "https://www.ikea.com/gb/en/p/tradfri-led-bulb-e14-470-lumen-wireless-dimmable-colour-and-white-spectrum-globe-opal-white-70517636/",
-        "confidence": "high"
-      }
+      "checked_model": "TRADFRI bulb E14 CWS 470lm"
     },
     "endpoint": 1,
     "firmware": "1.0.021",
@@ -13283,11 +13259,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E14 W op/ch 400lm",
-      "manufacturer": {
-        "url": "https://www.ikea.com/nl/en/p/tradfri-led-bulb-e14-400-lumen-wireless-dimmable-warm-white-chandelier-opal-white-60365271/",
-        "confidence": "high"
-      }
+      "checked_model": "TRADFRI bulb E14 W op/ch 400lm"
     },
     "endpoint": 1,
     "firmware": "2.3.094",
@@ -16275,11 +16247,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E14 WS opal 600lm",
-      "manufacturer": {
-        "url": "https://www.ikea.com/gb/en/p/tradfri-led-bulb-e14-600-lumen-wireless-dimmable-white-spectrum-opal-white-80408585/",
-        "confidence": "high"
-      }
+      "checked_model": "TRADFRI bulb E14 WS opal 600lm"
     },
     "endpoint": 1,
     "firmware": "2.3.095",
@@ -17050,11 +17018,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E14 WS opal 600lm",
-      "manufacturer": {
-        "url": "https://www.ikea.com/gb/en/p/tradfri-led-bulb-e14-600-lumen-wireless-dimmable-white-spectrum-opal-white-80408585/",
-        "confidence": "high"
-      }
+      "checked_model": "TRADFRI bulb E14 WS opal 600lm"
     },
     "endpoint": 242,
     "firmware": "2.3.095",
@@ -18184,7 +18148,11 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-cws-globe-806lm",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "IKEA of Sweden",
+      "checked_model": "TRADFRI bulb E27 CWS globe 806lm"
+    },
     "endpoint": 1,
     "firmware": "1.0.38",
     "scan_count": 1,
@@ -19095,7 +19063,11 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-cws-globe-806lm",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "IKEA of Sweden",
+      "checked_model": "TRADFRI bulb E27 CWS globe 806lm"
+    },
     "endpoint": 242,
     "firmware": "1.0.38",
     "scan_count": 1,
@@ -19120,11 +19092,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 CWS opal 600lm",
-      "manufacturer": {
-        "url": "https://www.ikea.com/nl/en/p/tradfri-led-bulb-e27-600-lumen-wireless-dimmable-colour-and-white-spectrum-opal-white-00408612/",
-        "confidence": "high"
-      }
+      "checked_model": "TRADFRI bulb E27 CWS opal 600lm"
     },
     "endpoint": 1,
     "firmware": "2.3.093",
@@ -20765,11 +20733,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 WS opal 1000lm",
-      "manufacturer": {
-        "url": "https://www.ikea.com/pt/en/p/tradfri-led-bulb-e27-1000-lumen-wireless-dimmable-white-spectrum-opal-white-60408483/",
-        "confidence": "high"
-      }
+      "checked_model": "TRADFRI bulb E27 WS opal 1000lm"
     },
     "endpoint": 1,
     "firmware": "2.3.095",
@@ -21540,11 +21504,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 WS opal 1000lm",
-      "manufacturer": {
-        "url": "https://www.ikea.com/pt/en/p/tradfri-led-bulb-e27-1000-lumen-wireless-dimmable-white-spectrum-opal-white-60408483/",
-        "confidence": "high"
-      }
+      "checked_model": "TRADFRI bulb E27 WS opal 1000lm"
     },
     "endpoint": 242,
     "firmware": "2.3.095",
@@ -21570,11 +21530,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 WW 806lm",
-      "manufacturer": {
-        "url": "https://www.ikea.com/nl/en/p/tradfri-led-bulb-e27-806-lumen-wireless-dimmable-warm-white-opal-white-90408797/",
-        "confidence": "high"
-      }
+      "checked_model": "TRADFRI bulb E27 WW 806lm"
     },
     "endpoint": 1,
     "firmware": "2.3.093",
@@ -22138,11 +22094,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 WW 806lm",
-      "manufacturer": {
-        "url": "https://www.ikea.com/nl/en/p/tradfri-led-bulb-e27-806-lumen-wireless-dimmable-warm-white-opal-white-90408797/",
-        "confidence": "high"
-      }
+      "checked_model": "TRADFRI bulb E27 WW 806lm"
     },
     "endpoint": 242,
     "firmware": "2.3.093",
@@ -24016,11 +23968,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb GU10 CWS 345lm",
-      "manufacturer": {
-        "url": "https://www.ikea.lv/en/products////tradfri-led-bulb-gu10-345-lumen-colour-and-white-spectrum-art-80439228",
-        "confidence": "high"
-      }
+      "checked_model": "TRADFRI bulb GU10 CWS 345lm"
     },
     "endpoint": 1,
     "firmware": "1.0.021",
@@ -26505,11 +26453,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI control outlet",
-      "manufacturer": {
-        "url": "https://www.ikea.com/nl/en/p/tradfri-wireless-control-outlet-90356166/",
-        "confidence": "high"
-      }
+      "checked_model": "TRADFRI control outlet"
     },
     "endpoint": 1,
     "firmware": "2.3.089",
@@ -28133,11 +28077,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI Signal Repeater",
-      "manufacturer": {
-        "url": "https://www.ikea.com/us/en/p/tradfri-signal-repeater-30400407/",
-        "confidence": "high"
-      }
+      "checked_model": "TRADFRI Signal Repeater"
     },
     "endpoint": 1,
     "firmware": "2.3.086",
@@ -28410,11 +28350,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRIbulbE27WSglobeopal1055lm",
-      "manufacturer": {
-        "url": "https://www.ikea.com/cz/en/p/tradfri-remote-control-kit-white-spectrum-80513416/",
-        "confidence": "high"
-      }
+      "checked_model": "TRADFRIbulbE27WSglobeopal1055lm"
     },
     "endpoint": 1,
     "firmware": "1.0.012",
@@ -29176,11 +29112,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TREDANSEN block-out cellul blind",
-      "manufacturer": {
-        "url": "https://www.ikea.com/us/en/p/tredansen-black-out-cellular-blind-smart-wireless-battery-operated-white-90512464/",
-        "confidence": "high"
-      }
+      "checked_model": "TREDANSEN block-out cellul blind"
     },
     "endpoint": 1,
     "firmware": "24.4.13",
@@ -30278,7 +30210,11 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "vallhorn-wireless-motion-sensor",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "IKEA of Sweden",
+      "checked_model": "VALLHORN Wireless Motion Sensor"
+    },
     "endpoint": 1,
     "firmware": "1.0.64",
     "scan_count": 1,
@@ -30678,7 +30614,11 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "vallhorn-wireless-motion-sensor",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "IKEA of Sweden",
+      "checked_model": "VALLHORN Wireless Motion Sensor"
+    },
     "endpoint": 2,
     "firmware": "1.0.64",
     "scan_count": 1,
@@ -30865,7 +30805,11 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "vallhorn-wireless-motion-sensor",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "IKEA of Sweden",
+      "checked_model": "VALLHORN Wireless Motion Sensor"
+    },
     "endpoint": 3,
     "firmware": "1.0.64",
     "scan_count": 1,
@@ -31049,11 +30993,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "VINDSTYRKA",
-      "manufacturer": {
-        "url": "https://www.ikea.com/us/en/p/vindstyrka-air-quality-sensor-smart-30498239/",
-        "confidence": "high"
-      }
+      "checked_model": "VINDSTYRKA"
     },
     "endpoint": 1,
     "firmware": "1.0.11",
@@ -31393,11 +31333,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "VINDSTYRKA",
-      "manufacturer": {
-        "url": "https://www.ikea.com/us/en/p/vindstyrka-air-quality-sensor-smart-30498239/",
-        "confidence": "high"
-      }
+      "checked_model": "VINDSTYRKA"
     },
     "endpoint": 242,
     "firmware": "1.0.11",
@@ -36641,7 +36577,11 @@
   {
     "manufacturer_slug": "jasco-products",
     "model_slug": "35938",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "Jasco Products",
+      "checked_model": "35938"
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -37133,7 +37073,11 @@
   {
     "manufacturer_slug": "jasco-products",
     "model_slug": "35938",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "Jasco Products",
+      "checked_model": "35938"
+    },
     "endpoint": 2,
     "firmware": null,
     "scan_count": 1,
@@ -39072,11 +39016,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "LUMI",
-      "checked_model": "lumi.sensor_magnet",
-      "manufacturer": {
-        "url": "https://item.mi.com/product/5010.html",
-        "confidence": "high"
-      }
+      "checked_model": "lumi.sensor_magnet"
     },
     "endpoint": 1,
     "firmware": null,
@@ -39237,11 +39177,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "LUMI",
-      "checked_model": "lumi.sensor_motion",
-      "manufacturer": {
-        "url": "https://item.mi.com/product/5005.html",
-        "confidence": "high"
-      }
+      "checked_model": "lumi.sensor_motion"
     },
     "endpoint": 1,
     "firmware": null,
@@ -39313,11 +39249,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "LUMI",
-      "checked_model": "lumi.sensor_smoke",
-      "manufacturer": {
-        "url": "http://files.xiaomi-mi.co.uk/files/MiJia_Honeywell/MiJia_Honeywell_Smoke_Detector_EN.pdf",
-        "confidence": "high"
-      }
+      "checked_model": "lumi.sensor_smoke"
     },
     "endpoint": 1,
     "firmware": null,
@@ -40637,11 +40569,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "Philips",
-      "checked_model": "LWV001",
-      "manufacturer": {
-        "url": "https://www2.meethue.com/en-gb/p/hue-white-1-pack-st64-e27-filament-edison/8718699688868",
-        "confidence": "high"
-      }
+      "checked_model": "LWV001"
     },
     "endpoint": 11,
     "firmware": null,
@@ -40723,11 +40651,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "Philips",
-      "checked_model": "LWV001",
-      "manufacturer": {
-        "url": "https://www2.meethue.com/en-gb/p/hue-white-1-pack-st64-e27-filament-edison/8718699688868",
-        "confidence": "high"
-      }
+      "checked_model": "LWV001"
     },
     "endpoint": 242,
     "firmware": null,
@@ -41577,7 +41501,15 @@
   {
     "manufacturer_slug": "sengled",
     "model_slug": "e1f-n5e",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Sengled_E1F-N5E.html",
+        "match_method": "vendor_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "sengled",
+      "checked_model": "E1F-N5E"
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
