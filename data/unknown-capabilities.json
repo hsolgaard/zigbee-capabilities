@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T17:17:41.877Z",
+  "generated_at": "2026-09-01T10:29:16.009Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -182,6 +182,21 @@
       ]
     },
     {
+      "id_hex": "0xfc02",
+      "seen_on": [
+        {
+          "manufacturer": "iMagic by GreatStar",
+          "model": "1117-S",
+          "count": 1
+        },
+        {
+          "manufacturer": "Philips",
+          "model": "LWV001",
+          "count": 1
+        }
+      ]
+    },
+    {
       "id_hex": "0xfc81",
       "seen_on": [
         {
@@ -192,21 +207,21 @@
       ]
     },
     {
-      "id_hex": "0xfc82",
+      "id_hex": "0xfc01",
       "seen_on": [
         {
-          "manufacturer": "innr",
-          "model": "SP 224",
+          "manufacturer": "iMagic by GreatStar",
+          "model": "1117-S",
           "count": 1
         }
       ]
     },
     {
-      "id_hex": "0xfc02",
+      "id_hex": "0xfc82",
       "seen_on": [
         {
-          "manufacturer": "Philips",
-          "model": "LWV001",
+          "manufacturer": "innr",
+          "model": "SP 224",
           "count": 1
         }
       ]
