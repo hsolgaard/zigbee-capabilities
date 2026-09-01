@@ -1924,5 +1924,14 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Sengled_E1F-N5E.html",
+      "match_method": "vendor_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "sengled",
+    "checked_model": "E1F-N5E"
   }
 }

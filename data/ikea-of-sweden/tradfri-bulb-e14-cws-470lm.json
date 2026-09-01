@@ -2207,10 +2207,6 @@
       "confidence": "high"
     },
     "checked_manufacturer": "IKEA of Sweden",
-    "checked_model": "TRADFRI bulb E14 CWS 470lm",
-    "manufacturer": {
-      "url": "https://www.ikea.com/gb/en/p/tradfri-led-bulb-e14-470-lumen-wireless-dimmable-colour-and-white-spectrum-globe-opal-white-70517636/",
-      "confidence": "high"
-    }
+    "checked_model": "TRADFRI bulb E14 CWS 470lm"
   }
 }

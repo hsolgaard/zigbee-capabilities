@@ -1167,10 +1167,6 @@
       "confidence": "high"
     },
     "checked_manufacturer": "IKEA of Sweden",
-    "checked_model": "TREDANSEN block-out cellul blind",
-    "manufacturer": {
-      "url": "https://www.ikea.com/us/en/p/tredansen-black-out-cellular-blind-smart-wireless-battery-operated-white-90512464/",
-      "confidence": "high"
-    }
+    "checked_model": "TREDANSEN block-out cellul blind"
   }
 }

@@ -158,10 +158,6 @@
       "confidence": "high"
     },
     "checked_manufacturer": "LUMI",
-    "checked_model": "lumi.sensor_magnet",
-    "manufacturer": {
-      "url": "https://item.mi.com/product/5010.html",
-      "confidence": "high"
-    }
+    "checked_model": "lumi.sensor_magnet"
   }
 }

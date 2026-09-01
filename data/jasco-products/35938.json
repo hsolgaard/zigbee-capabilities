@@ -1231,5 +1231,10 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "Jasco Products",
+    "checked_model": "35938"
   }
 }
