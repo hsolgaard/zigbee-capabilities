@@ -102,5 +102,10 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "Texas Instruments",
+    "checked_model": "CC2652"
   }
 }
