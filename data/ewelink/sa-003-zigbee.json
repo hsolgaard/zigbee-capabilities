@@ -1,0 +1,127 @@
+{
+  "observations": [
+    {
+      "manufacturer": "eWeLink",
+      "model": "SA-003-Zigbee",
+      "identity": {
+        "sw_build_id": null,
+        "hw_version": null,
+        "date_code": null
+      },
+      "endpoints": [
+        {
+          "endpoint": {
+            "id": 1,
+            "profile": "0x0104",
+            "device_type": "0x0009",
+            "in_clusters": [
+              "0x0000",
+              "0x0003",
+              "0x0004",
+              "0x0005",
+              "0x0006"
+            ],
+            "out_clusters": [
+              "0x0000"
+            ]
+          },
+          "scanned": true,
+          "clusters": {
+            "0x0000": {
+              "name": "Basic",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": []
+            },
+            "0x0003": {
+              "name": "Identify",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": []
+            },
+            "0x0004": {
+              "name": "Groups",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": []
+            },
+            "0x0005": {
+              "name": "Scenes",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": []
+            },
+            "0x0006": {
+              "name": "On/Off",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": []
+            }
+          }
+        }
+      ],
+      "provenance": {
+        "submitted_at": "2026-08-31T21:26:52.211Z",
+        "card_version": "0.32.4",
+        "source_issue": 220
+      }
+    }
+  ],
+  "capabilities": {
+    "1|unknown": {
+      "endpoint": 1,
+      "firmware": null,
+      "scan_count": 1,
+      "last_seen": "2026-08-31T21:26:52.211Z",
+      "manufacturer": "eWeLink",
+      "model": "SA-003-Zigbee",
+      "in_clusters": [
+        "0x0000",
+        "0x0003",
+        "0x0004",
+        "0x0005",
+        "0x0006"
+      ],
+      "out_clusters": [
+        "0x0000"
+      ],
+      "clusters": {
+        "0x0000": {
+          "name": "Basic",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": []
+        },
+        "0x0003": {
+          "name": "Identify",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": []
+        },
+        "0x0004": {
+          "name": "Groups",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": []
+        },
+        "0x0005": {
+          "name": "Scenes",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": []
+        },
+        "0x0006": {
+          "name": "On/Off",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": []
+        }
+      }
+    }
+  }
+}
