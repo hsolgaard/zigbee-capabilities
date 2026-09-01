@@ -123,5 +123,14 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/eWeLink_SA-003-Zigbee.html",
+      "match_method": "manual",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "eWeLink",
+    "checked_model": "SA-003-Zigbee"
   }
 }
