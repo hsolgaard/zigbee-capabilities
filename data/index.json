@@ -5509,6 +5509,7 @@
   {
     "manufacturer_slug": "hobeian",
     "model_slug": "ck-bl702-router-01-7018",
+    "references": null,
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -18183,6 +18184,7 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-cws-globe-806lm",
+    "references": null,
     "endpoint": 1,
     "firmware": "1.0.38",
     "scan_count": 1,
@@ -19082,11 +19084,31 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       }
     }
+  },
+  {
+    "manufacturer_slug": "ikea-of-sweden",
+    "model_slug": "tradfri-bulb-e27-cws-globe-806lm",
+    "references": null,
+    "endpoint": 242,
+    "firmware": "1.0.38",
+    "scan_count": 1,
+    "last_seen": "2026-08-31T17:18:45.632Z",
+    "manufacturer": "IKEA of Sweden",
+    "model": "TRADFRI bulb E27 CWS globe 806lm",
+    "in_clusters": [
+      "0x0021"
+    ],
+    "out_clusters": [
+      "0x0021"
+    ],
+    "clusters": {}
   },
   {
     "manufacturer_slug": "ikea-of-sweden",
@@ -30256,6 +30278,7 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "vallhorn-wireless-motion-sensor",
+    "references": null,
     "endpoint": 1,
     "firmware": "1.0.64",
     "scan_count": 1,
@@ -30615,7 +30638,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       },
@@ -30642,6 +30667,372 @@
           {
             "id": 65533,
             "name": "65533",
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "manufacturer_slug": "ikea-of-sweden",
+    "model_slug": "vallhorn-wireless-motion-sensor",
+    "references": null,
+    "endpoint": 2,
+    "firmware": "1.0.64",
+    "scan_count": 1,
+    "last_seen": "2026-08-31T21:04:03.465Z",
+    "manufacturer": "IKEA of Sweden",
+    "model": "VALLHORN Wireless Motion Sensor",
+    "in_clusters": [
+      "0x0000",
+      "0x0003",
+      "0x0406"
+    ],
+    "out_clusters": [
+      "0x0003"
+    ],
+    "clusters": {
+      "0x0000": {
+        "name": "Basic",
+        "commands_received": [
+          {
+            "id": 0,
+            "name": "Reset to factory defaults",
+            "present": true,
+            "conflicting": false,
+            "scan_count": 1
+          }
+        ],
+        "commands_received_scan_count": 1,
+        "attributes_confirmed": [
+          {
+            "id": 0,
+            "name": "zcl_version",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 1,
+            "name": "app_version",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 2,
+            "name": "stack_version",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 3,
+            "name": "hw_version",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 4,
+            "name": "manufacturer",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 5,
+            "name": "model",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 6,
+            "name": "date_code",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 7,
+            "name": "power_source",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 8,
+            "name": "generic_device_class",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 9,
+            "name": "generic_device_type",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 10,
+            "name": "product_code",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 11,
+            "name": "product_url",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 16384,
+            "name": "sw_build_id",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 65533,
+            "name": "cluster_revision",
+            "access": "READ|REPORT"
+          }
+        ]
+      },
+      "0x0003": {
+        "name": "Identify",
+        "commands_received": [
+          {
+            "id": 0,
+            "name": "Identify",
+            "present": true,
+            "conflicting": false,
+            "scan_count": 1
+          },
+          {
+            "id": 1,
+            "name": "Identify query",
+            "present": true,
+            "conflicting": false,
+            "scan_count": 1
+          },
+          {
+            "id": 64,
+            "name": "Trigger identify effect",
+            "present": true,
+            "conflicting": false,
+            "scan_count": 1
+          }
+        ],
+        "commands_received_scan_count": 1,
+        "attributes_confirmed": [
+          {
+            "id": 0,
+            "name": "identify_time",
+            "access": "READ|WRITE|REPORT"
+          },
+          {
+            "id": 65533,
+            "name": "cluster_revision",
+            "access": "READ|REPORT"
+          }
+        ]
+      },
+      "0x0406": {
+        "name": "Occupancy Sensing",
+        "commands_received": [],
+        "commands_received_scan_count": 0,
+        "attributes_confirmed": [
+          {
+            "id": 0,
+            "name": "occupancy",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 1,
+            "name": "occupancy_sensor_type_bitmap",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 2,
+            "name": "2",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 16,
+            "name": "pir_o_to_u_delay",
+            "access": "READ|WRITE|REPORT"
+          },
+          {
+            "id": 17,
+            "name": "pir_u_to_o_delay",
+            "access": "READ|WRITE|REPORT"
+          },
+          {
+            "id": 18,
+            "name": "pir_u_to_o_threshold",
+            "access": "READ|WRITE|REPORT"
+          },
+          {
+            "id": 65533,
+            "name": "cluster_revision",
+            "access": "READ|REPORT"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "manufacturer_slug": "ikea-of-sweden",
+    "model_slug": "vallhorn-wireless-motion-sensor",
+    "references": null,
+    "endpoint": 3,
+    "firmware": "1.0.64",
+    "scan_count": 1,
+    "last_seen": "2026-08-31T21:04:03.465Z",
+    "manufacturer": "IKEA of Sweden",
+    "model": "VALLHORN Wireless Motion Sensor",
+    "in_clusters": [
+      "0x0000",
+      "0x0003",
+      "0x0400"
+    ],
+    "out_clusters": [
+      "0x0003"
+    ],
+    "clusters": {
+      "0x0000": {
+        "name": "Basic",
+        "commands_received": [
+          {
+            "id": 0,
+            "name": "Reset to factory defaults",
+            "present": true,
+            "conflicting": false,
+            "scan_count": 1
+          }
+        ],
+        "commands_received_scan_count": 1,
+        "attributes_confirmed": [
+          {
+            "id": 0,
+            "name": "zcl_version",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 1,
+            "name": "app_version",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 2,
+            "name": "stack_version",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 3,
+            "name": "hw_version",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 4,
+            "name": "manufacturer",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 5,
+            "name": "model",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 6,
+            "name": "date_code",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 7,
+            "name": "power_source",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 8,
+            "name": "generic_device_class",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 9,
+            "name": "generic_device_type",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 10,
+            "name": "product_code",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 11,
+            "name": "product_url",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 16384,
+            "name": "sw_build_id",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 65533,
+            "name": "cluster_revision",
+            "access": "READ|REPORT"
+          }
+        ]
+      },
+      "0x0003": {
+        "name": "Identify",
+        "commands_received": [
+          {
+            "id": 0,
+            "name": "Identify",
+            "present": true,
+            "conflicting": false,
+            "scan_count": 1
+          },
+          {
+            "id": 1,
+            "name": "Identify query",
+            "present": true,
+            "conflicting": false,
+            "scan_count": 1
+          },
+          {
+            "id": 64,
+            "name": "Trigger identify effect",
+            "present": true,
+            "conflicting": false,
+            "scan_count": 1
+          }
+        ],
+        "commands_received_scan_count": 1,
+        "attributes_confirmed": [
+          {
+            "id": 0,
+            "name": "identify_time",
+            "access": "READ|WRITE|REPORT"
+          },
+          {
+            "id": 65533,
+            "name": "cluster_revision",
+            "access": "READ|REPORT"
+          }
+        ]
+      },
+      "0x0400": {
+        "name": "Illuminance Measurement",
+        "commands_received": [],
+        "commands_received_scan_count": 0,
+        "attributes_confirmed": [
+          {
+            "id": 0,
+            "name": "measured_value",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 1,
+            "name": "min_measured_value",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 2,
+            "name": "max_measured_value",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 4,
+            "name": "light_sensor_type",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 65533,
+            "name": "cluster_revision",
             "access": "READ|REPORT"
           }
         ]
@@ -36250,6 +36641,7 @@
   {
     "manufacturer_slug": "jasco-products",
     "model_slug": "35938",
+    "references": null,
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -36711,6 +37103,135 @@
             "id": 1024,
             "name": "instantaneous_demand",
             "access": "READ|REPORT"
+          }
+        ]
+      },
+      "0x0b05": {
+        "name": "Diagnostic",
+        "commands_received": [],
+        "commands_received_scan_count": 0,
+        "attributes_confirmed": [
+          {
+            "id": 283,
+            "name": "average_mac_retry_per_aps_message_sent",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 284,
+            "name": "last_message_lqi",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 285,
+            "name": "last_message_rssi",
+            "access": "READ|REPORT"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "manufacturer_slug": "jasco-products",
+    "model_slug": "35938",
+    "references": null,
+    "endpoint": 2,
+    "firmware": null,
+    "scan_count": 1,
+    "last_seen": "2026-08-31T21:20:43.512Z",
+    "manufacturer": "Jasco Products",
+    "model": "35938",
+    "in_clusters": [
+      "0x0000",
+      "0x0003",
+      "0x0b05"
+    ],
+    "out_clusters": [
+      "0x0003",
+      "0x0006",
+      "0x0008"
+    ],
+    "clusters": {
+      "0x0000": {
+        "name": "Basic",
+        "commands_received": [
+          {
+            "id": 0,
+            "name": "Reset to factory defaults",
+            "present": true,
+            "conflicting": false,
+            "scan_count": 1
+          }
+        ],
+        "commands_received_scan_count": 1,
+        "attributes_confirmed": [
+          {
+            "id": 0,
+            "name": "zcl_version",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 1,
+            "name": "app_version",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 2,
+            "name": "stack_version",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 3,
+            "name": "hw_version",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 4,
+            "name": "manufacturer",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 5,
+            "name": "model",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 7,
+            "name": "power_source",
+            "access": "READ|REPORT"
+          }
+        ]
+      },
+      "0x0003": {
+        "name": "Identify",
+        "commands_received": [
+          {
+            "id": 0,
+            "name": "Identify",
+            "present": true,
+            "conflicting": false,
+            "scan_count": 1
+          },
+          {
+            "id": 1,
+            "name": "Identify query",
+            "present": true,
+            "conflicting": false,
+            "scan_count": 1
+          },
+          {
+            "id": 64,
+            "name": "Trigger identify effect",
+            "present": false,
+            "conflicting": false,
+            "scan_count": 1
+          }
+        ],
+        "commands_received_scan_count": 1,
+        "attributes_confirmed": [
+          {
+            "id": 0,
+            "name": "identify_time",
+            "access": "READ|WRITE|REPORT"
           }
         ]
       },
@@ -41056,6 +41577,7 @@
   {
     "manufacturer_slug": "sengled",
     "model_slug": "e1f-n5e",
+    "references": null,
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -41966,7 +42488,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       },
@@ -41983,7 +42507,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       },
@@ -42000,7 +42526,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       },
@@ -42027,7 +42555,9 @@
           {
             "id": 65533,
             "name": "65533",
-            "access": "READ|REPORT"
+            "access": "READ|REPORT",
+            "resolved_name": "cluster_revision",
+            "resolved_source": "zcl-spec"
           }
         ]
       }

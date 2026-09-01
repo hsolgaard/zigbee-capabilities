@@ -851,7 +851,9 @@
                 {
                   "id": 65533,
                   "name": "65533",
-                  "access": "READ|REPORT"
+                  "access": "READ|REPORT",
+                  "resolved_name": "cluster_revision",
+                  "resolved_source": "zcl-spec"
                 }
               ]
             },
@@ -869,7 +871,9 @@
                 {
                   "id": 65533,
                   "name": "65533",
-                  "access": "READ|REPORT"
+                  "access": "READ|REPORT",
+                  "resolved_name": "cluster_revision",
+                  "resolved_source": "zcl-spec"
                 }
               ]
             },
@@ -887,7 +891,9 @@
                 {
                   "id": 65533,
                   "name": "65533",
-                  "access": "READ|REPORT"
+                  "access": "READ|REPORT",
+                  "resolved_name": "cluster_revision",
+                  "resolved_source": "zcl-spec"
                 }
               ]
             },
@@ -915,7 +921,9 @@
                 {
                   "id": 65533,
                   "name": "65533",
-                  "access": "READ|REPORT"
+                  "access": "READ|REPORT",
+                  "resolved_name": "cluster_revision",
+                  "resolved_source": "zcl-spec"
                 }
               ]
             }
@@ -1841,7 +1849,9 @@
             {
               "id": 65533,
               "name": "65533",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "cluster_revision",
+              "resolved_source": "zcl-spec"
             }
           ]
         },
@@ -1858,7 +1868,9 @@
             {
               "id": 65533,
               "name": "65533",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "cluster_revision",
+              "resolved_source": "zcl-spec"
             }
           ]
         },
@@ -1875,7 +1887,9 @@
             {
               "id": 65533,
               "name": "65533",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "cluster_revision",
+              "resolved_source": "zcl-spec"
             }
           ]
         },
@@ -1902,7 +1916,9 @@
             {
               "id": 65533,
               "name": "65533",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "cluster_revision",
+              "resolved_source": "zcl-spec"
             }
           ]
         }

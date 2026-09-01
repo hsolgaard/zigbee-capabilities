@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T10:29:16.009Z",
+  "generated_at": "2026-09-01T10:37:36.740Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -52,6 +52,11 @@
         {
           "manufacturer": "IKEA of Sweden",
           "model": "TRADFRI bulb E27 CWS 806lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E27 CWS globe 806lm",
           "count": 1
         },
         {
@@ -121,6 +126,11 @@
         },
         {
           "manufacturer": "IKEA of Sweden",
+          "model": "VALLHORN Wireless Motion Sensor",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
           "model": "VINDSTYRKA",
           "count": 1
         }
@@ -129,6 +139,11 @@
     {
       "id_hex": "0xfc11",
       "seen_on": [
+        {
+          "manufacturer": "sengled",
+          "model": "E1F-N5E",
+          "count": 1
+        },
         {
           "manufacturer": "SONOFF",
           "model": "MINI-ZB2GS-L",
@@ -222,6 +237,36 @@
         {
           "manufacturer": "innr",
           "model": "SP 224",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id_hex": "0xfc03",
+      "seen_on": [
+        {
+          "manufacturer": "sengled",
+          "model": "E1F-N5E",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id_hex": "0xfc04",
+      "seen_on": [
+        {
+          "manufacturer": "sengled",
+          "model": "E1F-N5E",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id_hex": "0xfc13",
+      "seen_on": [
+        {
+          "manufacturer": "sengled",
+          "model": "E1F-N5E",
           "count": 1
         }
       ]
@@ -621,6 +666,17 @@
       ]
     },
     {
+      "cluster_id_hex": "0xfc81",
+      "id_hex": "0x0004",
+      "seen_on": [
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "VALLHORN Wireless Motion Sensor",
+          "count": 1
+        }
+      ]
+    },
+    {
       "cluster_id_hex": "0xfc82",
       "id_hex": "0x0010",
       "seen_on": [
@@ -946,6 +1002,105 @@
         {
           "manufacturer": "LUMI",
           "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc03",
+      "id_hex": "0x0000",
+      "seen_on": [
+        {
+          "manufacturer": "sengled",
+          "model": "E1F-N5E",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc03",
+      "id_hex": "0x0001",
+      "seen_on": [
+        {
+          "manufacturer": "sengled",
+          "model": "E1F-N5E",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc03",
+      "id_hex": "0x0002",
+      "seen_on": [
+        {
+          "manufacturer": "sengled",
+          "model": "E1F-N5E",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc03",
+      "id_hex": "0x0003",
+      "seen_on": [
+        {
+          "manufacturer": "sengled",
+          "model": "E1F-N5E",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc04",
+      "id_hex": "0x0000",
+      "seen_on": [
+        {
+          "manufacturer": "sengled",
+          "model": "E1F-N5E",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x0000",
+      "seen_on": [
+        {
+          "manufacturer": "sengled",
+          "model": "E1F-N5E",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc13",
+      "id_hex": "0x0000",
+      "seen_on": [
+        {
+          "manufacturer": "sengled",
+          "model": "E1F-N5E",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc13",
+      "id_hex": "0x0001",
+      "seen_on": [
+        {
+          "manufacturer": "sengled",
+          "model": "E1F-N5E",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc13",
+      "id_hex": "0x0002",
+      "seen_on": [
+        {
+          "manufacturer": "sengled",
+          "model": "E1F-N5E",
           "count": 1
         }
       ]
