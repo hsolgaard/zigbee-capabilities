@@ -353,5 +353,11 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "_TZE200_4utwozi2",
+    "checked_model": "TS0601",
+    "blakadder_declined": true
   }
 }
