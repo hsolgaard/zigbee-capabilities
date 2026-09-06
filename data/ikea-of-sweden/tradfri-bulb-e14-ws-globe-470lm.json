@@ -1620,8 +1620,16 @@
     }
   },
   "references": {
-    "blakadder": null,
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Ikea_LED2002G5.html",
+      "match_method": "manual",
+      "confidence": "high"
+    },
     "checked_manufacturer": "IKEA of Sweden",
-    "checked_model": "TRADFRI bulb E14 WS globe 470lm"
+    "checked_model": "TRADFRI bulb E14 WS globe 470lm",
+    "manufacturer": {
+      "url": "https://www.ikea.com/se/en/p/tradfri-led-bulb-e14-470-lumen-smart-wireless-dimmable-white-spectrum-globe-70518179/",
+      "confidence": "high"
+    }
   }
 }

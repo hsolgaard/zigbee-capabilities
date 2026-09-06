@@ -1249,8 +1249,16 @@
     }
   },
   "references": {
-    "blakadder": null,
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Ikea_LED1736G9.html",
+      "match_method": "manual",
+      "confidence": "high"
+    },
     "checked_manufacturer": "IKEA of Sweden",
-    "checked_model": "TRADFRI bulb E27 WW globe 806lm"
+    "checked_model": "TRADFRI bulb E27 WW globe 806lm",
+    "manufacturer": {
+      "url": "https://www.ikea.com/om/en/p/tradfri-led-bulb-e27-806-lumen-smart-wireless-dimmable-white-spectrum-globe-40489753/",
+      "confidence": "high"
+    }
   }
 }

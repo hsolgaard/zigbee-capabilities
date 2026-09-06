@@ -718,6 +718,10 @@
       "confidence": "high"
     },
     "checked_manufacturer": "IKEA of Sweden",
-    "checked_model": "VINDSTYRKA"
+    "checked_model": "VINDSTYRKA",
+    "manufacturer": {
+      "url": "https://www.ikea.com/se/en/p/vindstyrka-air-quality-sensor-smart-00498231/",
+      "confidence": "high"
+    }
   }
 }

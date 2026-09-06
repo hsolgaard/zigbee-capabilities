@@ -1647,7 +1647,11 @@
     }
   },
   "references": {
-    "blakadder": null,
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Ikea_LED1835C6.html",
+      "match_method": "manual",
+      "confidence": "high"
+    },
     "checked_manufacturer": "IKEA of Sweden",
     "checked_model": "TRADFRI bulb E14 WS candle 470lm"
   }

@@ -693,8 +693,16 @@
     }
   },
   "references": {
-    "blakadder": null,
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Ikea_E2201.html",
+      "match_method": "manual",
+      "confidence": "high"
+    },
     "checked_manufacturer": "IKEA of Sweden",
-    "checked_model": "RODRET wireless dimmer"
+    "checked_model": "RODRET wireless dimmer",
+    "manufacturer": {
+      "url": "https://www.ikea.com/ma/en/p/rodret-wireless-dimmer-power-switch-smart-white-20528128/",
+      "confidence": "high"
+    }
   }
 }

@@ -714,6 +714,11 @@
   "references": {
     "blakadder": null,
     "checked_manufacturer": "IKEA of Sweden",
-    "checked_model": "BADRING Water Leakage Sensor"
+    "checked_model": "BADRING Water Leakage Sensor",
+    "blakadder_declined": true,
+    "manufacturer": {
+      "url": "https://www.ikea.com/us/en/p/badring-water-leakage-sensor-smart-60504352/",
+      "confidence": "high"
+    }
   }
 }

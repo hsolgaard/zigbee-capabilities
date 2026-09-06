@@ -422,6 +422,11 @@
   "references": {
     "blakadder": null,
     "checked_manufacturer": "IKEA of Sweden",
-    "checked_model": "PARASOLL Door/Window Sensor"
+    "checked_model": "PARASOLL Door/Window Sensor",
+    "blakadder_declined": true,
+    "manufacturer": {
+      "url": "https://www.ikea.com/us/en/p/parasoll-door-window-sensor-smart-white-70504318/",
+      "confidence": "high"
+    }
   }
 }

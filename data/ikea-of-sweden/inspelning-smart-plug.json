@@ -1311,6 +1311,11 @@
   "references": {
     "blakadder": null,
     "checked_manufacturer": "IKEA of Sweden",
-    "checked_model": "INSPELNING Smart plug"
+    "checked_model": "INSPELNING Smart plug",
+    "blakadder_declined": true,
+    "manufacturer": {
+      "url": "https://www.ikea.com/es/en/p/inspelning-plug-smart-energy-monitor-00569836/",
+      "confidence": "high"
+    }
   }
 }

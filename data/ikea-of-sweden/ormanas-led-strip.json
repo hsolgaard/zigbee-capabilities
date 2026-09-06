@@ -1686,6 +1686,11 @@
   "references": {
     "blakadder": null,
     "checked_manufacturer": "IKEA of Sweden",
-    "checked_model": "ORMANAS LED Strip"
+    "checked_model": "ORMANAS LED Strip",
+    "blakadder_declined": true,
+    "manufacturer": {
+      "url": "https://www.ikea.com/us/en/p/ormanaes-led-light-strip-smart-wireless-dimmable-color-and-white-spectrum-20541323/",
+      "confidence": "high"
+    }
   }
 }

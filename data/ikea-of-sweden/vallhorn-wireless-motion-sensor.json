@@ -1547,6 +1547,11 @@
   "references": {
     "blakadder": null,
     "checked_manufacturer": "IKEA of Sweden",
-    "checked_model": "VALLHORN Wireless Motion Sensor"
+    "checked_model": "VALLHORN Wireless Motion Sensor",
+    "blakadder_declined": true,
+    "manufacturer": {
+      "url": "https://www.ikea.com/jo/en/p/vallhorn-wireless-motion-sensor-smart-white-90504341/",
+      "confidence": "high"
+    }
   }
 }

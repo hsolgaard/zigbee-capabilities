@@ -1637,8 +1637,16 @@
     }
   },
   "references": {
-    "blakadder": null,
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Ikea_LED2003G10.html",
+      "match_method": "manual",
+      "confidence": "high"
+    },
     "checked_manufacturer": "IKEA of Sweden",
-    "checked_model": "TRADFRI bulb E27 WS globe 1055lm"
+    "checked_model": "TRADFRI bulb E27 WS globe 1055lm",
+    "manufacturer": {
+      "url": "https://www.ikea.com/at/en/p/tradfri-led-bulb-e27-1055-lumen-smart-wireless-dimmable-white-spectrum-globe-60545673/",
+      "confidence": "high"
+    }
   }
 }

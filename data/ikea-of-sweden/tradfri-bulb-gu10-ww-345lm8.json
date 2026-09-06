@@ -1207,6 +1207,11 @@
   "references": {
     "blakadder": null,
     "checked_manufacturer": "IKEA of Sweden",
-    "checked_model": "\u001aTRADFRI bulb GU10 WW 345lm8"
+    "checked_model": "\u001aTRADFRI bulb GU10 WW 345lm8",
+    "blakadder_declined": true,
+    "manufacturer": {
+      "url": "https://www.ikea.com/kw/en/p/tradfri-led-bulb-gu10-345-lumen-smart-wireless-dimmable-warm-white-00541300/",
+      "confidence": "high"
+    }
   }
 }
