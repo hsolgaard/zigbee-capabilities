@@ -6208,7 +6208,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "BADRING Water Leakage Sensor"
+      "checked_model": "BADRING Water Leakage Sensor",
+      "blakadder_declined": true,
+      "manufacturer": {
+        "url": "https://www.ikea.com/us/en/p/badring-water-leakage-sensor-smart-60504352/",
+        "confidence": "high"
+      }
     },
     "endpoint": 1,
     "firmware": "1.0.7",
@@ -6561,7 +6566,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "INSPELNING Smart plug"
+      "checked_model": "INSPELNING Smart plug",
+      "blakadder_declined": true,
+      "manufacturer": {
+        "url": "https://www.ikea.com/es/en/p/inspelning-plug-smart-energy-monitor-00569836/",
+        "confidence": "high"
+      }
     },
     "endpoint": 1,
     "firmware": "2.4.45",
@@ -8893,7 +8903,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "ORMANAS LED Strip"
+      "checked_model": "ORMANAS LED Strip",
+      "blakadder_declined": true,
+      "manufacturer": {
+        "url": "https://www.ikea.com/us/en/p/ormanaes-led-light-strip-smart-wireless-dimmable-color-and-white-spectrum-20541323/",
+        "confidence": "high"
+      }
     },
     "endpoint": 1,
     "firmware": "1.1.10",
@@ -9746,7 +9761,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "PARASOLL Door/Window Sensor"
+      "checked_model": "PARASOLL Door/Window Sensor",
+      "blakadder_declined": true,
+      "manufacturer": {
+        "url": "https://www.ikea.com/us/en/p/parasoll-door-window-sensor-smart-white-70504318/",
+        "confidence": "high"
+      }
     },
     "endpoint": 2,
     "firmware": "1.0.19",
@@ -10229,9 +10249,17 @@
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "rodret-wireless-dimmer",
     "references": {
-      "blakadder": null,
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ikea_E2201.html",
+        "match_method": "manual",
+        "confidence": "high"
+      },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "RODRET wireless dimmer"
+      "checked_model": "RODRET wireless dimmer",
+      "manufacturer": {
+        "url": "https://www.ikea.com/ma/en/p/rodret-wireless-dimmer-power-switch-smart-white-20528128/",
+        "confidence": "high"
+      }
     },
     "endpoint": 1,
     "firmware": "1.0.57",
@@ -14573,7 +14601,11 @@
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e14-ws-candle-470lm",
     "references": {
-      "blakadder": null,
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ikea_LED1835C6.html",
+        "match_method": "manual",
+        "confidence": "high"
+      },
       "checked_manufacturer": "IKEA of Sweden",
       "checked_model": "TRADFRI bulb E14 WS candle 470lm"
     },
@@ -15400,7 +15432,11 @@
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e14-ws-candle-470lm",
     "references": {
-      "blakadder": null,
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ikea_LED1835C6.html",
+        "match_method": "manual",
+        "confidence": "high"
+      },
       "checked_manufacturer": "IKEA of Sweden",
       "checked_model": "TRADFRI bulb E14 WS candle 470lm"
     },
@@ -15420,9 +15456,17 @@
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e14-ws-globe-470lm",
     "references": {
-      "blakadder": null,
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ikea_LED2002G5.html",
+        "match_method": "manual",
+        "confidence": "high"
+      },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E14 WS globe 470lm"
+      "checked_model": "TRADFRI bulb E14 WS globe 470lm",
+      "manufacturer": {
+        "url": "https://www.ikea.com/se/en/p/tradfri-led-bulb-e14-470-lumen-smart-wireless-dimmable-white-spectrum-globe-70518179/",
+        "confidence": "high"
+      }
     },
     "endpoint": 1,
     "firmware": "1.1.20",
@@ -16232,9 +16276,17 @@
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e14-ws-globe-470lm",
     "references": {
-      "blakadder": null,
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ikea_LED2002G5.html",
+        "match_method": "manual",
+        "confidence": "high"
+      },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E14 WS globe 470lm"
+      "checked_model": "TRADFRI bulb E14 WS globe 470lm",
+      "manufacturer": {
+        "url": "https://www.ikea.com/se/en/p/tradfri-led-bulb-e14-470-lumen-smart-wireless-dimmable-white-spectrum-globe-70518179/",
+        "confidence": "high"
+      }
     },
     "endpoint": 242,
     "firmware": "1.1.20",
@@ -19898,9 +19950,17 @@
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-ws-globe-1055lm",
     "references": {
-      "blakadder": null,
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ikea_LED2003G10.html",
+        "match_method": "manual",
+        "confidence": "high"
+      },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 WS globe 1055lm"
+      "checked_model": "TRADFRI bulb E27 WS globe 1055lm",
+      "manufacturer": {
+        "url": "https://www.ikea.com/at/en/p/tradfri-led-bulb-e27-1055-lumen-smart-wireless-dimmable-white-spectrum-globe-60545673/",
+        "confidence": "high"
+      }
     },
     "endpoint": 1,
     "firmware": "3.0.23",
@@ -20720,9 +20780,17 @@
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-ws-globe-1055lm",
     "references": {
-      "blakadder": null,
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ikea_LED2003G10.html",
+        "match_method": "manual",
+        "confidence": "high"
+      },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 WS globe 1055lm"
+      "checked_model": "TRADFRI bulb E27 WS globe 1055lm",
+      "manufacturer": {
+        "url": "https://www.ikea.com/at/en/p/tradfri-led-bulb-e27-1055-lumen-smart-wireless-dimmable-white-spectrum-globe-60545673/",
+        "confidence": "high"
+      }
     },
     "endpoint": 242,
     "firmware": "3.0.23",
@@ -22715,7 +22783,11 @@
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-ww-g95-cl-470lm",
     "references": {
-      "blakadder": null,
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ikea_LED2102G3.html",
+        "match_method": "manual",
+        "confidence": "high"
+      },
       "checked_manufacturer": "IKEA of Sweden",
       "checked_model": "TRADFRI bulb E27 WW G95 CL 470lm"
     },
@@ -23323,7 +23395,11 @@
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-ww-g95-cl-470lm",
     "references": {
-      "blakadder": null,
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ikea_LED2102G3.html",
+        "match_method": "manual",
+        "confidence": "high"
+      },
       "checked_manufacturer": "IKEA of Sweden",
       "checked_model": "TRADFRI bulb E27 WW G95 CL 470lm"
     },
@@ -23345,9 +23421,17 @@
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-ww-globe-806lm",
     "references": {
-      "blakadder": null,
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ikea_LED1736G9.html",
+        "match_method": "manual",
+        "confidence": "high"
+      },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 WW globe 806lm"
+      "checked_model": "TRADFRI bulb E27 WW globe 806lm",
+      "manufacturer": {
+        "url": "https://www.ikea.com/om/en/p/tradfri-led-bulb-e27-806-lumen-smart-wireless-dimmable-white-spectrum-globe-40489753/",
+        "confidence": "high"
+      }
     },
     "endpoint": 1,
     "firmware": "1.0.42",
@@ -23953,9 +24037,17 @@
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e27-ww-globe-806lm",
     "references": {
-      "blakadder": null,
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ikea_LED1736G9.html",
+        "match_method": "manual",
+        "confidence": "high"
+      },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 WW globe 806lm"
+      "checked_model": "TRADFRI bulb E27 WW globe 806lm",
+      "manufacturer": {
+        "url": "https://www.ikea.com/om/en/p/tradfri-led-bulb-e27-806-lumen-smart-wireless-dimmable-white-spectrum-globe-40489753/",
+        "confidence": "high"
+      }
     },
     "endpoint": 242,
     "firmware": "1.0.42",
@@ -25861,7 +25953,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "\u001aTRADFRI bulb GU10 WW 345lm8"
+      "checked_model": "\u001aTRADFRI bulb GU10 WW 345lm8",
+      "blakadder_declined": true,
+      "manufacturer": {
+        "url": "https://www.ikea.com/kw/en/p/tradfri-led-bulb-gu10-345-lumen-smart-wireless-dimmable-warm-white-00541300/",
+        "confidence": "high"
+      }
     },
     "endpoint": 1,
     "firmware": "1.0.42",
@@ -29691,7 +29788,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRETAKT Smart plug"
+      "checked_model": "TRETAKT Smart plug",
+      "blakadder_declined": true,
+      "manufacturer": {
+        "url": "https://www.ikea.com/us/en/p/tretakt-plug-smart-40556511/",
+        "confidence": "high"
+      }
     },
     "endpoint": 1,
     "firmware": "2.4.25",
@@ -30226,7 +30328,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "VALLHORN Wireless Motion Sensor"
+      "checked_model": "VALLHORN Wireless Motion Sensor",
+      "blakadder_declined": true,
+      "manufacturer": {
+        "url": "https://www.ikea.com/jo/en/p/vallhorn-wireless-motion-sensor-smart-white-90504341/",
+        "confidence": "high"
+      }
     },
     "endpoint": 1,
     "firmware": "1.0.64",
@@ -30630,7 +30737,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "VALLHORN Wireless Motion Sensor"
+      "checked_model": "VALLHORN Wireless Motion Sensor",
+      "blakadder_declined": true,
+      "manufacturer": {
+        "url": "https://www.ikea.com/jo/en/p/vallhorn-wireless-motion-sensor-smart-white-90504341/",
+        "confidence": "high"
+      }
     },
     "endpoint": 2,
     "firmware": "1.0.64",
@@ -30821,7 +30933,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "VALLHORN Wireless Motion Sensor"
+      "checked_model": "VALLHORN Wireless Motion Sensor",
+      "blakadder_declined": true,
+      "manufacturer": {
+        "url": "https://www.ikea.com/jo/en/p/vallhorn-wireless-motion-sensor-smart-white-90504341/",
+        "confidence": "high"
+      }
     },
     "endpoint": 3,
     "firmware": "1.0.64",
@@ -31006,7 +31123,11 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "VINDSTYRKA"
+      "checked_model": "VINDSTYRKA",
+      "manufacturer": {
+        "url": "https://www.ikea.com/se/en/p/vindstyrka-air-quality-sensor-smart-00498231/",
+        "confidence": "high"
+      }
     },
     "endpoint": 1,
     "firmware": "1.0.11",
@@ -31346,7 +31467,11 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "VINDSTYRKA"
+      "checked_model": "VINDSTYRKA",
+      "manufacturer": {
+        "url": "https://www.ikea.com/se/en/p/vindstyrka-air-quality-sensor-smart-00498231/",
+        "confidence": "high"
+      }
     },
     "endpoint": 242,
     "firmware": "1.0.11",
