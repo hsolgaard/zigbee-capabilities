@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T08:38:02.107Z",
+  "generated_at": "2026-09-11T08:58:08.778Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -356,6 +356,32 @@
       ]
     },
     {
+      "cluster_id_hex": "0xfc31",
+      "id_hex": "0x0000",
+      "seen_on": [
+        {
+          "manufacturer": "Inovelli",
+          "model": "VZM36",
+          "count": 2
+        },
+        {
+          "manufacturer": "Inovelli",
+          "model": "VZM30-SN",
+          "count": 1
+        },
+        {
+          "manufacturer": "Inovelli",
+          "model": "VZM31-SN",
+          "count": 1
+        },
+        {
+          "manufacturer": "Inovelli",
+          "model": "VZM32-SN",
+          "count": 1
+        }
+      ]
+    },
+    {
       "cluster_id_hex": "0xfc7c",
       "id_hex": "0x0010",
       "seen_on": [
@@ -377,27 +403,6 @@
         {
           "manufacturer": "IKEA of Sweden",
           "model": "TREDANSEN block-out cellul blind",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc31",
-      "id_hex": "0x0000",
-      "seen_on": [
-        {
-          "manufacturer": "Inovelli",
-          "model": "VZM36",
-          "count": 2
-        },
-        {
-          "manufacturer": "Inovelli",
-          "model": "VZM31-SN",
-          "count": 1
-        },
-        {
-          "manufacturer": "Inovelli",
-          "model": "VZM32-SN",
           "count": 1
         }
       ]
@@ -596,6 +601,27 @@
       ]
     },
     {
+      "cluster_id_hex": "0xfc31",
+      "id_hex": "0x0107",
+      "seen_on": [
+        {
+          "manufacturer": "Inovelli",
+          "model": "VZM30-SN",
+          "count": 1
+        },
+        {
+          "manufacturer": "Inovelli",
+          "model": "VZM31-SN",
+          "count": 1
+        },
+        {
+          "manufacturer": "Inovelli",
+          "model": "VZM32-SN",
+          "count": 1
+        }
+      ]
+    },
+    {
       "cluster_id_hex": "0xfc11",
       "id_hex": "0x0011",
       "seen_on": [
@@ -612,22 +638,6 @@
         {
           "manufacturer": "SONOFF",
           "model": "TRVZB",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc31",
-      "id_hex": "0x0107",
-      "seen_on": [
-        {
-          "manufacturer": "Inovelli",
-          "model": "VZM31-SN",
-          "count": 1
-        },
-        {
-          "manufacturer": "Inovelli",
-          "model": "VZM32-SN",
           "count": 1
         }
       ]
