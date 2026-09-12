@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T18:36:22.410Z",
+  "generated_at": "2026-09-12T18:36:52.985Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -156,6 +156,11 @@
         },
         {
           "manufacturer": "SONOFF",
+          "model": "S60ZBTPG",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
           "model": "ZBM5-1C-80/86",
           "count": 1
         },
@@ -294,6 +299,11 @@
         },
         {
           "manufacturer": "SONOFF",
+          "model": "S60ZBTPG",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
           "model": "TRVZB",
           "count": 1
         },
@@ -326,6 +336,11 @@
         {
           "manufacturer": "SONOFF",
           "model": "MINI-ZBDIM",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "S60ZBTPG",
           "count": 1
         },
         {
@@ -434,6 +449,37 @@
       ]
     },
     {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x0001",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "S60ZBTPG",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-1C-80/86",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-2C-80/86",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-3C-80/86",
+          "count": 1
+        }
+      ]
+    },
+    {
       "cluster_id_hex": "0xfc7c",
       "id_hex": "0x0010",
       "seen_on": [
@@ -455,32 +501,6 @@
         {
           "manufacturer": "IKEA of Sweden",
           "model": "TREDANSEN block-out cellul blind",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x0001",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBM5-1C-80/86",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBM5-2C-80/86",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBM5-3C-80/86",
           "count": 1
         }
       ]
@@ -681,6 +701,54 @@
         {
           "manufacturer": "SONOFF",
           "model": "TRVZB",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x7004",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "S60ZBTPG",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x7005",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "S60ZBTPG",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x7006",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "S60ZBTPG",
           "count": 1
         }
       ]
@@ -1314,33 +1382,132 @@
     },
     {
       "cluster_id_hex": "0xfc11",
-      "id_hex": "0x7004",
+      "id_hex": "0x7003",
       "seen_on": [
         {
           "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
+          "model": "S60ZBTPG",
           "count": 1
         }
       ]
     },
     {
       "cluster_id_hex": "0xfc11",
-      "id_hex": "0x7005",
+      "id_hex": "0x7007",
       "seen_on": [
         {
           "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
+          "model": "S60ZBTPG",
           "count": 1
         }
       ]
     },
     {
       "cluster_id_hex": "0xfc11",
-      "id_hex": "0x7006",
+      "id_hex": "0x7008",
       "seen_on": [
         {
           "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
+          "model": "S60ZBTPG",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x7009",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "S60ZBTPG",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x700a",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "S60ZBTPG",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x700b",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "S60ZBTPG",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x700c",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "S60ZBTPG",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x700d",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "S60ZBTPG",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x700e",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "S60ZBTPG",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x700f",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "S60ZBTPG",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x7010",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "S60ZBTPG",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x7011",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "S60ZBTPG",
           "count": 1
         }
       ]
