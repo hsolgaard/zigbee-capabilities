@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T08:58:08.778Z",
+  "generated_at": "2026-09-12T18:36:22.410Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -382,6 +382,58 @@
       ]
     },
     {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x0014",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBMINIR2",
+          "count": 2
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZB2GS-L",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZB2GS",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x0015",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBMINIR2",
+          "count": 2
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZB2GS-L",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZB2GS",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        }
+      ]
+    },
+    {
       "cluster_id_hex": "0xfc7c",
       "id_hex": "0x0010",
       "seen_on": [
@@ -403,58 +455,6 @@
         {
           "manufacturer": "IKEA of Sweden",
           "model": "TREDANSEN block-out cellul blind",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x0014",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZB2GS-L",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZB2GS",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBMINIR2",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x0015",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZB2GS-L",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZB2GS",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBMINIR2",
           "count": 1
         }
       ]
