@@ -47786,8 +47786,8 @@
     "references": null,
     "endpoint": 1,
     "firmware": null,
-    "scan_count": 1,
-    "last_seen": "2026-09-12T18:00:57.223Z",
+    "scan_count": 2,
+    "last_seen": "2026-09-12T18:35:04.582Z",
     "manufacturer": "SONOFF",
     "model": "S60ZBTPG",
     "in_clusters": [
@@ -47804,7 +47804,8 @@
     ],
     "out_clusters": [
       "0x000a",
-      "0x0019"
+      "0x0019",
+      "0x0003"
     ],
     "clusters": {
       "0x0000": {
@@ -48287,8 +48288,8 @@
     "references": null,
     "endpoint": 242,
     "firmware": null,
-    "scan_count": 1,
-    "last_seen": "2026-09-12T18:00:57.223Z",
+    "scan_count": 2,
+    "last_seen": "2026-09-12T18:35:04.582Z",
     "manufacturer": "SONOFF",
     "model": "S60ZBTPG",
     "in_clusters": [],
