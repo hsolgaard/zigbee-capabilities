@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T18:36:52.985Z",
+  "generated_at": "2026-09-24T09:24:26.596Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -107,6 +107,11 @@
         {
           "manufacturer": "IKEA of Sweden",
           "model": "\u001aTRADFRI bulb GU10 WW 345lm8",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI Driver 10W",
           "count": 1
         },
         {
@@ -393,6 +398,11 @@
           "manufacturer": "Inovelli",
           "model": "VZM32-SN",
           "count": 1
+        },
+        {
+          "manufacturer": "Inovelli",
+          "model": "VZM35-SN",
+          "count": 1
         }
       ]
     },
@@ -664,22 +674,6 @@
     },
     {
       "cluster_id_hex": "0xfc31",
-      "id_hex": "0x0018",
-      "seen_on": [
-        {
-          "manufacturer": "Inovelli",
-          "model": "VZM32-SN",
-          "count": 1
-        },
-        {
-          "manufacturer": "Inovelli",
-          "model": "VZM36",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc31",
       "id_hex": "0x0104",
       "seen_on": [
         {
@@ -854,17 +848,6 @@
     },
     {
       "cluster_id_hex": "0xfc31",
-      "id_hex": "0x0017",
-      "seen_on": [
-        {
-          "manufacturer": "Inovelli",
-          "model": "VZM32-SN",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc31",
       "id_hex": "0x0022",
       "seen_on": [
         {
@@ -876,7 +859,29 @@
     },
     {
       "cluster_id_hex": "0xfc31",
+      "id_hex": "0x007d",
+      "seen_on": [
+        {
+          "manufacturer": "Inovelli",
+          "model": "VZM35-SN",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc31",
       "id_hex": "0x0081",
+      "seen_on": [
+        {
+          "manufacturer": "Inovelli",
+          "model": "VZM36",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc31",
+      "id_hex": "0x0018",
       "seen_on": [
         {
           "manufacturer": "Inovelli",
