@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T09:17:58.401Z",
+  "generated_at": "2026-09-24T09:21:58.508Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -669,22 +669,6 @@
     },
     {
       "cluster_id_hex": "0xfc31",
-      "id_hex": "0x0018",
-      "seen_on": [
-        {
-          "manufacturer": "Inovelli",
-          "model": "VZM32-SN",
-          "count": 1
-        },
-        {
-          "manufacturer": "Inovelli",
-          "model": "VZM36",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc31",
       "id_hex": "0x0104",
       "seen_on": [
         {
@@ -859,17 +843,6 @@
     },
     {
       "cluster_id_hex": "0xfc31",
-      "id_hex": "0x0017",
-      "seen_on": [
-        {
-          "manufacturer": "Inovelli",
-          "model": "VZM32-SN",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc31",
       "id_hex": "0x0022",
       "seen_on": [
         {
@@ -882,6 +855,17 @@
     {
       "cluster_id_hex": "0xfc31",
       "id_hex": "0x0081",
+      "seen_on": [
+        {
+          "manufacturer": "Inovelli",
+          "model": "VZM36",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc31",
+      "id_hex": "0x0018",
       "seen_on": [
         {
           "manufacturer": "Inovelli",
