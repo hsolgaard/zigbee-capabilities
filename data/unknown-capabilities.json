@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T09:35:22.363Z",
+  "generated_at": "2026-09-24T09:36:04.897Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -381,17 +381,17 @@
       "seen_on": [
         {
           "manufacturer": "Inovelli",
+          "model": "VZM31-SN",
+          "count": 2
+        },
+        {
+          "manufacturer": "Inovelli",
           "model": "VZM36",
           "count": 2
         },
         {
           "manufacturer": "Inovelli",
           "model": "VZM30-SN",
-          "count": 1
-        },
-        {
-          "manufacturer": "Inovelli",
-          "model": "VZM31-SN",
           "count": 1
         },
         {
@@ -511,6 +511,27 @@
         {
           "manufacturer": "IKEA of Sweden",
           "model": "TREDANSEN block-out cellul blind",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc31",
+      "id_hex": "0x0107",
+      "seen_on": [
+        {
+          "manufacturer": "Inovelli",
+          "model": "VZM31-SN",
+          "count": 2
+        },
+        {
+          "manufacturer": "Inovelli",
+          "model": "VZM30-SN",
+          "count": 1
+        },
+        {
+          "manufacturer": "Inovelli",
+          "model": "VZM32-SN",
           "count": 1
         }
       ]
@@ -642,27 +663,6 @@
         {
           "manufacturer": "IKEA of Sweden",
           "model": "TRADFRI bulb GU10 CWS 345lm",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc31",
-      "id_hex": "0x0107",
-      "seen_on": [
-        {
-          "manufacturer": "Inovelli",
-          "model": "VZM30-SN",
-          "count": 1
-        },
-        {
-          "manufacturer": "Inovelli",
-          "model": "VZM31-SN",
-          "count": 1
-        },
-        {
-          "manufacturer": "Inovelli",
-          "model": "VZM32-SN",
           "count": 1
         }
       ]
