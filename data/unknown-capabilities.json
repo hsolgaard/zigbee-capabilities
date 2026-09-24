@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T18:36:52.985Z",
+  "generated_at": "2026-09-24T09:17:58.401Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -107,6 +107,11 @@
         {
           "manufacturer": "IKEA of Sweden",
           "model": "\u001aTRADFRI bulb GU10 WW 345lm8",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI Driver 10W",
           "count": 1
         },
         {
