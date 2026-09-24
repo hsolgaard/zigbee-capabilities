@@ -3249,5 +3249,18 @@
       ],
       "clusters": {}
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Inovelli_VZM35-SN.html",
+      "match_method": "vendor_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "Inovelli",
+    "checked_model": "VZM35-SN",
+    "manufacturer": {
+      "url": "https://inovelli.com/products/blue-series-fan-switch-zigbee-3-0",
+      "confidence": "high"
+    }
   }
 }
