@@ -4508,7 +4508,11 @@
   {
     "manufacturer_slug": "aqara",
     "model_slug": "ceiling-light-t1m",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "Aqara",
+      "checked_model": "Ceiling Light T1M"
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -5431,7 +5435,11 @@
   {
     "manufacturer_slug": "aqara",
     "model_slug": "ceiling-light-t1m",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "Aqara",
+      "checked_model": "Ceiling Light T1M"
+    },
     "endpoint": 2,
     "firmware": null,
     "scan_count": 1,
@@ -13645,11 +13653,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "STOFTMOLN ceiling/wall lamp WW24",
-      "manufacturer": {
-        "url": "https://www.ikea.com/nl/en/p/stoftmoln-led-ceiling-wall-lamp-wireless-dimmable-warm-white-white-30497490/",
-        "confidence": "high"
-      }
+      "checked_model": "STOFTMOLN ceiling/wall lamp WW24"
     },
     "endpoint": 1,
     "firmware": "1.1.7",
@@ -22019,11 +22023,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 WS globe 1055lm",
-      "manufacturer": {
-        "url": "https://www.ikea.com/at/en/p/tradfri-led-bulb-e27-1055-lumen-smart-wireless-dimmable-white-spectrum-globe-60545673/",
-        "confidence": "high"
-      }
+      "checked_model": "TRADFRI bulb E27 WS globe 1055lm"
     },
     "endpoint": 1,
     "firmware": "3.0.23",
@@ -22849,11 +22849,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E27 WS globe 1055lm",
-      "manufacturer": {
-        "url": "https://www.ikea.com/at/en/p/tradfri-led-bulb-e27-1055-lumen-smart-wireless-dimmable-white-spectrum-globe-60545673/",
-        "confidence": "high"
-      }
+      "checked_model": "TRADFRI bulb E27 WS globe 1055lm"
     },
     "endpoint": 242,
     "firmware": "3.0.23",
@@ -33769,11 +33765,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "VINDSTYRKA",
-      "manufacturer": {
-        "url": "https://www.ikea.com/se/en/p/vindstyrka-air-quality-sensor-smart-00498231/",
-        "confidence": "high"
-      }
+      "checked_model": "VINDSTYRKA"
     },
     "endpoint": 1,
     "firmware": "1.0.11",
@@ -34113,11 +34105,7 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "VINDSTYRKA",
-      "manufacturer": {
-        "url": "https://www.ikea.com/se/en/p/vindstyrka-air-quality-sensor-smart-00498231/",
-        "confidence": "high"
-      }
+      "checked_model": "VINDSTYRKA"
     },
     "endpoint": 242,
     "firmware": "1.0.11",
