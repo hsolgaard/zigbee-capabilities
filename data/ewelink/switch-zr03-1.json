@@ -191,5 +191,14 @@
       ],
       "clusters": {}
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/eWeLink_SWITCH-ZR03.html",
+      "match_method": "vendor_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "eWeLink",
+    "checked_model": "SWITCH-ZR03-1"
   }
 }

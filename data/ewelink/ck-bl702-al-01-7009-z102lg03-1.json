@@ -213,5 +213,14 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/eWeLink_EZ-E14.html",
+      "match_method": "vendor_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "eWeLink",
+    "checked_model": "CK-BL702-AL-01(7009_Z102LG03-1)"
   }
 }

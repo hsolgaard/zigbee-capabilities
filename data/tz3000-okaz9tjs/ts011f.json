@@ -164,5 +164,14 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Lonsonho_SmartPlug.html",
+      "match_method": "manufacturer_string_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "_TZ3000_okaz9tjs",
+    "checked_model": "TS011F"
   }
 }
