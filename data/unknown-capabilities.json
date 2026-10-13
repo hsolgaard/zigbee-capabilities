@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T12:56:54.309Z",
+  "generated_at": "2026-10-13T12:58:30.516Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -167,6 +167,11 @@
         {
           "manufacturer": "SONOFF",
           "model": "S60ZBTPG",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "SNZB-06P24",
           "count": 1
         },
         {
@@ -2150,6 +2155,105 @@
         {
           "manufacturer": "SONOFF",
           "model": "SNZB-06P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x1fff",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "SNZB-06P24",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x2011",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "SNZB-06P24",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x2012",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "SNZB-06P24",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x2014",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "SNZB-06P24",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x2015",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "SNZB-06P24",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x2016",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "SNZB-06P24",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x2017",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "SNZB-06P24",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x2018",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "SNZB-06P24",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x2021",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "SNZB-06P24",
           "count": 1
         }
       ]
