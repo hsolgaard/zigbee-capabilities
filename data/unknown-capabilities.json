@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T09:36:04.897Z",
+  "generated_at": "2026-10-13T12:56:54.309Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -144,6 +144,11 @@
     {
       "id_hex": "0xfc11",
       "seen_on": [
+        {
+          "manufacturer": "eWeLink",
+          "model": "SWITCH-ZR03-1",
+          "count": 1
+        },
         {
           "manufacturer": "sengled",
           "model": "E1F-N5E",
