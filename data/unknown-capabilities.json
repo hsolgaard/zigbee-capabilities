@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T12:58:30.516Z",
+  "generated_at": "2026-10-13T19:34:37.657Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -144,6 +144,11 @@
     {
       "id_hex": "0xfc11",
       "seen_on": [
+        {
+          "manufacturer": "eWeLink",
+          "model": "CK-BL702-AL-01(7009_Z102LG03-1)",
+          "count": 1
+        },
         {
           "manufacturer": "eWeLink",
           "model": "SWITCH-ZR03-1",
