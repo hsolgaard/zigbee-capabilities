@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T19:34:37.657Z",
+  "generated_at": "2026-10-14T10:47:31.802Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -147,6 +147,11 @@
         {
           "manufacturer": "eWeLink",
           "model": "CK-BL702-AL-01(7009_Z102LG03-1)",
+          "count": 1
+        },
+        {
+          "manufacturer": "eWeLink",
+          "model": "SNZB-02P",
           "count": 1
         },
         {
@@ -1511,6 +1516,61 @@
         {
           "manufacturer": "Aqara",
           "model": "Ceiling Light T1M",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x0003",
+      "seen_on": [
+        {
+          "manufacturer": "eWeLink",
+          "model": "SNZB-02P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x0004",
+      "seen_on": [
+        {
+          "manufacturer": "eWeLink",
+          "model": "SNZB-02P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x0005",
+      "seen_on": [
+        {
+          "manufacturer": "eWeLink",
+          "model": "SNZB-02P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x0006",
+      "seen_on": [
+        {
+          "manufacturer": "eWeLink",
+          "model": "SNZB-02P",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x0007",
+      "seen_on": [
+        {
+          "manufacturer": "eWeLink",
+          "model": "SNZB-02P",
           "count": 1
         }
       ]
