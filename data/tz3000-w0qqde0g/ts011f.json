@@ -731,5 +731,14 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Neo_NAS-WR01B.html",
+      "match_method": "manufacturer_string_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "_TZ3000_w0qqde0g",
+    "checked_model": "TS011F"
   }
 }

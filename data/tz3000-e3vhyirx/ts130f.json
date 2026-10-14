@@ -495,5 +495,18 @@
       ],
       "clusters": {}
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/LoraTap_SC500ZB.html",
+      "match_method": "manufacturer_string_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "_TZ3000_e3vhyirx",
+    "checked_model": "TS130F",
+    "manufacturer": {
+      "url": "https://www.loratap.com/products/sc500zb-v2",
+      "confidence": "high"
+    }
   }
 }

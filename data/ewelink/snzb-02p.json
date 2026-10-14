@@ -624,5 +624,18 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Sonoff_SNZB-02P.html",
+      "match_method": "vendor_alias_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "eWeLink",
+    "checked_model": "SNZB-02P",
+    "manufacturer": {
+      "url": "https://itead.cc/product/sonoff-zigbee-temperature-and-humidity-sensor-snzb-02p",
+      "confidence": "high"
+    }
   }
 }
