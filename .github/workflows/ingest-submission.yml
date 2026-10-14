@@ -370,59 +370,14 @@ jobs:
             fs.mkdirSync(path.dirname(filePath), { recursive: true });
             fs.writeFileSync(filePath, JSON.stringify(existing, null, 2) + "\n");
 
-            // Rebuild data/index.json — a flat, single-fetch summary of every
-            // capabilities entry across every data file. The Capability
-            // Explorer tab loads this one file instead of fetching N
-            // per-model files or hitting the GitHub API's rate limits.
-            // Rebuilt in full from whatever's on disk right now (including
-            // the file just written above), never hand-patched, so it can't
-            // drift out of sync the same way the per-file capabilities cache
-            // can't.
-            const walkDataFiles = (dir) => {
-              let out = [];
-              for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-                const full = path.join(dir, entry.name);
-                if (entry.isDirectory()) {
-                  out = out.concat(walkDataFiles(full));
-                } else if (
-                  entry.isFile() &&
-                  entry.name.endsWith(".json") &&
-                  full !== path.join("data", "index.json")
-                ) {
-                  out.push(full);
-                }
-              }
-              return out;
-            };
-
-            const index = [];
-            if (fs.existsSync("data")) {
-              for (const file of walkDataFiles("data")) {
-                let parsed;
-                try {
-                  parsed = JSON.parse(fs.readFileSync(file, "utf8"));
-                } catch (e) {
-                  continue;
-                }
-                const caps = Array.isArray(parsed) ? {} : parsed.capabilities || {};
-                const parts = file.split(path.sep); // ["data", manufacturerSlug, "model.json"]
-                const manufacturerSlug = parts[1];
-                const modelSlug = (parts[2] || "").replace(/\.json$/, "");
-                Object.values(caps).forEach((entry) => {
-                  index.push({
-                    manufacturer_slug: manufacturerSlug,
-                    model_slug: modelSlug,
-                    ...entry,
-                  });
-                });
-              }
-            }
-            index.sort((a, b) =>
-              `${a.manufacturer}${a.model}${a.firmware}`.localeCompare(
-                `${b.manufacturer}${b.model}${b.firmware}`
-              )
-            );
-            fs.writeFileSync("data/index.json", JSON.stringify(index, null, 2) + "\n");
+            // data/index.json is deliberately NOT touched here. It is derived
+            // data that rebuild-capability-index.yml regenerates (and commits
+            // straight to main) after every merge. When this workflow also
+            // wrote it, every submission PR carried its own full copy of the
+            // index, so the moment ANY submission merged (and the rebuild
+            // moved main's index on), every other open submission PR
+            // conflicted on data/index.json and could not be merged. Found
+            // 2026-10-14 (PRs #251, #255, #265).
 
             const branch = `submission/issue-${issue.number}`;
             await exec.exec("git", ["config", "user.name", "github-actions[bot]"]);
@@ -432,7 +387,7 @@ jobs:
               "github-actions[bot]@users.noreply.github.com",
             ]);
             await exec.exec("git", ["checkout", "-B", branch]);
-            await exec.exec("git", ["add", filePath, "data/index.json"]);
+            await exec.exec("git", ["add", filePath]);
 
             // -B above means a re-run (opened then labeled firing back to
             // back, or someone re-labeling later) resets the branch rather
