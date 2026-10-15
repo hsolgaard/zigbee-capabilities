@@ -1,0 +1,66 @@
+name: Thank the submitter when their scan is merged
+
+# When a submission PR (branch submission/issue-N, created by
+# ingest-submission.yml) is merged, post a thank-you comment on the original
+# issue with a link to the database. The comment @mentions the person who
+# opened the issue, so GitHub emails them (and shows it in their
+# notifications) even if they have since unsubscribed from the thread.
+#
+# GitHub never exposes a user's email address to workflows, so this is the
+# only way to reach a submitter: through GitHub's own notifications.
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  issues: write
+  pull-requests: read
+
+jobs:
+  thank:
+    if: >-
+      github.event.pull_request.merged == true &&
+      startsWith(github.event.pull_request.head.ref, 'submission/issue-')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment on the original issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const issueNumber = parseInt(pr.head.ref.replace("submission/issue-", ""), 10);
+            if (!Number.isInteger(issueNumber)) return;
+
+            const { data: issue } = await github.rest.issues.get({
+              ...context.repo,
+              issue_number: issueNumber,
+            });
+
+            // Never comment on a PR number by mistake, or thank a bot.
+            if (issue.pull_request || issue.user.type === "Bot") return;
+
+            // Idempotent: a re-run must not thank them twice.
+            const marker = "<!-- submitter-thanks -->";
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              ...context.repo,
+              issue_number: issueNumber,
+              per_page: 100,
+            });
+            if (comments.some((c) => (c.body || "").includes(marker))) return;
+
+            const device = (issue.title || "")
+              .replace(/^\[Device Submission\]\s*/i, "")
+              .trim();
+            const what = device ? `your scan of **${device}**` : "your scan";
+            const site = `https://${context.repo.owner}.github.io/${context.repo.repo}/`;
+
+            await github.rest.issues.createComment({
+              ...context.repo,
+              issue_number: issueNumber,
+              body:
+                `${marker}\n` +
+                `Thank you, @${issue.user.login}! ${what[0].toUpperCase()}${what.slice(1)} ` +
+                `is now in the database (merged in #${pr.number}).\n\n` +
+                `You can browse it here: ${site}\n\n` +
+                `Every scan makes the data more useful for everyone using direct binding, so it's really appreciated.`,
+            });
