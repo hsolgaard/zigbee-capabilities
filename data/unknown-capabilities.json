@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T10:47:31.802Z",
+  "generated_at": "2026-10-15T23:01:32.471Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -479,37 +479,6 @@
       ]
     },
     {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x0001",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "S60ZBTPG",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBM5-1C-80/86",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBM5-2C-80/86",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBM5-3C-80/86",
-          "count": 1
-        }
-      ]
-    },
-    {
       "cluster_id_hex": "0xfc7c",
       "id_hex": "0x0010",
       "seen_on": [
@@ -552,6 +521,32 @@
         {
           "manufacturer": "Inovelli",
           "model": "VZM32-SN",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x0001",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZBDIM",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-1C-80/86",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-2C-80/86",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-3C-80/86",
           "count": 1
         }
       ]

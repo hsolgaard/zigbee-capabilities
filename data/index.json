@@ -57467,8 +57467,8 @@
     "references": null,
     "endpoint": 1,
     "firmware": null,
-    "scan_count": 2,
-    "last_seen": "2026-09-12T18:35:04.582Z",
+    "scan_count": 3,
+    "last_seen": "2026-10-15T23:00:27.276Z",
     "manufacturer": "SONOFF",
     "model": "S60ZBTPG",
     "in_clusters": [
@@ -57787,7 +57787,7 @@
         "attributes_confirmed": [
           {
             "id": 1,
-            "name": "1",
+            "name": "network_led",
             "access": "READ|WRITE"
           },
           {
@@ -57969,8 +57969,8 @@
     "references": null,
     "endpoint": 242,
     "firmware": null,
-    "scan_count": 2,
-    "last_seen": "2026-09-12T18:35:04.582Z",
+    "scan_count": 3,
+    "last_seen": "2026-10-15T23:00:27.276Z",
     "manufacturer": "SONOFF",
     "model": "S60ZBTPG",
     "in_clusters": [],
