@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T23:01:32.471Z",
+  "generated_at": "2026-10-18T10:09:48.622Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -309,12 +309,12 @@
       "seen_on": [
         {
           "manufacturer": "SONOFF",
-          "model": "MINI-ZB2GS-L",
-          "count": 1
+          "model": "MINI-ZB2GS",
+          "count": 2
         },
         {
           "manufacturer": "SONOFF",
-          "model": "MINI-ZB2GS",
+          "model": "MINI-ZB2GS-L",
           "count": 1
         },
         {
@@ -356,7 +356,7 @@
         {
           "manufacturer": "SONOFF",
           "model": "MINI-ZB2GS",
-          "count": 1
+          "count": 2
         },
         {
           "manufacturer": "SONOFF",
@@ -432,17 +432,17 @@
       "seen_on": [
         {
           "manufacturer": "SONOFF",
+          "model": "MINI-ZB2GS",
+          "count": 2
+        },
+        {
+          "manufacturer": "SONOFF",
           "model": "ZBMINIR2",
           "count": 2
         },
         {
           "manufacturer": "SONOFF",
           "model": "MINI-ZB2GS-L",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZB2GS",
           "count": 1
         },
         {
@@ -458,17 +458,17 @@
       "seen_on": [
         {
           "manufacturer": "SONOFF",
+          "model": "MINI-ZB2GS",
+          "count": 2
+        },
+        {
+          "manufacturer": "SONOFF",
           "model": "ZBMINIR2",
           "count": 2
         },
         {
           "manufacturer": "SONOFF",
           "model": "MINI-ZB2GS-L",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZB2GS",
           "count": 1
         },
         {
@@ -886,6 +886,17 @@
         {
           "manufacturer": "Inovelli",
           "model": "VZM36",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x0022",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "MINI-ZB2GS",
           "count": 2
         }
       ]
@@ -1929,17 +1940,6 @@
         {
           "manufacturer": "sengled",
           "model": "E1F-N5E",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x0022",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZB2GS",
           "count": 1
         }
       ]
