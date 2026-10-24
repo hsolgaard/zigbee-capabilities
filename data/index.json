@@ -53727,7 +53727,11 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "Repenic Ltd.",
-      "checked_model": "RD-250ZG"
+      "checked_model": "RD-250ZG",
+      "manufacturer": {
+        "url": "https://www.repenic.com/products/smart-dimmer-module?variant=42525994287152",
+        "confidence": "high"
+      }
     },
     "endpoint": 1,
     "firmware": "1.07",
@@ -54540,7 +54544,11 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "Repenic Ltd.",
-      "checked_model": "RD-250ZG"
+      "checked_model": "RD-250ZG",
+      "manufacturer": {
+        "url": "https://www.repenic.com/products/smart-dimmer-module?variant=42525994287152",
+        "confidence": "high"
+      }
     },
     "endpoint": 242,
     "firmware": "1.07",
