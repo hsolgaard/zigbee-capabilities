@@ -60044,7 +60044,15 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "snzb-06p24",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Sonoff_SNZB-06P.html",
+        "match_method": "manual",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "SONOFF",
+      "checked_model": "SNZB-06P24"
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
