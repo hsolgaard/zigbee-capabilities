@@ -330,6 +330,11 @@
   "references": {
     "blakadder": null,
     "checked_manufacturer": "Third Reality, Inc",
-    "checked_model": "3RDTS01056Z"
+    "checked_model": "3RDTS01056Z",
+    "manufacturer": {
+      "url": "https://thirdreality.com/products/smart-garage-door-tilt-sensor",
+      "confidence": "high",
+      "source": "vendor_search"
+    }
   }
 }

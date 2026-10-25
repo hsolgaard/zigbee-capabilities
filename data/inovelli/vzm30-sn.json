@@ -3688,6 +3688,11 @@
   "references": {
     "blakadder": null,
     "checked_manufacturer": "Inovelli",
-    "checked_model": "VZM30-SN"
+    "checked_model": "VZM30-SN",
+    "manufacturer": {
+      "url": "https://inovelli.com/products/blue-series-smart-on-off-switch-w-humidity-sensor",
+      "confidence": "high",
+      "source": "vendor_search"
+    }
   }
 }

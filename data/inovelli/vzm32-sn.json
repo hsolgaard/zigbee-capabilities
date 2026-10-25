@@ -5690,6 +5690,11 @@
   "references": {
     "blakadder": null,
     "checked_manufacturer": "Inovelli",
-    "checked_model": "VZM32-SN"
+    "checked_model": "VZM32-SN",
+    "manufacturer": {
+      "url": "https://inovelli.com/products/zigbee-blue-series-mmwave-presence-sensor-smart-dimmer-switch",
+      "confidence": "high",
+      "source": "vendor_search"
+    }
   }
 }

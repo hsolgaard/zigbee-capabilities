@@ -2122,6 +2122,11 @@
   "references": {
     "blakadder": null,
     "checked_manufacturer": "SONOFF",
-    "checked_model": "S60ZBTPG"
+    "checked_model": "S60ZBTPG",
+    "manufacturer": {
+      "url": "https://sonoff.tech/products/sonoff-iplug-zigbee-smart-plug-s60-series",
+      "confidence": "high",
+      "source": "vendor_search"
+    }
   }
 }
