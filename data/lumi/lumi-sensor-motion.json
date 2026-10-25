@@ -154,6 +154,10 @@
       "confidence": "high"
     },
     "checked_manufacturer": "LUMI",
-    "checked_model": "lumi.sensor_motion"
+    "checked_model": "lumi.sensor_motion",
+    "manufacturer": {
+      "url": "https://item.mi.com/product/5005.html",
+      "confidence": "high"
+    }
   }
 }

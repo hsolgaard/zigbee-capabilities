@@ -817,8 +817,6 @@
     }
   },
   "references": {
-    "blakadder": null,
-    "checked_manufacturer": "iMagic by GreatStar",
-    "checked_model": "1117-S"
+    "blakadder": null
   }
 }

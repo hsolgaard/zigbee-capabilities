@@ -478,5 +478,10 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "hhiodade",
+    "checked_model": "Moes-1-gang"
   }
 }

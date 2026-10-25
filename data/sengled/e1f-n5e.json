@@ -1932,6 +1932,10 @@
       "confidence": "high"
     },
     "checked_manufacturer": "sengled",
-    "checked_model": "E1F-N5E"
+    "checked_model": "E1F-N5E",
+    "manufacturer": {
+      "url": "https://us.sengled.com/products/sengled-smart-light-switch",
+      "confidence": "high"
+    }
   }
 }

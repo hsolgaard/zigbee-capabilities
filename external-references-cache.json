@@ -1,6 +1,286 @@
 {
   "_comment": "Vendor-discovery search cache, written by .github/scripts/vendor-discovery.mjs (see enrich-external-references.yml). Keyed by \"<Zigbee manufacturer>|<Zigbee model>\". Entries younger than 28 days aren't re-searched. Safe to delete an entry (or the whole file) to force a fresh search.",
   "devices": {
+    "_TYZB01_wqcac7lo|TS0205": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "_TZ3000_3n2minvf|TS0004": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "_TZ3000_46t1rvdu|TS0001": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "_TZ3000_92chsky7|TS110F": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "_TZ3000_fukaa7nc|TS011F": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "_TZ3000_ltt60asa|TS0004": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "_TZ3000_okaz9tjs|TS011F": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "_TZ3000_pf7swkqp|TS0003": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "_TZ3000_qa8s8vca|TS130F": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "_TZ3000_w0qqde0g|TS011F": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "_TZ3210_fgwhjm9j|TS011F": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "_TZ3210_g0qr1fqo|unk_model": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "_TZ3210_mja6r5ix|TS0505B": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "_TZ3290_gnl5a6a5xvql7c2a|TS1201": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "_TZE200_4utwozi2|TS0601": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "46t1rvdu|WHD02-Aubess": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "4rbqgcuv|TS0001-AVB": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "AL001|WG001-Z01": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "Aqara|Ceiling Light T1M": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "AwoX|TLSR82xx": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "eWeLink|CK-BL702-AL-01(7009_Z102LG03-1)": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "eWeLink|SA-003-Zigbee": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "eWeLink|SWITCH-ZR03-1": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "gjrubzje|TS0001-ZTU": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "hhiodade|Moes-1-gang": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "HOBEIAN|CK-BL702-ROUTER-01(7018)": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|ASKVADER on/off switch": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|JETSTROM 3030 wall": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|LEPTITER Recessed spot light": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|Remote Control N2": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|STOFTMOLN ceiling/wall lamp WW24": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|TRADFRI bulb E14 CWS 470lm": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|TRADFRI bulb E14 W op/ch 400lm": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|TRADFRI bulb E14 WS 470lm": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|TRADFRI bulb E14 WS candle 470lm": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|TRADFRI bulb E14 WS opal 600lm": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|TRADFRI bulb E27 CWS 806lm": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|TRADFRI bulb E27 CWS globe 806lm": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|TRADFRI bulb E27 CWS opal 600lm": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|TRADFRI bulb E27 WS globe 1055lm": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|TRADFRI bulb E27 WS opal 1000lm": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|TRADFRI bulb E27 WW 806lm": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|TRADFRI bulb E27 WW clear 250lm": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|TRADFRI bulb E27 WW G95 CL 470lm": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|TRADFRI bulb GU10 CWS 345lm": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|TRADFRI bulb GU10 WS 400lm": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|TRADFRI control outlet": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|TRADFRI Driver 10W": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|TRADFRI Driver 30W": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|TRADFRI Signal Repeater": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|TRADFRIbulbE27WSglobeopal1055lm": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|TREDANSEN block-out cellul blind": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "IKEA of Sweden|VINDSTYRKA": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "iMagic by GreatStar|1117-S": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "innr|BB 287 C": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "innr|RB 287 C": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "Inovelli|VZM30-SN": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": {
@@ -31,6 +311,67 @@
         "shop": true,
         "evidence": "page lists FCC ID \"2BBTA-VZM36\"",
         "method": "manual research 2026-10-25 (page fetched and checked by hand)"
+      },
+      "buy_candidate": null
+    },
+    "Jasco Products|35938": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "LEDVANCE|PAR16 TW Z3": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "LUMI|lumi.relay.c2acn01": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "LUMI|lumi.sensor_magnet": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "LUMI|lumi.sensor_motion": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "LUMI|lumi.sensor_smoke": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "pf7swkqp|TS0003-SB": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "Philips|LWV001": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "sengled|E1F-N5E": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "SmartThings|outletv4": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "SONOFF|DONGLE-E_R": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": {
+        "url": "https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e",
+        "title": "SONOFF Zigbee 3.0 USB Dongle Plus - ZBDongle-E",
+        "shop": true,
+        "evidence": "page mentions \"zbdonglee\"",
+        "method": "shop search on sonoff.tech"
       },
       "buy_candidate": null
     },
@@ -89,6 +430,22 @@
       },
       "buy_candidate": null
     },
+    "SONOFF|SNZB-06P24": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": {
+        "url": "https://sonoff.tech/en-us/products/sonoff-senseguard-presence-core-24ghz-zigbee-human-presence-sensor-snzb-06p24",
+        "title": "SONOFF SenseGuard Presence Core 24GHz Zigbee Human Presence Sensor - SNZB-06P24",
+        "shop": true,
+        "evidence": "page mentions \"snzb06p24\"",
+        "method": "shop search on sonoff.tech"
+      },
+      "buy_candidate": null
+    },
+    "Texas Instruments|CC2652": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "Third Reality, Inc|3RDTS01056Z": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": {
@@ -99,12 +456,139 @@
         "method": "manual research 2026-10-25 (page fetched and checked by hand)"
       },
       "buy_candidate": null
+    },
+    "tqlv4ug4|TS0001-custom": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
     }
   },
   "pages": {
     "https://www.repenic.com/products/smart-dimmer-module?variant=42525994287152": {
       "title": "Smart dimmer module",
       "shop": true
-    }
-  }
+    },
+    "https://itead.cc/product/sonoff-zigbee-temperature-and-humidity-sensor-snzb-02p": {
+      "title": "SONOFF Zigbee Temperature and Humidity Sensor - SNZB-02P",
+      "shop": true
+    },
+    "https://itead.cc/product/sonoff-zigbee-door-window-sensor-snzb-04p/": {
+      "title": "SONOFF Zigbee Door/Window Sensor - SNZB-04P",
+      "shop": true
+    },
+    "https://frient.com/products/intelligent-smoke-alarm/": {
+      "title": "Intelligent Smoke Alarm",
+      "shop": false
+    },
+    "https://www.ikea.com/us/en/p/badring-water-leakage-sensor-smart-60504352/": {
+      "title": "Products",
+      "shop": true
+    },
+    "https://www.ikea.com/es/en/p/inspelning-plug-smart-energy-monitor-00569836/": {
+      "title": "All Products - Design and Quality at the Best Price",
+      "shop": true
+    },
+    "https://www.ikea.com/us/en/p/ormanaes-led-light-strip-smart-wireless-dimmable-color-and-white-spectrum-20541323/": {
+      "title": "ORMANÄS LED light strip, smart wireless dimmable/color and white spectrum, 157\"",
+      "shop": true
+    },
+    "https://www.ikea.com/us/en/p/parasoll-door-window-sensor-smart-white-70504318/": {
+      "title": "PARASOLL door/window sensor, smart/white",
+      "shop": true
+    },
+    "https://www.ikea.com/ma/en/p/rodret-wireless-dimmer-power-switch-smart-white-20528128/": {
+      "title": "RODRET wireless dimmer/power switch, smart white",
+      "shop": true
+    },
+    "https://www.ikea.com/nl/en/p/silverglans-driver-for-wireless-control-dimmable-white-10474772/": {
+      "title": "Driver for wireless control, SILVERGLANS, smart white, 30 W",
+      "shop": true
+    },
+    "https://www.ikea.com/nl/en/p/starkvind-air-purifier-white-50461942/": {
+      "title": "Air purifier, STARKVIND, white",
+      "shop": true
+    },
+    "https://www.ikea.com/se/en/p/tradfri-led-bulb-e14-470-lumen-smart-wireless-dimmable-white-spectrum-globe-70518179/": {
+      "title": "TRÅDFRI LED bulb E14 470 lumen, smart wireless dimmable/white spectrum globe",
+      "shop": true
+    },
+    "https://www.ikea.com/om/en/p/tradfri-led-bulb-e27-806-lumen-smart-wireless-dimmable-white-spectrum-globe-40489753/": {
+      "title": "TRÅDFRI LED bulb E27 806 lumen, smart wireless dimmable/white spectrum globe",
+      "shop": true
+    },
+    "https://www.ikea.com/kw/en/p/tradfri-led-bulb-gu10-345-lumen-smart-wireless-dimmable-warm-white-00541300/": {
+      "title": "TRÅDFRI LED bulb GU10 345 lumen, smart/wireless dimmable warm white",
+      "shop": true
+    },
+    "https://www.ikea.com/us/en/p/tretakt-plug-smart-40556511/": {
+      "title": "TRETAKT plug, smart",
+      "shop": true
+    },
+    "https://www.ikea.com/jo/en/p/vallhorn-wireless-motion-sensor-smart-white-90504341/": {
+      "title": "Products",
+      "shop": true
+    },
+    "https://www.innr.com/en/product/smart-plug-us-version/": {
+      "title": "Products",
+      "shop": true
+    },
+    "https://inovelli.com/products/blue-series-smart-2-1-switch-on-off-or-dimmer": {
+      "title": "Inovelli",
+      "shop": true
+    },
+    "https://inovelli.com/products/blue-series-fan-switch-zigbee-3-0": {
+      "title": "Blue Series (Zigbee) - Smart Fan Switch",
+      "shop": true
+    },
+    "https://www.aqara.com/eu/smart_outlet.html": {
+      "title": "Smart Plug EU",
+      "shop": true
+    },
+    "https://www.aqara.com/en/human_motion_sensor.html": {
+      "title": "Motion Sensor & Detector",
+      "shop": true
+    },
+    "https://www.aqara.com/en/temperature_humidity_sensor.html": {
+      "title": "Temperature and Humidity Sensor",
+      "shop": true
+    },
+    "https://www.smartwingshome.com/": {
+      "title": "SmartWings: Custom Smart Motorized Shades & Blinds",
+      "shop": true
+    },
+    "https://sonoff.tech/en-uk/products/sonoff-orb-4-in-1-zigbee-smart-scene-button-snzb-01m": {
+      "title": "SONOFF Orb 4-In-1 Zigbee Smart Scene Button - SNZB-01M",
+      "shop": true
+    },
+    "https://itead.cc/product/sonoff-zigbee-human-presence-sensor": {
+      "title": "SONOFF Zigbee Human Presence Sensor - SNZB-06P",
+      "shop": true
+    },
+    "https://sonoff.tech/products/sonoff-zigbee-thermostatic-radiator-valve": {
+      "title": "SONOFF Zigbee Thermostatic Radiator Valve - TRVZB",
+      "shop": true
+    },
+    "https://sonoff.tech/en-eu/products/sonoff-switchman-zigbee-smart-wall-switch-zbm5-80-86-type": {
+      "title": "SONOFF SwitchMan Zigbee Smart Wall Switch - ZBM5 80/86 Type",
+      "shop": true
+    },
+    "https://itead.cc/product/sonoff-zbminil2-extreme-zigbee-smart-switch-no-neutral-required/": {
+      "title": "SONOFF ZBMINI Extreme Zigbee Smart Switch ZBMINIL2 (No Neutral Required)",
+      "shop": true
+    },
+    "https://itead.cc/product/sonoff-zbmini-zigbee-smart-switch/": {
+      "title": "SONOFF ZBMINI Zigbee Two Way Smart Switch",
+      "shop": true
+    },
+    "https://www.lidl.com/": {
+      "title": "Lidl US - Grocery Store - More to Value",
+      "shop": false
+    },
+    "https://www.loratap.com/products/sc500zb-v2": {
+      "title": null,
+      "shop": true
+    },
+    "https://www.loratap.com/products/ss600zb": null
+  },
+  "generated_at": "2026-10-25T16:35:22.769Z"
 }

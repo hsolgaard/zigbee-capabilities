@@ -1520,6 +1520,10 @@
       "confidence": "high"
     },
     "checked_manufacturer": "IKEA of Sweden",
-    "checked_model": "LEPTITER Recessed spot light"
+    "checked_model": "LEPTITER Recessed spot light",
+    "manufacturer": {
+      "url": "https://www.ikea.com/nl/en/p/leptiter-led-recessed-spotlight-dimmable-white-spectrum-50353513/",
+      "confidence": "high"
+    }
   }
 }

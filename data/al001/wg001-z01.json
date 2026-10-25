@@ -779,8 +779,6 @@
     }
   },
   "references": {
-    "blakadder": null,
-    "checked_manufacturer": "AL001",
-    "checked_model": "WG001-Z01"
+    "blakadder": null
   }
 }

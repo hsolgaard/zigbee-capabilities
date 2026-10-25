@@ -1721,8 +1721,6 @@
     }
   },
   "references": {
-    "blakadder": null,
-    "checked_manufacturer": "LEDVANCE",
-    "checked_model": "PAR16 TW Z3"
+    "blakadder": null
   }
 }

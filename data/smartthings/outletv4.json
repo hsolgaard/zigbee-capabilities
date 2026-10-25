@@ -936,5 +936,18 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/SmartThings_F-OUT-US-2.html",
+      "match_method": "vendor_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "SmartThings",
+    "checked_model": "outletv4",
+    "manufacturer": {
+      "url": "https://www.samsung.com/us/smart-home/smartthings/outlets/samsung-smartthings-outlet-f-out-us-2/",
+      "confidence": "high"
+    }
   }
 }
