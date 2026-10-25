@@ -602,6 +602,7 @@
     "manufacturer": {
       "url": "https://sonoff.tech/en-uk/products/sonoff-orb-4-in-1-zigbee-smart-scene-button-snzb-01m",
       "confidence": "high"
-    }
+    },
+    "blakadder_submitted": "2026-10-25"
   }
 }
