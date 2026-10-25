@@ -5391,6 +5391,9 @@
     "manufacturer_slug": "tz3210-ho44khu8",
     "model_slug": "ts011f",
     "references": {
+      "blakadder": null,
+      "checked_manufacturer": "_TZ3210_ho44khu8",
+      "checked_model": "TS011F",
       "product": {
         "brand": "Gosund",
         "model": "EP2-Z",
