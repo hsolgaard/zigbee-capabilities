@@ -5390,7 +5390,14 @@
   {
     "manufacturer_slug": "tz3210-ho44khu8",
     "model_slug": "ts011f",
-    "references": null,
+    "references": {
+      "product": {
+        "brand": "Gosund",
+        "model": "EP2-Z",
+        "name": "NiteBird EP2-Z Smart Plug",
+        "source": "submitter's note on issue #292"
+      }
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
