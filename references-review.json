@@ -1,657 +1,139 @@
 {
-  "generated_at": "2026-08-24T09:58:15.398Z",
-  "processed": 15,
-  "blakadderMatches": 0,
-  "manufacturerLinks": 0,
-  "manualReview": 18,
-  "noMatch": 0,
+  "generated_at": "2026-10-25T16:35:24.639Z",
+  "processed": 97,
+  "blakadderMatches": 51,
+  "manufacturerLinks": 42,
+  "manualReview": 23,
+  "noMatch": 24,
   "deadLinksCleared": 0,
   "ambiguous": [
     {
-      "file": "data/awox/tlsr82xx.json",
-      "manufacturer": "AwoX",
-      "model": "TLSR82xx",
+      "file": "data/al001/wg001-z01.json",
+      "manufacturer": "AL001",
+      "model": "WG001-Z01",
       "kind": "blakadder_ambiguous",
-      "reason": "Vendor \"AwoX\" + model \"TLSR82xx\" matched 6 Blakadder pages.",
+      "reason": "Not matched by vendor + model (our manufacturer string is \"AL001\"), but Aeotec ZAG001-C15: Zigbee model \"WG001-Z01\" matches exactly. Confirm it's the same device.",
       "candidates": [
         {
-          "url": "https://zigbee.blakadder.com/AwoX_33943.html",
-          "vendor": "AwoX",
-          "model": "33943",
+          "url": "https://zigbee.blakadder.com/Aeotec_ZAG001-C15.html",
+          "vendor": "Aeotec",
+          "model": "ZAG001-C15",
           "zigbeemodel": [
-            "TLSR82xx"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/AwoX_33944.html",
-          "vendor": "AwoX",
-          "model": "33944",
-          "zigbeemodel": [
-            "TLSR82xx"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/AwoX_33946.html",
-          "vendor": "AwoX",
-          "model": "33946",
-          "zigbeemodel": [
-            "TLSR82xx"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/AwoX_33948.html",
-          "vendor": "AwoX",
-          "model": "33948",
-          "zigbeemodel": [
-            "TLSR82xx"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/AwoX_33951.html",
-          "vendor": "AwoX",
-          "model": "33951",
-          "zigbeemodel": [
-            "TLSR82xx"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/AwoX_33957.html",
-          "vendor": "AwoX",
-          "model": "33957",
-          "zigbeemodel": [
-            "TLSR82xx"
+            "WG001-Z01"
           ]
         }
       ]
     },
     {
-      "file": "data/ewelink/snzb-04p.json",
-      "manufacturer": "eWeLink",
-      "model": "SNZB-04P",
+      "file": "data/ikea-of-sweden/tradfri-bulb-e14-ws-candle-470lm.json",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI bulb E14 WS candle 470lm",
+      "kind": "match_changed",
+      "previousUrl": "https://zigbee.blakadder.com/Ikea_LED1835C6.html",
+      "newUrl": null,
+      "reason": "Currently references https://zigbee.blakadder.com/Ikea_LED1835C6.html; a fresh recheck no longer finds any match for it. Confirm whether this reference is still correct."
+    },
+    {
+      "file": "data/ikea-of-sweden/tradfri-bulb-e14-ws-globe-470lm.json",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI bulb E14 WS globe 470lm",
+      "kind": "match_changed",
+      "previousUrl": "https://zigbee.blakadder.com/Ikea_LED2002G5.html",
+      "newUrl": null,
+      "reason": "Currently references https://zigbee.blakadder.com/Ikea_LED2002G5.html; a fresh recheck no longer finds any match for it. Confirm whether this reference is still correct."
+    },
+    {
+      "file": "data/ikea-of-sweden/tradfri-bulb-e27-cws-806lm.json",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI bulb E27 CWS 806lm",
       "kind": "blakadder_ambiguous",
-      "reason": "Vendor \"eWeLink\" matches, but model \"SNZB-04P\" only loosely resembles Blakadder's model string for these page(s).",
+      "reason": "Not matched by vendor + model (our manufacturer string is \"IKEA of Sweden\"), but IKEA LED1924G9: Zigbee2MQTT identifies it as IKEA LED1924G9. Confirm it's the same device.",
       "candidates": [
         {
-          "url": "https://zigbee.blakadder.com/eWeLink_ZB-GW03.html",
-          "vendor": "eWeLink",
-          "model": "",
+          "url": "https://zigbee.blakadder.com/Ikea_LED1924G9.html",
+          "vendor": "IKEA",
+          "model": "LED1924G9",
+          "zigbeemodel": [
+            "TRADFRI bulb E26 CWS 800lm",
+            "TRADFRI bulb E27 CWS 806l",
+            "TRADFRI bulb E26 CWS 806lm"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "data/ikea-of-sweden/tradfri-bulb-e27-ws-globe-1055lm.json",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI bulb E27 WS globe 1055lm",
+      "kind": "match_changed",
+      "previousUrl": "https://zigbee.blakadder.com/Ikea_LED2003G10.html",
+      "newUrl": null,
+      "reason": "Currently references https://zigbee.blakadder.com/Ikea_LED2003G10.html; a fresh recheck no longer finds any match for it. Confirm whether this reference is still correct."
+    },
+    {
+      "file": "data/ikea-of-sweden/tradfri-bulb-e27-ww-globe-806lm.json",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI bulb E27 WW globe 806lm",
+      "kind": "match_changed",
+      "previousUrl": "https://zigbee.blakadder.com/Ikea_LED1736G9.html",
+      "newUrl": null,
+      "reason": "Currently references https://zigbee.blakadder.com/Ikea_LED1736G9.html; a fresh recheck no longer finds any match for it. Confirm whether this reference is still correct."
+    },
+    {
+      "file": "data/imagic-by-greatstar/1117-s.json",
+      "manufacturer": "iMagic by GreatStar",
+      "model": "1117-S",
+      "kind": "blakadder_ambiguous",
+      "reason": "Not matched by vendor + model (our manufacturer string is \"iMagic by GreatStar\"), but Iris 1117-S: Zigbee model \"1117-S\" matches exactly. Confirm it's the same device.",
+      "candidates": [
+        {
+          "url": "https://zigbee.blakadder.com/Iris_1117-S.html",
+          "vendor": "Iris",
+          "model": "1117-S",
+          "zigbeemodel": [
+            "1117-S"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "data/ledvance/par16-tw-z3.json",
+      "manufacturer": "LEDVANCE",
+      "model": "PAR16 TW Z3",
+      "kind": "blakadder_ambiguous",
+      "reason": "Not matched by vendor + model (our manufacturer string is \"LEDVANCE\"), but OSRAM 4058075148338: Zigbee model \"PAR16 TW Z3\" matches exactly. Confirm it's the same device.",
+      "candidates": [
+        {
+          "url": "https://zigbee.blakadder.com/OSRAM_4058075148338.html",
+          "vendor": "OSRAM",
+          "model": "4058075148338",
+          "zigbeemodel": [
+            "PAR16 TW Z3"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "data/sonoff/dongle-e-r.json",
+      "manufacturer": "SONOFF",
+      "model": "DONGLE-E_R",
+      "kind": "blakadder_ambiguous",
+      "reason": "Not matched by vendor + model (our manufacturer string is \"SONOFF\"), but Sonoff ZBDongle-E: Zigbee2MQTT identifies it as SONOFF ZBDongle-E. Confirm it's the same device.",
+      "candidates": [
+        {
+          "url": "https://zigbee.blakadder.com/Sonoff_ZBDongle-E.html",
+          "vendor": "Sonoff",
+          "model": "ZBDongle-E",
           "zigbeemodel": []
         }
       ]
     },
     {
-      "file": "data/ikea-of-sweden/remote-control-n2.json",
-      "manufacturer": "IKEA of Sweden",
-      "model": "Remote Control N2",
-      "kind": "blakadder_ambiguous",
-      "reason": "Vendor \"IKEA of Sweden\" + model \"Remote Control N2\" matched 2 Blakadder pages.",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/Ikea_E2001.html",
-          "vendor": "IKEA",
-          "model": "E2001",
-          "zigbeemodel": [
-            "Remote Control N2"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Ikea_E2002.html",
-          "vendor": "IKEA",
-          "model": "E2001",
-          "zigbeemodel": [
-            "Remote Control N2"
-          ]
-        }
-      ]
-    },
-    {
-      "file": "data/ikea-of-sweden/tradfri-bulb-e14-ws-470lm.json",
-      "manufacturer": "IKEA of Sweden",
-      "model": "TRADFRI bulb E14 WS 470lm",
-      "kind": "blakadder_ambiguous",
-      "reason": "Vendor \"IKEA of Sweden\" + model \"TRADFRI bulb E14 WS 470lm\" matched 2 Blakadder pages.",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/Ikea_LED1835C6.html",
-          "vendor": "IKEA",
-          "model": "LED1835C6",
-          "zigbeemodel": [
-            "TRADFRI bulb E14 WS 470lm"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Ikea_LED1903C5.html",
-          "vendor": "IKEA",
-          "model": "LED1903C5",
-          "zigbeemodel": [
-            "TRADFRI bulb E14 WS 470lm",
-            "TRADFRI bulb E12 WS 450lm",
-            "TRADFRI bulb E17 WS 440lm"
-          ]
-        }
-      ]
-    },
-    {
-      "file": "data/ikea-of-sweden/tradfri-bulb-e27-ww-clear-250lm.json",
-      "manufacturer": "IKEA of Sweden",
-      "model": "TRADFRI bulb E27 WW clear 250lm",
-      "kind": "blakadder_ambiguous",
-      "reason": "Vendor \"IKEA of Sweden\" + model \"TRADFRI bulb E27 WW clear 250lm\" matched 2 Blakadder pages.",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/Ikea_LED1842G3.html",
-          "vendor": "IKEA",
-          "model": "LED1842G3",
-          "zigbeemodel": [
-            "TRADFRI bulb E27 WW clear 250lm",
-            "TRADFRI bulb E26 WW clear 250lm"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Ikea_LED1934G3.html",
-          "vendor": "IKEA",
-          "model": "LED1934G3",
-          "zigbeemodel": [
-            "TRADFRIbulbE27WWclear250lm"
-          ]
-        }
-      ]
-    },
-    {
-      "file": "data/ikea-of-sweden/tradfri-bulb-gu10-ws-400lm.json",
-      "manufacturer": "IKEA of Sweden",
-      "model": "TRADFRI bulb GU10 WS 400lm",
-      "kind": "blakadder_ambiguous",
-      "reason": "Vendor \"IKEA of Sweden\" + model \"TRADFRI bulb GU10 WS 400lm\" matched 2 Blakadder pages.",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/Ikea_LED1537R6.html",
-          "vendor": "IKEA",
-          "model": "LED1537R6",
-          "zigbeemodel": [
-            "TRADFRI bulb GU10 WS 400lm"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Ikea_LED1739R5.html",
-          "vendor": "IKEA",
-          "model": "LED1739R5",
-          "zigbeemodel": [
-            "TRADFRI bulb GU10 WS 400lm"
-          ]
-        }
-      ]
-    },
-    {
-      "file": "data/ikea-of-sweden/tradfri-driver-10w.json",
-      "manufacturer": "IKEA of Sweden",
-      "model": "TRADFRI Driver 10W",
-      "kind": "blakadder_ambiguous",
-      "reason": "Vendor \"IKEA of Sweden\" + model \"TRADFRI Driver 10W\" matched 2 Blakadder pages.",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/Ikea_ICPSHC24-10EU-IL-1.html",
-          "vendor": "IKEA",
-          "model": "ICPSHC24-10EU-IL-1",
-          "zigbeemodel": [
-            "TRADFRI transformer 10W",
-            "TRADFRI Driver 10W"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Ikea_ICPSHC24-10NA-IL-1.html",
-          "vendor": "IKEA",
-          "model": "ICPSHC24-10NA-IL-1",
-          "zigbeemodel": [
-            "TRADFRI transformer 10W",
-            "TRADFRI Driver 10W"
-          ]
-        }
-      ]
-    },
-    {
-      "file": "data/ikea-of-sweden/tradfri-driver-30w.json",
-      "manufacturer": "IKEA of Sweden",
-      "model": "TRADFRI Driver 30W",
-      "kind": "blakadder_ambiguous",
-      "reason": "Vendor \"IKEA of Sweden\" + model \"TRADFRI Driver 30W\" matched 2 Blakadder pages.",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/Ikea_ICPSHC24-30EU-IL-1.html",
-          "vendor": "IKEA",
-          "model": "ICPSHC24-10EU-IL-1",
-          "zigbeemodel": [
-            "TRADFRI transformer 30W",
-            "TRADFRI Driver 30W"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Ikea_ICPSHC24-30NA-IL-1.html",
-          "vendor": "IKEA",
-          "model": "ICPSHC24-10NA-IL-1",
-          "zigbeemodel": [
-            "TRADFRI transformer 30W",
-            "TRADFRI Driver 30W"
-          ]
-        }
-      ]
-    },
-    {
-      "file": "data/sonoff/snzb-01m.json",
-      "manufacturer": "SONOFF",
-      "model": "SNZB-01M",
-      "kind": "blakadder_ambiguous",
-      "reason": "Vendor \"SONOFF\" matches, but model \"SNZB-01M\" only loosely resembles Blakadder's model string for these page(s).",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/Sonoff_SNZB-01.html",
-          "vendor": "Sonoff",
-          "model": "SNZB-01",
-          "zigbeemodel": [
-            "WB01",
-            "WB-01"
-          ]
-        }
-      ]
-    },
-    {
-      "file": "data/tyzb01-wqcac7lo/ts0205.json",
-      "manufacturer": "_TYZB01_wqcac7lo",
-      "model": "TS0205",
-      "kind": "blakadder_ambiguous",
-      "reason": "Generic Tuya model \"TS0205\" matches 2 Blakadder page(s), but manufacturer string _TYZB01_wqcac7lo isn't listed on any of them.",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/Tesla_Smart_TSL-SEN-SMOKE.html",
-          "vendor": "Tesla Smart",
-          "model": "TSL-SEN-SMOKE",
-          "zigbeemodel": [
-            "TS0205",
-            "_TYZB01_qiplt4jq"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Tuya_TS0205.html",
-          "vendor": "Tuya",
-          "model": "TS0205",
-          "zigbeemodel": [
-            "TS0205"
-          ]
-        }
-      ]
-    },
-    {
-      "file": "data/tz3000-3n2minvf/ts0004.json",
-      "manufacturer": "_TZ3000_3n2minvf",
-      "model": "TS0004",
-      "kind": "blakadder_ambiguous",
-      "reason": "Generic Tuya model \"TS0004\" matches 3 Blakadder page(s), but manufacturer string _TZ3000_3n2minvf isn't listed on any of them.",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/AllbeAI_TY4CH.html",
-          "vendor": "AllbeAI",
-          "model": "TY4CH",
-          "zigbeemodel": [
-            "TS0004",
-            "_TZ3000_excgg5kb"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Tuya_SML-04Z.html",
-          "vendor": "Tuya",
-          "model": "SML-04Z",
-          "zigbeemodel": [
-            "TS0004",
-            "_TZ3000_ltt60asa"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Tuya_TS0004.html",
-          "vendor": "Tuya",
-          "model": "TS0004",
-          "zigbeemodel": [
-            "TS0004"
-          ]
-        }
-      ]
-    },
-    {
-      "file": "data/tz3000-46t1rvdu/ts0001.json",
-      "manufacturer": "_TZ3000_46t1rvdu",
-      "model": "TS0001",
-      "kind": "blakadder_ambiguous",
-      "reason": "Generic Tuya model \"TS0001\" matches 22 Blakadder page(s), but manufacturer string _TZ3000_46t1rvdu isn't listed on any of them.",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/Aldi_141L100RC.html",
-          "vendor": "Aldi",
-          "model": "141L100RC",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_ztrfrcsu"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Aubess_AP-SMT-Breaker02-1CH.html",
-          "vendor": "Aubess",
-          "model": "AP-SMT-Breaker02-1CH",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_xkap8wtb"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/ClickSmart_CMA30651.html",
-          "vendor": "Clicksmart",
-          "model": "CMA30651",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3210_fhx7lk3d"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Cloud_Even_ZBS05-LN.html",
-          "vendor": "Cloud Even",
-          "model": "ZBS05-LN",
-          "zigbeemodel": [
-            "_TZ3000_yl3zuyaw",
-            "TS0001"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/EARU_RDCBC.html",
-          "vendor": "EARU",
-          "model": "RDCBC/Z-1P/2P",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_bezfthwc"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Girier_JR-ZDS01.html",
-          "vendor": "Girier",
-          "model": "JR-ZDS01",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_majwnphg",
-            "_TZ3000_6axxqqi2",
-            "_TZ3000_zw7yf6yk",
-            "_TZ3000_prits6g4"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Lerlink_X701A.html",
-          "vendor": "Lerlink",
-          "model": "X701A",
-          "zigbeemodel": [
-            "TS0001"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Lonsonho_X702A.html",
-          "vendor": "Lonsonho",
-          "model": "X702A",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_svoqrno4"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Moes_ZS-EU1-PNW.html",
-          "vendor": "Moes",
-          "model": "ZS-EU1-PNW",
-          "zigbeemodel": [
-            "TS0001"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Nous_LZ3.html",
-          "vendor": "Nous",
-          "model": "LZ3",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_h8ngtlxy"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/OXT_SWTZ21.html",
-          "vendor": "OXT",
-          "model": "SWTZ21",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_tqlv4ug4"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/QS-Zigbee-S05-EC.html",
-          "vendor": "Tuya",
-          "model": "QS-Zigbee-S05-EC",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_qnejhcsu",
-            "_TZ3000_x3ewpzyr"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Tuya_ADFB.html",
-          "vendor": "Tuya",
-          "model": "ADFB",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3210_dse8ogfy",
-            "_TZ3210_j4pdtz9v"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Tuya_DS-102BZN.html",
-          "vendor": "Tuya",
-          "model": "DS-102BZN",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_mantufyr"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Tuya_QS-Zigbee-CP01.html",
-          "vendor": "Tuya",
-          "model": "QS-Zigbee-CP01",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_tygpxwqa"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Tuya_SML-01Z-ES-16A.html",
-          "vendor": "Tuya",
-          "model": "SML-01Z-ES-16A",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_mkhkxx1p"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Tuya_TMZ02L.html",
-          "vendor": "Tuya",
-          "model": "TMZ02L",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_v7sopte0",
-            "_TZ3000_3a9beq8a"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Tuya_WHD02.html",
-          "vendor": "Tuya",
-          "model": "WHD02",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_hktqahrq",
-            "TS000F",
-            "_TZ3000_m9af2l6g",
-            "_TZ3000_xkap8wtb"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Tuya_valve.html",
-          "vendor": "Tuya",
-          "model": "valve",
-          "zigbeemodel": [
-            "TS011F",
-            "TS0001",
-            "_TZ3000_rk2yzt0u",
-            "_TZ3000_o4cjetlm",
-            "_TZ3000_h3noz0a5",
-            "_TYZB01_4tlksk8a"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Weten_1GNNTS.html",
-          "vendor": "Weten",
-          "model": "1GNNTS",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_wrhhi5h2"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Zemismart_ZN-LRL1E.html",
-          "vendor": "Zemismart",
-          "model": "ZN-LRL1E",
-          "zigbeemodel": [
-            "TS0001",
-            "_TZ3000_ubrvwoxv"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/eMylo_XL9251ZB.html",
-          "vendor": "eMylo",
-          "model": "XL9251ZB",
-          "zigbeemodel": [
-            "TS0001"
-          ]
-        }
-      ]
-    },
-    {
-      "file": "data/tz3000-pf7swkqp/ts0003.json",
-      "manufacturer": "_TZ3000_pf7swkqp",
-      "model": "TS0003",
-      "kind": "blakadder_ambiguous",
-      "reason": "Generic Tuya model \"TS0003\" matches 12 Blakadder page(s), but manufacturer string _TZ3000_pf7swkqp isn't listed on any of them.",
-      "candidates": [
-        {
-          "url": "https://zigbee.blakadder.com/BSEED_TS0003.html",
-          "vendor": "BSEED",
-          "model": "TS0003",
-          "zigbeemodel": [
-            "TS0042",
-            "_TZ3000_adkvzooy"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/BlitzWolf_BW-SS7.html",
-          "vendor": "BlitzWolf",
-          "model": "BW-SS7",
-          "zigbeemodel": [
-            "TS0003"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/BlitzWolf_BW-SS7_1.html",
-          "vendor": "BlitzWolf",
-          "model": "BW-SS7_1",
-          "zigbeemodel": [
-            "TS0003",
-            "_TYZB01_aneiicmq"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Eardatek_ESW-3ZAB-EU.html",
-          "vendor": "Eardatek",
-          "model": "ESW-3ZAB-EU",
-          "zigbeemodel": [
-            "TS0003",
-            "_TZ3000_v4l4b0lp"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Larkkey_ZSTY-SM-1SRZG-EU.html",
-          "vendor": "Larkkey",
-          "model": "ZSTY-SM-1SRZG-EU",
-          "zigbeemodel": [
-            "TS0003",
-            "_TZE200_sbordckq"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Lerlink_X703A.html",
-          "vendor": "Lerlink",
-          "model": "X703A",
-          "zigbeemodel": [
-            "TS0003"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Lonsonho_QS-Zigbee-S04-2C-LN.html",
-          "vendor": "Lonsonho",
-          "model": "QS-Zigbee-S04-2C-LN",
-          "zigbeemodel": [
-            "TS0003",
-            "_TYZB01_zsl6z0pw"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Lonsonho_QS-Zigbee-S05-LN.html",
-          "vendor": "Lonsonho",
-          "model": "QS-Zigbee-S05-LN",
-          "zigbeemodel": [
-            "TS0003",
-            "_TYZB01_ncutbjdi"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Moes_MS-104CZ.html",
-          "vendor": "Moes",
-          "model": "MS-104CZ",
-          "zigbeemodel": [
-            "TS0003",
-            "_TZE3000_pfc7i3kt"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Tuya_SML-03Z.html",
-          "vendor": "Tuya",
-          "model": "SML-03Z",
-          "zigbeemodel": [
-            "TS0003",
-            "_TZ3000_vsasbzkf",
-            "_TZ3000_odzoiovu"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Weelite_LS300Z.html",
-          "vendor": "Weelite",
-          "model": "LS-300Z",
-          "zigbeemodel": [
-            "TS0003"
-          ]
-        },
-        {
-          "url": "https://zigbee.blakadder.com/Zemismart_LXZB-41-AJ-3.html",
-          "vendor": "Zemismart",
-          "model": "LXZB-41-AJ-3",
-          "zigbeemodel": [
-            "TS0003"
-          ]
-        }
-      ]
-    },
-    {
-      "file": "data/tz3210-fgwhjm9j/ts011f.json",
-      "manufacturer": "_TZ3210_fgwhjm9j",
+      "file": "data/tz3000-fukaa7nc/ts011f.json",
+      "manufacturer": "_TZ3000_fukaa7nc",
       "model": "TS011F",
       "kind": "blakadder_ambiguous",
-      "reason": "Generic Tuya model \"TS011F\" matches 68 Blakadder page(s), but manufacturer string _TZ3210_fgwhjm9j isn't listed on any of them.",
+      "reason": "Generic Tuya model \"TS011F\" matches 68 Blakadder page(s), but manufacturer string _TZ3000_fukaa7nc isn't listed on any of them.",
       "candidates": [
         {
           "url": "https://zigbee.blakadder.com/Ajax_Online_AJ_ZIG_PLUG.html",
@@ -1299,45 +781,1495 @@
       ]
     },
     {
-      "file": "data/tz3290-gnl5a6a5xvql7c2a/ts1201.json",
-      "manufacturer": "_TZ3290_gnl5a6a5xvql7c2a",
-      "model": "TS1201",
+      "file": "data/tz3000-qa8s8vca/ts130f.json",
+      "manufacturer": "_TZ3000_qa8s8vca",
+      "model": "TS130F",
       "kind": "blakadder_ambiguous",
-      "reason": "Generic Tuya model \"TS1201\" matches 1 Blakadder page(s), but manufacturer string _TZ3290_gnl5a6a5xvql7c2a isn't listed on any of them.",
+      "reason": "Generic Tuya model \"TS130F\" matches 10 Blakadder page(s), but manufacturer string _TZ3000_qa8s8vca isn't listed on any of them.",
       "candidates": [
         {
-          "url": "https://zigbee.blakadder.com/Moes_UFO-R11.html",
-          "vendor": "Moes",
-          "model": "UFO-R11",
+          "url": "https://zigbee.blakadder.com/BSEED_GL86ZTRS31.html",
+          "vendor": "BSEED",
+          "model": "GL86ZTRS31",
           "zigbeemodel": [
-            "TS1201",
-            "_TZ3290_j37rooaxrcdcqo5n",
-            "_TZ3290_ot6ewjvmejq5ekhl",
-            "_TZ3290_7v1k4vufotpowp9z"
+            "TS130F",
+            "_TZ3000_wptayaqr"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Lonsonho_QS-Zigbee-C01.html",
+          "vendor": "Lonsonho",
+          "model": "QS-Zigbee-C01",
+          "zigbeemodel": [
+            "TS130F",
+            "_TZ3000_vd43bbfq",
+            "_TZ3000_fccpjz5z"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Lonsonho_TS130F.html",
+          "vendor": "Lonsonho",
+          "model": "TS130F",
+          "zigbeemodel": [
+            "TS130F",
+            "_TZ3000_egq7y6pr"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/LoraTap_SC400ZB.html",
+          "vendor": "LoraTap",
+          "model": "SC400ZB",
+          "zigbeemodel": [
+            "TS130F",
+            "_TZ3000_8kzqqzu4"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/LoraTap_SC500ZB.html",
+          "vendor": "LoraTap",
+          "model": "SC500ZB",
+          "zigbeemodel": [
+            "TS130F",
+            "_TZ3000_e3vhyirx"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Moes_MS-108ZR.html",
+          "vendor": "Moes",
+          "model": "MS-108ZR",
+          "zigbeemodel": [
+            "TS130F",
+            "_TZ3000_1dd0d5yi"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Nous_L12Z.html",
+          "vendor": "Nous",
+          "model": "L12Z",
+          "zigbeemodel": [
+            "TS130F",
+            "_TZ3000_jwv3cwak"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_QS-Zigbee-CP03.html",
+          "vendor": "Tuya",
+          "model": "QS-Zigbee-CP03",
+          "zigbeemodel": [
+            "TS130F",
+            "_TZ3000_zirycpws"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_TS130F.html",
+          "vendor": "Tuya",
+          "model": "TS130F",
+          "zigbeemodel": [
+            "TS130F",
+            "_TZ3000_l13erpv4",
+            "_TZ3000_fvhunhxb"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Zemismart_ZN-EC1E.html",
+          "vendor": "Zemismart",
+          "model": "ZN-EC1E",
+          "zigbeemodel": [
+            "TS130F",
+            "_TZ3000_ltiqubue",
+            "_TZ3000_dph3rpss"
           ]
         }
       ]
     },
     {
-      "file": "data/smartwings/wm25-l-z.json",
-      "manufacturer": "Smartwings",
-      "model": "WM25/L-Z",
-      "kind": "manufacturer_link_only",
-      "reason": "Blakadder match is high-confidence (https://zigbee.blakadder.com/Smartwings_WM25LZ.html); pre-filled manufacturer link \"https://www.smartwingshome.com/\" on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
+      "file": "data/tz3210-mja6r5ix/ts0505b.json",
+      "manufacturer": "_TZ3210_mja6r5ix",
+      "model": "TS0505B",
+      "kind": "blakadder_ambiguous",
+      "reason": "Generic Tuya model \"TS0505B\" matches 34 Blakadder page(s), but manufacturer string _TZ3210_mja6r5ix isn't listed on any of them.",
+      "candidates": [
+        {
+          "url": "https://zigbee.blakadder.com/Aldi_C422AC11D41H140.0W.html",
+          "vendor": "Aldi",
+          "model": "C422AC11D41H140.0W",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3000_v1srfw9x"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Aldi_C422AC14D41H140.0W.html",
+          "vendor": "Aldi",
+          "model": "C422AC14D41H140.0W",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3000_gb5gaeca"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Aldi_L122AA63H11A6.5W.html",
+          "vendor": "Aldi",
+          "model": "L122AA63H11A6.5W",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3000_iivsrikg"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Aldi_L122CB63H11A9.0W.html",
+          "vendor": "Aldi",
+          "model": "L122CB63H11A9.0W",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3000_j0gtlepx"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Aldi_L122FF63H11A5.0W.html",
+          "vendor": "Aldi",
+          "model": "L122FF63H11A5.0W",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3000_j0gtlepx"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Avacom_TS0505B.html",
+          "vendor": "Avacom",
+          "model": "TS0505B",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3210_remypqqm"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Garza_401311A.html",
+          "vendor": "Garza Smart",
+          "model": "401311A",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3210_sln7ah6r"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Giderwel_C05Z.html",
+          "vendor": "Giderwel",
+          "model": "C05Z",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3210_ijczzg9h"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Immax_07743L.html",
+          "vendor": "Immax",
+          "model": "07743L",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3210_pwauw3g2"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Lidl_14153706L.html",
+          "vendor": "Lidl",
+          "model": "14153706L",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3000_kohbva1f"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Lidl_14156506L.html",
+          "vendor": "Lidl",
+          "model": "14156506L",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3210_r0xgkft5"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Lidl_HG07834A.html",
+          "vendor": "Lidl",
+          "model": "HG07834A",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3000_quqaeew6"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Lidl_HG07834B.html",
+          "vendor": "Lidl",
+          "model": "HG07834B",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3000_th6zqqy6"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Lidl_HG07834C.html",
+          "vendor": "Lidl",
+          "model": "HG07834C",
+          "zigbeemodel": [
+            "TS0505A",
+            "TS0505B",
+            "_TZ3000_qd7hej8u"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Lidl_HG08007.html",
+          "vendor": "Lidl",
+          "model": "HG08007",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3210_zbabx9wh"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Lidl_HG08010.html",
+          "vendor": "Lidl",
+          "model": "HG08010",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3210_umi6vbsz"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Lidl_HG08131C.html",
+          "vendor": "Lidl",
+          "model": "HG08131C",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3000_th6zqqy6"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Mercator_S9E27LED9W-RGB-Z.html",
+          "vendor": "Mercator Ikuü",
+          "model": "S9E27LED9W-RGB-Z",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3000_x2fqbdun"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Mercator_S9GU10LED5-RGB-Z.html",
+          "vendor": "Mercator Ikuü",
+          "model": "S9GU10LED5-RGB-Z",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3000_589kq4ul"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Mercator_SMD4106W-RGB-ZB.html",
+          "vendor": "Mercator Ikuü",
+          "model": "SMD4106W-RGB-ZB",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3000_1mtktxdk"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Mercator_SMD9300.html",
+          "vendor": "Mercator Ikuü",
+          "model": "SMD9300",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3000_bujv0r9b"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Mercator_SMLD233-ZB.html",
+          "vendor": "Mercator Ikuü",
+          "model": "SMLD233-ZB",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3000_tza2vjxx"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Mercator_SMLD533-ZB.html",
+          "vendor": "Mercator Ikuü",
+          "model": "SMLD533-ZB",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3000_cmaky9gq"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/MiBoxer_FUT039Z.html",
+          "vendor": "MiBoxer",
+          "model": "FUT039Z",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3210_jicmoite"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/MiBoxer_FUTC08Z.html",
+          "vendor": "MiBoxer",
+          "model": "FUTC08Z",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3210_mny0zvkm"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Moes_ZB-TD5-RCW-GU10.html",
+          "vendor": "Moes",
+          "model": "ZB-TD5-RCW-GU10",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3210_rcggc0ys"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Moes_ZB-TDA9-RCW-E27.html",
+          "vendor": "Moes",
+          "model": "ZB-TDA9-RCW-E27",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3210_rcggc0ys"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Moes_ZLD-RCW.html",
+          "vendor": "Moes",
+          "model": "ZLD-RCW",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3000_7hcgjxpc"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Muller_Licht_404062.html",
+          "vendor": "Müller Licht",
+          "model": "404062",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3210_mntza0sw",
+            "_TZ3210_r0vzq1oj"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Oz_Smart_Things_DL41-03-10-R-ZB.html",
+          "vendor": "Oz Smart Things",
+          "model": "DL41-03-10-R-ZB",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3210_mcm6m1ma"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Skydance_WZ5.html",
+          "vendor": "Skydance",
+          "model": "WZ5",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZB210_3zfp8mki"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_TS0505B.html",
+          "vendor": "Tuya",
+          "model": "TS0505B",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3210_5snkkrxw",
+            "_TZ3210_bicjqpg4",
+            "_TZ3210_0rn9qhnu"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_ZigBee-01-5CH.html",
+          "vendor": "Tuya",
+          "model": "ZigBee-01-5CH",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3210_klv2wul0"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Zemismart_XLD-TYCL1-Z.html",
+          "vendor": "Zemismart",
+          "model": "XLD-TYCL1-Z",
+          "zigbeemodel": [
+            "TS0505B",
+            "_TZ3210_e020aaaj"
+          ]
+        }
+      ]
     },
     {
-      "file": "data/sonoff/trvzb.json",
+      "file": "data/inovelli/vzm30-sn.json",
+      "manufacturer": "Inovelli",
+      "model": "VZM30-SN",
+      "kind": "manufacturer_link_search",
+      "guessedUrl": "https://inovelli.com/products/blue-series-smart-on-off-switch-w-humidity-sensor",
+      "title": "Blue Series (Zigbee) - Smart On/Off Switch",
+      "method": "manual research 2026-10-25 (page fetched and checked by hand)",
+      "evidence": "page lists FCC ID \"2BBTA-VZM30SN\"",
+      "reason": "Found by vendor search (manual research 2026-10-25 (page fetched and checked by hand); page lists FCC ID \"2BBTA-VZM30SN\"); pre-filled as this device's manufacturer link on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
+    },
+    {
+      "file": "data/inovelli/vzm32-sn.json",
+      "manufacturer": "Inovelli",
+      "model": "VZM32-SN",
+      "kind": "manufacturer_link_search",
+      "guessedUrl": "https://inovelli.com/products/zigbee-blue-series-mmwave-presence-sensor-smart-dimmer-switch",
+      "title": "Blue Series (Zigbee) - Smart Presence Sensing Dimmer",
+      "method": "manual research 2026-10-25 (page fetched and checked by hand)",
+      "evidence": "page lists FCC ID \"2BBTA-VZM32SN\"",
+      "reason": "Found by vendor search (manual research 2026-10-25 (page fetched and checked by hand); page lists FCC ID \"2BBTA-VZM32SN\"); pre-filled as this device's manufacturer link on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
+    },
+    {
+      "file": "data/inovelli/vzm36.json",
+      "manufacturer": "Inovelli",
+      "model": "VZM36",
+      "kind": "manufacturer_link_search",
+      "guessedUrl": "https://inovelli.com/products/zigbee-blue-series-smart-fan-light-canopy-module",
+      "title": "Blue Series (Zigbee) Smart Fan/Light Canopy Module",
+      "method": "manual research 2026-10-25 (page fetched and checked by hand)",
+      "evidence": "page lists FCC ID \"2BBTA-VZM36\"",
+      "reason": "Found by vendor search (manual research 2026-10-25 (page fetched and checked by hand); page lists FCC ID \"2BBTA-VZM36\"); pre-filled as this device's manufacturer link on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
+    },
+    {
+      "file": "data/sonoff/dongle-e-r.json",
       "manufacturer": "SONOFF",
-      "model": "TRVZB",
-      "kind": "manufacturer_link_only",
-      "reason": "Blakadder match is high-confidence (https://zigbee.blakadder.com/Sonoff_TRVZB.html); pre-filled manufacturer link \"https://sonoff.tech/products/sonoff-zigbee-thermostatic-radiator-valve\" on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
+      "model": "DONGLE-E_R",
+      "kind": "manufacturer_link_search",
+      "guessedUrl": "https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e",
+      "title": "SONOFF Zigbee 3.0 USB Dongle Plus - ZBDongle-E",
+      "method": "shop search on sonoff.tech",
+      "evidence": "page mentions \"zbdonglee\"",
+      "reason": "Found by vendor search (shop search on sonoff.tech; page mentions \"zbdonglee\"); pre-filled as this device's manufacturer link on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
     },
     {
-      "file": "data/tz3000-1obwwnmq/ts011f.json",
-      "manufacturer": "_TZ3000_1obwwnmq",
+      "file": "data/sonoff/mini-zb2gs-l.json",
+      "manufacturer": "SONOFF",
+      "model": "MINI-ZB2GS-L",
+      "kind": "manufacturer_link_search",
+      "guessedUrl": "https://sonoff.tech/en-eu/products/sonoff-mini-duo-l-2-gang-zigbee-smart-switch-mini-zb2gs-l",
+      "title": "SONOFF MINI DUO-L 2-Gang Zigbee Smart Switch",
+      "method": "manual research 2026-10-25 (page fetched and checked by hand)",
+      "evidence": "product URL and search listing name \"MINI-ZB2GS-L\"",
+      "reason": "Found by vendor search (manual research 2026-10-25 (page fetched and checked by hand); product URL and search listing name \"MINI-ZB2GS-L\"); pre-filled as this device's manufacturer link on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
+    },
+    {
+      "file": "data/sonoff/mini-zb2gs.json",
+      "manufacturer": "SONOFF",
+      "model": "MINI-ZB2GS",
+      "kind": "manufacturer_link_search",
+      "guessedUrl": "https://sonoff.tech/en-de/products/sonoff-mini-duo-2-gang-zigbee-smart-switch-mini-zb2gs",
+      "title": "SONOFF MINI DUO 2-Gang Zigbee Smart Switch",
+      "method": "manual research 2026-10-25 (page fetched and checked by hand)",
+      "evidence": "page mentions \"MINI-ZB2GS\"",
+      "reason": "Found by vendor search (manual research 2026-10-25 (page fetched and checked by hand); page mentions \"MINI-ZB2GS\"); pre-filled as this device's manufacturer link on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
+    },
+    {
+      "file": "data/sonoff/mini-zbdim.json",
+      "manufacturer": "SONOFF",
+      "model": "MINI-ZBDIM",
+      "kind": "manufacturer_link_search",
+      "guessedUrl": "https://sonoff.tech/products/sonoff-mini-extreme-zigbee-dimmer-switch-mini-zbdim",
+      "title": "SONOFF MINI Extreme Zigbee Dimmer Switch",
+      "method": "manual research 2026-10-25 (page fetched and checked by hand)",
+      "evidence": "page mentions \"MINI-ZBDIM\"",
+      "reason": "Found by vendor search (manual research 2026-10-25 (page fetched and checked by hand); page mentions \"MINI-ZBDIM\"); pre-filled as this device's manufacturer link on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
+    },
+    {
+      "file": "data/sonoff/mini-zbrbs.json",
+      "manufacturer": "SONOFF",
+      "model": "MINI-ZBRBS",
+      "kind": "manufacturer_link_search",
+      "guessedUrl": "https://sonoff.tech/products/sonoff-zigbee-smart-roller-shutter-switch-mini-zbrbs",
+      "title": "SONOFF Zigbee Smart Roller Shutter Switch",
+      "method": "manual research 2026-10-25 (page fetched and checked by hand)",
+      "evidence": "page mentions \"MINI-ZBRBS\"",
+      "reason": "Found by vendor search (manual research 2026-10-25 (page fetched and checked by hand); page mentions \"MINI-ZBRBS\"); pre-filled as this device's manufacturer link on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
+    },
+    {
+      "file": "data/sonoff/s60zbtpg.json",
+      "manufacturer": "SONOFF",
+      "model": "S60ZBTPG",
+      "kind": "manufacturer_link_search",
+      "guessedUrl": "https://sonoff.tech/products/sonoff-iplug-zigbee-smart-plug-s60-series",
+      "title": "SONOFF iPlug Zigbee Smart Plug (S60 Series)",
+      "method": "manual research 2026-10-25 (page fetched and checked by hand)",
+      "evidence": "page lists models \"S60ZBTPF/S60ZBTPG\"",
+      "reason": "Found by vendor search (manual research 2026-10-25 (page fetched and checked by hand); page lists models \"S60ZBTPF/S60ZBTPG\"); pre-filled as this device's manufacturer link on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
+    },
+    {
+      "file": "data/sonoff/snzb-06p24.json",
+      "manufacturer": "SONOFF",
+      "model": "SNZB-06P24",
+      "kind": "manufacturer_link_search",
+      "guessedUrl": "https://sonoff.tech/en-us/products/sonoff-senseguard-presence-core-24ghz-zigbee-human-presence-sensor-snzb-06p24",
+      "title": "SONOFF SenseGuard Presence Core 24GHz Zigbee Human Presence Sensor - SNZB-06P24",
+      "method": "shop search on sonoff.tech",
+      "evidence": "page mentions \"snzb06p24\"",
+      "reason": "Found by vendor search (shop search on sonoff.tech; page mentions \"snzb06p24\"); pre-filled as this device's manufacturer link on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
+    },
+    {
+      "file": "data/third-reality-inc/3rdts01056z.json",
+      "manufacturer": "Third Reality, Inc",
+      "model": "3RDTS01056Z",
+      "kind": "manufacturer_link_search",
+      "guessedUrl": "https://thirdreality.com/products/smart-garage-door-tilt-sensor",
+      "title": "Smart Garage Door Tilt Sensor",
+      "method": "manual research 2026-10-25 (page fetched and checked by hand)",
+      "evidence": "Third Reality's only Zigbee garage door tilt sensor (Z2M: 3RDTS01056Z); model number not printed on the page",
+      "reason": "Found by vendor search (manual research 2026-10-25 (page fetched and checked by hand); Third Reality's only Zigbee garage door tilt sensor (Z2M: 3RDTS01056Z); model number not printed on the page); pre-filled as this device's manufacturer link on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
+    },
+    {
+      "file": "data/ikea-of-sweden/badring-water-leakage-sensor.json",
+      "manufacturer": "IKEA of Sweden",
+      "model": "BADRING Water Leakage Sensor",
+      "fields": {
+        "manufacturer": "IKEA",
+        "deviceName": "Products",
+        "model": "E2202",
+        "zigbeeId": "BADRING Water Leakage Sensor",
+        "category": "sensor",
+        "vendorLink": "https://www.ikea.com/us/en/p/badring-water-leakage-sensor-smart-60504352/",
+        "manufacturerLink": "https://www.ikea.com/us/en/p/badring-water-leakage-sensor-smart-60504352/",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"IKEA of Sweden\", model \"BADRING Water Leakage Sensor\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "prefillUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdtOVidl6QjBtN57Bta1wRttLB_gBOgReDZPmtaANhjrwdfpQ/viewform?usp=pp_url&entry.1402769771=IKEA&entry.686642770=Products&entry.2085911643=E2202&entry.1792822153=BADRING+Water+Leakage+Sensor&entry.1087176243=sensor&entry.1013187941=https%3A%2F%2Fwww.ikea.com%2Fus%2Fen%2Fp%2Fbadring-water-leakage-sensor-smart-60504352%2F&entry.909726705=https%3A%2F%2Fwww.ikea.com%2Fus%2Fen%2Fp%2Fbadring-water-leakage-sensor-smart-60504352%2F&entry.2131627877=ZHA&entry.2131627877=Zigbee2MQTT&entry.2090640393=Zigbee+signature+from+a+ZHA+scan%3A+manufacturer+%22IKEA+of+Sweden%22%2C+model+%22BADRING+Water+Leakage+Sensor%22.+Capability+scan%3A+https%3A%2F%2Fhsolgaard.github.io%2Fzigbee-capabilities%2F",
+      "manufacturerLinkPending": false,
+      "kind": "blakadder_submission"
+    },
+    {
+      "file": "data/ikea-of-sweden/inspelning-smart-plug.json",
+      "manufacturer": "IKEA of Sweden",
+      "model": "INSPELNING Smart plug",
+      "fields": {
+        "manufacturer": "IKEA",
+        "deviceName": "All Products - Design and Quality at the Best Price",
+        "model": "E22xx",
+        "zigbeeId": "INSPELNING Smart plug",
+        "category": "plug",
+        "vendorLink": "https://www.ikea.com/es/en/p/inspelning-plug-smart-energy-monitor-00569836/",
+        "manufacturerLink": "https://www.ikea.com/es/en/p/inspelning-plug-smart-energy-monitor-00569836/",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"IKEA of Sweden\", model \"INSPELNING Smart plug\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "prefillUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdtOVidl6QjBtN57Bta1wRttLB_gBOgReDZPmtaANhjrwdfpQ/viewform?usp=pp_url&entry.1402769771=IKEA&entry.686642770=All+Products+-+Design+and+Quality+at+the+Best+Price&entry.2085911643=E22xx&entry.1792822153=INSPELNING+Smart+plug&entry.1087176243=plug&entry.1013187941=https%3A%2F%2Fwww.ikea.com%2Fes%2Fen%2Fp%2Finspelning-plug-smart-energy-monitor-00569836%2F&entry.909726705=https%3A%2F%2Fwww.ikea.com%2Fes%2Fen%2Fp%2Finspelning-plug-smart-energy-monitor-00569836%2F&entry.2131627877=ZHA&entry.2131627877=Zigbee2MQTT&entry.2090640393=Zigbee+signature+from+a+ZHA+scan%3A+manufacturer+%22IKEA+of+Sweden%22%2C+model+%22INSPELNING+Smart+plug%22.+Capability+scan%3A+https%3A%2F%2Fhsolgaard.github.io%2Fzigbee-capabilities%2F",
+      "manufacturerLinkPending": false,
+      "kind": "blakadder_submission"
+    },
+    {
+      "file": "data/ikea-of-sweden/ormanas-led-strip.json",
+      "manufacturer": "IKEA of Sweden",
+      "model": "ORMANAS LED Strip",
+      "fields": {
+        "manufacturer": "IKEA",
+        "deviceName": "ORMANÄS LED light strip, smart wireless dimmable/color and white spectrum, 157\"",
+        "model": "L2112",
+        "zigbeeId": "ORMANAS LED Strip",
+        "category": "light",
+        "vendorLink": "https://www.ikea.com/us/en/p/ormanaes-led-light-strip-smart-wireless-dimmable-color-and-white-spectrum-20541323/",
+        "manufacturerLink": "https://www.ikea.com/us/en/p/ormanaes-led-light-strip-smart-wireless-dimmable-color-and-white-spectrum-20541323/",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"IKEA of Sweden\", model \"ORMANAS LED Strip\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "prefillUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdtOVidl6QjBtN57Bta1wRttLB_gBOgReDZPmtaANhjrwdfpQ/viewform?usp=pp_url&entry.1402769771=IKEA&entry.686642770=ORMAN%C3%84S+LED+light+strip%2C+smart+wireless+dimmable%2Fcolor+and+white+spectrum%2C+157%22&entry.2085911643=L2112&entry.1792822153=ORMANAS+LED+Strip&entry.1087176243=light&entry.1013187941=https%3A%2F%2Fwww.ikea.com%2Fus%2Fen%2Fp%2Formanaes-led-light-strip-smart-wireless-dimmable-color-and-white-spectrum-20541323%2F&entry.909726705=https%3A%2F%2Fwww.ikea.com%2Fus%2Fen%2Fp%2Formanaes-led-light-strip-smart-wireless-dimmable-color-and-white-spectrum-20541323%2F&entry.2131627877=ZHA&entry.2131627877=Zigbee2MQTT&entry.2090640393=Zigbee+signature+from+a+ZHA+scan%3A+manufacturer+%22IKEA+of+Sweden%22%2C+model+%22ORMANAS+LED+Strip%22.+Capability+scan%3A+https%3A%2F%2Fhsolgaard.github.io%2Fzigbee-capabilities%2F",
+      "manufacturerLinkPending": false,
+      "kind": "blakadder_submission"
+    },
+    {
+      "file": "data/ikea-of-sweden/parasoll-door-window-sensor.json",
+      "manufacturer": "IKEA of Sweden",
+      "model": "PARASOLL Door/Window Sensor",
+      "fields": {
+        "manufacturer": "IKEA",
+        "deviceName": "PARASOLL door/window sensor, smart/white",
+        "model": "E2013",
+        "zigbeeId": "PARASOLL Door/Window Sensor",
+        "category": "sensor",
+        "vendorLink": "https://www.ikea.com/us/en/p/parasoll-door-window-sensor-smart-white-70504318/",
+        "manufacturerLink": "https://www.ikea.com/us/en/p/parasoll-door-window-sensor-smart-white-70504318/",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"IKEA of Sweden\", model \"PARASOLL Door/Window Sensor\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "prefillUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdtOVidl6QjBtN57Bta1wRttLB_gBOgReDZPmtaANhjrwdfpQ/viewform?usp=pp_url&entry.1402769771=IKEA&entry.686642770=PARASOLL+door%2Fwindow+sensor%2C+smart%2Fwhite&entry.2085911643=E2013&entry.1792822153=PARASOLL+Door%2FWindow+Sensor&entry.1087176243=sensor&entry.1013187941=https%3A%2F%2Fwww.ikea.com%2Fus%2Fen%2Fp%2Fparasoll-door-window-sensor-smart-white-70504318%2F&entry.909726705=https%3A%2F%2Fwww.ikea.com%2Fus%2Fen%2Fp%2Fparasoll-door-window-sensor-smart-white-70504318%2F&entry.2131627877=ZHA&entry.2131627877=Zigbee2MQTT&entry.2090640393=Zigbee+signature+from+a+ZHA+scan%3A+manufacturer+%22IKEA+of+Sweden%22%2C+model+%22PARASOLL+Door%2FWindow+Sensor%22.+Capability+scan%3A+https%3A%2F%2Fhsolgaard.github.io%2Fzigbee-capabilities%2F",
+      "manufacturerLinkPending": false,
+      "kind": "blakadder_submission"
+    },
+    {
+      "file": "data/ikea-of-sweden/tradfri-bulb-gu10-ww-345lm8.json",
+      "manufacturer": "IKEA of Sweden",
+      "model": "\u001aTRADFRI bulb GU10 WW 345lm8",
+      "fields": {
+        "manufacturer": "IKEA",
+        "deviceName": "TRÅDFRI LED bulb GU10 345 lumen, smart/wireless dimmable warm white",
+        "model": "LED2104R3",
+        "zigbeeId": "\u001aTRADFRI bulb GU10 WW 345lm8",
+        "category": "light",
+        "vendorLink": "https://www.ikea.com/kw/en/p/tradfri-led-bulb-gu10-345-lumen-smart-wireless-dimmable-warm-white-00541300/",
+        "manufacturerLink": "https://www.ikea.com/kw/en/p/tradfri-led-bulb-gu10-345-lumen-smart-wireless-dimmable-warm-white-00541300/",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"IKEA of Sweden\", model \"\u001aTRADFRI bulb GU10 WW 345lm8\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "prefillUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdtOVidl6QjBtN57Bta1wRttLB_gBOgReDZPmtaANhjrwdfpQ/viewform?usp=pp_url&entry.1402769771=IKEA&entry.686642770=TR%C3%85DFRI+LED+bulb+GU10+345+lumen%2C+smart%2Fwireless+dimmable+warm+white&entry.2085911643=LED2104R3&entry.1792822153=%1ATRADFRI+bulb+GU10+WW+345lm8&entry.1087176243=light&entry.1013187941=https%3A%2F%2Fwww.ikea.com%2Fkw%2Fen%2Fp%2Ftradfri-led-bulb-gu10-345-lumen-smart-wireless-dimmable-warm-white-00541300%2F&entry.909726705=https%3A%2F%2Fwww.ikea.com%2Fkw%2Fen%2Fp%2Ftradfri-led-bulb-gu10-345-lumen-smart-wireless-dimmable-warm-white-00541300%2F&entry.2131627877=ZHA&entry.2131627877=Zigbee2MQTT&entry.2090640393=Zigbee+signature+from+a+ZHA+scan%3A+manufacturer+%22IKEA+of+Sweden%22%2C+model+%22%1ATRADFRI+bulb+GU10+WW+345lm8%22.+Capability+scan%3A+https%3A%2F%2Fhsolgaard.github.io%2Fzigbee-capabilities%2F",
+      "manufacturerLinkPending": false,
+      "kind": "blakadder_submission"
+    },
+    {
+      "file": "data/ikea-of-sweden/tretakt-smart-plug.json",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRETAKT Smart plug",
+      "fields": {
+        "manufacturer": "IKEA",
+        "deviceName": "TRETAKT plug, smart",
+        "model": "E22x4",
+        "zigbeeId": "TRETAKT Smart plug",
+        "category": "plug",
+        "vendorLink": "https://www.ikea.com/us/en/p/tretakt-plug-smart-40556511/",
+        "manufacturerLink": "https://www.ikea.com/us/en/p/tretakt-plug-smart-40556511/",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"IKEA of Sweden\", model \"TRETAKT Smart plug\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "prefillUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdtOVidl6QjBtN57Bta1wRttLB_gBOgReDZPmtaANhjrwdfpQ/viewform?usp=pp_url&entry.1402769771=IKEA&entry.686642770=TRETAKT+plug%2C+smart&entry.2085911643=E22x4&entry.1792822153=TRETAKT+Smart+plug&entry.1087176243=plug&entry.1013187941=https%3A%2F%2Fwww.ikea.com%2Fus%2Fen%2Fp%2Ftretakt-plug-smart-40556511%2F&entry.909726705=https%3A%2F%2Fwww.ikea.com%2Fus%2Fen%2Fp%2Ftretakt-plug-smart-40556511%2F&entry.2131627877=ZHA&entry.2131627877=Zigbee2MQTT&entry.2090640393=Zigbee+signature+from+a+ZHA+scan%3A+manufacturer+%22IKEA+of+Sweden%22%2C+model+%22TRETAKT+Smart+plug%22.+Capability+scan%3A+https%3A%2F%2Fhsolgaard.github.io%2Fzigbee-capabilities%2F",
+      "manufacturerLinkPending": false,
+      "kind": "blakadder_submission"
+    },
+    {
+      "file": "data/ikea-of-sweden/vallhorn-wireless-motion-sensor.json",
+      "manufacturer": "IKEA of Sweden",
+      "model": "VALLHORN Wireless Motion Sensor",
+      "fields": {
+        "manufacturer": "IKEA",
+        "deviceName": "Products",
+        "model": "E2134",
+        "zigbeeId": "VALLHORN Wireless Motion Sensor",
+        "category": "sensor",
+        "vendorLink": "https://www.ikea.com/jo/en/p/vallhorn-wireless-motion-sensor-smart-white-90504341/",
+        "manufacturerLink": "https://www.ikea.com/jo/en/p/vallhorn-wireless-motion-sensor-smart-white-90504341/",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"IKEA of Sweden\", model \"VALLHORN Wireless Motion Sensor\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "prefillUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdtOVidl6QjBtN57Bta1wRttLB_gBOgReDZPmtaANhjrwdfpQ/viewform?usp=pp_url&entry.1402769771=IKEA&entry.686642770=Products&entry.2085911643=E2134&entry.1792822153=VALLHORN+Wireless+Motion+Sensor&entry.1087176243=sensor&entry.1013187941=https%3A%2F%2Fwww.ikea.com%2Fjo%2Fen%2Fp%2Fvallhorn-wireless-motion-sensor-smart-white-90504341%2F&entry.909726705=https%3A%2F%2Fwww.ikea.com%2Fjo%2Fen%2Fp%2Fvallhorn-wireless-motion-sensor-smart-white-90504341%2F&entry.2131627877=ZHA&entry.2131627877=Zigbee2MQTT&entry.2090640393=Zigbee+signature+from+a+ZHA+scan%3A+manufacturer+%22IKEA+of+Sweden%22%2C+model+%22VALLHORN+Wireless+Motion+Sensor%22.+Capability+scan%3A+https%3A%2F%2Fhsolgaard.github.io%2Fzigbee-capabilities%2F",
+      "manufacturerLinkPending": false,
+      "kind": "blakadder_submission"
+    },
+    {
+      "file": "data/inovelli/vzm30-sn.json",
+      "manufacturer": "Inovelli",
+      "model": "VZM30-SN",
+      "fields": {
+        "manufacturer": "Inovelli",
+        "deviceName": "Blue Series (Zigbee) - Smart On/Off Switch",
+        "model": "VZM30-SN",
+        "zigbeeId": "VZM30-SN",
+        "category": "switch",
+        "vendorLink": "https://inovelli.com/products/blue-series-smart-on-off-switch-w-humidity-sensor",
+        "manufacturerLink": "https://inovelli.com/products/blue-series-smart-on-off-switch-w-humidity-sensor",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"Inovelli\", model \"VZM30-SN\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "prefillUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdtOVidl6QjBtN57Bta1wRttLB_gBOgReDZPmtaANhjrwdfpQ/viewform?usp=pp_url&entry.1402769771=Inovelli&entry.686642770=Blue+Series+%28Zigbee%29+-+Smart+On%2FOff+Switch&entry.2085911643=VZM30-SN&entry.1792822153=VZM30-SN&entry.1087176243=switch&entry.1013187941=https%3A%2F%2Finovelli.com%2Fproducts%2Fblue-series-smart-on-off-switch-w-humidity-sensor&entry.909726705=https%3A%2F%2Finovelli.com%2Fproducts%2Fblue-series-smart-on-off-switch-w-humidity-sensor&entry.2131627877=ZHA&entry.2131627877=Zigbee2MQTT&entry.2090640393=Zigbee+signature+from+a+ZHA+scan%3A+manufacturer+%22Inovelli%22%2C+model+%22VZM30-SN%22.+Capability+scan%3A+https%3A%2F%2Fhsolgaard.github.io%2Fzigbee-capabilities%2F",
+      "manufacturerLinkPending": true,
+      "kind": "blakadder_submission"
+    },
+    {
+      "file": "data/inovelli/vzm32-sn.json",
+      "manufacturer": "Inovelli",
+      "model": "VZM32-SN",
+      "fields": {
+        "manufacturer": "Inovelli",
+        "deviceName": "Blue Series (Zigbee) - Smart Presence Sensing Dimmer",
+        "model": "VZM32-SN",
+        "zigbeeId": "VZM32-SN",
+        "category": "dimmer",
+        "vendorLink": "https://inovelli.com/products/zigbee-blue-series-mmwave-presence-sensor-smart-dimmer-switch",
+        "manufacturerLink": "https://inovelli.com/products/zigbee-blue-series-mmwave-presence-sensor-smart-dimmer-switch",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"Inovelli\", model \"VZM32-SN\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "prefillUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdtOVidl6QjBtN57Bta1wRttLB_gBOgReDZPmtaANhjrwdfpQ/viewform?usp=pp_url&entry.1402769771=Inovelli&entry.686642770=Blue+Series+%28Zigbee%29+-+Smart+Presence+Sensing+Dimmer&entry.2085911643=VZM32-SN&entry.1792822153=VZM32-SN&entry.1087176243=dimmer&entry.1013187941=https%3A%2F%2Finovelli.com%2Fproducts%2Fzigbee-blue-series-mmwave-presence-sensor-smart-dimmer-switch&entry.909726705=https%3A%2F%2Finovelli.com%2Fproducts%2Fzigbee-blue-series-mmwave-presence-sensor-smart-dimmer-switch&entry.2131627877=ZHA&entry.2131627877=Zigbee2MQTT&entry.2090640393=Zigbee+signature+from+a+ZHA+scan%3A+manufacturer+%22Inovelli%22%2C+model+%22VZM32-SN%22.+Capability+scan%3A+https%3A%2F%2Fhsolgaard.github.io%2Fzigbee-capabilities%2F",
+      "manufacturerLinkPending": true,
+      "kind": "blakadder_submission"
+    },
+    {
+      "file": "data/inovelli/vzm36.json",
+      "manufacturer": "Inovelli",
+      "model": "VZM36",
+      "fields": {
+        "manufacturer": "Inovelli",
+        "deviceName": "Blue Series (Zigbee) Smart Fan/Light Canopy Module",
+        "model": "VZM36",
+        "zigbeeId": "VZM36",
+        "category": "other",
+        "vendorLink": "https://inovelli.com/products/zigbee-blue-series-smart-fan-light-canopy-module",
+        "manufacturerLink": "https://inovelli.com/products/zigbee-blue-series-smart-fan-light-canopy-module",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"Inovelli\", model \"VZM36\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "prefillUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdtOVidl6QjBtN57Bta1wRttLB_gBOgReDZPmtaANhjrwdfpQ/viewform?usp=pp_url&entry.1402769771=Inovelli&entry.686642770=Blue+Series+%28Zigbee%29+Smart+Fan%2FLight+Canopy+Module&entry.2085911643=VZM36&entry.1792822153=VZM36&entry.1087176243=other&entry.1013187941=https%3A%2F%2Finovelli.com%2Fproducts%2Fzigbee-blue-series-smart-fan-light-canopy-module&entry.909726705=https%3A%2F%2Finovelli.com%2Fproducts%2Fzigbee-blue-series-smart-fan-light-canopy-module&entry.2131627877=ZHA&entry.2131627877=Zigbee2MQTT&entry.2090640393=Zigbee+signature+from+a+ZHA+scan%3A+manufacturer+%22Inovelli%22%2C+model+%22VZM36%22.+Capability+scan%3A+https%3A%2F%2Fhsolgaard.github.io%2Fzigbee-capabilities%2F",
+      "manufacturerLinkPending": true,
+      "kind": "blakadder_submission"
+    },
+    {
+      "file": "data/repenic-ltd/rd-250zg.json",
+      "manufacturer": "Repenic Ltd.",
+      "model": "RD-250ZG",
+      "fields": {
+        "manufacturer": "Repenic Ltd.",
+        "deviceName": "Smart dimmer module",
+        "model": "RD-250ZG",
+        "zigbeeId": "RD-250ZG",
+        "category": "dimmer",
+        "vendorLink": "https://www.repenic.com/products/smart-dimmer-module?variant=42525994287152",
+        "manufacturerLink": "https://www.repenic.com/products/smart-dimmer-module?variant=42525994287152",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"Repenic Ltd.\", model \"RD-250ZG\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "prefillUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdtOVidl6QjBtN57Bta1wRttLB_gBOgReDZPmtaANhjrwdfpQ/viewform?usp=pp_url&entry.1402769771=Repenic+Ltd.&entry.686642770=Smart+dimmer+module&entry.2085911643=RD-250ZG&entry.1792822153=RD-250ZG&entry.1087176243=dimmer&entry.1013187941=https%3A%2F%2Fwww.repenic.com%2Fproducts%2Fsmart-dimmer-module%3Fvariant%3D42525994287152&entry.909726705=https%3A%2F%2Fwww.repenic.com%2Fproducts%2Fsmart-dimmer-module%3Fvariant%3D42525994287152&entry.2131627877=ZHA&entry.2131627877=Zigbee2MQTT&entry.2090640393=Zigbee+signature+from+a+ZHA+scan%3A+manufacturer+%22Repenic+Ltd.%22%2C+model+%22RD-250ZG%22.+Capability+scan%3A+https%3A%2F%2Fhsolgaard.github.io%2Fzigbee-capabilities%2F",
+      "manufacturerLinkPending": false,
+      "kind": "blakadder_submission"
+    },
+    {
+      "file": "data/sonoff/mini-zb2gs-l.json",
+      "manufacturer": "SONOFF",
+      "model": "MINI-ZB2GS-L",
+      "fields": {
+        "manufacturer": "SONOFF",
+        "deviceName": "MINI DUO-L 2-Gang Zigbee Smart Switch",
+        "model": "MINI-ZB2GS-L",
+        "zigbeeId": "MINI-ZB2GS-L",
+        "category": "switch",
+        "vendorLink": "https://sonoff.tech/en-eu/products/sonoff-mini-duo-l-2-gang-zigbee-smart-switch-mini-zb2gs-l",
+        "manufacturerLink": "https://sonoff.tech/en-eu/products/sonoff-mini-duo-l-2-gang-zigbee-smart-switch-mini-zb2gs-l",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"SONOFF\", model \"MINI-ZB2GS-L\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "prefillUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdtOVidl6QjBtN57Bta1wRttLB_gBOgReDZPmtaANhjrwdfpQ/viewform?usp=pp_url&entry.1402769771=SONOFF&entry.686642770=MINI+DUO-L+2-Gang+Zigbee+Smart+Switch&entry.2085911643=MINI-ZB2GS-L&entry.1792822153=MINI-ZB2GS-L&entry.1087176243=switch&entry.1013187941=https%3A%2F%2Fsonoff.tech%2Fen-eu%2Fproducts%2Fsonoff-mini-duo-l-2-gang-zigbee-smart-switch-mini-zb2gs-l&entry.909726705=https%3A%2F%2Fsonoff.tech%2Fen-eu%2Fproducts%2Fsonoff-mini-duo-l-2-gang-zigbee-smart-switch-mini-zb2gs-l&entry.2131627877=ZHA&entry.2131627877=Zigbee2MQTT&entry.2090640393=Zigbee+signature+from+a+ZHA+scan%3A+manufacturer+%22SONOFF%22%2C+model+%22MINI-ZB2GS-L%22.+Capability+scan%3A+https%3A%2F%2Fhsolgaard.github.io%2Fzigbee-capabilities%2F",
+      "manufacturerLinkPending": true,
+      "kind": "blakadder_submission"
+    },
+    {
+      "file": "data/sonoff/mini-zb2gs.json",
+      "manufacturer": "SONOFF",
+      "model": "MINI-ZB2GS",
+      "fields": {
+        "manufacturer": "SONOFF",
+        "deviceName": "MINI DUO 2-Gang Zigbee Smart Switch",
+        "model": "MINI-ZB2GS",
+        "zigbeeId": "MINI-ZB2GS",
+        "category": "switch",
+        "vendorLink": "https://sonoff.tech/en-de/products/sonoff-mini-duo-2-gang-zigbee-smart-switch-mini-zb2gs",
+        "manufacturerLink": "https://sonoff.tech/en-de/products/sonoff-mini-duo-2-gang-zigbee-smart-switch-mini-zb2gs",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"SONOFF\", model \"MINI-ZB2GS\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "prefillUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdtOVidl6QjBtN57Bta1wRttLB_gBOgReDZPmtaANhjrwdfpQ/viewform?usp=pp_url&entry.1402769771=SONOFF&entry.686642770=MINI+DUO+2-Gang+Zigbee+Smart+Switch&entry.2085911643=MINI-ZB2GS&entry.1792822153=MINI-ZB2GS&entry.1087176243=switch&entry.1013187941=https%3A%2F%2Fsonoff.tech%2Fen-de%2Fproducts%2Fsonoff-mini-duo-2-gang-zigbee-smart-switch-mini-zb2gs&entry.909726705=https%3A%2F%2Fsonoff.tech%2Fen-de%2Fproducts%2Fsonoff-mini-duo-2-gang-zigbee-smart-switch-mini-zb2gs&entry.2131627877=ZHA&entry.2131627877=Zigbee2MQTT&entry.2090640393=Zigbee+signature+from+a+ZHA+scan%3A+manufacturer+%22SONOFF%22%2C+model+%22MINI-ZB2GS%22.+Capability+scan%3A+https%3A%2F%2Fhsolgaard.github.io%2Fzigbee-capabilities%2F",
+      "manufacturerLinkPending": true,
+      "kind": "blakadder_submission"
+    },
+    {
+      "file": "data/sonoff/mini-zbdim.json",
+      "manufacturer": "SONOFF",
+      "model": "MINI-ZBDIM",
+      "fields": {
+        "manufacturer": "SONOFF",
+        "deviceName": "MINI Extreme Zigbee Dimmer Switch",
+        "model": "MINI-ZBDIM",
+        "zigbeeId": "MINI-ZBDIM",
+        "category": "dimmer",
+        "vendorLink": "https://sonoff.tech/products/sonoff-mini-extreme-zigbee-dimmer-switch-mini-zbdim",
+        "manufacturerLink": "https://sonoff.tech/products/sonoff-mini-extreme-zigbee-dimmer-switch-mini-zbdim",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"SONOFF\", model \"MINI-ZBDIM\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "prefillUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdtOVidl6QjBtN57Bta1wRttLB_gBOgReDZPmtaANhjrwdfpQ/viewform?usp=pp_url&entry.1402769771=SONOFF&entry.686642770=MINI+Extreme+Zigbee+Dimmer+Switch&entry.2085911643=MINI-ZBDIM&entry.1792822153=MINI-ZBDIM&entry.1087176243=dimmer&entry.1013187941=https%3A%2F%2Fsonoff.tech%2Fproducts%2Fsonoff-mini-extreme-zigbee-dimmer-switch-mini-zbdim&entry.909726705=https%3A%2F%2Fsonoff.tech%2Fproducts%2Fsonoff-mini-extreme-zigbee-dimmer-switch-mini-zbdim&entry.2131627877=ZHA&entry.2131627877=Zigbee2MQTT&entry.2090640393=Zigbee+signature+from+a+ZHA+scan%3A+manufacturer+%22SONOFF%22%2C+model+%22MINI-ZBDIM%22.+Capability+scan%3A+https%3A%2F%2Fhsolgaard.github.io%2Fzigbee-capabilities%2F",
+      "manufacturerLinkPending": true,
+      "kind": "blakadder_submission"
+    },
+    {
+      "file": "data/sonoff/mini-zbrbs.json",
+      "manufacturer": "SONOFF",
+      "model": "MINI-ZBRBS",
+      "fields": {
+        "manufacturer": "SONOFF",
+        "deviceName": "Zigbee Smart Roller Shutter Switch",
+        "model": "MINI-ZBRBS",
+        "zigbeeId": "MINI-ZBRBS",
+        "category": "cover",
+        "vendorLink": "https://sonoff.tech/products/sonoff-zigbee-smart-roller-shutter-switch-mini-zbrbs",
+        "manufacturerLink": "https://sonoff.tech/products/sonoff-zigbee-smart-roller-shutter-switch-mini-zbrbs",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"SONOFF\", model \"MINI-ZBRBS\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "prefillUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdtOVidl6QjBtN57Bta1wRttLB_gBOgReDZPmtaANhjrwdfpQ/viewform?usp=pp_url&entry.1402769771=SONOFF&entry.686642770=Zigbee+Smart+Roller+Shutter+Switch&entry.2085911643=MINI-ZBRBS&entry.1792822153=MINI-ZBRBS&entry.1087176243=cover&entry.1013187941=https%3A%2F%2Fsonoff.tech%2Fproducts%2Fsonoff-zigbee-smart-roller-shutter-switch-mini-zbrbs&entry.909726705=https%3A%2F%2Fsonoff.tech%2Fproducts%2Fsonoff-zigbee-smart-roller-shutter-switch-mini-zbrbs&entry.2131627877=ZHA&entry.2131627877=Zigbee2MQTT&entry.2090640393=Zigbee+signature+from+a+ZHA+scan%3A+manufacturer+%22SONOFF%22%2C+model+%22MINI-ZBRBS%22.+Capability+scan%3A+https%3A%2F%2Fhsolgaard.github.io%2Fzigbee-capabilities%2F",
+      "manufacturerLinkPending": true,
+      "kind": "blakadder_submission"
+    },
+    {
+      "file": "data/sonoff/s60zbtpg.json",
+      "manufacturer": "SONOFF",
+      "model": "S60ZBTPG",
+      "fields": {
+        "manufacturer": "SONOFF",
+        "deviceName": "iPlug Zigbee Smart Plug (S60 Series)",
+        "model": "S60ZBTPG",
+        "zigbeeId": "S60ZBTPG",
+        "category": "plug",
+        "vendorLink": "https://sonoff.tech/products/sonoff-iplug-zigbee-smart-plug-s60-series",
+        "manufacturerLink": "https://sonoff.tech/products/sonoff-iplug-zigbee-smart-plug-s60-series",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"SONOFF\", model \"S60ZBTPG\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "prefillUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdtOVidl6QjBtN57Bta1wRttLB_gBOgReDZPmtaANhjrwdfpQ/viewform?usp=pp_url&entry.1402769771=SONOFF&entry.686642770=iPlug+Zigbee+Smart+Plug+%28S60+Series%29&entry.2085911643=S60ZBTPG&entry.1792822153=S60ZBTPG&entry.1087176243=plug&entry.1013187941=https%3A%2F%2Fsonoff.tech%2Fproducts%2Fsonoff-iplug-zigbee-smart-plug-s60-series&entry.909726705=https%3A%2F%2Fsonoff.tech%2Fproducts%2Fsonoff-iplug-zigbee-smart-plug-s60-series&entry.2131627877=ZHA&entry.2131627877=Zigbee2MQTT&entry.2090640393=Zigbee+signature+from+a+ZHA+scan%3A+manufacturer+%22SONOFF%22%2C+model+%22S60ZBTPG%22.+Capability+scan%3A+https%3A%2F%2Fhsolgaard.github.io%2Fzigbee-capabilities%2F",
+      "manufacturerLinkPending": true,
+      "kind": "blakadder_submission"
+    },
+    {
+      "file": "data/sonoff/snzb-01m.json",
+      "manufacturer": "SONOFF",
+      "model": "SNZB-01M",
+      "fields": {
+        "manufacturer": "SONOFF",
+        "deviceName": "Orb 4-In-1 Zigbee Smart Scene Button - SNZB-01M",
+        "model": "SNZB-01M",
+        "zigbeeId": "SNZB-01M",
+        "category": "remote",
+        "vendorLink": "https://sonoff.tech/en-uk/products/sonoff-orb-4-in-1-zigbee-smart-scene-button-snzb-01m",
+        "manufacturerLink": "https://sonoff.tech/en-uk/products/sonoff-orb-4-in-1-zigbee-smart-scene-button-snzb-01m",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"SONOFF\", model \"SNZB-01M\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "prefillUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdtOVidl6QjBtN57Bta1wRttLB_gBOgReDZPmtaANhjrwdfpQ/viewform?usp=pp_url&entry.1402769771=SONOFF&entry.686642770=Orb+4-In-1+Zigbee+Smart+Scene+Button+-+SNZB-01M&entry.2085911643=SNZB-01M&entry.1792822153=SNZB-01M&entry.1087176243=remote&entry.1013187941=https%3A%2F%2Fsonoff.tech%2Fen-uk%2Fproducts%2Fsonoff-orb-4-in-1-zigbee-smart-scene-button-snzb-01m&entry.909726705=https%3A%2F%2Fsonoff.tech%2Fen-uk%2Fproducts%2Fsonoff-orb-4-in-1-zigbee-smart-scene-button-snzb-01m&entry.2131627877=ZHA&entry.2131627877=Zigbee2MQTT&entry.2090640393=Zigbee+signature+from+a+ZHA+scan%3A+manufacturer+%22SONOFF%22%2C+model+%22SNZB-01M%22.+Capability+scan%3A+https%3A%2F%2Fhsolgaard.github.io%2Fzigbee-capabilities%2F",
+      "manufacturerLinkPending": false,
+      "kind": "blakadder_submission"
+    },
+    {
+      "file": "data/third-reality-inc/3rdts01056z.json",
+      "manufacturer": "Third Reality, Inc",
+      "model": "3RDTS01056Z",
+      "fields": {
+        "manufacturer": "Third Reality",
+        "deviceName": "Smart Garage Door Tilt Sensor",
+        "model": "3RDTS01056Z",
+        "zigbeeId": "3RDTS01056Z",
+        "category": "sensor",
+        "vendorLink": "https://thirdreality.com/products/smart-garage-door-tilt-sensor",
+        "manufacturerLink": "https://thirdreality.com/products/smart-garage-door-tilt-sensor",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"Third Reality, Inc\", model \"3RDTS01056Z\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "prefillUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdtOVidl6QjBtN57Bta1wRttLB_gBOgReDZPmtaANhjrwdfpQ/viewform?usp=pp_url&entry.1402769771=Third+Reality&entry.686642770=Smart+Garage+Door+Tilt+Sensor&entry.2085911643=3RDTS01056Z&entry.1792822153=3RDTS01056Z&entry.1087176243=sensor&entry.1013187941=https%3A%2F%2Fthirdreality.com%2Fproducts%2Fsmart-garage-door-tilt-sensor&entry.909726705=https%3A%2F%2Fthirdreality.com%2Fproducts%2Fsmart-garage-door-tilt-sensor&entry.2131627877=ZHA&entry.2131627877=Zigbee2MQTT&entry.2090640393=Zigbee+signature+from+a+ZHA+scan%3A+manufacturer+%22Third+Reality%2C+Inc%22%2C+model+%223RDTS01056Z%22.+Capability+scan%3A+https%3A%2F%2Fhsolgaard.github.io%2Fzigbee-capabilities%2F",
+      "manufacturerLinkPending": true,
+      "kind": "blakadder_submission"
+    },
+    {
+      "file": "data/46t1rvdu/whd02-aubess.json",
+      "manufacturer": "46t1rvdu",
+      "model": "WHD02-Aubess",
+      "fields": {
+        "manufacturer": "46t1rvdu",
+        "deviceName": "",
+        "model": "WHD02-Aubess",
+        "zigbeeId": "WHD02-Aubess",
+        "category": "",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"46t1rvdu\", model \"WHD02-Aubess\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "device name",
+        "category",
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/4rbqgcuv/ts0001-avb.json",
+      "manufacturer": "4rbqgcuv",
+      "model": "TS0001-AVB",
+      "fields": {
+        "manufacturer": "4rbqgcuv",
+        "deviceName": "",
+        "model": "TS0001-AVB",
+        "zigbeeId": "TS0001-AVB",
+        "category": "",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"4rbqgcuv\", model \"TS0001-AVB\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "device name",
+        "category",
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/aqara/ceiling-light-t1m.json",
+      "manufacturer": "Aqara",
+      "model": "Ceiling Light T1M",
+      "fields": {
+        "manufacturer": "Aqara",
+        "deviceName": "",
+        "model": "Ceiling Light T1M",
+        "zigbeeId": "Ceiling Light T1M",
+        "category": "light",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"Aqara\", model \"Ceiling Light T1M\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "device name",
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/awox/tlsr82xx.json",
+      "manufacturer": "AwoX",
+      "model": "TLSR82xx",
+      "fields": {
+        "manufacturer": "AwoX",
+        "deviceName": "",
+        "model": "TLSR82xx",
+        "zigbeeId": "TLSR82xx",
+        "category": "",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"AwoX\", model \"TLSR82xx\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "device name",
+        "category",
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/gjrubzje/ts0001-ztu.json",
+      "manufacturer": "gjrubzje",
+      "model": "TS0001-ZTU",
+      "fields": {
+        "manufacturer": "gjrubzje",
+        "deviceName": "",
+        "model": "TS0001-ZTU",
+        "zigbeeId": "TS0001-ZTU",
+        "category": "",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"gjrubzje\", model \"TS0001-ZTU\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "device name",
+        "category",
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/hhiodade/moes-1-gang.json",
+      "manufacturer": "hhiodade",
+      "model": "Moes-1-gang",
+      "fields": {
+        "manufacturer": "hhiodade",
+        "deviceName": "",
+        "model": "Moes-1-gang",
+        "zigbeeId": "Moes-1-gang",
+        "category": "",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"hhiodade\", model \"Moes-1-gang\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "device name",
+        "category",
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/hobeian/ck-bl702-router-01-7018.json",
+      "manufacturer": "HOBEIAN",
+      "model": "CK-BL702-ROUTER-01(7018)",
+      "fields": {
+        "manufacturer": "HOBEIAN",
+        "deviceName": "USB signal repeater",
+        "model": "ZG-807Z",
+        "zigbeeId": "CK-BL702-ROUTER-01(7018)",
+        "category": "plug",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"HOBEIAN\", model \"CK-BL702-ROUTER-01(7018)\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/ikea-of-sweden/jetstrom-3030-wall.json",
+      "manufacturer": "IKEA of Sweden",
+      "model": "JETSTROM 3030 wall",
+      "fields": {
+        "manufacturer": "IKEA",
+        "deviceName": "JETSTROM wall light panel, color/white spectrum, 30x30 cm",
+        "model": "L2205",
+        "zigbeeId": "JETSTROM 3030 wall",
+        "category": "light",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"IKEA of Sweden\", model \"JETSTROM 3030 wall\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/ikea-of-sweden/tradfri-bulb-e27-cws-globe-806lm.json",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI bulb E27 CWS globe 806lm",
+      "fields": {
+        "manufacturer": "IKEA",
+        "deviceName": "TRADFRI bulb E26/E27, color/white spectrum, globe, opal, 800/806/810 lm",
+        "model": "LED2109G6",
+        "zigbeeId": "TRADFRI bulb E27 CWS globe 806lm",
+        "category": "light",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"IKEA of Sweden\", model \"TRADFRI bulb E27 CWS globe 806lm\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/innr/bb-287-c.json",
+      "manufacturer": "innr",
+      "model": "BB 287 C",
+      "fields": {
+        "manufacturer": "Innr",
+        "deviceName": "Smart Bulb Colour E27 1210lm",
+        "model": "BB 287 C",
+        "zigbeeId": "BB 287 C",
+        "category": "light",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"innr\", model \"BB 287 C\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/innr/rb-287-c.json",
+      "manufacturer": "innr",
+      "model": "RB 287 C",
+      "fields": {
+        "manufacturer": "Innr",
+        "deviceName": "Smart Bulb Colour E27 1200lm",
+        "model": "RB 287 C",
+        "zigbeeId": "RB 287 C",
+        "category": "light",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"innr\", model \"RB 287 C\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/jasco-products/35938.json",
+      "manufacturer": "Jasco Products",
+      "model": "35938",
+      "fields": {
+        "manufacturer": "Jasco Products",
+        "deviceName": "Zigbee plug-in smart dimmer",
+        "model": "ZB3102",
+        "zigbeeId": "35938",
+        "category": "dimmer",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"Jasco Products\", model \"35938\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/pf7swkqp/ts0003-sb.json",
+      "manufacturer": "pf7swkqp",
+      "model": "TS0003-SB",
+      "fields": {
+        "manufacturer": "pf7swkqp",
+        "deviceName": "",
+        "model": "TS0003-SB",
+        "zigbeeId": "TS0003-SB",
+        "category": "",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"pf7swkqp\", model \"TS0003-SB\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "device name",
+        "category",
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/texas-instruments/cc2652.json",
+      "manufacturer": "Texas Instruments",
+      "model": "CC2652",
+      "fields": {
+        "manufacturer": "Texas Instruments",
+        "deviceName": "",
+        "model": "CC2652",
+        "zigbeeId": "CC2652",
+        "category": "remote",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"Texas Instruments\", model \"CC2652\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "device name",
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/tqlv4ug4/ts0001-custom.json",
+      "manufacturer": "tqlv4ug4",
+      "model": "TS0001-custom",
+      "fields": {
+        "manufacturer": "tqlv4ug4",
+        "deviceName": "",
+        "model": "TS0001-custom",
+        "zigbeeId": "TS0001-custom",
+        "category": "",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"tqlv4ug4\", model \"TS0001-custom\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "device name",
+        "category",
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/tyzb01-wqcac7lo/ts0205.json",
+      "manufacturer": "_TYZB01_wqcac7lo",
+      "model": "TS0205",
+      "fields": {
+        "manufacturer": "Nedis",
+        "deviceName": "Smoke sensor",
+        "model": "ZBDS10WT",
+        "zigbeeId": "_TYZB01_wqcac7lo",
+        "category": "sensor",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"_TYZB01_wqcac7lo\", model \"TS0205\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/tz3000-3n2minvf/ts0004.json",
+      "manufacturer": "_TZ3000_3n2minvf",
+      "model": "TS0004",
+      "fields": {
+        "manufacturer": "AVATTO",
+        "deviceName": "4 gang switch module",
+        "model": "ZWSM16-4",
+        "zigbeeId": "_TZ3000_3n2minvf",
+        "category": "switch",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"_TZ3000_3n2minvf\", model \"TS0004\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/tz3000-46t1rvdu/ts0001.json",
+      "manufacturer": "_TZ3000_46t1rvdu",
+      "model": "TS0001",
+      "fields": {
+        "manufacturer": "Tuya",
+        "deviceName": "Wall switch module",
+        "model": "WHD02",
+        "zigbeeId": "_TZ3000_46t1rvdu",
+        "category": "switch",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"_TZ3000_46t1rvdu\", model \"TS0001\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/tz3000-pf7swkqp/ts0003.json",
+      "manufacturer": "_TZ3000_pf7swkqp",
+      "model": "TS0003",
+      "fields": {
+        "manufacturer": "RSH",
+        "deviceName": "3 gang switch module",
+        "model": "SB03-Zigbee",
+        "zigbeeId": "_TZ3000_pf7swkqp",
+        "category": "switch",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"_TZ3000_pf7swkqp\", model \"TS0003\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/tz3210-fgwhjm9j/ts011f.json",
+      "manufacturer": "_TZ3210_fgwhjm9j",
       "model": "TS011F",
-      "kind": "manufacturer_link_only",
-      "reason": "Blakadder match is high-confidence (https://zigbee.blakadder.com/Lidl_HG06338.html); pre-filled manufacturer link \"https://www.lidl.com/\" on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
+      "fields": {
+        "manufacturer": "Tuya",
+        "deviceName": "Smart plug (with power monitoring)",
+        "model": "TS011F_plug_1",
+        "zigbeeId": "_TZ3210_fgwhjm9j",
+        "category": "plug",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"_TZ3210_fgwhjm9j\", model \"TS011F\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/tz3290-gnl5a6a5xvql7c2a/ts1201.json",
+      "manufacturer": "_TZ3290_gnl5a6a5xvql7c2a",
+      "model": "TS1201",
+      "fields": {
+        "manufacturer": "Tuya",
+        "deviceName": "Universal smart IR remote control",
+        "model": "UFO-R4Z",
+        "zigbeeId": "_TZ3290_gnl5a6a5xvql7c2a",
+        "category": "remote",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"_TZ3290_gnl5a6a5xvql7c2a\", model \"TS1201\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/tze200-4utwozi2/ts0601.json",
+      "manufacturer": "_TZE200_4utwozi2",
+      "model": "TS0601",
+      "fields": {
+        "manufacturer": "AVATTO",
+        "deviceName": "Thermostatic radiator valve",
+        "model": "ME167",
+        "zigbeeId": "_TZE200_4utwozi2",
+        "category": "hvac",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"_TZE200_4utwozi2\", model \"TS0601\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
     }
   ]
 }

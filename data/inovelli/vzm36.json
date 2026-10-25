@@ -3105,6 +3105,11 @@
   "references": {
     "blakadder": null,
     "checked_manufacturer": "Inovelli",
-    "checked_model": "VZM36"
+    "checked_model": "VZM36",
+    "manufacturer": {
+      "url": "https://inovelli.com/products/zigbee-blue-series-smart-fan-light-canopy-module",
+      "confidence": "high",
+      "source": "vendor_search"
+    }
   }
 }

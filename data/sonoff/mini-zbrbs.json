@@ -1029,6 +1029,11 @@
   "references": {
     "blakadder": null,
     "checked_manufacturer": "SONOFF",
-    "checked_model": "MINI-ZBRBS"
+    "checked_model": "MINI-ZBRBS",
+    "manufacturer": {
+      "url": "https://sonoff.tech/products/sonoff-zigbee-smart-roller-shutter-switch-mini-zbrbs",
+      "confidence": "high",
+      "source": "vendor_search"
+    }
   }
 }

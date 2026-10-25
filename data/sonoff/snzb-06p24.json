@@ -614,6 +614,11 @@
       "confidence": "high"
     },
     "checked_manufacturer": "SONOFF",
-    "checked_model": "SNZB-06P24"
+    "checked_model": "SNZB-06P24",
+    "manufacturer": {
+      "url": "https://sonoff.tech/en-us/products/sonoff-senseguard-presence-core-24ghz-zigbee-human-presence-sensor-snzb-06p24",
+      "confidence": "high",
+      "source": "vendor_search"
+    }
   }
 }

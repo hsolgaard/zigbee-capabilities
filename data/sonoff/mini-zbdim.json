@@ -1235,6 +1235,11 @@
   "references": {
     "blakadder": null,
     "checked_manufacturer": "SONOFF",
-    "checked_model": "MINI-ZBDIM"
+    "checked_model": "MINI-ZBDIM",
+    "manufacturer": {
+      "url": "https://sonoff.tech/products/sonoff-mini-extreme-zigbee-dimmer-switch-mini-zbdim",
+      "confidence": "high",
+      "source": "vendor_search"
+    }
   }
 }
