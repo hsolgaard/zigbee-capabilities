@@ -58106,7 +58106,8 @@
         "url": "https://sonoff.tech/products/sonoff-mini-extreme-zigbee-dimmer-switch-mini-zbdim",
         "confidence": "high",
         "source": "vendor_search"
-      }
+      },
+      "blakadder_submitted": "2026-10-25"
     },
     "endpoint": 1,
     "firmware": "1.0.5",
