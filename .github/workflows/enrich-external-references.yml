@@ -570,6 +570,7 @@ jobs:
               if (cur.manufacturer) next.manufacturer = cur.manufacturer;
               if (cur.manufacturer_declined === true) next.manufacturer_declined = true;
               if (cur.blakadder_submitted) next.blakadder_submitted = cur.blakadder_submitted;
+              if (cur.product) next.product = cur.product;
               return next;
             }
             async function urlOkToApply(url) {
@@ -644,7 +645,24 @@ jobs:
                 }
 
                 processed++;
-                let result = matchBlakadder(manufacturer, model, blakadderIndex);
+                // A human-supplied retail identity (references.product, e.g.
+                // "Gosund EP2-Z" for a white-label _TZ3210_… TS011F) is
+                // matched as brand + model instead of the generic Tuya model
+                // ID, which would otherwise always come out "ambiguous"
+                // against dozens of unrelated TS011F pages. An exact Tuya
+                // manufacturer-string hit on Blakadder still wins.
+                const product = existingRefs && existingRefs.product && existingRefs.product.brand ? existingRefs.product : null;
+                let result;
+                if (product) {
+                  const exact = looksLikeTuyaManufacturerString(manufacturer)
+                    ? blakadderIndex.filter((b) => b.zigbeemodel.some((z) => z.toLowerCase() === manufacturer.toLowerCase()))
+                    : [];
+                  if (exact.length === 1) result = { status: "high", entry: exact[0], match_method: "manufacturer_string_exact" };
+                  else if (exact.length > 1) result = { status: "ambiguous", candidates: exact, reason: `Manufacturer string ${manufacturer} matched ${exact.length} Blakadder pages.` };
+                  else result = matchBlakadder(product.brand, product.model || model, blakadderIndex);
+                } else {
+                  result = matchBlakadder(manufacturer, model, blakadderIndex);
+                }
                 if (result.status === "none") {
                   result = matchBlakadderByIdentity(manufacturer, model, identityByFile.get(file), blakadderIndex) || result;
                 }
@@ -724,6 +742,8 @@ jobs:
                   if (currentRefs && currentRefs.manufacturer_declined === true) {
                     references.manufacturer_declined = true;
                   }
+                  // Human-supplied retail identity (see vendor-discovery.mjs).
+                  if (currentRefs && currentRefs.product) references.product = currentRefs.product;
                   // A needs_review manufacturer-link candidate is
                   // deliberately NOT reported here — see Phase 2 below,
                   // which re-evaluates this independently of the skip

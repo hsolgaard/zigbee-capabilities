@@ -61,6 +61,16 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "_TZ3210_ho44khu8|TS011F": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": {
+        "url": "https://www.berrybase.de/en/gosund-nitebird-ep2-z-smart-plug-steckdose-mit-messfunktion-zigbee",
+        "title": "Gosund NiteBird EP2-Z, Smart Plug, Steckdose mit Messfunktion, ZigBee",
+        "evidence": "retailer page names \"Gosund NiteBird EP2-Z\", ZigBee, energy metering",
+        "method": "manual research 2026-10-25 (page fetched and checked by hand)"
+      }
+    },
     "_TZ3210_mja6r5ix|TS0505B": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": null,

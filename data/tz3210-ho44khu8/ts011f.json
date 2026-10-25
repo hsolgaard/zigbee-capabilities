@@ -731,5 +731,13 @@
         }
       }
     }
+  },
+  "references": {
+    "product": {
+      "brand": "Gosund",
+      "model": "EP2-Z",
+      "name": "NiteBird EP2-Z Smart Plug",
+      "source": "submitter's note on issue #292"
+    }
   }
 }

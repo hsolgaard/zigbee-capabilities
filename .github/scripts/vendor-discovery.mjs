@@ -553,7 +553,24 @@ export async function runDiscovery(opts) {
     const refs = parsed.references || {};
     const relFile = path.relative(process.cwd(), file).split(path.sep).join("/");
 
-    const identity = await z2mIdentity(zhcPath, manufacturer, model);
+    // A human-supplied retail identity (`references.product`, e.g. from a
+    // submitter's note: "sold as Gosund NiteBird EP2-Z") beats Z2M's,
+    // which for white-label Tuya devices is often just "Tuya TS011F".
+    const z2m = await z2mIdentity(zhcPath, manufacturer, model);
+    const product = refs.product && refs.product.brand ? refs.product : null;
+    const identity = product
+      ? {
+          ...(z2m || {}),
+          brand: product.brand,
+          brandIsGeneric: norm(product.brand) === "tuya",
+          retailModel: product.model || (z2m && z2m.retailModel) || null,
+          description: product.name || (z2m && z2m.description) || null,
+          z2mModel: z2m ? z2m.z2mModel : null,
+          z2mVendor: z2m ? z2m.z2mVendor : null,
+          z2mSupported: !!z2m,
+          source: product.source || "references.product",
+        }
+      : z2m && { ...z2m, z2mSupported: true };
     const isTuya = looksLikeTuyaManufacturerString(manufacturer);
     // Most specific brand we can name. Our own manufacturer string is used
     // when Z2M has nothing, unless it's a Tuya code (meaningless as a brand).
@@ -678,7 +695,7 @@ export async function runDiscovery(opts) {
     };
     const deviceName = stripBrand((approved && approved.title) || (mfrCandidate && mfrCandidate.title) || (identity && identity.description) || "");
     const gateways = ["ZHA"];
-    if (identity) gateways.push("Zigbee2MQTT");
+    if (identity && identity.z2mSupported) gateways.push("Zigbee2MQTT");
     const fields = {
       manufacturer: brandIsGeneric ? (isTuya ? "Tuya" : "") : brand,
       deviceName,
@@ -689,7 +706,10 @@ export async function runDiscovery(opts) {
       manufacturerLink: mfrUrl,
       gateways,
       description: "",
-      notes: `Zigbee signature from a ZHA scan: manufacturer "${manufacturer}", model "${model}". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/`,
+      notes:
+        `Zigbee signature from a ZHA scan: manufacturer "${manufacturer}", model "${model}".` +
+        (product ? ` Retail identity (${product.brand}${product.model ? " " + product.model : ""}) from ${product.source || "the device's submitter"}.` : "") +
+        ` Capability scan: https://hsolgaard.github.io/zigbee-capabilities/`,
     };
     const missing = [];
     if (!fields.manufacturer) missing.push("manufacturer / brand");
