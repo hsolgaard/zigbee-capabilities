@@ -39780,7 +39780,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "Inovelli",
-      "checked_model": "VZM30-SN"
+      "checked_model": "VZM30-SN",
+      "manufacturer": {
+        "url": "https://inovelli.com/products/blue-series-smart-on-off-switch-w-humidity-sensor",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 1,
     "firmware": "1.03",
@@ -40837,7 +40842,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "Inovelli",
-      "checked_model": "VZM30-SN"
+      "checked_model": "VZM30-SN",
+      "manufacturer": {
+        "url": "https://inovelli.com/products/blue-series-smart-on-off-switch-w-humidity-sensor",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 2,
     "firmware": "1.03",
@@ -41138,7 +41148,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "Inovelli",
-      "checked_model": "VZM30-SN"
+      "checked_model": "VZM30-SN",
+      "manufacturer": {
+        "url": "https://inovelli.com/products/blue-series-smart-on-off-switch-w-humidity-sensor",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 3,
     "firmware": "1.03",
@@ -41439,7 +41454,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "Inovelli",
-      "checked_model": "VZM30-SN"
+      "checked_model": "VZM30-SN",
+      "manufacturer": {
+        "url": "https://inovelli.com/products/blue-series-smart-on-off-switch-w-humidity-sensor",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 4,
     "firmware": "1.03",
@@ -41623,7 +41643,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "Inovelli",
-      "checked_model": "VZM30-SN"
+      "checked_model": "VZM30-SN",
+      "manufacturer": {
+        "url": "https://inovelli.com/products/blue-series-smart-on-off-switch-w-humidity-sensor",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 242,
     "firmware": "1.03",
@@ -44614,7 +44639,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "Inovelli",
-      "checked_model": "VZM32-SN"
+      "checked_model": "VZM32-SN",
+      "manufacturer": {
+        "url": "https://inovelli.com/products/zigbee-blue-series-mmwave-presence-sensor-smart-dimmer-switch",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 1,
     "firmware": "1.02",
@@ -45857,7 +45887,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "Inovelli",
-      "checked_model": "VZM32-SN"
+      "checked_model": "VZM32-SN",
+      "manufacturer": {
+        "url": "https://inovelli.com/products/zigbee-blue-series-mmwave-presence-sensor-smart-dimmer-switch",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 2,
     "firmware": "1.02",
@@ -46178,7 +46213,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "Inovelli",
-      "checked_model": "VZM32-SN"
+      "checked_model": "VZM32-SN",
+      "manufacturer": {
+        "url": "https://inovelli.com/products/zigbee-blue-series-mmwave-presence-sensor-smart-dimmer-switch",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 3,
     "firmware": "1.02",
@@ -46498,7 +46538,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "Inovelli",
-      "checked_model": "VZM32-SN"
+      "checked_model": "VZM32-SN",
+      "manufacturer": {
+        "url": "https://inovelli.com/products/zigbee-blue-series-mmwave-presence-sensor-smart-dimmer-switch",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 242,
     "firmware": "1.02",
@@ -48188,7 +48233,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "Inovelli",
-      "checked_model": "VZM36"
+      "checked_model": "VZM36",
+      "manufacturer": {
+        "url": "https://inovelli.com/products/zigbee-blue-series-smart-fan-light-canopy-module",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 1,
     "firmware": "1.02",
@@ -48951,7 +49001,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "Inovelli",
-      "checked_model": "VZM36"
+      "checked_model": "VZM36",
+      "manufacturer": {
+        "url": "https://inovelli.com/products/zigbee-blue-series-smart-fan-light-canopy-module",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 2,
     "firmware": "1.02",
@@ -49730,7 +49785,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "Inovelli",
-      "checked_model": "VZM36"
+      "checked_model": "VZM36",
+      "manufacturer": {
+        "url": "https://inovelli.com/products/zigbee-blue-series-smart-fan-light-canopy-module",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 242,
     "firmware": "1.02",
@@ -56933,7 +56993,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "SONOFF",
-      "checked_model": "MINI-ZB2GS-L"
+      "checked_model": "MINI-ZB2GS-L",
+      "manufacturer": {
+        "url": "https://sonoff.tech/en-eu/products/sonoff-mini-duo-l-2-gang-zigbee-smart-switch-mini-zb2gs-l",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 1,
     "firmware": "1.0.4",
@@ -57402,7 +57467,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "SONOFF",
-      "checked_model": "MINI-ZB2GS"
+      "checked_model": "MINI-ZB2GS",
+      "manufacturer": {
+        "url": "https://sonoff.tech/en-de/products/sonoff-mini-duo-2-gang-zigbee-smart-switch-mini-zb2gs",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 1,
     "firmware": "1.0.7",
@@ -57776,7 +57846,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "SONOFF",
-      "checked_model": "MINI-ZB2GS"
+      "checked_model": "MINI-ZB2GS",
+      "manufacturer": {
+        "url": "https://sonoff.tech/en-de/products/sonoff-mini-duo-2-gang-zigbee-smart-switch-mini-zb2gs",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 2,
     "firmware": "1.0.7",
@@ -58026,7 +58101,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "SONOFF",
-      "checked_model": "MINI-ZBDIM"
+      "checked_model": "MINI-ZBDIM",
+      "manufacturer": {
+        "url": "https://sonoff.tech/products/sonoff-mini-extreme-zigbee-dimmer-switch-mini-zbdim",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 1,
     "firmware": "1.0.5",
@@ -58648,7 +58728,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "SONOFF",
-      "checked_model": "MINI-ZBRBS"
+      "checked_model": "MINI-ZBRBS",
+      "manufacturer": {
+        "url": "https://sonoff.tech/products/sonoff-zigbee-smart-roller-shutter-switch-mini-zbrbs",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 1,
     "firmware": "1.0.5",
@@ -59146,7 +59231,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "SONOFF",
-      "checked_model": "MINI-ZBRBS"
+      "checked_model": "MINI-ZBRBS",
+      "manufacturer": {
+        "url": "https://sonoff.tech/products/sonoff-zigbee-smart-roller-shutter-switch-mini-zbrbs",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 242,
     "firmware": "1.0.5",
@@ -59166,7 +59256,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "SONOFF",
-      "checked_model": "S60ZBTPG"
+      "checked_model": "S60ZBTPG",
+      "manufacturer": {
+        "url": "https://sonoff.tech/products/sonoff-iplug-zigbee-smart-plug-s60-series",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 1,
     "firmware": null,
@@ -59672,7 +59767,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "SONOFF",
-      "checked_model": "S60ZBTPG"
+      "checked_model": "S60ZBTPG",
+      "manufacturer": {
+        "url": "https://sonoff.tech/products/sonoff-iplug-zigbee-smart-plug-s60-series",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 242,
     "firmware": null,
@@ -60213,7 +60313,12 @@
         "confidence": "high"
       },
       "checked_manufacturer": "SONOFF",
-      "checked_model": "SNZB-06P24"
+      "checked_model": "SNZB-06P24",
+      "manufacturer": {
+        "url": "https://sonoff.tech/en-us/products/sonoff-senseguard-presence-core-24ghz-zigbee-human-presence-sensor-snzb-06p24",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 1,
     "firmware": null,
@@ -65580,7 +65685,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "Third Reality, Inc",
-      "checked_model": "3RDTS01056Z"
+      "checked_model": "3RDTS01056Z",
+      "manufacturer": {
+        "url": "https://thirdreality.com/products/smart-garage-door-tilt-sensor",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 1,
     "firmware": null,
