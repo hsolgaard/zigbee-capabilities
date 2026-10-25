@@ -56998,7 +56998,8 @@
         "url": "https://sonoff.tech/en-eu/products/sonoff-mini-duo-l-2-gang-zigbee-smart-switch-mini-zb2gs-l",
         "confidence": "high",
         "source": "vendor_search"
-      }
+      },
+      "blakadder_submitted": "2026-10-25"
     },
     "endpoint": 1,
     "firmware": "1.0.4",
