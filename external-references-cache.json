@@ -1,0 +1,110 @@
+{
+  "_comment": "Vendor-discovery search cache, written by .github/scripts/vendor-discovery.mjs (see enrich-external-references.yml). Keyed by \"<Zigbee manufacturer>|<Zigbee model>\". Entries younger than 28 days aren't re-searched. Safe to delete an entry (or the whole file) to force a fresh search.",
+  "devices": {
+    "Inovelli|VZM30-SN": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": {
+        "url": "https://inovelli.com/products/blue-series-smart-on-off-switch-w-humidity-sensor",
+        "title": "Blue Series (Zigbee) - Smart On/Off Switch",
+        "shop": true,
+        "evidence": "page lists FCC ID \"2BBTA-VZM30SN\"",
+        "method": "manual research 2026-10-25 (page fetched and checked by hand)"
+      },
+      "buy_candidate": null
+    },
+    "Inovelli|VZM32-SN": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": {
+        "url": "https://inovelli.com/products/zigbee-blue-series-mmwave-presence-sensor-smart-dimmer-switch",
+        "title": "Blue Series (Zigbee) - Smart Presence Sensing Dimmer",
+        "shop": true,
+        "evidence": "page lists FCC ID \"2BBTA-VZM32SN\"",
+        "method": "manual research 2026-10-25 (page fetched and checked by hand)"
+      },
+      "buy_candidate": null
+    },
+    "Inovelli|VZM36": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": {
+        "url": "https://inovelli.com/products/zigbee-blue-series-smart-fan-light-canopy-module",
+        "title": "Blue Series (Zigbee) Smart Fan/Light Canopy Module",
+        "shop": true,
+        "evidence": "page lists FCC ID \"2BBTA-VZM36\"",
+        "method": "manual research 2026-10-25 (page fetched and checked by hand)"
+      },
+      "buy_candidate": null
+    },
+    "SONOFF|MINI-ZB2GS": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": {
+        "url": "https://sonoff.tech/en-de/products/sonoff-mini-duo-2-gang-zigbee-smart-switch-mini-zb2gs",
+        "title": "SONOFF MINI DUO 2-Gang Zigbee Smart Switch",
+        "shop": true,
+        "evidence": "page mentions \"MINI-ZB2GS\"",
+        "method": "manual research 2026-10-25 (page fetched and checked by hand)"
+      },
+      "buy_candidate": null
+    },
+    "SONOFF|MINI-ZB2GS-L": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": {
+        "url": "https://sonoff.tech/en-eu/products/sonoff-mini-duo-l-2-gang-zigbee-smart-switch-mini-zb2gs-l",
+        "title": "SONOFF MINI DUO-L 2-Gang Zigbee Smart Switch",
+        "shop": true,
+        "evidence": "product URL and search listing name \"MINI-ZB2GS-L\"",
+        "method": "manual research 2026-10-25 (page fetched and checked by hand)"
+      },
+      "buy_candidate": null
+    },
+    "SONOFF|MINI-ZBDIM": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": {
+        "url": "https://sonoff.tech/products/sonoff-mini-extreme-zigbee-dimmer-switch-mini-zbdim",
+        "title": "SONOFF MINI Extreme Zigbee Dimmer Switch",
+        "shop": true,
+        "evidence": "page mentions \"MINI-ZBDIM\"",
+        "method": "manual research 2026-10-25 (page fetched and checked by hand)"
+      },
+      "buy_candidate": null
+    },
+    "SONOFF|MINI-ZBRBS": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": {
+        "url": "https://sonoff.tech/products/sonoff-zigbee-smart-roller-shutter-switch-mini-zbrbs",
+        "title": "SONOFF Zigbee Smart Roller Shutter Switch",
+        "shop": true,
+        "evidence": "page mentions \"MINI-ZBRBS\"",
+        "method": "manual research 2026-10-25 (page fetched and checked by hand)"
+      },
+      "buy_candidate": null
+    },
+    "SONOFF|S60ZBTPG": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": {
+        "url": "https://sonoff.tech/products/sonoff-iplug-zigbee-smart-plug-s60-series",
+        "title": "SONOFF iPlug Zigbee Smart Plug (S60 Series)",
+        "shop": true,
+        "evidence": "page lists models \"S60ZBTPF/S60ZBTPG\"",
+        "method": "manual research 2026-10-25 (page fetched and checked by hand)"
+      },
+      "buy_candidate": null
+    },
+    "Third Reality, Inc|3RDTS01056Z": {
+      "searched_at": "2026-10-25",
+      "manufacturer_candidate": {
+        "url": "https://thirdreality.com/products/smart-garage-door-tilt-sensor",
+        "title": "Smart Garage Door Tilt Sensor",
+        "shop": true,
+        "evidence": "Third Reality's only Zigbee garage door tilt sensor (Z2M: 3RDTS01056Z); model number not printed on the page",
+        "method": "manual research 2026-10-25 (page fetched and checked by hand)"
+      },
+      "buy_candidate": null
+    }
+  },
+  "pages": {
+    "https://www.repenic.com/products/smart-dimmer-module?variant=42525994287152": {
+      "title": "Smart dimmer module",
+      "shop": true
+    }
+  }
+}
