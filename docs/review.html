@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>External reference review — Zigbee Capabilities</title>
-<meta name="description" content="Review external Blakadder and manufacturer links proposed by the automated matcher before they go live.">
+<meta name="description" content="Review external Blakadder and manufacturer links proposed by the automated matcher before they go live, and submit devices that aren't on Blakadder yet.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,9 +25,20 @@
 <main class="wrap">
   <section id="mfr-only-section" hidden>
     <h2>Ready to approve</h2>
-    <p class="hint">The Blakadder match is already solid; only the manufacturer link needs a nod. These are pre-filled on the standing review PR — approving means merging it, declining means excluding that file from the merge (or using the "Not this link" button below to rule it out permanently).</p>
+    <p class="hint">Manufacturer/product links waiting for a nod — either taken from a solid Blakadder match, or found by searching the vendor's own site or the web (those pages were fetched and checked to mention the device's model). These are pre-filled on the standing review PR — approving means merging it, declining means excluding that file from the merge (or using the "Not this link" button below to rule it out permanently).</p>
     <div class="review-toolbar" id="mfr-only-toolbar"></div>
     <div class="device-list" id="mfr-only-list"></div>
+  </section>
+
+  <section id="blakadder-submit-section" hidden>
+    <h2>Submit to Blakadder</h2>
+    <p class="hint">These devices aren't on Blakadder yet, and every field of Blakadder's "Add new device" form is known. "Open pre-filled form" fills the form in for you — check each value (especially device name and category; Blakadder discards submissions with invalid links), submit it, then commit the "mark as submitted" fix so it stops being suggested. Once Blakadder publishes the page, the monthly run links it automatically.</p>
+    <div class="device-list" id="blakadder-submit-list"></div>
+    <details class="blk-incomplete" id="blakadder-incomplete" hidden>
+      <summary id="blakadder-incomplete-summary"></summary>
+      <p class="hint">Not on Blakadder either, but at least one required form field is still unknown, so no draft yet. Usually it's the "where to buy" link — adding the device's manufacturer page (if the vendor sells directly) or finding it through search fills that in on the next run.</p>
+      <ul id="blakadder-incomplete-list"></ul>
+    </details>
   </section>
 
   <section id="ambiguous-section" hidden>

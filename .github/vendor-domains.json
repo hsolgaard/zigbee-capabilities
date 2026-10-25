@@ -1,0 +1,27 @@
+{
+  "_comment": "Hand-curated vendor -> official website domain(s), used by .github/scripts/vendor-discovery.mjs to search a vendor's own site (shop search + sitemap) and to recognise which search results are the vendor's own pages. Keys are vendor names as Zigbee2MQTT or our device files spell them (matched case/punctuation-insensitively). Only add a domain you've confirmed is the manufacturer's own site, not a reseller. Domains learned automatically from Blakadder's mlinks are used on top of this list.",
+  "vendors": {
+    "IKEA": ["ikea.com"],
+    "IKEA of Sweden": ["ikea.com"],
+    "SONOFF": ["sonoff.tech", "itead.cc"],
+    "eWeLink": ["sonoff.tech"],
+    "Inovelli": ["inovelli.com"],
+    "Innr": ["innr.com"],
+    "LEDVANCE": ["ledvance.com", "ledvance.co.uk"],
+    "OSRAM": ["ledvance.com"],
+    "Jasco Products": ["byjasco.com"],
+    "Repenic Ltd.": ["repenic.com"],
+    "SmartThings": ["smartthings.com"],
+    "Third Reality": ["3reality.com"],
+    "Third Reality, Inc": ["3reality.com"],
+    "Aqara": ["aqara.com"],
+    "LUMI": ["aqara.com"],
+    "AwoX": ["awox.com"],
+    "Aeotec": ["aeotec.com"],
+    "frient A/S": ["frient.com"],
+    "Develco": ["frient.com"],
+    "Moes": ["moeshouse.com"],
+    "Philips": ["philips-hue.com"],
+    "Signify Netherlands B.V.": ["philips-hue.com"]
+  }
+}

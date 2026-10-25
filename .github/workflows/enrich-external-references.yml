@@ -14,10 +14,32 @@ name: Enrich external references
 # manufacturer page saying a device supports something is never evidence
 # that it does — only a real scan is.
 #
-# Matching is 100% deterministic (frontmatter-field comparison against a
-# shallow clone of github.com/blakadder/zigbee's own _zigbee/ directory) —
-# no scraping, no LLM calls, same category of automation as
+# Blakadder matching is 100% deterministic (frontmatter-field comparison
+# against a shallow clone of github.com/blakadder/zigbee's own _zigbee/
+# directory) — no scraping, no LLM calls, same category of automation as
 # rebuild-capability-index.yml and ingest-submission.yml.
+#
+# Vendor discovery (added 2026-10-25, .github/scripts/vendor-discovery.mjs,
+# run as its own step before the Blakadder matcher) is the part that does
+# NOT depend on Blakadder: it looks for an official manufacturer/product
+# page for every device that doesn't have one yet — whether or not the
+# device is on Blakadder, and also when Blakadder has the device but no
+# usable mlink — using Zigbee2MQTT's device library (offline), a web
+# search API (Brave Search, only if the BRAVE_SEARCH_API_KEY secret is
+# set) and the vendor's own site (shop search + sitemap, no key needed).
+# Every page it proposes was fetched and verified to mention the device's
+# model. Its findings are never written to main: they're pre-filled on the
+# standing review PR (kind "manufacturer_link_search"), same one-merge
+# approval as manufacturer_link_only. For devices that aren't on Blakadder
+# at all it also assembles a ready-to-submit Blakadder "Add new device"
+# form draft (kind "blakadder_submission", shown on docs/review.html with a
+# pre-filled form link) — only when every required form field is known;
+# devices still missing something are listed as
+# "blakadder_submission_incomplete". It reads each device's endpoint
+# device_type only to suggest a form category, never for anything about
+# capability/confidence. Its search cache, external-references-cache.json
+# at the repo root, is the one thing it commits to main (so the next run
+# doesn't spend search quota re-finding the same answers).
 #
 # What gets auto-applied straight to main vs. proposed for review:
 #
@@ -66,7 +88,10 @@ name: Enrich external references
 # to hand-write the references JSON from scratch. Setting
 # `references.blakadder_declined: true` (or `.manufacturer_declined: true`
 # for just the manufacturer-link half) on a device permanently excludes it
-# from future review reports — that's what the page's "Not any of these"
+# from future review reports (`.blakadder_submitted: "<date>"` just stops
+# re-proposing a Blakadder submission draft once it's been sent; it drops
+# away by itself once Blakadder publishes the page and the matcher finds
+# it) — that's what the page's "Not any of these"
 # button's copied snippet sets.
 #
 # Idempotency: on a push-triggered run, a device already carrying
@@ -111,7 +136,12 @@ name: Enrich external references
 #     needed since ingest-submission.yml already only ever lands new/
 #     changed device data on main via a merged PR.
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      refresh_vendor_search:
+        description: "Re-run vendor search for every device, ignoring the search cache (uses search-API quota)"
+        type: boolean
+        default: false
   schedule:
     - cron: "0 6 1 * *" # 06:00 UTC on the 1st of every month
   push:
@@ -136,6 +166,27 @@ jobs:
         run: |
           git clone --depth 1 --filter=blob:none --sparse https://github.com/blakadder/zigbee.git /tmp/blakadder-zigbee
           git -C /tmp/blakadder-zigbee sparse-checkout set _zigbee
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Vendor discovery never blocks the Blakadder part below: if Z2M's
+      # library fails to install or the script errors, the matcher just
+      # runs without vendor-search proposals/drafts this time.
+      - name: Install Zigbee2MQTT's device library (zigbee-herdsman-converters)
+        continue-on-error: true
+        run: npm install --no-save --no-audit --no-fund --prefix /tmp/zhc zigbee-herdsman-converters
+
+      - name: Vendor discovery (manufacturer pages + Blakadder submission drafts)
+        continue-on-error: true
+        env:
+          BRAVE_SEARCH_API_KEY: ${{ secrets.BRAVE_SEARCH_API_KEY }}
+          REFRESH: ${{ inputs.refresh_vendor_search && '--refresh' || '' }}
+        run: |
+          node .github/scripts/vendor-discovery.mjs --data data \
+            --blakadder /tmp/blakadder-zigbee/_zigbee --zhc /tmp/zhc \
+            --out /tmp/vendor-discovery.json $REFRESH
 
       - name: Match devices against Blakadder, apply confident results directly, propose the rest for review
         uses: actions/github-script@v7
@@ -300,6 +351,48 @@ jobs:
               return host.includes(v) || v.includes(host); // conservative substring check
             }
 
+            // Generic Tuya-platform model IDs (TS0001, TS011F, TS0601, …)
+            // are shared by hundreds of unrelated devices — never a usable
+            // identifier on their own.
+            function isGenericModelId(model) {
+              return /^TS\d{3,4}[A-Z]?$/i.test((model || "").trim()) || norm(model).length < 5;
+            }
+
+            // Tier C (added 2026-10-25): the cases Tiers A/B miss because
+            // our Zigbee manufacturer string isn't the brand Blakadder
+            // files the device under (AL001 vs Aeotec, iMagic by GreatStar
+            // vs Iris, LEDVANCE vs OSRAM), or because Blakadder lists the
+            // retail model (IKEA LED1924G9) rather than the Zigbee model
+            // string. Uses (1) an exact Zigbee-model match regardless of
+            // vendor, and (2) Zigbee2MQTT's identity for the device (brand
+            // + retail model, from the vendor-discovery step). Never
+            // auto-applied — always proposed for a human pick, since the
+            // vendor names deliberately don't agree.
+            function matchBlakadderByIdentity(manufacturer, model, identity, blakadderIndex) {
+              const found = new Map();
+              if (!looksLikeTuyaManufacturerString(manufacturer) && !isGenericModelId(model)) {
+                for (const b of blakadderIndex) {
+                  if (b.zigbeemodel.some((z) => z.toLowerCase() === model.toLowerCase())) found.set(b.url, { b, why: `Zigbee model "${model}" matches exactly` });
+                }
+              }
+              if (identity && identity.retailModel && !isGenericModelId(identity.retailModel)) {
+                const brands = [identity.brand, identity.z2mVendor].filter(Boolean);
+                for (const b of blakadderIndex) {
+                  if (found.has(b.url)) continue;
+                  if (!brands.some((br) => vendorNamesMatch(b.vendor, br).matched)) continue;
+                  if (norm(b.model) === norm(identity.retailModel)) found.set(b.url, { b, why: `Zigbee2MQTT identifies it as ${identity.brand} ${identity.retailModel}` });
+                }
+              }
+              if (!found.size) return null;
+              const list = [...found.values()];
+              return {
+                status: "ambiguous",
+                via: "identity",
+                candidates: list.map((x) => x.b),
+                reason: `Not matched by vendor + model (our manufacturer string is "${manufacturer}"), but ${list.map((x) => `${x.b.vendor} ${x.b.model}: ${x.why}`).join("; ")}. Confirm it's the same device.`,
+              };
+            }
+
             function matchBlakadder(manufacturer, model, blakadderIndex) {
               const modelNorm = norm(model);
 
@@ -354,7 +447,13 @@ jobs:
               // never auto-added.
               const vendorOnlyHits = blakadderIndex.filter((b) => vendorNamesMatch(b.vendor, manufacturer).matched);
               if (vendorOnlyHits.length) {
-                const close = vendorOnlyHits.filter((b) => norm(b.model).includes(modelNorm) || modelNorm.includes(norm(b.model)));
+                // norm(b.model) must be non-empty: "anything".includes("")
+                // is true, so a Blakadder page with a missing/misspelt
+                // `model:` field (e.g. eWeLink_ZB-GW03.md's `models:`) used
+                // to be proposed for every device of that vendor — the
+                // reason several SONOFF devices sat in "needs a pick" with
+                // a gateway as their only candidate (fixed 2026-10-25).
+                const close = vendorOnlyHits.filter((b) => norm(b.model) && (norm(b.model).includes(modelNorm) || modelNorm.includes(norm(b.model))));
                 if (close.length) {
                   return { status: "ambiguous", candidates: close, reason: `Vendor "${manufacturer}" matches, but model "${model}" only loosely resembles Blakadder's model string for these page(s).` };
                 }
@@ -423,6 +522,18 @@ jobs:
               return out;
             }
 
+            // Vendor-discovery output (separate step, see header) — read
+            // here already so Phase 1 can use Zigbee2MQTT's identity for
+            // Tier C Blakadder matching; Phase 3 uses the rest.
+            let discovery = null;
+            try {
+              discovery = JSON.parse(fs.readFileSync("/tmp/vendor-discovery.json", "utf8"));
+            } catch (e) {
+              console.log("No vendor-discovery output this run — skipping identity-based Blakadder matching, vendor-search links and Blakadder drafts.");
+            }
+            const identityByFile = new Map(((discovery && discovery.results) || []).map((d) => [d.file, d.identity]));
+            const ambiguousFiles = new Set();
+
             const blakadderIndex = loadBlakadderIndex("/tmp/blakadder-zigbee/_zigbee");
             const blakadderByUrl = new Map(blakadderIndex.map((b) => [b.url, b]));
             console.log(`Loaded ${blakadderIndex.length} Blakadder device pages. FORCE_RECHECK=${FORCE_RECHECK} CHECK_LIVENESS=${CHECK_LIVENESS}`);
@@ -444,6 +555,23 @@ jobs:
             // whose own data is stale-but-dead would sail straight past
             // the whole liveness check.
             const deadUrlsThisRun = new Set();
+
+            // "No Blakadder match" references for a device, keeping
+            // everything a human (or an approved review PR) added that
+            // doesn't depend on Blakadder: a manufacturer link (incl. one
+            // found by vendor search), and the decline/submitted flags.
+            // Bug found 2026-10-25: this used to be rebuilt from scratch, so
+            // every forced recheck (monthly schedule, manual run) silently
+            // erased hand-added manufacturer links on devices that aren't
+            // on Blakadder — e.g. Repenic RD-250ZG's.
+            function noMatchReferences(currentRefs, manufacturer, model) {
+              const next = { blakadder: null, checked_manufacturer: manufacturer, checked_model: model };
+              const cur = currentRefs || {};
+              if (cur.manufacturer) next.manufacturer = cur.manufacturer;
+              if (cur.manufacturer_declined === true) next.manufacturer_declined = true;
+              if (cur.blakadder_submitted) next.blakadder_submitted = cur.blakadder_submitted;
+              return next;
+            }
             async function urlOkToApply(url) {
               if (!CHECK_LIVENESS) return true;
               if (deadUrlsThisRun.has(url)) return false;
@@ -516,7 +644,10 @@ jobs:
                 }
 
                 processed++;
-                const result = matchBlakadder(manufacturer, model, blakadderIndex);
+                let result = matchBlakadder(manufacturer, model, blakadderIndex);
+                if (result.status === "none") {
+                  result = matchBlakadderByIdentity(manufacturer, model, identityByFile.get(file), blakadderIndex) || result;
+                }
                 const currentRefs = parsed.references; // re-read: may have just been cleared by the liveness check above
 
                 if (result.status === "high") {
@@ -551,7 +682,7 @@ jobs:
                       reason: `Blakadder match found (${result.entry.url}) but that page is unreachable (checked ${today}) — not applied this run.`,
                     });
                     noMatch++;
-                    parsed.references = { blakadder: null, checked_manufacturer: manufacturer, checked_model: model };
+                    parsed.references = noMatchReferences(currentRefs, manufacturer, model);
                     fs.writeFileSync(file, JSON.stringify(parsed, null, 2) + "\n");
                     changedFiles++;
                     continue;
@@ -621,11 +752,23 @@ jobs:
                     continue;
                   }
                   manualReview++;
+                  ambiguousFiles.add(file);
                   ambiguousReport.push({
                     file, manufacturer, model, kind: "blakadder_ambiguous",
                     reason: result.reason,
                     candidates: result.candidates.map((c) => ({ url: c.url, vendor: c.vendor, model: c.model, zigbeemodel: c.zigbeemodel })),
                   });
+                  // A device previously recorded as "no match" (fingerprinted)
+                  // that Tier C now finds a candidate for loses its
+                  // fingerprint, so — like every other ambiguous device — it's
+                  // re-checked on every run until a human picks, instead of
+                  // only reappearing on forced rechecks.
+                  if (currentRefs && currentRefs.checked_manufacturer && !(currentRefs.blakadder && currentRefs.blakadder.url)) {
+                    const { checked_manufacturer, checked_model, ...rest } = currentRefs;
+                    parsed.references = rest;
+                    fs.writeFileSync(file, JSON.stringify(parsed, null, 2) + "\n");
+                    changedFiles++;
+                  }
                   // Deliberately no checked_* fingerprint written here — an
                   // ambiguous device stays unresolved (and gets retried
                   // every run) until a human looks at references-review.json
@@ -646,9 +789,12 @@ jobs:
                     continue;
                   }
                   noMatch++;
-                  parsed.references = { blakadder: null, checked_manufacturer: manufacturer, checked_model: model };
-                  fs.writeFileSync(file, JSON.stringify(parsed, null, 2) + "\n");
-                  changedFiles++;
+                  const nextRefs = noMatchReferences(currentRefs, manufacturer, model);
+                  if (JSON.stringify(nextRefs) !== JSON.stringify(currentRefs)) {
+                    parsed.references = nextRefs;
+                    fs.writeFileSync(file, JSON.stringify(parsed, null, 2) + "\n");
+                    changedFiles++;
+                  }
                 }
               }
             }
@@ -695,6 +841,51 @@ jobs:
               }))
             );
 
+            // --- Phase 3: vendor discovery results (see header). Read from
+            // the separate step's output and re-checked against each
+            // device's references as they stand AFTER Phase 1 — e.g. a
+            // device that just got its first Blakadder match this run
+            // doesn't get a submission draft.
+            const searchLinkCandidates = [];
+            const blakadderDrafts = [];
+            const blakadderIncomplete = [];
+            const phase2Files = new Set(mfrLinkCandidates.map((c) => c.file));
+            for (const d of (discovery && discovery.results) || []) {
+              let parsed;
+              try {
+                parsed = JSON.parse(fs.readFileSync(d.file, "utf8"));
+              } catch (e) {
+                continue;
+              }
+              const refs = parsed.references || {};
+              const hasMfr = !!(refs.manufacturer && refs.manufacturer.url);
+              const mc = d.manufacturerCandidate;
+              let pendingMfr = false;
+              if (mc && !hasMfr && refs.manufacturer_declined !== true && !phase2Files.has(d.file)) {
+                searchLinkCandidates.push({ file: d.file, manufacturer: d.manufacturer, model: d.model, guessedUrl: mc.url, title: mc.title || null, method: mc.method, evidence: mc.evidence });
+                pendingMfr = true;
+              }
+              const notOnBlakadder = refs.blakadder === null && refs.checked_manufacturer === d.manufacturer && refs.checked_model === d.model;
+              // blakadder_declined ("none of these candidates") still means the
+              // device isn't on Blakadder, so it still gets a draft.
+              if (notOnBlakadder && !ambiguousFiles.has(d.file) && !refs.blakadder_submitted && d.draft) {
+                const base = { file: d.file, manufacturer: d.manufacturer, model: d.model, fields: d.draft.fields };
+                if (d.draft.missing.length) blakadderIncomplete.push({ ...base, missing: d.draft.missing });
+                else blakadderDrafts.push({ ...base, prefillUrl: d.draft.prefillUrl, manufacturerLinkPending: pendingMfr && d.draft.fields.manufacturerLink === mc.url });
+              }
+            }
+            manualReview += searchLinkCandidates.length;
+            ambiguousReport.push(
+              ...searchLinkCandidates.map((c) => ({
+                file: c.file, manufacturer: c.manufacturer, model: c.model, kind: "manufacturer_link_search",
+                guessedUrl: c.guessedUrl, title: c.title, method: c.method, evidence: c.evidence,
+                reason: `Found by vendor search (${c.method}; ${c.evidence}); pre-filled as this device's manufacturer link on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline.`,
+              })),
+              ...blakadderDrafts.map((c) => ({ ...c, kind: "blakadder_submission" })),
+              ...blakadderIncomplete.map((c) => ({ ...c, kind: "blakadder_submission_incomplete" }))
+            );
+            console.log(`Vendor discovery: ${searchLinkCandidates.length} manufacturer link(s) found by search, ${blakadderDrafts.length} Blakadder submission draft(s) ready, ${blakadderIncomplete.length} not-on-Blakadder device(s) still missing form fields.`);
+
             console.log(`Processed ${processed} device(s) (${skipped} already up to date and skipped, ${deadLinksCleared} dead link(s) cleared): ${blakadderMatches} Blakadder matches (${manufacturerLinks} with a manufacturer link), ${manualReview} needing manual review, ${noMatch} with no credible match.`);
 
             await exec.exec("git", ["config", "user.name", "github-actions[bot]"]);
@@ -702,14 +893,20 @@ jobs:
 
             // --- Part 1: confident results (matches, no-matches, cleared
             // dead links), committed straight to main ---
-            if (changedFiles > 0) {
+            const cacheFile = "external-references-cache.json";
+            const cacheStatus = await exec.getExecOutput("git", ["status", "--porcelain", "--", cacheFile], { ignoreReturnCode: true, silent: true });
+            const cacheChanged = cacheStatus.stdout.trim() !== "";
+            if (changedFiles > 0 || cacheChanged) {
               await exec.exec("git", ["add", "data/"]);
+              if (cacheChanged) await exec.exec("git", ["add", cacheFile]);
               const diffExit = await exec.exec("git", ["diff", "--cached", "--quiet"], { ignoreReturnCode: true });
               if (diffExit !== 0) {
                 await exec.exec("git", [
                   "commit",
                   "-m",
-                  `Enrich external references (${blakadderMatches} Blakadder match(es), ${manufacturerLinks} manufacturer link(s), ${noMatch} confirmed no-match, ${deadLinksCleared} dead link(s) cleared)`,
+                  changedFiles > 0
+                    ? `Enrich external references (${blakadderMatches} Blakadder match(es), ${manufacturerLinks} manufacturer link(s), ${noMatch} confirmed no-match, ${deadLinksCleared} dead link(s) cleared)`
+                    : "Update vendor-search cache",
                 ]);
                 await exec.exec("git", ["push", "origin", "HEAD:main"]);
                 console.log(`Committed references for ${changedFiles} device file(s) directly to main.`);
@@ -774,6 +971,18 @@ jobs:
               parsed.references.manufacturer = { url: c.guessedUrl, confidence: "high" };
               fs.writeFileSync(c.file, JSON.stringify(parsed, null, 2) + "\n");
             }
+            for (const c of searchLinkCandidates) {
+              let parsed;
+              try {
+                parsed = JSON.parse(fs.readFileSync(c.file, "utf8"));
+              } catch (e) {
+                continue;
+              }
+              if (!parsed.references || parsed.references.manufacturer) continue;
+              // `source` is provenance only — app.js ignores it.
+              parsed.references.manufacturer = { url: c.guessedUrl, confidence: "high", source: "vendor_search" };
+              fs.writeFileSync(c.file, JSON.stringify(parsed, null, 2) + "\n");
+            }
 
             fs.writeFileSync("references-review.json", nextReview);
             await exec.exec("git", ["add", "-A"]);
@@ -801,12 +1010,20 @@ jobs:
             const blakadderAmbiguous = byKind("blakadder_ambiguous");
             const deadLinks = byKind("dead_link");
             const matchChanged = byKind("match_changed");
+            const searchFound = byKind("manufacturer_link_search");
+            const drafts = byKind("blakadder_submission");
 
             const body = [
               "**Automated. Nothing here is on `main` or visible on the live site until this PR is merged.**",
               "",
               mfrOnly.length
                 ? `**Ready to approve (${mfrOnly.length}):** each of these devices already has a solid Blakadder match; this PR pre-fills the one plausible manufacturer link it found directly into that device's \`references.manufacturer\` (confidence "high"). Merging this PR approves all of them at once — to decline one, edit or drop that file's diff hunk before merging.`
+                : null,
+              searchFound.length
+                ? `**Found by vendor search (${searchFound.length}):** manufacturer/product pages found by searching the vendor's own site or the web (each page was fetched and mentions the device's model). Pre-filled the same way — merging approves them.`
+                : null,
+              drafts.length
+                ? `**Ready to submit to Blakadder (${drafts.length}):** devices not on Blakadder yet, with every field of Blakadder's "Add new device" form filled in. Open docs/review.html for a pre-filled form link per device. Nothing to merge for these.`
                 : null,
               blakadderAmbiguous.length
                 ? `**Needs a pick (${blakadderAmbiguous.length}):** multiple plausible Blakadder pages, no reliable way to guess which one — see \`references-review.json\` for the candidate list per device, then hand-add the right \`references.blakadder\` block to that device's file in a normal commit.`
@@ -821,7 +1038,8 @@ jobs:
               `- Devices processed this run: ${processed}`,
               `- Blakadder matches (already applied to main): ${blakadderMatches}`,
               `- Manufacturer links auto-applied to main: ${manufacturerLinks}`,
-              `- Manufacturer links pre-filled on this PR, awaiting approval: ${mfrOnly.length}`,
+              `- Manufacturer links pre-filled on this PR, awaiting approval: ${mfrOnly.length + searchFound.length} (${searchFound.length} found by vendor search)`,
+              `- Blakadder submission drafts ready: ${drafts.length}`,
               `- No credible match (already recorded on main): ${noMatch}`,
               `- Dead links cleared this run: ${deadLinksCleared}`,
               "",

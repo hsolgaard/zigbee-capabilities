@@ -220,6 +220,25 @@ tr.detail-row td { background: var(--card-bg); padding-top: 10px; padding-bottom
   background: var(--bg); border: 1px solid var(--border); border-radius: 6px; font-size: 0.88em;
 }
 .review-candidate-meta { font-size: 0.92em; }
+.review-candidate-row a, .review-links-list a { overflow-wrap: anywhere; min-width: 0; }
+/* "Submit to Blakadder" draft cards */
+.blk-fields { margin: 8px 0; }
+.blk-fields table { table-layout: fixed; }
+.blk-fields td { padding: 6px 8px; overflow-wrap: anywhere; }
+.blk-fields td.blk-label { width: 32%; color: var(--muted); font-weight: 600; }
+.blk-fields td.blk-copy { width: 70px; text-align: right; }
+@media (max-width: 600px) {
+  .blk-fields table, .blk-fields tbody { display: block; }
+  .blk-fields tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; border-bottom: 1px solid var(--border); }
+  .blk-fields td { border-bottom: none; }
+  .blk-fields td.blk-label { grid-column: 1 / -1; width: auto; padding-bottom: 0; font-size: 0.85em; }
+  .blk-fields td.blk-copy { width: auto; }
+}
+.blk-empty { color: var(--muted); font-style: italic; }
+.review-warning { background: var(--amber-bg); border: 1px solid var(--amber-border); border-radius: 6px; padding: 6px 10px; font-size: 0.88em; margin: 8px 0; }
+.blk-incomplete summary { cursor: pointer; font-weight: 600; margin: 8px 0; }
+.blk-incomplete ul { margin: 6px 0 0; padding-left: 20px; font-size: 0.9em; }
+.blk-incomplete li { margin-bottom: 4px; }
 
 .diff-row { padding: 8px 10px; border-radius: 8px; background: var(--card-bg); border: 1px solid var(--border); margin-bottom: 6px; }
 .diff-added { color: var(--green); }

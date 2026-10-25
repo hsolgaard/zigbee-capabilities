@@ -153,6 +153,10 @@ function cardShell(manufacturer, model, reason) {
 }
 
 function renderMfrOnly(items, listEl, toolbarEl) {
+  // Two kinds share this section: manufacturer_link_only (from a solid
+  // Blakadder match) and manufacturer_link_search (found by vendor
+  // search, no Blakadder involvement). Both are pre-filled on the review
+  // PR the same way, so approving/declining works identically.
   if (!items.length) return;
   document.getElementById("mfr-only-section").hidden = false;
   toolbarEl.appendChild(
@@ -163,8 +167,11 @@ function renderMfrOnly(items, listEl, toolbarEl) {
     const p = document.createElement("p");
     p.className = "review-links-list";
     p.innerHTML =
-      `Blakadder: <a href="${escapeHtml(item.blakadderUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.blakadderUrl)}</a><br>` +
-      `Proposed manufacturer link: <a href="${escapeHtml(item.guessedUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.guessedUrl)}</a>`;
+      (item.blakadderUrl
+        ? `Blakadder: <a href="${escapeHtml(item.blakadderUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.blakadderUrl)}</a><br>`
+        : `Found by vendor search: ${escapeHtml(item.method || "")}${item.evidence ? ` — ${escapeHtml(item.evidence)}` : ""}<br>`) +
+      `Proposed manufacturer link: <a href="${escapeHtml(item.guessedUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.guessedUrl)}</a>` +
+      (item.title ? ` <span class="muted">(“${escapeHtml(item.title)}”)</span>` : "");
     card.appendChild(p);
     card.appendChild(
       linkRow([
@@ -176,10 +183,111 @@ function renderMfrOnly(items, listEl, toolbarEl) {
       copyFullFileRow(
         "Copy “not this link” fix",
         item.file, "merge", { manufacturer_declined: true },
-        `Copies the whole file with just that flag added (the Blakadder match is left exactly as-is). Click "Edit" above, select all (Ctrl/Cmd+A), paste, commit. Approving is simpler — just merge the PR above.`
+        `Copies the whole file with just that flag added (everything else is left exactly as-is). Click "Edit" above, select all (Ctrl/Cmd+A), paste, commit. Approving is simpler — just merge the PR above.`
       )
     );
     listEl.appendChild(card);
+  }
+}
+
+const BLAKADDER_FIELD_LABELS = [
+  ["manufacturer", "Manufacturer"],
+  ["deviceName", "Device name"],
+  ["model", "Model"],
+  ["zigbeeId", "ZigbeeID"],
+  ["category", "Device Category"],
+  ["vendorLink", "Vendor Link"],
+  ["manufacturerLink", "Manufacturer Link (optional)"],
+  ["gateways", "Supported Gateways"],
+  ["description", "Description (optional)"],
+  ["notes", "Notes to maintainers (optional)"],
+];
+
+function blakadderFieldsTable(fields) {
+  const wrap = document.createElement("div");
+  wrap.className = "table-scroll blk-fields";
+  const table = document.createElement("table");
+  for (const [key, label] of BLAKADDER_FIELD_LABELS) {
+    const raw = fields[key];
+    const value = Array.isArray(raw) ? raw.join(", ") : raw || "";
+    const tr = document.createElement("tr");
+    const th = document.createElement("td");
+    th.className = "blk-label";
+    th.textContent = label;
+    const td = document.createElement("td");
+    if (!value) {
+      td.className = "blk-empty";
+      td.textContent = "(leave empty)";
+    } else if (/^https?:\/\//.test(value)) {
+      const a = document.createElement("a");
+      a.href = value;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.textContent = value;
+      td.appendChild(a);
+    } else {
+      td.textContent = value;
+    }
+    const tdCopy = document.createElement("td");
+    tdCopy.className = "blk-copy";
+    if (value && key !== "gateways" && key !== "category") {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "btn btn-copy btn-small";
+      btn.textContent = "Copy";
+      btn.addEventListener("click", () => copyText(value, btn, "Copied ✓"));
+      tdCopy.appendChild(btn);
+    }
+    tr.append(th, td, tdCopy);
+    table.appendChild(tr);
+  }
+  wrap.appendChild(table);
+  return wrap;
+}
+
+function renderBlakadderSubmissions(items, incomplete, listEl) {
+  if (!items.length && !incomplete.length) return;
+  document.getElementById("blakadder-submit-section").hidden = false;
+  const today = new Date().toISOString().slice(0, 10);
+  for (const item of items) {
+    const card = cardShell(item.fields.manufacturer || item.manufacturer, item.fields.model || item.model, null);
+    if (item.manufacturerLinkPending) {
+      const w = document.createElement("p");
+      w.className = "review-warning";
+      w.textContent = "The manufacturer link below was found by vendor search and is still waiting for approval in “Ready to approve” above — check that it's the right page before submitting.";
+      card.appendChild(w);
+    }
+    card.appendChild(blakadderFieldsTable(item.fields));
+    const links = [];
+    if (item.prefillUrl) links.push({ label: "Open pre-filled Blakadder form →", url: item.prefillUrl });
+    links.push({ label: "View this device on GitHub →", url: githubBlobUrl(item.file) });
+    links.push({ label: `Edit ${item.file} on GitHub →`, url: githubEditUrl(item.file) });
+    card.appendChild(linkRow(links));
+    card.appendChild(
+      copyFullFileRow(
+        "Copy “mark as submitted” fix",
+        item.file, "merge", { blakadder_submitted: today },
+        `After submitting: copies the whole file with blakadder_submitted: "${today}" added, so this draft stops showing here. Click "Edit" above, select all (Ctrl/Cmd+A), paste, commit.`
+      )
+    );
+    listEl.appendChild(card);
+  }
+  if (incomplete.length) {
+    const det = document.getElementById("blakadder-incomplete");
+    det.hidden = false;
+    document.getElementById("blakadder-incomplete-summary").textContent = `${incomplete.length} more device(s) not on Blakadder, not enough info for a draft yet`;
+    const ul = document.getElementById("blakadder-incomplete-list");
+    for (const item of incomplete) {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = githubBlobUrl(item.file);
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.textContent = `${manufacturerDisplayLabel(item.manufacturer)} ${item.model}`;
+      li.appendChild(a);
+      li.appendChild(document.createTextNode(` — missing: ${(item.missing || []).join(", ")}`));
+      ul.appendChild(li);
+    }
   }
 }
 
@@ -300,7 +408,9 @@ async function main() {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     const all = data.ambiguous || [];
-    const mfrOnly = all.filter((r) => r.kind === "manufacturer_link_only");
+    const mfrOnly = all.filter((r) => r.kind === "manufacturer_link_only" || r.kind === "manufacturer_link_search");
+    const blkDrafts = all.filter((r) => r.kind === "blakadder_submission");
+    const blkIncomplete = all.filter((r) => r.kind === "blakadder_submission_incomplete");
     const ambiguous = all.filter((r) => r.kind === "blakadder_ambiguous");
     const matchChanged = all.filter((r) => r.kind === "match_changed");
     const deadLinks = all.filter((r) => r.kind === "dead_link");
@@ -312,10 +422,11 @@ async function main() {
     }
 
     statsEl.textContent =
-      `Generated ${new Date(data.generated_at).toLocaleString()} — ${mfrOnly.length} ready to approve, ` +
+      `Generated ${new Date(data.generated_at).toLocaleString()} — ${mfrOnly.length} ready to approve, ${blkDrafts.length} ready to submit to Blakadder, ` +
       `${ambiguous.length} need a decision, ${matchChanged.length} match changed, ${deadLinks.length} dead link(s) found.`;
 
     renderMfrOnly(mfrOnly, document.getElementById("mfr-only-list"), document.getElementById("mfr-only-toolbar"));
+    renderBlakadderSubmissions(blkDrafts, blkIncomplete, document.getElementById("blakadder-submit-list"));
     renderAmbiguous(ambiguous, document.getElementById("ambiguous-list"));
     renderMatchChanged(matchChanged, document.getElementById("match-changed-list"));
     renderDeadLinks(deadLinks, document.getElementById("dead-link-list"));
