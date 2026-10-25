@@ -156,6 +156,13 @@ permissions:
   contents: write
   pull-requests: write
 
+# One run at a time: two overlapping runs (e.g. a submission merge and a
+# follow-up push minutes apart) would race each other pushing to main and
+# force-pushing the review branch. Queued, never cancelled.
+concurrency:
+  group: enrich-external-references
+  cancel-in-progress: false
+
 jobs:
   enrich:
     runs-on: ubuntu-latest
@@ -928,7 +935,25 @@ jobs:
                     ? `Enrich external references (${blakadderMatches} Blakadder match(es), ${manufacturerLinks} manufacturer link(s), ${noMatch} confirmed no-match, ${deadLinksCleared} dead link(s) cleared)`
                     : "Update vendor-search cache",
                 ]);
-                await exec.exec("git", ["push", "origin", "HEAD:main"]);
+                // main can move while this job runs — rebuild-capability-
+                // index.yml is triggered by the same push and commits
+                // data/index.json. A plain push was then rejected as
+                // non-fast-forward and failed the whole run (runs #92/#93,
+                // 2026-10-25). Rebase onto the new tip and retry; the two
+                // workflows touch different files, so this doesn't conflict.
+                let pushed = false;
+                for (let attempt = 1; attempt <= 4 && !pushed; attempt++) {
+                  const code = await exec.exec("git", ["push", "origin", "HEAD:main"], { ignoreReturnCode: true });
+                  if (code === 0) {
+                    pushed = true;
+                    break;
+                  }
+                  console.log(`Push to main rejected (attempt ${attempt}) — rebasing onto the latest main and retrying.`);
+                  await exec.exec("git", ["fetch", "origin", "main"]);
+                  await exec.exec("git", ["rebase", "origin/main"]);
+                  await new Promise((r) => setTimeout(r, attempt * 3000));
+                }
+                if (!pushed) throw new Error("Couldn't push to main after 4 attempts.");
                 console.log(`Committed references for ${changedFiles} device file(s) directly to main.`);
               }
             }
