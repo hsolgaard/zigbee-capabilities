@@ -159,33 +159,67 @@ function renderMfrOnly(items, listEl, toolbarEl) {
   // PR the same way, so approving/declining works identically.
   if (!items.length) return;
   document.getElementById("mfr-only-section").hidden = false;
-  toolbarEl.appendChild(
-    linkRow([{ label: `Open the review PR (${items.length} pending) →`, url: PR_SEARCH_URL }])
-  );
+  // One obvious action for the common case: every link here is already
+  // filled in on the review PR, so approving = merging it. Nothing to copy
+  // or paste unless a link is wrong.
+  const howTo = document.createElement("div");
+  howTo.className = "review-approve-box";
+  howTo.innerHTML =
+    `<p><strong>To approve all ${items.length} link(s): nothing to copy or paste.</strong> They're already filled in on the review pull request — open it, then click the green <strong>Merge pull request</strong> button (and <strong>Confirm merge</strong>). They go live on the site a few minutes later.</p>`;
+  const prBtn = document.createElement("a");
+  prBtn.className = "btn";
+  prBtn.href = PR_SEARCH_URL;
+  prBtn.target = "_blank";
+  prBtn.rel = "noopener noreferrer";
+  prBtn.textContent = `Open the review pull request →`;
+  howTo.appendChild(prBtn);
+  const after = document.createElement("p");
+  after.className = "hint";
+  after.textContent = "Only if a link below is wrong: use “This link is wrong” on that card first, then merge.";
+  howTo.appendChild(after);
+  toolbarEl.appendChild(howTo);
+
   for (const item of items) {
     const card = cardShell(item.manufacturer, item.model, null);
     const p = document.createElement("p");
     p.className = "review-links-list";
     p.innerHTML =
-      (item.blakadderUrl
-        ? `Blakadder: <a href="${escapeHtml(item.blakadderUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.blakadderUrl)}</a><br>`
-        : `Found by vendor search: ${escapeHtml(item.method || "")}${item.evidence ? ` — ${escapeHtml(item.evidence)}` : ""}<br>`) +
-      `Proposed manufacturer link: <a href="${escapeHtml(item.guessedUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.guessedUrl)}</a>` +
-      (item.title ? ` <span class="muted">(“${escapeHtml(item.title)}”)</span>` : "");
+      `<a href="${escapeHtml(item.guessedUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title || item.guessedUrl)}</a>` +
+      (item.title ? `<br><span class="muted">${escapeHtml(item.guessedUrl)}</span>` : "") +
+      `<br><span class="muted">${
+        item.blakadderUrl
+          ? `From Blakadder: <a href="${escapeHtml(item.blakadderUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.blakadderUrl)}</a>`
+          : `Found by ${escapeHtml(item.method || "vendor search")}${item.evidence ? ` — ${escapeHtml(item.evidence)}` : ""}`
+      }</span>`;
     card.appendChild(p);
-    card.appendChild(
-      linkRow([
-        { label: "View this device on GitHub →", url: githubBlobUrl(item.file) },
-        { label: `Edit ${item.file} on GitHub →`, url: githubEditUrl(item.file) },
-      ])
-    );
-    card.appendChild(
-      copyFullFileRow(
-        "Copy “not this link” fix",
-        item.file, "merge", { manufacturer_declined: true },
-        `Copies the whole file with just that flag added (everything else is left exactly as-is). Click "Edit" above, select all (Ctrl/Cmd+A), paste, commit. Approving is simpler — just merge the PR above.`
-      )
-    );
+
+    // Declining is the rare path, so it's tucked away.
+    const det = document.createElement("details");
+    det.className = "review-decline";
+    const sum = document.createElement("summary");
+    sum.textContent = "This link is wrong";
+    det.appendChild(sum);
+    const steps = document.createElement("p");
+    steps.className = "hint";
+    steps.textContent = "1. Click “Copy fix” (copies the whole device file with this link ruled out). 2. Click “Edit on GitHub”. 3. Select all (Cmd/Ctrl+A), paste, and commit. Then merge the review pull request as usual — this device will be left out.";
+    det.appendChild(steps);
+    const row = document.createElement("div");
+    row.className = "review-link-row";
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "btn btn-copy";
+    btn.textContent = "Copy fix";
+    attachCopyFullFileHandler(btn, item.file, "merge", { manufacturer_declined: true });
+    row.appendChild(btn);
+    const a = document.createElement("a");
+    a.className = "btn btn-secondary";
+    a.href = githubEditUrl(item.file);
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.textContent = "Edit on GitHub →";
+    row.appendChild(a);
+    det.appendChild(row);
+    card.appendChild(det);
     listEl.appendChild(card);
   }
 }
