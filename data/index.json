@@ -14489,7 +14489,8 @@
       "manufacturer": {
         "url": "https://www.ikea.com/us/en/p/ormanaes-led-light-strip-smart-wireless-dimmable-color-and-white-spectrum-20541323/",
         "confidence": "high"
-      }
+      },
+      "blakadder_submitted": "2026-10-25"
     },
     "endpoint": 1,
     "firmware": "1.1.10",
