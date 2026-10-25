@@ -598,7 +598,121 @@
       "title": null,
       "shop": true
     },
-    "https://www.loratap.com/products/ss600zb": null
+    "https://www.loratap.com/products/ss600zb": null,
+    "https://www.ikea.com/dk/da/p/askvaeder-taend-slukkontakt-50463880/": {
+      "title": "Modulopbyggede stikdåser - Fleksibelt system til hjemmet",
+      "shop": true
+    },
+    "https://www.ikea.com/nl/en/p/leptiter-led-recessed-spotlight-dimmable-white-spectrum-50353513/": {
+      "title": "Products",
+      "shop": true
+    },
+    "https://www.ikea.com/nl/en/p/stoftmoln-led-ceiling-wall-lamp-wireless-dimmable-warm-white-white-30497490/": {
+      "title": "Products",
+      "shop": true
+    },
+    "https://www.ikea.com/gb/en/p/tradfri-led-bulb-e14-470-lumen-wireless-dimmable-colour-and-white-spectrum-globe-opal-white-70517636/": {
+      "title": "Products - Discover Our Full Range Of Furniture And Homeware",
+      "shop": true
+    },
+    "https://www.ikea.com/nl/en/p/tradfri-led-bulb-e14-400-lumen-wireless-dimmable-warm-white-chandelier-opal-white-60365271/": {
+      "title": "Products",
+      "shop": true
+    },
+    "https://www.ikea.com/gb/en/p/tradfri-led-bulb-e14-600-lumen-wireless-dimmable-white-spectrum-opal-white-80408585/": {
+      "title": "Products - Discover Our Full Range Of Furniture And Homeware",
+      "shop": true
+    },
+    "https://www.ikea.com/nl/en/p/tradfri-led-bulb-e27-600-lumen-wireless-dimmable-colour-and-white-spectrum-opal-white-00408612/": {
+      "title": "Products",
+      "shop": true
+    },
+    "https://www.ikea.com/pt/en/p/tradfri-led-bulb-e27-1000-lumen-wireless-dimmable-white-spectrum-opal-white-60408483/": {
+      "title": "Products - Discover Our Full Range Of Furniture And Homeware",
+      "shop": true
+    },
+    "https://www.ikea.com/nl/en/p/tradfri-led-bulb-e27-806-lumen-wireless-dimmable-warm-white-opal-white-90408797/": {
+      "title": "Products",
+      "shop": true
+    },
+    "https://www.ikea.lv/en/products////tradfri-led-bulb-gu10-345-lumen-colour-and-white-spectrum-art-80439228": {
+      "title": "Welcome to IKEA Latvia",
+      "shop": true
+    },
+    "https://www.ikea.com/nl/en/p/tradfri-wireless-control-outlet-90356166/": {
+      "title": "TRÅDFRI series. Buy Online & In-store!",
+      "shop": true
+    },
+    "https://www.ikea.com/us/en/p/tradfri-signal-repeater-30400407/": {
+      "title": "Products",
+      "shop": true
+    },
+    "https://www.ikea.com/cz/en/p/tradfri-remote-control-kit-white-spectrum-80513416/": {
+      "title": "Products - Discover Our Full Range Of Furniture And Homeware",
+      "shop": true
+    },
+    "https://www.ikea.com/us/en/p/tredansen-black-out-cellular-blind-smart-wireless-battery-operated-white-90512464/": {
+      "title": "Cellular Shades - Pleated and Honeycomb Blinds",
+      "shop": true
+    },
+    "https://www.ikea.com/us/en/p/vindstyrka-air-quality-sensor-smart-30498239/": {
+      "title": "Products",
+      "shop": true
+    },
+    "https://inovelli.com/products/blue-series-smart-on-off-switch-w-humidity-sensor": {
+      "title": "Blue Series (Zigbee) - Smart On/Off Switch",
+      "shop": true
+    },
+    "https://inovelli.com/products/zigbee-blue-series-mmwave-presence-sensor-smart-dimmer-switch": {
+      "title": "Blue Series (Zigbee) - Smart Presence Sensing Dimmer",
+      "shop": true
+    },
+    "https://inovelli.com/products/zigbee-blue-series-smart-fan-light-canopy-module": {
+      "title": "Blue Series (Zigbee) Smart Fan/Light Canopy Module",
+      "shop": true
+    },
+    "https://item.mi.com/product/5010.html": {
+      "title": null,
+      "shop": false
+    },
+    "https://item.mi.com/product/5005.html": {
+      "title": null,
+      "shop": false
+    },
+    "http://files.xiaomi-mi.co.uk/files/MiJia_Honeywell/MiJia_Honeywell_Smoke_Detector_EN.pdf": null,
+    "https://www2.meethue.com/en-gb/p/hue-white-1-pack-st64-e27-filament-edison/8718699688868": null,
+    "https://us.sengled.com/products/sengled-smart-light-switch": null,
+    "https://www.samsung.com/us/smart-home/smartthings/outlets/samsung-smartthings-outlet-f-out-us-2/": null,
+    "https://sonoff.tech/en-eu/products/sonoff-mini-duo-l-2-gang-zigbee-smart-switch-mini-zb2gs-l": {
+      "title": "SONOFF MINI DUO-L 2-Gang Zigbee Smart Switch - MINI-ZB2GS-L",
+      "shop": true
+    },
+    "https://sonoff.tech/en-de/products/sonoff-mini-duo-2-gang-zigbee-smart-switch-mini-zb2gs": {
+      "title": "SONOFF MINI DUO 2-Gang Zigbee Smart Switch - MINI-ZB2GS",
+      "shop": true
+    },
+    "https://sonoff.tech/products/sonoff-mini-extreme-zigbee-dimmer-switch-mini-zbdim": {
+      "title": "SONOFF MINI Extreme Zigbee Dimmer Switch - MINI-ZBDIM",
+      "shop": true
+    },
+    "https://sonoff.tech/products/sonoff-zigbee-smart-roller-shutter-switch-mini-zbrbs": {
+      "title": "SONOFF Zigbee Smart Roller Shutter Switch - MINI-ZBRBS",
+      "shop": true
+    },
+    "https://sonoff.tech/products/sonoff-iplug-zigbee-smart-plug-s60-series": {
+      "title": "SONOFF iPlug Zigbee Smart Plug - S60 Series",
+      "shop": true
+    },
+    "https://sonoff.tech/en-us/products/sonoff-senseguard-presence-core-24ghz-zigbee-human-presence-sensor-snzb-06p24": {
+      "title": "SONOFF SenseGuard Presence Core 24GHz Zigbee Human Presence Sensor - SNZB-06P24",
+      "shop": true
+    },
+    "https://thirdreality.com/products/smart-garage-door-tilt-sensor": {
+      "title": "Smart Garage Door Tilt Sensor",
+      "shop": true
+    },
+    "https://expo.tuya.com/product/907020": null,
+    "https://expo.tuya.com/product/1060057": null
   },
-  "generated_at": "2026-10-25T16:35:22.769Z"
+  "generated_at": "2026-10-25T22:15:03.154Z"
 }
