@@ -6876,7 +6876,11 @@
   {
     "manufacturer_slug": "18ejxno0",
     "model_slug": "moes-2-gang",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "18ejxno0",
+      "checked_model": "Moes-2-gang"
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -7045,7 +7049,11 @@
   {
     "manufacturer_slug": "18ejxno0",
     "model_slug": "moes-2-gang",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "18ejxno0",
+      "checked_model": "Moes-2-gang"
+    },
     "endpoint": 2,
     "firmware": null,
     "scan_count": 1,
@@ -7065,7 +7073,11 @@
   {
     "manufacturer_slug": "18ejxno0",
     "model_slug": "moes-2-gang",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "18ejxno0",
+      "checked_model": "Moes-2-gang"
+    },
     "endpoint": 3,
     "firmware": null,
     "scan_count": 1,
@@ -7129,7 +7141,11 @@
   {
     "manufacturer_slug": "18ejxno0",
     "model_slug": "moes-2-gang",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "18ejxno0",
+      "checked_model": "Moes-2-gang"
+    },
     "endpoint": 4,
     "firmware": null,
     "scan_count": 1,
