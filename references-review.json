@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-25T22:37:23.440Z",
-  "processed": 8,
+  "generated_at": "2026-10-26T08:00:59.049Z",
+  "processed": 9,
   "blakadderMatches": 0,
   "manufacturerLinks": 0,
   "manualReview": 9,
-  "noMatch": 0,
+  "noMatch": 1,
   "deadLinksCleared": 0,
   "ambiguous": [
     {
@@ -1412,6 +1412,30 @@
       "kind": "blakadder_submission_incomplete"
     },
     {
+      "file": "data/aqara/lumi-light-agl001.json",
+      "manufacturer": "Aqara",
+      "model": "lumi.light.agl001",
+      "fields": {
+        "manufacturer": "Aqara",
+        "deviceName": "E27 RGB led bulb",
+        "model": "T2_E27",
+        "zigbeeId": "lumi.light.agl001",
+        "category": "light",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"Aqara\", model \"lumi.light.agl001\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
       "file": "data/awox/tlsr82xx.json",
       "manufacturer": "AwoX",
       "model": "TLSR82xx",
@@ -1504,6 +1528,30 @@
         ],
         "description": "",
         "notes": "Zigbee signature from a ZHA scan: manufacturer \"HOBEIAN\", model \"CK-BL702-ROUTER-01(7018)\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/hobeian/zg-204zx.json",
+      "manufacturer": "HOBEIAN",
+      "model": "ZG-204ZX",
+      "fields": {
+        "manufacturer": "HOBEIAN",
+        "deviceName": "24Ghz millimeter wave and T&H sensor",
+        "model": "ZG-204ZX",
+        "zigbeeId": "ZG-204ZX",
+        "category": "sensor",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"HOBEIAN\", model \"ZG-204ZX\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
       },
       "missing": [
         "vendor (where to buy) link"
