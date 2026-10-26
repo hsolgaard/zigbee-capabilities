@@ -1959,5 +1959,10 @@
       "out_clusters": [],
       "clusters": {}
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "Aqara",
+    "checked_model": "lumi.light.agl001"
   }
 }
