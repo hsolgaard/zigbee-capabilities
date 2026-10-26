@@ -9054,7 +9054,11 @@
   {
     "manufacturer_slug": "aqara",
     "model_slug": "lumi-light-agl001",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "Aqara",
+      "checked_model": "lumi.light.agl001"
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -10063,7 +10067,11 @@
   {
     "manufacturer_slug": "aqara",
     "model_slug": "lumi-light-agl001",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "Aqara",
+      "checked_model": "lumi.light.agl001"
+    },
     "endpoint": 21,
     "firmware": null,
     "scan_count": 1,
