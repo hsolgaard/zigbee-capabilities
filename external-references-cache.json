@@ -56,6 +56,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "_TZ3210_g0qr1fqo|TS0503B": {
+      "searched_at": "2026-10-26",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "_TZ3210_g0qr1fqo|unk_model": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": null,
@@ -727,7 +732,11 @@
       "shop": true
     },
     "https://expo.tuya.com/product/907020": null,
-    "https://expo.tuya.com/product/1060057": null
+    "https://expo.tuya.com/product/1060057": null,
+    "https://www.ikea.com/nl/en/p/tradfri-led-bulb-e14-600-lumen-wireless-dimmable-colour-and-white-spectrum-opal-white-50411565/": {
+      "title": "Products",
+      "shop": true
+    }
   },
-  "generated_at": "2026-10-26T21:36:17.016Z"
+  "generated_at": "2026-10-26T22:32:13.532Z"
 }

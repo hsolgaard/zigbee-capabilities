@@ -682,5 +682,18 @@
       ],
       "clusters": {}
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Tuya_C03Z.html",
+      "match_method": "manufacturer_string_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "_TZ3210_g0qr1fqo",
+    "checked_model": "TS0503B",
+    "manufacturer": {
+      "url": "https://expo.tuya.com/product/1060057",
+      "confidence": "high"
+    }
   }
 }
