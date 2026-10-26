@@ -4059,7 +4059,15 @@
   {
     "manufacturer_slug": "tz3000-prits6g4",
     "model_slug": "ts0001",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Girier_JR-ZDS01.html",
+        "match_method": "manufacturer_string_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "_TZ3000_prits6g4",
+      "checked_model": "TS0001"
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
