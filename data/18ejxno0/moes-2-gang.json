@@ -634,5 +634,10 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "18ejxno0",
+    "checked_model": "Moes-2-gang"
   }
 }

@@ -91,6 +91,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "18ejxno0|Moes-2-gang": {
+      "searched_at": "2026-10-26",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "46t1rvdu|WHD02-Aubess": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": null,
@@ -738,5 +743,5 @@
       "shop": true
     }
   },
-  "generated_at": "2026-10-26T22:32:13.532Z"
+  "generated_at": "2026-10-26T22:32:37.393Z"
 }
