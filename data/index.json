@@ -5025,7 +5025,19 @@
   {
     "manufacturer_slug": "tz3210-g0qr1fqo",
     "model_slug": "ts0503b",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Tuya_C03Z.html",
+        "match_method": "manufacturer_string_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "_TZ3210_g0qr1fqo",
+      "checked_model": "TS0503B",
+      "manufacturer": {
+        "url": "https://expo.tuya.com/product/1060057",
+        "confidence": "high"
+      }
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -5344,7 +5356,19 @@
   {
     "manufacturer_slug": "tz3210-g0qr1fqo",
     "model_slug": "ts0503b",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Tuya_C03Z.html",
+        "match_method": "manufacturer_string_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "_TZ3210_g0qr1fqo",
+      "checked_model": "TS0503B",
+      "manufacturer": {
+        "url": "https://expo.tuya.com/product/1060057",
+        "confidence": "high"
+      }
+    },
     "endpoint": 242,
     "firmware": null,
     "scan_count": 1,
@@ -6846,6 +6870,323 @@
             "access": "READ|REPORT"
           }
         ]
+      }
+    }
+  },
+  {
+    "manufacturer_slug": "18ejxno0",
+    "model_slug": "moes-2-gang",
+    "references": null,
+    "endpoint": 1,
+    "firmware": null,
+    "scan_count": 1,
+    "last_seen": "2026-10-26T22:12:00.689Z",
+    "manufacturer": "18ejxno0",
+    "model": "Moes-2-gang",
+    "in_clusters": [
+      "0x0000",
+      "0x0007",
+      "0x0012"
+    ],
+    "out_clusters": [
+      "0x0006",
+      "0x0008",
+      "0x0019"
+    ],
+    "clusters": {
+      "0x0000": {
+        "name": "CustomBasicCluster",
+        "commands_received": [],
+        "commands_received_scan_count": 0,
+        "attributes_confirmed": [
+          {
+            "id": 0,
+            "name": "0",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 1,
+            "name": "1",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 2,
+            "name": "2",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 3,
+            "name": "3",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 4,
+            "name": "4",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 5,
+            "name": "5",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 6,
+            "name": "6",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 7,
+            "name": "7",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 18,
+            "name": "18",
+            "access": "READ|WRITE|REPORT"
+          },
+          {
+            "id": 16384,
+            "name": "16384",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 65280,
+            "name": "65280",
+            "access": "READ|WRITE|REPORT"
+          },
+          {
+            "id": 65282,
+            "name": "multi_press_reset_count",
+            "access": "READ|WRITE|REPORT"
+          },
+          {
+            "id": 65533,
+            "name": "65533",
+            "access": "READ|REPORT"
+          }
+        ]
+      },
+      "0x0007": {
+        "name": "On/Off Switch Configuration",
+        "commands_received": [],
+        "commands_received_scan_count": 0,
+        "attributes_confirmed": [
+          {
+            "id": 0,
+            "name": "switch_type",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 16,
+            "name": "switch_actions",
+            "access": "READ|WRITE|REPORT"
+          },
+          {
+            "id": 65280,
+            "name": "switch_mode",
+            "access": "READ|WRITE|REPORT"
+          },
+          {
+            "id": 65281,
+            "name": "relay_mode",
+            "access": "READ|WRITE|REPORT"
+          },
+          {
+            "id": 65282,
+            "name": "relay_index",
+            "access": "READ|WRITE|REPORT"
+          },
+          {
+            "id": 65283,
+            "name": "long_press_duration",
+            "access": "READ|WRITE|REPORT"
+          },
+          {
+            "id": 65284,
+            "name": "level_move_rate",
+            "access": "READ|WRITE|REPORT"
+          },
+          {
+            "id": 65285,
+            "name": "binded_mode",
+            "access": "READ|WRITE|REPORT"
+          }
+        ]
+      },
+      "0x0012": {
+        "name": "CustomMultistateInputCluster",
+        "commands_received": [],
+        "commands_received_scan_count": 0,
+        "attributes_confirmed": [
+          {
+            "id": 74,
+            "name": "74",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 81,
+            "name": "81",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 85,
+            "name": "present_value",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 111,
+            "name": "111",
+            "access": "READ|REPORT"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "manufacturer_slug": "18ejxno0",
+    "model_slug": "moes-2-gang",
+    "references": null,
+    "endpoint": 2,
+    "firmware": null,
+    "scan_count": 1,
+    "last_seen": "2026-10-26T22:12:00.689Z",
+    "manufacturer": "18ejxno0",
+    "model": "Moes-2-gang",
+    "in_clusters": [
+      "0x0007",
+      "0x0012"
+    ],
+    "out_clusters": [
+      "0x0006",
+      "0x0008"
+    ],
+    "clusters": {}
+  },
+  {
+    "manufacturer_slug": "18ejxno0",
+    "model_slug": "moes-2-gang",
+    "references": null,
+    "endpoint": 3,
+    "firmware": null,
+    "scan_count": 1,
+    "last_seen": "2026-10-26T22:12:00.689Z",
+    "manufacturer": "18ejxno0",
+    "model": "Moes-2-gang",
+    "in_clusters": [
+      "0x0004",
+      "0x0006",
+      "0x0008"
+    ],
+    "out_clusters": [],
+    "clusters": {
+      "0x0004": {
+        "name": "Groups",
+        "commands_received": [],
+        "commands_received_scan_count": 0,
+        "attributes_confirmed": [
+          {
+            "id": 0,
+            "name": "name_support",
+            "access": "READ|REPORT"
+          }
+        ]
+      },
+      "0x0006": {
+        "name": "On/Off",
+        "commands_received": [],
+        "commands_received_scan_count": 0,
+        "attributes_confirmed": [
+          {
+            "id": 0,
+            "name": "on_off",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 16387,
+            "name": "start_up_on_off",
+            "access": "READ|WRITE|REPORT"
+          },
+          {
+            "id": 65281,
+            "name": "led_mode",
+            "access": "READ|WRITE|REPORT"
+          },
+          {
+            "id": 65282,
+            "name": "led_state",
+            "access": "READ|WRITE|REPORT"
+          }
+        ]
+      },
+      "0x0008": {
+        "name": "Level control",
+        "commands_received": [],
+        "commands_received_scan_count": 0,
+        "attributes_confirmed": []
+      }
+    }
+  },
+  {
+    "manufacturer_slug": "18ejxno0",
+    "model_slug": "moes-2-gang",
+    "references": null,
+    "endpoint": 4,
+    "firmware": null,
+    "scan_count": 1,
+    "last_seen": "2026-10-26T22:12:00.689Z",
+    "manufacturer": "18ejxno0",
+    "model": "Moes-2-gang",
+    "in_clusters": [
+      "0x0004",
+      "0x0006",
+      "0x0008"
+    ],
+    "out_clusters": [],
+    "clusters": {
+      "0x0004": {
+        "name": "Groups",
+        "commands_received": [],
+        "commands_received_scan_count": 0,
+        "attributes_confirmed": [
+          {
+            "id": 0,
+            "name": "name_support",
+            "access": "READ|REPORT"
+          }
+        ]
+      },
+      "0x0006": {
+        "name": "On/Off",
+        "commands_received": [],
+        "commands_received_scan_count": 0,
+        "attributes_confirmed": [
+          {
+            "id": 0,
+            "name": "on_off",
+            "access": "READ|REPORT"
+          },
+          {
+            "id": 16387,
+            "name": "start_up_on_off",
+            "access": "READ|WRITE|REPORT"
+          },
+          {
+            "id": 65281,
+            "name": "led_mode",
+            "access": "READ|WRITE|REPORT"
+          },
+          {
+            "id": 65282,
+            "name": "led_state",
+            "access": "READ|WRITE|REPORT"
+          }
+        ]
+      },
+      "0x0008": {
+        "name": "Level control",
+        "commands_received": [],
+        "commands_received_scan_count": 0,
+        "attributes_confirmed": []
       }
     }
   },
