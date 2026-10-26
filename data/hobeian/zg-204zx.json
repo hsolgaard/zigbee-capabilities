@@ -562,5 +562,10 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "HOBEIAN",
+    "checked_model": "ZG-204ZX"
   }
 }

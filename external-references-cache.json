@@ -141,6 +141,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "HOBEIAN|ZG-204ZX": {
+      "searched_at": "2026-10-26",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "IKEA of Sweden|ASKVADER on/off switch": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": null,
@@ -714,5 +719,5 @@
     "https://expo.tuya.com/product/907020": null,
     "https://expo.tuya.com/product/1060057": null
   },
-  "generated_at": "2026-10-25T22:15:03.154Z"
+  "generated_at": "2026-10-26T07:53:28.817Z"
 }
