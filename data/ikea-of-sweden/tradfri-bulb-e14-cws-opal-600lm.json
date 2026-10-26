@@ -1502,5 +1502,18 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Ikea_LED1624G9-E14.html",
+      "match_method": "vendor_alias_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "IKEA of Sweden",
+    "checked_model": "TRADFRI bulb E14 CWS opal 600lm",
+    "manufacturer": {
+      "url": "https://www.ikea.com/nl/en/p/tradfri-led-bulb-e14-600-lumen-wireless-dimmable-colour-and-white-spectrum-opal-white-50411565/",
+      "confidence": "high"
+    }
   }
 }

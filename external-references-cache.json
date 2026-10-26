@@ -181,6 +181,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "IKEA of Sweden|TRADFRI bulb E14 CWS opal 600lm": {
+      "searched_at": "2026-10-26",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "IKEA of Sweden|TRADFRI bulb E14 W op/ch 400lm": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": null,
@@ -724,5 +729,5 @@
     "https://expo.tuya.com/product/907020": null,
     "https://expo.tuya.com/product/1060057": null
   },
-  "generated_at": "2026-10-26T08:00:53.413Z"
+  "generated_at": "2026-10-26T21:36:17.016Z"
 }
