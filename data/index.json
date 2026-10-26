@@ -11599,7 +11599,11 @@
   {
     "manufacturer_slug": "hobeian",
     "model_slug": "zg-204zx",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "HOBEIAN",
+      "checked_model": "ZG-204ZX"
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
