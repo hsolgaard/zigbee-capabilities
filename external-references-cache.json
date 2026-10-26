@@ -41,6 +41,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "_TZ3000_prits6g4|TS0001": {
+      "searched_at": "2026-10-26",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "_TZ3000_qa8s8vca|TS130F": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": null,
@@ -743,5 +748,5 @@
       "shop": true
     }
   },
-  "generated_at": "2026-10-26T22:32:37.393Z"
+  "generated_at": "2026-10-26T22:35:09.807Z"
 }
