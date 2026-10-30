@@ -56631,7 +56631,11 @@
   {
     "manufacturer_slug": "osram",
     "model_slug": "cla60-rgbw-osram",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "OSRAM",
+      "checked_model": "CLA60 RGBW OSRAM"
+    },
     "endpoint": 3,
     "firmware": null,
     "scan_count": 1,
