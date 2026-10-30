@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T08:00:38.480Z",
+  "generated_at": "2026-10-30T19:31:16.893Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -2083,6 +2083,94 @@
         {
           "manufacturer": "LUMI",
           "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc0f",
+      "id_hex": "0x0000",
+      "seen_on": [
+        {
+          "manufacturer": "OSRAM",
+          "model": "CLA60 RGBW OSRAM",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc0f",
+      "id_hex": "0x0001",
+      "seen_on": [
+        {
+          "manufacturer": "OSRAM",
+          "model": "CLA60 RGBW OSRAM",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc0f",
+      "id_hex": "0x0002",
+      "seen_on": [
+        {
+          "manufacturer": "OSRAM",
+          "model": "CLA60 RGBW OSRAM",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc0f",
+      "id_hex": "0x0003",
+      "seen_on": [
+        {
+          "manufacturer": "OSRAM",
+          "model": "CLA60 RGBW OSRAM",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc0f",
+      "id_hex": "0x0004",
+      "seen_on": [
+        {
+          "manufacturer": "OSRAM",
+          "model": "CLA60 RGBW OSRAM",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc0f",
+      "id_hex": "0x0005",
+      "seen_on": [
+        {
+          "manufacturer": "OSRAM",
+          "model": "CLA60 RGBW OSRAM",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc0f",
+      "id_hex": "0x0006",
+      "seen_on": [
+        {
+          "manufacturer": "OSRAM",
+          "model": "CLA60 RGBW OSRAM",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc0f",
+      "id_hex": "0x0007",
+      "seen_on": [
+        {
+          "manufacturer": "OSRAM",
+          "model": "CLA60 RGBW OSRAM",
           "count": 1
         }
       ]

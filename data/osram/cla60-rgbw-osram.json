@@ -925,7 +925,9 @@
               "name": "7",
               "access": "READ"
             }
-          ]
+          ],
+          "resolved_name": "OsramLight",
+          "resolved_source": "zha-device-handlers"
         }
       }
     }
