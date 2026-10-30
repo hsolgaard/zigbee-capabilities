@@ -931,5 +931,10 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "OSRAM",
+    "checked_model": "CLA60 RGBW OSRAM"
   }
 }

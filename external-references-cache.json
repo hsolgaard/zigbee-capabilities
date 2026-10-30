@@ -384,6 +384,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "OSRAM|CLA60 RGBW OSRAM": {
+      "searched_at": "2026-10-30",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "pf7swkqp|TS0003-SB": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": null,
@@ -748,5 +753,5 @@
       "shop": true
     }
   },
-  "generated_at": "2026-10-26T22:35:09.807Z"
+  "generated_at": "2026-10-30T19:31:32.500Z"
 }
