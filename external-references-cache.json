@@ -399,6 +399,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "Paulmann lamp|Dimmable Light": {
+      "searched_at": "2026-10-30",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "pf7swkqp|TS0003-SB": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": null,
@@ -762,7 +767,8 @@
       "title": "Products",
       "shop": true
     },
-    "https://www.ledvance.com/consumer/products/smart-home/smart-home-products-with-zigbee-technology/smart-home-lamps/classic-lamps-with-zigbee-technology/smart-candle-dimmable/index.jsp": null
+    "https://www.ledvance.com/consumer/products/smart-home/smart-home-products-with-zigbee-technology/smart-home-lamps/classic-lamps-with-zigbee-technology/smart-candle-dimmable/index.jsp": null,
+    "https://www.ledvance.com/consumer/products/smart-home/smart-home-products-with-zigbee-technology/smart-home-lamps/classic-lamps-with-zigbee-technology/classic-bulb-shape-with-zigbee-technology-c6385": null
   },
-  "generated_at": "2026-10-30T19:43:59.034Z"
+  "generated_at": "2026-10-30T19:45:28.550Z"
 }
