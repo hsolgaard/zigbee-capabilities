@@ -359,6 +359,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "LEDVANCE|A60 RGBW Value II": {
+      "searched_at": "2026-10-30",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "LEDVANCE|LEDVANCE DIM": {
       "searched_at": "2026-10-30",
       "manufacturer_candidate": null,
@@ -756,7 +761,8 @@
     "https://www.ikea.com/nl/en/p/tradfri-led-bulb-e14-600-lumen-wireless-dimmable-colour-and-white-spectrum-opal-white-50411565/": {
       "title": "Products",
       "shop": true
-    }
+    },
+    "https://www.ledvance.com/consumer/products/smart-home/smart-home-products-with-zigbee-technology/smart-home-lamps/classic-lamps-with-zigbee-technology/smart-candle-dimmable/index.jsp": null
   },
-  "generated_at": "2026-10-30T19:32:46.154Z"
+  "generated_at": "2026-10-30T19:43:59.034Z"
 }
