@@ -53667,7 +53667,19 @@
   {
     "manufacturer_slug": "ledvance",
     "model_slug": "a60-rgbw-value-ii",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ledvance_4058075208391.html",
+        "match_method": "vendor_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "LEDVANCE",
+      "checked_model": "A60 RGBW Value II",
+      "manufacturer": {
+        "url": "https://www.ledvance.com/consumer/products/smart-home/smart-home-products-with-zigbee-technology/smart-home-lamps/classic-lamps-with-zigbee-technology/classic-bulb-shape-with-zigbee-technology-c6385",
+        "confidence": "high"
+      }
+    },
     "endpoint": 1,
     "firmware": "03197310",
     "scan_count": 1,
@@ -54437,7 +54449,19 @@
   {
     "manufacturer_slug": "ledvance",
     "model_slug": "a60-rgbw-value-ii",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ledvance_4058075208391.html",
+        "match_method": "vendor_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "LEDVANCE",
+      "checked_model": "A60 RGBW Value II",
+      "manufacturer": {
+        "url": "https://www.ledvance.com/consumer/products/smart-home/smart-home-products-with-zigbee-technology/smart-home-lamps/classic-lamps-with-zigbee-technology/classic-bulb-shape-with-zigbee-technology-c6385",
+        "confidence": "high"
+      }
+    },
     "endpoint": 242,
     "firmware": "03197310",
     "scan_count": 1,
