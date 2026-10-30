@@ -53667,7 +53667,19 @@
   {
     "manufacturer_slug": "ledvance",
     "model_slug": "ledvance-dim",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ledvance_4058075208421.html",
+        "match_method": "vendor_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "LEDVANCE",
+      "checked_model": "LEDVANCE DIM",
+      "manufacturer": {
+        "url": "https://www.ledvance.com/consumer/products/smart-home/smart-home-products-with-zigbee-technology/smart-home-lamps/classic-lamps-with-zigbee-technology/smart-candle-dimmable/index.jsp",
+        "confidence": "high"
+      }
+    },
     "endpoint": 1,
     "firmware": "03177310",
     "scan_count": 1,
@@ -54185,7 +54197,19 @@
   {
     "manufacturer_slug": "ledvance",
     "model_slug": "ledvance-dim",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ledvance_4058075208421.html",
+        "match_method": "vendor_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "LEDVANCE",
+      "checked_model": "LEDVANCE DIM",
+      "manufacturer": {
+        "url": "https://www.ledvance.com/consumer/products/smart-home/smart-home-products-with-zigbee-technology/smart-home-lamps/classic-lamps-with-zigbee-technology/smart-candle-dimmable/index.jsp",
+        "confidence": "high"
+      }
+    },
     "endpoint": 242,
     "firmware": "03177310",
     "scan_count": 1,
