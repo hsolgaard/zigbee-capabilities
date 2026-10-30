@@ -1057,5 +1057,18 @@
       ],
       "clusters": {}
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Ledvance_4058075208421.html",
+      "match_method": "vendor_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "LEDVANCE",
+    "checked_model": "LEDVANCE DIM",
+    "manufacturer": {
+      "url": "https://www.ledvance.com/consumer/products/smart-home/smart-home-products-with-zigbee-technology/smart-home-lamps/classic-lamps-with-zigbee-technology/smart-candle-dimmable/index.jsp",
+      "confidence": "high"
+    }
   }
 }
