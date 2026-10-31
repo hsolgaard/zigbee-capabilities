@@ -880,12 +880,16 @@
                 {
                   "id": 1320,
                   "name": "1320",
-                  "access": "READ|WRITE|REPORT"
+                  "access": "READ|WRITE|REPORT",
+                  "resolved_name": "transition_curve_curvature",
+                  "resolved_source": "zigbee-herdsman-converters"
                 },
                 {
                   "id": 1324,
                   "name": "1324",
-                  "access": "READ|WRITE|REPORT"
+                  "access": "READ|WRITE|REPORT",
+                  "resolved_name": "transition_initial_brightness",
+                  "resolved_source": "zigbee-herdsman-converters"
                 },
                 {
                   "id": 1792,
@@ -1905,12 +1909,16 @@
             {
               "id": 1320,
               "name": "1320",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "transition_curve_curvature",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 1324,
               "name": "1324",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "transition_initial_brightness",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 1792,
@@ -1942,7 +1950,9 @@
               "name": "65522",
               "access": "READ|WRITE|REPORT"
             }
-          ]
+          ],
+          "resolved_name": "manuSpecificLumi",
+          "resolved_source": "zigbee-herdsman-converters"
         }
       }
     },

@@ -418,7 +418,9 @@
             {
               "id": 16,
               "name": "16",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "fault_code",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 18,
@@ -428,12 +430,16 @@
             {
               "id": 20,
               "name": "20",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "delayed_power_on_state",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 21,
               "name": "21",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "delayed_power_on_time",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 22,
@@ -885,7 +891,9 @@
             {
               "id": 16,
               "name": "16",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "fault_code",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 18,
@@ -895,12 +903,16 @@
             {
               "id": 20,
               "name": "20",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "delayed_power_on_state",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 21,
               "name": "21",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "delayed_power_on_time",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 22,
@@ -919,7 +931,9 @@
               "resolved_name": "cluster_revision",
               "resolved_source": "zcl-spec"
             }
-          ]
+          ],
+          "resolved_name": "customClusterEwelink",
+          "resolved_source": "zigbee-herdsman-converters"
         },
         "0xfc57": {
           "name": "Cluster 0xfc57",

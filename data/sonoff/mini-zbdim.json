@@ -485,12 +485,16 @@
             {
               "id": 1,
               "name": "1",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "network_led",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 16,
               "name": "16",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "fault_code",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 17,
@@ -500,22 +504,30 @@
             {
               "id": 18,
               "name": "18",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "radio_power",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 20,
               "name": "20",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "delayed_power_on_state",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 21,
               "name": "21",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "delayed_power_on_time",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 22,
               "name": "22",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "external_trigger_mode",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 28,
@@ -525,22 +537,30 @@
             {
               "id": 29,
               "name": "29",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "set_calibration_action",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 30,
               "name": "30",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "calibration_status",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 31,
               "name": "31",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "transition_time",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 32,
               "name": "32",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "calibration_progress",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 33,
@@ -550,17 +570,23 @@
             {
               "id": 16385,
               "name": "16385",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "min_brightness_threshold",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 16386,
               "name": "16386",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "max_brightness_threshold",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 16387,
               "name": "16387",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "dimming_light_rate",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 16388,
@@ -575,22 +601,30 @@
             {
               "id": 16390,
               "name": "16390",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "level_for_calibration",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 28676,
               "name": "28676",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "ac_current_current_value",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 28677,
               "name": "28677",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "ac_current_voltage_value",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 28678,
               "name": "28678",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "ac_current_power_value",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 65533,
@@ -1105,12 +1139,16 @@
             {
               "id": 1,
               "name": "1",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "network_led",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 16,
               "name": "16",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "fault_code",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 17,
@@ -1120,22 +1158,30 @@
             {
               "id": 18,
               "name": "18",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "radio_power",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 20,
               "name": "20",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "delayed_power_on_state",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 21,
               "name": "21",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "delayed_power_on_time",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 22,
               "name": "22",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "external_trigger_mode",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 28,
@@ -1145,22 +1191,30 @@
             {
               "id": 29,
               "name": "29",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "set_calibration_action",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 30,
               "name": "30",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "calibration_status",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 31,
               "name": "31",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "transition_time",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 32,
               "name": "32",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "calibration_progress",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 33,
@@ -1170,17 +1224,23 @@
             {
               "id": 16385,
               "name": "16385",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "min_brightness_threshold",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 16386,
               "name": "16386",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "max_brightness_threshold",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 16387,
               "name": "16387",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "dimming_light_rate",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 16388,
@@ -1195,22 +1255,30 @@
             {
               "id": 16390,
               "name": "16390",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "level_for_calibration",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 28676,
               "name": "28676",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "ac_current_current_value",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 28677,
               "name": "28677",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "ac_current_voltage_value",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 28678,
               "name": "28678",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "ac_current_power_value",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 65533,
@@ -1219,7 +1287,9 @@
               "resolved_name": "cluster_revision",
               "resolved_source": "zcl-spec"
             }
-          ]
+          ],
+          "resolved_name": "customClusterEwelink",
+          "resolved_source": "zigbee-herdsman-converters"
         },
         "0xfc57": {
           "name": "Cluster 0xfc57",

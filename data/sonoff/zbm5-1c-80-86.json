@@ -872,12 +872,16 @@
                 {
                   "id": 1,
                   "name": "1",
-                  "access": "READ|WRITE|REPORT"
+                  "access": "READ|WRITE|REPORT",
+                  "resolved_name": "network_led",
+                  "resolved_source": "zigbee-herdsman-converters"
                 },
                 {
                   "id": 16,
                   "name": "16",
-                  "access": "READ|REPORT"
+                  "access": "READ|REPORT",
+                  "resolved_name": "fault_code",
+                  "resolved_source": "zigbee-herdsman-converters"
                 },
                 {
                   "id": 24,
@@ -1342,12 +1346,16 @@
             {
               "id": 1,
               "name": "1",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "network_led",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 16,
               "name": "16",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "fault_code",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 24,
@@ -1381,7 +1389,9 @@
               "resolved_name": "cluster_revision",
               "resolved_source": "zcl-spec"
             }
-          ]
+          ],
+          "resolved_name": "customClusterEwelink",
+          "resolved_source": "zigbee-herdsman-converters"
         },
         "0xfc57": {
           "name": "Cluster 0xfc57",

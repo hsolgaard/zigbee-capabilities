@@ -672,7 +672,9 @@
                 {
                   "id": 512,
                   "name": "512",
-                  "access": "READ|WRITE"
+                  "access": "READ|WRITE",
+                  "resolved_name": "button_lock",
+                  "resolved_source": "zigbee-herdsman-converters + zha-device-handlers"
                 },
                 {
                   "id": 513,
@@ -682,12 +684,16 @@
                 {
                   "id": 514,
                   "name": "514",
-                  "access": "READ|WRITE"
+                  "access": "READ|WRITE",
+                  "resolved_name": "auto_off",
+                  "resolved_source": "zigbee-herdsman-converters + zha-device-handlers"
                 },
                 {
                   "id": 515,
                   "name": "515",
-                  "access": "READ|WRITE"
+                  "access": "READ|WRITE",
+                  "resolved_name": "led_disabled_night",
+                  "resolved_source": "zigbee-herdsman-converters + zha-device-handlers"
                 },
                 {
                   "id": 516,
@@ -712,7 +718,9 @@
                 {
                   "id": 523,
                   "name": "523",
-                  "access": "READ|WRITE"
+                  "access": "READ|WRITE",
+                  "resolved_name": "overload_protection",
+                  "resolved_source": "zigbee-herdsman-converters + zha-device-handlers"
                 },
                 {
                   "id": 61440,
@@ -1399,7 +1407,9 @@
             {
               "id": 512,
               "name": "512",
-              "access": "READ|WRITE"
+              "access": "READ|WRITE",
+              "resolved_name": "button_lock",
+              "resolved_source": "zigbee-herdsman-converters + zha-device-handlers"
             },
             {
               "id": 513,
@@ -1409,12 +1419,16 @@
             {
               "id": 514,
               "name": "514",
-              "access": "READ|WRITE"
+              "access": "READ|WRITE",
+              "resolved_name": "auto_off",
+              "resolved_source": "zigbee-herdsman-converters + zha-device-handlers"
             },
             {
               "id": 515,
               "name": "515",
-              "access": "READ|WRITE"
+              "access": "READ|WRITE",
+              "resolved_name": "led_disabled_night",
+              "resolved_source": "zigbee-herdsman-converters + zha-device-handlers"
             },
             {
               "id": 516,
@@ -1439,7 +1453,9 @@
             {
               "id": 523,
               "name": "523",
-              "access": "READ|WRITE"
+              "access": "READ|WRITE",
+              "resolved_name": "overload_protection",
+              "resolved_source": "zigbee-herdsman-converters + zha-device-handlers"
             },
             {
               "id": 61440,

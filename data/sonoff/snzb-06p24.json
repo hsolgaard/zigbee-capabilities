@@ -200,7 +200,9 @@
                 {
                   "id": 8214,
                   "name": "8214",
-                  "access": "READ|WRITE"
+                  "access": "READ|WRITE",
+                  "resolved_name": "occupancy_zone_enable",
+                  "resolved_source": "zigbee-herdsman-converters"
                 },
                 {
                   "id": 8215,
@@ -210,12 +212,16 @@
                 {
                   "id": 8216,
                   "name": "8216",
-                  "access": "READ|WRITE"
+                  "access": "READ|WRITE",
+                  "resolved_name": "illumination_compensation_offset",
+                  "resolved_source": "zigbee-herdsman-converters"
                 },
                 {
                   "id": 8225,
                   "name": "8225",
-                  "access": "READ|WRITE"
+                  "access": "READ|WRITE",
+                  "resolved_name": "radar_sensitivity_setting",
+                  "resolved_source": "zigbee-herdsman-converters"
                 },
                 {
                   "id": 65533,
@@ -501,7 +507,9 @@
             {
               "id": 8214,
               "name": "8214",
-              "access": "READ|WRITE"
+              "access": "READ|WRITE",
+              "resolved_name": "occupancy_zone_enable",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 8215,
@@ -511,12 +519,16 @@
             {
               "id": 8216,
               "name": "8216",
-              "access": "READ|WRITE"
+              "access": "READ|WRITE",
+              "resolved_name": "illumination_compensation_offset",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 8225,
               "name": "8225",
-              "access": "READ|WRITE"
+              "access": "READ|WRITE",
+              "resolved_name": "radar_sensitivity_setting",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 65533,
@@ -525,7 +537,9 @@
               "resolved_name": "cluster_revision",
               "resolved_source": "zcl-spec"
             }
-          ]
+          ],
+          "resolved_name": "customClusterEwelink",
+          "resolved_source": "zigbee-herdsman-converters"
         },
         "0xfc57": {
           "name": "WorksWithAllHubs",

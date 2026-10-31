@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T20:11:52.592Z",
+  "generated_at": "2026-10-31T21:22:15.915Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -163,76 +163,6 @@
           "manufacturer": "sengled",
           "model": "E1F-N5E",
           "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZB2GS-L",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "S60ZBTPG",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "SNZB-06P24",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBM5-1C-80/86",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBM5-2C-80/86",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBM5-3C-80/86",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "id_hex": "0xffff",
-      "seen_on": [
-        {
-          "manufacturer": "LUMI",
-          "model": "lumi.sensor_magnet",
-          "count": 1
-        },
-        {
-          "manufacturer": "LUMI",
-          "model": "lumi.sensor_motion.aq2",
-          "count": 1
-        },
-        {
-          "manufacturer": "LUMI",
-          "model": "lumi.sensor_motion",
-          "count": 1
-        },
-        {
-          "manufacturer": "LUMI",
-          "model": "lumi.weather",
-          "count": 1
-        },
-        {
-          "manufacturer": "Paulmann lamp",
-          "model": "CCT Light",
-          "count": 1
-        },
-        {
-          "manufacturer": "Paulmann lamp",
-          "model": "Dimmable Light",
-          "count": 1
         }
       ]
     },
@@ -252,11 +182,16 @@
       ]
     },
     {
-      "id_hex": "0xfcc0",
+      "id_hex": "0xffff",
       "seen_on": [
         {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
+          "manufacturer": "Paulmann lamp",
+          "model": "CCT Light",
+          "count": 1
+        },
+        {
+          "manufacturer": "Paulmann lamp",
+          "model": "Dimmable Light",
           "count": 1
         }
       ]
@@ -323,52 +258,6 @@
     }
   ],
   "unresolved_attributes": [
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x0010",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZB2GS",
-          "count": 2
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBM5-2C-80/86",
-          "count": 2
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZB2GS-L",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "S60ZBTPG",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "TRVZB",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBM5-1C-80/86",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBM5-3C-80/86",
-          "count": 1
-        }
-      ]
-    },
     {
       "cluster_id_hex": "0xfc11",
       "id_hex": "0x001c",
@@ -442,84 +331,6 @@
         {
           "manufacturer": "Inovelli",
           "model": "VZM35-SN",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x0014",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZB2GS",
-          "count": 2
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBMINIR2",
-          "count": 2
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZB2GS-L",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x0015",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZB2GS",
-          "count": 2
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBMINIR2",
-          "count": 2
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZB2GS-L",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x0001",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBM5-2C-80/86",
-          "count": 2
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBM5-1C-80/86",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBM5-3C-80/86",
           "count": 1
         }
       ]
@@ -1452,17 +1263,6 @@
     },
     {
       "cluster_id_hex": "0xfc11",
-      "id_hex": "0x0022",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZB2GS",
-          "count": 2
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
       "id_hex": "0x0021",
       "seen_on": [
         {
@@ -1473,54 +1273,6 @@
         {
           "manufacturer": "SONOFF",
           "model": "TRVZB",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x7004",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "S60ZBTPG",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x7005",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "S60ZBTPG",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x7006",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "S60ZBTPG",
           "count": 1
         }
       ]
@@ -1757,28 +1509,6 @@
       ]
     },
     {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0528",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x052c",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
       "cluster_id_hex": "0xfc11",
       "id_hex": "0x0003",
       "seen_on": [
@@ -1955,85 +1685,8 @@
       ]
     },
     {
-      "cluster_id_hex": "0xfc31",
-      "id_hex": "0x0081",
-      "seen_on": [
-        {
-          "manufacturer": "Inovelli",
-          "model": "VZM36",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc31",
-      "id_hex": "0x0018",
-      "seen_on": [
-        {
-          "manufacturer": "Inovelli",
-          "model": "VZM36",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc31",
-      "id_hex": "0x0019",
-      "seen_on": [
-        {
-          "manufacturer": "Inovelli",
-          "model": "VZM36",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc31",
-      "id_hex": "0x001a",
-      "seen_on": [
-        {
-          "manufacturer": "Inovelli",
-          "model": "VZM36",
-          "count": 1
-        }
-      ]
-    },
-    {
       "cluster_id_hex": "0xfcc0",
       "id_hex": "0x0100",
-      "seen_on": [
-        {
-          "manufacturer": "LUMI",
-          "model": "lumi.plug.maeu01",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0200",
-      "seen_on": [
-        {
-          "manufacturer": "LUMI",
-          "model": "lumi.plug.maeu01",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0202",
-      "seen_on": [
-        {
-          "manufacturer": "LUMI",
-          "model": "lumi.plug.maeu01",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0203",
       "seen_on": [
         {
           "manufacturer": "LUMI",
@@ -2067,17 +1720,6 @@
     {
       "cluster_id_hex": "0xfcc0",
       "id_hex": "0x0206",
-      "seen_on": [
-        {
-          "manufacturer": "LUMI",
-          "model": "lumi.plug.maeu01",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x020b",
       "seen_on": [
         {
           "manufacturer": "LUMI",
@@ -2286,105 +1928,6 @@
     },
     {
       "cluster_id_hex": "0xfc11",
-      "id_hex": "0x0012",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x0016",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x001d",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x001e",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x001f",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x0020",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x4001",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x4002",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x4003",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
       "id_hex": "0x4004",
       "seen_on": [
         {
@@ -2407,17 +1950,6 @@
     },
     {
       "cluster_id_hex": "0xfc11",
-      "id_hex": "0x4006",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "MINI-ZBDIM",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
       "id_hex": "0x7003",
       "seen_on": [
         {
@@ -2429,51 +1961,7 @@
     },
     {
       "cluster_id_hex": "0xfc11",
-      "id_hex": "0x7007",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "S60ZBTPG",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
       "id_hex": "0x7008",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "S60ZBTPG",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x7009",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "S60ZBTPG",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x700a",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "S60ZBTPG",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x700b",
       "seen_on": [
         {
           "manufacturer": "SONOFF",
@@ -2616,17 +2104,6 @@
     },
     {
       "cluster_id_hex": "0xfc11",
-      "id_hex": "0x2016",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "SNZB-06P24",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
       "id_hex": "0x2017",
       "seen_on": [
         {
@@ -2638,22 +2115,11 @@
     },
     {
       "cluster_id_hex": "0xfc11",
-      "id_hex": "0x2018",
+      "id_hex": "0x0010",
       "seen_on": [
         {
           "manufacturer": "SONOFF",
-          "model": "SNZB-06P24",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x2021",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "SNZB-06P24",
+          "model": "TRVZB",
           "count": 1
         }
       ]

@@ -732,7 +732,9 @@
                 {
                   "id": 129,
                   "name": "129",
-                  "access": "READ|WRITE|REPORT"
+                  "access": "READ|WRITE|REPORT",
+                  "resolved_name": "breeze_mode",
+                  "resolved_source": "zha-device-handlers"
                 },
                 {
                   "id": 257,
@@ -1473,17 +1475,23 @@
                 {
                   "id": 24,
                   "name": "24",
-                  "access": "READ|WRITE|REPORT"
+                  "access": "READ|WRITE|REPORT",
+                  "resolved_name": "quick_start_level",
+                  "resolved_source": "zha-device-handlers"
                 },
                 {
                   "id": 25,
                   "name": "25",
-                  "access": "READ|WRITE|REPORT"
+                  "access": "READ|WRITE|REPORT",
+                  "resolved_name": "increased_non_neutral_output",
+                  "resolved_source": "zha-device-handlers"
                 },
                 {
                   "id": 26,
                   "name": "26",
-                  "access": "READ|WRITE|REPORT"
+                  "access": "READ|WRITE|REPORT",
+                  "resolved_name": "leading_or_trailing_edge",
+                  "resolved_source": "zha-device-handlers"
                 },
                 {
                   "id": 32,
@@ -2282,7 +2290,9 @@
             {
               "id": 129,
               "name": "129",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "breeze_mode",
+              "resolved_source": "zha-device-handlers"
             },
             {
               "id": 257,
@@ -3020,17 +3030,23 @@
             {
               "id": 24,
               "name": "24",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "quick_start_level",
+              "resolved_source": "zha-device-handlers"
             },
             {
               "id": 25,
               "name": "25",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "increased_non_neutral_output",
+              "resolved_source": "zha-device-handlers"
             },
             {
               "id": 26,
               "name": "26",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "leading_or_trailing_edge",
+              "resolved_source": "zha-device-handlers"
             },
             {
               "id": 32,

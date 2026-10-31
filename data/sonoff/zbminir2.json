@@ -278,12 +278,16 @@
             {
               "id": 20,
               "name": "20",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "delayed_power_on_state",
+              "resolved_source": "zha-device-handlers + zigbee-herdsman-converters"
             },
             {
               "id": 21,
               "name": "21",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "delayed_power_on_time",
+              "resolved_source": "zha-device-handlers + zigbee-herdsman-converters"
             },
             {
               "id": 22,
@@ -613,12 +617,16 @@
                 {
                   "id": 20,
                   "name": "20",
-                  "access": "READ|WRITE|REPORT"
+                  "access": "READ|WRITE|REPORT",
+                  "resolved_name": "delayed_power_on_state",
+                  "resolved_source": "zha-device-handlers + zigbee-herdsman-converters"
                 },
                 {
                   "id": 21,
                   "name": "21",
-                  "access": "READ|WRITE|REPORT"
+                  "access": "READ|WRITE|REPORT",
+                  "resolved_name": "delayed_power_on_time",
+                  "resolved_source": "zha-device-handlers + zigbee-herdsman-converters"
                 },
                 {
                   "id": 22,
@@ -941,12 +949,16 @@
             {
               "id": 20,
               "name": "20",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "delayed_power_on_state",
+              "resolved_source": "zha-device-handlers + zigbee-herdsman-converters"
             },
             {
               "id": 21,
               "name": "21",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "delayed_power_on_time",
+              "resolved_source": "zha-device-handlers + zigbee-herdsman-converters"
             },
             {
               "id": 22,
@@ -982,7 +994,7 @@
             }
           ],
           "resolved_name": "SonoffCluster",
-          "resolved_source": "zha-device-handlers"
+          "resolved_source": "zha-device-handlers + zigbee-herdsman-converters"
         },
         "0xfc57": {
           "name": "Cluster 0xfc57",
@@ -1270,12 +1282,16 @@
             {
               "id": 20,
               "name": "20",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "delayed_power_on_state",
+              "resolved_source": "zha-device-handlers + zigbee-herdsman-converters"
             },
             {
               "id": 21,
               "name": "21",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "delayed_power_on_time",
+              "resolved_source": "zha-device-handlers + zigbee-herdsman-converters"
             },
             {
               "id": 22,

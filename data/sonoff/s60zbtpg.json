@@ -1416,7 +1416,9 @@
                 {
                   "id": 16,
                   "name": "16",
-                  "access": "READ|REPORT"
+                  "access": "READ|REPORT",
+                  "resolved_name": "fault_code",
+                  "resolved_source": "zigbee-herdsman-converters"
                 },
                 {
                   "id": 28,
@@ -1431,22 +1433,30 @@
                 {
                   "id": 28676,
                   "name": "28676",
-                  "access": "READ|REPORT"
+                  "access": "READ|REPORT",
+                  "resolved_name": "ac_current_current_value",
+                  "resolved_source": "zigbee-herdsman-converters"
                 },
                 {
                   "id": 28677,
                   "name": "28677",
-                  "access": "READ|REPORT"
+                  "access": "READ|REPORT",
+                  "resolved_name": "ac_current_voltage_value",
+                  "resolved_source": "zigbee-herdsman-converters"
                 },
                 {
                   "id": 28678,
                   "name": "28678",
-                  "access": "READ|REPORT"
+                  "access": "READ|REPORT",
+                  "resolved_name": "ac_current_power_value",
+                  "resolved_source": "zigbee-herdsman-converters"
                 },
                 {
                   "id": 28679,
                   "name": "28679",
-                  "access": "READ|WRITE"
+                  "access": "READ|WRITE",
+                  "resolved_name": "outlet_control_protect",
+                  "resolved_source": "zigbee-herdsman-converters"
                 },
                 {
                   "id": 28680,
@@ -1456,17 +1466,23 @@
                 {
                   "id": 28681,
                   "name": "28681",
-                  "access": "READ|REPORT"
+                  "access": "READ|REPORT",
+                  "resolved_name": "energy_today",
+                  "resolved_source": "zigbee-herdsman-converters"
                 },
                 {
                   "id": 28682,
                   "name": "28682",
-                  "access": "READ|REPORT"
+                  "access": "READ|REPORT",
+                  "resolved_name": "energy_month",
+                  "resolved_source": "zigbee-herdsman-converters"
                 },
                 {
                   "id": 28683,
                   "name": "28683",
-                  "access": "READ|REPORT"
+                  "access": "READ|REPORT",
+                  "resolved_name": "energy_yesterday",
+                  "resolved_source": "zigbee-herdsman-converters"
                 },
                 {
                   "id": 28684,
@@ -1935,7 +1951,9 @@
             {
               "id": 16,
               "name": "16",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "fault_code",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 28,
@@ -1950,22 +1968,30 @@
             {
               "id": 28676,
               "name": "28676",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "ac_current_current_value",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 28677,
               "name": "28677",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "ac_current_voltage_value",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 28678,
               "name": "28678",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "ac_current_power_value",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 28679,
               "name": "28679",
-              "access": "READ|WRITE"
+              "access": "READ|WRITE",
+              "resolved_name": "outlet_control_protect",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 28680,
@@ -1975,17 +2001,23 @@
             {
               "id": 28681,
               "name": "28681",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "energy_today",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 28682,
               "name": "28682",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "energy_month",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 28683,
               "name": "28683",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "energy_yesterday",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 28684,
@@ -2024,7 +2056,9 @@
               "resolved_name": "cluster_revision",
               "resolved_source": "zcl-spec"
             }
-          ]
+          ],
+          "resolved_name": "customClusterEwelink",
+          "resolved_source": "zigbee-herdsman-converters"
         },
         "0xfc57": {
           "name": "WorksWithAllHubs",
