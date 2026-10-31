@@ -2,7 +2,7 @@
   "observations": [
     {
       "manufacturer": "Aqara",
-      "model": "Ceiling Light T1M",
+      "model": "lumi.light.acn032",
       "identity": {
         "sw_build_id": null,
         "hw_version": null,
@@ -1490,6 +1490,12 @@
         "submitted_at": "2026-09-21T12:15:25.038Z",
         "card_version": "0.35.0",
         "source_issue": 238
+      },
+      "identity_correction": {
+        "field": "model",
+        "submitted_value": "Ceiling Light T1M",
+        "reason": "ZHA quirk display name (zhaquirks/xiaomi/aqara/light_acn.py: QuirkBuilder(AQARA, 'lumi.light.acn032').friendly_name(model='Ceiling Light T1M')); replaced with the device's own Zigbee model identifier",
+        "corrected": "2026-10-31"
       }
     }
   ],

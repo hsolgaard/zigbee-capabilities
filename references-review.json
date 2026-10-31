@@ -1338,80 +1338,6 @@
       "kind": "blakadder_submission"
     },
     {
-      "file": "data/46t1rvdu/whd02-aubess.json",
-      "manufacturer": "46t1rvdu",
-      "model": "WHD02-Aubess",
-      "fields": {
-        "manufacturer": "46t1rvdu",
-        "deviceName": "",
-        "model": "WHD02-Aubess",
-        "zigbeeId": "WHD02-Aubess",
-        "category": "",
-        "vendorLink": "",
-        "manufacturerLink": "",
-        "gateways": [
-          "ZHA"
-        ],
-        "description": "",
-        "notes": "Zigbee signature from a ZHA scan: manufacturer \"46t1rvdu\", model \"WHD02-Aubess\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
-      },
-      "missing": [
-        "device name",
-        "category",
-        "vendor (where to buy) link"
-      ],
-      "kind": "blakadder_submission_incomplete"
-    },
-    {
-      "file": "data/4rbqgcuv/ts0001-avb.json",
-      "manufacturer": "4rbqgcuv",
-      "model": "TS0001-AVB",
-      "fields": {
-        "manufacturer": "4rbqgcuv",
-        "deviceName": "",
-        "model": "TS0001-AVB",
-        "zigbeeId": "TS0001-AVB",
-        "category": "",
-        "vendorLink": "",
-        "manufacturerLink": "",
-        "gateways": [
-          "ZHA"
-        ],
-        "description": "",
-        "notes": "Zigbee signature from a ZHA scan: manufacturer \"4rbqgcuv\", model \"TS0001-AVB\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
-      },
-      "missing": [
-        "device name",
-        "category",
-        "vendor (where to buy) link"
-      ],
-      "kind": "blakadder_submission_incomplete"
-    },
-    {
-      "file": "data/aqara/ceiling-light-t1m.json",
-      "manufacturer": "Aqara",
-      "model": "Ceiling Light T1M",
-      "fields": {
-        "manufacturer": "Aqara",
-        "deviceName": "",
-        "model": "Ceiling Light T1M",
-        "zigbeeId": "Ceiling Light T1M",
-        "category": "light",
-        "vendorLink": "",
-        "manufacturerLink": "",
-        "gateways": [
-          "ZHA"
-        ],
-        "description": "",
-        "notes": "Zigbee signature from a ZHA scan: manufacturer \"Aqara\", model \"Ceiling Light T1M\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
-      },
-      "missing": [
-        "device name",
-        "vendor (where to buy) link"
-      ],
-      "kind": "blakadder_submission_incomplete"
-    },
-    {
       "file": "data/aqara/lumi-light-agl001.json",
       "manufacturer": "Aqara",
       "model": "lumi.light.agl001",
@@ -1452,56 +1378,6 @@
         ],
         "description": "",
         "notes": "Zigbee signature from a ZHA scan: manufacturer \"AwoX\", model \"TLSR82xx\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
-      },
-      "missing": [
-        "device name",
-        "category",
-        "vendor (where to buy) link"
-      ],
-      "kind": "blakadder_submission_incomplete"
-    },
-    {
-      "file": "data/gjrubzje/ts0001-ztu.json",
-      "manufacturer": "gjrubzje",
-      "model": "TS0001-ZTU",
-      "fields": {
-        "manufacturer": "gjrubzje",
-        "deviceName": "",
-        "model": "TS0001-ZTU",
-        "zigbeeId": "TS0001-ZTU",
-        "category": "",
-        "vendorLink": "",
-        "manufacturerLink": "",
-        "gateways": [
-          "ZHA"
-        ],
-        "description": "",
-        "notes": "Zigbee signature from a ZHA scan: manufacturer \"gjrubzje\", model \"TS0001-ZTU\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
-      },
-      "missing": [
-        "device name",
-        "category",
-        "vendor (where to buy) link"
-      ],
-      "kind": "blakadder_submission_incomplete"
-    },
-    {
-      "file": "data/hhiodade/moes-1-gang.json",
-      "manufacturer": "hhiodade",
-      "model": "Moes-1-gang",
-      "fields": {
-        "manufacturer": "hhiodade",
-        "deviceName": "",
-        "model": "Moes-1-gang",
-        "zigbeeId": "Moes-1-gang",
-        "category": "",
-        "vendorLink": "",
-        "manufacturerLink": "",
-        "gateways": [
-          "ZHA"
-        ],
-        "description": "",
-        "notes": "Zigbee signature from a ZHA scan: manufacturer \"hhiodade\", model \"Moes-1-gang\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
       },
       "missing": [
         "device name",
@@ -1679,31 +1555,6 @@
       "kind": "blakadder_submission_incomplete"
     },
     {
-      "file": "data/pf7swkqp/ts0003-sb.json",
-      "manufacturer": "pf7swkqp",
-      "model": "TS0003-SB",
-      "fields": {
-        "manufacturer": "pf7swkqp",
-        "deviceName": "",
-        "model": "TS0003-SB",
-        "zigbeeId": "TS0003-SB",
-        "category": "",
-        "vendorLink": "",
-        "manufacturerLink": "",
-        "gateways": [
-          "ZHA"
-        ],
-        "description": "",
-        "notes": "Zigbee signature from a ZHA scan: manufacturer \"pf7swkqp\", model \"TS0003-SB\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
-      },
-      "missing": [
-        "device name",
-        "category",
-        "vendor (where to buy) link"
-      ],
-      "kind": "blakadder_submission_incomplete"
-    },
-    {
       "file": "data/texas-instruments/cc2652.json",
       "manufacturer": "Texas Instruments",
       "model": "CC2652",
@@ -1723,31 +1574,6 @@
       },
       "missing": [
         "device name",
-        "vendor (where to buy) link"
-      ],
-      "kind": "blakadder_submission_incomplete"
-    },
-    {
-      "file": "data/tqlv4ug4/ts0001-custom.json",
-      "manufacturer": "tqlv4ug4",
-      "model": "TS0001-custom",
-      "fields": {
-        "manufacturer": "tqlv4ug4",
-        "deviceName": "",
-        "model": "TS0001-custom",
-        "zigbeeId": "TS0001-custom",
-        "category": "",
-        "vendorLink": "",
-        "manufacturerLink": "",
-        "gateways": [
-          "ZHA"
-        ],
-        "description": "",
-        "notes": "Zigbee signature from a ZHA scan: manufacturer \"tqlv4ug4\", model \"TS0001-custom\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
-      },
-      "missing": [
-        "device name",
-        "category",
         "vendor (where to buy) link"
       ],
       "kind": "blakadder_submission_incomplete"
