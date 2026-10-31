@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-26T08:00:59.049Z",
+  "generated_at": "2026-10-31T20:12:07.039Z",
   "processed": 9,
   "blakadderMatches": 0,
   "manufacturerLinks": 0,
-  "manualReview": 9,
-  "noMatch": 1,
+  "manualReview": 10,
+  "noMatch": 0,
   "deadLinksCleared": 0,
   "ambiguous": [
     {
@@ -73,6 +73,31 @@
           "model": "4058075148338",
           "zigbeemodel": [
             "PAR16 TW Z3"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "data/paulmann-lamp/cct-light.json",
+      "manufacturer": "Paulmann lamp",
+      "model": "CCT Light",
+      "kind": "blakadder_ambiguous",
+      "reason": "Not matched by vendor + model (our manufacturer string is \"Paulmann lamp\"), but Paulmann 500.64: Zigbee model \"CCT Light\" matches exactly; Paulmann 50396: Zigbee model \"CCT Light\" matches exactly. Confirm it's the same device.",
+      "candidates": [
+        {
+          "url": "https://zigbee.blakadder.com/Paulmann_50064.html",
+          "vendor": "Paulmann",
+          "model": "500.64",
+          "zigbeemodel": [
+            "CCT light"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Paulmann_50396.html",
+          "vendor": "Paulmann",
+          "model": "50396",
+          "zigbeemodel": [
+            "CCT Light"
           ]
         }
       ]
@@ -1338,6 +1363,31 @@
       "kind": "blakadder_submission"
     },
     {
+      "file": "data/18ejxno0/moes-2-gang.json",
+      "manufacturer": "18ejxno0",
+      "model": "Moes-2-gang",
+      "fields": {
+        "manufacturer": "18ejxno0",
+        "deviceName": "",
+        "model": "Moes-2-gang",
+        "zigbeeId": "Moes-2-gang",
+        "category": "",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"18ejxno0\", model \"Moes-2-gang\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "device name",
+        "category",
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
       "file": "data/46t1rvdu/whd02-aubess.json",
       "manufacturer": "46t1rvdu",
       "model": "WHD02-Aubess",
@@ -1672,6 +1722,54 @@
         ],
         "description": "",
         "notes": "Zigbee signature from a ZHA scan: manufacturer \"Jasco Products\", model \"35938\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/osram/cla60-rgbw-osram.json",
+      "manufacturer": "OSRAM",
+      "model": "CLA60 RGBW OSRAM",
+      "fields": {
+        "manufacturer": "OSRAM",
+        "deviceName": "LIGHTIFY LED CLA60 E27 RGBW",
+        "model": "AC03645",
+        "zigbeeId": "CLA60 RGBW OSRAM",
+        "category": "light",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"OSRAM\", model \"CLA60 RGBW OSRAM\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/paulmann-lamp/dimmable-light.json",
+      "manufacturer": "Paulmann lamp",
+      "model": "Dimmable Light",
+      "fields": {
+        "manufacturer": "Paulmann",
+        "deviceName": "White E27 LED bulb, dimmable",
+        "model": "501.22",
+        "zigbeeId": "Dimmable Light",
+        "category": "light",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"Paulmann lamp\", model \"Dimmable Light\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
       },
       "missing": [
         "vendor (where to buy) link"
