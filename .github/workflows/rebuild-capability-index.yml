@@ -127,8 +127,22 @@ jobs:
             };
             const recomputeCapabilities = (observations) => {
               const flatObservations = observations.flatMap(flattenObservation);
-              const obsKey = (o) =>
-                `${(o.endpoint || {}).id}|${(o.identity || {}).sw_build_id || "unknown"}`;
+              const firmwareOf = (identity) => {
+                // Firmware label used to group observations. sw_build_id first
+                // (what every older record has), then the OTA client's file
+                // version, then Basic app_version, the two fields newer card
+                // versions add for devices without a sw_build_id. Labels match the
+                // card's firmwareLabel(), so "Compare firmware" and the card
+                // agree. Date codes are deliberately not used: they identify a
+                // production batch, not firmware. Records with none of these
+                // keep grouping under "unknown" exactly as before.
+                const i = identity || {};
+                if (i.sw_build_id) return String(i.sw_build_id);
+                if (i.ota_file_version) return `OTA ${i.ota_file_version}`;
+                if (i.app_version != null && i.app_version !== "") return `app ${i.app_version}`;
+                return null;
+              };
+              const obsKey = (o) => `${(o.endpoint || {}).id}|${firmwareOf(o.identity) || "unknown"}`;
               const keys = [...new Set(flatObservations.map(obsKey))];
               const capabilities = {};
 
@@ -189,7 +203,7 @@ jobs:
 
                 capabilities[key] = {
                   endpoint: (first.endpoint || {}).id,
-                  firmware: (first.identity || {}).sw_build_id || null,
+                  firmware: firmwareOf(first.identity),
                   scan_count: matching.length,
                   last_seen: lastSeen,
                   manufacturer: first.manufacturer,

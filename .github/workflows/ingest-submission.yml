@@ -119,6 +119,60 @@ jobs:
             // is traceable back to exactly which issue introduced it.
             record.provenance = { ...(record.provenance || {}), source_issue: issue.number };
 
+            // Quality checks: signs that a record describes a ZHA quirk rather
+            // than the device. A quirk can rename a device (friendly_name) and
+            // replace its endpoints/clusters, and older card versions shared
+            // ZHA's quirked view as-is. Several such records had to be
+            // quarantined on 2026-10-31 (see quarantine/README.md). Newer card
+            // versions read the device directly when the integration is
+            // installed and say so in provenance.identity_source /
+            // signature_source ("device"), in which case these checks are
+            // skipped. Nothing is rejected: flagged submissions still get a
+            // PR, labelled needs-review, with the reasons listed.
+            const qualityWarnings = [];
+            const prov = record.provenance || {};
+            const recEndpoints = Array.isArray(record.endpoints)
+              ? record.endpoints
+              : record.endpoint
+                ? [{ endpoint: record.endpoint, clusters: record.clusters || {} }]
+                : [];
+            // Display names that ZHA quirks give devices instead of their own
+            // model identifier (zha-quirks friendly_name). Not exhaustive.
+            const QUIRK_DISPLAY_MODELS = new Set([
+              "Ceiling Light T1M", "Climate Sensor W100", "Led strip T1", "Presence Sensor FP1E",
+              "Presence Sensor FP300", "Hue Tap", "Pico Switch", "PTM 216Z",
+            ]);
+            if (!record.manufacturer || !record.model) {
+              qualityWarnings.push("The manufacturer or model is missing, so this record can't be matched to a device.");
+            }
+            if (prov.identity_source !== "device") {
+              if (/^[a-z0-9]{8}$/.test(String(record.manufacturer || ""))) {
+                qualityWarnings.push(
+                  `Manufacturer "${record.manufacturer}" looks like a bare Tuya suffix (normally "_TZ3000_…"); a local quirk probably renamed the device.`
+                );
+              }
+              if (QUIRK_DISPLAY_MODELS.has(String(record.model || ""))) {
+                qualityWarnings.push(`Model "${record.model}" is a ZHA quirk display name, not the device's own model identifier.`);
+              }
+            }
+            if (prov.signature_source !== "device") {
+              if (recEndpoints.some((e) => (e.endpoint || {}).device_type === "0xffff")) {
+                qualityWarnings.push("An endpoint reports device_type 0xffff, which usually means a quirk replaced the device's signature.");
+              }
+              const quirkClusterNames = [];
+              recEndpoints.forEach((e) =>
+                Object.entries(e.clusters || {}).forEach(([id, c]) => {
+                  const name = String((c && c.name) || "");
+                  if (parseInt(id, 16) < 0xfc00 && /^Custom/.test(name)) quirkClusterNames.push(`${id} ${name}`);
+                })
+              );
+              if (quirkClusterNames.length) {
+                qualityWarnings.push(
+                  `Standard clusters carry quirk class names (${[...new Set(quirkClusterNames)].join(", ")}); check the clusters are really on the device.`
+                );
+              }
+            }
+
             // Load existing file. Older files written before this data
             // model existed are a bare array of entries; treat that as the
             // observations log and let the recompute below build a fresh
@@ -212,8 +266,22 @@ jobs:
             };
             const flatObservations = existing.observations.flatMap(flattenObservation);
 
-            const obsKey = (o) =>
-              `${(o.endpoint || {}).id}|${(o.identity || {}).sw_build_id || "unknown"}`;
+            const firmwareOf = (identity) => {
+              // Firmware label used to group observations. sw_build_id first
+              // (what every older record has), then the OTA client's file
+              // version, then Basic app_version, the two fields newer card
+              // versions add for devices without a sw_build_id. Labels match the
+              // card's firmwareLabel(), so "Compare firmware" and the card
+              // agree. Date codes are deliberately not used: they identify a
+              // production batch, not firmware. Records with none of these
+              // keep grouping under "unknown" exactly as before.
+              const i = identity || {};
+              if (i.sw_build_id) return String(i.sw_build_id);
+              if (i.ota_file_version) return `OTA ${i.ota_file_version}`;
+              if (i.app_version != null && i.app_version !== "") return `app ${i.app_version}`;
+              return null;
+            };
+            const obsKey = (o) => `${(o.endpoint || {}).id}|${firmwareOf(o.identity) || "unknown"}`;
             const keys = [...new Set(flatObservations.map(obsKey))];
 
             // Snapshot before the recompute so the contributor can be told
@@ -298,7 +366,7 @@ jobs:
 
               capabilities[key] = {
                 endpoint: (first.endpoint || {}).id,
-                firmware: (first.identity || {}).sw_build_id || null,
+                firmware: firmwareOf(first.identity),
                 scan_count: matching.length,
                 last_seen: lastSeen,
                 manufacturer: first.manufacturer,
@@ -434,6 +502,13 @@ jobs:
               prNumber = pr.data.number;
             }
 
+            const qualitySummary = qualityWarnings.length
+              ? `\n\n**Needs a closer look before merging:**\n${qualityWarnings.map((l) => `- ${l}`).join("\n")}\n\nIf the device was scanned with a quirk loaded, rescanning with a newer card and the ZHA Bindings Manager integration installed shares the device's own identity and signature.`
+              : "";
+            if (qualityWarnings.length) {
+              await github.rest.issues.addLabels({ ...context.repo, issue_number: prNumber, labels: ["needs-review"] });
+            }
+
             const contributionSummary = contributionLines.length
               ? `\n\nWhat this submission adds:\n${contributionLines.map((l) => `- ${l}`).join("\n")}`
               : "";
@@ -441,5 +516,5 @@ jobs:
             await github.rest.issues.createComment({
               ...context.repo,
               issue_number: issue.number,
-              body: `Opened/updated #${prNumber} with this data — review and merge to add it, or close the PR to reject it. Merging will close this issue automatically.${contributionSummary}`,
+              body: `Opened/updated #${prNumber} with this data — review and merge to add it, or close the PR to reject it. Merging will close this issue automatically.${contributionSummary}${qualitySummary}`,
             });

@@ -36,6 +36,17 @@ firmware, since capability can change between firmware versions):
 - **Provenance** — submission date, and the scanning tool/library versions
   used (e.g. zha_toolkit version, zigpy version if known), so a record can
   be judged against known fixes rather than treated as timeless truth.
+- **Where the identity and signature came from** — newer card versions,
+  with the ZHA Bindings Manager integration installed, read the
+  manufacturer, model, endpoints and clusters from the device itself rather
+  than from ZHA, whose view a quirk can rename or replace.
+  `provenance.identity_source` / `signature_source` say `device`, `partial`
+  or `zha`. Clusters that only a quirk declared are listed separately
+  (`quirk_only_clusters`, `quirk_only_endpoints`) and are never counted as
+  capabilities. Firmware may also include `app_version` and the OTA
+  `ota_file_version`, with `identity_status` saying which reads were
+  unsupported or unanswered. Records are grouped by firmware using
+  `sw_build_id`, then the OTA file version, then `app_version`.
 
 ## What's deliberately excluded
 
