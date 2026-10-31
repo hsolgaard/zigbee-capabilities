@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T19:45:19.380Z",
+  "generated_at": "2026-10-31T20:11:52.592Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -222,6 +222,11 @@
         {
           "manufacturer": "LUMI",
           "model": "lumi.weather",
+          "count": 1
+        },
+        {
+          "manufacturer": "Paulmann lamp",
+          "model": "CCT Light",
           "count": 1
         },
         {
