@@ -704,5 +704,30 @@
       "url": "https://www.ikea.com/ma/en/p/rodret-wireless-dimmer-power-switch-smart-white-20528128/",
       "confidence": "high"
     }
-  }
+  },
+  "behaviour_reports": [
+    {
+      "kind": "behaviour_report",
+      "schema": 1,
+      "behaviour": "group_binding",
+      "manufacturer": "IKEA of Sweden",
+      "model": "RODRET wireless dimmer",
+      "firmware": {
+        "sw_build_id": null,
+        "registry_sw_version": "0x01000057"
+      },
+      "endpoint": 1,
+      "clusters": [
+        "0x0006",
+        "0x0008"
+      ],
+      "target_count": 2,
+      "result": "works",
+      "card_version": "1.1.0",
+      "provenance": {
+        "submitted_at": "2026-11-01T20:57:23.510Z",
+        "source_issue": 323
+      }
+    }
+  ]
 }
