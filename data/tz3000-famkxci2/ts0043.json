@@ -546,10 +546,6 @@
       "confidence": "high"
     },
     "checked_manufacturer": "_TZ3000_famkxci2",
-    "checked_model": "TS0043",
-    "manufacturer": {
-      "url": "https://www.loratap.com/products/ss600zb",
-      "confidence": "high"
-    }
+    "checked_model": "TS0043"
   }
 }

@@ -161,10 +161,6 @@
       "confidence": "high"
     },
     "checked_manufacturer": "LUMI",
-    "checked_model": "lumi.sensor_smoke",
-    "manufacturer": {
-      "url": "http://files.xiaomi-mi.co.uk/files/MiJia_Honeywell/MiJia_Honeywell_Smoke_Detector_EN.pdf",
-      "confidence": "high"
-    }
+    "checked_model": "lumi.sensor_smoke"
   }
 }

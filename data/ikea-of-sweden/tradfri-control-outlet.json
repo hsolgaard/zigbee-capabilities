@@ -907,10 +907,6 @@
       "confidence": "high"
     },
     "checked_manufacturer": "IKEA of Sweden",
-    "checked_model": "TRADFRI control outlet",
-    "manufacturer": {
-      "url": "https://www.ikea.com/nl/en/p/tradfri-wireless-control-outlet-90356166/",
-      "confidence": "high"
-    }
+    "checked_model": "TRADFRI control outlet"
   }
 }

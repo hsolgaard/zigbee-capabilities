@@ -736,12 +736,12 @@
     "blakadder": null,
     "checked_manufacturer": "_TZ3210_ho44khu8",
     "checked_model": "TS011F",
+    "blakadder_submitted": "2026-10-25",
     "product": {
       "brand": "Gosund",
       "model": "EP2-Z",
       "name": "NiteBird EP2-Z Smart Plug",
       "source": "submitter's note on issue #292"
-    },
-    "blakadder_submitted": "2026-10-25"
+    }
   }
 }

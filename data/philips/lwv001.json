@@ -199,10 +199,6 @@
       "confidence": "high"
     },
     "checked_manufacturer": "Philips",
-    "checked_model": "LWV001",
-    "manufacturer": {
-      "url": "https://www2.meethue.com/en-gb/p/hue-white-1-pack-st64-e27-filament-edison/8718699688868",
-      "confidence": "high"
-    }
+    "checked_model": "LWV001"
   }
 }

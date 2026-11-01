@@ -1500,10 +1500,6 @@
       "confidence": "high"
     },
     "checked_manufacturer": "IKEA of Sweden",
-    "checked_model": "TRADFRIbulbE27WSglobeopal1055lm",
-    "manufacturer": {
-      "url": "https://www.ikea.com/cz/en/p/tradfri-remote-control-kit-white-spectrum-80513416/",
-      "confidence": "high"
-    }
+    "checked_model": "TRADFRIbulbE27WSglobeopal1055lm"
   }
 }
