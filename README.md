@@ -96,6 +96,19 @@ delay between submitting and the data actually appearing here. This is a
 manual process for now; it may become more automated as submission volume
 grows.
 
+## Behaviour reports
+
+Some things can't be read from a device, only tested. The first is whether a remote accepts and uses **group
+bindings**: some remotes only bind to individual lights, some only to a group, and some store a group binding but
+never send to it.
+
+ZHA Bindings Manager's "Control lights with this remote" flow (1.1.0+) tests this and offers to share the result as a
+`[Behaviour Report]` issue. The ingest workflow stores it in the device's file under `behaviour_reports` (separate
+from scan `observations`), and the index rebuild summarises all reports into `data/behaviour.json`, keyed
+`<manufacturer_slug>/<model_slug>`, with counts per result (`works`, `partial`, `stored_ignored`, `rejected`) overall
+and per firmware. Reports contain the model, firmware, endpoint, clusters, number of lights and result only: no names,
+areas or addresses. Each issue counts once; identical results from different people count separately.
+
 ## Using this data
 
 Every record is a plain static JSON file, fetchable directly (e.g. via

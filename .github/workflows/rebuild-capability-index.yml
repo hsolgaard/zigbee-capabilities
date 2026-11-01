@@ -76,7 +76,8 @@ jobs:
                 } else if (
                   entry.isFile() &&
                   entry.name.endsWith(".json") &&
-                  full !== path.join("data", "index.json")
+                  full !== path.join("data", "index.json") &&
+                  full !== path.join("data", "behaviour.json")
                 ) {
                   out.push(full);
                 }
@@ -370,6 +371,11 @@ jobs:
 
             let changedFiles = 0;
             const index = [];
+            // data/behaviour.json — community behaviour reports (e.g. "does
+            // this remote use group bindings?") summarised per device, keyed
+            // "<manufacturer_slug>/<model_slug>", with counts per result and
+            // per firmware. Read by ZHA Bindings Manager's group setup flow.
+            const behaviourDoc = {};
             const allUnresolvedClusters = [];
             const allUnresolvedAttrs = [];
 
@@ -425,6 +431,18 @@ jobs:
                 // anything in recomputeCapabilities()/enrichCapabilities()
                 // above — those only ever look at `existing.observations`.
                 const references = existing.references || null;
+                (Array.isArray(existing.behaviour_reports) ? existing.behaviour_reports : []).forEach((r) => {
+                  if (!r || !r.behaviour || !r.result) return;
+                  const key = `${manufacturerSlug}/${modelSlug}`;
+                  const dev = (behaviourDoc[key] = behaviourDoc[key] || { manufacturer: r.manufacturer, model: r.model });
+                  const b = (dev[r.behaviour] = dev[r.behaviour] || { counts: {}, by_firmware: {}, last_reported: null });
+                  b.counts[r.result] = (b.counts[r.result] || 0) + 1;
+                  const fw = (r.firmware && (r.firmware.sw_build_id || r.firmware.registry_sw_version)) || "unknown";
+                  b.by_firmware[fw] = b.by_firmware[fw] || {};
+                  b.by_firmware[fw][r.result] = (b.by_firmware[fw][r.result] || 0) + 1;
+                  const at = r.provenance && r.provenance.submitted_at;
+                  if (at && (!b.last_reported || at > b.last_reported)) b.last_reported = at;
+                });
                 Object.values(existing.capabilities).forEach((entry) => {
                   index.push({
                     manufacturer_slug: manufacturerSlug,
@@ -468,7 +486,13 @@ jobs:
             const unknownChanged = stripTimestamp(prevUnknown) !== stripTimestamp(nextUnknown);
             if (unknownChanged) fs.writeFileSync("data/unknown-capabilities.json", nextUnknown);
 
-            if (changedFiles === 0 && !indexChanged && !unknownChanged) {
+            const sortedBehaviour = Object.fromEntries(Object.keys(behaviourDoc).sort().map((k) => [k, behaviourDoc[k]]));
+            const nextBehaviour = JSON.stringify(sortedBehaviour, null, 2) + "\n";
+            const prevBehaviour = fs.existsSync("data/behaviour.json") ? fs.readFileSync("data/behaviour.json", "utf8") : null;
+            const behaviourChanged = prevBehaviour !== nextBehaviour;
+            if (behaviourChanged) fs.writeFileSync("data/behaviour.json", nextBehaviour);
+
+            if (changedFiles === 0 && !indexChanged && !unknownChanged && !behaviourChanged) {
               console.log(`Nothing to rebuild — every file's capabilities cache, data/index.json, and data/unknown-capabilities.json were already up to date (${index.length} records).`);
               return;
             }
@@ -483,7 +507,7 @@ jobs:
             await exec.exec("git", [
               "commit",
               "-m",
-              `Rebuild capability index (${index.length} records, ${changedFiles} file(s) recomputed${unknownChanged ? ", unknown-capabilities.json updated" : ""})`,
+              `Rebuild capability index (${index.length} records, ${changedFiles} file(s) recomputed${unknownChanged ? ", unknown-capabilities.json updated" : ""}${behaviourChanged ? ", behaviour.json updated" : ""})`,
             ]);
             await exec.exec("git", ["push", "origin", "HEAD:main"]);
             console.log(`Committed: ${index.length} records in data/index.json, ${changedFiles} file(s) recomputed, ${unknownDoc.unresolved_clusters.length} unresolved cluster(s) and ${unknownDoc.unresolved_attributes.length} unresolved attribute(s) tracked.`);

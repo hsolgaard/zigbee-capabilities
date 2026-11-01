@@ -110,6 +110,23 @@ jobs:
                 .replace(/[^a-z0-9]+/g, "-")
                 .replace(/^-+|-+$/g, "") || "unknown";
 
+            // Behaviour reports (ZHA Bindings Manager 1.1.0+): "does this
+            // remote accept and use group bindings?" — a result the user
+            // tested, not a capability scan. Stored in the same device file
+            // under behaviour_reports, never mixed into observations, and
+            // summarised into data/behaviour.json by the index rebuild.
+            const isBehaviourReport = !!record && record.kind === "behaviour_report";
+            const BEHAVIOURS = ["group_binding", "direct_binding"];
+            const RESULTS = ["works", "partial", "stored_ignored", "rejected"];
+            if (isBehaviourReport && (!BEHAVIOURS.includes(record.behaviour) || !RESULTS.includes(record.result))) {
+              await github.rest.issues.createComment({
+                ...context.repo,
+                issue_number: issue.number,
+                body: `This behaviour report has an unknown behaviour or result (expected behaviour one of ${BEHAVIOURS.join(", ")} and result one of ${RESULTS.join(", ")}), so nothing was imported.`,
+              });
+              return;
+            }
+
             const manufacturer = slugify(record.manufacturer);
             const model = slugify(record.model);
             const filePath = `data/${manufacturer}/${model}.json`;
@@ -154,6 +171,20 @@ jobs:
               }
               return JSON.stringify(clone);
             };
+            let contributionLines = [];
+            if (isBehaviourReport) {
+              if (!Array.isArray(existing.behaviour_reports)) existing.behaviour_reports = [];
+              // Unlike scans, identical reports from different people are
+              // separate evidence and must each count, so only a re-run of
+              // the same issue (e.g. re-labelled) is treated as a duplicate.
+              if (!existing.behaviour_reports.some((o) => o.provenance && o.provenance.source_issue === issue.number)) {
+                existing.behaviour_reports.push(record);
+              }
+              const fw = (record.firmware && (record.firmware.sw_build_id || record.firmware.registry_sw_version)) || "unknown";
+              contributionLines = [
+                `${record.behaviour === "group_binding" ? "Group" : "Direct"} binding report: ${record.result.replace("_", " ")} (firmware ${fw}, ${(record.clusters || []).join(", ") || "no clusters listed"})`,
+              ];
+            } else {
             const incomingCanonical = canonical(record);
             const isDuplicate = existing.observations.some(
               (o) => canonical(o) === incomingCanonical
@@ -365,7 +396,8 @@ jobs:
               });
               return lines;
             };
-            const contributionLines = summarizeContribution(oldCapabilities, capabilities);
+            contributionLines = summarizeContribution(oldCapabilities, capabilities);
+            }
 
             fs.mkdirSync(path.dirname(filePath), { recursive: true });
             fs.writeFileSync(filePath, JSON.stringify(existing, null, 2) + "\n");
