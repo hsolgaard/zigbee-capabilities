@@ -45,11 +45,26 @@ for (const file of fs.readdirSync(dir).filter((f) => f.endsWith(".js")).sort()) 
         if (!(key in fingerprints)) fingerprints[key] = d.model;
       }
     }
-    // White-label products with their own fingerprint get their own code.
+    // Model-only fingerprints (no manufacturer) count as plain models.
+    for (const f of d.fingerprint || []) {
+      if (f && typeof f.modelID === "string" && typeof f.manufacturerName !== "string" && !(f.modelID in models)) {
+        models[f.modelID] = d.model;
+      }
+    }
+    // White-label products get their own code (and their own photo):
+    // - one with its own fingerprint, by that fingerprint;
+    // - one whose product code is itself one of the definition's Zigbee
+    //   models (SONOFF "ZBM5-3C-80/86" sits under ZBM5-3C-120), by that model.
+    const zigbeeModels = new Set(d.zigbeeModel || []);
     for (const w of d.whiteLabel || []) {
+      if (!w || !w.model) continue;
+      if (zigbeeModels.has(w.model)) models[w.model] = w.model;
       for (const f of w.fingerprint || []) {
-        if (f && typeof f.modelID === "string" && typeof f.manufacturerName === "string") {
+        if (!f || typeof f.modelID !== "string") continue;
+        if (typeof f.manufacturerName === "string") {
           fingerprints[`${f.manufacturerName}|${f.modelID}`] = w.model;
+        } else {
+          models[f.modelID] = w.model;
         }
       }
     }
