@@ -109,6 +109,15 @@ from scan `observations`), and the index rebuild summarises all reports into `da
 and per firmware. Reports contain the model, firmware, endpoint, clusters, number of lights and result only: no names,
 areas or addresses. Each issue counts once; identical results from different people count separately.
 
+## Zigbee2MQTT model map
+
+`data/z2m-models.json` says which Zigbee2MQTT product code each device belongs to, generated weekly from Zigbee2MQTT's
+own device definitions ([zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-herdsman-converters), MIT
+licence) by `.github/workflows/z2m-model-map.yml`. Nothing in it is edited by hand. Devices report a Zigbee model
+string (what ZHA shows, for example `CH2AX/SWITCH/1`), while zigbee2mqtt.io names device photos by product code
+(`41E2PBSWMZ/356PB2MBTZ`); only about a third of the two match. `models` maps model strings to product codes, and
+`fingerprints` maps `"<manufacturer>|<model>"` for Tuya-style devices whose model string is shared by many products.
+
 ## Using this data
 
 Every record is a plain static JSON file, fetchable directly (e.g. via

@@ -1,0 +1,46 @@
+# Regenerates data/z2m-models.json from Zigbee2MQTT's own device
+# definitions (see .github/scripts/build-z2m-models.cjs). ZHA Bindings
+# Manager uses it to find each device's photo on zigbee2mqtt.io, which is
+# named by product code rather than by the model the device reports.
+name: Update Zigbee2MQTT model map
+
+on:
+  schedule:
+    - cron: "23 4 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install the latest zigbee-herdsman-converters
+        run: |
+          mkdir -p /tmp/zhc
+          cd /tmp/zhc
+          npm init -y > /dev/null
+          npm install --no-audit --no-fund zigbee-herdsman-converters@latest
+
+      - name: Build data/z2m-models.json
+        run: NODE_PATH=/tmp/zhc/node_modules node .github/scripts/build-z2m-models.cjs data/z2m-models.json
+
+      - name: Commit if it changed
+        run: |
+          if git diff --quiet -- data/z2m-models.json && git ls-files --error-unmatch data/z2m-models.json > /dev/null 2>&1; then
+            echo "No change."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/z2m-models.json
+          version=$(node -e 'console.log(require("./data/z2m-models.json").source_version)')
+          git commit -m "Update Zigbee2MQTT model map (zigbee-herdsman-converters ${version})"
+          git push origin HEAD:main
