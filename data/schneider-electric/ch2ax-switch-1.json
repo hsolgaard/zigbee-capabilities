@@ -1,0 +1,1331 @@
+{
+  "observations": [
+    {
+      "manufacturer": "Schneider Electric",
+      "model": "CH2AX/SWITCH/1",
+      "identity": {
+        "sw_build_id": "002.005.010 R",
+        "hw_version": 1,
+        "date_code": ""
+      },
+      "endpoints": [
+        {
+          "endpoint": {
+            "id": 1,
+            "profile": "0x0104",
+            "device_type": "0x0100",
+            "in_clusters": [
+              "0x0000",
+              "0x0003",
+              "0x0004",
+              "0x0005",
+              "0x0006",
+              "0x0b05"
+            ],
+            "out_clusters": [
+              "0x0019"
+            ]
+          },
+          "scanned": true,
+          "clusters": {
+            "0x0000": {
+              "name": "SEBasic",
+              "commands_received": [
+                {
+                  "id": 0,
+                  "name": "Reset to factory defaults",
+                  "present": true
+                }
+              ],
+              "commands_received_confirmed": true,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "zcl_version",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 1,
+                  "name": "app_version",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 2,
+                  "name": "stack_version",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 3,
+                  "name": "hw_version",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 4,
+                  "name": "manufacturer",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 5,
+                  "name": "model",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 6,
+                  "name": "date_code",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 7,
+                  "name": "power_source",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 8,
+                  "name": "generic_device_class",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 9,
+                  "name": "generic_device_type",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 10,
+                  "name": "product_code",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 11,
+                  "name": "product_url",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 16384,
+                  "name": "sw_build_id",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 57345,
+                  "name": "se_application_fw_version",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 57346,
+                  "name": "se_application_hw_version",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 57348,
+                  "name": "se_device_serial_number",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 57351,
+                  "name": "se_product_identifier",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 57352,
+                  "name": "se_product_range",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 57353,
+                  "name": "se_product_model",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 57354,
+                  "name": "se_product_family",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 57355,
+                  "name": "se_vendor_url",
+                  "access": "READ|REPORT"
+                }
+              ]
+            },
+            "0x0003": {
+              "name": "Identify",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [
+                {
+                  "id": 0,
+                  "name": "identify_query_response"
+                }
+              ],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "identify_time",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ|REPORT"
+                }
+              ]
+            },
+            "0x0004": {
+              "name": "Groups",
+              "commands_received": [
+                {
+                  "id": 0,
+                  "name": "Add to group",
+                  "present": true
+                },
+                {
+                  "id": 1,
+                  "name": "View group",
+                  "present": true
+                },
+                {
+                  "id": 2,
+                  "name": "Get group membership",
+                  "present": true
+                },
+                {
+                  "id": 3,
+                  "name": "Remove from group",
+                  "present": true
+                },
+                {
+                  "id": 4,
+                  "name": "Remove from all groups",
+                  "present": true
+                },
+                {
+                  "id": 5,
+                  "name": "Add to group if identifying",
+                  "present": true
+                }
+              ],
+              "commands_received_confirmed": true,
+              "commands_generated": [
+                {
+                  "id": 0,
+                  "name": "add_response"
+                },
+                {
+                  "id": 1,
+                  "name": "view_response"
+                },
+                {
+                  "id": 2,
+                  "name": "get_membership_response"
+                },
+                {
+                  "id": 3,
+                  "name": "remove_response"
+                }
+              ],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "name_support",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ|REPORT"
+                }
+              ]
+            },
+            "0x0005": {
+              "name": "Scenes",
+              "commands_received": [
+                {
+                  "id": 0,
+                  "name": "Add",
+                  "present": true
+                },
+                {
+                  "id": 1,
+                  "name": "View",
+                  "present": true
+                },
+                {
+                  "id": 2,
+                  "name": "Remove",
+                  "present": true
+                },
+                {
+                  "id": 3,
+                  "name": "Remove all",
+                  "present": true
+                },
+                {
+                  "id": 4,
+                  "name": "Store",
+                  "present": true
+                },
+                {
+                  "id": 5,
+                  "name": "Recall",
+                  "present": true
+                },
+                {
+                  "id": 6,
+                  "name": "Get scene membership",
+                  "present": true
+                },
+                {
+                  "id": 64,
+                  "name": "Enhanced add",
+                  "present": false
+                },
+                {
+                  "id": 65,
+                  "name": "Enhanced view",
+                  "present": false
+                },
+                {
+                  "id": 66,
+                  "name": "Copy",
+                  "present": false
+                }
+              ],
+              "commands_received_confirmed": true,
+              "commands_generated": [
+                {
+                  "id": 0,
+                  "name": "add_scene_response"
+                },
+                {
+                  "id": 1,
+                  "name": "view_response"
+                },
+                {
+                  "id": 2,
+                  "name": "remove_scene_response"
+                },
+                {
+                  "id": 3,
+                  "name": "remove_all_scenes_response"
+                },
+                {
+                  "id": 4,
+                  "name": "store_scene_response"
+                },
+                {
+                  "id": 6,
+                  "name": "get_scene_membership_response"
+                }
+              ],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "count",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 1,
+                  "name": "current_scene",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 2,
+                  "name": "current_group",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 3,
+                  "name": "scene_valid",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 4,
+                  "name": "name_support",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ|REPORT"
+                }
+              ]
+            },
+            "0x0006": {
+              "name": "On/Off",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "on_off",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 16385,
+                  "name": "on_time",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 16386,
+                  "name": "off_wait_time",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 57344,
+                  "name": "se_pre_warning_time",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 57345,
+                  "name": "se_on_time_reload",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 57346,
+                  "name": "se_on_time_reload_options",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 57347,
+                  "name": "57347",
+                  "access": "READ|WRITE|REPORT"
+                }
+              ]
+            },
+            "0x0b05": {
+              "name": "Diagnostic",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 284,
+                  "name": "last_message_lqi",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 285,
+                  "name": "last_message_rssi",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ|REPORT"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "endpoint": {
+            "id": 21,
+            "profile": "0x0104",
+            "device_type": "0x0104",
+            "in_clusters": [
+              "0x0000",
+              "0x0003",
+              "0x0b05",
+              "0xff17"
+            ],
+            "out_clusters": [
+              "0x0003",
+              "0x0004",
+              "0x0005",
+              "0x0006",
+              "0x0008",
+              "0x0102"
+            ]
+          },
+          "scanned": true,
+          "clusters": {
+            "0x0000": {
+              "name": "SEBasic",
+              "commands_received": [
+                {
+                  "id": 0,
+                  "name": "Reset to factory defaults",
+                  "present": true
+                }
+              ],
+              "commands_received_confirmed": true,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "zcl_version",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 1,
+                  "name": "app_version",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 2,
+                  "name": "stack_version",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 3,
+                  "name": "hw_version",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 4,
+                  "name": "manufacturer",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 5,
+                  "name": "model",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 6,
+                  "name": "date_code",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 7,
+                  "name": "power_source",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 8,
+                  "name": "generic_device_class",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 9,
+                  "name": "generic_device_type",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 10,
+                  "name": "product_code",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 11,
+                  "name": "product_url",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 16384,
+                  "name": "sw_build_id",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 57345,
+                  "name": "se_application_fw_version",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 57346,
+                  "name": "se_application_hw_version",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 57348,
+                  "name": "se_device_serial_number",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 57351,
+                  "name": "se_product_identifier",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 57352,
+                  "name": "se_product_range",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 57353,
+                  "name": "se_product_model",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 57354,
+                  "name": "se_product_family",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 57355,
+                  "name": "se_vendor_url",
+                  "access": "READ|REPORT"
+                }
+              ]
+            },
+            "0x0003": {
+              "name": "Identify",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [
+                {
+                  "id": 0,
+                  "name": "identify_query_response"
+                }
+              ],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "identify_time",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ|REPORT"
+                }
+              ]
+            },
+            "0x0b05": {
+              "name": "Diagnostic",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 284,
+                  "name": "last_message_lqi",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 285,
+                  "name": "last_message_rssi",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ|REPORT"
+                }
+              ]
+            },
+            "0xff17": {
+              "name": "Schneider Electric Manufacturer Specific Switch Configuration",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "se_switch_indication",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 1,
+                  "name": "se_switch_actions",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 16,
+                  "name": "se_up_scene_id",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 17,
+                  "name": "se_up_group_id",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 32,
+                  "name": "se_down_scene_id",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 33,
+                  "name": "se_down_group_id",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "se_cluster_revision",
+                  "access": "READ|REPORT"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "endpoint": {
+            "id": 242,
+            "in_clusters": [],
+            "out_clusters": [
+              "0x0021"
+            ]
+          },
+          "scanned": false
+        }
+      ],
+      "provenance": {
+        "submitted_at": "2026-11-01T11:40:48.896Z",
+        "card_version": "1.0.3",
+        "source_issue": 320
+      }
+    }
+  ],
+  "capabilities": {
+    "1|002.005.010 R": {
+      "endpoint": 1,
+      "firmware": "002.005.010 R",
+      "scan_count": 1,
+      "last_seen": "2026-11-01T11:40:48.896Z",
+      "manufacturer": "Schneider Electric",
+      "model": "CH2AX/SWITCH/1",
+      "in_clusters": [
+        "0x0000",
+        "0x0003",
+        "0x0004",
+        "0x0005",
+        "0x0006",
+        "0x0b05"
+      ],
+      "out_clusters": [
+        "0x0019"
+      ],
+      "clusters": {
+        "0x0000": {
+          "name": "SEBasic",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Reset to factory defaults",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zcl_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "app_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "stack_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "hw_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "manufacturer",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 5,
+              "name": "model",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 6,
+              "name": "date_code",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 7,
+              "name": "power_source",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 8,
+              "name": "generic_device_class",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 9,
+              "name": "generic_device_type",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 10,
+              "name": "product_code",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 11,
+              "name": "product_url",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16384,
+              "name": "sw_build_id",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 57345,
+              "name": "se_application_fw_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 57346,
+              "name": "se_application_hw_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 57348,
+              "name": "se_device_serial_number",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 57351,
+              "name": "se_product_identifier",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 57352,
+              "name": "se_product_range",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 57353,
+              "name": "se_product_model",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 57354,
+              "name": "se_product_family",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 57355,
+              "name": "se_vendor_url",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0003": {
+          "name": "Identify",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "identify_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0004": {
+          "name": "Groups",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Add to group",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "View group",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 2,
+              "name": "Get group membership",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 3,
+              "name": "Remove from group",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 4,
+              "name": "Remove from all groups",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 5,
+              "name": "Add to group if identifying",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "name_support",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0005": {
+          "name": "Scenes",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Add",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "View",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 2,
+              "name": "Remove",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 3,
+              "name": "Remove all",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 4,
+              "name": "Store",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 5,
+              "name": "Recall",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 6,
+              "name": "Get scene membership",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 64,
+              "name": "Enhanced add",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 65,
+              "name": "Enhanced view",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 66,
+              "name": "Copy",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "count",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "current_scene",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "current_group",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "scene_valid",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "name_support",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0006": {
+          "name": "On/Off",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "on_off",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16385,
+              "name": "on_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 16386,
+              "name": "off_wait_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 57344,
+              "name": "se_pre_warning_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 57345,
+              "name": "se_on_time_reload",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 57346,
+              "name": "se_on_time_reload_options",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 57347,
+              "name": "57347",
+              "access": "READ|WRITE|REPORT"
+            }
+          ]
+        },
+        "0x0b05": {
+          "name": "Diagnostic",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 284,
+              "name": "last_message_lqi",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 285,
+              "name": "last_message_rssi",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        }
+      }
+    },
+    "21|002.005.010 R": {
+      "endpoint": 21,
+      "firmware": "002.005.010 R",
+      "scan_count": 1,
+      "last_seen": "2026-11-01T11:40:48.896Z",
+      "manufacturer": "Schneider Electric",
+      "model": "CH2AX/SWITCH/1",
+      "in_clusters": [
+        "0x0000",
+        "0x0003",
+        "0x0b05",
+        "0xff17"
+      ],
+      "out_clusters": [
+        "0x0003",
+        "0x0004",
+        "0x0005",
+        "0x0006",
+        "0x0008",
+        "0x0102"
+      ],
+      "clusters": {
+        "0x0000": {
+          "name": "SEBasic",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Reset to factory defaults",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zcl_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "app_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "stack_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "hw_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "manufacturer",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 5,
+              "name": "model",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 6,
+              "name": "date_code",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 7,
+              "name": "power_source",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 8,
+              "name": "generic_device_class",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 9,
+              "name": "generic_device_type",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 10,
+              "name": "product_code",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 11,
+              "name": "product_url",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16384,
+              "name": "sw_build_id",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 57345,
+              "name": "se_application_fw_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 57346,
+              "name": "se_application_hw_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 57348,
+              "name": "se_device_serial_number",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 57351,
+              "name": "se_product_identifier",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 57352,
+              "name": "se_product_range",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 57353,
+              "name": "se_product_model",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 57354,
+              "name": "se_product_family",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 57355,
+              "name": "se_vendor_url",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0003": {
+          "name": "Identify",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "identify_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0b05": {
+          "name": "Diagnostic",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 284,
+              "name": "last_message_lqi",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 285,
+              "name": "last_message_rssi",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0xff17": {
+          "name": "Schneider Electric Manufacturer Specific Switch Configuration",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "se_switch_indication",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "se_switch_actions",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 16,
+              "name": "se_up_scene_id",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 17,
+              "name": "se_up_group_id",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 32,
+              "name": "se_down_scene_id",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 33,
+              "name": "se_down_group_id",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "se_cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        }
+      }
+    },
+    "242|002.005.010 R": {
+      "endpoint": 242,
+      "firmware": "002.005.010 R",
+      "scan_count": 1,
+      "last_seen": "2026-11-01T11:40:48.896Z",
+      "manufacturer": "Schneider Electric",
+      "model": "CH2AX/SWITCH/1",
+      "in_clusters": [],
+      "out_clusters": [
+        "0x0021"
+      ],
+      "clusters": {}
+    }
+  }
+}
