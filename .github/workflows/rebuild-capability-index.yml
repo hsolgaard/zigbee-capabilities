@@ -77,7 +77,8 @@ jobs:
                   entry.isFile() &&
                   entry.name.endsWith(".json") &&
                   full !== path.join("data", "index.json") &&
-                  full !== path.join("data", "behaviour.json")
+                  full !== path.join("data", "behaviour.json") &&
+                  full !== path.join("data", "z2m-models.json")
                 ) {
                   out.push(full);
                 }
