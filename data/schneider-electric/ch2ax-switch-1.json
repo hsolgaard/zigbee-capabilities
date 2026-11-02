@@ -1327,5 +1327,18 @@
       ],
       "clusters": {}
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Schneider_Electric_41E2PBSWMZ_356PB2MBTZ.html",
+      "match_method": "vendor_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "Schneider Electric",
+    "checked_model": "CH2AX/SWITCH/1",
+    "manufacturer": {
+      "url": "https://www.clipsal.com/products/detail?CatNo=41E2PBSWMZ&itemno=41E2PBSWMZ-VW",
+      "confidence": "high"
+    }
   }
 }
