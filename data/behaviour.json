@@ -1,4 +1,19 @@
 {
+  "feibit/fzt56-zrc09fb1-7": {
+    "manufacturer": "FEIBIT",
+    "model": "FZT56-ZRC09FB1.7",
+    "group_binding": {
+      "counts": {
+        "works": 1
+      },
+      "by_firmware": {
+        "0x00000084": {
+          "works": 1
+        }
+      },
+      "last_reported": "2026-11-03T15:54:57.648Z"
+    }
+  },
   "ikea-of-sweden/rodret-wireless-dimmer": {
     "manufacturer": "IKEA of Sweden",
     "model": "RODRET wireless dimmer",
