@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T21:22:15.915Z",
+  "generated_at": "2026-11-05T19:32:55.524Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -162,6 +162,11 @@
         {
           "manufacturer": "sengled",
           "model": "E1F-N5E",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "SNZB-03PR2",
           "count": 1
         }
       ]
@@ -1278,6 +1283,22 @@
       ]
     },
     {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x1fff",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "SNZB-03PR2",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "SNZB-06P24",
+          "count": 1
+        }
+      ]
+    },
+    {
       "cluster_id_hex": "0xfcc0",
       "id_hex": "0x0201",
       "seen_on": [
@@ -2038,22 +2059,22 @@
     },
     {
       "cluster_id_hex": "0xfc11",
-      "id_hex": "0x2002",
+      "id_hex": "0x2018",
       "seen_on": [
         {
           "manufacturer": "SONOFF",
-          "model": "SNZB-06P",
+          "model": "SNZB-03PR2",
           "count": 1
         }
       ]
     },
     {
       "cluster_id_hex": "0xfc11",
-      "id_hex": "0x1fff",
+      "id_hex": "0x2002",
       "seen_on": [
         {
           "manufacturer": "SONOFF",
-          "model": "SNZB-06P24",
+          "model": "SNZB-06P",
           "count": 1
         }
       ]
