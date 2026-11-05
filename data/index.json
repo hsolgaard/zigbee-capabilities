@@ -64471,7 +64471,11 @@
   {
     "manufacturer_slug": "schneider-electric",
     "model_slug": "w599501",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "Schneider Electric",
+      "checked_model": "W599501"
+    },
     "endpoint": 20,
     "firmware": "2209261",
     "scan_count": 1,
