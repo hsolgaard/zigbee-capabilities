@@ -505,6 +505,17 @@
       },
       "buy_candidate": null
     },
+    "SONOFF|SNZB-03PR2": {
+      "searched_at": "2026-11-05",
+      "manufacturer_candidate": {
+        "url": "https://sonoff.tech/en-us/products/sonoff-senseguard-motion-gen2-zigbee-motion-sensor-snzb-03pr2",
+        "title": "SONOFF SenseGuard Motion Gen2 Zigbee Motion Sensor - SNZB-03PR2",
+        "shop": true,
+        "evidence": "page mentions \"snzb03pr2\"",
+        "method": "shop search on sonoff.tech"
+      },
+      "buy_candidate": null
+    },
     "SONOFF|SNZB-06P24": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": {
@@ -789,5 +800,5 @@
       "shop": true
     }
   },
-  "generated_at": "2026-11-02T15:49:05.239Z"
+  "generated_at": "2026-11-05T19:33:01.078Z"
 }
