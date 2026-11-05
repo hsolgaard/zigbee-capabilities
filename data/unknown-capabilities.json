@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T19:34:25.368Z",
+  "generated_at": "2026-11-05T19:36:56.333Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -2140,6 +2140,94 @@
         {
           "manufacturer": "SONOFF",
           "model": "SNZB-06P24",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x5006",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "SWV",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x5007",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "SWV",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x5008",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "SWV",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x5009",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "SWV",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x500d",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "SWV",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x500e",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "SWV",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x500f",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "SWV",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x5010",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "SWV",
           "count": 1
         }
       ]
