@@ -251,6 +251,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "IKEA of Sweden|TRADFRI bulb E27 WS�opal 980lm": {
+      "searched_at": "2026-11-05",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "IKEA of Sweden|TRADFRI bulb E27 WW 806lm": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": null,
@@ -800,5 +805,5 @@
       "shop": true
     }
   },
-  "generated_at": "2026-11-05T19:33:01.078Z"
+  "generated_at": "2026-11-05T19:34:03.262Z"
 }
