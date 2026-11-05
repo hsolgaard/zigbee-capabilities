@@ -384,6 +384,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "LEDVANCE|P40 TW Value": {
+      "searched_at": "2026-11-05",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "LEDVANCE|PAR16 TW Z3": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": null,
@@ -446,6 +451,11 @@
     },
     "sengled|E1F-N5E": {
       "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "Shyugj|Dimmer-Switch-ZB3.0": {
+      "searched_at": "2026-11-05",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -823,5 +833,5 @@
       "shop": true
     }
   },
-  "generated_at": "2026-11-05T19:35:52.539Z"
+  "generated_at": "2026-11-05T19:37:24.389Z"
 }
