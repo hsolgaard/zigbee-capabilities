@@ -221,6 +221,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "IKEA of Sweden|TRADFRI bulb E14 WS opal 400lm": {
+      "searched_at": "2026-11-05",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "IKEA of Sweden|TRADFRI bulb E14 WS opal 600lm": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": null,
@@ -803,7 +808,11 @@
     "https://www.clipsal.com/products/detail?CatNo=41E2PBSWMZ&itemno=41E2PBSWMZ-VW": {
       "title": "Vivid White - Clipsal Iconic Wiser Connected Smart Switch Zigbee Default Mode, 2AX, 240V",
       "shop": true
+    },
+    "https://www.ikea.com/ae/en/p/tradfri-led-bulb-e27-980-lumen-wireless-dimmable-white-spectrum-opal-white-10318263/": {
+      "title": "Shop Home Furniture, Storage & Home Décor",
+      "shop": true
     }
   },
-  "generated_at": "2026-11-05T19:34:03.262Z"
+  "generated_at": "2026-11-05T19:34:35.570Z"
 }

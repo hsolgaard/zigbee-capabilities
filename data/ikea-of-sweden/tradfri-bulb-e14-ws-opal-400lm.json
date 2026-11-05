@@ -1539,5 +1539,18 @@
       "out_clusters": [],
       "clusters": {}
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Ikea_LED1536G5-E14.html",
+      "match_method": "vendor_alias_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "IKEA of Sweden",
+    "checked_model": "TRADFRI bulb E14 WS opal 400lm",
+    "manufacturer": {
+      "url": "https://www.ikea.com/kr/en/catalog/products/40318285/",
+      "confidence": "high"
+    }
   }
 }
