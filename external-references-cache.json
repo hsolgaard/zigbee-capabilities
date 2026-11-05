@@ -449,6 +449,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "Schneider Electric|W599501": {
+      "searched_at": "2026-11-05",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "sengled|E1F-N5E": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": null,
@@ -831,7 +836,12 @@
     "https://www.ikea.com/kr/en/catalog/products/40318285/": {
       "title": "Products",
       "shop": true
+    },
+    "https://www.ledvance.com/consumer/products/smart-home/smart-home-products-with-zigbee-technology/smart-home-lamps/classic-lamps-with-zigbee-technology/smart-mini-bulb-tunable-white/index.jsp": null,
+    "https://itead.cc/product/sonoff-zigbee-smart-water-valve/": {
+      "title": "SONOFF Zigbee Smart Water Valve",
+      "shop": true
     }
   },
-  "generated_at": "2026-11-05T19:37:24.389Z"
+  "generated_at": "2026-11-05T20:04:11.639Z"
 }
