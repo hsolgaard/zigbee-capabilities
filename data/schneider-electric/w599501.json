@@ -1,0 +1,1029 @@
+{
+  "observations": [
+    {
+      "manufacturer": "Schneider Electric",
+      "model": "W599501",
+      "identity": {
+        "sw_build_id": "2209261",
+        "hw_version": 1,
+        "date_code": "20220926"
+      },
+      "endpoints": [
+        {
+          "endpoint": {
+            "id": 20,
+            "profile": "0x0104",
+            "device_type": "0x0402",
+            "in_clusters": [
+              "0x0000",
+              "0x0001",
+              "0x0003",
+              "0x0020",
+              "0x0402",
+              "0x0500",
+              "0x0b05",
+              "0xfc04"
+            ],
+            "out_clusters": [
+              "0x0003",
+              "0x0019"
+            ]
+          },
+          "scanned": true,
+          "clusters": {
+            "0x0000": {
+              "name": "SEBasic",
+              "commands_received": [
+                {
+                  "id": 0,
+                  "name": "Reset to factory defaults",
+                  "present": true
+                }
+              ],
+              "commands_received_confirmed": true,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "zcl_version",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 1,
+                  "name": "app_version",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 2,
+                  "name": "stack_version",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 3,
+                  "name": "hw_version",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 4,
+                  "name": "manufacturer",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 5,
+                  "name": "model",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 6,
+                  "name": "date_code",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 7,
+                  "name": "power_source",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 10,
+                  "name": "product_code",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 16384,
+                  "name": "sw_build_id",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 16385,
+                  "name": "16385",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 16386,
+                  "name": "16386",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 16387,
+                  "name": "16387",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 16388,
+                  "name": "16388",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 16389,
+                  "name": "16389",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 57345,
+                  "name": "se_application_fw_version",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 57346,
+                  "name": "se_application_hw_version",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 57348,
+                  "name": "se_device_serial_number",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 57351,
+                  "name": "se_product_identifier",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 57352,
+                  "name": "se_product_range",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 57353,
+                  "name": "se_product_model",
+                  "access": "READ|REPORT"
+                }
+              ]
+            },
+            "0x0001": {
+              "name": "Power Configuration",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 32,
+                  "name": "battery_voltage",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 33,
+                  "name": "battery_percentage_remaining",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 49,
+                  "name": "battery_size",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 51,
+                  "name": "battery_quantity",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 53,
+                  "name": "battery_alarm_mask",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 54,
+                  "name": "battery_volt_min_thres",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 55,
+                  "name": "battery_volt_thres1",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 56,
+                  "name": "battery_volt_thres2",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 57,
+                  "name": "battery_volt_thres3",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 62,
+                  "name": "battery_alarm_state",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 256,
+                  "name": "256",
+                  "access": "READ|REPORT"
+                }
+              ]
+            },
+            "0x0003": {
+              "name": "Identify",
+              "commands_received": [
+                {
+                  "id": 0,
+                  "name": "Identify",
+                  "present": true
+                },
+                {
+                  "id": 1,
+                  "name": "Identify query",
+                  "present": true
+                },
+                {
+                  "id": 64,
+                  "name": "Trigger identify effect",
+                  "present": false
+                }
+              ],
+              "commands_received_confirmed": true,
+              "commands_generated": [
+                {
+                  "id": 0,
+                  "name": "identify_query_response"
+                }
+              ],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "identify_time",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ|REPORT"
+                }
+              ]
+            },
+            "0x0020": {
+              "name": "Poll Control",
+              "commands_received": [
+                {
+                  "id": 0,
+                  "name": "checkin_response",
+                  "present": true
+                },
+                {
+                  "id": 1,
+                  "name": "fast_poll_stop",
+                  "present": true
+                },
+                {
+                  "id": 2,
+                  "name": "set_long_poll_interval",
+                  "present": true
+                },
+                {
+                  "id": 3,
+                  "name": "set_short_poll_interval",
+                  "present": true
+                }
+              ],
+              "commands_received_confirmed": true,
+              "commands_generated": [
+                {
+                  "id": 0,
+                  "name": "checkin"
+                }
+              ],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "checkin_interval",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 1,
+                  "name": "long_poll_interval",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 2,
+                  "name": "short_poll_interval",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 3,
+                  "name": "fast_poll_timeout",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 4,
+                  "name": "checkin_interval_min",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 5,
+                  "name": "long_poll_interval_min",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 6,
+                  "name": "fast_poll_timeout_max",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ|REPORT"
+                }
+              ]
+            },
+            "0x0402": {
+              "name": "Temperature Measurement",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "measured_value",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 1,
+                  "name": "min_measured_value",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 2,
+                  "name": "max_measured_value",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ|REPORT"
+                }
+              ]
+            },
+            "0x0500": {
+              "name": "IAS Zone",
+              "commands_received": [
+                {
+                  "id": 0,
+                  "name": "Enroll response",
+                  "present": true
+                },
+                {
+                  "id": 1,
+                  "name": "Initiate normal operation mode",
+                  "present": false
+                },
+                {
+                  "id": 2,
+                  "name": "Initiate test mode",
+                  "present": false
+                }
+              ],
+              "commands_received_confirmed": true,
+              "commands_generated": [
+                {
+                  "id": 0,
+                  "name": "status_change_notification"
+                },
+                {
+                  "id": 1,
+                  "name": "enroll"
+                }
+              ],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "zone_state",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 1,
+                  "name": "zone_type",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 2,
+                  "name": "zone_status",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 16,
+                  "name": "cie_addr",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 17,
+                  "name": "zone_id",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 18,
+                  "name": "num_zone_sensitivity_levels_supported",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 19,
+                  "name": "current_zone_sensitivity_level",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "65533",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 57344,
+                  "name": "57344",
+                  "access": "READ|WRITE|REPORT"
+                }
+              ]
+            },
+            "0x0b05": {
+              "name": "Diagnostic",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 284,
+                  "name": "last_message_lqi",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 285,
+                  "name": "last_message_rssi",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ|REPORT"
+                }
+              ]
+            },
+            "0xfc04": {
+              "name": "SEAlarmConfiguration",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "se_led_brightness",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 1,
+                  "name": "se_alarm_sound_level",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 2,
+                  "name": "se_alarm_sound_mode",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 3,
+                  "name": "se_lifetime",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 4,
+                  "name": "se_hush_duration",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 5,
+                  "name": "se_test_mode",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 6,
+                  "name": "se_silence_alarm",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "se_cluster_revision",
+                  "access": "READ|REPORT"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "provenance": {
+        "submitted_at": "2026-11-04T13:46:53.700Z",
+        "card_version": "1.5.0",
+        "source_issue": 331
+      }
+    }
+  ],
+  "capabilities": {
+    "20|2209261": {
+      "endpoint": 20,
+      "firmware": "2209261",
+      "scan_count": 1,
+      "last_seen": "2026-11-04T13:46:53.700Z",
+      "manufacturer": "Schneider Electric",
+      "model": "W599501",
+      "in_clusters": [
+        "0x0000",
+        "0x0001",
+        "0x0003",
+        "0x0020",
+        "0x0402",
+        "0x0500",
+        "0x0b05",
+        "0xfc04"
+      ],
+      "out_clusters": [
+        "0x0003",
+        "0x0019"
+      ],
+      "clusters": {
+        "0x0000": {
+          "name": "SEBasic",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Reset to factory defaults",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zcl_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "app_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "stack_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "hw_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "manufacturer",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 5,
+              "name": "model",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 6,
+              "name": "date_code",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 7,
+              "name": "power_source",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 10,
+              "name": "product_code",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16384,
+              "name": "sw_build_id",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16385,
+              "name": "16385",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16386,
+              "name": "16386",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16387,
+              "name": "16387",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 16388,
+              "name": "16388",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 16389,
+              "name": "16389",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 57345,
+              "name": "se_application_fw_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 57346,
+              "name": "se_application_hw_version",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 57348,
+              "name": "se_device_serial_number",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 57351,
+              "name": "se_product_identifier",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 57352,
+              "name": "se_product_range",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 57353,
+              "name": "se_product_model",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0001": {
+          "name": "Power Configuration",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 32,
+              "name": "battery_voltage",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 33,
+              "name": "battery_percentage_remaining",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 49,
+              "name": "battery_size",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 51,
+              "name": "battery_quantity",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 53,
+              "name": "battery_alarm_mask",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 54,
+              "name": "battery_volt_min_thres",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 55,
+              "name": "battery_volt_thres1",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 56,
+              "name": "battery_volt_thres2",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 57,
+              "name": "battery_volt_thres3",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 62,
+              "name": "battery_alarm_state",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 256,
+              "name": "256",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0003": {
+          "name": "Identify",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Identify",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "Identify query",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 64,
+              "name": "Trigger identify effect",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "identify_time",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0020": {
+          "name": "Poll Control",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "checkin_response",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "fast_poll_stop",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 2,
+              "name": "set_long_poll_interval",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 3,
+              "name": "set_short_poll_interval",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "checkin_interval",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "long_poll_interval",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "short_poll_interval",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "fast_poll_timeout",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "checkin_interval_min",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 5,
+              "name": "long_poll_interval_min",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 6,
+              "name": "fast_poll_timeout_max",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0402": {
+          "name": "Temperature Measurement",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "measured_value",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "min_measured_value",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "max_measured_value",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0500": {
+          "name": "IAS Zone",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Enroll response",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "Initiate normal operation mode",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 2,
+              "name": "Initiate test mode",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zone_state",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "zone_type",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "zone_status",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16,
+              "name": "cie_addr",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 17,
+              "name": "zone_id",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 18,
+              "name": "num_zone_sensitivity_levels_supported",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 19,
+              "name": "current_zone_sensitivity_level",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "65533",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 57344,
+              "name": "57344",
+              "access": "READ|WRITE|REPORT"
+            }
+          ]
+        },
+        "0x0b05": {
+          "name": "Diagnostic",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 284,
+              "name": "last_message_lqi",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 285,
+              "name": "last_message_rssi",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0xfc04": {
+          "name": "SEAlarmConfiguration",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "se_led_brightness",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 1,
+              "name": "se_alarm_sound_level",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 2,
+              "name": "se_alarm_sound_mode",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 3,
+              "name": "se_lifetime",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 4,
+              "name": "se_hush_duration",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 5,
+              "name": "se_test_mode",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 6,
+              "name": "se_silence_alarm",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "se_cluster_revision",
+              "access": "READ|REPORT"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
