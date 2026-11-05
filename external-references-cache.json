@@ -409,6 +409,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "Nordtronic A/S|BoxDIMZ 98425031": {
+      "searched_at": "2026-11-05",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "OSRAM|CLA60 RGBW OSRAM": {
       "searched_at": "2026-10-30",
       "manufacturer_candidate": null,
@@ -812,7 +817,11 @@
     "https://www.ikea.com/ae/en/p/tradfri-led-bulb-e27-980-lumen-wireless-dimmable-white-spectrum-opal-white-10318263/": {
       "title": "Shop Home Furniture, Storage & Home Décor",
       "shop": true
+    },
+    "https://www.ikea.com/kr/en/catalog/products/40318285/": {
+      "title": "Products",
+      "shop": true
     }
   },
-  "generated_at": "2026-11-05T19:34:35.570Z"
+  "generated_at": "2026-11-05T19:35:52.539Z"
 }
