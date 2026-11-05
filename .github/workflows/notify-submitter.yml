@@ -2,7 +2,10 @@ name: Thank the submitter when their scan is merged
 
 # When a submission PR (branch submission/issue-N, created by
 # ingest-submission.yml) is merged, post a thank-you comment on the original
-# issue with a link to the database. The comment @mentions the person who
+# issue with a link to the database, then close the issue. (The PR body's
+# "Closes #N" doesn't close it: GitHub ignores closing keywords in pull
+# requests opened with the workflow's GITHUB_TOKEN, so issues stayed open
+# after their PR was merged, e.g. #337 and #339.) The comment @mentions the person who
 # opened the issue, so GitHub emails them (and shows it in their
 # notifications) even if they have since unsubscribed from the thread.
 #
@@ -39,14 +42,28 @@ jobs:
             // Never comment on a PR number by mistake, or thank a bot.
             if (issue.pull_request || issue.user.type === "Bot") return;
 
-            // Idempotent: a re-run must not thank them twice.
+            const closeIssue = async () => {
+              if (issue.state === "open") {
+                await github.rest.issues.update({
+                  ...context.repo,
+                  issue_number: issueNumber,
+                  state: "closed",
+                  state_reason: "completed",
+                });
+              }
+            };
+
+            // Idempotent: a re-run must not thank them twice (but still closes).
             const marker = "<!-- submitter-thanks -->";
             const comments = await github.paginate(github.rest.issues.listComments, {
               ...context.repo,
               issue_number: issueNumber,
               per_page: 100,
             });
-            if (comments.some((c) => (c.body || "").includes(marker))) return;
+            if (comments.some((c) => (c.body || "").includes(marker))) {
+              await closeIssue();
+              return;
+            }
 
             const device = (issue.title || "")
               .replace(/^\[Device Submission\]\s*/i, "")
@@ -64,3 +81,5 @@ jobs:
                 `You can browse it here: ${site}\n\n` +
                 `Every scan makes the data more useful for everyone using direct binding, so it's really appreciated.`,
             });
+
+            await closeIssue();
