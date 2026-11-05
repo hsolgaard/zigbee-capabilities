@@ -56519,7 +56519,19 @@
   {
     "manufacturer_slug": "ledvance",
     "model_slug": "p40-tw-value",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ledvance_4058075485174.html",
+        "match_method": "vendor_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "LEDVANCE",
+      "checked_model": "P40 TW Value",
+      "manufacturer": {
+        "url": "https://www.ledvance.com/consumer/products/smart-home/smart-home-products-with-zigbee-technology/smart-home-lamps/classic-lamps-with-zigbee-technology/smart-mini-bulb-tunable-white/index.jsp",
+        "confidence": "high"
+      }
+    },
     "endpoint": 1,
     "firmware": "03177310",
     "scan_count": 1,
@@ -57239,7 +57251,19 @@
   {
     "manufacturer_slug": "ledvance",
     "model_slug": "p40-tw-value",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ledvance_4058075485174.html",
+        "match_method": "vendor_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "LEDVANCE",
+      "checked_model": "P40 TW Value",
+      "manufacturer": {
+        "url": "https://www.ledvance.com/consumer/products/smart-home/smart-home-products-with-zigbee-technology/smart-home-lamps/classic-lamps-with-zigbee-technology/smart-mini-bulb-tunable-white/index.jsp",
+        "confidence": "high"
+      }
+    },
     "endpoint": 242,
     "firmware": "03177310",
     "scan_count": 1,
@@ -70378,7 +70402,19 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "swv",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Sonoff_SWV.html",
+        "match_method": "vendor_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "SONOFF",
+      "checked_model": "SWV",
+      "manufacturer": {
+        "url": "https://itead.cc/product/sonoff-zigbee-smart-water-valve/",
+        "confidence": "high"
+      }
+    },
     "endpoint": 1,
     "firmware": "1.0.3",
     "scan_count": 1,
