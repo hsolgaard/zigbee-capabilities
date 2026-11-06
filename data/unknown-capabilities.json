@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T19:36:56.333Z",
+  "generated_at": "2026-11-06T16:34:10.918Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -212,6 +212,16 @@
       ]
     },
     {
+      "id_hex": "0xfcc0",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        }
+      ]
+    },
+    {
       "id_hex": "0xfc81",
       "seen_on": [
         {
@@ -351,6 +361,32 @@
       ]
     },
     {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0003",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 2
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        },
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
       "cluster_id_hex": "0xfc11",
       "id_hex": "0x001a",
       "seen_on": [
@@ -404,16 +440,281 @@
     },
     {
       "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0003",
+      "id_hex": "0x0002",
       "seen_on": [
         {
           "manufacturer": "Aqara",
           "model": "Ceiling Light T1M",
-          "count": 2
+          "count": 1
         },
         {
           "manufacturer": "Aqara",
           "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        },
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0006",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        },
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0007",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        },
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0008",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        },
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x00f3",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        },
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x00f5",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        },
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x00f6",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        },
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x00fa",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        },
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x00fc",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        },
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x00fe",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        },
+        {
+          "manufacturer": "LUMI",
+          "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x00ff",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
           "count": 1
         },
         {
@@ -472,7 +773,7 @@
     },
     {
       "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0002",
+      "id_hex": "0x0001",
       "seen_on": [
         {
           "manufacturer": "Aqara",
@@ -485,15 +786,15 @@
           "count": 1
         },
         {
-          "manufacturer": "LUMI",
-          "model": "lumi.plug.maeu01",
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
           "count": 1
         }
       ]
     },
     {
       "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0006",
+      "id_hex": "0x0005",
       "seen_on": [
         {
           "manufacturer": "Aqara",
@@ -506,15 +807,15 @@
           "count": 1
         },
         {
-          "manufacturer": "LUMI",
-          "model": "lumi.plug.maeu01",
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
           "count": 1
         }
       ]
     },
     {
       "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0007",
+      "id_hex": "0x0009",
       "seen_on": [
         {
           "manufacturer": "Aqara",
@@ -527,15 +828,15 @@
           "count": 1
         },
         {
-          "manufacturer": "LUMI",
-          "model": "lumi.plug.maeu01",
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
           "count": 1
         }
       ]
     },
     {
       "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0008",
+      "id_hex": "0x000b",
       "seen_on": [
         {
           "manufacturer": "Aqara",
@@ -548,15 +849,15 @@
           "count": 1
         },
         {
-          "manufacturer": "LUMI",
-          "model": "lumi.plug.maeu01",
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
           "count": 1
         }
       ]
     },
     {
       "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x00f3",
+      "id_hex": "0x000c",
       "seen_on": [
         {
           "manufacturer": "Aqara",
@@ -569,15 +870,15 @@
           "count": 1
         },
         {
-          "manufacturer": "LUMI",
-          "model": "lumi.plug.maeu01",
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
           "count": 1
         }
       ]
     },
     {
       "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x00f5",
+      "id_hex": "0x000e",
       "seen_on": [
         {
           "manufacturer": "Aqara",
@@ -590,15 +891,15 @@
           "count": 1
         },
         {
-          "manufacturer": "LUMI",
-          "model": "lumi.plug.maeu01",
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
           "count": 1
         }
       ]
     },
     {
       "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x00f6",
+      "id_hex": "0x0012",
       "seen_on": [
         {
           "manufacturer": "Aqara",
@@ -611,15 +912,15 @@
           "count": 1
         },
         {
-          "manufacturer": "LUMI",
-          "model": "lumi.plug.maeu01",
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
           "count": 1
         }
       ]
     },
     {
       "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x00fa",
+      "id_hex": "0x0013",
       "seen_on": [
         {
           "manufacturer": "Aqara",
@@ -632,15 +933,15 @@
           "count": 1
         },
         {
-          "manufacturer": "LUMI",
-          "model": "lumi.plug.maeu01",
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
           "count": 1
         }
       ]
     },
     {
       "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x00fc",
+      "id_hex": "0x0014",
       "seen_on": [
         {
           "manufacturer": "Aqara",
@@ -653,15 +954,15 @@
           "count": 1
         },
         {
-          "manufacturer": "LUMI",
-          "model": "lumi.plug.maeu01",
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
           "count": 1
         }
       ]
     },
     {
       "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x00fe",
+      "id_hex": "0x0016",
       "seen_on": [
         {
           "manufacturer": "Aqara",
@@ -674,15 +975,15 @@
           "count": 1
         },
         {
-          "manufacturer": "LUMI",
-          "model": "lumi.plug.maeu01",
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
           "count": 1
         }
       ]
     },
     {
       "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x00ff",
+      "id_hex": "0x0080",
       "seen_on": [
         {
           "manufacturer": "Aqara",
@@ -695,8 +996,407 @@
           "count": 1
         },
         {
-          "manufacturer": "LUMI",
-          "model": "lumi.plug.maeu01",
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0081",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x00da",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x00dd",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x00de",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x00df",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x00e5",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x00e6",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x00e8",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x00ee",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x00f7",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0524",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0525",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0527",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0700",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0701",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0800",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0801",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0802",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0xfff2",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "Ceiling Light T1M",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl001",
+          "count": 1
+        },
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
           "count": 1
         }
       ]
@@ -781,486 +1481,6 @@
         {
           "manufacturer": "SONOFF",
           "model": "TRVZB",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0001",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0005",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0009",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x000b",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x000c",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x000e",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0012",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0013",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0014",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0016",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0080",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0081",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x00da",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x00dd",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x00de",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x00df",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x00e5",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x00e6",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x00e8",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x00ee",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x00f7",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0524",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0525",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0527",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0700",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0701",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0800",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0801",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0x0802",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfcc0",
-      "id_hex": "0xfff2",
-      "seen_on": [
-        {
-          "manufacturer": "Aqara",
-          "model": "Ceiling Light T1M",
-          "count": 1
-        },
-        {
-          "manufacturer": "Aqara",
-          "model": "lumi.light.agl001",
           "count": 1
         }
       ]
@@ -1535,6 +1755,28 @@
         {
           "manufacturer": "Aqara",
           "model": "Ceiling Light T1M",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x0528",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfcc0",
+      "id_hex": "0x052c",
+      "seen_on": [
+        {
+          "manufacturer": "Aqara",
+          "model": "lumi.light.agl003",
           "count": 1
         }
       ]
