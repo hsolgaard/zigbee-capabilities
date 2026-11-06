@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T16:34:10.918Z",
+  "generated_at": "2026-11-06T16:34:35.390Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -2195,6 +2195,28 @@
         {
           "manufacturer": "sengled",
           "model": "E1F-N5E",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xff01",
+      "id_hex": "0x0220",
+      "seen_on": [
+        {
+          "manufacturer": "Sinope Technologies",
+          "model": "SP2600ZB",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xff01",
+      "id_hex": "0x0221",
+      "seen_on": [
+        {
+          "manufacturer": "Sinope Technologies",
+          "model": "SP2600ZB",
           "count": 1
         }
       ]
