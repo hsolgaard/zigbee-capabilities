@@ -29350,7 +29350,11 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e26-cws-globe-800lm",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "IKEA of Sweden",
+      "checked_model": "TRADFRI bulb E26 CWS globe 800lm"
+    },
     "endpoint": 1,
     "firmware": "1.0.38",
     "scan_count": 1,
@@ -30261,7 +30265,11 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e26-cws-globe-800lm",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "IKEA of Sweden",
+      "checked_model": "TRADFRI bulb E26 CWS globe 800lm"
+    },
     "endpoint": 242,
     "firmware": "1.0.38",
     "scan_count": 1,
