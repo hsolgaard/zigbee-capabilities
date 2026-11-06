@@ -19,14 +19,14 @@
     "model": "Remote Control N2",
     "group_binding": {
       "counts": {
-        "works": 1
+        "works": 2
       },
       "by_firmware": {
         "0x00010024": {
-          "works": 1
+          "works": 2
         }
       },
-      "last_reported": "2026-11-05T22:05:17.523Z"
+      "last_reported": "2026-11-06T20:02:50.739Z"
     }
   },
   "ikea-of-sweden/rodret-wireless-dimmer": {
