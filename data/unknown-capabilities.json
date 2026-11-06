@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T16:34:35.390Z",
+  "generated_at": "2026-11-06T20:47:03.937Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -52,6 +52,11 @@
         {
           "manufacturer": "IKEA of Sweden",
           "model": "TRADFRI bulb E14 WS opal 600lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E26 CWS 800lm",
           "count": 1
         },
         {
@@ -720,6 +725,84 @@
         {
           "manufacturer": "LUMI",
           "model": "lumi.plug.maeu01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc7c",
+      "id_hex": "0x0001",
+      "seen_on": [
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E14 CWS 470lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E26 CWS 800lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E27 CWS 806lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb GU10 CWS 345lm",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc7c",
+      "id_hex": "0x0002",
+      "seen_on": [
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E14 CWS 470lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E26 CWS 800lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E27 CWS 806lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb GU10 CWS 345lm",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc7c",
+      "id_hex": "0x0003",
+      "seen_on": [
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E14 CWS 470lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E26 CWS 800lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E27 CWS 806lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb GU10 CWS 345lm",
           "count": 1
         }
       ]
@@ -1397,69 +1480,6 @@
         {
           "manufacturer": "Aqara",
           "model": "lumi.light.agl003",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc7c",
-      "id_hex": "0x0001",
-      "seen_on": [
-        {
-          "manufacturer": "IKEA of Sweden",
-          "model": "TRADFRI bulb E14 CWS 470lm",
-          "count": 1
-        },
-        {
-          "manufacturer": "IKEA of Sweden",
-          "model": "TRADFRI bulb E27 CWS 806lm",
-          "count": 1
-        },
-        {
-          "manufacturer": "IKEA of Sweden",
-          "model": "TRADFRI bulb GU10 CWS 345lm",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc7c",
-      "id_hex": "0x0002",
-      "seen_on": [
-        {
-          "manufacturer": "IKEA of Sweden",
-          "model": "TRADFRI bulb E14 CWS 470lm",
-          "count": 1
-        },
-        {
-          "manufacturer": "IKEA of Sweden",
-          "model": "TRADFRI bulb E27 CWS 806lm",
-          "count": 1
-        },
-        {
-          "manufacturer": "IKEA of Sweden",
-          "model": "TRADFRI bulb GU10 CWS 345lm",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc7c",
-      "id_hex": "0x0003",
-      "seen_on": [
-        {
-          "manufacturer": "IKEA of Sweden",
-          "model": "TRADFRI bulb E14 CWS 470lm",
-          "count": 1
-        },
-        {
-          "manufacturer": "IKEA of Sweden",
-          "model": "TRADFRI bulb E27 CWS 806lm",
-          "count": 1
-        },
-        {
-          "manufacturer": "IKEA of Sweden",
-          "model": "TRADFRI bulb GU10 CWS 345lm",
           "count": 1
         }
       ]
