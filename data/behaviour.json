@@ -43,5 +43,20 @@
       },
       "last_reported": "2026-11-01T20:57:23.510Z"
     }
+  },
+  "inovelli/vzm31-sn": {
+    "manufacturer": "Inovelli",
+    "model": "VZM31-SN",
+    "group_binding": {
+      "counts": {
+        "works": 1
+      },
+      "by_firmware": {
+        "0x01020304": {
+          "works": 1
+        }
+      },
+      "last_reported": "2026-11-06T21:11:34.943Z"
+    }
   }
 }
