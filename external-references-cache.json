@@ -444,6 +444,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "Phoscon|Hive": {
+      "searched_at": "2026-11-06",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "Schneider Electric|CH2AX/SWITCH/1": {
       "searched_at": "2026-11-02",
       "manufacturer_candidate": null,
@@ -843,5 +848,5 @@
       "shop": true
     }
   },
-  "generated_at": "2026-11-05T20:04:11.639Z"
+  "generated_at": "2026-11-06T07:10:55.318Z"
 }
