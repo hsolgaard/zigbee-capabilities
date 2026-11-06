@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T20:47:03.937Z",
+  "generated_at": "2026-11-06T20:47:42.175Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -57,6 +57,11 @@
         {
           "manufacturer": "IKEA of Sweden",
           "model": "TRADFRI bulb E26 CWS 800lm",
+          "count": 1
+        },
+        {
+          "manufacturer": "IKEA of Sweden",
+          "model": "TRADFRI bulb E26 CWS globe 800lm",
           "count": 1
         },
         {
