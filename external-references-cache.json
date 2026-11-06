@@ -241,6 +241,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "IKEA of Sweden|TRADFRI bulb E26 CWS 800lm": {
+      "searched_at": "2026-11-06",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "IKEA of Sweden|TRADFRI bulb E27 CWS 806lm": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": null,
@@ -867,5 +872,5 @@
       "shop": false
     }
   },
-  "generated_at": "2026-11-06T16:36:27.559Z"
+  "generated_at": "2026-11-06T20:47:13.388Z"
 }
