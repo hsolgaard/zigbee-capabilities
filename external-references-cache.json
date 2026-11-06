@@ -131,6 +131,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "Aqara|lumi.light.agl003": {
+      "searched_at": "2026-11-06",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "AwoX|TLSR82xx": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": null,
@@ -846,7 +851,11 @@
     "https://itead.cc/product/sonoff-zigbee-smart-water-valve/": {
       "title": "SONOFF Zigbee Smart Water Valve",
       "shop": true
+    },
+    "https://phoscon.de/en/hive": {
+      "title": "Hive Overview",
+      "shop": false
     }
   },
-  "generated_at": "2026-11-06T07:10:55.318Z"
+  "generated_at": "2026-11-06T16:34:24.128Z"
 }
