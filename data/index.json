@@ -62079,7 +62079,19 @@
   {
     "manufacturer_slug": "phoscon",
     "model_slug": "hive",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Phoscon_Hive.html",
+        "match_method": "vendor_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "Phoscon",
+      "checked_model": "Hive",
+      "manufacturer": {
+        "url": "https://phoscon.de/en/hive",
+        "confidence": "high"
+      }
+    },
     "endpoint": 1,
     "firmware": "0401.0020001B",
     "scan_count": 1,
@@ -62926,7 +62938,19 @@
   {
     "manufacturer_slug": "phoscon",
     "model_slug": "hive",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Phoscon_Hive.html",
+        "match_method": "vendor_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "Phoscon",
+      "checked_model": "Hive",
+      "manufacturer": {
+        "url": "https://phoscon.de/en/hive",
+        "confidence": "high"
+      }
+    },
     "endpoint": 242,
     "firmware": "0401.0020001B",
     "scan_count": 1,
