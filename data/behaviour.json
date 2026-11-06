@@ -14,6 +14,21 @@
       "last_reported": "2026-11-03T15:54:57.648Z"
     }
   },
+  "ikea-of-sweden/remote-control-n2": {
+    "manufacturer": "IKEA of Sweden",
+    "model": "Remote Control N2",
+    "group_binding": {
+      "counts": {
+        "works": 1
+      },
+      "by_firmware": {
+        "0x00010024": {
+          "works": 1
+        }
+      },
+      "last_reported": "2026-11-05T22:05:17.523Z"
+    }
+  },
   "ikea-of-sweden/rodret-wireless-dimmer": {
     "manufacturer": "IKEA of Sweden",
     "model": "RODRET wireless dimmer",
