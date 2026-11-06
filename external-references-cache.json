@@ -141,6 +141,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "CentraLite|Motion Sensor-A": {
+      "searched_at": "2026-11-06",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "eWeLink|CK-BL702-AL-01(7009_Z102LG03-1)": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": null,
@@ -471,6 +476,11 @@
     },
     "Shyugj|Dimmer-Switch-ZB3.0": {
       "searched_at": "2026-11-05",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "Sinope Technologies|SP2600ZB": {
+      "searched_at": "2026-11-06",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -857,5 +867,5 @@
       "shop": false
     }
   },
-  "generated_at": "2026-11-06T16:34:24.128Z"
+  "generated_at": "2026-11-06T16:36:27.559Z"
 }
