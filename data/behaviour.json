@@ -42,6 +42,17 @@
         }
       },
       "last_reported": "2026-11-06T20:02:50.739Z"
+    },
+    "direct_binding": {
+      "counts": {
+        "works": 1
+      },
+      "by_firmware": {
+        "0x02040016": {
+          "works": 1
+        }
+      },
+      "last_reported": "2026-11-07T20:14:04.288Z"
     }
   },
   "ikea-of-sweden/rodret-wireless-dimmer": {
