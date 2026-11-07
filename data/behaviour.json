@@ -163,6 +163,21 @@
       "last_reported": "2026-11-06T22:57:40.306Z"
     }
   },
+  "repenic-ltd/rs-r03azg": {
+    "manufacturer": "Repenic Ltd.",
+    "model": "RS-R03AZG",
+    "group_binding": {
+      "counts": {
+        "works": 1
+      },
+      "by_firmware": {
+        "0x00000017": {
+          "works": 1
+        }
+      },
+      "last_reported": "2026-11-07T23:29:30.053Z"
+    }
+  },
   "signify-netherlands-b-v/rwl022": {
     "manufacturer": "Signify Netherlands B.V.",
     "model": "RWL022",
