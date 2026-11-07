@@ -44660,7 +44660,11 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfribulbgu10ws345lm",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "IKEA of Sweden",
+      "checked_model": "TRADFRIbulbGU10WS345lm"
+    },
     "endpoint": 1,
     "firmware": "1.0.012",
     "scan_count": 1,
@@ -45412,7 +45416,11 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfribulbgu10ws345lm",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "IKEA of Sweden",
+      "checked_model": "TRADFRIbulbGU10WS345lm"
+    },
     "endpoint": 242,
     "firmware": "1.0.012",
     "scan_count": 1,
@@ -65654,7 +65662,19 @@
   {
     "manufacturer_slug": "lumi",
     "model_slug": "lumi-switch-n1aeu1",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Aqara_WS-EUK03.html",
+        "match_method": "vendor_alias_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "LUMI",
+      "checked_model": "lumi.switch.n1aeu1",
+      "manufacturer": {
+        "url": "https://www.aqara.com/eu/product/smart-wall-switch-h1-with-neutral",
+        "confidence": "high"
+      }
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -66491,7 +66511,19 @@
   {
     "manufacturer_slug": "lumi",
     "model_slug": "lumi-switch-n1aeu1",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Aqara_WS-EUK03.html",
+        "match_method": "vendor_alias_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "LUMI",
+      "checked_model": "lumi.switch.n1aeu1",
+      "manufacturer": {
+        "url": "https://www.aqara.com/eu/product/smart-wall-switch-h1-with-neutral",
+        "confidence": "high"
+      }
+    },
     "endpoint": 21,
     "firmware": null,
     "scan_count": 1,
@@ -66507,7 +66539,19 @@
   {
     "manufacturer_slug": "lumi",
     "model_slug": "lumi-switch-n1aeu1",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Aqara_WS-EUK03.html",
+        "match_method": "vendor_alias_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "LUMI",
+      "checked_model": "lumi.switch.n1aeu1",
+      "manufacturer": {
+        "url": "https://www.aqara.com/eu/product/smart-wall-switch-h1-with-neutral",
+        "confidence": "high"
+      }
+    },
     "endpoint": 31,
     "firmware": null,
     "scan_count": 1,
@@ -66523,7 +66567,19 @@
   {
     "manufacturer_slug": "lumi",
     "model_slug": "lumi-switch-n1aeu1",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Aqara_WS-EUK03.html",
+        "match_method": "vendor_alias_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "LUMI",
+      "checked_model": "lumi.switch.n1aeu1",
+      "manufacturer": {
+        "url": "https://www.aqara.com/eu/product/smart-wall-switch-h1-with-neutral",
+        "confidence": "high"
+      }
+    },
     "endpoint": 41,
     "firmware": null,
     "scan_count": 1,
@@ -66539,7 +66595,19 @@
   {
     "manufacturer_slug": "lumi",
     "model_slug": "lumi-switch-n1aeu1",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Aqara_WS-EUK03.html",
+        "match_method": "vendor_alias_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "LUMI",
+      "checked_model": "lumi.switch.n1aeu1",
+      "manufacturer": {
+        "url": "https://www.aqara.com/eu/product/smart-wall-switch-h1-with-neutral",
+        "confidence": "high"
+      }
+    },
     "endpoint": 242,
     "firmware": null,
     "scan_count": 1,

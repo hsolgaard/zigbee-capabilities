@@ -83,6 +83,17 @@
         }
       },
       "last_reported": "2026-11-07T19:28:09.828Z"
+    },
+    "direct_binding": {
+      "counts": {
+        "works": 1
+      },
+      "by_firmware": {
+        "0x24040006": {
+          "works": 1
+        }
+      },
+      "last_reported": "2026-11-07T19:26:28.282Z"
     }
   },
   "ikea-of-sweden/tradfri-open-close-remote": {
