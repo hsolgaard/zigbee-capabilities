@@ -1,0 +1,29 @@
+{
+  "observations": [],
+  "capabilities": {},
+  "behaviour_reports": [
+    {
+      "kind": "behaviour_report",
+      "schema": 1,
+      "behaviour": "group_binding",
+      "manufacturer": "Signify Netherlands B.V.",
+      "model": "RWL022",
+      "firmware": {
+        "sw_build_id": null,
+        "registry_sw_version": "0x02002c00"
+      },
+      "endpoint": 1,
+      "clusters": [
+        "0x0006",
+        "0x0008"
+      ],
+      "target_count": 2,
+      "result": "works",
+      "card_version": "1.5.2",
+      "provenance": {
+        "submitted_at": "2026-11-07T19:54:37.566Z",
+        "source_issue": 392
+      }
+    }
+  ]
+}
