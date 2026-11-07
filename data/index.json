@@ -71039,8 +71039,8 @@
     },
     "endpoint": 1,
     "firmware": "1.0.5",
-    "scan_count": 1,
-    "last_seen": "2026-11-07T19:02:39.063Z",
+    "scan_count": 2,
+    "last_seen": "2026-11-07T21:53:55.510Z",
     "manufacturer": "Repenic Ltd.",
     "model": "RS-R03AZG",
     "in_clusters": [
@@ -71067,10 +71067,10 @@
             "name": "Reset to factory defaults",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           }
         ],
-        "commands_received_scan_count": 1,
+        "commands_received_scan_count": 2,
         "attributes_confirmed": [
           {
             "id": 0,
@@ -71152,24 +71152,24 @@
             "name": "Identify",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 1,
             "name": "Identify query",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 64,
             "name": "Trigger identify effect",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           }
         ],
-        "commands_received_scan_count": 1,
+        "commands_received_scan_count": 2,
         "attributes_confirmed": [
           {
             "id": 0,
@@ -71191,45 +71191,45 @@
             "name": "Add to group",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 1,
             "name": "View group",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 2,
             "name": "Get group membership",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 3,
             "name": "Remove from group",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 4,
             "name": "Remove from all groups",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 5,
             "name": "Add to group if identifying",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           }
         ],
-        "commands_received_scan_count": 1,
+        "commands_received_scan_count": 2,
         "attributes_confirmed": [
           {
             "id": 0,
@@ -71251,73 +71251,73 @@
             "name": "Add",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 1,
             "name": "View",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 2,
             "name": "Remove",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 3,
             "name": "Remove all",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 4,
             "name": "Store",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 5,
             "name": "Recall",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 6,
             "name": "Get scene membership",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 64,
             "name": "Enhanced add",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 65,
             "name": "Enhanced view",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 66,
             "name": "Copy",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           }
         ],
-        "commands_received_scan_count": 1,
+        "commands_received_scan_count": 2,
         "attributes_confirmed": [
           {
             "id": 0,
@@ -71359,45 +71359,45 @@
             "name": "Off",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 1,
             "name": "On",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 2,
             "name": "Toggle",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 64,
             "name": "Off with effect",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 65,
             "name": "On with recall global scene",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 66,
             "name": "On with timed off",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           }
         ],
-        "commands_received_scan_count": 1,
+        "commands_received_scan_count": 2,
         "attributes_confirmed": [
           {
             "id": 0,
@@ -71548,73 +71548,73 @@
             "name": "scan",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 2,
             "name": "device_info",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 6,
             "name": "identify",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 7,
             "name": "reset_to_factory_new",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 16,
             "name": "network_start",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 18,
             "name": "network_join_router",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 20,
             "name": "network_join_end_device",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 22,
             "name": "network_update",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 65,
             "name": "get_group_identifiers",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           },
           {
             "id": 66,
             "name": "get_endpoint_list",
             "present": true,
             "conflicting": false,
-            "scan_count": 1
+            "scan_count": 2
           }
         ],
-        "commands_received_scan_count": 1,
+        "commands_received_scan_count": 2,
         "attributes_confirmed": [
           {
             "id": 65533,
@@ -71652,8 +71652,8 @@
     },
     "endpoint": 2,
     "firmware": "1.0.5",
-    "scan_count": 1,
-    "last_seen": "2026-11-07T19:02:39.063Z",
+    "scan_count": 2,
+    "last_seen": "2026-11-07T21:53:55.510Z",
     "manufacturer": "Repenic Ltd.",
     "model": "RS-R03AZG",
     "in_clusters": [
