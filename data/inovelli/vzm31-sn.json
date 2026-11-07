@@ -5798,6 +5798,29 @@
         "submitted_at": "2026-11-06T21:11:34.943Z",
         "source_issue": 362
       }
+    },
+    {
+      "kind": "behaviour_report",
+      "schema": 1,
+      "behaviour": "group_binding",
+      "manufacturer": "Inovelli",
+      "model": "VZM31-SN",
+      "firmware": {
+        "sw_build_id": null,
+        "registry_sw_version": "0x01020304"
+      },
+      "endpoint": 2,
+      "clusters": [
+        "0x0006",
+        "0x0008"
+      ],
+      "target_count": 1,
+      "result": "works",
+      "card_version": "1.5.2",
+      "provenance": {
+        "submitted_at": "2026-11-06T22:57:40.306Z",
+        "source_issue": 368
+      }
     }
   ]
 }
