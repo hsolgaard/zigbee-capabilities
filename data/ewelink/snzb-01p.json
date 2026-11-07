@@ -1,0 +1,28 @@
+{
+  "observations": [],
+  "capabilities": {},
+  "behaviour_reports": [
+    {
+      "kind": "behaviour_report",
+      "schema": 1,
+      "behaviour": "group_binding",
+      "manufacturer": "eWeLink",
+      "model": "SNZB-01P",
+      "firmware": {
+        "sw_build_id": null,
+        "registry_sw_version": "0x00002200"
+      },
+      "endpoint": 1,
+      "clusters": [
+        "0x0006"
+      ],
+      "target_count": 2,
+      "result": "stored_ignored",
+      "card_version": "1.5.2",
+      "provenance": {
+        "submitted_at": "2026-11-07T03:25:43.315Z",
+        "source_issue": 372
+      }
+    }
+  ]
+}
