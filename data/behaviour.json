@@ -70,6 +70,21 @@
       "last_reported": "2026-11-01T20:57:23.510Z"
     }
   },
+  "ikea-of-sweden/tradfri-shortcut-button": {
+    "manufacturer": "IKEA of Sweden",
+    "model": "TRADFRI SHORTCUT Button",
+    "direct_binding": {
+      "counts": {
+        "partial": 1
+      },
+      "by_firmware": {
+        "0x24040006": {
+          "partial": 1
+        }
+      },
+      "last_reported": "2026-11-07T20:07:31.775Z"
+    }
+  },
   "inovelli/vzm31-sn": {
     "manufacturer": "Inovelli",
     "model": "VZM31-SN",
