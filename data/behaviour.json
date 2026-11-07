@@ -85,6 +85,21 @@
       "last_reported": "2026-11-01T20:57:23.510Z"
     }
   },
+  "ikea-of-sweden/tradfri-open-close-remote": {
+    "manufacturer": "IKEA of Sweden",
+    "model": "TRADFRI open/close remote",
+    "direct_binding": {
+      "counts": {
+        "stored_ignored": 1
+      },
+      "by_firmware": {
+        "24.4.6": {
+          "stored_ignored": 1
+        }
+      },
+      "last_reported": "2026-11-07T19:54:46.841Z"
+    }
+  },
   "ikea-of-sweden/tradfri-shortcut-button": {
     "manufacturer": "IKEA of Sweden",
     "model": "TRADFRI SHORTCUT Button",
