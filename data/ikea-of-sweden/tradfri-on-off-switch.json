@@ -1,0 +1,29 @@
+{
+  "observations": [],
+  "capabilities": {},
+  "behaviour_reports": [
+    {
+      "kind": "behaviour_report",
+      "schema": 1,
+      "behaviour": "group_binding",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI on/off switch",
+      "firmware": {
+        "sw_build_id": null,
+        "registry_sw_version": "0x24040006"
+      },
+      "endpoint": 1,
+      "clusters": [
+        "0x0006",
+        "0x0008"
+      ],
+      "target_count": 5,
+      "result": "rejected",
+      "card_version": "1.5.2",
+      "provenance": {
+        "submitted_at": "2026-11-07T19:28:09.828Z",
+        "source_issue": 382
+      }
+    }
+  ]
+}
