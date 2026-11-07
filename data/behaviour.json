@@ -84,5 +84,20 @@
       },
       "last_reported": "2026-11-06T22:57:40.306Z"
     }
+  },
+  "signify-netherlands-b-v/rwl022": {
+    "manufacturer": "Signify Netherlands B.V.",
+    "model": "RWL022",
+    "group_binding": {
+      "counts": {
+        "works": 1
+      },
+      "by_firmware": {
+        "0x02002c00": {
+          "works": 1
+        }
+      },
+      "last_reported": "2026-11-07T19:54:37.566Z"
+    }
   }
 }
