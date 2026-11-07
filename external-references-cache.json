@@ -924,7 +924,11 @@
     "https://www.aqara.com/cn/": {
       "title": "Aqara官网-空间智能-Aqara HomeKit",
       "shop": false
+    },
+    "https://www.aqara.com/eu/product/smart-wall-switch-h1-with-neutral": {
+      "title": "Smart Wall Switch H1 EU (With Neutral)",
+      "shop": true
     }
   },
-  "generated_at": "2026-11-07T21:25:29.794Z"
+  "generated_at": "2026-11-07T21:57:45.997Z"
 }
