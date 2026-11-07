@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-26T08:00:59.049Z",
-  "processed": 9,
+  "generated_at": "2026-11-07T14:08:58.733Z",
+  "processed": 15,
   "blakadderMatches": 0,
   "manufacturerLinks": 0,
-  "manualReview": 9,
+  "manualReview": 17,
   "noMatch": 1,
   "deadLinksCleared": 0,
   "ambiguous": [
@@ -20,6 +20,39 @@
           "model": "ZAG001-C15",
           "zigbeemodel": [
             "WG001-Z01"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "data/centralite/motion-sensor-a.json",
+      "manufacturer": "CentraLite",
+      "model": "Motion Sensor-A",
+      "kind": "blakadder_ambiguous",
+      "reason": "Not matched by vendor + model (our manufacturer string is \"CentraLite\"), but Ledvance 4058075209084: Zigbee model \"Motion Sensor-A\" matches exactly; OSRAM AC01353010G: Zigbee model \"Motion Sensor-A\" matches exactly; Sylvania E21266: Zigbee model \"Motion Sensor-A\" matches exactly. Confirm it's the same device.",
+      "candidates": [
+        {
+          "url": "https://zigbee.blakadder.com/Ledvance_4058075209084.html",
+          "vendor": "Ledvance",
+          "model": "4058075209084",
+          "zigbeemodel": [
+            "Motion Sensor-A"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/OSRAM_AC01353010G.html",
+          "vendor": "OSRAM",
+          "model": "AC01353010G",
+          "zigbeemodel": [
+            "Motion Sensor-A"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Sylvania_E21266.html",
+          "vendor": "Sylvania",
+          "model": "E21266",
+          "zigbeemodel": [
+            "Motion Sensor-A"
           ]
         }
       ]
@@ -78,6 +111,117 @@
       ]
     },
     {
+      "file": "data/nordtronic-a-s/boxdimz-98425031.json",
+      "manufacturer": "Nordtronic A/S",
+      "model": "BoxDIMZ 98425031",
+      "kind": "blakadder_ambiguous",
+      "reason": "Not matched by vendor + model (our manufacturer string is \"Nordtronic A/S\"), but Nordtronic 98425031: Zigbee model \"BoxDIMZ 98425031\" matches exactly. Confirm it's the same device.",
+      "candidates": [
+        {
+          "url": "https://zigbee.blakadder.com/Nordtronic_98425031.html",
+          "vendor": "Nordtronic",
+          "model": "98425031",
+          "zigbeemodel": [
+            "BoxDIM2 98425031",
+            "98425031",
+            "BoxDIMZ 98425031"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "data/paulmann-lamp/cct-light.json",
+      "manufacturer": "Paulmann lamp",
+      "model": "CCT Light",
+      "kind": "blakadder_ambiguous",
+      "reason": "Not matched by vendor + model (our manufacturer string is \"Paulmann lamp\"), but Paulmann 500.64: Zigbee model \"CCT Light\" matches exactly; Paulmann 50396: Zigbee model \"CCT Light\" matches exactly. Confirm it's the same device.",
+      "candidates": [
+        {
+          "url": "https://zigbee.blakadder.com/Paulmann_50064.html",
+          "vendor": "Paulmann",
+          "model": "500.64",
+          "zigbeemodel": [
+            "CCT light"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Paulmann_50396.html",
+          "vendor": "Paulmann",
+          "model": "50396",
+          "zigbeemodel": [
+            "CCT Light"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "data/shyugj/dimmer-switch-zb3-0.json",
+      "manufacturer": "Shyugj",
+      "model": "Dimmer-Switch-ZB3.0",
+      "kind": "blakadder_ambiguous",
+      "reason": "Not matched by vendor + model (our manufacturer string is \"Shyugj\"), but EcoDim ECO-DIM.07: Zigbee model \"Dimmer-Switch-ZB3.0\" matches exactly; Samotech SM323: Zigbee model \"Dimmer-Switch-ZB3.0\" matches exactly; idinio 0140300: Zigbee model \"Dimmer-Switch-ZB3.0\" matches exactly; iolloi ID-EU20FW09: Zigbee model \"Dimmer-Switch-ZB3.0\" matches exactly; iolloi ID-UK21FW09: Zigbee model \"Dimmer-Switch-ZB3.0\" matches exactly. Confirm it's the same device.",
+      "candidates": [
+        {
+          "url": "https://zigbee.blakadder.com/EcoDim_ECO-DIM.07.html",
+          "vendor": "EcoDim",
+          "model": "ECO-DIM.07",
+          "zigbeemodel": [
+            "Dimmer-Switch-ZB3.0",
+            "EcoDim-Zigbee 3.0"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Samotech_SM323.html",
+          "vendor": "Samotech",
+          "model": "SM323",
+          "zigbeemodel": [
+            "Dimmer-Switch-ZB3.0"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/idinio_0140300.html",
+          "vendor": "idinio",
+          "model": "0140300",
+          "zigbeemodel": [
+            "Dimmer-Switch-ZB3.0"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/iolloi_ID-EU20FW09.html",
+          "vendor": "iolloi",
+          "model": "ID-EU20FW09",
+          "zigbeemodel": [
+            "Dimmer-Switch-ZB3.0"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/iolloi_ID-UK21FW09.html",
+          "vendor": "iolloi",
+          "model": "ID-UK21FW09",
+          "zigbeemodel": [
+            "Dimmer-Switch-ZB3.0"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "data/sinope-technologies/sp2600zb.json",
+      "manufacturer": "Sinope Technologies",
+      "model": "SP2600ZB",
+      "kind": "blakadder_ambiguous",
+      "reason": "Not matched by vendor + model (our manufacturer string is \"Sinope Technologies\"), but Sinope SP2600ZB: Zigbee model \"SP2600ZB\" matches exactly. Confirm it's the same device.",
+      "candidates": [
+        {
+          "url": "https://zigbee.blakadder.com/Sinope_SP2600ZB.html",
+          "vendor": "Sinope",
+          "model": "SP2600ZB",
+          "zigbeemodel": [
+            "SP2600ZB"
+          ]
+        }
+      ]
+    },
+    {
       "file": "data/sonoff/dongle-e-r.json",
       "manufacturer": "SONOFF",
       "model": "DONGLE-E_R",
@@ -89,6 +233,32 @@
           "vendor": "Sonoff",
           "model": "ZBDongle-E",
           "zigbeemodel": []
+        }
+      ]
+    },
+    {
+      "file": "data/sonoff/snzb-03pr2.json",
+      "manufacturer": "SONOFF",
+      "model": "SNZB-03PR2",
+      "kind": "blakadder_ambiguous",
+      "reason": "Vendor \"SONOFF\" matches, but model \"SNZB-03PR2\" only loosely resembles Blakadder's model string for these page(s).",
+      "candidates": [
+        {
+          "url": "https://zigbee.blakadder.com/Sonoff_SNZB-03.html",
+          "vendor": "Sonoff",
+          "model": "SNZB-03",
+          "zigbeemodel": [
+            "MS01",
+            "MSO1"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Sonoff_SNZB-03P.html",
+          "vendor": "Sonoff",
+          "model": "SNZB-03P",
+          "zigbeemodel": [
+            "SNZB-03P"
+          ]
         }
       ]
     },
@@ -1166,6 +1336,15 @@
       ]
     },
     {
+      "file": "data/ikea-of-sweden/tradfri-bulb-e26-cws-800lm.json",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI bulb E26 CWS 800lm",
+      "kind": "manufacturer_link_only",
+      "blakadderUrl": "https://zigbee.blakadder.com/Ikea_LED1924G9.html",
+      "guessedUrl": "https://www.ikea.com",
+      "reason": "Blakadder match is high-confidence (https://zigbee.blakadder.com/Ikea_LED1924G9.html); pre-filled manufacturer link \"https://www.ikea.com\" on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
+    },
+    {
       "file": "data/sonoff/dongle-e-r.json",
       "manufacturer": "SONOFF",
       "model": "DONGLE-E_R",
@@ -1175,6 +1354,17 @@
       "method": "shop search on sonoff.tech",
       "evidence": "page mentions \"zbdonglee\"",
       "reason": "Found by vendor search (shop search on sonoff.tech; page mentions \"zbdonglee\"); pre-filled as this device's manufacturer link on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
+    },
+    {
+      "file": "data/sonoff/snzb-03pr2.json",
+      "manufacturer": "SONOFF",
+      "model": "SNZB-03PR2",
+      "kind": "manufacturer_link_search",
+      "guessedUrl": "https://sonoff.tech/en-us/products/sonoff-senseguard-motion-gen2-zigbee-motion-sensor-snzb-03pr2",
+      "title": "SONOFF SenseGuard Motion Gen2 Zigbee Motion Sensor - SNZB-03PR2",
+      "method": "shop search on sonoff.tech",
+      "evidence": "page mentions \"snzb03pr2\"",
+      "reason": "Found by vendor search (shop search on sonoff.tech; page mentions \"snzb03pr2\"); pre-filled as this device's manufacturer link on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
     },
     {
       "file": "data/ikea-of-sweden/badring-water-leakage-sensor.json",
@@ -1338,6 +1528,31 @@
       "kind": "blakadder_submission"
     },
     {
+      "file": "data/18ejxno0/moes-2-gang.json",
+      "manufacturer": "18ejxno0",
+      "model": "Moes-2-gang",
+      "fields": {
+        "manufacturer": "18ejxno0",
+        "deviceName": "",
+        "model": "Moes-2-gang",
+        "zigbeeId": "Moes-2-gang",
+        "category": "",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"18ejxno0\", model \"Moes-2-gang\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "device name",
+        "category",
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
       "file": "data/46t1rvdu/whd02-aubess.json",
       "manufacturer": "46t1rvdu",
       "model": "WHD02-Aubess",
@@ -1429,6 +1644,30 @@
         ],
         "description": "",
         "notes": "Zigbee signature from a ZHA scan: manufacturer \"Aqara\", model \"lumi.light.agl001\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/aqara/lumi-light-agl003.json",
+      "manufacturer": "Aqara",
+      "model": "lumi.light.agl003",
+      "fields": {
+        "manufacturer": "Aqara",
+        "deviceName": "E27 RGB led bulb",
+        "model": "T2_E27",
+        "zigbeeId": "lumi.light.agl003",
+        "category": "light",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"Aqara\", model \"lumi.light.agl003\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
       },
       "missing": [
         "vendor (where to buy) link"
@@ -1583,6 +1822,30 @@
       "kind": "blakadder_submission_incomplete"
     },
     {
+      "file": "data/ikea-of-sweden/tradfri-bulb-e26-cws-globe-800lm.json",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI bulb E26 CWS globe 800lm",
+      "fields": {
+        "manufacturer": "IKEA",
+        "deviceName": "TRADFRI bulb E26/E27, color/white spectrum, globe, opal, 800/806/810 lm",
+        "model": "LED2109G6",
+        "zigbeeId": "TRADFRI bulb E26 CWS globe 800lm",
+        "category": "light",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"IKEA of Sweden\", model \"TRADFRI bulb E26 CWS globe 800lm\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
       "file": "data/ikea-of-sweden/tradfri-bulb-e27-cws-globe-806lm.json",
       "manufacturer": "IKEA of Sweden",
       "model": "TRADFRI bulb E27 CWS globe 806lm",
@@ -1607,6 +1870,30 @@
       "kind": "blakadder_submission_incomplete"
     },
     {
+      "file": "data/innr/bb-282-c.json",
+      "manufacturer": "innr",
+      "model": "BB 282 C",
+      "fields": {
+        "manufacturer": "Innr",
+        "deviceName": "B22 bulb RGBW",
+        "model": "BB 282 C",
+        "zigbeeId": "BB 282 C",
+        "category": "light",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"innr\", model \"BB 282 C\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
       "file": "data/innr/bb-287-c.json",
       "manufacturer": "innr",
       "model": "BB 287 C",
@@ -1624,6 +1911,30 @@
         ],
         "description": "",
         "notes": "Zigbee signature from a ZHA scan: manufacturer \"innr\", model \"BB 287 C\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/innr/fl-230-c.json",
+      "manufacturer": "innr",
+      "model": "FL 230 C",
+      "fields": {
+        "manufacturer": "Innr",
+        "deviceName": "Lightstrip colour, 3m",
+        "model": "FL 230 C",
+        "zigbeeId": "FL 230 C",
+        "category": "light",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"innr\", model \"FL 230 C\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
       },
       "missing": [
         "vendor (where to buy) link"
@@ -1679,6 +1990,54 @@
       "kind": "blakadder_submission_incomplete"
     },
     {
+      "file": "data/osram/cla60-rgbw-osram.json",
+      "manufacturer": "OSRAM",
+      "model": "CLA60 RGBW OSRAM",
+      "fields": {
+        "manufacturer": "OSRAM",
+        "deviceName": "LIGHTIFY LED CLA60 E27 RGBW",
+        "model": "AC03645",
+        "zigbeeId": "CLA60 RGBW OSRAM",
+        "category": "light",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"OSRAM\", model \"CLA60 RGBW OSRAM\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/paulmann-lamp/dimmable-light.json",
+      "manufacturer": "Paulmann lamp",
+      "model": "Dimmable Light",
+      "fields": {
+        "manufacturer": "Paulmann",
+        "deviceName": "White E27 LED bulb, dimmable",
+        "model": "501.22",
+        "zigbeeId": "Dimmable Light",
+        "category": "light",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"Paulmann lamp\", model \"Dimmable Light\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
       "file": "data/pf7swkqp/ts0003-sb.json",
       "manufacturer": "pf7swkqp",
       "model": "TS0003-SB",
@@ -1699,6 +2058,30 @@
       "missing": [
         "device name",
         "category",
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/schneider-electric/w599501.json",
+      "manufacturer": "Schneider Electric",
+      "model": "W599501",
+      "fields": {
+        "manufacturer": "Schneider Electric",
+        "deviceName": "Wiser smoke alarm",
+        "model": "W599001",
+        "zigbeeId": "W599501",
+        "category": "sensor",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"Schneider Electric\", model \"W599501\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
         "vendor (where to buy) link"
       ],
       "kind": "blakadder_submission_incomplete"
