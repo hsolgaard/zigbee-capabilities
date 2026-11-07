@@ -74108,7 +74108,19 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "s40lite",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Sonoff_S40ZBTPB_Lite.html",
+        "match_method": "vendor_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "SONOFF",
+      "checked_model": "S40LITE",
+      "manufacturer": {
+        "url": "https://itead.cc/product/sonoff-zigbee-smart-plug-iplug-lite/",
+        "confidence": "high"
+      }
+    },
     "endpoint": 1,
     "firmware": "1.1.0",
     "scan_count": 1,
@@ -74336,7 +74348,19 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "s40lite",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Sonoff_S40ZBTPB_Lite.html",
+        "match_method": "vendor_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "SONOFF",
+      "checked_model": "S40LITE",
+      "manufacturer": {
+        "url": "https://itead.cc/product/sonoff-zigbee-smart-plug-iplug-lite/",
+        "confidence": "high"
+      }
+    },
     "endpoint": 13,
     "firmware": "1.1.0",
     "scan_count": 1,
@@ -74354,7 +74378,19 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "s40lite",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Sonoff_S40ZBTPB_Lite.html",
+        "match_method": "vendor_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "SONOFF",
+      "checked_model": "S40LITE",
+      "manufacturer": {
+        "url": "https://itead.cc/product/sonoff-zigbee-smart-plug-iplug-lite/",
+        "confidence": "high"
+      }
+    },
     "endpoint": 242,
     "firmware": "1.1.0",
     "scan_count": 1,
