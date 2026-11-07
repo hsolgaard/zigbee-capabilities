@@ -635,6 +635,29 @@
         "submitted_at": "2026-11-06T20:02:50.739Z",
         "source_issue": 360
       }
+    },
+    {
+      "kind": "behaviour_report",
+      "schema": 1,
+      "behaviour": "direct_binding",
+      "manufacturer": "IKEA of Sweden",
+      "model": "Remote Control N2",
+      "firmware": {
+        "sw_build_id": null,
+        "registry_sw_version": "0x02040016"
+      },
+      "endpoint": 1,
+      "clusters": [
+        "0x0006",
+        "0x0008"
+      ],
+      "target_count": 2,
+      "result": "works",
+      "card_version": "1.5.2",
+      "provenance": {
+        "submitted_at": "2026-11-07T20:14:04.288Z",
+        "source_issue": 398
+      }
     }
   ]
 }
