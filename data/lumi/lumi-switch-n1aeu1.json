@@ -1,0 +1,1788 @@
+{
+  "observations": [
+    {
+      "manufacturer": "LUMI",
+      "model": "lumi.switch.n1aeu1",
+      "identity": {
+        "sw_build_id": null,
+        "hw_version": null,
+        "date_code": null
+      },
+      "endpoints": [
+        {
+          "endpoint": {
+            "id": 1,
+            "profile": "0x0104",
+            "device_type": "0x0000",
+            "in_clusters": [
+              "0x0000",
+              "0x0002",
+              "0x0003",
+              "0x0004",
+              "0x0005",
+              "0x0006",
+              "0x0012",
+              "0x0702",
+              "0x0b04",
+              "0xfcc0"
+            ],
+            "out_clusters": [
+              "0x000a",
+              "0x0019"
+            ]
+          },
+          "scanned": true,
+          "clusters": {
+            "0x0000": {
+              "name": "BasicCluster",
+              "commands_received": [
+                {
+                  "id": 0,
+                  "name": "Reset to factory defaults",
+                  "present": true
+                }
+              ],
+              "commands_received_confirmed": true,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "zcl_version",
+                  "access": "READ"
+                },
+                {
+                  "id": 1,
+                  "name": "app_version",
+                  "access": "READ"
+                },
+                {
+                  "id": 2,
+                  "name": "stack_version",
+                  "access": "READ"
+                },
+                {
+                  "id": 3,
+                  "name": "hw_version",
+                  "access": "READ"
+                },
+                {
+                  "id": 4,
+                  "name": "manufacturer",
+                  "access": "READ"
+                },
+                {
+                  "id": 5,
+                  "name": "model",
+                  "access": "READ"
+                },
+                {
+                  "id": 6,
+                  "name": "date_code",
+                  "access": "READ"
+                },
+                {
+                  "id": 7,
+                  "name": "power_source",
+                  "access": "READ"
+                },
+                {
+                  "id": 13,
+                  "name": "serial_number",
+                  "access": "READ"
+                },
+                {
+                  "id": 65532,
+                  "name": "65532",
+                  "access": "READ"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ"
+                }
+              ]
+            },
+            "0x0002": {
+              "name": "Device Temperature",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "current_temperature",
+                  "access": "READ"
+                },
+                {
+                  "id": 16,
+                  "name": "dev_temp_alarm_mask",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 18,
+                  "name": "high_temp_thres",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 20,
+                  "name": "high_temp_dwell_trip_point",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 65532,
+                  "name": "65532",
+                  "access": "READ"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ"
+                }
+              ]
+            },
+            "0x0003": {
+              "name": "Identify",
+              "commands_received": [
+                {
+                  "id": 0,
+                  "name": "Identify",
+                  "present": true
+                },
+                {
+                  "id": 1,
+                  "name": "Identify query",
+                  "present": true
+                },
+                {
+                  "id": 64,
+                  "name": "Trigger identify effect",
+                  "present": false
+                }
+              ],
+              "commands_received_confirmed": true,
+              "commands_generated": [
+                {
+                  "id": 0,
+                  "name": "identify_query_response"
+                }
+              ],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "identify_time",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 65532,
+                  "name": "65532",
+                  "access": "READ"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ"
+                }
+              ]
+            },
+            "0x0004": {
+              "name": "Groups",
+              "commands_received": [
+                {
+                  "id": 0,
+                  "name": "Add to group",
+                  "present": true
+                },
+                {
+                  "id": 1,
+                  "name": "View group",
+                  "present": true
+                },
+                {
+                  "id": 2,
+                  "name": "Get group membership",
+                  "present": true
+                },
+                {
+                  "id": 3,
+                  "name": "Remove from group",
+                  "present": true
+                },
+                {
+                  "id": 4,
+                  "name": "Remove from all groups",
+                  "present": true
+                },
+                {
+                  "id": 5,
+                  "name": "Add to group if identifying",
+                  "present": true
+                }
+              ],
+              "commands_received_confirmed": true,
+              "commands_generated": [
+                {
+                  "id": 0,
+                  "name": "add_response"
+                },
+                {
+                  "id": 1,
+                  "name": "view_response"
+                },
+                {
+                  "id": 2,
+                  "name": "get_membership_response"
+                },
+                {
+                  "id": 3,
+                  "name": "remove_response"
+                }
+              ],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "name_support",
+                  "access": "READ"
+                },
+                {
+                  "id": 65532,
+                  "name": "65532",
+                  "access": "READ"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ"
+                }
+              ]
+            },
+            "0x0005": {
+              "name": "Scenes",
+              "commands_received": [
+                {
+                  "id": 0,
+                  "name": "Add",
+                  "present": true
+                },
+                {
+                  "id": 1,
+                  "name": "View",
+                  "present": true
+                },
+                {
+                  "id": 2,
+                  "name": "Remove",
+                  "present": true
+                },
+                {
+                  "id": 3,
+                  "name": "Remove all",
+                  "present": true
+                },
+                {
+                  "id": 4,
+                  "name": "Store",
+                  "present": true
+                },
+                {
+                  "id": 5,
+                  "name": "Recall",
+                  "present": true
+                },
+                {
+                  "id": 6,
+                  "name": "Get scene membership",
+                  "present": true
+                },
+                {
+                  "id": 64,
+                  "name": "Enhanced add",
+                  "present": false
+                },
+                {
+                  "id": 65,
+                  "name": "Enhanced view",
+                  "present": false
+                },
+                {
+                  "id": 66,
+                  "name": "Copy",
+                  "present": false
+                }
+              ],
+              "commands_received_confirmed": true,
+              "commands_generated": [
+                {
+                  "id": 0,
+                  "name": "add_scene_response"
+                },
+                {
+                  "id": 1,
+                  "name": "view_response"
+                },
+                {
+                  "id": 2,
+                  "name": "remove_scene_response"
+                },
+                {
+                  "id": 3,
+                  "name": "remove_all_scenes_response"
+                },
+                {
+                  "id": 4,
+                  "name": "store_scene_response"
+                },
+                {
+                  "id": 6,
+                  "name": "get_scene_membership_response"
+                }
+              ],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "count",
+                  "access": "READ"
+                },
+                {
+                  "id": 1,
+                  "name": "current_scene",
+                  "access": "READ"
+                },
+                {
+                  "id": 2,
+                  "name": "current_group",
+                  "access": "READ"
+                },
+                {
+                  "id": 3,
+                  "name": "scene_valid",
+                  "access": "READ"
+                },
+                {
+                  "id": 4,
+                  "name": "name_support",
+                  "access": "READ"
+                },
+                {
+                  "id": 5,
+                  "name": "last_configured_by",
+                  "access": "READ"
+                },
+                {
+                  "id": 65532,
+                  "name": "65532",
+                  "access": "READ"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ"
+                }
+              ]
+            },
+            "0x0006": {
+              "name": "On/Off",
+              "commands_received": [
+                {
+                  "id": 0,
+                  "name": "Off",
+                  "present": true
+                },
+                {
+                  "id": 1,
+                  "name": "On",
+                  "present": true
+                },
+                {
+                  "id": 2,
+                  "name": "Toggle",
+                  "present": true
+                },
+                {
+                  "id": 64,
+                  "name": "Off with effect",
+                  "present": false
+                },
+                {
+                  "id": 65,
+                  "name": "On with recall global scene",
+                  "present": false
+                },
+                {
+                  "id": 66,
+                  "name": "On with timed off",
+                  "present": false
+                }
+              ],
+              "commands_received_confirmed": true,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "on_off",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 16384,
+                  "name": "global_scene_control",
+                  "access": "READ"
+                },
+                {
+                  "id": 65532,
+                  "name": "65532",
+                  "access": "READ"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ"
+                }
+              ]
+            },
+            "0x0012": {
+              "name": "MultistateInputCluster",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 74,
+                  "name": "number_of_states",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 81,
+                  "name": "out_of_service",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 85,
+                  "name": "present_value",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 111,
+                  "name": "status_flags",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 65532,
+                  "name": "65532",
+                  "access": "READ"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ"
+                }
+              ]
+            },
+            "0x0702": {
+              "name": "MeteringCluster",
+              "commands_received": [
+                {
+                  "id": 0,
+                  "name": "get_profile",
+                  "present": true
+                },
+                {
+                  "id": 1,
+                  "name": "request_mirror_response",
+                  "present": true
+                },
+                {
+                  "id": 2,
+                  "name": "mirror_removed",
+                  "present": true
+                },
+                {
+                  "id": 3,
+                  "name": "request_fast_poll_mode",
+                  "present": true
+                }
+              ],
+              "commands_received_confirmed": true,
+              "commands_generated": [
+                {
+                  "id": 0,
+                  "name": "get_profile_response"
+                },
+                {
+                  "id": 1,
+                  "name": "request_mirror"
+                },
+                {
+                  "id": 3,
+                  "name": "request_fast_poll_mode_response"
+                }
+              ],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "current_summ_delivered",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 512,
+                  "name": "status",
+                  "access": "READ"
+                },
+                {
+                  "id": 768,
+                  "name": "unit_of_measure",
+                  "access": "READ"
+                },
+                {
+                  "id": 769,
+                  "name": "multiplier",
+                  "access": "READ"
+                },
+                {
+                  "id": 770,
+                  "name": "divisor",
+                  "access": "READ"
+                },
+                {
+                  "id": 771,
+                  "name": "summation_formatting",
+                  "access": "READ"
+                },
+                {
+                  "id": 772,
+                  "name": "demand_formatting",
+                  "access": "READ"
+                },
+                {
+                  "id": 774,
+                  "name": "metering_device_type",
+                  "access": "READ"
+                },
+                {
+                  "id": 65533,
+                  "name": "65533",
+                  "access": "READ"
+                }
+              ]
+            },
+            "0x0b04": {
+              "name": "Electrical Measurement",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "measurement_type",
+                  "access": "READ"
+                },
+                {
+                  "id": 1291,
+                  "name": "active_power",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 1540,
+                  "name": "ac_power_multiplier",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 1541,
+                  "name": "ac_power_divisor",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 2048,
+                  "name": "ac_alarms_mask",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 2051,
+                  "name": "ac_active_power_overload",
+                  "access": "READ"
+                },
+                {
+                  "id": 65532,
+                  "name": "65532",
+                  "access": "READ"
+                },
+                {
+                  "id": 65533,
+                  "name": "cluster_revision",
+                  "access": "READ"
+                }
+              ]
+            },
+            "0xfcc0": {
+              "name": "OppleSwitchCluster",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 3,
+                  "name": "3",
+                  "access": "READ"
+                },
+                {
+                  "id": 6,
+                  "name": "6",
+                  "access": "READ"
+                },
+                {
+                  "id": 7,
+                  "name": "7",
+                  "access": "READ"
+                },
+                {
+                  "id": 12,
+                  "name": "12",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 13,
+                  "name": "13",
+                  "access": "WRITE"
+                },
+                {
+                  "id": 14,
+                  "name": "14",
+                  "access": "READ"
+                },
+                {
+                  "id": 128,
+                  "name": "128",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 129,
+                  "name": "129",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 218,
+                  "name": "218",
+                  "access": "WRITE"
+                },
+                {
+                  "id": 219,
+                  "name": "219",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 220,
+                  "name": "220",
+                  "access": "WRITE|REPORT"
+                },
+                {
+                  "id": 221,
+                  "name": "221",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 222,
+                  "name": "222",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 233,
+                  "name": "233",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 234,
+                  "name": "234",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 235,
+                  "name": "235",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 237,
+                  "name": "237",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 238,
+                  "name": "238",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 240,
+                  "name": "reverse_indicator_light",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 243,
+                  "name": "243",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 246,
+                  "name": "246",
+                  "access": "READ|WRITE|REPORT"
+                },
+                {
+                  "id": 250,
+                  "name": "250",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 252,
+                  "name": "252",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 254,
+                  "name": "254",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 255,
+                  "name": "255",
+                  "access": "WRITE|REPORT"
+                },
+                {
+                  "id": 256,
+                  "name": "256",
+                  "access": "REPORT"
+                },
+                {
+                  "id": 512,
+                  "name": "operation_mode",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 513,
+                  "name": "power_outage_memory",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 515,
+                  "name": "do_not_disturb",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 516,
+                  "name": "516",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 517,
+                  "name": "517",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 523,
+                  "name": "523",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 571,
+                  "name": "571",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 574,
+                  "name": "574",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 670,
+                  "name": "670",
+                  "access": "WRITE"
+                },
+                {
+                  "id": 1792,
+                  "name": "1792",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 1793,
+                  "name": "1793",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 1797,
+                  "name": "1797",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 1856,
+                  "name": "1856",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 1920,
+                  "name": "1920",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 1921,
+                  "name": "1921",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 1922,
+                  "name": "1922",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 1923,
+                  "name": "1923",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 1984,
+                  "name": "1984",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 65522,
+                  "name": "65522",
+                  "access": "WRITE|REPORT"
+                },
+                {
+                  "id": 65533,
+                  "name": "65533",
+                  "access": "READ"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "endpoint": {
+            "id": 21,
+            "in_clusters": [
+              "0x000c"
+            ],
+            "out_clusters": []
+          },
+          "scanned": false
+        },
+        {
+          "endpoint": {
+            "id": 31,
+            "in_clusters": [
+              "0x000c"
+            ],
+            "out_clusters": []
+          },
+          "scanned": false
+        },
+        {
+          "endpoint": {
+            "id": 41,
+            "in_clusters": [
+              "0x0012"
+            ],
+            "out_clusters": []
+          },
+          "scanned": false
+        },
+        {
+          "endpoint": {
+            "id": 242,
+            "in_clusters": [],
+            "out_clusters": [
+              "0x0021"
+            ]
+          },
+          "scanned": false
+        }
+      ],
+      "provenance": {
+        "submitted_at": "2026-11-07T20:47:54.146Z",
+        "card_version": "1.5.2",
+        "source_issue": 400
+      }
+    }
+  ],
+  "capabilities": {
+    "1|unknown": {
+      "endpoint": 1,
+      "firmware": null,
+      "scan_count": 1,
+      "last_seen": "2026-11-07T20:47:54.146Z",
+      "manufacturer": "LUMI",
+      "model": "lumi.switch.n1aeu1",
+      "in_clusters": [
+        "0x0000",
+        "0x0002",
+        "0x0003",
+        "0x0004",
+        "0x0005",
+        "0x0006",
+        "0x0012",
+        "0x0702",
+        "0x0b04",
+        "0xfcc0"
+      ],
+      "out_clusters": [
+        "0x000a",
+        "0x0019"
+      ],
+      "clusters": {
+        "0x0000": {
+          "name": "BasicCluster",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Reset to factory defaults",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zcl_version",
+              "access": "READ"
+            },
+            {
+              "id": 1,
+              "name": "app_version",
+              "access": "READ"
+            },
+            {
+              "id": 2,
+              "name": "stack_version",
+              "access": "READ"
+            },
+            {
+              "id": 3,
+              "name": "hw_version",
+              "access": "READ"
+            },
+            {
+              "id": 4,
+              "name": "manufacturer",
+              "access": "READ"
+            },
+            {
+              "id": 5,
+              "name": "model",
+              "access": "READ"
+            },
+            {
+              "id": 6,
+              "name": "date_code",
+              "access": "READ"
+            },
+            {
+              "id": 7,
+              "name": "power_source",
+              "access": "READ"
+            },
+            {
+              "id": 13,
+              "name": "serial_number",
+              "access": "READ"
+            },
+            {
+              "id": 65532,
+              "name": "65532",
+              "access": "READ"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        },
+        "0x0002": {
+          "name": "Device Temperature",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "current_temperature",
+              "access": "READ"
+            },
+            {
+              "id": 16,
+              "name": "dev_temp_alarm_mask",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 18,
+              "name": "high_temp_thres",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 20,
+              "name": "high_temp_dwell_trip_point",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 65532,
+              "name": "65532",
+              "access": "READ"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        },
+        "0x0003": {
+          "name": "Identify",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Identify",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "Identify query",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 64,
+              "name": "Trigger identify effect",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "identify_time",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 65532,
+              "name": "65532",
+              "access": "READ"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        },
+        "0x0004": {
+          "name": "Groups",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Add to group",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "View group",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 2,
+              "name": "Get group membership",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 3,
+              "name": "Remove from group",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 4,
+              "name": "Remove from all groups",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 5,
+              "name": "Add to group if identifying",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "name_support",
+              "access": "READ"
+            },
+            {
+              "id": 65532,
+              "name": "65532",
+              "access": "READ"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        },
+        "0x0005": {
+          "name": "Scenes",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Add",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "View",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 2,
+              "name": "Remove",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 3,
+              "name": "Remove all",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 4,
+              "name": "Store",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 5,
+              "name": "Recall",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 6,
+              "name": "Get scene membership",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 64,
+              "name": "Enhanced add",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 65,
+              "name": "Enhanced view",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 66,
+              "name": "Copy",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "count",
+              "access": "READ"
+            },
+            {
+              "id": 1,
+              "name": "current_scene",
+              "access": "READ"
+            },
+            {
+              "id": 2,
+              "name": "current_group",
+              "access": "READ"
+            },
+            {
+              "id": 3,
+              "name": "scene_valid",
+              "access": "READ"
+            },
+            {
+              "id": 4,
+              "name": "name_support",
+              "access": "READ"
+            },
+            {
+              "id": 5,
+              "name": "last_configured_by",
+              "access": "READ"
+            },
+            {
+              "id": 65532,
+              "name": "65532",
+              "access": "READ"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        },
+        "0x0006": {
+          "name": "On/Off",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Off",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "On",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 2,
+              "name": "Toggle",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 64,
+              "name": "Off with effect",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 65,
+              "name": "On with recall global scene",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 66,
+              "name": "On with timed off",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "on_off",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 16384,
+              "name": "global_scene_control",
+              "access": "READ"
+            },
+            {
+              "id": 65532,
+              "name": "65532",
+              "access": "READ"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        },
+        "0x0012": {
+          "name": "MultistateInputCluster",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 74,
+              "name": "number_of_states",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 81,
+              "name": "out_of_service",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 85,
+              "name": "present_value",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 111,
+              "name": "status_flags",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 65532,
+              "name": "65532",
+              "access": "READ"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        },
+        "0x0702": {
+          "name": "MeteringCluster",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "get_profile",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "request_mirror_response",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 2,
+              "name": "mirror_removed",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 3,
+              "name": "request_fast_poll_mode",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "current_summ_delivered",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 512,
+              "name": "status",
+              "access": "READ"
+            },
+            {
+              "id": 768,
+              "name": "unit_of_measure",
+              "access": "READ"
+            },
+            {
+              "id": 769,
+              "name": "multiplier",
+              "access": "READ"
+            },
+            {
+              "id": 770,
+              "name": "divisor",
+              "access": "READ"
+            },
+            {
+              "id": 771,
+              "name": "summation_formatting",
+              "access": "READ"
+            },
+            {
+              "id": 772,
+              "name": "demand_formatting",
+              "access": "READ"
+            },
+            {
+              "id": 774,
+              "name": "metering_device_type",
+              "access": "READ"
+            },
+            {
+              "id": 65533,
+              "name": "65533",
+              "access": "READ"
+            }
+          ]
+        },
+        "0x0b04": {
+          "name": "Electrical Measurement",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "measurement_type",
+              "access": "READ"
+            },
+            {
+              "id": 1291,
+              "name": "active_power",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1540,
+              "name": "ac_power_multiplier",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 1541,
+              "name": "ac_power_divisor",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 2048,
+              "name": "ac_alarms_mask",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 2051,
+              "name": "ac_active_power_overload",
+              "access": "READ"
+            },
+            {
+              "id": 65532,
+              "name": "65532",
+              "access": "READ"
+            },
+            {
+              "id": 65533,
+              "name": "cluster_revision",
+              "access": "READ"
+            }
+          ]
+        },
+        "0xfcc0": {
+          "name": "OppleSwitchCluster",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 3,
+              "name": "3",
+              "access": "READ"
+            },
+            {
+              "id": 6,
+              "name": "6",
+              "access": "READ"
+            },
+            {
+              "id": 7,
+              "name": "7",
+              "access": "READ"
+            },
+            {
+              "id": 12,
+              "name": "12",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 13,
+              "name": "13",
+              "access": "WRITE"
+            },
+            {
+              "id": 14,
+              "name": "14",
+              "access": "READ"
+            },
+            {
+              "id": 128,
+              "name": "128",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 129,
+              "name": "129",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 218,
+              "name": "218",
+              "access": "WRITE"
+            },
+            {
+              "id": 219,
+              "name": "219",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 220,
+              "name": "220",
+              "access": "WRITE|REPORT"
+            },
+            {
+              "id": 221,
+              "name": "221",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 222,
+              "name": "222",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 233,
+              "name": "233",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 234,
+              "name": "234",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 235,
+              "name": "235",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 237,
+              "name": "237",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 238,
+              "name": "238",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 240,
+              "name": "reverse_indicator_light",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 243,
+              "name": "243",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 246,
+              "name": "246",
+              "access": "READ|WRITE|REPORT"
+            },
+            {
+              "id": 250,
+              "name": "250",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 252,
+              "name": "252",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 254,
+              "name": "254",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 255,
+              "name": "255",
+              "access": "WRITE|REPORT"
+            },
+            {
+              "id": 256,
+              "name": "256",
+              "access": "REPORT"
+            },
+            {
+              "id": 512,
+              "name": "operation_mode",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 513,
+              "name": "power_outage_memory",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 515,
+              "name": "do_not_disturb",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 516,
+              "name": "516",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 517,
+              "name": "517",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 523,
+              "name": "523",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 571,
+              "name": "571",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 574,
+              "name": "574",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 670,
+              "name": "670",
+              "access": "WRITE"
+            },
+            {
+              "id": 1792,
+              "name": "1792",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 1793,
+              "name": "1793",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 1797,
+              "name": "1797",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 1856,
+              "name": "1856",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 1920,
+              "name": "1920",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 1921,
+              "name": "1921",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 1922,
+              "name": "1922",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 1923,
+              "name": "1923",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 1984,
+              "name": "1984",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 65522,
+              "name": "65522",
+              "access": "WRITE|REPORT"
+            },
+            {
+              "id": 65533,
+              "name": "65533",
+              "access": "READ"
+            }
+          ]
+        }
+      }
+    },
+    "21|unknown": {
+      "endpoint": 21,
+      "firmware": null,
+      "scan_count": 1,
+      "last_seen": "2026-11-07T20:47:54.146Z",
+      "manufacturer": "LUMI",
+      "model": "lumi.switch.n1aeu1",
+      "in_clusters": [
+        "0x000c"
+      ],
+      "out_clusters": [],
+      "clusters": {}
+    },
+    "31|unknown": {
+      "endpoint": 31,
+      "firmware": null,
+      "scan_count": 1,
+      "last_seen": "2026-11-07T20:47:54.146Z",
+      "manufacturer": "LUMI",
+      "model": "lumi.switch.n1aeu1",
+      "in_clusters": [
+        "0x000c"
+      ],
+      "out_clusters": [],
+      "clusters": {}
+    },
+    "41|unknown": {
+      "endpoint": 41,
+      "firmware": null,
+      "scan_count": 1,
+      "last_seen": "2026-11-07T20:47:54.146Z",
+      "manufacturer": "LUMI",
+      "model": "lumi.switch.n1aeu1",
+      "in_clusters": [
+        "0x0012"
+      ],
+      "out_clusters": [],
+      "clusters": {}
+    },
+    "242|unknown": {
+      "endpoint": 242,
+      "firmware": null,
+      "scan_count": 1,
+      "last_seen": "2026-11-07T20:47:54.146Z",
+      "manufacturer": "LUMI",
+      "model": "lumi.switch.n1aeu1",
+      "in_clusters": [],
+      "out_clusters": [
+        "0x0021"
+      ],
+      "clusters": {}
+    }
+  }
+}
