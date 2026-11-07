@@ -351,6 +351,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "innr|FL 230 C": {
+      "searched_at": "2026-11-07",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "innr|RB 287 C": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": null,
@@ -892,5 +897,5 @@
       "shop": true
     }
   },
-  "generated_at": "2026-11-07T07:30:09.763Z"
+  "generated_at": "2026-11-07T14:08:25.222Z"
 }
