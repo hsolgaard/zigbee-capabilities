@@ -1662,5 +1662,18 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Aqara_ZNXDD01LM.html",
+      "match_method": "vendor_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "Aqara",
+    "checked_model": "lumi.light.acn003",
+    "manufacturer": {
+      "url": "https://www.aqara.com/cn/",
+      "confidence": "high"
+    }
   }
 }

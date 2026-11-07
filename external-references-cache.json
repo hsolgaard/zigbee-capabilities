@@ -126,6 +126,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "Aqara|lumi.light.acn003": {
+      "searched_at": "2026-11-07",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "Aqara|lumi.light.agl001": {
       "searched_at": "2026-10-26",
       "manufacturer_candidate": null,
@@ -907,5 +912,5 @@
       "shop": true
     }
   },
-  "generated_at": "2026-11-07T19:04:08.056Z"
+  "generated_at": "2026-11-07T21:17:51.294Z"
 }
