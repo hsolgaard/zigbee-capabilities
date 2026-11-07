@@ -1512,5 +1512,10 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "Repenic Ltd.",
+    "checked_model": "RS-R03AZG"
   }
 }

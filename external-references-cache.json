@@ -479,6 +479,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "Repenic Ltd.|RS-R03AZG": {
+      "searched_at": "2026-11-07",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "Schneider Electric|CH2AX/SWITCH/1": {
       "searched_at": "2026-11-02",
       "manufacturer_candidate": null,
@@ -902,5 +907,5 @@
       "shop": true
     }
   },
-  "generated_at": "2026-11-07T14:08:53.304Z"
+  "generated_at": "2026-11-07T19:04:08.056Z"
 }
