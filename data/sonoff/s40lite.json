@@ -511,5 +511,18 @@
       ],
       "clusters": {}
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Sonoff_S40ZBTPB_Lite.html",
+      "match_method": "vendor_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "SONOFF",
+    "checked_model": "S40LITE",
+    "manufacturer": {
+      "url": "https://itead.cc/product/sonoff-zigbee-smart-plug-iplug-lite/",
+      "confidence": "high"
+    }
   }
 }

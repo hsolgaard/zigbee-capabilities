@@ -554,6 +554,17 @@
       },
       "buy_candidate": null
     },
+    "SONOFF|S40LITE": {
+      "searched_at": "2026-11-07",
+      "manufacturer_candidate": {
+        "url": "https://sonoff.tech/en-us/products/sonoff-zigbee-smart-plug-iplug-series-s40-lite",
+        "title": "SONOFF Zigbee Smart Plug| iPlug Series S40 Lite",
+        "shop": true,
+        "evidence": "page mentions \"s40lite\"",
+        "method": "shop search on sonoff.tech"
+      },
+      "buy_candidate": null
+    },
     "SONOFF|S60ZBTPG": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": {
@@ -877,5 +888,5 @@
       "shop": false
     }
   },
-  "generated_at": "2026-11-06T21:36:20.428Z"
+  "generated_at": "2026-11-07T07:26:31.323Z"
 }
