@@ -98,6 +98,17 @@
         }
       },
       "last_reported": "2026-11-07T19:54:46.841Z"
+    },
+    "group_binding": {
+      "counts": {
+        "stored_ignored": 1
+      },
+      "by_firmware": {
+        "24.4.6": {
+          "stored_ignored": 1
+        }
+      },
+      "last_reported": "2026-11-07T19:53:00.522Z"
     }
   },
   "ikea-of-sweden/tradfri-shortcut-button": {
