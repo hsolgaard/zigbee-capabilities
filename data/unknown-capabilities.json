@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T20:47:42.175Z",
+  "generated_at": "2026-11-07T07:26:25.628Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -287,6 +287,16 @@
         {
           "manufacturer": "sengled",
           "model": "E1F-N5E",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id_hex": "0xfca0",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "S40LITE",
           "count": 1
         }
       ]
