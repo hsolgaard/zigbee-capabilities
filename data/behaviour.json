@@ -64,11 +64,11 @@
     "model": "VZM31-SN",
     "group_binding": {
       "counts": {
-        "works": 2
+        "works": 3
       },
       "by_firmware": {
         "0x01020304": {
-          "works": 2
+          "works": 3
         }
       },
       "last_reported": "2026-11-06T22:57:40.306Z"
