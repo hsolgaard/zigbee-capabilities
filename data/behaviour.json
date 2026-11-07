@@ -29,6 +29,21 @@
       "last_reported": "2026-11-03T15:54:57.648Z"
     }
   },
+  "ikea-of-sweden/lumi-sensor-magnet-aq2": {
+    "manufacturer": "IKEA of Sweden",
+    "model": "lumi.sensor_magnet.aq2",
+    "direct_binding": {
+      "counts": {
+        "works": 1
+      },
+      "by_firmware": {
+        "0x24040006": {
+          "works": 1
+        }
+      },
+      "last_reported": "2026-11-07T19:37:18.065Z"
+    }
+  },
   "ikea-of-sweden/remote-control-n2": {
     "manufacturer": "IKEA of Sweden",
     "model": "Remote Control N2",
