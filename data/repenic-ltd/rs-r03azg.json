@@ -2171,5 +2171,29 @@
     "blakadder": null,
     "checked_manufacturer": "Repenic Ltd.",
     "checked_model": "RS-R03AZG"
-  }
+  },
+  "behaviour_reports": [
+    {
+      "kind": "behaviour_report",
+      "schema": 1,
+      "behaviour": "group_binding",
+      "manufacturer": "Repenic Ltd.",
+      "model": "RS-R03AZG",
+      "firmware": {
+        "sw_build_id": null,
+        "registry_sw_version": "0x00000017"
+      },
+      "endpoint": 2,
+      "clusters": [
+        "0x0006"
+      ],
+      "target_count": 2,
+      "result": "works",
+      "card_version": "1.5.2",
+      "provenance": {
+        "submitted_at": "2026-11-07T23:29:30.053Z",
+        "source_issue": 413
+      }
+    }
+  ]
 }
