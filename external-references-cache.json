@@ -336,6 +336,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "IKEA of Sweden|TRADFRIbulbGU10WS345lm": {
+      "searched_at": "2026-11-07",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "IKEA of Sweden|TREDANSEN block-out cellul blind": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": null,
@@ -446,6 +451,11 @@
     },
     "LUMI|lumi.sensor_smoke": {
       "searched_at": "2026-10-25",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "LUMI|lumi.switch.n1aeu1": {
+      "searched_at": "2026-11-07",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -910,7 +920,11 @@
     "https://itead.cc/product/sonoff-zigbee-smart-plug-iplug-lite/": {
       "title": "SONOFF Zigbee Smart Plug| iPlug Series S40 Lite",
       "shop": true
+    },
+    "https://www.aqara.com/cn/": {
+      "title": "Aqara官网-空间智能-Aqara HomeKit",
+      "shop": false
     }
   },
-  "generated_at": "2026-11-07T21:17:51.294Z"
+  "generated_at": "2026-11-07T21:25:29.794Z"
 }

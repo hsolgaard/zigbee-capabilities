@@ -1788,5 +1788,18 @@
       ],
       "clusters": {}
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Aqara_WS-EUK03.html",
+      "match_method": "vendor_alias_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "LUMI",
+    "checked_model": "lumi.switch.n1aeu1",
+    "manufacturer": {
+      "url": "https://www.aqara.com/eu/product/smart-wall-switch-h1-with-neutral",
+      "confidence": "high"
+    }
   }
 }
