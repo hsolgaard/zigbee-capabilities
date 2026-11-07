@@ -1,4 +1,19 @@
 {
+  "ewelink/snzb-01p": {
+    "manufacturer": "eWeLink",
+    "model": "SNZB-01P",
+    "group_binding": {
+      "counts": {
+        "stored_ignored": 1
+      },
+      "by_firmware": {
+        "0x00002200": {
+          "stored_ignored": 1
+        }
+      },
+      "last_reported": "2026-11-07T03:25:43.315Z"
+    }
+  },
   "feibit/fzt56-zrc09fb1-7": {
     "manufacturer": "FEIBIT",
     "model": "FZT56-ZRC09FB1.7",
