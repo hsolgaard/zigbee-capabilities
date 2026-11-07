@@ -85,6 +85,21 @@
       "last_reported": "2026-11-01T20:57:23.510Z"
     }
   },
+  "ikea-of-sweden/tradfri-on-off-switch": {
+    "manufacturer": "IKEA of Sweden",
+    "model": "TRADFRI on/off switch",
+    "group_binding": {
+      "counts": {
+        "rejected": 1
+      },
+      "by_firmware": {
+        "0x24040006": {
+          "rejected": 1
+        }
+      },
+      "last_reported": "2026-11-07T19:28:09.828Z"
+    }
+  },
   "ikea-of-sweden/tradfri-open-close-remote": {
     "manufacturer": "IKEA of Sweden",
     "model": "TRADFRI open/close remote",
