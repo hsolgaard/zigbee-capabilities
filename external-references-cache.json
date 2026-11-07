@@ -331,6 +331,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "IKEA of Sweden|TRADFRIbulbE14WScandleopal470lm": {
+      "searched_at": "2026-11-07",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "IKEA of Sweden|TRADFRIbulbE27WSglobeopal1055lm": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": null,
@@ -930,5 +935,5 @@
       "shop": true
     }
   },
-  "generated_at": "2026-11-07T21:57:45.997Z"
+  "generated_at": "2026-11-07T23:41:11.540Z"
 }
