@@ -23,6 +23,28 @@
         "submitted_at": "2026-11-07T19:54:46.841Z",
         "source_issue": 390
       }
+    },
+    {
+      "kind": "behaviour_report",
+      "schema": 1,
+      "behaviour": "group_binding",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI open/close remote",
+      "firmware": {
+        "sw_build_id": "24.4.6",
+        "registry_sw_version": "0x24040006"
+      },
+      "endpoint": 1,
+      "clusters": [
+        "0x0008"
+      ],
+      "target_count": 5,
+      "result": "stored_ignored",
+      "card_version": "1.5.2",
+      "provenance": {
+        "submitted_at": "2026-11-07T19:53:00.522Z",
+        "source_issue": 388
+      }
     }
   ]
 }
