@@ -43898,7 +43898,19 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfribulbe14wscandleopal470lm",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ikea_LED1949C5.html",
+        "match_method": "vendor_alias_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "IKEA of Sweden",
+      "checked_model": "TRADFRIbulbE14WScandleopal470lm",
+      "manufacturer": {
+        "url": "https://www.ikea.com/gb/en/p/tradfri-led-bulb-e14-470-lumen-wireless-dimmable-white-spectrum-chandelier-opal-white-30517643/",
+        "confidence": "high"
+      }
+    },
     "endpoint": 1,
     "firmware": "1.1.20",
     "scan_count": 1,
@@ -44706,7 +44718,19 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfribulbe14wscandleopal470lm",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ikea_LED1949C5.html",
+        "match_method": "vendor_alias_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "IKEA of Sweden",
+      "checked_model": "TRADFRIbulbE14WScandleopal470lm",
+      "manufacturer": {
+        "url": "https://www.ikea.com/gb/en/p/tradfri-led-bulb-e14-470-lumen-wireless-dimmable-white-spectrum-chandelier-opal-white-30517643/",
+        "confidence": "high"
+      }
+    },
     "endpoint": 242,
     "firmware": "1.1.20",
     "scan_count": 1,
