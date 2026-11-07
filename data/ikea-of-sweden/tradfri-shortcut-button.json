@@ -24,6 +24,29 @@
         "submitted_at": "2026-11-07T20:07:31.775Z",
         "source_issue": 394
       }
+    },
+    {
+      "kind": "behaviour_report",
+      "schema": 1,
+      "behaviour": "group_binding",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI SHORTCUT Button",
+      "firmware": {
+        "sw_build_id": null,
+        "registry_sw_version": "0x24040006"
+      },
+      "endpoint": 1,
+      "clusters": [
+        "0x0006",
+        "0x0008"
+      ],
+      "target_count": 5,
+      "result": "stored_ignored",
+      "card_version": "1.5.2",
+      "provenance": {
+        "submitted_at": "2026-11-07T20:10:41.499Z",
+        "source_issue": 396
+      }
     }
   ]
 }
