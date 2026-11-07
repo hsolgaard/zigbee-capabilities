@@ -68412,7 +68412,11 @@
   {
     "manufacturer_slug": "repenic-ltd",
     "model_slug": "rs-r03azg",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "Repenic Ltd.",
+      "checked_model": "RS-R03AZG"
+    },
     "endpoint": 1,
     "firmware": "1.0.5",
     "scan_count": 1,
@@ -69021,7 +69025,11 @@
   {
     "manufacturer_slug": "repenic-ltd",
     "model_slug": "rs-r03azg",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "Repenic Ltd.",
+      "checked_model": "RS-R03AZG"
+    },
     "endpoint": 2,
     "firmware": "1.0.5",
     "scan_count": 1,
