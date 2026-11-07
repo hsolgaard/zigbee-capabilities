@@ -113,6 +113,17 @@
         }
       },
       "last_reported": "2026-11-07T20:07:31.775Z"
+    },
+    "group_binding": {
+      "counts": {
+        "stored_ignored": 1
+      },
+      "by_firmware": {
+        "0x24040006": {
+          "stored_ignored": 1
+        }
+      },
+      "last_reported": "2026-11-07T20:10:41.499Z"
     }
   },
   "inovelli/vzm31-sn": {
