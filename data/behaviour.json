@@ -11,6 +11,18 @@
           "stored_ignored": 1
         }
       },
+      "by_clusters": {
+        "0x0006": {
+          "counts": {
+            "stored_ignored": 1
+          },
+          "by_firmware": {
+            "0x00002200": {
+              "stored_ignored": 1
+            }
+          }
+        }
+      },
       "last_reported": "2026-11-07T03:25:43.315Z"
     }
   },
@@ -24,6 +36,18 @@
       "by_firmware": {
         "0x00000084": {
           "works": 1
+        }
+      },
+      "by_clusters": {
+        "0x0006,0x0008": {
+          "counts": {
+            "works": 1
+          },
+          "by_firmware": {
+            "0x00000084": {
+              "works": 1
+            }
+          }
         }
       },
       "last_reported": "2026-11-03T15:54:57.648Z"
@@ -41,6 +65,18 @@
           "works": 2
         }
       },
+      "by_clusters": {
+        "0x0006,0x0008": {
+          "counts": {
+            "works": 2
+          },
+          "by_firmware": {
+            "0x00010024": {
+              "works": 2
+            }
+          }
+        }
+      },
       "last_reported": "2026-11-06T20:02:50.739Z"
     },
     "direct_binding": {
@@ -50,6 +86,18 @@
       "by_firmware": {
         "0x02040016": {
           "works": 1
+        }
+      },
+      "by_clusters": {
+        "0x0006,0x0008": {
+          "counts": {
+            "works": 1
+          },
+          "by_firmware": {
+            "0x02040016": {
+              "works": 1
+            }
+          }
         }
       },
       "last_reported": "2026-11-07T20:14:04.288Z"
@@ -67,6 +115,18 @@
           "works": 1
         }
       },
+      "by_clusters": {
+        "0x0006,0x0008": {
+          "counts": {
+            "works": 1
+          },
+          "by_firmware": {
+            "0x01000057": {
+              "works": 1
+            }
+          }
+        }
+      },
       "last_reported": "2026-11-01T20:57:23.510Z"
     }
   },
@@ -82,6 +142,18 @@
           "rejected": 1
         }
       },
+      "by_clusters": {
+        "0x0006,0x0008": {
+          "counts": {
+            "rejected": 1
+          },
+          "by_firmware": {
+            "0x24040006": {
+              "rejected": 1
+            }
+          }
+        }
+      },
       "last_reported": "2026-11-07T19:28:09.828Z"
     },
     "direct_binding": {
@@ -91,6 +163,18 @@
       "by_firmware": {
         "0x24040006": {
           "works": 1
+        }
+      },
+      "by_clusters": {
+        "0x0006,0x0008": {
+          "counts": {
+            "works": 1
+          },
+          "by_firmware": {
+            "0x24040006": {
+              "works": 1
+            }
+          }
         }
       },
       "last_reported": "2026-11-07T19:26:28.282Z"
@@ -108,6 +192,18 @@
           "stored_ignored": 1
         }
       },
+      "by_clusters": {
+        "0x0008": {
+          "counts": {
+            "stored_ignored": 1
+          },
+          "by_firmware": {
+            "24.4.6": {
+              "stored_ignored": 1
+            }
+          }
+        }
+      },
       "last_reported": "2026-11-07T19:54:46.841Z"
     },
     "group_binding": {
@@ -117,6 +213,18 @@
       "by_firmware": {
         "24.4.6": {
           "stored_ignored": 1
+        }
+      },
+      "by_clusters": {
+        "0x0008": {
+          "counts": {
+            "stored_ignored": 1
+          },
+          "by_firmware": {
+            "24.4.6": {
+              "stored_ignored": 1
+            }
+          }
         }
       },
       "last_reported": "2026-11-07T19:53:00.522Z"
@@ -134,6 +242,18 @@
           "partial": 1
         }
       },
+      "by_clusters": {
+        "0x0006,0x0008": {
+          "counts": {
+            "partial": 1
+          },
+          "by_firmware": {
+            "0x24040006": {
+              "partial": 1
+            }
+          }
+        }
+      },
       "last_reported": "2026-11-07T20:07:31.775Z"
     },
     "group_binding": {
@@ -143,6 +263,18 @@
       "by_firmware": {
         "0x24040006": {
           "stored_ignored": 1
+        }
+      },
+      "by_clusters": {
+        "0x0006,0x0008": {
+          "counts": {
+            "stored_ignored": 1
+          },
+          "by_firmware": {
+            "0x24040006": {
+              "stored_ignored": 1
+            }
+          }
         }
       },
       "last_reported": "2026-11-07T20:10:41.499Z"
@@ -160,6 +292,18 @@
           "works": 3
         }
       },
+      "by_clusters": {
+        "0x0006,0x0008": {
+          "counts": {
+            "works": 3
+          },
+          "by_firmware": {
+            "0x01020304": {
+              "works": 3
+            }
+          }
+        }
+      },
       "last_reported": "2026-11-06T22:57:40.306Z"
     }
   },
@@ -175,6 +319,18 @@
           "works": 1
         }
       },
+      "by_clusters": {
+        "0x0006": {
+          "counts": {
+            "works": 1
+          },
+          "by_firmware": {
+            "0x00000017": {
+              "works": 1
+            }
+          }
+        }
+      },
       "last_reported": "2026-11-07T23:29:30.053Z"
     }
   },
@@ -188,6 +344,18 @@
       "by_firmware": {
         "0x02002c00": {
           "works": 1
+        }
+      },
+      "by_clusters": {
+        "0x0006,0x0008": {
+          "counts": {
+            "works": 1
+          },
+          "by_firmware": {
+            "0x02002c00": {
+              "works": 1
+            }
+          }
         }
       },
       "last_reported": "2026-11-07T19:54:37.566Z"
