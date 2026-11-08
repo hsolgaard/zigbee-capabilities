@@ -599,6 +599,17 @@
       },
       "buy_candidate": null
     },
+    "SONOFF|S26R2ZB": {
+      "searched_at": "2026-11-08",
+      "manufacturer_candidate": {
+        "url": "https://sonoff.tech/en-us/products/sonoff-zigbee-bridge-ultra",
+        "title": "SONOFF Zigbee Bridge Ultra - ZBBridge-U",
+        "shop": true,
+        "evidence": "page mentions \"s26r2zb\"",
+        "method": "shop search on sonoff.tech"
+      },
+      "buy_candidate": null
+    },
     "SONOFF|S40LITE": {
       "searched_at": "2026-11-07",
       "manufacturer_candidate": {
@@ -957,5 +968,5 @@
       "shop": true
     }
   },
-  "generated_at": "2026-11-08T19:54:23.694Z"
+  "generated_at": "2026-11-08T19:54:52.316Z"
 }
