@@ -132,6 +132,24 @@ Device answers fill that gap: people who own a device answer a few questions abo
   answer. `scan_linked` says whether a capability scan for the same firmware is in the database.
 - No names, areas or addresses are collected. Like everything here, answers are CC0.
 
+## Network reports
+
+Some remotes stop controlling a light although the binding is still in their table, and removing and re-adding it
+fixes it. One theory: the light's short (network) address changed, and a battery remote, which never hears the light
+announce its new address, keeps sending to the old one. Network reports collect the evidence to prove or disprove
+that across many networks.
+
+- ZHA Bindings Manager (1.10.0+) records every device's short-address changes and the presses where a remote's
+  directly bound light didn't follow. When addresses change, the card offers to share an anonymised report, which
+  the user reviews and submits as a `[Network Report]` issue.
+- A report lists each device's manufacturer, model, firmware, power source and role, how many times its address
+  changed (and how many hours into the recording), which remote/light pairs missed presses, and whether the light's
+  address had changed since the last press that worked. Devices are numbered (d1, d2…): no IEEE or network
+  addresses, names, areas or times of day. The coordinator's make, model and firmware are included.
+- Each report is kept as `data/network-reports/issue-<n>.json`. The index rebuild summarises them in
+  `data/network-reports.json`: address changes per coordinator and firmware, per device model and firmware, and
+  missed presses per remote model, including how many came after the light's address changed.
+
 ## Zigbee2MQTT model map
 
 `data/z2m-models.json` says which Zigbee2MQTT product code each device belongs to, generated weekly from Zigbee2MQTT's
