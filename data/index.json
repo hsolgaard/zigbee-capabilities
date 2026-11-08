@@ -29096,7 +29096,11 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E26 CWS 800lm"
+      "checked_model": "TRADFRI bulb E26 CWS 800lm",
+      "manufacturer": {
+        "url": "https://www.ikea.com",
+        "confidence": "high"
+      }
     },
     "endpoint": 1,
     "firmware": "1.0.021",
@@ -30218,7 +30222,11 @@
         "confidence": "high"
       },
       "checked_manufacturer": "IKEA of Sweden",
-      "checked_model": "TRADFRI bulb E26 CWS 800lm"
+      "checked_model": "TRADFRI bulb E26 CWS 800lm",
+      "manufacturer": {
+        "url": "https://www.ikea.com",
+        "confidence": "high"
+      }
     },
     "endpoint": 242,
     "firmware": "1.0.021",
