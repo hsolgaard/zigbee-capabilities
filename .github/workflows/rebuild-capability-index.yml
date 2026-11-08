@@ -374,8 +374,9 @@ jobs:
             const index = [];
             // data/behaviour.json — community behaviour reports (e.g. "does
             // this remote use group bindings?") summarised per device, keyed
-            // "<manufacturer_slug>/<model_slug>", with counts per result and
-            // per firmware. Read by ZHA Bindings Manager's group setup flow.
+            // "<manufacturer_slug>/<model_slug>", with counts per result, per
+            // firmware and per set of clusters bound. Read by ZHA Bindings
+            // Manager's "Set up what this controls" flow.
             const behaviourDoc = {};
             const allUnresolvedClusters = [];
             const allUnresolvedAttrs = [];
@@ -436,11 +437,24 @@ jobs:
                   if (!r || !r.behaviour || !r.result) return;
                   const key = `${manufacturerSlug}/${modelSlug}`;
                   const dev = (behaviourDoc[key] = behaviourDoc[key] || { manufacturer: r.manufacturer, model: r.model });
-                  const b = (dev[r.behaviour] = dev[r.behaviour] || { counts: {}, by_firmware: {}, last_reported: null });
+                  const b = (dev[r.behaviour] = dev[r.behaviour] || { counts: {}, by_firmware: {}, by_clusters: {}, last_reported: null });
                   b.counts[r.result] = (b.counts[r.result] || 0) + 1;
                   const fw = (r.firmware && (r.firmware.sw_build_id || r.firmware.registry_sw_version)) || "unknown";
                   b.by_firmware[fw] = b.by_firmware[fw] || {};
                   b.by_firmware[fw][r.result] = (b.by_firmware[fw][r.result] || 0) + 1;
+                  // The same counts per set of clusters the report bound
+                  // (e.g. "0x0006,0x0008"), so a report about Level Control
+                  // to lights doesn't count against using the same remote
+                  // with a blind (Window Covering). Each report sits in
+                  // exactly one set, so the card can add sets up without
+                  // counting a report twice. zigbee-capabilities#387.
+                  const clusterKey =
+                    [...new Set((Array.isArray(r.clusters) ? r.clusters : []).map((c) => String(c).toLowerCase()))].sort().join(",") ||
+                    "unknown";
+                  const bc = (b.by_clusters[clusterKey] = b.by_clusters[clusterKey] || { counts: {}, by_firmware: {} });
+                  bc.counts[r.result] = (bc.counts[r.result] || 0) + 1;
+                  bc.by_firmware[fw] = bc.by_firmware[fw] || {};
+                  bc.by_firmware[fw][r.result] = (bc.by_firmware[fw][r.result] || 0) + 1;
                   const at = r.provenance && r.provenance.submitted_at;
                   if (at && (!b.last_reported || at > b.last_reported)) b.last_reported = at;
                 });
