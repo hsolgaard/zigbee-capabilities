@@ -80384,7 +80384,19 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "s26r2zb",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Sonoff_S26R2ZB.html",
+        "match_method": "vendor_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "SONOFF",
+      "checked_model": "S26R2ZB",
+      "manufacturer": {
+        "url": "https://sonoff.tech/product/smart-plug/s26r2zb/",
+        "confidence": "high"
+      }
+    },
     "endpoint": 1,
     "firmware": "2.0.0",
     "scan_count": 1,
@@ -80605,7 +80617,19 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "s26r2zb",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Sonoff_S26R2ZB.html",
+        "match_method": "vendor_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "SONOFF",
+      "checked_model": "S26R2ZB",
+      "manufacturer": {
+        "url": "https://sonoff.tech/product/smart-plug/s26r2zb/",
+        "confidence": "high"
+      }
+    },
     "endpoint": 13,
     "firmware": "2.0.0",
     "scan_count": 1,
@@ -80623,7 +80647,19 @@
   {
     "manufacturer_slug": "sonoff",
     "model_slug": "s26r2zb",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Sonoff_S26R2ZB.html",
+        "match_method": "vendor_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "SONOFF",
+      "checked_model": "S26R2ZB",
+      "manufacturer": {
+        "url": "https://sonoff.tech/product/smart-plug/s26r2zb/",
+        "confidence": "high"
+      }
+    },
     "endpoint": 242,
     "firmware": "2.0.0",
     "scan_count": 1,
