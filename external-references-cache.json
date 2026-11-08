@@ -942,7 +942,15 @@
     "https://www.ikea.com/gb/en/p/tradfri-led-bulb-e14-470-lumen-wireless-dimmable-white-spectrum-chandelier-opal-white-30517643/": {
       "title": "Products - Discover Our Full Range Of Furniture And Homeware",
       "shop": true
+    },
+    "https://www.ikea.com": {
+      "title": "Hej! Welcome to IKEA Global",
+      "shop": false
+    },
+    "https://www.ikea.com/cz/en/p/tradfri-led-bulb-e27-470-lumen-wireless-dimmable-white-spectrum-tube-shaped-white-frosted-glass-90461916/": {
+      "title": "TRÅDFRI series",
+      "shop": true
     }
   },
-  "generated_at": "2026-11-08T00:29:36.828Z"
+  "generated_at": "2026-11-08T09:23:47.012Z"
 }
