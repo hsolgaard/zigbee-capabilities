@@ -729,5 +729,40 @@
         "source_issue": 323
       }
     }
+  ],
+  "device_answers": [
+    {
+      "kind": "device_answers",
+      "schema": 1,
+      "questions_version": 1,
+      "manufacturer": "IKEA of Sweden",
+      "model": "RODRET wireless dimmer",
+      "firmware": {
+        "registry_sw_version": "0x01000057"
+      },
+      "device_type": "remote",
+      "use": "control_lights",
+      "answers": {
+        "direct_control": "yes",
+        "press_sends": "on_and_off",
+        "needed_setting": "no",
+        "presses_arrive": "always",
+        "hold_to_dim": "works",
+        "keeps_bindings": "not_seen",
+        "stays_connected": "always",
+        "routers": "not_sure"
+      },
+      "rating": 5,
+      "context": {
+        "system": "zha",
+        "coordinator": "silabs",
+        "owned_for": "lt_year"
+      },
+      "card_version": "1.9.0b1",
+      "provenance": {
+        "submitted_at": "2026-11-08T16:58:59.720Z",
+        "source_issue": 418
+      }
+    }
   ]
 }
