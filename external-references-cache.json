@@ -146,6 +146,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "BSEED|EC-GL86ZPCS21": {
+      "searched_at": "2026-11-08",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "CentraLite|Motion Sensor-A": {
       "searched_at": "2026-11-06",
       "manufacturer_candidate": null,
@@ -952,5 +957,5 @@
       "shop": true
     }
   },
-  "generated_at": "2026-11-08T09:23:47.012Z"
+  "generated_at": "2026-11-08T19:54:23.694Z"
 }
