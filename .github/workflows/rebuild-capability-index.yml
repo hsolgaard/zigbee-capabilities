@@ -72,6 +72,8 @@ jobs:
               for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
                 const full = path.join(dir, entry.name);
                 if (entry.isDirectory()) {
+                  // Network reports aren't device files (summarised below).
+                  if (full === path.join("data", "network-reports")) continue;
                   out = out.concat(walkDataFiles(full));
                 } else if (
                   entry.isFile() &&
@@ -80,6 +82,7 @@ jobs:
                   full !== path.join("data", "behaviour.json") &&
                   full !== path.join("data", "answers.json") &&
                   full !== path.join("data", "questions.json") &&
+                  full !== path.join("data", "network-reports.json") &&
                   full !== path.join("data", "z2m-models.json")
                 ) {
                   out.push(full);
@@ -522,7 +525,23 @@ jobs:
             const answersChanged = prevAnswers !== nextAnswers;
             if (answersChanged) fs.writeFileSync("data/answers.json", nextAnswers);
 
-            if (changedFiles === 0 && !indexChanged && !unknownChanged && !behaviourChanged && !answersChanged) {
+            const reportsLib = require(path.join(process.env.GITHUB_WORKSPACE, ".github", "scripts", "network-reports.cjs"));
+            const reportFiles = fs.existsSync("data/network-reports")
+              ? fs.readdirSync("data/network-reports").filter((f) => f.endsWith(".json")).sort()
+              : [];
+            const reports = reportFiles.flatMap((f) => {
+              try {
+                return [JSON.parse(fs.readFileSync(path.join("data/network-reports", f), "utf8"))];
+              } catch (e) {
+                return [];
+              }
+            });
+            const nextReports = JSON.stringify(reportsLib.summarise(reports), null, 2) + "\n";
+            const prevReports = fs.existsSync("data/network-reports.json") ? fs.readFileSync("data/network-reports.json", "utf8") : null;
+            const reportsChanged = reportFiles.length > 0 && prevReports !== nextReports;
+            if (reportsChanged) fs.writeFileSync("data/network-reports.json", nextReports);
+
+            if (changedFiles === 0 && !indexChanged && !unknownChanged && !behaviourChanged && !answersChanged && !reportsChanged) {
               console.log(`Nothing to rebuild — every file's capabilities cache, data/index.json, and data/unknown-capabilities.json were already up to date (${index.length} records).`);
               return;
             }
@@ -537,7 +556,7 @@ jobs:
             await exec.exec("git", [
               "commit",
               "-m",
-              `Rebuild capability index (${index.length} records, ${changedFiles} file(s) recomputed${unknownChanged ? ", unknown-capabilities.json updated" : ""}${behaviourChanged ? ", behaviour.json updated" : ""}${answersChanged ? ", answers.json updated" : ""})`,
+              `Rebuild capability index (${index.length} records, ${changedFiles} file(s) recomputed${unknownChanged ? ", unknown-capabilities.json updated" : ""}${behaviourChanged ? ", behaviour.json updated" : ""}${answersChanged ? ", answers.json updated" : ""}${reportsChanged ? ", network-reports.json updated" : ""})`,
             ]);
             await exec.exec("git", ["push", "origin", "HEAD:main"]);
             console.log(`Committed: ${index.length} records in data/index.json, ${changedFiles} file(s) recomputed, ${unknownDoc.unresolved_clusters.length} unresolved cluster(s) and ${unknownDoc.unresolved_attributes.length} unresolved attribute(s) tracked.`);
