@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-07T23:41:16.771Z",
+  "generated_at": "2026-11-08T19:54:57.938Z",
   "processed": 15,
   "blakadderMatches": 1,
   "manufacturerLinks": 1,
-  "manualReview": 17,
+  "manualReview": 16,
   "noMatch": 0,
   "deadLinksCleared": 0,
   "ambiguous": [
@@ -1336,15 +1336,6 @@
       ]
     },
     {
-      "file": "data/ikea-of-sweden/tradfri-bulb-e26-cws-800lm.json",
-      "manufacturer": "IKEA of Sweden",
-      "model": "TRADFRI bulb E26 CWS 800lm",
-      "kind": "manufacturer_link_only",
-      "blakadderUrl": "https://zigbee.blakadder.com/Ikea_LED1924G9.html",
-      "guessedUrl": "https://www.ikea.com",
-      "reason": "Blakadder match is high-confidence (https://zigbee.blakadder.com/Ikea_LED1924G9.html); pre-filled manufacturer link \"https://www.ikea.com\" on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
-    },
-    {
       "file": "data/sonoff/dongle-e-r.json",
       "manufacturer": "SONOFF",
       "model": "DONGLE-E_R",
@@ -1691,6 +1682,31 @@
         ],
         "description": "",
         "notes": "Zigbee signature from a ZHA scan: manufacturer \"AwoX\", model \"TLSR82xx\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "device name",
+        "category",
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/bseed/ec-gl86zpcs21.json",
+      "manufacturer": "BSEED",
+      "model": "EC-GL86ZPCS21",
+      "fields": {
+        "manufacturer": "BSEED",
+        "deviceName": "",
+        "model": "EC-GL86ZPCS21",
+        "zigbeeId": "EC-GL86ZPCS21",
+        "category": "",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"BSEED\", model \"EC-GL86ZPCS21\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
       },
       "missing": [
         "device name",
