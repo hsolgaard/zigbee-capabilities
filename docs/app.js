@@ -24,6 +24,13 @@ import {
   CAPABILITY_ROLE_EXPLANATION,
 } from "./capexplorer.js";
 import { deviceImageUrl } from "./capexplorer-constants.js";
+import { fetchQuestions, fetchAnswersDoc, summaryLines, answerCountsText, deviceKey, ISSUE_FORM_URL } from "./device-answers.js";
+
+// Device answers (data/questions.json + data/answers.json): how a device
+// behaves in real use, per firmware and use. Loaded after the index and
+// shown read-only on each device card; never part of the confidence rating.
+let QUESTIONS = null;
+let ANSWERS = {};
 
 function escapeHtml(s) {
   return String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({
@@ -137,6 +144,13 @@ async function init() {
     if (advanced) advanced.open = true;
   }
   buildCompare();
+  Promise.all([fetchQuestions(), fetchAnswersDoc()])
+    .then(([q, a]) => {
+      QUESTIONS = q;
+      ANSWERS = a || {};
+      runSearch();
+    })
+    .catch(() => {}); // answers are extra: the page works without them
   renderUnknowns(); // fire-and-forget — its own small section, shouldn't block the rest of the page
 }
 
@@ -469,6 +483,7 @@ function runSearch() {
           ${deviceOverviewHtml(r.entries)}
           ${externalReferencesHtml(r.references, r.manufacturer)}
           ${goodForHtml(r.goodFor)}
+          ${deviceAnswersHtml(r)}
           <div class="techtoggle" data-key="${escapeHtml(key)}">
             ${expanded ? "Hide capabilities ▾" : "View capabilities →"}
           </div>
@@ -476,6 +491,40 @@ function runSearch() {
         </div>`;
     })
     .join("");
+}
+
+// "How it behaves" — what owners answered (device answers), per firmware
+// (newest first) and per use. Counts only; ratings are averaged once 3
+// people with the same firmware and use have rated. Free text was reviewed
+// when its PR was merged.
+function deviceAnswersHtml(r) {
+  if (!QUESTIONS) return "";
+  const dev = ANSWERS[deviceKey({ manufacturer: r.manufacturer, model: r.model })];
+  const ask = `<a href="${escapeHtml(ISSUE_FORM_URL)}" target="_blank" rel="noopener">${dev ? "Add your answers" : "Be the first to answer"}</a>`;
+  if (!dev) return `<div class="answers-panel muted">How does it behave in real use? Nobody has said yet. ${ask}</div>`;
+  const fws = Object.keys(dev.by_firmware).sort().reverse();
+  const blocks = fws
+    .map((fw, i) => {
+      const entry = dev.by_firmware[fw];
+      const uses = summaryLines(QUESTIONS, entry)
+        .map((u) => {
+          const rating =
+            u.rating != null ? ` · ★ ${u.rating.toFixed(1)} from ${u.ratingCount}` : u.ratingCount ? ` · ${u.ratingCount} rating${u.ratingCount === 1 ? "" : "s"}` : "";
+          const qs = u.questions.map((x) => `<li>${escapeHtml(x.text)} <span class="muted">${escapeHtml(answerCountsText(x))}</span></li>`).join("");
+          const tips = u.tips.map((t) => `<li class="answers-tip">“${escapeHtml(t.text)}”</li>`).join("");
+          return `<div class="answers-use"><strong>${escapeHtml(u.useLabel)}</strong> <span class="muted">${u.count} ${
+            u.count === 1 ? "person" : "people"
+          }${rating}</span><ul>${qs}${tips}</ul></div>`;
+        })
+        .join("");
+      return `<details ${i === 0 ? "open" : ""}><summary>Firmware ${escapeHtml(fw)} <span class="muted">(${entry.total}${
+        entry.scan_linked ? "" : ", no scan of this firmware yet"
+      })</span></summary>${uses}</details>`;
+    })
+    .join("");
+  return `<div class="answers-panel"><div class="answers-head"><strong>How it behaves</strong> <span class="muted">${dev.total} owner${
+    dev.total === 1 ? "" : "s"
+  } answered</span> · ${ask}</div>${blocks}</div>`;
 }
 
 // "External references" line (PRD: "External Device References") — a

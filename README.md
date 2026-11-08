@@ -109,6 +109,29 @@ from scan `observations`), and the index rebuild summarises all reports into `da
 and per firmware. Reports contain the model, firmware, endpoint, clusters, number of lights and result only: no names,
 areas or addresses. Each issue counts once; identical results from different people count separately.
 
+## Device answers
+
+A scan shows what a device says it can do. It can't show how it behaves once it's on someone's network: whether it
+stays connected, what a press really sends, whether it honours its power-on setting, how long its batteries last.
+Device answers fill that gap: people who own a device answer a few questions about it.
+
+- **The questions** are in `data/questions.json`, shared by every tool that asks them. Each has a stable id and preset
+  answers, and applies to certain device types (remote, wall switch, light, plug, blind, sensor) and uses. The first
+  question is always what the device is used for: a rocker wired to a light and the same rocker used as a remote get
+  different questions, and their answers are kept apart.
+- **Answering:** ZHA Bindings Manager asks them in a device's side panel (filling in the firmware itself), or anyone
+  can use the [Device answers issue form](../../issues/new?template=device-answers.yml), whatever Zigbee system they
+  use. The form is generated from `questions.json` by `.github/scripts/build-issue-form.cjs`.
+- **Firmware:** every answer is stored with the device's firmware version, and summaries are always per firmware.
+- **Free text** ("Other" answers and a tip, up to 280 characters) is cleaned of addresses, e-mail addresses and links,
+  and listed in the submission PR for review. It's only published once the PR is merged.
+- **Ratings** (1–5, "ignoring price, how good is it at what you use it for?") are shown as a spread, and averaged only
+  once 3 people with the same firmware and use have rated.
+- **Storage:** each submission is kept in the device's file under `device_answers`. The index rebuild summarises them
+  into `data/answers.json`, keyed `<manufacturer_slug>/<model_slug>`, then by firmware and use, with counts per
+  answer. `scan_linked` says whether a capability scan for the same firmware is in the database.
+- No names, areas or addresses are collected. Like everything here, answers are CC0.
+
 ## Zigbee2MQTT model map
 
 `data/z2m-models.json` says which Zigbee2MQTT product code each device belongs to, generated weekly from Zigbee2MQTT's
