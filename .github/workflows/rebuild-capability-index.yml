@@ -78,6 +78,8 @@ jobs:
                   entry.name.endsWith(".json") &&
                   full !== path.join("data", "index.json") &&
                   full !== path.join("data", "behaviour.json") &&
+                  full !== path.join("data", "answers.json") &&
+                  full !== path.join("data", "questions.json") &&
                   full !== path.join("data", "z2m-models.json")
                 ) {
                   out.push(full);
@@ -378,6 +380,9 @@ jobs:
             // firmware and per set of clusters bound. Read by ZHA Bindings
             // Manager's "Set up what this controls" flow.
             const behaviourDoc = {};
+            // data/answers.json — device answers (questions.json) per device,
+            // firmware and use; built by .github/scripts/device-answers.cjs.
+            const answersFiles = [];
             const allUnresolvedClusters = [];
             const allUnresolvedAttrs = [];
 
@@ -433,6 +438,9 @@ jobs:
                 // anything in recomputeCapabilities()/enrichCapabilities()
                 // above — those only ever look at `existing.observations`.
                 const references = existing.references || null;
+                if (Array.isArray(existing.device_answers) && existing.device_answers.length) {
+                  answersFiles.push({ key: `${manufacturerSlug}/${modelSlug}`, file: existing });
+                }
                 (Array.isArray(existing.behaviour_reports) ? existing.behaviour_reports : []).forEach((r) => {
                   if (!r || !r.behaviour || !r.result) return;
                   const key = `${manufacturerSlug}/${modelSlug}`;
@@ -507,7 +515,14 @@ jobs:
             const behaviourChanged = prevBehaviour !== nextBehaviour;
             if (behaviourChanged) fs.writeFileSync("data/behaviour.json", nextBehaviour);
 
-            if (changedFiles === 0 && !indexChanged && !unknownChanged && !behaviourChanged) {
+            const answersLib = require(path.join(process.env.GITHUB_WORKSPACE, ".github", "scripts", "device-answers.cjs"));
+            const answersDoc = answersLib.summarise(answersFiles, answersLib.loadQuestions(process.env.GITHUB_WORKSPACE));
+            const nextAnswers = JSON.stringify(answersDoc, null, 2) + "\n";
+            const prevAnswers = fs.existsSync("data/answers.json") ? fs.readFileSync("data/answers.json", "utf8") : null;
+            const answersChanged = prevAnswers !== nextAnswers;
+            if (answersChanged) fs.writeFileSync("data/answers.json", nextAnswers);
+
+            if (changedFiles === 0 && !indexChanged && !unknownChanged && !behaviourChanged && !answersChanged) {
               console.log(`Nothing to rebuild — every file's capabilities cache, data/index.json, and data/unknown-capabilities.json were already up to date (${index.length} records).`);
               return;
             }
@@ -522,7 +537,7 @@ jobs:
             await exec.exec("git", [
               "commit",
               "-m",
-              `Rebuild capability index (${index.length} records, ${changedFiles} file(s) recomputed${unknownChanged ? ", unknown-capabilities.json updated" : ""}${behaviourChanged ? ", behaviour.json updated" : ""})`,
+              `Rebuild capability index (${index.length} records, ${changedFiles} file(s) recomputed${unknownChanged ? ", unknown-capabilities.json updated" : ""}${behaviourChanged ? ", behaviour.json updated" : ""}${answersChanged ? ", answers.json updated" : ""})`,
             ]);
             await exec.exec("git", ["push", "origin", "HEAD:main"]);
             console.log(`Committed: ${index.length} records in data/index.json, ${changedFiles} file(s) recomputed, ${unknownDoc.unresolved_clusters.length} unresolved cluster(s) and ${unknownDoc.unresolved_attributes.length} unresolved attribute(s) tracked.`);

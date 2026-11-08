@@ -68,10 +68,17 @@ jobs:
             // notes), so it's left alone rather than getting a confusing
             // bot comment. If a json fence is present at all, it's treated
             // as a genuine attempt regardless of title.
-            const looksLikeSubmission = title.startsWith("[Device Submission]");
+            const looksLikeSubmission = title.startsWith("[Device Submission]") || title.startsWith("[Device Answers]");
             const match = body.match(/```json\s*([\s\S]*?)```/);
 
-            if (!match) {
+            // Device answers (questions.json): from ZHA Bindings Manager as a
+            // json block, or from the issue form as ### sections. Checking
+            // and cleaning lives in .github/scripts/device-answers.cjs.
+            const answersLib = require(path.join(process.env.GITHUB_WORKSPACE, ".github", "scripts", "device-answers.cjs"));
+            const questions = answersLib.loadQuestions(process.env.GITHUB_WORKSPACE);
+            const formAnswers = !match && title.startsWith("[Device Answers]") ? answersLib.fromIssueForm(body, questions) : null;
+
+            if (!match && !formAnswers) {
               if (looksLikeSubmission) {
                 await github.rest.issues.createComment({
                   ...context.repo,
@@ -86,7 +93,7 @@ jobs:
 
             let record;
             try {
-              record = JSON.parse(match[1]);
+              record = formAnswers || JSON.parse(match[1]);
             } catch (e) {
               await github.rest.issues.createComment({
                 ...context.repo,
@@ -127,6 +134,22 @@ jobs:
               return;
             }
 
+            const isDeviceAnswers = !!record && record.kind === "device_answers";
+            let answerWarnings = [];
+            if (isDeviceAnswers) {
+              const checked = answersLib.validate(record, questions);
+              if (checked.errors.length) {
+                await github.rest.issues.createComment({
+                  ...context.repo,
+                  issue_number: issue.number,
+                  body: `These answers couldn't be imported:\n${checked.errors.map((e) => `- ${e}`).join("\n")}`,
+                });
+                return;
+              }
+              record = checked.record;
+              answerWarnings = checked.warnings;
+            }
+
             const manufacturer = slugify(record.manufacturer);
             const model = slugify(record.model);
             const filePath = `data/${manufacturer}/${model}.json`;
@@ -135,6 +158,7 @@ jobs:
             // claims to know — so any future question about an observation
             // is traceable back to exactly which issue introduced it.
             record.provenance = { ...(record.provenance || {}), source_issue: issue.number };
+            if (isDeviceAnswers && !record.provenance.submitted_at) record.provenance.submitted_at = issue.created_at || null;
 
             // Load existing file. Older files written before this data
             // model existed are a bare array of entries; treat that as the
@@ -172,7 +196,26 @@ jobs:
               return JSON.stringify(clone);
             };
             let contributionLines = [];
-            if (isBehaviourReport) {
+            let freeText = [];
+            if (isDeviceAnswers) {
+              if (!Array.isArray(existing.device_answers)) existing.device_answers = [];
+              // Each person's answers count separately; only a re-run of the
+              // same issue replaces itself.
+              existing.device_answers = existing.device_answers.filter(
+                (o) => !(o.provenance && o.provenance.source_issue === issue.number)
+              );
+              existing.device_answers.push(record);
+              const fw = answersLib.firmwareKey(record.firmware);
+              const n = Object.keys(record.answers || {}).length;
+              contributionLines = [
+                `Answers about how it behaves: ${n} question${n === 1 ? "" : "s"}${record.rating ? `, rated ${record.rating}/5` : ""} (firmware ${fw}, used for ${record.use}${record.use === "other" ? `: ${record.other.use}` : ""})`,
+                ...answerWarnings.map((w) => `Note: ${w}`),
+              ];
+              freeText = [
+                ...Object.entries(record.other || {}).map(([k, v]) => `**${k}** (other): ${v}`),
+                ...(record.tip ? [`**tip**: ${record.tip}`] : []),
+              ];
+            } else if (isBehaviourReport) {
               if (!Array.isArray(existing.behaviour_reports)) existing.behaviour_reports = [];
               // Unlike scans, identical reports from different people are
               // separate evidence and must each count, so only a re-run of
@@ -461,7 +504,11 @@ jobs:
                 title: `Add/update ${record.manufacturer || manufacturer} ${record.model || model}`,
                 head: branch,
                 base: "main",
-                body: `Auto-generated from #${issue.number}.\n\nCloses #${issue.number}`,
+                body: `Auto-generated from #${issue.number}.${
+                  freeText.length
+                    ? `\n\n**Free text to review** (shown publicly once merged; edit the data file or close the PR if anything shouldn't be there):\n${freeText.map((t) => `- ${t}`).join("\n")}`
+                    : ""
+                }\n\nCloses #${issue.number}`,
               });
               prNumber = pr.data.number;
             }
