@@ -1,1 +1,60 @@
-{}
+{
+  "ikea-of-sweden/rodret-wireless-dimmer": {
+    "manufacturer": "IKEA of Sweden",
+    "model": "RODRET wireless dimmer",
+    "total": 1,
+    "by_firmware": {
+      "0x01000057": {
+        "scan_linked": false,
+        "total": 1,
+        "by_use": {
+          "control_lights": {
+            "count": 1,
+            "ratings": {
+              "5": 1
+            },
+            "rating_average": null,
+            "answers": {
+              "direct_control": {
+                "yes": 1
+              },
+              "press_sends": {
+                "on_and_off": 1
+              },
+              "needed_setting": {
+                "no": 1
+              },
+              "presses_arrive": {
+                "always": 1
+              },
+              "hold_to_dim": {
+                "works": 1
+              },
+              "keeps_bindings": {
+                "not_seen": 1
+              },
+              "stays_connected": {
+                "always": 1
+              },
+              "routers": {
+                "not_sure": 1
+              }
+            },
+            "context": {
+              "system": {
+                "zha": 1
+              },
+              "coordinator": {
+                "silabs": 1
+              },
+              "owned_for": {
+                "lt_year": 1
+              }
+            },
+            "tips": []
+          }
+        }
+      }
+    }
+  }
+}
