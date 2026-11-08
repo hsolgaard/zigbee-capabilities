@@ -1517,5 +1517,18 @@
       "out_clusters": [],
       "clusters": {}
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Ikea_LED1937T5.html",
+      "match_method": "vendor_alias_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "IKEA of Sweden",
+    "checked_model": "TRADFRIbulbT120E27WSopal470lm",
+    "manufacturer": {
+      "url": "https://www.ikea.com/cz/en/p/tradfri-led-bulb-e27-470-lumen-wireless-dimmable-white-spectrum-tube-shaped-white-frosted-glass-90461916/",
+      "confidence": "high"
+    }
   }
 }
