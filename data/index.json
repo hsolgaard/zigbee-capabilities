@@ -7717,7 +7717,11 @@
   {
     "manufacturer_slug": "adeo",
     "model_slug": "zbek-5",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "Adeo",
+      "checked_model": "ZBEK-5"
+    },
     "endpoint": 1,
     "firmware": "2.11.01",
     "scan_count": 1,
@@ -8500,7 +8504,11 @@
   {
     "manufacturer_slug": "adeo",
     "model_slug": "zbek-5",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "Adeo",
+      "checked_model": "ZBEK-5"
+    },
     "endpoint": 242,
     "firmware": "2.11.01",
     "scan_count": 1,
