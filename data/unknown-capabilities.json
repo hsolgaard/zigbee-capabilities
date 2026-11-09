@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T19:51:39.220Z",
+  "generated_at": "2026-11-09T19:52:55.409Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -201,12 +201,37 @@
         },
         {
           "manufacturer": "Keen Home Inc",
+          "model": "SV01-410-MP-1.0",
+          "count": 1
+        },
+        {
+          "manufacturer": "Keen Home Inc",
           "model": "SV01-410-MP-1.1",
           "count": 1
         },
         {
           "manufacturer": "Philips",
           "model": "LWV001",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id_hex": "0xfc01",
+      "seen_on": [
+        {
+          "manufacturer": "iMagic by GreatStar",
+          "model": "1117-S",
+          "count": 1
+        },
+        {
+          "manufacturer": "Keen Home Inc",
+          "model": "SV01-410-MP-1.0",
+          "count": 1
+        },
+        {
+          "manufacturer": "Keen Home Inc",
+          "model": "SV01-410-MP-1.1",
           "count": 1
         }
       ]
@@ -222,21 +247,6 @@
         {
           "manufacturer": "innr",
           "model": "SP 224",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "id_hex": "0xfc01",
-      "seen_on": [
-        {
-          "manufacturer": "iMagic by GreatStar",
-          "model": "1117-S",
-          "count": 1
-        },
-        {
-          "manufacturer": "Keen Home Inc",
-          "model": "SV01-410-MP-1.1",
           "count": 1
         }
       ]
@@ -1807,6 +1817,70 @@
       ]
     },
     {
+      "cluster_id_hex": "0xfc01",
+      "id_hex": "0x0000",
+      "seen_on": [
+        {
+          "manufacturer": "Keen Home Inc",
+          "model": "SV01-410-MP-1.0",
+          "count": 1
+        },
+        {
+          "manufacturer": "Keen Home Inc",
+          "model": "SV01-410-MP-1.1",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc02",
+      "id_hex": "0x0000",
+      "seen_on": [
+        {
+          "manufacturer": "Keen Home Inc",
+          "model": "SV01-410-MP-1.0",
+          "count": 1
+        },
+        {
+          "manufacturer": "Keen Home Inc",
+          "model": "SV01-410-MP-1.1",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc02",
+      "id_hex": "0x0001",
+      "seen_on": [
+        {
+          "manufacturer": "Keen Home Inc",
+          "model": "SV01-410-MP-1.0",
+          "count": 1
+        },
+        {
+          "manufacturer": "Keen Home Inc",
+          "model": "SV01-410-MP-1.1",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc02",
+      "id_hex": "0x0002",
+      "seen_on": [
+        {
+          "manufacturer": "Keen Home Inc",
+          "model": "SV01-410-MP-1.0",
+          "count": 1
+        },
+        {
+          "manufacturer": "Keen Home Inc",
+          "model": "SV01-410-MP-1.1",
+          "count": 1
+        }
+      ]
+    },
+    {
       "cluster_id_hex": "0xfcc0",
       "id_hex": "0x0100",
       "seen_on": [
@@ -2311,50 +2385,6 @@
         {
           "manufacturer": "Inovelli",
           "model": "VZM35-SN",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc01",
-      "id_hex": "0x0000",
-      "seen_on": [
-        {
-          "manufacturer": "Keen Home Inc",
-          "model": "SV01-410-MP-1.1",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc02",
-      "id_hex": "0x0000",
-      "seen_on": [
-        {
-          "manufacturer": "Keen Home Inc",
-          "model": "SV01-410-MP-1.1",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc02",
-      "id_hex": "0x0001",
-      "seen_on": [
-        {
-          "manufacturer": "Keen Home Inc",
-          "model": "SV01-410-MP-1.1",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc02",
-      "id_hex": "0x0002",
-      "seen_on": [
-        {
-          "manufacturer": "Keen Home Inc",
-          "model": "SV01-410-MP-1.1",
           "count": 1
         }
       ]
