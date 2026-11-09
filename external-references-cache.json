@@ -434,6 +434,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "Keen Home Inc|SV01-410-MP-1.1": {
+      "searched_at": "2026-11-09",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "LEDVANCE|A60 RGBW Value II": {
       "searched_at": "2026-10-30",
       "manufacturer_candidate": null,
@@ -985,5 +990,5 @@
     },
     "https://sonoff.tech/product/smart-plug/s26r2zb/": null
   },
-  "generated_at": "2026-11-09T17:00:25.917Z"
+  "generated_at": "2026-11-09T19:51:49.439Z"
 }
