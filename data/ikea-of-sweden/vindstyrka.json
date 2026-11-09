@@ -719,5 +719,39 @@
     },
     "checked_manufacturer": "IKEA of Sweden",
     "checked_model": "VINDSTYRKA"
-  }
+  },
+  "device_answers": [
+    {
+      "kind": "device_answers",
+      "schema": 1,
+      "questions_version": 1,
+      "manufacturer": "IKEA of Sweden",
+      "model": "VINDSTYRKA",
+      "firmware": {
+        "registry_sw_version": "0x00010010"
+      },
+      "device_type": "sensor",
+      "use": "other",
+      "answers": {
+        "stays_connected": "always",
+        "routers": "any",
+        "rejoins": "never_dropped",
+        "pairing": "first_time",
+        "reports_promptly": "instant",
+        "ota": "not_sure"
+      },
+      "other": {
+        "use": "Air quality sensor"
+      },
+      "rating": 4,
+      "context": {
+        "system": "zha"
+      },
+      "card_version": "1.10.0",
+      "provenance": {
+        "submitted_at": "2026-11-09T16:53:10.686Z",
+        "source_issue": 448
+      }
+    }
+  ]
 }
