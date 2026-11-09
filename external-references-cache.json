@@ -454,6 +454,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "Keen Home Inc|SV02-410-MP-1.3": {
+      "searched_at": "2026-11-09",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "LEDVANCE|A60 RGBW Value II": {
       "searched_at": "2026-10-30",
       "manufacturer_candidate": null,
@@ -726,6 +731,11 @@
         "evidence": "Third Reality's only Zigbee garage door tilt sensor (Z2M: 3RDTS01056Z); model number not printed on the page",
         "method": "manual research 2026-10-25 (page fetched and checked by hand)"
       },
+      "buy_candidate": null
+    },
+    "Third Reality, Inc|3RWS18BZ": {
+      "searched_at": "2026-11-09",
+      "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "tqlv4ug4|TS0001-custom": {
@@ -1027,5 +1037,5 @@
     },
     "https://sonoff.tech/product/smart-plug/s26r2zb/": null
   },
-  "generated_at": "2026-11-09T20:21:17.617Z"
+  "generated_at": "2026-11-09T20:22:43.325Z"
 }
