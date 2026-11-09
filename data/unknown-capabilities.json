@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T20:21:41.057Z",
+  "generated_at": "2026-11-09T20:22:36.299Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -215,6 +215,11 @@
           "count": 1
         },
         {
+          "manufacturer": "Keen Home Inc",
+          "model": "SV02-410-MP-1.3",
+          "count": 1
+        },
+        {
           "manufacturer": "Philips",
           "model": "LWV001",
           "count": 1
@@ -237,6 +242,11 @@
         {
           "manufacturer": "Keen Home Inc",
           "model": "SV01-410-MP-1.1",
+          "count": 1
+        },
+        {
+          "manufacturer": "Keen Home Inc",
+          "model": "SV02-410-MP-1.3",
           "count": 1
         }
       ]
@@ -1815,6 +1825,90 @@
       ]
     },
     {
+      "cluster_id_hex": "0xfc01",
+      "id_hex": "0x0000",
+      "seen_on": [
+        {
+          "manufacturer": "Keen Home Inc",
+          "model": "SV01-410-MP-1.0",
+          "count": 1
+        },
+        {
+          "manufacturer": "Keen Home Inc",
+          "model": "SV01-410-MP-1.1",
+          "count": 1
+        },
+        {
+          "manufacturer": "Keen Home Inc",
+          "model": "SV02-410-MP-1.3",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc02",
+      "id_hex": "0x0000",
+      "seen_on": [
+        {
+          "manufacturer": "Keen Home Inc",
+          "model": "SV01-410-MP-1.0",
+          "count": 1
+        },
+        {
+          "manufacturer": "Keen Home Inc",
+          "model": "SV01-410-MP-1.1",
+          "count": 1
+        },
+        {
+          "manufacturer": "Keen Home Inc",
+          "model": "SV02-410-MP-1.3",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc02",
+      "id_hex": "0x0001",
+      "seen_on": [
+        {
+          "manufacturer": "Keen Home Inc",
+          "model": "SV01-410-MP-1.0",
+          "count": 1
+        },
+        {
+          "manufacturer": "Keen Home Inc",
+          "model": "SV01-410-MP-1.1",
+          "count": 1
+        },
+        {
+          "manufacturer": "Keen Home Inc",
+          "model": "SV02-410-MP-1.3",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc02",
+      "id_hex": "0x0002",
+      "seen_on": [
+        {
+          "manufacturer": "Keen Home Inc",
+          "model": "SV01-410-MP-1.0",
+          "count": 1
+        },
+        {
+          "manufacturer": "Keen Home Inc",
+          "model": "SV01-410-MP-1.1",
+          "count": 1
+        },
+        {
+          "manufacturer": "Keen Home Inc",
+          "model": "SV02-410-MP-1.3",
+          "count": 1
+        }
+      ]
+    },
+    {
       "cluster_id_hex": "0xfc11",
       "id_hex": "0x0011",
       "seen_on": [
@@ -1843,70 +1937,6 @@
           "manufacturer": "Inovelli",
           "model": "VZM36",
           "count": 2
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc01",
-      "id_hex": "0x0000",
-      "seen_on": [
-        {
-          "manufacturer": "Keen Home Inc",
-          "model": "SV01-410-MP-1.0",
-          "count": 1
-        },
-        {
-          "manufacturer": "Keen Home Inc",
-          "model": "SV01-410-MP-1.1",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc02",
-      "id_hex": "0x0000",
-      "seen_on": [
-        {
-          "manufacturer": "Keen Home Inc",
-          "model": "SV01-410-MP-1.0",
-          "count": 1
-        },
-        {
-          "manufacturer": "Keen Home Inc",
-          "model": "SV01-410-MP-1.1",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc02",
-      "id_hex": "0x0001",
-      "seen_on": [
-        {
-          "manufacturer": "Keen Home Inc",
-          "model": "SV01-410-MP-1.0",
-          "count": 1
-        },
-        {
-          "manufacturer": "Keen Home Inc",
-          "model": "SV01-410-MP-1.1",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc02",
-      "id_hex": "0x0002",
-      "seen_on": [
-        {
-          "manufacturer": "Keen Home Inc",
-          "model": "SV01-410-MP-1.0",
-          "count": 1
-        },
-        {
-          "manufacturer": "Keen Home Inc",
-          "model": "SV01-410-MP-1.1",
-          "count": 1
         }
       ]
     },
