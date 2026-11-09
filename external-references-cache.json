@@ -221,6 +221,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "IKEA of Sweden|TRADFRI bulb E12 CWS 450lm": {
+      "searched_at": "2026-11-09",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "IKEA of Sweden|TRADFRI bulb E14 CWS 470lm": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": null,
@@ -995,5 +1000,5 @@
     },
     "https://sonoff.tech/product/smart-plug/s26r2zb/": null
   },
-  "generated_at": "2026-11-09T19:53:06.489Z"
+  "generated_at": "2026-11-09T19:54:57.231Z"
 }
