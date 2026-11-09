@@ -23672,7 +23672,19 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e12-cws-450lm",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ikea_LED1925G6.html",
+        "match_method": "vendor_alias_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "IKEA of Sweden",
+      "checked_model": "TRADFRI bulb E12 CWS 450lm",
+      "manufacturer": {
+        "url": "https://www.ikea.com/gb/en/p/tradfri-led-bulb-e14-470-lumen-wireless-dimmable-colour-and-white-spectrum-globe-opal-white-70517636/",
+        "confidence": "high"
+      }
+    },
     "endpoint": 1,
     "firmware": "1.0.021",
     "scan_count": 1,
@@ -24786,7 +24798,19 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-bulb-e12-cws-450lm",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ikea_LED1925G6.html",
+        "match_method": "vendor_alias_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "IKEA of Sweden",
+      "checked_model": "TRADFRI bulb E12 CWS 450lm",
+      "manufacturer": {
+        "url": "https://www.ikea.com/gb/en/p/tradfri-led-bulb-e14-470-lumen-wireless-dimmable-colour-and-white-spectrum-globe-opal-white-70517636/",
+        "confidence": "high"
+      }
+    },
     "endpoint": 242,
     "firmware": "1.0.021",
     "scan_count": 1,
