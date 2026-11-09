@@ -97,6 +97,33 @@ test("reads the generated issue form", () => {
   assert.ok(!record.tip);
 });
 
+test("a switch module behind a normal switch gets its own questions, not button ones", () => {
+  const typeLabel = q.device_types.find((t) => t.id === "switch_module").label;
+  const use = q.use.answers_by_type.switch_module.find((a) => a.id === "wired_own_load").label;
+  const qt = (id) => q.questions.find((x) => x.id === id);
+  const body = [
+    "### Manufacturer\n\nSONOFF",
+    "### Model\n\nZBMINIL2",
+    "### Firmware version\n\n0x0000100e",
+    `### Device type\n\n${typeLabel}`,
+    `### ${q.use.text}\n\n${typeLabel.split(" (")[0]}: ${use}`,
+    `### ${qt("input_detached").text}\n\nNot sure`,
+    `### ${qt("decoupled").text}\n\nNo`,
+    `### ${qt("router_quality").text}\n\n${qt("router_quality").answers.find((a) => a.id === "not_a_router").label}`,
+    `### ${qt("responds_to_bindings").text}\n\nEvery time`,
+    `### ${qt("hold_to_dim").text}\n\nYes`,
+  ].join("\n\n");
+  const { record, errors } = da.validate(da.fromIssueForm(body, q), q);
+  assert.deepStrictEqual(errors, []);
+  assert.strictEqual(record.device_type, "switch_module");
+  assert.strictEqual(record.use, "wired_own_load");
+  assert.strictEqual(record.answers.input_detached, "not_sure");
+  assert.strictEqual(record.answers.router_quality, "not_a_router");
+  assert.strictEqual(record.answers.responds_to_bindings, "always");
+  assert.ok(!("decoupled" in record.answers), "the button question is only for wall switches");
+  assert.ok(!("hold_to_dim" in record.answers));
+});
+
 test("issue form file is in step with questions.json", () => {
   const form = fs.readFileSync(path.join(root, ".github", "ISSUE_TEMPLATE", "device-answers.yml"), "utf8");
   for (const x of q.questions) assert.ok(form.includes(JSON.stringify(x.text)), x.id);
