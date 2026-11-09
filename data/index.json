@@ -74513,6 +74513,32 @@
     }
   },
   {
+    "manufacturer_slug": "samjin",
+    "model_slug": "multi",
+    "references": null,
+    "endpoint": 1,
+    "firmware": null,
+    "scan_count": 1,
+    "last_seen": "2026-11-09T16:46:06.882Z",
+    "manufacturer": "Samjin",
+    "model": "multi",
+    "in_clusters": [
+      "0x0000",
+      "0x0001",
+      "0x0003",
+      "0x0020",
+      "0x0402",
+      "0x0500",
+      "0x0b05",
+      "0xfc02"
+    ],
+    "out_clusters": [
+      "0x0003",
+      "0x0019"
+    ],
+    "clusters": {}
+  },
+  {
     "manufacturer_slug": "schneider-electric",
     "model_slug": "ch2ax-switch-1",
     "references": {
