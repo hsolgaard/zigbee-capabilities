@@ -56,5 +56,58 @@
         }
       }
     }
+  },
+  "ikea-of-sweden/vindstyrka": {
+    "manufacturer": "IKEA of Sweden",
+    "model": "VINDSTYRKA",
+    "total": 1,
+    "by_firmware": {
+      "0x00010010": {
+        "scan_linked": false,
+        "total": 1,
+        "by_use": {
+          "other": {
+            "count": 1,
+            "ratings": {
+              "4": 1
+            },
+            "rating_average": null,
+            "answers": {
+              "stays_connected": {
+                "always": 1
+              },
+              "routers": {
+                "any": 1
+              },
+              "rejoins": {
+                "never_dropped": 1
+              },
+              "pairing": {
+                "first_time": 1
+              },
+              "reports_promptly": {
+                "instant": 1
+              },
+              "ota": {
+                "not_sure": 1
+              }
+            },
+            "context": {
+              "system": {
+                "zha": 1
+              }
+            },
+            "tips": [
+              {
+                "text": "Air quality sensor",
+                "kind": "other",
+                "question": "use",
+                "submitted_at": "2026-11-09T16:53:10.686Z"
+              }
+            ]
+          }
+        }
+      }
+    }
   }
 }
