@@ -434,6 +434,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "Keen Home Inc|SV01-410-MP-1.0": {
+      "searched_at": "2026-11-09",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "Keen Home Inc|SV01-410-MP-1.1": {
       "searched_at": "2026-11-09",
       "manufacturer_candidate": null,
@@ -990,5 +995,5 @@
     },
     "https://sonoff.tech/product/smart-plug/s26r2zb/": null
   },
-  "generated_at": "2026-11-09T19:51:49.439Z"
+  "generated_at": "2026-11-09T19:53:06.489Z"
 }
