@@ -1436,5 +1436,40 @@
       "url": "https://www.ledvance.com/consumer/products/smart-home/smart-home-products-with-zigbee-technology/smart-home-lamps/classic-lamps-with-zigbee-technology/smart-mini-bulb-tunable-white/index.jsp",
       "confidence": "high"
     }
-  }
+  },
+  "device_answers": [
+    {
+      "kind": "device_answers",
+      "schema": 1,
+      "questions_version": 2,
+      "manufacturer": "LEDVANCE",
+      "model": "P40 TW Value",
+      "firmware": {
+        "registry_sw_version": "0x03177310"
+      },
+      "device_type": "light",
+      "use": "lamp",
+      "answers": {
+        "power_on": "not_sure",
+        "stays_connected": "always",
+        "rejoins": "never_dropped",
+        "pairing": "first_time",
+        "responds_to_bindings": "not_bound",
+        "remembers_colour": "not_sure",
+        "router_quality": "good",
+        "ota": "not_sure"
+      },
+      "rating": 5,
+      "context": {
+        "system": "zha",
+        "coordinator": "ti",
+        "owned_for": "gt_year"
+      },
+      "card_version": "1.10.0",
+      "provenance": {
+        "submitted_at": "2026-11-09T22:01:48.326Z",
+        "source_issue": 451
+      }
+    }
+  ]
 }
