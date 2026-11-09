@@ -109,5 +109,63 @@
         }
       }
     }
+  },
+  "ledvance/p40-tw-value": {
+    "manufacturer": "LEDVANCE",
+    "model": "P40 TW Value",
+    "total": 1,
+    "by_firmware": {
+      "0x03177310": {
+        "scan_linked": false,
+        "total": 1,
+        "by_use": {
+          "lamp": {
+            "count": 1,
+            "ratings": {
+              "5": 1
+            },
+            "rating_average": null,
+            "answers": {
+              "power_on": {
+                "not_sure": 1
+              },
+              "stays_connected": {
+                "always": 1
+              },
+              "rejoins": {
+                "never_dropped": 1
+              },
+              "pairing": {
+                "first_time": 1
+              },
+              "responds_to_bindings": {
+                "not_bound": 1
+              },
+              "remembers_colour": {
+                "not_sure": 1
+              },
+              "router_quality": {
+                "good": 1
+              },
+              "ota": {
+                "not_sure": 1
+              }
+            },
+            "context": {
+              "system": {
+                "zha": 1
+              },
+              "coordinator": {
+                "ti": 1
+              },
+              "owned_for": {
+                "gt_year": 1
+              }
+            },
+            "tips": []
+          }
+        }
+      }
+    }
   }
 }
