@@ -116,6 +116,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "Adeo|ZBEK-5": {
+      "searched_at": "2026-11-09",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "AL001|WG001-Z01": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": null,
@@ -966,7 +971,8 @@
     "https://www.ikea.com/cz/en/p/tradfri-led-bulb-e27-470-lumen-wireless-dimmable-white-spectrum-tube-shaped-white-frosted-glass-90461916/": {
       "title": "TRÅDFRI series",
       "shop": true
-    }
+    },
+    "https://sonoff.tech/product/smart-plug/s26r2zb/": null
   },
-  "generated_at": "2026-11-08T19:54:52.316Z"
+  "generated_at": "2026-11-09T10:28:25.133Z"
 }

@@ -1588,5 +1588,10 @@
       "out_clusters": [],
       "clusters": {}
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "Adeo",
+    "checked_model": "ZBEK-5"
   }
 }
