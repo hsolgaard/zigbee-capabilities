@@ -31,6 +31,7 @@ body:
       options:
         - "Remote, button or battery switch (sends commands, no load)"
         - "Wall switch or rocker with a relay (can switch a load)"
+        - "Switch module behind a normal wall switch (e.g. Sonoff ZBMINI)"
         - "Light, bulb or LED driver"
         - "Plug, socket or in-line relay"
         - "Blind, curtain or shutter motor"
@@ -50,6 +51,9 @@ body:
         - "Wall switch or rocker with a relay: Wired, button separated from the relay, controlling smart bulbs"
         - "Wall switch or rocker with a relay: Not switching a load: used as a remote"
         - "Wall switch or rocker with a relay: Buttons for automations only"
+        - "Switch module behind a normal wall switch: Wired to a normal switch, switching its own light"
+        - "Switch module behind a normal wall switch: Switch input separated from the relay, controlling smart bulbs"
+        - "Switch module behind a normal wall switch: No switch wired to it: switched only over Zigbee"
         - "Light, bulb or LED driver: Main room light"
         - "Light, bulb or LED driver: Lamp"
         - "Light, bulb or LED driver: Accent, strip or spot"
@@ -82,7 +86,7 @@ body:
   - type: dropdown
     attributes:
       label: "Which routers does it work through?"
-      description: "Some devices only stay connected through certain brands of router, or only directly to the coordinator. Only for: Remote, button or battery switch, Sensor, Something else."
+      description: "Some devices only stay connected through certain brands of router, or only directly to the coordinator. Only for: Remote, button or battery switch, Switch module behind a normal wall switch, Sensor, Something else."
       options:
         - "Any router"
         - "Only some brands"
@@ -115,7 +119,7 @@ body:
   - type: dropdown
     attributes:
       label: "Does it control lights directly when your Zigbee system or Home Assistant is off?"
-      description: "Bound straight to the lights, not through an automation. Only for: Remote, button or battery switch, Wall switch or rocker with a relay."
+      description: "Bound straight to the lights, not through an automation. Only for: Remote, button or battery switch, Wall switch or rocker with a relay, Switch module behind a normal wall switch."
       options:
         - "Yes, bound to the lights"
         - "Only through a group"
@@ -127,7 +131,7 @@ body:
   - type: dropdown
     attributes:
       label: "What does a press send?"
-      description: "With Toggle, two remotes on the same light can get out of step; separate On and Off can't. Only for: Remote, button or battery switch, Wall switch or rocker with a relay."
+      description: "With Toggle, two remotes on the same light can get out of step; separate On and Off can't. Only for: Remote, button or battery switch, Wall switch or rocker with a relay, Switch module behind a normal wall switch."
       options:
         - "Toggle"
         - "Separate On and Off"
@@ -139,7 +143,7 @@ body:
   - type: dropdown
     attributes:
       label: "Did it need a setting changed before it controlled lights directly?"
-      description: "Only for: Remote, button or battery switch, Wall switch or rocker with a relay."
+      description: "Only for: Remote, button or battery switch, Wall switch or rocker with a relay, Switch module behind a normal wall switch."
       options:
         - "No"
         - "Yes, a mode setting"
@@ -153,7 +157,7 @@ body:
   - type: dropdown
     attributes:
       label: "Does every press arrive?"
-      description: "Only for: Remote, button or battery switch, Wall switch or rocker with a relay."
+      description: "Only for: Remote, button or battery switch, Wall switch or rocker with a relay, Switch module behind a normal wall switch."
       options:
         - "Always"
         - "Sometimes missed"
@@ -176,11 +180,23 @@ body:
   - type: dropdown
     attributes:
       label: "Does it keep its bindings after a battery change, power cut or firmware update?"
-      description: "Only for: Remote, button or battery switch, Wall switch or rocker with a relay."
+      description: "Only for: Remote, button or battery switch, Wall switch or rocker with a relay, Switch module behind a normal wall switch."
       options:
         - "Yes"
         - "It lost them"
         - "Haven't had one yet"
+        - "Doesn't apply"
+    validations:
+      required: false
+  - type: dropdown
+    attributes:
+      label: "Does it respond to remotes bound to it?"
+      description: "Remotes or switches bound straight to it, not through an automation. Only for: Wall switch or rocker with a relay, Switch module behind a normal wall switch, Light, bulb or LED driver, Plug, socket or in-line relay."
+      options:
+        - "Every time"
+        - "Misses some presses"
+        - "Stops responding until bound again"
+        - "Nothing is bound to it"
         - "Doesn't apply"
     validations:
       required: false
@@ -199,8 +215,20 @@ body:
       required: false
   - type: dropdown
     attributes:
+      label: "Can the switch wired to it be separated from the relay (detached mode)?"
+      description: "Then the wall switch sends commands over Zigbee instead of switching the load itself. Only for: Switch module behind a normal wall switch."
+      options:
+        - "Yes, a setting in my Zigbee system"
+        - "No"
+        - "Not sure"
+        - "Yes, some other way (tell us)"
+        - "Doesn't apply"
+    validations:
+      required: false
+  - type: dropdown
+    attributes:
       label: "How is it wired?"
-      description: "Only for: Wall switch or rocker with a relay."
+      description: "Only for: Wall switch or rocker with a relay, Switch module behind a normal wall switch."
       options:
         - "With neutral"
         - "Without neutral, works fine"
@@ -212,7 +240,7 @@ body:
   - type: dropdown
     attributes:
       label: "What does it do after a power cut?"
-      description: "Many devices list a power-on setting that they don't actually honour. Only for: Light, bulb or LED driver, Plug, socket or in-line relay, Wall switch or rocker with a relay."
+      description: "Many devices list a power-on setting that they don't actually honour. Only for: Light, bulb or LED driver, Plug, socket or in-line relay, Wall switch or rocker with a relay, Switch module behind a normal wall switch."
       options:
         - "Goes back to how it was"
         - "Always comes on"
@@ -237,10 +265,11 @@ body:
   - type: dropdown
     attributes:
       label: "Is it a good router for other devices?"
-      description: "Only for: Light, bulb or LED driver, Plug, socket or in-line relay, Wall switch or rocker with a relay."
+      description: "Only for: Light, bulb or LED driver, Plug, socket or in-line relay, Wall switch or rocker with a relay, Switch module behind a normal wall switch."
       options:
         - "Yes"
         - "Devices connected through it drop off"
+        - "It isn't a router (it connects through others)"
         - "Not sure"
         - "Doesn't apply"
     validations:

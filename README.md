@@ -116,7 +116,7 @@ stays connected, what a press really sends, whether it honours its power-on sett
 Device answers fill that gap: people who own a device answer a few questions about it.
 
 - **The questions** are in `data/questions.json`, shared by every tool that asks them. Each has a stable id and preset
-  answers, and applies to certain device types (remote, wall switch, light, plug, blind, sensor) and uses. The first
+  answers, and applies to certain device types (remote, wall switch, switch module, light, plug, blind, sensor) and uses. The first
   question is always what the device is used for: a rocker wired to a light and the same rocker used as a remote get
   different questions, and their answers are kept apart.
 - **Answering:** ZHA Bindings Manager asks them in a device's side panel (filling in the firmware itself), or anyone
