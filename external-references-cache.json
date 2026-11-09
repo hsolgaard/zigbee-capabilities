@@ -545,6 +545,17 @@
       },
       "buy_candidate": null
     },
+    "Samjin|water": {
+      "searched_at": "2026-11-09",
+      "manufacturer_candidate": {
+        "url": "https://partners.smartthings.com/partners/watergate",
+        "title": "Watergate",
+        "shop": false,
+        "evidence": "page mentions \"water\"",
+        "method": "sitemap of smartthings.com"
+      },
+      "buy_candidate": null
+    },
     "Schneider Electric|CH2AX/SWITCH/1": {
       "searched_at": "2026-11-02",
       "manufacturer_candidate": null,
@@ -1000,5 +1011,5 @@
     },
     "https://sonoff.tech/product/smart-plug/s26r2zb/": null
   },
-  "generated_at": "2026-11-09T19:54:57.231Z"
+  "generated_at": "2026-11-09T19:56:27.000Z"
 }
