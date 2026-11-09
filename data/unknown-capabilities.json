@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T19:54:39.886Z",
+  "generated_at": "2026-11-09T20:21:41.057Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -327,6 +327,16 @@
         {
           "manufacturer": "SONOFF",
           "model": "S40LITE",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id_hex": "0xff00",
+      "seen_on": [
+        {
+          "manufacturer": "Third Reality, Inc",
+          "model": "3RWS18BZ",
           "count": 1
         }
       ]
@@ -3208,6 +3218,39 @@
         {
           "manufacturer": "SONOFF",
           "model": "TRVZB",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xff00",
+      "id_hex": "0x0000",
+      "seen_on": [
+        {
+          "manufacturer": "Third Reality, Inc",
+          "model": "3RWS18BZ",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xff00",
+      "id_hex": "0x0002",
+      "seen_on": [
+        {
+          "manufacturer": "Third Reality, Inc",
+          "model": "3RWS18BZ",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xff01",
+      "id_hex": "0x0000",
+      "seen_on": [
+        {
+          "manufacturer": "Third Reality, Inc",
+          "model": "3RWS18BZ",
           "count": 1
         }
       ]
