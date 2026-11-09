@@ -1086,5 +1086,10 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "CentraLite",
+    "checked_model": "4257050-RZHAC"
   }
 }

@@ -156,6 +156,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "CentraLite|4257050-RZHAC": {
+      "searched_at": "2026-11-09",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "CentraLite|Motion Sensor-A": {
       "searched_at": "2026-11-06",
       "manufacturer_candidate": null,
@@ -1011,5 +1016,5 @@
     },
     "https://sonoff.tech/product/smart-plug/s26r2zb/": null
   },
-  "generated_at": "2026-11-09T19:56:27.000Z"
+  "generated_at": "2026-11-09T19:57:04.683Z"
 }
