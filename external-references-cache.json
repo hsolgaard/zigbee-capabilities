@@ -519,6 +519,17 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "Samjin|multi": {
+      "searched_at": "2026-11-09",
+      "manufacturer_candidate": {
+        "url": "https://partners.smartthings.com/partners/ezmultipli",
+        "title": "EZMultiPli",
+        "shop": false,
+        "evidence": "page mentions \"multi\"",
+        "method": "sitemap of smartthings.com"
+      },
+      "buy_candidate": null
+    },
     "Schneider Electric|CH2AX/SWITCH/1": {
       "searched_at": "2026-11-02",
       "manufacturer_candidate": null,
@@ -974,5 +985,5 @@
     },
     "https://sonoff.tech/product/smart-plug/s26r2zb/": null
   },
-  "generated_at": "2026-11-09T10:28:25.133Z"
+  "generated_at": "2026-11-09T17:00:25.917Z"
 }
