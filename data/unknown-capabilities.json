@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T21:24:37.035Z",
+  "generated_at": "2026-11-09T10:28:19.056Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -192,6 +192,21 @@
       ]
     },
     {
+      "id_hex": "0xfc82",
+      "seen_on": [
+        {
+          "manufacturer": "Adeo",
+          "model": "ZBEK-5",
+          "count": 1
+        },
+        {
+          "manufacturer": "innr",
+          "model": "SP 224",
+          "count": 1
+        }
+      ]
+    },
+    {
       "id_hex": "0xfc02",
       "seen_on": [
         {
@@ -247,16 +262,6 @@
         {
           "manufacturer": "iMagic by GreatStar",
           "model": "1117-S",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "id_hex": "0xfc82",
-      "seen_on": [
-        {
-          "manufacturer": "innr",
-          "model": "SP 224",
           "count": 1
         }
       ]
