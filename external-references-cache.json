@@ -539,6 +539,17 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "Samjin|button": {
+      "searched_at": "2026-11-09",
+      "manufacturer_candidate": {
+        "url": "https://partners.smartthings.com/explore/a-magic-button-for-extra-convenience",
+        "title": "A magic button for extra convenience",
+        "shop": false,
+        "evidence": "page mentions \"button\"",
+        "method": "sitemap of smartthings.com"
+      },
+      "buy_candidate": null
+    },
     "Samjin|multi": {
       "searched_at": "2026-11-09",
       "manufacturer_candidate": {
@@ -1016,5 +1027,5 @@
     },
     "https://sonoff.tech/product/smart-plug/s26r2zb/": null
   },
-  "generated_at": "2026-11-09T19:57:04.683Z"
+  "generated_at": "2026-11-09T20:21:17.617Z"
 }
