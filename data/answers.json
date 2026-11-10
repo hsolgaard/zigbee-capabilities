@@ -167,5 +167,93 @@
         }
       }
     }
+  },
+  "sonoff/zbm5-1c-80-86": {
+    "manufacturer": "SONOFF",
+    "model": "ZBM5-1C-80/86",
+    "total": 1,
+    "by_firmware": {
+      "0x00001004": {
+        "scan_linked": false,
+        "total": 1,
+        "by_use": {
+          "decoupled_smart_bulbs": {
+            "count": 1,
+            "ratings": {
+              "3": 1
+            },
+            "rating_average": null,
+            "answers": {
+              "direct_control": {
+                "no": 1
+              },
+              "press_sends": {
+                "on_and_off": 1
+              },
+              "stays_connected": {
+                "drops_often": 1
+              },
+              "power_on": {
+                "last_state": 1
+              },
+              "keeps_bindings": {
+                "yes": 1
+              },
+              "hold_to_dim": {
+                "no": 1
+              },
+              "presses_arrive": {
+                "sometimes_missed": 1
+              },
+              "needed_setting": {
+                "never_worked": 1
+              },
+              "rejoins": {
+                "needs_repair": 1
+              },
+              "pairing": {
+                "several_tries": 1
+              },
+              "decoupled": {
+                "system_setting": 1
+              },
+              "wiring": {
+                "no_neutral_problems": 1
+              },
+              "router_quality": {
+                "not_a_router": 1
+              },
+              "battery_life": {
+                "not_battery": 1
+              },
+              "battery_report": {
+                "not_battery": 1
+              },
+              "ota": {
+                "never_offered": 1
+              }
+            },
+            "context": {
+              "system": {
+                "zha": 1
+              },
+              "coordinator": {
+                "silabs": 1
+              },
+              "owned_for": {
+                "lt_year": 1
+              }
+            },
+            "tips": [
+              {
+                "text": "Supposed to work with no netural wire present. But it can't unless there is a firmware update of which there is one available but its not qualified for this device. Router mode only works when it is connected with a netural wire, otherwise its a end device.",
+                "kind": "tip",
+                "submitted_at": "2026-11-10T06:03:39.993Z"
+              }
+            ]
+          }
+        }
+      }
+    }
   }
 }
