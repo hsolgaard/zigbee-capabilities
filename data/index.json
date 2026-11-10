@@ -92608,7 +92608,11 @@
   {
     "manufacturer_slug": "third-reality-inc",
     "model_slug": "3rcb01057z",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "Third Reality, Inc",
+      "checked_model": "3RCB01057Z"
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
