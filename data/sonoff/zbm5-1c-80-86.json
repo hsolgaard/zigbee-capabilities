@@ -1429,5 +1429,49 @@
       "url": "https://sonoff.tech/en-eu/products/sonoff-switchman-zigbee-smart-wall-switch-zbm5-80-86-type",
       "confidence": "high"
     }
-  }
+  },
+  "device_answers": [
+    {
+      "kind": "device_answers",
+      "schema": 1,
+      "questions_version": 2,
+      "manufacturer": "SONOFF",
+      "model": "ZBM5-1C-80/86",
+      "firmware": {
+        "registry_sw_version": "0x00001004"
+      },
+      "device_type": "wall_switch",
+      "use": "decoupled_smart_bulbs",
+      "answers": {
+        "direct_control": "no",
+        "press_sends": "on_and_off",
+        "stays_connected": "drops_often",
+        "power_on": "last_state",
+        "keeps_bindings": "yes",
+        "hold_to_dim": "no",
+        "presses_arrive": "sometimes_missed",
+        "needed_setting": "never_worked",
+        "rejoins": "needs_repair",
+        "pairing": "several_tries",
+        "decoupled": "system_setting",
+        "wiring": "no_neutral_problems",
+        "router_quality": "not_a_router",
+        "battery_life": "not_battery",
+        "battery_report": "not_battery",
+        "ota": "never_offered"
+      },
+      "rating": 3,
+      "tip": "Supposed to work with no netural wire present. But it can't unless there is a firmware update of which there is one available but its not qualified for this device. Router mode only works when it is connected with a netural wire, otherwise its a end device.",
+      "context": {
+        "system": "zha",
+        "coordinator": "silabs",
+        "owned_for": "lt_year"
+      },
+      "card_version": "1.10.1",
+      "provenance": {
+        "submitted_at": "2026-11-10T06:03:39.993Z",
+        "source_issue": 453
+      }
+    }
+  ]
 }
