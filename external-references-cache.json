@@ -722,6 +722,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "Third Reality, Inc|3RCB01057Z": {
+      "searched_at": "2026-11-10",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "Third Reality, Inc|3RDTS01056Z": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": {
@@ -1037,5 +1042,5 @@
     },
     "https://sonoff.tech/product/smart-plug/s26r2zb/": null
   },
-  "generated_at": "2026-11-09T20:22:43.325Z"
+  "generated_at": "2026-11-10T11:41:25.656Z"
 }
