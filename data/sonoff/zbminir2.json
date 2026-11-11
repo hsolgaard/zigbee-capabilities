@@ -1346,5 +1346,29 @@
       "url": "https://itead.cc/product/sonoff-zbmini-zigbee-smart-switch/",
       "confidence": "high"
     }
-  }
+  },
+  "behaviour_reports": [
+    {
+      "kind": "behaviour_report",
+      "schema": 1,
+      "behaviour": "direct_binding",
+      "manufacturer": "SONOFF",
+      "model": "ZBMINIR2",
+      "firmware": {
+        "sw_build_id": null,
+        "registry_sw_version": "0x00001008"
+      },
+      "endpoint": 1,
+      "clusters": [
+        "0x0006"
+      ],
+      "target_count": 1,
+      "result": "stored_ignored",
+      "card_version": "1.5.2",
+      "provenance": {
+        "submitted_at": "2026-11-11T23:05:06.306Z",
+        "source_issue": 460
+      }
+    }
+  ]
 }
