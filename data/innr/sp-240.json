@@ -843,5 +843,10 @@
       "out_clusters": [],
       "clusters": {}
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "innr",
+    "checked_model": "SP 240"
   }
 }

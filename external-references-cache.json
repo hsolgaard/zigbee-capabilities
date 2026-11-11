@@ -406,6 +406,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "innr|SP 240": {
+      "searched_at": "2026-11-11",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "Inovelli|VZM30-SN": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": {
@@ -1042,5 +1047,5 @@
     },
     "https://sonoff.tech/product/smart-plug/s26r2zb/": null
   },
-  "generated_at": "2026-11-10T11:41:25.656Z"
+  "generated_at": "2026-11-11T22:24:42.230Z"
 }
