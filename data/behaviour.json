@@ -360,5 +360,32 @@
       },
       "last_reported": "2026-11-07T19:54:37.566Z"
     }
+  },
+  "sonoff/zbminir2": {
+    "manufacturer": "SONOFF",
+    "model": "ZBMINIR2",
+    "direct_binding": {
+      "counts": {
+        "stored_ignored": 1
+      },
+      "by_firmware": {
+        "0x00001008": {
+          "stored_ignored": 1
+        }
+      },
+      "by_clusters": {
+        "0x0006": {
+          "counts": {
+            "stored_ignored": 1
+          },
+          "by_firmware": {
+            "0x00001008": {
+              "stored_ignored": 1
+            }
+          }
+        }
+      },
+      "last_reported": "2026-11-11T23:05:06.306Z"
+    }
   }
 }
