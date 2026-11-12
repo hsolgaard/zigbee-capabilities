@@ -52123,7 +52123,19 @@
   {
     "manufacturer_slug": "iluminize",
     "model_slug": "511-201",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/iluminize_511.201.html",
+        "match_method": "vendor_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "iluminize",
+      "checked_model": "511.201",
+      "manufacturer": {
+        "url": "https://www.iluminize.com/de/shop/led-steuerung/led-controller/product/500-511-201-zigbee-dimmaktor-400w-230v.html",
+        "confidence": "high"
+      }
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -52759,7 +52771,19 @@
   {
     "manufacturer_slug": "iluminize",
     "model_slug": "511-201",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/iluminize_511.201.html",
+        "match_method": "vendor_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "iluminize",
+      "checked_model": "511.201",
+      "manufacturer": {
+        "url": "https://www.iluminize.com/de/shop/led-steuerung/led-controller/product/500-511-201-zigbee-dimmaktor-400w-230v.html",
+        "confidence": "high"
+      }
+    },
     "endpoint": 242,
     "firmware": null,
     "scan_count": 1,
