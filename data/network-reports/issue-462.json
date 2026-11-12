@@ -1,0 +1,732 @@
+{
+  "kind": "network_report",
+  "schema": 1,
+  "card_version": "1.10.7",
+  "period": {
+    "days": 2.3
+  },
+  "system": "zha",
+  "coordinator": {
+    "manufacturer": "SONOFF",
+    "model": "ZBDongle-E",
+    "firmware": ""
+  },
+  "network": {
+    "devices": 70,
+    "routers": 29,
+    "end_devices": 40
+  },
+  "devices": [
+    {
+      "id": "d1",
+      "manufacturer": "SONOFF",
+      "model": "ZBDongle-E",
+      "firmware": "",
+      "power": "mains",
+      "role": "coordinator",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d2",
+      "manufacturer": "AOYAN",
+      "model": "AY204T",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d3",
+      "manufacturer": "AOYAN",
+      "model": "AY204T",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d4",
+      "manufacturer": "AOYAN",
+      "model": "AY204T",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d5",
+      "manufacturer": "AOYAN",
+      "model": "AY204T",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 1,
+      "changes": [
+        {
+          "after_hours": 21.2,
+          "seen": "joined"
+        }
+      ]
+    },
+    {
+      "id": "d6",
+      "manufacturer": "Zbeacon",
+      "model": "DS01",
+      "firmware": "0x10033607",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d7",
+      "manufacturer": "Zbeacon",
+      "model": "DS01",
+      "firmware": "0x10033607",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d8",
+      "manufacturer": "Zbeacon",
+      "model": "DS01",
+      "firmware": "0x10033607",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d9",
+      "manufacturer": "Zbeacon",
+      "model": "DS01",
+      "firmware": "0x10033607",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d10",
+      "manufacturer": "IKEA of Sweden",
+      "model": "RODRET Dimmer",
+      "firmware": "0x01000047",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d11",
+      "manufacturer": "_TZ3000_bb6xaihh",
+      "model": "SNZB-03",
+      "firmware": "0x10033607",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d12",
+      "manufacturer": "_TZ3000_bb6xaihh",
+      "model": "SNZB-03",
+      "firmware": "0x10033607",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d13",
+      "manufacturer": "_TZ3000_bb6xaihh",
+      "model": "SNZB-03",
+      "firmware": "0x10033607",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d14",
+      "manufacturer": "_TZ3000_bb6xaihh",
+      "model": "SNZB-03",
+      "firmware": "0x10033607",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d15",
+      "manufacturer": "_TZ3000_bb6xaihh",
+      "model": "SNZB-03",
+      "firmware": "0x10033607",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d16",
+      "manufacturer": "_TZ3000_bb6xaihh",
+      "model": "SNZB-03",
+      "firmware": "0x10033607",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d17",
+      "manufacturer": "_TZ3000_famkxci2",
+      "model": "TS0043",
+      "firmware": "0x00000044",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d18",
+      "manufacturer": "_TZ3000_famkxci2",
+      "model": "TS0043",
+      "firmware": "0x00000044",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d19",
+      "manufacturer": "_TZ3000_famkxci2",
+      "model": "TS0043",
+      "firmware": "0x00000044",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d20",
+      "manufacturer": "_TZ3000_wkai4ga5",
+      "model": "TS0044",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d21",
+      "manufacturer": "_TZ3000_ee8nrt2l",
+      "model": "TS0044",
+      "firmware": "0x00000044",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d22",
+      "manufacturer": "_TZ3210_ncw88jfq",
+      "model": "TS0201",
+      "firmware": "0x00000083",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d23",
+      "manufacturer": "_TZ3210_ncw88jfq",
+      "model": "TS0201",
+      "firmware": "0x00000083",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d24",
+      "manufacturer": "Zbeacon",
+      "model": "TS0203",
+      "firmware": "0x10033607",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d25",
+      "manufacturer": "_TZ3000_0hkmcrza",
+      "model": "TS0203",
+      "firmware": "0x40013001",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d26",
+      "manufacturer": "_TZE284_7ytb3h8u",
+      "model": "TS0601",
+      "firmware": "0x00000050",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d27",
+      "manufacturer": "_TZE284_aao3yzhs",
+      "model": "TS0601",
+      "firmware": "0x0000004d",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d28",
+      "manufacturer": "HOBEIAN",
+      "model": "ZG-101ZL",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d29",
+      "manufacturer": "HOBEIAN",
+      "model": "ZG-101ZL",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d30",
+      "manufacturer": "HOBEIAN",
+      "model": "ZG-101ZL",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d31",
+      "manufacturer": "HOBEIAN",
+      "model": "ZG-101ZL",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d32",
+      "manufacturer": "HOBEIAN",
+      "model": "ZG-101ZL",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d33",
+      "manufacturer": "HOBEIAN",
+      "model": "ZG-101ZL",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d34",
+      "manufacturer": "HOBEIAN",
+      "model": "ZG-101ZL",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d35",
+      "manufacturer": "HOBEIAN",
+      "model": "ZG-101ZL",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d36",
+      "manufacturer": "HOBEIAN",
+      "model": "ZG-102Z",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d37",
+      "manufacturer": "HOBEIAN",
+      "model": "ZG-102Z",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d38",
+      "manufacturer": "HOBEIAN",
+      "model": "ZG-103Z",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d39",
+      "manufacturer": "HOBEIAN",
+      "model": "ZG-204ZK",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d40",
+      "manufacturer": "HOBEIAN",
+      "model": "ZG-204ZK",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d41",
+      "manufacturer": "HOBEIAN",
+      "model": "ZG-303Z",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d42",
+      "manufacturer": "eWeLink",
+      "model": "CK-BL702-AL-01(7009_Z102LG03-1)",
+      "firmware": "0x00001305",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d43",
+      "manufacturer": "eWeLink",
+      "model": "CK-BL702-AL-01(7009_Z102LG03-1)",
+      "firmware": "0x00001305",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d44",
+      "manufacturer": "eWeLink",
+      "model": "CK-BL702-AL-01(7009_Z102LG03-1)",
+      "firmware": "0x00001305",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d45",
+      "manufacturer": "eWeLink",
+      "model": "CK-BL702-AL-01(7009_Z102LG03-1)",
+      "firmware": "0x00001203",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d46",
+      "manufacturer": "eWeLink",
+      "model": "CK-BL702-AL-01(7009_Z102LG03-1)",
+      "firmware": "0x00001306",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d47",
+      "manufacturer": "eWeLink",
+      "model": "CK-BL702-AL-01(7009_Z102LG03-1)",
+      "firmware": "0x00001306",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d48",
+      "manufacturer": "eWeLink",
+      "model": "CK-BL702-AL-01(7009_Z102LG03-1)",
+      "firmware": "0x00001306",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d49",
+      "manufacturer": "eWeLink",
+      "model": "CK-BL702-AL-01(7009_Z102LG03-1)",
+      "firmware": "0x00001305",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d50",
+      "manufacturer": "eWeLink",
+      "model": "CK-BL702-AL-01(7009_Z102LG03-1)",
+      "firmware": "0x00001305",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d51",
+      "manufacturer": "HOBEIAN",
+      "model": "CK-BL702-MWS-01(7016)",
+      "firmware": "",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d52",
+      "manufacturer": "SONOFF",
+      "model": "DONGLE-E_R",
+      "firmware": "",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d53",
+      "manufacturer": "DOMRAEM",
+      "model": "RGBWC",
+      "firmware": "0x10013001",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d54",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI bulb GU10 WW 345lm",
+      "firmware": "0x01000042",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d55",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRETAKT Smart plug",
+      "firmware": "0x02040004",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d56",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRETAKT Smart plug",
+      "firmware": "0x02040025",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d57",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRETAKT Smart plug",
+      "firmware": "0x02040004",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d58",
+      "manufacturer": "_TZ3210_pgq2qvyv",
+      "model": "TS0502B",
+      "firmware": "0x00000065",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d59",
+      "manufacturer": "Zbeacon",
+      "model": "TS0505B",
+      "firmware": "0x10013607",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d60",
+      "manufacturer": "Zbeacon",
+      "model": "TS0505B",
+      "firmware": "0x10013607",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d61",
+      "manufacturer": "_TZ3210_r5afgmkl",
+      "model": "TS0505B",
+      "firmware": "0x10013607",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d62",
+      "manufacturer": "Zbeacon",
+      "model": "TS0505B",
+      "firmware": "0x10013607",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d63",
+      "manufacturer": "_TZE204_gkfbdvyx",
+      "model": "TS0601",
+      "firmware": "0x0000004a",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d64",
+      "manufacturer": "_TZE204_qasjif9e",
+      "model": "TS0601",
+      "firmware": "0x0000004a",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d65",
+      "manufacturer": "_TZE204_gkfbdvyx",
+      "model": "TS0601",
+      "firmware": "0x0000004a",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d66",
+      "manufacturer": "_TZE204_qasjif9e",
+      "model": "TS0601",
+      "firmware": "0x0000004a",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d67",
+      "manufacturer": "_TZE204_qasjif9e",
+      "model": "TS0601",
+      "firmware": "0x0000004a",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d68",
+      "manufacturer": "eWeLight",
+      "model": "ZB-DL01",
+      "firmware": "",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d69",
+      "manufacturer": "eWeLight",
+      "model": "ZB-DL01",
+      "firmware": "",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d70",
+      "manufacturer": "HOBEIAN",
+      "model": "ZG-305Z",
+      "firmware": "",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    }
+  ],
+  "pairs": [],
+  "misses": [],
+  "provenance": {
+    "source_issue": 462,
+    "submitted_at": "2026-11-12T14:06:50Z"
+  }
+}
