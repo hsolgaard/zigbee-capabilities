@@ -1,0 +1,393 @@
+{
+  "reports": 1,
+  "by_coordinator": {
+    "SONOFF ZBDongle-E|unknown": {
+      "reports": 1,
+      "devices": 69,
+      "address_changes": 1
+    }
+  },
+  "by_model": {
+    "AOYAN|AY204T": {
+      "devices": 4,
+      "devices_with_changes": 1,
+      "address_changes": 1,
+      "by_firmware": {
+        "unknown": {
+          "devices": 4,
+          "devices_with_changes": 1,
+          "address_changes": 1
+        }
+      }
+    },
+    "DOMRAEM|RGBWC": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x10013001": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "HOBEIAN|CK-BL702-MWS-01(7016)": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "unknown": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "HOBEIAN|ZG-101ZL": {
+      "devices": 8,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "unknown": {
+          "devices": 8,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "HOBEIAN|ZG-102Z": {
+      "devices": 2,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "unknown": {
+          "devices": 2,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "HOBEIAN|ZG-103Z": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "unknown": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "HOBEIAN|ZG-204ZK": {
+      "devices": 2,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "unknown": {
+          "devices": 2,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "HOBEIAN|ZG-303Z": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "unknown": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "HOBEIAN|ZG-305Z": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "unknown": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "IKEA of Sweden|RODRET Dimmer": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x01000047": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "IKEA of Sweden|TRADFRI bulb GU10 WW 345lm": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x01000042": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "IKEA of Sweden|TRETAKT Smart plug": {
+      "devices": 3,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x02040004": {
+          "devices": 2,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        },
+        "0x02040025": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "SONOFF|DONGLE-E_R": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "unknown": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "Zbeacon|DS01": {
+      "devices": 4,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x10033607": {
+          "devices": 4,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "Zbeacon|TS0203": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x10033607": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "Zbeacon|TS0505B": {
+      "devices": 3,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x10013607": {
+          "devices": 3,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "_TZ3000_0hkmcrza|TS0203": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x40013001": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "_TZ3000_bb6xaihh|SNZB-03": {
+      "devices": 6,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x10033607": {
+          "devices": 6,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "_TZ3000_ee8nrt2l|TS0044": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x00000044": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "_TZ3000_famkxci2|TS0043": {
+      "devices": 3,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x00000044": {
+          "devices": 3,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "_TZ3000_wkai4ga5|TS0044": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "unknown": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "_TZ3210_ncw88jfq|TS0201": {
+      "devices": 2,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x00000083": {
+          "devices": 2,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "_TZ3210_pgq2qvyv|TS0502B": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x00000065": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "_TZ3210_r5afgmkl|TS0505B": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x10013607": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "_TZE204_gkfbdvyx|TS0601": {
+      "devices": 2,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x0000004a": {
+          "devices": 2,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "_TZE204_qasjif9e|TS0601": {
+      "devices": 3,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x0000004a": {
+          "devices": 3,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "_TZE284_7ytb3h8u|TS0601": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x00000050": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "_TZE284_aao3yzhs|TS0601": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x0000004d": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "eWeLight|ZB-DL01": {
+      "devices": 2,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "unknown": {
+          "devices": 2,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "eWeLink|CK-BL702-AL-01(7009_Z102LG03-1)": {
+      "devices": 9,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x00001305": {
+          "devices": 5,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        },
+        "0x00001203": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        },
+        "0x00001306": {
+          "devices": 3,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    }
+  },
+  "misses": {
+    "total": 0,
+    "address_changed_before": 0,
+    "binding_in_table": 0
+  },
+  "remotes": {}
+}
