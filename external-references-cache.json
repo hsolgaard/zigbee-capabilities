@@ -381,6 +381,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "iluminize|511.201": {
+      "searched_at": "2026-11-12",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "iMagic by GreatStar|1117-S": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": null,
@@ -1047,5 +1052,5 @@
     },
     "https://sonoff.tech/product/smart-plug/s26r2zb/": null
   },
-  "generated_at": "2026-11-11T22:24:42.230Z"
+  "generated_at": "2026-11-12T22:24:24.190Z"
 }
