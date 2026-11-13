@@ -361,6 +361,33 @@
       "last_reported": "2026-11-07T19:54:37.566Z"
     }
   },
+  "sonoff/snzb-01m": {
+    "manufacturer": "SONOFF",
+    "model": "SNZB-01M",
+    "group_binding": {
+      "counts": {
+        "works": 1
+      },
+      "by_firmware": {
+        "0x00001100": {
+          "works": 1
+        }
+      },
+      "by_clusters": {
+        "0x0006,0x0008": {
+          "counts": {
+            "works": 1
+          },
+          "by_firmware": {
+            "0x00001100": {
+              "works": 1
+            }
+          }
+        }
+      },
+      "last_reported": "2026-11-13T18:21:42.013Z"
+    }
+  },
   "sonoff/zbminir2": {
     "manufacturer": "SONOFF",
     "model": "ZBMINIR2",
