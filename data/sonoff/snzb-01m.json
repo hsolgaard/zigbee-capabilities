@@ -1199,5 +1199,30 @@
       "confidence": "high"
     },
     "blakadder_submitted": "2026-10-25"
-  }
+  },
+  "behaviour_reports": [
+    {
+      "kind": "behaviour_report",
+      "schema": 1,
+      "behaviour": "group_binding",
+      "manufacturer": "SONOFF",
+      "model": "SNZB-01M",
+      "firmware": {
+        "sw_build_id": null,
+        "registry_sw_version": "0x00001100"
+      },
+      "endpoint": 1,
+      "clusters": [
+        "0x0006",
+        "0x0008"
+      ],
+      "target_count": 2,
+      "result": "works",
+      "card_version": "1.10.7",
+      "provenance": {
+        "submitted_at": "2026-11-13T18:21:42.013Z",
+        "source_issue": 470
+      }
+    }
+  ]
 }
