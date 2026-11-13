@@ -168,6 +168,79 @@
       }
     }
   },
+  "sonoff/snzb-01m": {
+    "manufacturer": "SONOFF",
+    "model": "SNZB-01M",
+    "total": 1,
+    "by_firmware": {
+      "0x00001100": {
+        "scan_linked": false,
+        "total": 1,
+        "by_use": {
+          "control_lights": {
+            "count": 1,
+            "ratings": {
+              "4": 1
+            },
+            "rating_average": null,
+            "answers": {
+              "direct_control": {
+                "yes": 1
+              },
+              "press_sends": {
+                "on_and_off": 1
+              },
+              "needed_setting": {
+                "no": 1
+              },
+              "presses_arrive": {
+                "always": 1
+              },
+              "hold_to_dim": {
+                "works": 1
+              },
+              "keeps_bindings": {
+                "yes": 1
+              },
+              "stays_connected": {
+                "always": 1
+              },
+              "routers": {
+                "any": 1
+              },
+              "rejoins": {
+                "never_dropped": 1
+              },
+              "pairing": {
+                "first_time": 1
+              },
+              "battery_life": {
+                "too_early": 1
+              },
+              "battery_report": {
+                "accurate": 1
+              },
+              "ota": {
+                "worked": 1
+              }
+            },
+            "context": {
+              "system": {
+                "zha": 1
+              },
+              "coordinator": {
+                "silabs": 1
+              },
+              "owned_for": {
+                "lt_year": 1
+              }
+            },
+            "tips": []
+          }
+        }
+      }
+    }
+  },
   "sonoff/zbm5-1c-80-86": {
     "manufacturer": "SONOFF",
     "model": "ZBM5-1C-80/86",
