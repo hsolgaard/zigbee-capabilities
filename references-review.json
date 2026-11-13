@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-08T19:54:57.938Z",
-  "processed": 15,
-  "blakadderMatches": 1,
-  "manufacturerLinks": 1,
-  "manualReview": 16,
+  "generated_at": "2026-11-13T10:24:42.226Z",
+  "processed": 21,
+  "blakadderMatches": 0,
+  "manufacturerLinks": 0,
+  "manualReview": 26,
   "noMatch": 0,
   "deadLinksCleared": 0,
   "ambiguous": [
@@ -94,6 +94,79 @@
       ]
     },
     {
+      "file": "data/keen-home-inc/sv01-410-mp-1-0.json",
+      "manufacturer": "Keen Home Inc",
+      "model": "SV01-410-MP-1.0",
+      "kind": "blakadder_ambiguous",
+      "reason": "Not matched by vendor + model (our manufacturer string is \"Keen Home Inc\"), but Keen Home SV01: Zigbee model \"SV01-410-MP-1.0\" matches exactly. Confirm it's the same device.",
+      "candidates": [
+        {
+          "url": "https://zigbee.blakadder.com/Keen_Home_SV01.html",
+          "vendor": "Keen Home",
+          "model": "SV01",
+          "zigbeemodel": [
+            "SV01-410-MP-1.0",
+            "SV01-410-MP-1.1",
+            "SV01-410-MP-1.4",
+            "SV01-410-MP-1.5",
+            "SV01-412-MP-1.0",
+            "SV01-610-MP-1.0",
+            "SV01-612-MP-1.0",
+            "SV01-412-MP-1.4",
+            "SV01-610-MP-1.0",
+            "SV01-612-MP-1.0"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "data/keen-home-inc/sv01-410-mp-1-1.json",
+      "manufacturer": "Keen Home Inc",
+      "model": "SV01-410-MP-1.1",
+      "kind": "blakadder_ambiguous",
+      "reason": "Not matched by vendor + model (our manufacturer string is \"Keen Home Inc\"), but Keen Home SV01: Zigbee model \"SV01-410-MP-1.1\" matches exactly. Confirm it's the same device.",
+      "candidates": [
+        {
+          "url": "https://zigbee.blakadder.com/Keen_Home_SV01.html",
+          "vendor": "Keen Home",
+          "model": "SV01",
+          "zigbeemodel": [
+            "SV01-410-MP-1.0",
+            "SV01-410-MP-1.1",
+            "SV01-410-MP-1.4",
+            "SV01-410-MP-1.5",
+            "SV01-412-MP-1.0",
+            "SV01-610-MP-1.0",
+            "SV01-612-MP-1.0",
+            "SV01-412-MP-1.4",
+            "SV01-610-MP-1.0",
+            "SV01-612-MP-1.0"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "data/keen-home-inc/sv02-410-mp-1-3.json",
+      "manufacturer": "Keen Home Inc",
+      "model": "SV02-410-MP-1.3",
+      "kind": "blakadder_ambiguous",
+      "reason": "Not matched by vendor + model (our manufacturer string is \"Keen Home Inc\"), but Keen Home SV02: Zigbee model \"SV02-410-MP-1.3\" matches exactly. Confirm it's the same device.",
+      "candidates": [
+        {
+          "url": "https://zigbee.blakadder.com/Keen_Home_SV02.html",
+          "vendor": "Keen Home",
+          "model": "SV02",
+          "zigbeemodel": [
+            "SV02-410-MP-1.3",
+            "SV02-412-MP-1.3",
+            "SV02-610-MP-1.3",
+            "SV02-612-MP-1.3",
+            "SV02-410-MP-1.0"
+          ]
+        }
+      ]
+    },
+    {
       "file": "data/ledvance/par16-tw-z3.json",
       "manufacturer": "LEDVANCE",
       "model": "PAR16 TW Z3",
@@ -150,6 +223,57 @@
           "model": "50396",
           "zigbeemodel": [
             "CCT Light"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "data/samjin/button.json",
+      "manufacturer": "Samjin",
+      "model": "button",
+      "kind": "blakadder_ambiguous",
+      "reason": "Not matched by vendor + model (our manufacturer string is \"Samjin\"), but SmartThings IM6001-BTP01: Zigbee model \"button\" matches exactly. Confirm it's the same device.",
+      "candidates": [
+        {
+          "url": "https://zigbee.blakadder.com/SmartThings_IM6001-BTP01.html",
+          "vendor": "SmartThings",
+          "model": "IM6001-BTP01",
+          "zigbeemodel": [
+            "button"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "data/samjin/multi.json",
+      "manufacturer": "Samjin",
+      "model": "multi",
+      "kind": "blakadder_ambiguous",
+      "reason": "Not matched by vendor + model (our manufacturer string is \"Samjin\"), but SmartThings IM6001-MPP01: Zigbee model \"multi\" matches exactly. Confirm it's the same device.",
+      "candidates": [
+        {
+          "url": "https://zigbee.blakadder.com/SmartThings_IM6001-MPP01.html",
+          "vendor": "SmartThings",
+          "model": "IM6001-MPP01",
+          "zigbeemodel": [
+            "multi"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "data/samjin/water.json",
+      "manufacturer": "Samjin",
+      "model": "water",
+      "kind": "blakadder_ambiguous",
+      "reason": "Not matched by vendor + model (our manufacturer string is \"Samjin\"), but SmartThings IM6001-WLP01: Zigbee model \"water\" matches exactly. Confirm it's the same device.",
+      "candidates": [
+        {
+          "url": "https://zigbee.blakadder.com/SmartThings_IM6001-WLP01.html",
+          "vendor": "SmartThings",
+          "model": "IM6001-WLP01",
+          "zigbeemodel": [
+            "water"
           ]
         }
       ]
@@ -258,6 +382,23 @@
           "model": "SNZB-03P",
           "zigbeemodel": [
             "SNZB-03P"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "data/third-reality-inc/3rws18bz.json",
+      "manufacturer": "Third Reality, Inc",
+      "model": "3RWS18BZ",
+      "kind": "blakadder_ambiguous",
+      "reason": "Not matched by vendor + model (our manufacturer string is \"Third Reality, Inc\"), but Third Reality 3RWS18BZ: Zigbee model \"3RWS18BZ\" matches exactly. Confirm it's the same device.",
+      "candidates": [
+        {
+          "url": "https://zigbee.blakadder.com/Third_Reality_3RWS18BZ.html",
+          "vendor": "Third Reality",
+          "model": "3RWS18BZ",
+          "zigbeemodel": [
+            "3RWS18BZ"
           ]
         }
       ]
@@ -1336,6 +1477,39 @@
       ]
     },
     {
+      "file": "data/samjin/button.json",
+      "manufacturer": "Samjin",
+      "model": "button",
+      "kind": "manufacturer_link_search",
+      "guessedUrl": "https://partners.smartthings.com/explore/a-magic-button-for-extra-convenience",
+      "title": "A magic button for extra convenience",
+      "method": "sitemap of smartthings.com",
+      "evidence": "page mentions \"button\"",
+      "reason": "Found by vendor search (sitemap of smartthings.com; page mentions \"button\"); pre-filled as this device's manufacturer link on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
+    },
+    {
+      "file": "data/samjin/multi.json",
+      "manufacturer": "Samjin",
+      "model": "multi",
+      "kind": "manufacturer_link_search",
+      "guessedUrl": "https://partners.smartthings.com/partners/ezmultipli",
+      "title": "EZMultiPli",
+      "method": "sitemap of smartthings.com",
+      "evidence": "page mentions \"multi\"",
+      "reason": "Found by vendor search (sitemap of smartthings.com; page mentions \"multi\"); pre-filled as this device's manufacturer link on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
+    },
+    {
+      "file": "data/samjin/water.json",
+      "manufacturer": "Samjin",
+      "model": "water",
+      "kind": "manufacturer_link_search",
+      "guessedUrl": "https://partners.smartthings.com/partners/watergate",
+      "title": "Watergate",
+      "method": "sitemap of smartthings.com",
+      "evidence": "page mentions \"water\"",
+      "reason": "Found by vendor search (sitemap of smartthings.com; page mentions \"water\"); pre-filled as this device's manufacturer link on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
+    },
+    {
       "file": "data/sonoff/dongle-e-r.json",
       "manufacturer": "SONOFF",
       "model": "DONGLE-E_R",
@@ -1594,6 +1768,30 @@
       "kind": "blakadder_submission_incomplete"
     },
     {
+      "file": "data/adeo/zbek-5.json",
+      "manufacturer": "Adeo",
+      "model": "ZBEK-5",
+      "fields": {
+        "manufacturer": "ADEO",
+        "deviceName": "ENKI LEXMAN E27 LED white",
+        "model": "IST-CDZFB2AS007NA-MZN-01",
+        "zigbeeId": "ZBEK-5",
+        "category": "light",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"Adeo\", model \"ZBEK-5\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
       "file": "data/aqara/ceiling-light-t1m.json",
       "manufacturer": "Aqara",
       "model": "Ceiling Light T1M",
@@ -1711,6 +1909,30 @@
       "missing": [
         "device name",
         "category",
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/centralite/4257050-rzhac.json",
+      "manufacturer": "CentraLite",
+      "model": "4257050-RZHAC",
+      "fields": {
+        "manufacturer": "Centralite",
+        "deviceName": "3-Series smart outlet",
+        "model": "4257050-RZHAC",
+        "zigbeeId": "4257050-RZHAC",
+        "category": "plug",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"CentraLite\", model \"4257050-RZHAC\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
         "vendor (where to buy) link"
       ],
       "kind": "blakadder_submission_incomplete"
@@ -2006,6 +2228,30 @@
       "kind": "blakadder_submission_incomplete"
     },
     {
+      "file": "data/innr/sp-240.json",
+      "manufacturer": "innr",
+      "model": "SP 240",
+      "fields": {
+        "manufacturer": "Innr",
+        "deviceName": "Smart plug (EU)",
+        "model": "SP 240",
+        "zigbeeId": "SP 240",
+        "category": "plug",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"innr\", model \"SP 240\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
       "file": "data/jasco-products/35938.json",
       "manufacturer": "Jasco Products",
       "model": "35938",
@@ -2108,20 +2354,20 @@
       "model": "RS-R03AZG",
       "fields": {
         "manufacturer": "Repenic Ltd.",
-        "deviceName": "",
-        "model": "RS-R03AZG",
+        "deviceName": "Smart plug with power monitoring",
+        "model": "RS-T03AZG",
         "zigbeeId": "RS-R03AZG",
-        "category": "light",
+        "category": "plug",
         "vendorLink": "",
         "manufacturerLink": "",
         "gateways": [
-          "ZHA"
+          "ZHA",
+          "Zigbee2MQTT"
         ],
         "description": "",
         "notes": "Zigbee signature from a ZHA scan: manufacturer \"Repenic Ltd.\", model \"RS-R03AZG\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
       },
       "missing": [
-        "device name",
         "vendor (where to buy) link"
       ],
       "kind": "blakadder_submission_incomplete"
@@ -2170,6 +2416,30 @@
       },
       "missing": [
         "device name",
+        "vendor (where to buy) link"
+      ],
+      "kind": "blakadder_submission_incomplete"
+    },
+    {
+      "file": "data/third-reality-inc/3rcb01057z.json",
+      "manufacturer": "Third Reality, Inc",
+      "model": "3RCB01057Z",
+      "fields": {
+        "manufacturer": "Third Reality",
+        "deviceName": "Smart Color Bulb ZL1",
+        "model": "3RCB01057Z",
+        "zigbeeId": "3RCB01057Z",
+        "category": "light",
+        "vendorLink": "",
+        "manufacturerLink": "",
+        "gateways": [
+          "ZHA",
+          "Zigbee2MQTT"
+        ],
+        "description": "",
+        "notes": "Zigbee signature from a ZHA scan: manufacturer \"Third Reality, Inc\", model \"3RCB01057Z\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
+      },
+      "missing": [
         "vendor (where to buy) link"
       ],
       "kind": "blakadder_submission_incomplete"
