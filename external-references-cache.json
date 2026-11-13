@@ -1050,7 +1050,11 @@
       "title": "TRÅDFRI series",
       "shop": true
     },
-    "https://sonoff.tech/product/smart-plug/s26r2zb/": null
+    "https://sonoff.tech/product/smart-plug/s26r2zb/": null,
+    "https://www.iluminize.com/de/shop/led-steuerung/led-controller/product/500-511-201-zigbee-dimmaktor-400w-230v.html": {
+      "title": "Zigbee-Aktor für dimmbare Leuchtmittel bei 230V",
+      "shop": true
+    }
   },
-  "generated_at": "2026-11-12T22:24:24.190Z"
+  "generated_at": "2026-11-13T10:24:36.770Z"
 }
