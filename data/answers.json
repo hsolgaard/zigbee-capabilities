@@ -110,6 +110,62 @@
       }
     }
   },
+  "keen-home-inc/sv01-410-mp-1-1": {
+    "manufacturer": "Keen Home Inc",
+    "model": "SV01-410-MP-1.1",
+    "total": 1,
+    "by_firmware": {
+      "0x00000012": {
+        "scan_linked": false,
+        "total": 1,
+        "by_use": {
+          "other": {
+            "count": 1,
+            "ratings": {
+              "3": 1
+            },
+            "rating_average": null,
+            "answers": {
+              "stays_connected": {
+                "drops_occasionally": 1
+              },
+              "rejoins": {
+                "after_press": 1
+              },
+              "pairing": {
+                "first_time": 1
+              },
+              "position_accurate": {
+                "yes": 1
+              },
+              "battery_life": {
+                "m1_6": 1
+              },
+              "battery_report": {
+                "drops_suddenly": 1
+              },
+              "ota": {
+                "never_offered": 1
+              }
+            },
+            "context": {
+              "system": {
+                "zha": 1
+              }
+            },
+            "tips": [
+              {
+                "text": "smart vent",
+                "kind": "other",
+                "question": "use",
+                "submitted_at": "2026-11-14T15:30:23.792Z"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
   "ledvance/p40-tw-value": {
     "manufacturer": "LEDVANCE",
     "model": "P40 TW Value",
