@@ -1181,5 +1181,40 @@
         }
       }
     }
-  }
+  },
+  "device_answers": [
+    {
+      "kind": "device_answers",
+      "schema": 1,
+      "questions_version": 2,
+      "manufacturer": "Keen Home Inc",
+      "model": "SV01-410-MP-1.1",
+      "firmware": {
+        "registry_sw_version": "0x00000012"
+      },
+      "device_type": "cover",
+      "use": "other",
+      "answers": {
+        "stays_connected": "drops_occasionally",
+        "rejoins": "after_press",
+        "pairing": "first_time",
+        "position_accurate": "yes",
+        "battery_life": "m1_6",
+        "battery_report": "drops_suddenly",
+        "ota": "never_offered"
+      },
+      "other": {
+        "use": "smart vent"
+      },
+      "rating": 3,
+      "context": {
+        "system": "zha"
+      },
+      "card_version": "1.10.7",
+      "provenance": {
+        "submitted_at": "2026-11-14T15:30:23.792Z",
+        "source_issue": 474
+      }
+    }
+  ]
 }
