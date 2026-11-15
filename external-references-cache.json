@@ -474,6 +474,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "LEDVANCE|A19 W 10 year": {
+      "searched_at": "2026-11-15",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "LEDVANCE|A60 RGBW Value II": {
       "searched_at": "2026-10-30",
       "manufacturer_candidate": null,
@@ -599,6 +604,11 @@
     },
     "Schneider Electric|W599501": {
       "searched_at": "2026-11-05",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "sengled|E11-G13": {
+      "searched_at": "2026-11-15",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -1061,5 +1071,5 @@
       "shop": true
     }
   },
-  "generated_at": "2026-11-15T13:13:32.166Z"
+  "generated_at": "2026-11-15T13:14:28.034Z"
 }

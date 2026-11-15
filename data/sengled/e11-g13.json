@@ -987,5 +987,18 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Sengled_E11-G13.html",
+      "match_method": "vendor_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "sengled",
+    "checked_model": "E11-G13",
+    "manufacturer": {
+      "url": "https://us.sengled.com/products/sengled-smart-led-soft-white-a19-bulb",
+      "confidence": "high"
+    }
   }
 }
