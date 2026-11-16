@@ -230,6 +230,33 @@
       "last_reported": "2026-11-07T19:53:00.522Z"
     }
   },
+  "ikea-of-sweden/tradfri-remote-control": {
+    "manufacturer": "IKEA of Sweden",
+    "model": "TRADFRI remote control",
+    "group_binding": {
+      "counts": {
+        "rejected": 1
+      },
+      "by_firmware": {
+        "0x24040005": {
+          "rejected": 1
+        }
+      },
+      "by_clusters": {
+        "0x0006,0x0008": {
+          "counts": {
+            "rejected": 1
+          },
+          "by_firmware": {
+            "0x24040005": {
+              "rejected": 1
+            }
+          }
+        }
+      },
+      "last_reported": "2026-11-16T17:25:14.962Z"
+    }
+  },
   "ikea-of-sweden/tradfri-shortcut-button": {
     "manufacturer": "IKEA of Sweden",
     "model": "TRADFRI SHORTCUT Button",
