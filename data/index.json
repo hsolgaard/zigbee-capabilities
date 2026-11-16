@@ -13544,7 +13544,11 @@
   {
     "manufacturer_slug": "aurora",
     "model_slug": "twmprozxbulb50au",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "Aurora",
+      "checked_model": "TWMPROZXBulb50AU"
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -14191,7 +14195,11 @@
   {
     "manufacturer_slug": "aurora",
     "model_slug": "twmprozxbulb50au",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "Aurora",
+      "checked_model": "TWMPROZXBulb50AU"
+    },
     "endpoint": 242,
     "firmware": null,
     "scan_count": 1,
