@@ -186,6 +186,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "Heiman|DOOR_TPV13": {
+      "searched_at": "2026-11-16",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "hhiodade|Moes-1-gang": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": null,
@@ -1072,5 +1077,5 @@
     },
     "https://us.sengled.com/products/sengled-smart-led-soft-white-a19-bulb": null
   },
-  "generated_at": "2026-11-16T17:46:33.430Z"
+  "generated_at": "2026-11-16T17:47:03.841Z"
 }

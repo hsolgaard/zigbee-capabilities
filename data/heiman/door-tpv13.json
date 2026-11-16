@@ -736,5 +736,18 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Heiman_HS1DS.html",
+      "match_method": "vendor_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "Heiman",
+    "checked_model": "DOOR_TPV13",
+    "manufacturer": {
+      "url": "http://www.heimantech.com/product/?type=detail&id=9",
+      "confidence": "high"
+    }
   }
 }
