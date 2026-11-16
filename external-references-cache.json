@@ -622,6 +622,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "Shelly|1": {
+      "searched_at": "2026-11-16",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "Shyugj|Dimmer-Switch-ZB3.0": {
       "searched_at": "2026-11-05",
       "manufacturer_candidate": null,
@@ -1075,7 +1080,11 @@
       "title": "Zigbee-Aktor für dimmbare Leuchtmittel bei 230V",
       "shop": true
     },
-    "https://us.sengled.com/products/sengled-smart-led-soft-white-a19-bulb": null
+    "https://us.sengled.com/products/sengled-smart-led-soft-white-a19-bulb": null,
+    "http://www.heimantech.com/product/?type=detail&id=9": {
+      "title": "Matter-Compatible Smart Door Sensor HS1DS Series",
+      "shop": true
+    }
   },
-  "generated_at": "2026-11-16T17:47:03.841Z"
+  "generated_at": "2026-11-16T18:06:23.075Z"
 }
