@@ -146,6 +146,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "Aurora|TWMPROZXBulb50AU": {
+      "searched_at": "2026-11-16",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "AwoX|TLSR82xx": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": null,
@@ -1086,5 +1091,5 @@
       "shop": true
     }
   },
-  "generated_at": "2026-11-16T18:06:23.075Z"
+  "generated_at": "2026-11-16T20:00:29.818Z"
 }
