@@ -1,0 +1,740 @@
+{
+  "observations": [
+    {
+      "manufacturer": "Heiman",
+      "model": "DOOR_TPV13",
+      "identity": {
+        "sw_build_id": null,
+        "hw_version": null,
+        "date_code": null
+      },
+      "endpoints": [
+        {
+          "endpoint": {
+            "id": 1,
+            "profile": "0x0104",
+            "device_type": "0x0402",
+            "in_clusters": [
+              "0x0000",
+              "0x0001",
+              "0x0003",
+              "0x0009",
+              "0x0500"
+            ],
+            "out_clusters": [
+              "0x0019"
+            ]
+          },
+          "scanned": true,
+          "clusters": {
+            "0x0000": {
+              "name": "Basic",
+              "commands_received": [
+                {
+                  "id": 0,
+                  "name": "Reset to factory defaults",
+                  "present": true
+                }
+              ],
+              "commands_received_confirmed": true,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "zcl_version",
+                  "access": "READ"
+                },
+                {
+                  "id": 1,
+                  "name": "app_version",
+                  "access": "READ"
+                },
+                {
+                  "id": 2,
+                  "name": "stack_version",
+                  "access": "READ"
+                },
+                {
+                  "id": 3,
+                  "name": "hw_version",
+                  "access": "READ"
+                },
+                {
+                  "id": 4,
+                  "name": "manufacturer",
+                  "access": "READ"
+                },
+                {
+                  "id": 5,
+                  "name": "model",
+                  "access": "READ"
+                },
+                {
+                  "id": 6,
+                  "name": "date_code",
+                  "access": "READ"
+                },
+                {
+                  "id": 7,
+                  "name": "power_source",
+                  "access": "READ"
+                },
+                {
+                  "id": 16,
+                  "name": "location_desc",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 17,
+                  "name": "physical_env",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 18,
+                  "name": "device_enabled",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 19,
+                  "name": "alarm_mask",
+                  "access": "READ|WRITE"
+                }
+              ]
+            },
+            "0x0001": {
+              "name": "Power Configuration",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "mains_voltage",
+                  "access": "READ"
+                },
+                {
+                  "id": 1,
+                  "name": "mains_frequency",
+                  "access": "READ"
+                },
+                {
+                  "id": 16,
+                  "name": "mains_alarm_mask",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 17,
+                  "name": "mains_volt_min_thres",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 18,
+                  "name": "mains_volt_max_thres",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 19,
+                  "name": "mains_voltage_dwell_trip_point",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 32,
+                  "name": "battery_voltage",
+                  "access": "READ"
+                },
+                {
+                  "id": 33,
+                  "name": "battery_percentage_remaining",
+                  "access": "READ|REPORT"
+                },
+                {
+                  "id": 48,
+                  "name": "battery_manufacturer",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 49,
+                  "name": "battery_size",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 50,
+                  "name": "battery_a_hr_rating",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 51,
+                  "name": "battery_quantity",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 52,
+                  "name": "battery_rated_voltage",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 53,
+                  "name": "battery_alarm_mask",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 54,
+                  "name": "battery_volt_min_thres",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 55,
+                  "name": "battery_volt_thres1",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 56,
+                  "name": "battery_volt_thres2",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 57,
+                  "name": "battery_volt_thres3",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 58,
+                  "name": "battery_percent_min_thres",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 59,
+                  "name": "battery_percent_thres1",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 60,
+                  "name": "battery_percent_thres2",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 61,
+                  "name": "battery_percent_thres3",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 62,
+                  "name": "battery_alarm_state",
+                  "access": "READ|REPORT"
+                }
+              ]
+            },
+            "0x0003": {
+              "name": "Identify",
+              "commands_received": [
+                {
+                  "id": 0,
+                  "name": "Identify",
+                  "present": true
+                },
+                {
+                  "id": 1,
+                  "name": "Identify query",
+                  "present": true
+                },
+                {
+                  "id": 64,
+                  "name": "Trigger identify effect",
+                  "present": false
+                }
+              ],
+              "commands_received_confirmed": true,
+              "commands_generated": [
+                {
+                  "id": 0,
+                  "name": "identify_query_response"
+                }
+              ],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "identify_time",
+                  "access": "READ|WRITE"
+                }
+              ]
+            },
+            "0x0009": {
+              "name": "Alarms",
+              "commands_received": [
+                {
+                  "id": 0,
+                  "name": "Reset alarm",
+                  "present": true
+                },
+                {
+                  "id": 1,
+                  "name": "Reset all alarms",
+                  "present": true
+                },
+                {
+                  "id": 2,
+                  "name": "Get alarm",
+                  "present": true
+                },
+                {
+                  "id": 3,
+                  "name": "Reset alarm log",
+                  "present": true
+                }
+              ],
+              "commands_received_confirmed": true,
+              "commands_generated": [
+                {
+                  "id": 0,
+                  "name": "alarm"
+                },
+                {
+                  "id": 1,
+                  "name": "get_alarm_response"
+                }
+              ],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "alarm_count",
+                  "access": "READ"
+                }
+              ]
+            },
+            "0x0500": {
+              "name": "IAS Zone",
+              "commands_received": [
+                {
+                  "id": 0,
+                  "name": "Enroll response",
+                  "present": true
+                },
+                {
+                  "id": 1,
+                  "name": "Initiate normal operation mode",
+                  "present": true
+                },
+                {
+                  "id": 2,
+                  "name": "Initiate test mode",
+                  "present": true
+                }
+              ],
+              "commands_received_confirmed": true,
+              "commands_generated": [
+                {
+                  "id": 0,
+                  "name": "status_change_notification"
+                },
+                {
+                  "id": 1,
+                  "name": "enroll"
+                }
+              ],
+              "attributes_confirmed": [
+                {
+                  "id": 0,
+                  "name": "zone_state",
+                  "access": "READ"
+                },
+                {
+                  "id": 1,
+                  "name": "zone_type",
+                  "access": "READ"
+                },
+                {
+                  "id": 2,
+                  "name": "zone_status",
+                  "access": "READ"
+                },
+                {
+                  "id": 16,
+                  "name": "cie_addr",
+                  "access": "READ|WRITE"
+                },
+                {
+                  "id": 17,
+                  "name": "zone_id",
+                  "access": "READ"
+                },
+                {
+                  "id": 18,
+                  "name": "num_zone_sensitivity_levels_supported",
+                  "access": "READ"
+                },
+                {
+                  "id": 19,
+                  "name": "current_zone_sensitivity_level",
+                  "access": "READ|WRITE"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "provenance": {
+        "submitted_at": "2026-11-16T15:50:49.867Z",
+        "card_version": "1.10.7",
+        "source_issue": 482
+      }
+    }
+  ],
+  "capabilities": {
+    "1|unknown": {
+      "endpoint": 1,
+      "firmware": null,
+      "scan_count": 1,
+      "last_seen": "2026-11-16T15:50:49.867Z",
+      "manufacturer": "Heiman",
+      "model": "DOOR_TPV13",
+      "in_clusters": [
+        "0x0000",
+        "0x0001",
+        "0x0003",
+        "0x0009",
+        "0x0500"
+      ],
+      "out_clusters": [
+        "0x0019"
+      ],
+      "clusters": {
+        "0x0000": {
+          "name": "Basic",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Reset to factory defaults",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zcl_version",
+              "access": "READ"
+            },
+            {
+              "id": 1,
+              "name": "app_version",
+              "access": "READ"
+            },
+            {
+              "id": 2,
+              "name": "stack_version",
+              "access": "READ"
+            },
+            {
+              "id": 3,
+              "name": "hw_version",
+              "access": "READ"
+            },
+            {
+              "id": 4,
+              "name": "manufacturer",
+              "access": "READ"
+            },
+            {
+              "id": 5,
+              "name": "model",
+              "access": "READ"
+            },
+            {
+              "id": 6,
+              "name": "date_code",
+              "access": "READ"
+            },
+            {
+              "id": 7,
+              "name": "power_source",
+              "access": "READ"
+            },
+            {
+              "id": 16,
+              "name": "location_desc",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 17,
+              "name": "physical_env",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 18,
+              "name": "device_enabled",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 19,
+              "name": "alarm_mask",
+              "access": "READ|WRITE"
+            }
+          ]
+        },
+        "0x0001": {
+          "name": "Power Configuration",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "mains_voltage",
+              "access": "READ"
+            },
+            {
+              "id": 1,
+              "name": "mains_frequency",
+              "access": "READ"
+            },
+            {
+              "id": 16,
+              "name": "mains_alarm_mask",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 17,
+              "name": "mains_volt_min_thres",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 18,
+              "name": "mains_volt_max_thres",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 19,
+              "name": "mains_voltage_dwell_trip_point",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 32,
+              "name": "battery_voltage",
+              "access": "READ"
+            },
+            {
+              "id": 33,
+              "name": "battery_percentage_remaining",
+              "access": "READ|REPORT"
+            },
+            {
+              "id": 48,
+              "name": "battery_manufacturer",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 49,
+              "name": "battery_size",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 50,
+              "name": "battery_a_hr_rating",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 51,
+              "name": "battery_quantity",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 52,
+              "name": "battery_rated_voltage",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 53,
+              "name": "battery_alarm_mask",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 54,
+              "name": "battery_volt_min_thres",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 55,
+              "name": "battery_volt_thres1",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 56,
+              "name": "battery_volt_thres2",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 57,
+              "name": "battery_volt_thres3",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 58,
+              "name": "battery_percent_min_thres",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 59,
+              "name": "battery_percent_thres1",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 60,
+              "name": "battery_percent_thres2",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 61,
+              "name": "battery_percent_thres3",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 62,
+              "name": "battery_alarm_state",
+              "access": "READ|REPORT"
+            }
+          ]
+        },
+        "0x0003": {
+          "name": "Identify",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Identify",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "Identify query",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 64,
+              "name": "Trigger identify effect",
+              "present": false,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "identify_time",
+              "access": "READ|WRITE"
+            }
+          ]
+        },
+        "0x0009": {
+          "name": "Alarms",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Reset alarm",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "Reset all alarms",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 2,
+              "name": "Get alarm",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 3,
+              "name": "Reset alarm log",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "alarm_count",
+              "access": "READ"
+            }
+          ]
+        },
+        "0x0500": {
+          "name": "IAS Zone",
+          "commands_received": [
+            {
+              "id": 0,
+              "name": "Enroll response",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 1,
+              "name": "Initiate normal operation mode",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            },
+            {
+              "id": 2,
+              "name": "Initiate test mode",
+              "present": true,
+              "conflicting": false,
+              "scan_count": 1
+            }
+          ],
+          "commands_received_scan_count": 1,
+          "attributes_confirmed": [
+            {
+              "id": 0,
+              "name": "zone_state",
+              "access": "READ"
+            },
+            {
+              "id": 1,
+              "name": "zone_type",
+              "access": "READ"
+            },
+            {
+              "id": 2,
+              "name": "zone_status",
+              "access": "READ"
+            },
+            {
+              "id": 16,
+              "name": "cie_addr",
+              "access": "READ|WRITE"
+            },
+            {
+              "id": 17,
+              "name": "zone_id",
+              "access": "READ"
+            },
+            {
+              "id": 18,
+              "name": "num_zone_sensitivity_levels_supported",
+              "access": "READ"
+            },
+            {
+              "id": 19,
+              "name": "current_zone_sensitivity_level",
+              "access": "READ|WRITE"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
