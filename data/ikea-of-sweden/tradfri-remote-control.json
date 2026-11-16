@@ -1,0 +1,29 @@
+{
+  "observations": [],
+  "capabilities": {},
+  "behaviour_reports": [
+    {
+      "kind": "behaviour_report",
+      "schema": 1,
+      "behaviour": "group_binding",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI remote control",
+      "firmware": {
+        "sw_build_id": null,
+        "registry_sw_version": "0x24040005"
+      },
+      "endpoint": 1,
+      "clusters": [
+        "0x0006",
+        "0x0008"
+      ],
+      "target_count": 1,
+      "result": "rejected",
+      "card_version": "1.10.7",
+      "provenance": {
+        "submitted_at": "2026-11-16T17:25:14.962Z",
+        "source_issue": 484
+      }
+    }
+  ]
+}
