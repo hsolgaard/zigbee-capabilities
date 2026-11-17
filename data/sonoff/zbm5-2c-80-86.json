@@ -2568,12 +2568,16 @@
                 {
                   "id": 1,
                   "name": "1",
-                  "access": "READ|WRITE|REPORT"
+                  "access": "READ|WRITE|REPORT",
+                  "resolved_name": "network_led",
+                  "resolved_source": "zigbee-herdsman-converters"
                 },
                 {
                   "id": 16,
                   "name": "16",
-                  "access": "READ|REPORT"
+                  "access": "READ|REPORT",
+                  "resolved_name": "fault_code",
+                  "resolved_source": "zigbee-herdsman-converters"
                 },
                 {
                   "id": 24,
@@ -2603,7 +2607,9 @@
                 {
                   "id": 65533,
                   "name": "65533",
-                  "access": "READ|REPORT"
+                  "access": "READ|REPORT",
+                  "resolved_name": "cluster_revision",
+                  "resolved_source": "zcl-spec"
                 }
               ]
             },
@@ -3445,13 +3451,17 @@
               "resolved_name": "cluster_revision",
               "resolved_source": "zcl-spec"
             }
-          ]
+          ],
+          "resolved_name": "customClusterEwelink",
+          "resolved_source": "zigbee-herdsman-converters"
         },
         "0xfc57": {
           "name": "Cluster 0xfc57",
           "commands_received": [],
           "commands_received_scan_count": 0,
-          "attributes_confirmed": []
+          "attributes_confirmed": [],
+          "resolved_name": "WorksWithAllHubs (WWAH)",
+          "resolved_source": "zigpy"
         }
       }
     },
@@ -4233,12 +4243,16 @@
             {
               "id": 1,
               "name": "1",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "network_led",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 16,
               "name": "16",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "fault_code",
+              "resolved_source": "zigbee-herdsman-converters"
             },
             {
               "id": 24,
@@ -4268,7 +4282,9 @@
             {
               "id": 65533,
               "name": "65533",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "cluster_revision",
+              "resolved_source": "zcl-spec"
             }
           ]
         },
