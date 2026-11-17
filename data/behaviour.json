@@ -58,26 +58,34 @@
     "model": "Remote Control N2",
     "group_binding": {
       "counts": {
-        "works": 2
+        "works": 2,
+        "stored_ignored": 1
       },
       "by_firmware": {
         "0x00010024": {
           "works": 2
+        },
+        "0x02040016": {
+          "stored_ignored": 1
         }
       },
       "by_clusters": {
         "0x0006,0x0008": {
           "counts": {
-            "works": 2
+            "works": 2,
+            "stored_ignored": 1
           },
           "by_firmware": {
             "0x00010024": {
               "works": 2
+            },
+            "0x02040016": {
+              "stored_ignored": 1
             }
           }
         }
       },
-      "last_reported": "2026-11-06T20:02:50.739Z"
+      "last_reported": "2026-11-17T15:44:02.979Z"
     },
     "direct_binding": {
       "counts": {
