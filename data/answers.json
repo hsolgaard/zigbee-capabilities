@@ -57,6 +57,43 @@
       }
     }
   },
+  "ikea-of-sweden/tredansen-block-out-cellul-blind": {
+    "manufacturer": "IKEA of Sweden",
+    "model": "TREDANSEN block-out cellul blind",
+    "total": 1,
+    "by_firmware": {
+      "0x24040013": {
+        "scan_linked": false,
+        "total": 1,
+        "by_use": {
+          "blind": {
+            "count": 1,
+            "ratings": {
+              "5": 1
+            },
+            "rating_average": null,
+            "answers": {
+              "stays_connected": {
+                "always": 1
+              },
+              "position_accurate": {
+                "yes": 1
+              },
+              "battery_life": {
+                "m1_6": 1
+              }
+            },
+            "context": {
+              "system": {
+                "zha": 1
+              }
+            },
+            "tips": []
+          }
+        }
+      }
+    }
+  },
   "ikea-of-sweden/vindstyrka": {
     "manufacturer": "IKEA of Sweden",
     "model": "VINDSTYRKA",
