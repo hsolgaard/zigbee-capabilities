@@ -1,6 +1,11 @@
 {
-  "reports": 1,
+  "reports": 2,
   "by_coordinator": {
+    "Nabu Casa Home Assistant Connect ZBT-2|unknown": {
+      "reports": 1,
+      "devices": 63,
+      "address_changes": 3
+    },
     "SONOFF ZBDongle-E|unknown": {
       "reports": 1,
       "devices": 69,
@@ -17,6 +22,42 @@
           "devices": 4,
           "devices_with_changes": 1,
           "address_changes": 1
+        }
+      }
+    },
+    "Aqara|lumi.light.acn003": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x0000001d": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "Computime|SLR1b": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x03025700": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "Computime|SLT3b": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x05060212": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
         }
       }
     },
@@ -128,12 +169,221 @@
         }
       }
     },
+    "IKEA of Sweden|Remote Control N2": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x02040016": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "IKEA of Sweden|TRADFRI Driver 30W": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x23086631": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "IKEA of Sweden|TRADFRI SHORTCUT Button": {
+      "devices": 6,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x24040006": {
+          "devices": 6,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "IKEA of Sweden|TRADFRI Signal Repeater": {
+      "devices": 2,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x23086631": {
+          "devices": 2,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "IKEA of Sweden|TRADFRI bulb E27 WS opal 1000lm": {
+      "devices": 5,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x23095631": {
+          "devices": 5,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "IKEA of Sweden|TRADFRI bulb E27 WW 806lm": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x23093631": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
     "IKEA of Sweden|TRADFRI bulb GU10 WW 345lm": {
       "devices": 1,
       "devices_with_changes": 0,
       "address_changes": 0,
       "by_firmware": {
         "0x01000042": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "IKEA of Sweden|TRADFRI control outlet": {
+      "devices": 3,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x23089631": {
+          "devices": 3,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "IKEA of Sweden|TRADFRI on/off switch": {
+      "devices": 8,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x24040006": {
+          "devices": 7,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        },
+        "0x23079631": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "IKEA of Sweden|TRADFRI open/close remote": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x24040006": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "IKEA of Sweden|TRADFRIbulbB22WSglobeopal1055lm": {
+      "devices": 1,
+      "devices_with_changes": 1,
+      "address_changes": 1,
+      "by_firmware": {
+        "0x00010012": {
+          "devices": 1,
+          "devices_with_changes": 1,
+          "address_changes": 1
+        }
+      }
+    },
+    "IKEA of Sweden|TRADFRIbulbE14WScandleopal470lm": {
+      "devices": 2,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x01010020": {
+          "devices": 2,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "IKEA of Sweden|TRADFRIbulbE14WSglobeopal470lm": {
+      "devices": 1,
+      "devices_with_changes": 1,
+      "address_changes": 1,
+      "by_firmware": {
+        "0x00010012": {
+          "devices": 1,
+          "devices_with_changes": 1,
+          "address_changes": 1
+        }
+      }
+    },
+    "IKEA of Sweden|TRADFRIbulbE27WSglobeopal1055lm": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x00010012": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "IKEA of Sweden|TRADFRIbulbE27WWclear250lm": {
+      "devices": 1,
+      "devices_with_changes": 1,
+      "address_changes": 1,
+      "by_firmware": {
+        "0x01010004": {
+          "devices": 1,
+          "devices_with_changes": 1,
+          "address_changes": 1
+        }
+      }
+    },
+    "IKEA of Sweden|TRADFRIbulbGU10WS345lm": {
+      "devices": 6,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x00010012": {
+          "devices": 6,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "IKEA of Sweden|TRADFRIbulbT120E27WSopal470lm": {
+      "devices": 3,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x00010012": {
+          "devices": 3,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "IKEA of Sweden|TREDANSEN block-out cellul blind": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x24040013": {
           "devices": 1,
           "devices_with_changes": 0,
           "address_changes": 0
@@ -152,6 +402,78 @@
         },
         "0x02040025": {
           "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "LUMI|lumi.motion.ac02": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x00000006": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "LUMI|lumi.sensor_magnet.aq2": {
+      "devices": 3,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "unknown": {
+          "devices": 3,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "LUMI|lumi.sensor_wleak.aq1": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "unknown": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "LUMI|lumi.switch.n1aeu1": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x00000b17": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "LUMI|lumi.vibration.aq1": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "unknown": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "LUMI|lumi.weather": {
+      "devices": 4,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "unknown": {
+          "devices": 4,
           "devices_with_changes": 0,
           "address_changes": 0
         }
@@ -301,6 +623,23 @@
         }
       }
     },
+    "_TZE200_cwnjrr72|TS0601": {
+      "devices": 5,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x00000055": {
+          "devices": 4,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        },
+        "0x00000057": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
     "_TZE204_gkfbdvyx|TS0601": {
       "devices": 2,
       "devices_with_changes": 0,
@@ -385,9 +724,15 @@
     }
   },
   "misses": {
-    "total": 0,
-    "address_changed_before": 0,
-    "binding_in_table": 0
+    "total": 9,
+    "address_changed_before": 2,
+    "binding_in_table": 9
   },
-  "remotes": {}
+  "remotes": {
+    "IKEA of Sweden|TRADFRI on/off switch": {
+      "presses": 230,
+      "missed": 9,
+      "missed_after_address_change": 2
+    }
+  }
 }
