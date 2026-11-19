@@ -1,0 +1,908 @@
+{
+  "kind": "network_report",
+  "schema": 1,
+  "card_version": "1.10.7",
+  "period": {
+    "days": 9.2
+  },
+  "system": "zha",
+  "coordinator": {
+    "manufacturer": "Nabu Casa",
+    "model": "Home Assistant Connect ZBT-2",
+    "firmware": ""
+  },
+  "network": {
+    "devices": 64,
+    "routers": 30,
+    "end_devices": 33
+  },
+  "devices": [
+    {
+      "id": "d1",
+      "manufacturer": "Nabu Casa",
+      "model": "Home Assistant Connect ZBT-2",
+      "firmware": "",
+      "power": "mains",
+      "role": "coordinator",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d2",
+      "manufacturer": "LUMI",
+      "model": "lumi.motion.ac02",
+      "firmware": "0x00000006",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d3",
+      "manufacturer": "LUMI",
+      "model": "lumi.sensor_magnet.aq2",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d4",
+      "manufacturer": "LUMI",
+      "model": "lumi.sensor_magnet.aq2",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d5",
+      "manufacturer": "LUMI",
+      "model": "lumi.sensor_magnet.aq2",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d6",
+      "manufacturer": "LUMI",
+      "model": "lumi.sensor_wleak.aq1",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d7",
+      "manufacturer": "LUMI",
+      "model": "lumi.vibration.aq1",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d8",
+      "manufacturer": "LUMI",
+      "model": "lumi.weather",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d9",
+      "manufacturer": "LUMI",
+      "model": "lumi.weather",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d10",
+      "manufacturer": "LUMI",
+      "model": "lumi.weather",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d11",
+      "manufacturer": "LUMI",
+      "model": "lumi.weather",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d12",
+      "manufacturer": "IKEA of Sweden",
+      "model": "Remote Control N2",
+      "firmware": "0x02040016",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d13",
+      "manufacturer": "Computime",
+      "model": "SLT3b",
+      "firmware": "0x05060212",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d14",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI on/off switch",
+      "firmware": "0x24040006",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d15",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI on/off switch",
+      "firmware": "0x24040006",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d16",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI on/off switch",
+      "firmware": "0x24040006",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d17",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI on/off switch",
+      "firmware": "0x24040006",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d18",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI on/off switch",
+      "firmware": "0x24040006",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d19",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI on/off switch",
+      "firmware": "0x24040006",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d20",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI on/off switch",
+      "firmware": "0x24040006",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d21",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI on/off switch",
+      "firmware": "0x23079631",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d22",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI open/close remote",
+      "firmware": "0x24040006",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d23",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI SHORTCUT Button",
+      "firmware": "0x24040006",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d24",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI SHORTCUT Button",
+      "firmware": "0x24040006",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d25",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI SHORTCUT Button",
+      "firmware": "0x24040006",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d26",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI SHORTCUT Button",
+      "firmware": "0x24040006",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d27",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI SHORTCUT Button",
+      "firmware": "0x24040006",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d28",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI SHORTCUT Button",
+      "firmware": "0x24040006",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d29",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TREDANSEN block-out cellul blind",
+      "firmware": "0x24040013",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d30",
+      "manufacturer": "_TZE200_cwnjrr72",
+      "model": "TS0601",
+      "firmware": "0x00000055",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d31",
+      "manufacturer": "_TZE200_cwnjrr72",
+      "model": "TS0601",
+      "firmware": "0x00000055",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d32",
+      "manufacturer": "_TZE200_cwnjrr72",
+      "model": "TS0601",
+      "firmware": "0x00000055",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d33",
+      "manufacturer": "_TZE200_cwnjrr72",
+      "model": "TS0601",
+      "firmware": "0x00000055",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d34",
+      "manufacturer": "_TZE200_cwnjrr72",
+      "model": "TS0601",
+      "firmware": "0x00000057",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d35",
+      "manufacturer": "Aqara",
+      "model": "lumi.light.acn003",
+      "firmware": "0x0000001d",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d36",
+      "manufacturer": "LUMI",
+      "model": "lumi.switch.n1aeu1",
+      "firmware": "0x00000b17",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d37",
+      "manufacturer": "Computime",
+      "model": "SLR1b",
+      "firmware": "0x03025700",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d38",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI bulb E27 WS opal 1000lm",
+      "firmware": "0x23095631",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d39",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI bulb E27 WS opal 1000lm",
+      "firmware": "0x23095631",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d40",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI bulb E27 WS opal 1000lm",
+      "firmware": "0x23095631",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d41",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI bulb E27 WS opal 1000lm",
+      "firmware": "0x23095631",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d42",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI bulb E27 WS opal 1000lm",
+      "firmware": "0x23095631",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d43",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI bulb E27 WW 806lm",
+      "firmware": "0x23093631",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d44",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI control outlet",
+      "firmware": "0x23089631",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d45",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI control outlet",
+      "firmware": "0x23089631",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d46",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI control outlet",
+      "firmware": "0x23089631",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d47",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI Driver 30W",
+      "firmware": "0x23086631",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d48",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI Signal Repeater",
+      "firmware": "0x23086631",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d49",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI Signal Repeater",
+      "firmware": "0x23086631",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d50",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRIbulbB22WSglobeopal1055lm",
+      "firmware": "0x00010012",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 1,
+      "changes": [
+        {
+          "after_hours": 6.1,
+          "seen": "joined"
+        }
+      ]
+    },
+    {
+      "id": "d51",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRIbulbE14WScandleopal470lm",
+      "firmware": "0x01010020",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d52",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRIbulbE14WScandleopal470lm",
+      "firmware": "0x01010020",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d53",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRIbulbE14WSglobeopal470lm",
+      "firmware": "0x00010012",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 1,
+      "changes": [
+        {
+          "after_hours": 195.3,
+          "seen": "joined"
+        }
+      ]
+    },
+    {
+      "id": "d54",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRIbulbE27WSglobeopal1055lm",
+      "firmware": "0x00010012",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d55",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRIbulbE27WWclear250lm",
+      "firmware": "0x01010004",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 1,
+      "changes": [
+        {
+          "after_hours": 39.7,
+          "seen": "joined"
+        }
+      ]
+    },
+    {
+      "id": "d56",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRIbulbGU10WS345lm",
+      "firmware": "0x00010012",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d57",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRIbulbGU10WS345lm",
+      "firmware": "0x00010012",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d58",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRIbulbGU10WS345lm",
+      "firmware": "0x00010012",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d59",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRIbulbGU10WS345lm",
+      "firmware": "0x00010012",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d60",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRIbulbGU10WS345lm",
+      "firmware": "0x00010012",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d61",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRIbulbGU10WS345lm",
+      "firmware": "0x00010012",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d62",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRIbulbT120E27WSopal470lm",
+      "firmware": "0x00010012",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d63",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRIbulbT120E27WSopal470lm",
+      "firmware": "0x00010012",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d64",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRIbulbT120E27WSopal470lm",
+      "firmware": "0x00010012",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    }
+  ],
+  "pairs": [
+    {
+      "remote": "d14",
+      "light": "d42",
+      "presses": 24,
+      "followed": 23,
+      "missed": 0
+    },
+    {
+      "remote": "d14",
+      "light": "d35",
+      "presses": 24,
+      "followed": 22,
+      "missed": 1
+    },
+    {
+      "remote": "d14",
+      "light": "d55",
+      "presses": 24,
+      "followed": 21,
+      "missed": 2
+    },
+    {
+      "remote": "d14",
+      "light": "d51",
+      "presses": 24,
+      "followed": 23,
+      "missed": 0
+    },
+    {
+      "remote": "d14",
+      "light": "d52",
+      "presses": 24,
+      "followed": 23,
+      "missed": 0
+    },
+    {
+      "remote": "d17",
+      "light": "d50",
+      "presses": 8,
+      "followed": 8,
+      "missed": 0
+    },
+    {
+      "remote": "d17",
+      "light": "d41",
+      "presses": 8,
+      "followed": 8,
+      "missed": 0
+    },
+    {
+      "remote": "d17",
+      "light": "d44",
+      "presses": 8,
+      "followed": 8,
+      "missed": 0
+    },
+    {
+      "remote": "d15",
+      "light": "d58",
+      "presses": 12,
+      "followed": 11,
+      "missed": 1
+    },
+    {
+      "remote": "d15",
+      "light": "d57",
+      "presses": 12,
+      "followed": 11,
+      "missed": 1
+    },
+    {
+      "remote": "d15",
+      "light": "d61",
+      "presses": 12,
+      "followed": 11,
+      "missed": 1
+    },
+    {
+      "remote": "d15",
+      "light": "d56",
+      "presses": 12,
+      "followed": 11,
+      "missed": 1
+    },
+    {
+      "remote": "d15",
+      "light": "d53",
+      "presses": 12,
+      "followed": 10,
+      "missed": 1
+    },
+    {
+      "remote": "d16",
+      "light": "d39",
+      "presses": 2,
+      "followed": 2,
+      "missed": 0
+    },
+    {
+      "remote": "d16",
+      "light": "d54",
+      "presses": 2,
+      "followed": 1,
+      "missed": 1
+    },
+    {
+      "remote": "d20",
+      "light": "d63",
+      "presses": 4,
+      "followed": 4,
+      "missed": 0
+    },
+    {
+      "remote": "d20",
+      "light": "d62",
+      "presses": 4,
+      "followed": 4,
+      "missed": 0
+    },
+    {
+      "remote": "d20",
+      "light": "d64",
+      "presses": 4,
+      "followed": 0,
+      "missed": 0
+    },
+    {
+      "remote": "d18",
+      "light": "d59",
+      "presses": 2,
+      "followed": 1,
+      "missed": 0
+    },
+    {
+      "remote": "d18",
+      "light": "d47",
+      "presses": 2,
+      "followed": 1,
+      "missed": 0
+    },
+    {
+      "remote": "d18",
+      "light": "d60",
+      "presses": 2,
+      "followed": 1,
+      "missed": 0
+    },
+    {
+      "remote": "d21",
+      "light": "d38",
+      "presses": 2,
+      "followed": 0,
+      "missed": 0
+    },
+    {
+      "remote": "d21",
+      "light": "d40",
+      "presses": 2,
+      "followed": 1,
+      "missed": 0
+    }
+  ],
+  "misses": [
+    {
+      "remote": "d14",
+      "light": "d35",
+      "hours_since_last_ok": 9.2,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d14",
+      "light": "d55",
+      "hours_since_last_ok": 9.2,
+      "address_changed_since_last_ok": true,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d14",
+      "light": "d55",
+      "hours_since_last_ok": 20.6,
+      "address_changed_since_last_ok": true,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d15",
+      "light": "d58",
+      "hours_since_last_ok": 4.8,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d15",
+      "light": "d57",
+      "hours_since_last_ok": 4.8,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d15",
+      "light": "d61",
+      "hours_since_last_ok": 4.8,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d15",
+      "light": "d56",
+      "hours_since_last_ok": 4.8,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d15",
+      "light": "d53",
+      "hours_since_last_ok": 52.3,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d16",
+      "light": "d54",
+      "hours_since_last_ok": 153.6,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    }
+  ],
+  "provenance": {
+    "source_issue": 494,
+    "submitted_at": "2026-11-19T13:38:20Z"
+  }
+}
