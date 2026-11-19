@@ -1168,5 +1168,33 @@
     },
     "checked_manufacturer": "IKEA of Sweden",
     "checked_model": "TREDANSEN block-out cellul blind"
-  }
+  },
+  "device_answers": [
+    {
+      "kind": "device_answers",
+      "schema": 1,
+      "questions_version": 2,
+      "manufacturer": "IKEA of Sweden",
+      "model": "TREDANSEN block-out cellul blind",
+      "firmware": {
+        "registry_sw_version": "0x24040013"
+      },
+      "device_type": "cover",
+      "use": "blind",
+      "answers": {
+        "stays_connected": "always",
+        "position_accurate": "yes",
+        "battery_life": "m1_6"
+      },
+      "rating": 5,
+      "context": {
+        "system": "zha"
+      },
+      "card_version": "1.10.7",
+      "provenance": {
+        "submitted_at": "2026-11-19T16:17:46.410Z",
+        "source_issue": 496
+      }
+    }
+  ]
 }
