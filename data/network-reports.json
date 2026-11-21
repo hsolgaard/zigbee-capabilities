@@ -1,10 +1,10 @@
 {
-  "reports": 2,
+  "reports": 3,
   "by_coordinator": {
     "Nabu Casa Home Assistant Connect ZBT-2|unknown": {
-      "reports": 1,
-      "devices": 63,
-      "address_changes": 3
+      "reports": 2,
+      "devices": 123,
+      "address_changes": 6
     },
     "SONOFF ZBDongle-E|unknown": {
       "reports": 1,
@@ -22,6 +22,18 @@
           "devices": 4,
           "devices_with_changes": 1,
           "address_changes": 1
+        }
+      }
+    },
+    "Aqara|Presence Sensor FP300": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x0000412a": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
         }
       }
     },
@@ -68,6 +80,23 @@
       "by_firmware": {
         "0x10013001": {
           "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "GLEDOPTO|GL-C-008P": {
+      "devices": 3,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x30013001": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        },
+        "0x31013001": {
+          "devices": 2,
           "devices_with_changes": 0,
           "address_changes": 0
         }
@@ -407,12 +436,36 @@
         }
       }
     },
+    "LUMI|lumi.curtain.acn002": {
+      "devices": 3,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x00000f20": {
+          "devices": 3,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
     "LUMI|lumi.motion.ac02": {
       "devices": 1,
       "devices_with_changes": 0,
       "address_changes": 0,
       "by_firmware": {
         "0x00000006": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "LUMI|lumi.remote.cagl02": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x0000001c": {
           "devices": 1,
           "devices_with_changes": 0,
           "address_changes": 0
@@ -491,6 +544,30 @@
         }
       }
     },
+    "SONOFF|ZBMINIR2": {
+      "devices": 3,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x00001100": {
+          "devices": 3,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "Signify Netherlands B.V.|SML003": {
+      "devices": 3,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x02005501": {
+          "devices": 3,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
     "Zbeacon|DS01": {
       "devices": 4,
       "devices_with_changes": 0,
@@ -533,6 +610,18 @@
       "address_changes": 0,
       "by_firmware": {
         "0x40013001": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "_TZ3000_1h2x4akh|TS011F": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "unknown": {
           "devices": 1,
           "devices_with_changes": 0,
           "address_changes": 0
@@ -618,6 +707,18 @@
       "by_firmware": {
         "0x10013607": {
           "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "_TZ3210_rcggc0ys|TS0505B": {
+      "devices": 15,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x00000064": {
+          "devices": 15,
           "devices_with_changes": 0,
           "address_changes": 0
         }
@@ -717,6 +818,107 @@
         },
         "0x00001306": {
           "devices": 3,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "eWeLink|DS01": {
+      "devices": 3,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "unknown": {
+          "devices": 3,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "eWeLink|MS01": {
+      "devices": 2,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "unknown": {
+          "devices": 2,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "eWeLink|TH01": {
+      "devices": 7,
+      "devices_with_changes": 1,
+      "address_changes": 2,
+      "by_firmware": {
+        "unknown": {
+          "devices": 7,
+          "devices_with_changes": 1,
+          "address_changes": 2
+        }
+      }
+    },
+    "frient A/S|EMIZB-141": {
+      "devices": 1,
+      "devices_with_changes": 1,
+      "address_changes": 1,
+      "by_firmware": {
+        "0x00030102": {
+          "devices": 1,
+          "devices_with_changes": 1,
+          "address_changes": 1
+        }
+      }
+    },
+    "innr|FL 142 C": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x30022162": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "innr|RS 232 C": {
+      "devices": 2,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x22151511": {
+          "devices": 2,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "innr|RS 242 C": {
+      "devices": 4,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x19363685": {
+          "devices": 4,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "innr|SP 242": {
+      "devices": 10,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x19433685": {
+          "devices": 6,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        },
+        "0x19443685": {
+          "devices": 4,
           "devices_with_changes": 0,
           "address_changes": 0
         }
