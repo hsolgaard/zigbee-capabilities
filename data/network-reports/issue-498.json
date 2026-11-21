@@ -1,0 +1,651 @@
+{
+  "kind": "network_report",
+  "schema": 1,
+  "card_version": "1.10.7",
+  "period": {
+    "days": 6.7
+  },
+  "system": "zha",
+  "coordinator": {
+    "manufacturer": "Nabu Casa",
+    "model": "Home Assistant Connect ZBT-2",
+    "firmware": ""
+  },
+  "network": {
+    "devices": 61,
+    "routers": 39,
+    "end_devices": 21
+  },
+  "devices": [
+    {
+      "id": "d1",
+      "manufacturer": "Nabu Casa",
+      "model": "Home Assistant Connect ZBT-2",
+      "firmware": "",
+      "power": "mains",
+      "role": "coordinator",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d2",
+      "manufacturer": "eWeLink",
+      "model": "DS01",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d3",
+      "manufacturer": "eWeLink",
+      "model": "DS01",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d4",
+      "manufacturer": "eWeLink",
+      "model": "DS01",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d5",
+      "manufacturer": "frient A/S",
+      "model": "EMIZB-141",
+      "firmware": "0x00030102",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 1,
+      "changes": [
+        {
+          "after_hours": 109.6,
+          "seen": "joined"
+        }
+      ]
+    },
+    {
+      "id": "d6",
+      "manufacturer": "LUMI",
+      "model": "lumi.curtain.acn002",
+      "firmware": "0x00000f20",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d7",
+      "manufacturer": "LUMI",
+      "model": "lumi.curtain.acn002",
+      "firmware": "0x00000f20",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d8",
+      "manufacturer": "LUMI",
+      "model": "lumi.curtain.acn002",
+      "firmware": "0x00000f20",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d9",
+      "manufacturer": "LUMI",
+      "model": "lumi.remote.cagl02",
+      "firmware": "0x0000001c",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d10",
+      "manufacturer": "eWeLink",
+      "model": "MS01",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d11",
+      "manufacturer": "eWeLink",
+      "model": "MS01",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d12",
+      "manufacturer": "Aqara",
+      "model": "Presence Sensor FP300",
+      "firmware": "0x0000412a",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d13",
+      "manufacturer": "Signify Netherlands B.V.",
+      "model": "SML003",
+      "firmware": "0x02005501",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d14",
+      "manufacturer": "Signify Netherlands B.V.",
+      "model": "SML003",
+      "firmware": "0x02005501",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d15",
+      "manufacturer": "Signify Netherlands B.V.",
+      "model": "SML003",
+      "firmware": "0x02005501",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d16",
+      "manufacturer": "eWeLink",
+      "model": "TH01",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d17",
+      "manufacturer": "eWeLink",
+      "model": "TH01",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d18",
+      "manufacturer": "eWeLink",
+      "model": "TH01",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d19",
+      "manufacturer": "eWeLink",
+      "model": "TH01",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d20",
+      "manufacturer": "eWeLink",
+      "model": "TH01",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d21",
+      "manufacturer": "eWeLink",
+      "model": "TH01",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d22",
+      "manufacturer": "eWeLink",
+      "model": "TH01",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 2,
+      "changes": [
+        {
+          "after_hours": 0.7,
+          "seen": "joined"
+        },
+        {
+          "after_hours": 12.4,
+          "seen": "joined"
+        }
+      ]
+    },
+    {
+      "id": "d23",
+      "manufacturer": "innr",
+      "model": "FL 142 C",
+      "firmware": "0x30022162",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d24",
+      "manufacturer": "GLEDOPTO",
+      "model": "GL-C-008P",
+      "firmware": "0x30013001",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d25",
+      "manufacturer": "GLEDOPTO",
+      "model": "GL-C-008P",
+      "firmware": "0x31013001",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d26",
+      "manufacturer": "GLEDOPTO",
+      "model": "GL-C-008P",
+      "firmware": "0x31013001",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d27",
+      "manufacturer": "innr",
+      "model": "RS 232 C",
+      "firmware": "0x22151511",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d28",
+      "manufacturer": "innr",
+      "model": "RS 232 C",
+      "firmware": "0x22151511",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d29",
+      "manufacturer": "innr",
+      "model": "RS 242 C",
+      "firmware": "0x19363685",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d30",
+      "manufacturer": "innr",
+      "model": "RS 242 C",
+      "firmware": "0x19363685",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d31",
+      "manufacturer": "innr",
+      "model": "RS 242 C",
+      "firmware": "0x19363685",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d32",
+      "manufacturer": "innr",
+      "model": "RS 242 C",
+      "firmware": "0x19363685",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d33",
+      "manufacturer": "innr",
+      "model": "SP 242",
+      "firmware": "0x19433685",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d34",
+      "manufacturer": "innr",
+      "model": "SP 242",
+      "firmware": "0x19433685",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d35",
+      "manufacturer": "innr",
+      "model": "SP 242",
+      "firmware": "0x19433685",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d36",
+      "manufacturer": "innr",
+      "model": "SP 242",
+      "firmware": "0x19433685",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d37",
+      "manufacturer": "innr",
+      "model": "SP 242",
+      "firmware": "0x19443685",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d38",
+      "manufacturer": "innr",
+      "model": "SP 242",
+      "firmware": "0x19443685",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d39",
+      "manufacturer": "innr",
+      "model": "SP 242",
+      "firmware": "0x19443685",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d40",
+      "manufacturer": "innr",
+      "model": "SP 242",
+      "firmware": "0x19433685",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d41",
+      "manufacturer": "innr",
+      "model": "SP 242",
+      "firmware": "0x19433685",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d42",
+      "manufacturer": "innr",
+      "model": "SP 242",
+      "firmware": "0x19443685",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d43",
+      "manufacturer": "_TZ3000_1h2x4akh",
+      "model": "TS011F",
+      "firmware": "",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d44",
+      "manufacturer": "_TZ3210_rcggc0ys",
+      "model": "TS0505B",
+      "firmware": "0x00000064",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d45",
+      "manufacturer": "_TZ3210_rcggc0ys",
+      "model": "TS0505B",
+      "firmware": "0x00000064",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d46",
+      "manufacturer": "_TZ3210_rcggc0ys",
+      "model": "TS0505B",
+      "firmware": "0x00000064",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d47",
+      "manufacturer": "_TZ3210_rcggc0ys",
+      "model": "TS0505B",
+      "firmware": "0x00000064",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d48",
+      "manufacturer": "_TZ3210_rcggc0ys",
+      "model": "TS0505B",
+      "firmware": "0x00000064",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d49",
+      "manufacturer": "_TZ3210_rcggc0ys",
+      "model": "TS0505B",
+      "firmware": "0x00000064",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d50",
+      "manufacturer": "_TZ3210_rcggc0ys",
+      "model": "TS0505B",
+      "firmware": "0x00000064",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d51",
+      "manufacturer": "_TZ3210_rcggc0ys",
+      "model": "TS0505B",
+      "firmware": "0x00000064",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d52",
+      "manufacturer": "_TZ3210_rcggc0ys",
+      "model": "TS0505B",
+      "firmware": "0x00000064",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d53",
+      "manufacturer": "_TZ3210_rcggc0ys",
+      "model": "TS0505B",
+      "firmware": "0x00000064",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d54",
+      "manufacturer": "_TZ3210_rcggc0ys",
+      "model": "TS0505B",
+      "firmware": "0x00000064",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d55",
+      "manufacturer": "_TZ3210_rcggc0ys",
+      "model": "TS0505B",
+      "firmware": "0x00000064",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d56",
+      "manufacturer": "_TZ3210_rcggc0ys",
+      "model": "TS0505B",
+      "firmware": "0x00000064",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d57",
+      "manufacturer": "_TZ3210_rcggc0ys",
+      "model": "TS0505B",
+      "firmware": "0x00000064",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d58",
+      "manufacturer": "_TZ3210_rcggc0ys",
+      "model": "TS0505B",
+      "firmware": "0x00000064",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d59",
+      "manufacturer": "SONOFF",
+      "model": "ZBMINIR2",
+      "firmware": "0x00001100",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d60",
+      "manufacturer": "SONOFF",
+      "model": "ZBMINIR2",
+      "firmware": "0x00001100",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d61",
+      "manufacturer": "SONOFF",
+      "model": "ZBMINIR2",
+      "firmware": "0x00001100",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    }
+  ],
+  "pairs": [],
+  "misses": [],
+  "provenance": {
+    "source_issue": 498,
+    "submitted_at": "2026-11-20T16:47:30Z"
+  }
+}
