@@ -394,6 +394,29 @@
         }
       },
       "last_reported": "2026-11-07T19:54:37.566Z"
+    },
+    "direct_binding": {
+      "counts": {
+        "stored_ignored": 1
+      },
+      "by_firmware": {
+        "0x02005501": {
+          "stored_ignored": 1
+        }
+      },
+      "by_clusters": {
+        "0x0006,0x0008": {
+          "counts": {
+            "stored_ignored": 1
+          },
+          "by_firmware": {
+            "0x02005501": {
+              "stored_ignored": 1
+            }
+          }
+        }
+      },
+      "last_reported": "2026-11-22T14:27:30.835Z"
     }
   },
   "sonoff/snzb-01m": {
