@@ -2,22 +2,22 @@
   "_comment": "Vendor-discovery search cache, written by .github/scripts/vendor-discovery.mjs (see enrich-external-references.yml). Keyed by \"<Zigbee manufacturer>|<Zigbee model>\". Entries younger than 28 days aren't re-searched. Safe to delete an entry (or the whole file) to force a fresh search.",
   "devices": {
     "_TYZB01_wqcac7lo|TS0205": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "_TZ3000_3n2minvf|TS0004": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "_TZ3000_46t1rvdu|TS0001": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "_TZ3000_92chsky7|TS110F": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -27,92 +27,87 @@
       "buy_candidate": null
     },
     "_TZ3000_fukaa7nc|TS011F": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "_TZ3000_ltt60asa|TS0004": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "_TZ3000_okaz9tjs|TS011F": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "_TZ3000_pf7swkqp|TS0003": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "_TZ3000_prits6g4|TS0001": {
-      "searched_at": "2026-10-26",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "_TZ3000_qa8s8vca|TS130F": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "_TZ3000_w0qqde0g|TS011F": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "_TZ3210_fgwhjm9j|TS011F": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "_TZ3210_g0qr1fqo|TS0503B": {
-      "searched_at": "2026-10-26",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "_TZ3210_g0qr1fqo|unk_model": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "_TZ3210_ho44khu8|TS011F": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
-      "buy_candidate": {
-        "url": "https://www.berrybase.de/en/gosund-nitebird-ep2-z-smart-plug-steckdose-mit-messfunktion-zigbee",
-        "title": "Gosund NiteBird EP2-Z, Smart Plug, Steckdose mit Messfunktion, ZigBee",
-        "evidence": "retailer page names \"Gosund NiteBird EP2-Z\", ZigBee, energy metering",
-        "method": "manual research 2026-10-25 (page fetched and checked by hand)"
-      }
+      "buy_candidate": null
     },
     "_TZ3210_mja6r5ix|TS0505B": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "_TZ3290_gnl5a6a5xvql7c2a|TS1201": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "_TZE200_4utwozi2|TS0601": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "18ejxno0|Moes-2-gang": {
-      "searched_at": "2026-10-26",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "46t1rvdu|WHD02-Aubess": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "4rbqgcuv|TS0001-AVB": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -122,12 +117,12 @@
       "buy_candidate": null
     },
     "AL001|WG001-Z01": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "Aqara|Ceiling Light T1M": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -137,7 +132,7 @@
       "buy_candidate": null
     },
     "Aqara|lumi.light.agl001": {
-      "searched_at": "2026-10-26",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -152,7 +147,7 @@
       "buy_candidate": null
     },
     "AwoX|TLSR82xx": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -172,22 +167,22 @@
       "buy_candidate": null
     },
     "eWeLink|CK-BL702-AL-01(7009_Z102LG03-1)": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "eWeLink|SA-003-Zigbee": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "eWeLink|SWITCH-ZR03-1": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "gjrubzje|TS0001-ZTU": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -197,42 +192,42 @@
       "buy_candidate": null
     },
     "hhiodade|Moes-1-gang": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "HOBEIAN|CK-BL702-ROUTER-01(7018)": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "HOBEIAN|ZG-204ZX": {
-      "searched_at": "2026-10-26",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "IKEA of Sweden|ASKVADER on/off switch": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "IKEA of Sweden|JETSTROM 3030 wall": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "IKEA of Sweden|LEPTITER Recessed spot light": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "IKEA of Sweden|Remote Control N2": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "IKEA of Sweden|STOFTMOLN ceiling/wall lamp WW24": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -242,27 +237,27 @@
       "buy_candidate": null
     },
     "IKEA of Sweden|TRADFRI bulb E14 CWS 470lm": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "IKEA of Sweden|TRADFRI bulb E14 CWS opal 600lm": {
-      "searched_at": "2026-10-26",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "IKEA of Sweden|TRADFRI bulb E14 W op/ch 400lm": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "IKEA of Sweden|TRADFRI bulb E14 WS 470lm": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "IKEA of Sweden|TRADFRI bulb E14 WS candle 470lm": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -272,7 +267,7 @@
       "buy_candidate": null
     },
     "IKEA of Sweden|TRADFRI bulb E14 WS opal 600lm": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -287,27 +282,27 @@
       "buy_candidate": null
     },
     "IKEA of Sweden|TRADFRI bulb E27 CWS 806lm": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "IKEA of Sweden|TRADFRI bulb E27 CWS globe 806lm": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "IKEA of Sweden|TRADFRI bulb E27 CWS opal 600lm": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "IKEA of Sweden|TRADFRI bulb E27 WS globe 1055lm": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "IKEA of Sweden|TRADFRI bulb E27 WS opal 1000lm": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -317,47 +312,47 @@
       "buy_candidate": null
     },
     "IKEA of Sweden|TRADFRI bulb E27 WW 806lm": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "IKEA of Sweden|TRADFRI bulb E27 WW clear 250lm": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "IKEA of Sweden|TRADFRI bulb E27 WW G95 CL 470lm": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "IKEA of Sweden|TRADFRI bulb GU10 CWS 345lm": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "IKEA of Sweden|TRADFRI bulb GU10 WS 400lm": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "IKEA of Sweden|TRADFRI control outlet": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "IKEA of Sweden|TRADFRI Driver 10W": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "IKEA of Sweden|TRADFRI Driver 30W": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "IKEA of Sweden|TRADFRI Signal Repeater": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -367,7 +362,7 @@
       "buy_candidate": null
     },
     "IKEA of Sweden|TRADFRIbulbE27WSglobeopal1055lm": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -382,12 +377,12 @@
       "buy_candidate": null
     },
     "IKEA of Sweden|TREDANSEN block-out cellul blind": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "IKEA of Sweden|VINDSTYRKA": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -397,7 +392,7 @@
       "buy_candidate": null
     },
     "iMagic by GreatStar|1117-S": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -407,7 +402,7 @@
       "buy_candidate": null
     },
     "innr|BB 287 C": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -417,7 +412,7 @@
       "buy_candidate": null
     },
     "innr|RB 287 C": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -460,7 +455,7 @@
       "buy_candidate": null
     },
     "Jasco Products|35938": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -505,27 +500,27 @@
       "buy_candidate": null
     },
     "LEDVANCE|PAR16 TW Z3": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "LUMI|lumi.relay.c2acn01": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "LUMI|lumi.sensor_magnet": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "LUMI|lumi.sensor_motion": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "LUMI|lumi.sensor_smoke": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -555,12 +550,12 @@
       "buy_candidate": null
     },
     "pf7swkqp|TS0003-SB": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "Philips|LWV001": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -623,7 +618,7 @@
       "buy_candidate": null
     },
     "sengled|E1F-N5E": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -643,12 +638,12 @@
       "buy_candidate": null
     },
     "SmartThings|outletv4": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "SONOFF|DONGLE-E_R": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": {
         "url": "https://sonoff.tech/en-us/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-e",
         "title": "SONOFF Zigbee 3.0 USB Dongle Plus - ZBDongle-E",
@@ -758,7 +753,7 @@
       "buy_candidate": null
     },
     "Texas Instruments|CC2652": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -778,13 +773,18 @@
       },
       "buy_candidate": null
     },
+    "Third Reality, Inc|3RSP02028BZ": {
+      "searched_at": "2026-11-24",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "Third Reality, Inc|3RWS18BZ": {
       "searched_at": "2026-11-09",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
     "tqlv4ug4|TS0001-custom": {
-      "searched_at": "2026-10-25",
+      "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
       "buy_candidate": null
     }
@@ -1091,5 +1091,5 @@
       "shop": true
     }
   },
-  "generated_at": "2026-11-16T20:00:29.818Z"
+  "generated_at": "2026-11-24T13:08:02.684Z"
 }
