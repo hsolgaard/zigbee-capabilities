@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T13:14:01.608Z",
+  "generated_at": "2026-11-24T13:04:57.019Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -3258,6 +3258,28 @@
         {
           "manufacturer": "SONOFF",
           "model": "TRVZB",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xff03",
+      "id_hex": "0x0012",
+      "seen_on": [
+        {
+          "manufacturer": "Third Reality, Inc",
+          "model": "3RSP02028BZ",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xff03",
+      "id_hex": "0x0020",
+      "seen_on": [
+        {
+          "manufacturer": "Third Reality, Inc",
+          "model": "3RSP02028BZ",
           "count": 1
         }
       ]
