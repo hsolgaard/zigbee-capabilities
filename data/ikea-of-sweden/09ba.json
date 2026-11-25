@@ -1,0 +1,122 @@
+{
+  "observations": [
+    {
+      "manufacturer": "IKEA of Sweden",
+      "model": "09BA",
+      "identity": {
+        "sw_build_id": null,
+        "hw_version": null,
+        "date_code": null
+      },
+      "endpoints": [
+        {
+          "endpoint": {
+            "id": 1,
+            "profile": "0x0104",
+            "device_type": "0x0006",
+            "in_clusters": [
+              "0x0000",
+              "0x0001",
+              "0x0003",
+              "0x0020"
+            ],
+            "out_clusters": [
+              "0x0003",
+              "0x0004",
+              "0x0005",
+              "0x0006",
+              "0x0008",
+              "0x1000"
+            ]
+          },
+          "scanned": true,
+          "clusters": {
+            "0x0000": {
+              "name": "Basic",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": []
+            },
+            "0x0001": {
+              "name": "Power Configuration",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": []
+            },
+            "0x0003": {
+              "name": "Identify",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": []
+            },
+            "0x0020": {
+              "name": "Poll Control",
+              "commands_received": [],
+              "commands_received_confirmed": false,
+              "commands_generated": [],
+              "attributes_confirmed": []
+            }
+          }
+        }
+      ],
+      "provenance": {
+        "submitted_at": "2026-11-25T12:24:46.730Z",
+        "card_version": "1.11.0",
+        "source_issue": 508
+      }
+    }
+  ],
+  "capabilities": {
+    "1|unknown": {
+      "endpoint": 1,
+      "firmware": null,
+      "scan_count": 1,
+      "last_seen": "2026-11-25T12:24:46.730Z",
+      "manufacturer": "IKEA of Sweden",
+      "model": "09BA",
+      "in_clusters": [
+        "0x0000",
+        "0x0001",
+        "0x0003",
+        "0x0020"
+      ],
+      "out_clusters": [
+        "0x0003",
+        "0x0004",
+        "0x0005",
+        "0x0006",
+        "0x0008",
+        "0x1000"
+      ],
+      "clusters": {
+        "0x0000": {
+          "name": "Basic",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": []
+        },
+        "0x0001": {
+          "name": "Power Configuration",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": []
+        },
+        "0x0003": {
+          "name": "Identify",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": []
+        },
+        "0x0020": {
+          "name": "Poll Control",
+          "commands_received": [],
+          "commands_received_scan_count": 0,
+          "attributes_confirmed": []
+        }
+      }
+    }
+  }
+}
