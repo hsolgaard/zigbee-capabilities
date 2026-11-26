@@ -94,6 +94,61 @@
       }
     }
   },
+  "ikea-of-sweden/tretakt-smart-plug": {
+    "manufacturer": "IKEA of Sweden",
+    "model": "TRETAKT Smart plug",
+    "total": 1,
+    "by_firmware": {
+      "2.4.4": {
+        "scan_linked": false,
+        "total": 1,
+        "by_use": {
+          "appliance": {
+            "count": 1,
+            "ratings": {
+              "5": 1
+            },
+            "rating_average": null,
+            "answers": {
+              "power_on": {
+                "last_state": 1
+              },
+              "stays_connected": {
+                "always": 1
+              },
+              "rejoins": {
+                "never_dropped": 1
+              },
+              "pairing": {
+                "first_time": 1
+              },
+              "responds_to_bindings": {
+                "not_bound": 1
+              },
+              "router_quality": {
+                "good": 1
+              },
+              "ota": {
+                "not_sure": 1
+              }
+            },
+            "context": {
+              "system": {
+                "zha": 1
+              },
+              "coordinator": {
+                "ti": 1
+              },
+              "owned_for": {
+                "lt_year": 1
+              }
+            },
+            "tips": []
+          }
+        }
+      }
+    }
+  },
   "ikea-of-sweden/vindstyrka": {
     "manufacturer": "IKEA of Sweden",
     "model": "VINDSTYRKA",
