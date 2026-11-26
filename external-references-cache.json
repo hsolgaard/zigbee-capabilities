@@ -206,6 +206,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "HOBEIAN|ZG-301Z": {
+      "searched_at": "2026-11-26",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "IKEA of Sweden|ASKVADER on/off switch": {
       "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
@@ -664,6 +669,11 @@
       },
       "buy_candidate": null
     },
+    "SONOFF|Dongle-PMG24_ZBRouter": {
+      "searched_at": "2026-11-26",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "SONOFF|MINI-ZB2GS": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": {
@@ -1102,5 +1112,5 @@
       "shop": true
     }
   },
-  "generated_at": "2026-11-26T11:41:31.254Z"
+  "generated_at": "2026-11-26T11:42:40.086Z"
 }

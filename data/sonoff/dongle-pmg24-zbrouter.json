@@ -1181,5 +1181,10 @@
         }
       }
     }
+  },
+  "references": {
+    "blakadder": null,
+    "checked_manufacturer": "SONOFF",
+    "checked_model": "Dongle-PMG24_ZBRouter"
   }
 }
