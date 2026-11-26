@@ -1084,12 +1084,16 @@
                 {
                   "id": 20,
                   "name": "20",
-                  "access": "READ|WRITE|REPORT"
+                  "access": "READ|WRITE|REPORT",
+                  "resolved_name": "delayed_power_on_state",
+                  "resolved_source": "zha-device-handlers + zigbee-herdsman-converters"
                 },
                 {
                   "id": 21,
                   "name": "21",
-                  "access": "READ|WRITE|REPORT"
+                  "access": "READ|WRITE|REPORT",
+                  "resolved_name": "delayed_power_on_time",
+                  "resolved_source": "zha-device-handlers + zigbee-herdsman-converters"
                 },
                 {
                   "id": 22,
@@ -1119,12 +1123,16 @@
                 {
                   "id": 40,
                   "name": "40",
-                  "access": "READ|REPORT"
+                  "access": "READ|REPORT",
+                  "resolved_name": "detach_relay_action_event",
+                  "resolved_source": "zha-device-handlers + zigbee-herdsman-converters"
                 },
                 {
                   "id": 65533,
                   "name": "65533",
-                  "access": "READ|REPORT"
+                  "access": "READ|REPORT",
+                  "resolved_name": "cluster_revision",
+                  "resolved_source": "zcl-spec"
                 }
               ]
             },
@@ -1474,13 +1482,17 @@
               "resolved_name": "cluster_revision",
               "resolved_source": "zcl-spec"
             }
-          ]
+          ],
+          "resolved_name": "SonoffCluster",
+          "resolved_source": "zha-device-handlers + zigbee-herdsman-converters"
         },
         "0xfc57": {
           "name": "Cluster 0xfc57",
           "commands_received": [],
           "commands_received_scan_count": 0,
-          "attributes_confirmed": []
+          "attributes_confirmed": [],
+          "resolved_name": "WorksWithAllHubs (WWAH)",
+          "resolved_source": "zigpy"
         }
       }
     },
@@ -2211,12 +2223,16 @@
             {
               "id": 20,
               "name": "20",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "delayed_power_on_state",
+              "resolved_source": "zha-device-handlers + zigbee-herdsman-converters"
             },
             {
               "id": 21,
               "name": "21",
-              "access": "READ|WRITE|REPORT"
+              "access": "READ|WRITE|REPORT",
+              "resolved_name": "delayed_power_on_time",
+              "resolved_source": "zha-device-handlers + zigbee-herdsman-converters"
             },
             {
               "id": 22,
@@ -2246,12 +2262,16 @@
             {
               "id": 40,
               "name": "40",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "detach_relay_action_event",
+              "resolved_source": "zha-device-handlers + zigbee-herdsman-converters"
             },
             {
               "id": 65533,
               "name": "65533",
-              "access": "READ|REPORT"
+              "access": "READ|REPORT",
+              "resolved_name": "cluster_revision",
+              "resolved_source": "zcl-spec"
             }
           ]
         },

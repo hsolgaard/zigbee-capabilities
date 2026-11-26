@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T13:04:57.019Z",
+  "generated_at": "2026-11-26T11:43:24.536Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -374,6 +374,11 @@
         },
         {
           "manufacturer": "SONOFF",
+          "model": "ZBMINIR2",
+          "count": 2
+        },
+        {
+          "manufacturer": "SONOFF",
           "model": "MINI-ZBDIM",
           "count": 1
         },
@@ -395,11 +400,6 @@
         {
           "manufacturer": "SONOFF",
           "model": "ZBM5-3C-80/86",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBMINIR2",
           "count": 1
         }
       ]
@@ -760,6 +760,58 @@
       ]
     },
     {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x001a",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-2C-80/86",
+          "count": 2
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBMINIR2",
+          "count": 2
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-1C-80/86",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-3C-80/86",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "cluster_id_hex": "0xfc11",
+      "id_hex": "0x001b",
+      "seen_on": [
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-2C-80/86",
+          "count": 2
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBMINIR2",
+          "count": 2
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-1C-80/86",
+          "count": 1
+        },
+        {
+          "manufacturer": "SONOFF",
+          "model": "ZBM5-3C-80/86",
+          "count": 1
+        }
+      ]
+    },
+    {
       "cluster_id_hex": "0xfcc0",
       "id_hex": "0x0002",
       "seen_on": [
@@ -1096,58 +1148,6 @@
         {
           "manufacturer": "IKEA of Sweden",
           "model": "TRADFRI bulb GU10 CWS 345lm",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x001a",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBM5-2C-80/86",
-          "count": 2
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBM5-1C-80/86",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBM5-3C-80/86",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBMINIR2",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "cluster_id_hex": "0xfc11",
-      "id_hex": "0x001b",
-      "seen_on": [
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBM5-2C-80/86",
-          "count": 2
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBM5-1C-80/86",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBM5-3C-80/86",
-          "count": 1
-        },
-        {
-          "manufacturer": "SONOFF",
-          "model": "ZBMINIR2",
           "count": 1
         }
       ]
