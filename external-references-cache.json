@@ -1134,7 +1134,11 @@
     "https://www.ikea.com/gb/en/p/tradfri-wireless-dimmer-white-00468432/": {
       "title": "Products - Discover Our Full Range Of Furniture And Homeware",
       "shop": true
+    },
+    "https://sonoff.tech/en-us/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m": {
+      "title": "SONOFF Dongle Max Zigbee/Thread PoE Dongle - Dongle-M",
+      "shop": true
     }
   },
-  "generated_at": "2026-11-26T12:50:23.874Z"
+  "generated_at": "2026-11-26T12:52:07.326Z"
 }
