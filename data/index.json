@@ -19058,7 +19058,11 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "09ba",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "IKEA of Sweden",
+      "checked_model": "09BA"
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -74391,7 +74395,11 @@
   {
     "manufacturer_slug": "ledvance",
     "model_slug": "plug-eu-em-t",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "LEDVANCE",
+      "checked_model": "PLUG EU EM T"
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -74806,7 +74814,11 @@
   {
     "manufacturer_slug": "ledvance",
     "model_slug": "plug-eu-em-t",
-    "references": null,
+    "references": {
+      "blakadder": null,
+      "checked_manufacturer": "LEDVANCE",
+      "checked_model": "PLUG EU EM T"
+    },
     "endpoint": 242,
     "firmware": null,
     "scan_count": 1,
