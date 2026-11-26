@@ -19057,6 +19057,57 @@
   },
   {
     "manufacturer_slug": "ikea-of-sweden",
+    "model_slug": "09ba",
+    "references": null,
+    "endpoint": 1,
+    "firmware": null,
+    "scan_count": 1,
+    "last_seen": "2026-11-25T12:24:46.730Z",
+    "manufacturer": "IKEA of Sweden",
+    "model": "09BA",
+    "in_clusters": [
+      "0x0000",
+      "0x0001",
+      "0x0003",
+      "0x0020"
+    ],
+    "out_clusters": [
+      "0x0003",
+      "0x0004",
+      "0x0005",
+      "0x0006",
+      "0x0008",
+      "0x1000"
+    ],
+    "clusters": {
+      "0x0000": {
+        "name": "Basic",
+        "commands_received": [],
+        "commands_received_scan_count": 0,
+        "attributes_confirmed": []
+      },
+      "0x0001": {
+        "name": "Power Configuration",
+        "commands_received": [],
+        "commands_received_scan_count": 0,
+        "attributes_confirmed": []
+      },
+      "0x0003": {
+        "name": "Identify",
+        "commands_received": [],
+        "commands_received_scan_count": 0,
+        "attributes_confirmed": []
+      },
+      "0x0020": {
+        "name": "Poll Control",
+        "commands_received": [],
+        "commands_received_scan_count": 0,
+        "attributes_confirmed": []
+      }
+    }
+  },
+  {
+    "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "askvader-on-off-switch",
     "references": {
       "blakadder": {
