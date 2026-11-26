@@ -1093,5 +1093,40 @@
       "url": "https://www.ikea.com/us/en/p/tretakt-plug-smart-40556511/",
       "confidence": "high"
     }
-  }
+  },
+  "device_answers": [
+    {
+      "kind": "device_answers",
+      "schema": 1,
+      "questions_version": 2,
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRETAKT Smart plug",
+      "firmware": {
+        "sw_build_id": "2.4.4",
+        "registry_sw_version": "0x02040004"
+      },
+      "device_type": "plug",
+      "use": "appliance",
+      "answers": {
+        "power_on": "last_state",
+        "stays_connected": "always",
+        "rejoins": "never_dropped",
+        "pairing": "first_time",
+        "responds_to_bindings": "not_bound",
+        "router_quality": "good",
+        "ota": "not_sure"
+      },
+      "rating": 5,
+      "context": {
+        "system": "zha",
+        "coordinator": "ti",
+        "owned_for": "lt_year"
+      },
+      "card_version": "1.11.0",
+      "provenance": {
+        "submitted_at": "2026-11-25T20:27:15.705Z",
+        "source_issue": 520
+      }
+    }
+  ]
 }
