@@ -1,6 +1,11 @@
 {
-  "reports": 3,
+  "reports": 4,
   "by_coordinator": {
+    "Nabu Casa Home Assistant Connect ZBT-1|unknown": {
+      "reports": 1,
+      "devices": 7,
+      "address_changes": 1
+    },
     "Nabu Casa Home Assistant Connect ZBT-2|unknown": {
       "reports": 2,
       "devices": 123,
@@ -186,6 +191,18 @@
         }
       }
     },
+    "IKEA of Sweden|09BA": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "unknown": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
     "IKEA of Sweden|RODRET Dimmer": {
       "devices": 1,
       "devices_with_changes": 0,
@@ -207,6 +224,18 @@
           "devices": 1,
           "devices_with_changes": 0,
           "address_changes": 0
+        }
+      }
+    },
+    "IKEA of Sweden|TRADFRI Driver 10W": {
+      "devices": 1,
+      "devices_with_changes": 1,
+      "address_changes": 1,
+      "by_firmware": {
+        "0x12245572": {
+          "devices": 1,
+          "devices_with_changes": 1,
+          "address_changes": 1
         }
       }
     },
@@ -295,7 +324,7 @@
       }
     },
     "IKEA of Sweden|TRADFRI on/off switch": {
-      "devices": 8,
+      "devices": 11,
       "devices_with_changes": 0,
       "address_changes": 0,
       "by_firmware": {
@@ -306,6 +335,11 @@
         },
         "0x23079631": {
           "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        },
+        "0x22010631": {
+          "devices": 3,
           "devices_with_changes": 0,
           "address_changes": 0
         }
@@ -436,6 +470,18 @@
         }
       }
     },
+    "LEDVANCE|PLUG EU EM T": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x03483712": {
+          "devices": 1,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
     "LUMI|lumi.curtain.acn002": {
       "devices": 3,
       "devices_with_changes": 0,
@@ -443,6 +489,18 @@
       "by_firmware": {
         "0x00000f20": {
           "devices": 3,
+          "devices_with_changes": 0,
+          "address_changes": 0
+        }
+      }
+    },
+    "LUMI|lumi.magnet.agl02": {
+      "devices": 1,
+      "devices_with_changes": 0,
+      "address_changes": 0,
+      "by_firmware": {
+        "0x0000001e": {
+          "devices": 1,
           "devices_with_changes": 0,
           "address_changes": 0
         }
@@ -926,14 +984,19 @@
     }
   },
   "misses": {
-    "total": 9,
+    "total": 29,
     "address_changed_before": 2,
-    "binding_in_table": 9
+    "binding_in_table": 28
   },
   "remotes": {
+    "IKEA of Sweden|09BA": {
+      "presses": 10,
+      "missed": 5,
+      "missed_after_address_change": 0
+    },
     "IKEA of Sweden|TRADFRI on/off switch": {
-      "presses": 230,
-      "missed": 9,
+      "presses": 261,
+      "missed": 24,
       "missed_after_address_change": 2
     }
   }
