@@ -47866,7 +47866,19 @@
   {
     "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-on-off-switch",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Ikea_E1743.html",
+        "match_method": "vendor_alias_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "IKEA of Sweden",
+      "checked_model": "TRADFRI on/off switch",
+      "manufacturer": {
+        "url": "https://www.ikea.com/gb/en/p/tradfri-wireless-dimmer-white-00468432/",
+        "confidence": "high"
+      }
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
