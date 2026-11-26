@@ -47861,6 +47861,36 @@
   },
   {
     "manufacturer_slug": "ikea-of-sweden",
+    "model_slug": "tradfri-on-off-switch",
+    "references": null,
+    "endpoint": 1,
+    "firmware": null,
+    "scan_count": 1,
+    "last_seen": "2026-11-25T12:21:08.143Z",
+    "manufacturer": "IKEA of Sweden",
+    "model": "TRADFRI on/off switch",
+    "in_clusters": [
+      "0x0000",
+      "0x0001",
+      "0x0003",
+      "0x0009",
+      "0x0020",
+      "0x1000",
+      "0xfc7c"
+    ],
+    "out_clusters": [
+      "0x0003",
+      "0x0004",
+      "0x0006",
+      "0x0008",
+      "0x0019",
+      "0x0102",
+      "0x1000"
+    ],
+    "clusters": {}
+  },
+  {
+    "manufacturer_slug": "ikea-of-sweden",
     "model_slug": "tradfri-signal-repeater",
     "references": {
       "blakadder": {
