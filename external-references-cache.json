@@ -534,6 +534,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "Nabu Casa|Home Assistant Connect ZBT-1": {
+      "searched_at": "2026-11-26",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "Nordtronic A/S|BoxDIMZ 98425031": {
       "searched_at": "2026-11-05",
       "manufacturer_candidate": null,
@@ -1112,5 +1117,5 @@
       "shop": true
     }
   },
-  "generated_at": "2026-11-26T11:42:40.086Z"
+  "generated_at": "2026-11-26T11:46:09.735Z"
 }
