@@ -19666,7 +19666,8 @@
       "manufacturer": {
         "url": "https://www.ikea.com/us/en/p/badring-water-leakage-sensor-smart-60504352/",
         "confidence": "high"
-      }
+      },
+      "blakadder_submitted": "2026-11-26"
     },
     "endpoint": 1,
     "firmware": "1.0.7",
