@@ -143,26 +143,34 @@
     "model": "TRADFRI on/off switch",
     "group_binding": {
       "counts": {
-        "rejected": 1
+        "rejected": 1,
+        "works": 1
       },
       "by_firmware": {
         "0x24040006": {
           "rejected": 1
+        },
+        "0x22010631": {
+          "works": 1
         }
       },
       "by_clusters": {
         "0x0006,0x0008": {
           "counts": {
-            "rejected": 1
+            "rejected": 1,
+            "works": 1
           },
           "by_firmware": {
             "0x24040006": {
               "rejected": 1
+            },
+            "0x22010631": {
+              "works": 1
             }
           }
         }
       },
-      "last_reported": "2026-11-07T19:28:09.828Z"
+      "last_reported": "2026-11-25T13:03:30.840Z"
     },
     "direct_binding": {
       "counts": {
