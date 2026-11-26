@@ -653,6 +653,17 @@
       },
       "buy_candidate": null
     },
+    "SONOFF|Dongle-M": {
+      "searched_at": "2026-11-26",
+      "manufacturer_candidate": {
+        "url": "https://sonoff.tech/en-us/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m",
+        "title": "SONOFF Dongle Max Zigbee/Thread PoE Dongle - Dongle-M",
+        "shop": true,
+        "evidence": "page mentions \"donglem\"",
+        "method": "shop search on sonoff.tech"
+      },
+      "buy_candidate": null
+    },
     "SONOFF|MINI-ZB2GS": {
       "searched_at": "2026-10-25",
       "manufacturer_candidate": {
@@ -1091,5 +1102,5 @@
       "shop": true
     }
   },
-  "generated_at": "2026-11-24T13:08:02.684Z"
+  "generated_at": "2026-11-26T11:41:31.254Z"
 }
