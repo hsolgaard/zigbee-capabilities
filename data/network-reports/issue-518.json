@@ -1,0 +1,275 @@
+{
+  "kind": "network_report",
+  "schema": 1,
+  "card_version": "1.11.0",
+  "period": {
+    "days": 0.9
+  },
+  "system": "zha",
+  "coordinator": {
+    "manufacturer": "Nabu Casa",
+    "model": "Home Assistant Connect ZBT-1",
+    "firmware": ""
+  },
+  "network": {
+    "devices": 8,
+    "routers": 2,
+    "end_devices": 5
+  },
+  "devices": [
+    {
+      "id": "d1",
+      "manufacturer": "Nabu Casa",
+      "model": "Home Assistant Connect ZBT-1",
+      "firmware": "",
+      "power": "mains",
+      "role": "coordinator",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d2",
+      "manufacturer": "IKEA of Sweden",
+      "model": "09BA",
+      "firmware": "",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d3",
+      "manufacturer": "LUMI",
+      "model": "lumi.magnet.agl02",
+      "firmware": "0x0000001e",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d4",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI on/off switch",
+      "firmware": "0x22010631",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d5",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI on/off switch",
+      "firmware": "0x22010631",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d6",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI on/off switch",
+      "firmware": "0x22010631",
+      "power": "battery",
+      "role": "end_device",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d7",
+      "manufacturer": "LEDVANCE",
+      "model": "PLUG EU EM T",
+      "firmware": "0x03483712",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 0,
+      "changes": []
+    },
+    {
+      "id": "d8",
+      "manufacturer": "IKEA of Sweden",
+      "model": "TRADFRI Driver 10W",
+      "firmware": "0x12245572",
+      "power": "mains",
+      "role": "router",
+      "address_changes": 1,
+      "changes": [
+        {
+          "after_hours": 21,
+          "seen": "joined"
+        }
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "remote": "d2",
+      "light": "d7",
+      "presses": 10,
+      "followed": 0,
+      "missed": 5
+    },
+    {
+      "remote": "d5",
+      "light": "d7",
+      "presses": 20,
+      "followed": 0,
+      "missed": 11
+    },
+    {
+      "remote": "d5",
+      "light": "d8",
+      "presses": 11,
+      "followed": 0,
+      "missed": 4
+    }
+  ],
+  "misses": [
+    {
+      "remote": "d2",
+      "light": "d7",
+      "hours_since_last_ok": null,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d2",
+      "light": "d7",
+      "hours_since_last_ok": null,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d2",
+      "light": "d7",
+      "hours_since_last_ok": null,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d2",
+      "light": "d7",
+      "hours_since_last_ok": null,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d2",
+      "light": "d7",
+      "hours_since_last_ok": null,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": false
+    },
+    {
+      "remote": "d5",
+      "light": "d7",
+      "hours_since_last_ok": null,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d5",
+      "light": "d7",
+      "hours_since_last_ok": null,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d5",
+      "light": "d7",
+      "hours_since_last_ok": null,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d5",
+      "light": "d7",
+      "hours_since_last_ok": null,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d5",
+      "light": "d7",
+      "hours_since_last_ok": null,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d5",
+      "light": "d7",
+      "hours_since_last_ok": null,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d5",
+      "light": "d7",
+      "hours_since_last_ok": null,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d5",
+      "light": "d7",
+      "hours_since_last_ok": null,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d5",
+      "light": "d7",
+      "hours_since_last_ok": null,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d5",
+      "light": "d7",
+      "hours_since_last_ok": null,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d5",
+      "light": "d7",
+      "hours_since_last_ok": null,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d5",
+      "light": "d8",
+      "hours_since_last_ok": null,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d5",
+      "light": "d8",
+      "hours_since_last_ok": null,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d5",
+      "light": "d8",
+      "hours_since_last_ok": null,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    },
+    {
+      "remote": "d5",
+      "light": "d8",
+      "hours_since_last_ok": null,
+      "address_changed_since_last_ok": false,
+      "binding_in_last_read": true
+    }
+  ],
+  "provenance": {
+    "source_issue": 518,
+    "submitted_at": "2026-11-25T13:13:14Z"
+  }
+}
