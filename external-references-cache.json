@@ -211,6 +211,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "IKEA of Sweden|09BA": {
+      "searched_at": "2026-11-26",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "IKEA of Sweden|ASKVADER on/off switch": {
       "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
@@ -506,6 +511,11 @@
     },
     "LEDVANCE|PAR16 TW Z3": {
       "searched_at": "2026-11-24",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
+    "LEDVANCE|PLUG EU EM T": {
+      "searched_at": "2026-11-26",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -1117,5 +1127,5 @@
       "shop": true
     }
   },
-  "generated_at": "2026-11-26T11:46:09.735Z"
+  "generated_at": "2026-11-26T11:47:27.448Z"
 }
