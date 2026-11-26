@@ -87646,7 +87646,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "SONOFF",
-      "checked_model": "Dongle-M"
+      "checked_model": "Dongle-M",
+      "manufacturer": {
+        "url": "https://sonoff.tech/en-us/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 1,
     "firmware": null,
@@ -87676,7 +87681,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "SONOFF",
-      "checked_model": "Dongle-M"
+      "checked_model": "Dongle-M",
+      "manufacturer": {
+        "url": "https://sonoff.tech/en-us/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 2,
     "firmware": null,
@@ -87696,7 +87706,12 @@
     "references": {
       "blakadder": null,
       "checked_manufacturer": "SONOFF",
-      "checked_model": "Dongle-M"
+      "checked_model": "Dongle-M",
+      "manufacturer": {
+        "url": "https://sonoff.tech/en-us/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m",
+        "confidence": "high",
+        "source": "vendor_search"
+      }
     },
     "endpoint": 242,
     "firmware": null,
