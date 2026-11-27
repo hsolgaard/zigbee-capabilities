@@ -74845,7 +74845,19 @@
   {
     "manufacturer_slug": "lumi",
     "model_slug": "lumi-magnet-agl02",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Aqara_MCCGQ12LM.html",
+        "match_method": "vendor_alias_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "LUMI",
+      "checked_model": "lumi.magnet.agl02",
+      "manufacturer": {
+        "url": "https://www.aqara.com/cn/productDetail/d18",
+        "confidence": "high"
+      }
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
