@@ -524,6 +524,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "LUMI|lumi.magnet.agl02": {
+      "searched_at": "2026-11-27",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "LUMI|lumi.relay.c2acn01": {
       "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
@@ -1140,5 +1145,5 @@
       "shop": true
     }
   },
-  "generated_at": "2026-11-26T12:52:07.326Z"
+  "generated_at": "2026-11-27T12:24:31.545Z"
 }
