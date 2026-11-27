@@ -74844,6 +74844,28 @@
   },
   {
     "manufacturer_slug": "lumi",
+    "model_slug": "lumi-magnet-agl02",
+    "references": null,
+    "endpoint": 1,
+    "firmware": null,
+    "scan_count": 1,
+    "last_seen": "2026-11-27T10:10:47.259Z",
+    "manufacturer": "LUMI",
+    "model": "lumi.magnet.agl02",
+    "in_clusters": [
+      "0x0000",
+      "0x0001",
+      "0x0003",
+      "0xfcc0"
+    ],
+    "out_clusters": [
+      "0x0006",
+      "0x0019"
+    ],
+    "clusters": {}
+  },
+  {
+    "manufacturer_slug": "lumi",
     "model_slug": "lumi-plug-maeu01",
     "references": {
       "blakadder": {
