@@ -6,6 +6,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "_TZ2000_a476raq2|TS0201": {
+      "searched_at": "2026-11-27",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "_TZ3000_3n2minvf|TS0004": {
       "searched_at": "2026-11-24",
       "manufacturer_candidate": null,
@@ -1143,7 +1148,11 @@
     "https://sonoff.tech/en-us/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m": {
       "title": "SONOFF Dongle Max Zigbee/Thread PoE Dongle - Dongle-M",
       "shop": true
+    },
+    "https://www.aqara.com/cn/productDetail/d18": {
+      "title": "Aqara - Smart Home Automation Devices for Better Living",
+      "shop": true
     }
   },
-  "generated_at": "2026-11-27T12:24:31.545Z"
+  "generated_at": "2026-11-27T21:08:36.176Z"
 }
