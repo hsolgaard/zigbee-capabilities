@@ -244,6 +244,28 @@
     }
   },
   {
+    "manufacturer_slug": "tz2000-a476raq2",
+    "model_slug": "ts0201",
+    "references": null,
+    "endpoint": 1,
+    "firmware": null,
+    "scan_count": 1,
+    "last_seen": "2026-11-27T21:03:29.557Z",
+    "manufacturer": "_TZ2000_a476raq2",
+    "model": "TS0201",
+    "in_clusters": [
+      "0x0000",
+      "0x0001",
+      "0x0402",
+      "0x0405"
+    ],
+    "out_clusters": [
+      "0x0019",
+      "0x000a"
+    ],
+    "clusters": {}
+  },
+  {
     "manufacturer_slug": "tz3000-1obwwnmq",
     "model_slug": "ts011f",
     "references": {
