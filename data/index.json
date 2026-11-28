@@ -56675,7 +56675,15 @@
   {
     "manufacturer_slug": "innr",
     "model_slug": "rs-232-c",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Innr_RS_232_C.html",
+        "match_method": "vendor_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "innr",
+      "checked_model": "RS 232 C"
+    },
     "endpoint": 1,
     "firmware": null,
     "scan_count": 1,
@@ -56763,7 +56771,15 @@
   {
     "manufacturer_slug": "innr",
     "model_slug": "rs-232-c",
-    "references": null,
+    "references": {
+      "blakadder": {
+        "url": "https://zigbee.blakadder.com/Innr_RS_232_C.html",
+        "match_method": "vendor_model_exact",
+        "confidence": "high"
+      },
+      "checked_manufacturer": "innr",
+      "checked_model": "RS 232 C"
+    },
     "endpoint": 242,
     "firmware": null,
     "scan_count": 1,
