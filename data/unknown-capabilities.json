@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T11:46:41.859Z",
+  "generated_at": "2026-11-28T10:55:53.246Z",
   "unresolved_clusters": [
     {
       "id_hex": "0xfc7c",
@@ -262,6 +262,11 @@
         {
           "manufacturer": "Adeo",
           "model": "ZBEK-5",
+          "count": 1
+        },
+        {
+          "manufacturer": "innr",
+          "model": "RS 232 C",
           "count": 1
         },
         {
