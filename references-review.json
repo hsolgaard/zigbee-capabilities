@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-26T12:51:30.887Z",
-  "processed": 24,
-  "blakadderMatches": 0,
+  "generated_at": "2026-11-28T10:56:21.132Z",
+  "processed": 26,
+  "blakadderMatches": 1,
   "manufacturerLinks": 0,
   "manualReview": 27,
   "noMatch": 0,
@@ -458,6 +458,165 @@
           "model": "3RWS18BZ",
           "zigbeemodel": [
             "3RWS18BZ"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "data/tz2000-a476raq2/ts0201.json",
+      "manufacturer": "_TZ2000_a476raq2",
+      "model": "TS0201",
+      "kind": "blakadder_ambiguous",
+      "reason": "Generic Tuya model \"TS0201\" matches 16 Blakadder page(s), but manufacturer string _TZ2000_a476raq2 isn't listed on any of them.",
+      "candidates": [
+        {
+          "url": "https://zigbee.blakadder.com/Akuvox_M423-9E.html",
+          "vendor": "Akuvox",
+          "model": "M423-9E",
+          "zigbeemodel": [
+            "TS0201",
+            "_TYZB01_ujfk3xd9"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/BlitzWolf_BW-IS4.html",
+          "vendor": "BlitzWolf",
+          "model": "BW-IS4",
+          "zigbeemodel": [
+            "TS0201",
+            "_TYZB01_hjsgdkfl"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Danfoss_014G2480.html",
+          "vendor": "Danfoss Ally",
+          "model": "014G2480",
+          "zigbeemodel": [
+            "TS0201",
+            "_TZ3000_mxzo5rhf"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Mercator_SMA03P.html",
+          "vendor": "Mercator Ikuü",
+          "model": "SMA03P",
+          "zigbeemodel": [
+            "TS0201",
+            "_TZ3000_82ptnsd4"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Moes_ZSS-KB-TH.html",
+          "vendor": "Moes",
+          "model": "ZSS-KB-TH",
+          "zigbeemodel": [
+            "_TZ3000_ywagc4rj",
+            "_TZ3000_itnrsufe",
+            "TS0201"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Nedis_ZBSC10WT.html",
+          "vendor": "Nedis",
+          "model": "ZBSC10WT",
+          "zigbeemodel": [
+            "TS0201",
+            "_TZ3000_fie1dpkm"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Neo_NAS-TH02B.html",
+          "vendor": "Neo",
+          "model": "NAS-TH02B",
+          "zigbeemodel": [
+            "TS0201",
+            "_TZ3000_qaaysllp"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Nous_E5.html",
+          "vendor": "Nous",
+          "model": "E5",
+          "zigbeemodel": [
+            "TS0201",
+            "_TZ3000_lbtpiody"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_IH-K009.html",
+          "vendor": "Tuya",
+          "model": "IH-K009",
+          "zigbeemodel": [
+            "TS0201",
+            "_TZ3000_dowj6gyi",
+            "_TZ3000_8ybe88nf"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_KCTW1Z.html",
+          "vendor": "Tuya",
+          "model": "KCTW1Z",
+          "zigbeemodel": [
+            "_TZ3000_itnrsufe",
+            "TS0201"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_MIR-TE100.html",
+          "vendor": "Tuya",
+          "model": "MIR-TE100",
+          "zigbeemodel": [
+            "TS0201",
+            "SNTZ003",
+            "_TZ2000_xogb73am"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_WL-TH02.html",
+          "vendor": "Tuya",
+          "model": "WL-TH02",
+          "zigbeemodel": [
+            "TS0201",
+            "_TZ3000_fllyghyj",
+            "_TZ3000_yd2e749y"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_WSD500A.html",
+          "vendor": "Tuya",
+          "model": "WSD500A",
+          "zigbeemodel": [
+            "TS0201",
+            "_TZ3000_bguser20",
+            "_TZ3000_xr3htd96"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_ZC-W1.html",
+          "vendor": "Tuya",
+          "model": "ZC-W1",
+          "zigbeemodel": [
+            "TS0201",
+            "_tz3000_i8jfiezr"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Tuya_ZXZTH.html",
+          "vendor": "Tuya",
+          "model": "ZXZTH",
+          "zigbeemodel": [
+            "RH3052",
+            "_TZ3000_lfa05ajd",
+            "TS0201"
+          ]
+        },
+        {
+          "url": "https://zigbee.blakadder.com/Woox_R7048.html",
+          "vendor": "Woox",
+          "model": "R7048",
+          "zigbeemodel": [
+            "TS0201",
+            "_TZ3000_amqudjr0"
           ]
         }
       ]
@@ -1547,17 +1706,6 @@
       "reason": "Found by vendor search (shop search on sonoff.tech; page mentions \"zbdonglee\"); pre-filled as this device's manufacturer link on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
     },
     {
-      "file": "data/sonoff/dongle-m.json",
-      "manufacturer": "SONOFF",
-      "model": "Dongle-M",
-      "kind": "manufacturer_link_search",
-      "guessedUrl": "https://sonoff.tech/en-us/products/sonoff-dongle-max-zigbee-thread-poe-dongle-dongle-m",
-      "title": "SONOFF Dongle Max Zigbee/Thread PoE Dongle - Dongle-M",
-      "method": "shop search on sonoff.tech",
-      "evidence": "page mentions \"donglem\"",
-      "reason": "Found by vendor search (shop search on sonoff.tech; page mentions \"donglem\"); pre-filled as this device's manufacturer link on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
-    },
-    {
       "file": "data/sonoff/snzb-03pr2.json",
       "manufacturer": "SONOFF",
       "model": "SNZB-03PR2",
@@ -1567,29 +1715,6 @@
       "method": "shop search on sonoff.tech",
       "evidence": "page mentions \"snzb03pr2\"",
       "reason": "Found by vendor search (shop search on sonoff.tech; page mentions \"snzb03pr2\"); pre-filled as this device's manufacturer link on this PR's branch — merge to approve, or edit/remove that file's diff hunk to decline."
-    },
-    {
-      "file": "data/ikea-of-sweden/badring-water-leakage-sensor.json",
-      "manufacturer": "IKEA of Sweden",
-      "model": "BADRING Water Leakage Sensor",
-      "fields": {
-        "manufacturer": "IKEA",
-        "deviceName": "Products",
-        "model": "E2202",
-        "zigbeeId": "BADRING Water Leakage Sensor",
-        "category": "sensor",
-        "vendorLink": "https://www.ikea.com/us/en/p/badring-water-leakage-sensor-smart-60504352/",
-        "manufacturerLink": "https://www.ikea.com/us/en/p/badring-water-leakage-sensor-smart-60504352/",
-        "gateways": [
-          "ZHA",
-          "Zigbee2MQTT"
-        ],
-        "description": "",
-        "notes": "Zigbee signature from a ZHA scan: manufacturer \"IKEA of Sweden\", model \"BADRING Water Leakage Sensor\". Capability scan: https://hsolgaard.github.io/zigbee-capabilities/"
-      },
-      "prefillUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdtOVidl6QjBtN57Bta1wRttLB_gBOgReDZPmtaANhjrwdfpQ/viewform?usp=pp_url&entry.1402769771=IKEA&entry.686642770=Products&entry.2085911643=E2202&entry.1792822153=BADRING+Water+Leakage+Sensor&entry.1087176243=sensor&entry.1013187941=https%3A%2F%2Fwww.ikea.com%2Fus%2Fen%2Fp%2Fbadring-water-leakage-sensor-smart-60504352%2F&entry.909726705=https%3A%2F%2Fwww.ikea.com%2Fus%2Fen%2Fp%2Fbadring-water-leakage-sensor-smart-60504352%2F&entry.2131627877=ZHA&entry.2131627877=Zigbee2MQTT&entry.2090640393=Zigbee+signature+from+a+ZHA+scan%3A+manufacturer+%22IKEA+of+Sweden%22%2C+model+%22BADRING+Water+Leakage+Sensor%22.+Capability+scan%3A+https%3A%2F%2Fhsolgaard.github.io%2Fzigbee-capabilities%2F",
-      "manufacturerLinkPending": false,
-      "kind": "blakadder_submission"
     },
     {
       "file": "data/ikea-of-sweden/inspelning-smart-plug.json",
