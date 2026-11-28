@@ -436,6 +436,11 @@
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
+    "innr|RS 232 C": {
+      "searched_at": "2026-11-28",
+      "manufacturer_candidate": null,
+      "buy_candidate": null
+    },
     "innr|SP 240": {
       "searched_at": "2026-11-11",
       "manufacturer_candidate": null,
@@ -510,7 +515,7 @@
       "buy_candidate": null
     },
     "LEDVANCE|LEDVANCE DIM": {
-      "searched_at": "2026-10-30",
+      "searched_at": "2026-11-28",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -570,7 +575,7 @@
       "buy_candidate": null
     },
     "OSRAM|CLA60 RGBW OSRAM": {
-      "searched_at": "2026-10-30",
+      "searched_at": "2026-11-28",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -580,7 +585,7 @@
       "buy_candidate": null
     },
     "Paulmann lamp|Dimmable Light": {
-      "searched_at": "2026-10-30",
+      "searched_at": "2026-11-28",
       "manufacturer_candidate": null,
       "buy_candidate": null
     },
@@ -1154,5 +1159,5 @@
       "shop": true
     }
   },
-  "generated_at": "2026-11-27T21:08:36.176Z"
+  "generated_at": "2026-11-28T10:56:15.078Z"
 }

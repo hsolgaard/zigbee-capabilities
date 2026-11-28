@@ -220,5 +220,14 @@
       "out_clusters": [],
       "clusters": {}
     }
+  },
+  "references": {
+    "blakadder": {
+      "url": "https://zigbee.blakadder.com/Innr_RS_232_C.html",
+      "match_method": "vendor_model_exact",
+      "confidence": "high"
+    },
+    "checked_manufacturer": "innr",
+    "checked_model": "RS 232 C"
   }
 }
